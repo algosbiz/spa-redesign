@@ -14,9 +14,9 @@ import { catalog, type CatalogItem } from "./home-catalog";
  */
 export const home = {
   seo: {
-    title: "Spa Bali Moon - Outcall & Home Service Massage",
+    title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
     description:
-      "Our traditional Bali massage is available for outcall massage to your stay. Visit our spa or call for home service. Feel the signature warmth of Bali Moon.",
+      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69K, couples packages, open daily 9am–11pm.",
     /** The live homepage's JSON-LD, value for value (rating as shown on the live site). */
     schema: {
       "@context": "https://schema.org",
@@ -26,7 +26,13 @@ export const home = {
       image: "https://spabalimoon.com/images/home/homepage-1.webp",
       email: "info@spabalimoon.com",
       areaServed: "Seminyak, Bali",
-      aggregateRating: { "@type": "AggregateRating", ratingValue: 4.2, reviewCount: 193, bestRating: 5, worstRating: 1 },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: 4.2,
+        reviewCount: 193,
+        bestRating: 5,
+        worstRating: 1,
+      },
     },
   },
 
@@ -91,7 +97,7 @@ export const home = {
 
   packages: {
     subTitle: "Spa Packages",
-    title: "Complete Relaxation in One Visit",
+    title: "Complete Relaxation in Seminyak",
     text: "Our signature spa packages combine massage, facials, cream baths, body care, and beauty treatments into a complete wellness experience while offering better value than individual bookings. Explore the collections below to find the package that suits you best.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
@@ -136,7 +142,12 @@ export const home = {
           ["30 Mins", "Pedicure"],
         ],
       },
-    ] as { treatment: string; name: string; price: string; items: [string, string][] }[],
+    ] as {
+      treatment: string;
+      name: string;
+      price: string;
+      items: [string, string][];
+    }[],
   },
 
   services: {
@@ -224,29 +235,121 @@ export const home = {
  * is only the fallback for the two cards that have no menu entry.
  */
 const SLIDES = [
-  { name: "Balinese Massage", image: "/images/listmenu/balinesemassage.webp", icon: "/images/spa/Balinese.svg" },
-  { name: "Cream Bath", image: "/images/listmenu/creambath.webp", icon: "/images/spa/CreamBath.svg" },
-  { name: "Hot Stone Massage", image: "/images/listmenu/hotstonemassage.webp", icon: "/images/spa/HotStone.svg" },
-  { name: "Sports Massage", image: "/images/listmenu/sportmassage.webp", icon: "/images/spa/sports.svg" },
-  { name: "Bali Moon Facial", image: "/images/listmenu/balimoonteatreefacial.webp", icon: "/images/spa/Balinese.svg" },
-  { name: "Deep Tissue Massage", image: "/images/listmenu/deeptissuemassage.webp", icon: "/images/spa/DeepTissue.svg" },
-  { name: "Head Massage", image: "/images/listmenu/headmassage.webp", icon: "/images/spa/Head.svg" },
-  { name: "Sunburn Treatment", image: "/images/listmenu/aloeveramassage.webp", icon: "/images/spa/Sunburn.svg" },
-  { name: "Body Scrub", image: "/images/listmenu/bodyscrub.webp", icon: "/images/spa/Scrub.svg" },
-  { name: "Ear Candle", image: "/images/listmenu/earcandle.webp", icon: "/images/spa/EarCandle.svg" },
-  { name: "Lymphatic Massage", image: "/images/listmenu/lymphaticmassage%20.webp", icon: "/images/spa/Lymphatic.svg" },
-  { name: "Traditional Massage", image: "/images/listmenu/traditionalmassage.webp", icon: "/images/spa/Balinese.svg" },
-  { name: "Cellulite Massage", image: "/images/listmenu/cellulitemassage.webp", icon: "/images/spa/cellulite.svg" },
-  { name: "Foot Massage", image: "/images/listmenu/footmassage.webp", icon: "/images/spa/FootMassage.svg" },
-  { name: "Manicure Pedicure", image: "/images/listmenu/manicurepedicure.webp", icon: "/images/spa/Manicure.svg" },
-  { name: "Thai Massage", image: "/images/listmenu/thaimassage.webp", icon: "/images/spa/thai.svg" },
-  { name: "Couple Massage", image: "/images/listmenu/couplemassage.webp", icon: "/images/spa/Couple.svg" },
-  { name: "Foot Reflexology", image: "/images/listmenu/footreflexology.webp", icon: "/images/spa/FootReflexology.svg" },
-  { name: "Nail Art", image: "/images/listmenu/manicurepedicure.webp", icon: "/images/spa/NailArt.svg" },
-  { name: "Waxing", image: "/images/listmenu/waxing.webp", icon: "/images/spa/waxing.svg" },
-  { name: "Coconut Oil Massage", image: "/images/listmenu/coconutoilmassage.webp", icon: "/images/spa/CoconutOil.svg" },
-  { name: "Hair Braiding", image: "/images/listmenu/creambath.webp", icon: "/images/spa/HairBraiding.svg" },
-  { name: "Shiatsu Massage", image: "/images/listmenu/shiatsumassage.webp", icon: "/images/spa/Shiatsu.svg" },
+  {
+    name: "Balinese Massage",
+    image: "/images/listmenu/balinesemassage.webp",
+    icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Cream Bath",
+    image: "/images/listmenu/creambath.webp",
+    icon: "/images/spa/CreamBath.svg",
+  },
+  {
+    name: "Hot Stone Massage",
+    image: "/images/listmenu/hotstonemassage.webp",
+    icon: "/images/spa/HotStone.svg",
+  },
+  {
+    name: "Sports Massage",
+    image: "/images/listmenu/sportmassage.webp",
+    icon: "/images/spa/sports.svg",
+  },
+  {
+    name: "Bali Moon Facial",
+    image: "/images/listmenu/balimoonteatreefacial.webp",
+    icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Deep Tissue Massage",
+    image: "/images/listmenu/deeptissuemassage.webp",
+    icon: "/images/spa/DeepTissue.svg",
+  },
+  {
+    name: "Head Massage",
+    image: "/images/listmenu/headmassage.webp",
+    icon: "/images/spa/Head.svg",
+  },
+  {
+    name: "Sunburn Treatment",
+    image: "/images/listmenu/aloeveramassage.webp",
+    icon: "/images/spa/Sunburn.svg",
+  },
+  {
+    name: "Body Scrub",
+    image: "/images/listmenu/bodyscrub.webp",
+    icon: "/images/spa/Scrub.svg",
+  },
+  {
+    name: "Ear Candle",
+    image: "/images/listmenu/earcandle.webp",
+    icon: "/images/spa/EarCandle.svg",
+  },
+  {
+    name: "Lymphatic Massage",
+    image: "/images/listmenu/lymphaticmassage%20.webp",
+    icon: "/images/spa/Lymphatic.svg",
+  },
+  {
+    name: "Traditional Massage",
+    image: "/images/listmenu/traditionalmassage.webp",
+    icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Cellulite Massage",
+    image: "/images/listmenu/cellulitemassage.webp",
+    icon: "/images/spa/cellulite.svg",
+  },
+  {
+    name: "Foot Massage",
+    image: "/images/listmenu/footmassage.webp",
+    icon: "/images/spa/FootMassage.svg",
+  },
+  {
+    name: "Manicure Pedicure",
+    image: "/images/listmenu/manicurepedicure.webp",
+    icon: "/images/spa/Manicure.svg",
+  },
+  {
+    name: "Thai Massage",
+    image: "/images/listmenu/thaimassage.webp",
+    icon: "/images/spa/thai.svg",
+  },
+  {
+    name: "Couple Massage",
+    image: "/images/listmenu/couplemassage.webp",
+    icon: "/images/spa/Couple.svg",
+  },
+  {
+    name: "Foot Reflexology",
+    image: "/images/listmenu/footreflexology.webp",
+    icon: "/images/spa/FootReflexology.svg",
+  },
+  {
+    name: "Nail Art",
+    image: "/images/listmenu/manicurepedicure.webp",
+    icon: "/images/spa/NailArt.svg",
+  },
+  {
+    name: "Waxing",
+    image: "/images/listmenu/waxing.webp",
+    icon: "/images/spa/waxing.svg",
+  },
+  {
+    name: "Coconut Oil Massage",
+    image: "/images/listmenu/coconutoilmassage.webp",
+    icon: "/images/spa/CoconutOil.svg",
+  },
+  {
+    name: "Hair Braiding",
+    image: "/images/listmenu/creambath.webp",
+    icon: "/images/spa/HairBraiding.svg",
+  },
+  {
+    name: "Shiatsu Massage",
+    image: "/images/listmenu/shiatsumassage.webp",
+    icon: "/images/spa/Shiatsu.svg",
+  },
 ];
 
 /** Slider names that are listed under another name in the spa menu. */
@@ -269,7 +372,8 @@ const thousands = (p: string) => {
   const m = /([\d.]+)\s*K/i.exec(p || "");
   return m ? Number(m[1]) : Number.POSITIVE_INFINITY;
 };
-const isDuration = (label: string) => /\b(hour|hours|minute|minutes|min|mins)\b/i.test(label || "");
+const isDuration = (label: string) =>
+  /\b(hour|hours|minute|minutes|min|mins)\b/i.test(label || "");
 
 /** "From IDR 159K | 1 Hour" — the cheapest option, with its duration when it has one. */
 function fromPrice(item: CatalogItem | undefined, name: string): string | null {
@@ -278,7 +382,9 @@ function fromPrice(item: CatalogItem | undefined, name: string): string | null {
     const own = NOT_IN_MENU[name]?.price;
     return own ? `From ${withIdr(own)}` : null;
   }
-  const cheapest = options.reduce((a, b) => (thousands(b.price) < thousands(a.price) ? b : a));
+  const cheapest = options.reduce((a, b) =>
+    thousands(b.price) < thousands(a.price) ? b : a
+  );
   const from = `From ${withIdr(cheapest.price)}`;
   return isDuration(cheapest.label) ? `${from} | ${cheapest.label}` : from;
 }
