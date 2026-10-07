@@ -6,6 +6,7 @@
  * site's rollover: a gold border and the soft gold shadow (rollover.css).
  * Used in the homepage hero only (owner, 2 Oct: "keep these in the home page
  * banner … the rest of the site can stay the original shape buttons").
+ * Since 7 Oct also in the outcall page banner (custom.css).
  * Markup: src/components/ui/RowButton.tsx.
  */
 .row-btn {

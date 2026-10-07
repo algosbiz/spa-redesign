@@ -435,3 +435,57 @@
 :where([data-lenis-prevent-horizontal], [data-lenis-prevent-touch], [data-lenis-prevent-vertical], [data-lenis-prevent-wheel], [data-lenis-prevent]):where(.lh, .lh *) {
   overscroll-behavior: contain;
 }
+
+/* Outcall banner buttons (7 Oct): the homepage hero's two row buttons, "Book
+   on WhatsApp" and "View Price List" (down to the page's own price list), in
+   place of the one "Book Now" (PageBanner `actions`). Side by side; stacked
+   full width on phones, as in the homepage hero. */
+.banner-two__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+@media (max-width: 575px) {
+  .banner-two__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* The see-through gold version for photo banners (`className="row-btn--glass"`,
+   7 Oct: the glass "a little golden, as the colour guide"): frosted
+   glass tinted with the site gold #B88C35, a gold border and a solid gold
+   icon circle, white type. On hover it turns into the white row button, the
+   site's rollover (white, gold text and border, soft gold shadow). */
+.row-btn.row-btn--glass {
+  background-color: rgba(var(--theme-color1-rgb), 0.24);
+  border-color: rgba(var(--theme-color1-rgb), 0.85);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.row-btn--glass .row-btn__icon {
+  color: var(--theme-color-white);
+  background-color: var(--theme-color1);
+  transition: color 0.3s, background-color 0.3s;
+}
+.row-btn--glass :is(.row-btn__label, .row-btn__arrow) {
+  color: var(--theme-color-white);
+}
+.row-btn--glass .row-btn__note {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s;
+}
+.row-btn.row-btn--glass:is(:hover, :focus-visible) {
+  background-color: var(--theme-color-white);
+  border-color: var(--theme-color1);
+}
+.row-btn--glass:is(:hover, :focus-visible) .row-btn__icon {
+  color: var(--theme-color1);
+  background-color: var(--theme-color-gray);
+}
+.row-btn--glass:is(:hover, :focus-visible) :is(.row-btn__label, .row-btn__arrow) {
+  color: var(--theme-color1);
+}
+.row-btn--glass:is(:hover, :focus-visible) .row-btn__note {
+  color: var(--text-color);
+}

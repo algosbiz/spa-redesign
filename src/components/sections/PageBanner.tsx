@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +20,8 @@ export type PageBannerProps = {
   shapeImage?: string;
   buttonText?: string;
   buttonLink?: string;
+  /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
+  actions?: ReactNode;
 };
 
 const S = "jsx-page-banner";
@@ -39,6 +41,7 @@ export default function PageBanner({
   shapeImage = "/images/shape/banner-two-shape.png",
   buttonText = "Book Now",
   buttonLink = whatsappChatUrl,
+  actions,
 }: PageBannerProps) {
   const small = image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
 
@@ -91,20 +94,24 @@ export default function PageBanner({
                   <span className={S}>{titleSpan}</span> {title}
                 </h1>
                 {text && <p className={`${S} text`}>{text}</p>}
-                <Link
-                  href={buttonLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-two-light mt-50"
-                  data-animation="fadeInUp"
-                  data-delay="1s"
-                >
-                  {buttonText}
-                  <span className={`${S} icon_box`}>
-                    <i className={`${S} fa-regular icon_first fa-arrow-right-long`} />
-                    <i className={`${S} fa-regular icon_second fa-arrow-right-long`} />
-                  </span>
-                </Link>
+                {actions ? (
+                  <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
+                ) : (
+                  <Link
+                    href={buttonLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-two-light mt-50"
+                    data-animation="fadeInUp"
+                    data-delay="1s"
+                  >
+                    {buttonText}
+                    <span className={`${S} icon_box`}>
+                      <i className={`${S} fa-regular icon_first fa-arrow-right-long`} />
+                      <i className={`${S} fa-regular icon_second fa-arrow-right-long`} />
+                    </span>
+                  </Link>
+                )}
                 {openingText && <p className={`${S} opening-times`}>{openingText}</p>}
               </div>
             </div>

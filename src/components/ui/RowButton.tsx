@@ -7,7 +7,8 @@ import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
  * menu: "would be possible to text buttons on a page to be more like these
  * … maybe just on home"): a gold icon in a paper circle, the label, a line
  * under it, and an arrow. Links that leave the site (WhatsApp) open in a new
- * tab. Styles: src/styles/row-button.css.
+ * tab. Styles: src/styles/row-button.css; `row-btn--glass` (custom.css) is
+ * the see-through gold version for photo banners.
  */
 export default function RowButton({
   href,
@@ -39,11 +40,23 @@ export default function RowButton({
       </span>
     </>
   );
-  return /^https?:/.test(href) ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
-      {inner}
-    </a>
-  ) : (
+  if (/^https?:/.test(href)) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+        {inner}
+      </a>
+    );
+  }
+  // In-page anchors stay plain links, so Lenis (desktop) or the CSS
+  // scroll-behavior (touch) scrolls to them.
+  if (href.startsWith("#")) {
+    return (
+      <a href={href} className={classes}>
+        {inner}
+      </a>
+    );
+  }
+  return (
     <Link prefetch={false} href={href} className={classes}>
       {inner}
     </Link>

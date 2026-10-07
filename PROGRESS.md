@@ -1424,6 +1424,40 @@ lebar layar, untuk `/`, `/seminyak/`, dan outcall.
     judul duplikat) serta dua H2 di FAQ `/` dan `/seminyak/`, yang memang
     sengaja dibiarkan.
 
+## Tombol banner outcall (7 Oktober)
+
+`/outcall-home-service-massage/` mendapat trafik pencarian yang bagus (GSC 3
+bulan: "outcall massage bali", "outcall massage", "outcall massage ubud",
+"nusa dua outcall massage", dan lain-lain). Pengunjungnya membandingkan harga
+sebelum booking. Karena itu tombol "Book Now" di banner diganti dua tombol
+baris seperti di hero beranda.
+
+- **Book on WhatsApp** (catatan: +62 878-6317-5144) membuka `whatsappChatUrl`
+  di tab baru.
+- **View Price List** (catatan: "Home service prices") turun ke
+  `#outcall-prices`, yaitu price list di halaman ini sendiri. Bukan ke
+  `/seminyak/` seperti di beranda, karena harga outcall berbeda.
+- `PageBanner` punya prop baru `actions`. Halaman lain tidak memakainya, jadi
+  tetap memakai "Book Now" (dicek). CSS ada di `custom.css`
+  (`.banner-two__actions`): kedua tombol berdampingan, dan di bawah 576px
+  bertumpuk selebar layar. Baris jam buka tetap ada.
+- Dari dua versi (putih seperti beranda, dan kaca), yang dipilih versi kaca
+  dengan nuansa emas sesuai color guide: `className="row-btn--glass"` (CSS di
+  `custom.css`). Latarnya kaca buram dengan tint emas #B88C35 24%, garis tepi
+  emas, lingkaran ikon emas, dan teks putih. Saat hover tombol berubah menjadi
+  tombol baris putih (teks dan garis emas), sesuai aturan rollover situs.
+  Tanpa class itu `RowButton` kembali ke versi putih.
+- `RowButton` kini membuat `<a>` biasa untuk link `#…`, supaya Lenis (desktop)
+  atau CSS scroll-behavior (layar sentuh) yang menggulir. Dicek dengan klik
+  nyata di 1440 dan 390px: halaman mendarat tepat di judul price list.
+- Link "available treatments" di section kedua sebelumnya mengarah ke situs
+  staging lama `https://spa-ten-ochre.vercel.app/#0` (masih aktif, tersalin
+  dari live). Kini mengarah ke `#outcall-prices`.
+- Tombol baris setinggi 66px, sehingga banner bertambah sekitar 20px di
+  desktop. Di 1440×900 tombol berada di y 842–908, hampir sama dengan posisi
+  "Book Now" di live, karena padding-top banner live 300px. Di laptop dengan
+  viewport lebih pendek dari ±910px, tombol masih di bawah lipatan pertama.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

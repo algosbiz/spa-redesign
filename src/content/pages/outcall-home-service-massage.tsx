@@ -1,6 +1,5 @@
 import PageBanner from "@/components/sections/PageBanner";
 import AboutIntro from "@/components/sections/AboutIntro";
-import Link from "next/link";
 import Funfacts from "@/components/sections/Funfacts";
 import AboutSplit from "@/components/sections/AboutSplit";
 import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
@@ -9,6 +8,9 @@ import { menuTabs } from "@/components/pricelist/menuTabs";
 import HomeServiceInfo from "@/components/sections/HomeServiceInfo";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
+import RowButton from "@/components/ui/RowButton";
+import { business } from "@/data/business";
+import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /** /outcall-home-service-massage/ — generated from the live page's component tree, section for section. */
 export default function OutcallPage() {
@@ -22,8 +24,27 @@ export default function OutcallPage() {
           text="Experience our traditional massage and spa treatments in the comfort of your home, hotel, or villa."
           openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
           image="/images/homepage/homepage-28.webp"
-          buttonText="Book Now"
-          buttonLink="https://wa.me/6287863175144"
+          // The homepage hero's two row buttons in place of the one "Book Now"
+          // (7 Oct: the page's search traffic compares prices before booking),
+          // in the see-through gold version (picked over the white one).
+          actions={
+            <>
+              <RowButton
+                href={whatsappChatUrl}
+                icon="whatsapp"
+                label="Book on WhatsApp"
+                note={business.phoneDisplay}
+                className="row-btn--glass"
+              />
+              <RowButton
+                href="#outcall-prices"
+                icon="tag"
+                label="View Price List"
+                note="Home service prices"
+                className="row-btn--glass"
+              />
+            </>
+          }
         />
         <AboutIntro
           subTitle="Spa Bali Moon in Seminyak, Bali"
@@ -40,7 +61,7 @@ export default function OutcallPage() {
           feature1Title="Easy Booking via WhatsApp"
           feature1Text={
             <>
-              Check <Link href="https://spa-ten-ochre.vercel.app/#0">available treatments</Link> and arrange your spa
+              Check <a href="#outcall-prices">available treatments</a> and arrange your spa
               session easily through WhatsApp.
             </>
           }
