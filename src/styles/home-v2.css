@@ -31,7 +31,7 @@
 
 /* ------------------------------------------------------------------------
    Hero: text left on the live banner's cream, a treatment photo filling
-   the right and fading into it. Below 992px the photo sits on top, full
+   the right and fading into it. Below 1200px the photo sits on top, full
    width, fading down into the text: centred on tablets (as the live hero
    is), left-aligned on phones.
    ------------------------------------------------------------------------ */
@@ -40,30 +40,41 @@
   padding-bottom: 160px;
   background: var(--theme-color-gray);
 }
-.home-v2 .v2-hero .v2-hero__photo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 58%;
-  z-index: -1;
+/* The couples-massage photo (owner, 8 Oct): bare wall on the left, the
+   four people in the right two thirds. From 1200px it fills the right of
+   the hero at full height, the crop at 65% across so the right-hand
+   therapist's face stays whole; on wide screens all four faces clear the
+   cream fade, on laptops (1440px and down) the man's sits in it. The fade
+   stops at 28% (the text never reaches past 19% of the photo) and starts
+   2px left of the photo, so the photo's anti-aliased left edge never shows
+   as a line. */
+@media (min-width: 1200px) {
+  .home-v2 .v2-hero .v2-hero__photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    z-index: -1;
+  }
 }
-/* The couples-massage photo (owner, 8 Oct): centred at every width. That
-   keeps the right-hand therapist's face whole next to the guest in front;
-   wide screens also show the second therapist under the cream fade, which
-   stops at 28% (the text never reaches past 19% of the photo). */
 .home-v2 .v2-hero .v2-hero__photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 65% 50%;
 }
 .home-v2 .v2-hero .v2-hero__photo::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, #f5f2ec 0%, rgba(245, 242, 236, 0.9) 10%, rgba(245, 242, 236, 0) 28%);
+}
+@media (min-width: 1200px) {
+  .home-v2 .v2-hero .v2-hero__photo::after {
+    left: -2px;
+  }
 }
 .home-v2 .v2-hero .v2-hero__inner {
   max-width: 1240px;
@@ -146,19 +157,9 @@
   font-size: 13px;
   line-height: 21px;
 }
-/* 992–1199px: a narrower text column (still wide enough for "Our Seminyak"
-   on one line at the live 72px) and a narrower photo. */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .home-v2 .v2-hero .banner-five__content.v2-hero__content {
-    max-width: 520px;
-  }
-  .home-v2 .v2-hero .v2-hero__photo {
-    width: 54%;
-  }
-}
 /* Where the three facts no longer fit side by side: three columns, icon
    over text. */
-@media (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {
+@media (max-width: 767px) {
   .home-v2 .v2-hero .v2-hero__features {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -173,16 +174,21 @@
     justify-content: flex-start;
   }
 }
-@media (max-width: 991px) {
+/* Below 1200px the photo is full width and about as wide for its height as
+   the 1920x850 file (up to 440px tall), so all four people show here: the
+   crop leans right, past the bare wall, which keeps every face on phones
+   from 360px. */
+@media (max-width: 1199px) {
   .home-v2 .v2-hero {
     padding-top: 0;
     padding-bottom: 120px;
   }
   .home-v2 .v2-hero .v2-hero__photo {
     position: relative;
-    width: 100%;
     height: clamp(280px, 64vw, 440px);
-    z-index: 0;
+  }
+  .home-v2 .v2-hero .v2-hero__photo img {
+    object-position: 85% 50%;
   }
   .home-v2 .v2-hero .v2-hero__photo::after {
     background: linear-gradient(0deg, #f5f2ec 0%, rgba(245, 242, 236, 0) 42%);
@@ -194,7 +200,9 @@
   .home-v2 .v2-hero .banner-five__content.v2-hero__content {
     max-width: 620px;
   }
-  /* The About card's type (which the facts use) steps down here. */
+}
+/* The About card's type (which the facts use) steps down here. */
+@media (max-width: 991px) {
   .home-v2 .v2-hero .v2-hero__feature-text strong {
     font-size: 17px;
   }
@@ -204,7 +212,7 @@
   }
 }
 /* Tablets: the text block centred under the full-width photo. */
-@media (min-width: 576px) and (max-width: 991px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   .home-v2 .v2-hero .banner-five__content.v2-hero__content {
     margin: 0 auto;
     text-align: center;
