@@ -1,5 +1,13 @@
 import type { NextConfig } from "next";
+import { business } from "./src/data/business";
 import { liveRedirects } from "./src/data/redirects";
+
+// Requests on www.spabalimoon.com. Vercel's domain setting used to send www to
+// spabalimoon.com itself (308), before this app saw the request, so an old URL
+// on www took two hops (www → spabalimoon.com → new URL) and Ahrefs reported a
+// redirect chain. With www attached to the project without a redirect, the rules
+// below send every www URL straight to its final address on spabalimoon.com.
+const onWww = [{ type: "host" as const, value: "www.spabalimoon.com" }];
 
 const nextConfig: NextConfig = {
   // Every URL ends with "/" — exactly like the old website (SEO: keep URLs identical).
@@ -35,11 +43,29 @@ const nextConfig: NextConfig = {
   // 301, not `permanent: true` (308): the live site answers 301, and older crawlers and
   // link checkers do not all treat a 308 the same way.
   async redirects() {
-    return liveRedirects.map((redirect) => ({
-      source: redirect.from,
-      destination: redirect.to,
-      statusCode: 301 as const,
-    }));
+    return [
+      // Old URL on www → new URL on spabalimoon.com, in one hop.
+      ...liveRedirects.map((redirect) => ({
+        source: redirect.from,
+        has: onWww,
+        destination: `${business.url}${redirect.to}`,
+        statusCode: 301 as const,
+      })),
+      // Any other URL on www → the same URL on spabalimoon.com. `(.*)` rather than
+      // `*` keeps the trailing slash; `:path*` drops it and adds a second hop.
+      {
+        source: "/:path(.*)",
+        has: onWww,
+        destination: `${business.url}/:path`,
+        statusCode: 301 as const,
+      },
+      // Old URL on spabalimoon.com → new URL.
+      ...liveRedirects.map((redirect) => ({
+        source: redirect.from,
+        destination: redirect.to,
+        statusCode: 301 as const,
+      })),
+    ];
   },
 
   // Everything in /public is served `max-age=0, must-revalidate` by default, so
