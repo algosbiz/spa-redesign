@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "blog:setup": "node --env-file=.env.local tools/blog/setup-neon.mjs"
+    "blog:setup": "node --env-file=.env.local tools/blog/setup-neon.mjs",
+    "cloudflare:redirects": "node --experimental-strip-types --no-warnings tools/cloudflare/make-bulk-redirects.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
