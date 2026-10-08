@@ -109,10 +109,13 @@
    the round green floating button. The owner's pick (1 Oct): one outlined
    button, the site's pill .btn-two as it is, at the phone pill size (the
    price-list switches and tabs: Literata 15px 600, 40–48px tall; 44px here)
-   and half the bar wide, centred until a short text (opening hours) joins it.
-   The bar's shadow is the sticky header's, turned upward. The floating
-   button and the extra page padding depend on the bar being there, so
-   taking it out of layout.tsx undoes all of this. */
+   and half the bar wide. Owner, 8 Oct (picked from five mock-ups): the
+   button on the left half and, on the right half, when the chat is
+   answered in a paper-coloured pill of the same size: a gold clock in a
+   white circle, then "From 9am - 11pm" ("From" small and gold, the hours
+   in Literata). The bar's shadow is the sticky header's, turned upward.
+   The floating button and the extra page padding depend on the bar being
+   there, so taking it out of layout.tsx undoes all of this. */
 .mobile-action-bar {
   display: none;
 }
@@ -130,7 +133,7 @@
   }
   .mobile-action-bar .mobile-action-bar__row {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 8px;
   }
   .mobile-action-bar .mobile-action-bar__btn {
@@ -151,6 +154,50 @@
   .mobile-action-bar .mobile-action-bar__btn .fa-whatsapp {
     font-size: 18px;
   }
+  /* The pill: 6px round the clock, 10px after the text (171px in all, so
+     the halves stay equal from 375px). Narrower, it keeps its width and the
+     button gives up the few pixels (min-width). */
+  .mobile-action-bar .mobile-action-bar__hours {
+    display: flex;
+    flex: 1 1 0;
+    min-width: max-content;
+    align-items: center;
+    gap: 6px;
+    height: 44px;
+    padding: 0 10px 0 6px;
+    background-color: var(--theme-color-gray);
+    border-radius: 30px; /* the .btn-two's */
+  }
+  .mobile-action-bar .mobile-action-bar__hours-icon {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--theme-color1);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .mobile-action-bar .mobile-action-bar__hours-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .mobile-action-bar .mobile-action-bar__hours-text {
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--headings-color);
+    white-space: nowrap;
+  }
+  .mobile-action-bar .mobile-action-bar__hours-from {
+    font-family: var(--text-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--theme-color1);
+  }
   :root:has(.mobile-action-bar) .whatsapp-float {
     display: none;
   }
@@ -167,13 +214,26 @@
     padding-bottom: 28px;
   }
 }
-/* A phone turned sideways (short screen): a 40px button, 6px around it. */
+/* Narrow phones (under 360px): the text alone in the pill, or the button
+   would be squeezed past its content (the whole pill is 171px; the half
+   bar 144px at 320px). */
+@media (max-width: 359px) {
+  .mobile-action-bar .mobile-action-bar__hours {
+    padding: 0 12px;
+  }
+  .mobile-action-bar .mobile-action-bar__hours-icon {
+    display: none;
+  }
+}
+/* A phone turned sideways (short screen): a 40px button and pill, 6px
+   around them. */
 @media (max-width: 767px) and (max-height: 500px) {
   .mobile-action-bar {
     padding-top: 6px;
     padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
   }
-  .mobile-action-bar .mobile-action-bar__btn {
+  .mobile-action-bar .mobile-action-bar__btn,
+  .mobile-action-bar .mobile-action-bar__hours {
     height: 40px;
   }
   :root:has(.mobile-action-bar) body {

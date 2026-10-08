@@ -1,6 +1,6 @@
 import { LotusPaths } from "@/components/ui/Lotus";
 
-export type MenuIconName = "lotus" | "tag" | "stones" | "home" | "calendar" | "book" | "chat" | "mail";
+export type MenuIconName = "lotus" | "tag" | "stones" | "home" | "calendar" | "book" | "chat" | "mail" | "clock";
 
 /** One line icon per menu item, drawn alike (24px grid, 1.5 stroke, round). */
 const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
@@ -43,6 +43,12 @@ const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
     <>
       <rect x="3" y="5" width="18" height="14" rx="2.5" />
       <path d="M3.5 6.5l8.5 6.5 8.5-6.5" />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
     </>
   ),
 };
