@@ -48,27 +48,16 @@
   width: 58%;
   z-index: -1;
 }
-/* The back-massage photo (owner, 6 Oct): the guest's face is in the left
-   third of the file, so on wide screens the crop leans left to keep both the
-   guest and the therapist, and the cream fade stops at 28% (the text never
-   reaches past 19% of the photo). Below 1200px the box is too narrow for
-   both faces and stays centred on the therapist. */
+/* The couples-massage photo (owner, 8 Oct): centred at every width. That
+   keeps the right-hand therapist's face whole next to the guest in front;
+   wide screens also show the second therapist under the cream fade, which
+   stops at 28% (the text never reaches past 19% of the photo). */
 .home-v2 .v2-hero .v2-hero__photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 25% 50%;
-}
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .home-v2 .v2-hero .v2-hero__photo img {
-    object-position: 30% 50%;
-  }
-}
-@media (max-width: 1199px) {
-  .home-v2 .v2-hero .v2-hero__photo img {
-    object-position: 50% 50%;
-  }
+  object-position: 50% 50%;
 }
 .home-v2 .v2-hero .v2-hero__photo::after {
   content: "";

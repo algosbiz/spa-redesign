@@ -34,13 +34,14 @@ export default function Hero() {
   return (
     <section id="home" className="banner-five-area section__decoration-bottom mb-130 v2-hero">
       <div className="v2-hero__photo">
-        {/* The owner's banner photo, 6 Oct: a Spa Bali Moon therapist giving a
-            back massage (owner's file Homepage.webp, 1920x850, WebP q80). */}
+        {/* The owner's banner photo, 8 Oct: two Spa Bali Moon therapists giving
+            a couple back massages (owner's file Homepage New.webp, 1920x850,
+            WebP q80). */}
         <img
-          src="/images/home/hero-back-massage.webp"
-          srcSet="/images/home/hero-back-massage-1200.webp 1200w, /images/home/hero-back-massage.webp 1920w"
+          src="/images/home/hero-couples-massage.webp"
+          srcSet="/images/home/hero-couples-massage-1200.webp 1200w, /images/home/hero-couples-massage.webp 1920w"
           sizes={PHOTO_SIZES}
-          alt="A guest relaxing during a back massage at Spa Bali Moon"
+          alt="A couple enjoying side-by-side back massages at Spa Bali Moon"
           fetchPriority="high"
         />
       </div>
