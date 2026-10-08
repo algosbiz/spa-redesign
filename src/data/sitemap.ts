@@ -42,5 +42,4 @@ export const sitemapPages: SitemapEntry[] = [
   { loc: "https://spabalimoon.com/seminyak/waxing-salon/", lastmod: "2026-07-06T05:12:10+00:00", image: "https://spabalimoon.com/images/services/waxing/waxing-1.webp" },
   { loc: "https://spabalimoon.com/terms-and-conditions/", lastmod: "2026-03-24T07:00:23+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
   { loc: "https://spabalimoon.com/villa-hotel-massage/", lastmod: "2026-07-06T06:38:12+00:00", image: "https://spabalimoon.com/images/services/massagehotelvilla/massagehotelvilla-1.webp" },
-  { loc: "https://spabalimoon.com/wellness-in-bali/", lastmod: "2026-07-07T06:15:46+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
 ];

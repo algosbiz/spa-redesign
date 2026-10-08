@@ -121,7 +121,11 @@ export const liveRedirects: OldUrlRedirect[] = [
   { from: "/spa-bali-massage-packages/", to: "/seminyak/" },
   { from: "/day-spa-seminyak-6/", to: "/seminyak/day-spa/" },
   { from: "/reservation-spa-bali-moon-massage/", to: "/reservation/" },
-  { from: "/wellness-bali/", to: "/wellness-in-bali/" },
+  { from: "/wellness-bali/", to: "/guide/" },
+  // The old "Wellness Guide in Bali" page, removed on 8 October 2026 (owner):
+  // no page linked to it and it mostly promoted other spas. Its text is kept in
+  // migration/source-data/pages/wellness-in-bali.md.
+  { from: "/wellness-in-bali/", to: "/guide/" },
   { from: "/terms-conditions/", to: "/terms-and-conditions/" },
   { from: "/massage-hotel-villa/", to: "/villa-hotel-massage/" },
   { from: "/page-about/", to: "/seminyak/" },
