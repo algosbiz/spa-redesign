@@ -27,6 +27,8 @@ export function readPostInput(body: unknown): { input: PostInput } | { error: st
       status: b.status === "published" ? "published" : "draft",
       seo_title: optional(b.seo_title),
       seo_description: optional(b.seo_description),
+      // Only an explicit false hides the date, so older clients keep showing it.
+      show_date: b.show_date !== false,
     },
   };
 }

@@ -20,6 +20,8 @@ export type Post = {
   status: PostStatus;
   seo_title: string | null;
   seo_description: string | null;
+  /** False hides the publish date on the article page. */
+  show_date: boolean;
   published_at: string | null;
   created_at: string | null;
   updated_at: string | null;
@@ -28,7 +30,7 @@ export type Post = {
 /** What the article list, the sidebar and the previous/next links need. */
 export type PostSummary = Pick<
   Post,
-  "id" | "slug" | "title" | "excerpt" | "cover_image" | "category" | "author" | "published_at"
+  "id" | "slug" | "title" | "excerpt" | "cover_image" | "category" | "author" | "show_date" | "published_at"
 >;
 
 /** One row of the admin dashboard. */
@@ -48,4 +50,5 @@ export type PostInput = {
   status: PostStatus;
   seo_title: string | null;
   seo_description: string | null;
+  show_date: boolean;
 };

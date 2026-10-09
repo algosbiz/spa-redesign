@@ -28,6 +28,7 @@ type Fields = {
   seoTitle: string;
   seoDescription: string;
   status: PostStatus;
+  showDate: boolean;
 };
 
 const fieldsOf = (post: Post | null): Fields => ({
@@ -42,6 +43,7 @@ const fieldsOf = (post: Post | null): Fields => ({
   seoTitle: post?.seo_title || "",
   seoDescription: post?.seo_description || "",
   status: post?.status || "draft",
+  showDate: post?.show_date !== false,
 });
 
 /** A local draft as written by the autosave, read back defensively. */
@@ -59,6 +61,7 @@ const fieldsOfDraft = (saved: Record<string, unknown>): Fields => {
     seoTitle: s("seoTitle"),
     seoDescription: s("seoDescription"),
     status: saved.status === "published" ? "published" : "draft",
+    showDate: saved.showDate !== false,
   };
 };
 
@@ -229,6 +232,7 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
         .filter(Boolean),
       seo_title: fields.seoTitle,
       seo_description: fields.seoDescription,
+      show_date: fields.showDate,
       status,
     };
     try {
@@ -379,6 +383,17 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
               <option value="draft">Draft</option>
               <option value="published">Published</option>
             </select>
+
+            <label className="pe-check" htmlFor="pe-show-date">
+              <input
+                id="pe-show-date"
+                type="checkbox"
+                checked={fields.showDate}
+                onChange={(e) => set("showDate", e.target.checked)}
+              />
+              Show date on the article
+            </label>
+            <p className="pe-hint">Off hides the date beside the category, and on this article&rsquo;s cards further down.</p>
           </div>
 
           <div className="pe-card">

@@ -13,6 +13,8 @@ export type GuidePostSummary = {
   cover_image?: string | null;
   category?: string | null;
   author?: string | null;
+  /** False hides this article's date; missing (seed rows) shows it. */
+  show_date?: boolean | null;
   published_at?: string | null;
 };
 
@@ -101,7 +103,7 @@ export default function GuidePost({
                         </span>
                       </li>
                     )}
-                    {post.published_at && (
+                    {post.show_date !== false && post.published_at && (
                       <li className={S}>
                         <i className={`${S} fas fa-calendar-alt`} />{" "}
                         <time dateTime={post.published_at} className={S}>
@@ -285,7 +287,7 @@ export default function GuidePost({
                         </span>
                         <span className={`${S} post-more__body`}>
                           <span className={`${S} post-more__heading`}>{p.title}</span>
-                          {p.published_at && (
+                          {p.show_date !== false && p.published_at && (
                             <time dateTime={p.published_at} className={`${S} post-more__date`}>
                               {formatDate(p.published_at)}
                             </time>

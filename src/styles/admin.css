@@ -1069,6 +1069,24 @@ textarea.pe-input {
   margin: 6px 0 0;
 }
 
+/* A yes/no setting, e.g. "Show date on the article". */
+.pe-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--adm-text);
+  cursor: pointer;
+}
+.pe-check input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--adm-gold);
+  cursor: pointer;
+}
+
 /* ------------------------------ Rich-text editor ---------------------------- */
 
 .rte {

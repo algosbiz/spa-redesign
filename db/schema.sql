@@ -27,6 +27,11 @@ create table if not exists posts (
 -- (owner, 5 Oct 2026). Empty: the title is shown. Not in the live table.
 alter table posts add column if not exists heading text;
 
+-- Whether the article page prints its publish date (owner, 9 Oct 2026).
+-- Off hides the date in the meta line and on the article's "More Articles"
+-- card. Not in the live table.
+alter table posts add column if not exists show_date boolean not null default true;
+
 -- The public list: published articles, newest first.
 create index if not exists posts_status_published_idx
     on posts (status, published_at desc);

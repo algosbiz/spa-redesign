@@ -30,7 +30,7 @@ const withTimestamps = <T extends Row>(row: T): T => {
   return out as T;
 };
 
-const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, published_at }: Post): PostSummary => ({
+const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, show_date, published_at }: Post): PostSummary => ({
   id,
   slug,
   title,
@@ -38,6 +38,8 @@ const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, pu
   cover_image,
   category,
   author,
+  // The seed articles predate the column; missing means the date is shown.
+  show_date: show_date !== false,
   published_at,
 });
 
@@ -47,7 +49,7 @@ const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, pu
 export const getPublishedPosts = cache(async (): Promise<PostSummary[]> => {
   if (!isDatabaseConfigured()) return seedPublished().map(toSummary);
   const rows = await getSql()`
-    SELECT id, slug, title, excerpt, cover_image, category, author, published_at
+    SELECT id, slug, title, excerpt, cover_image, category, author, show_date, published_at
     FROM posts WHERE status = 'published' ORDER BY published_at DESC`;
   return rows.map((r) => withTimestamps(r) as PostSummary);
 });
@@ -192,10 +194,10 @@ export async function ensureUniqueSlug(base: string, excludeId?: string): Promis
 export async function insertPost(input: PostInput, publishedAt: string | null): Promise<Post> {
   const rows = await getSql()`
     INSERT INTO posts (title, heading, slug, excerpt, cover_image, content_html, category, tags, author, status,
-                       seo_title, seo_description, published_at)
+                       seo_title, seo_description, show_date, published_at)
     VALUES (${input.title}, ${input.heading}, ${input.slug}, ${input.excerpt}, ${input.cover_image}, ${input.content_html},
             ${input.category}, ${input.tags}, ${input.author}, ${input.status},
-            ${input.seo_title}, ${input.seo_description}, ${publishedAt})
+            ${input.seo_title}, ${input.seo_description}, ${input.show_date}, ${publishedAt})
     RETURNING *`;
   return withTimestamps(rows[0]) as Post;
 }
@@ -208,7 +210,7 @@ export async function updatePost(id: string, input: PostInput, publishedAt: stri
       cover_image = ${input.cover_image}, content_html = ${input.content_html},
       category = ${input.category}, tags = ${input.tags}, author = ${input.author},
       status = ${input.status}, seo_title = ${input.seo_title}, seo_description = ${input.seo_description},
-      published_at = ${publishedAt}, updated_at = now()
+      show_date = ${input.show_date}, published_at = ${publishedAt}, updated_at = now()
     WHERE id = ${id}
     RETURNING *`;
   return rows[0] ? (withTimestamps(rows[0]) as Post) : null;
