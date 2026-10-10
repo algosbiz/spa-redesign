@@ -14,8 +14,8 @@
 export const homeServicePage = {
   path: "/outcall-home-service-massage/",
   seo: {
-    title: "Spa Bali Moon - Outcall & Home Service Massage",
-    description: "Our traditional Bali massage is available for outcall massage to your stay. Visit our spa or call for home service. Feel the signature warmth of Bali Moon.",
+    title: "Outcall Massage Bali - Home Service Massage - Spa Bali Moon",
+    description: "Outcall massage in Bali: Balinese, Thai and deep tissue massage at your villa or hotel. Home service fee IDR 75,000 per therapist. Book via WhatsApp.",
   },
   hero: {
     eyebrow: "Outcall Spa Service",

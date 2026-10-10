@@ -34,15 +34,15 @@ export type PackageGroup = {
 export const pricelistPage = {
   path: "/seminyak/",
   seo: {
-    title: "Spa and Massage in Seminyak Bali - Price and Packages",
+    title: "Massage Seminyak - Prices & Spa Packages - Spa Bali Moon",
     description:
-      "Book affordable massages in Seminyak at Spa Bali Moon. Our Price list includes luxury facial, couple packages, shiatsu and Balinese massage.",
+      "Massage in Seminyak with prices: Balinese, Thai, shiatsu, facials and couples packages. In-spa or home service. Book via WhatsApp.",
   },
 
   banner: {
     subTitle: "Find Your Treatment",
-    titleSpan: "Our Massage",
-    title: "in Seminyak",
+    titleSpan: "Massage in Seminyak:",
+    title: "Prices, Treatments & Packages",
     buttonText: "Book Now",
     image: "/images/pricelist/pricelist-1.webp"
   },
@@ -50,7 +50,7 @@ export const pricelistPage = {
   /** The "complete spa menu" block with its two photos. `firstStat`/`secondStat` break after the first words. */
   menu: {
     topSubTitle: "Start With What You Need",
-    topTitle: "Which Treatment Are You Looking For Today?",
+    topTitle: "Choose Your Seminyak Massage or Spa Treatment",
     topText: "Our treatment menu makes it easy to find the care your body or skin needs, from massage and muscle care to facials, body scrubs, and beauty treatments. Choose the treatment and duration that suit your day.",
     contentSubTitle: "More Than Massage",
     contentTitle: "A Complete Spa Menu in Seminyak",
@@ -63,7 +63,7 @@ export const pricelistPage = {
 
   priceList: {
     subTitle: "Best Price",
-    title: "Our Massages Price List",
+    title: "Seminyak Massage Price List",
     note: "Home service available — extra IDR 75K per therapist.",
     tabs: [
     {
@@ -845,7 +845,7 @@ export const pricelistPage = {
 
   packagesIntro: {
     subTitle: "All Spa Packages",
-    title: "Available In-Spa & with Day Spa at Home",
+    title: "In-Spa and Home Service Massage Prices",
     text: "We offer multiple spa packages at our spa or as a day spa at home. Some guests know what they want, while others wish to combine treatments. We provide the help, so you can enjoy a laid-back and cozy experience, whether alone, with a partner, or with friends.",
     note: "Browse the packages below to find a combination that fits your plans."
   },
@@ -1441,7 +1441,8 @@ export const pricelistPage = {
 
   faq: {
     subTitle: "Frequently Asked Questions",
-    title: "Everything You Need to Know",
+    title: "Massage Prices in Seminyak: FAQs",
+    imageTitle: "Book Your Massage in Seminyak",
     image: "/images/pricelist/pricelist-4.webp",
     items: [
     {
@@ -1508,7 +1509,7 @@ export const pricelistPage = {
   },
 
   reserve: {
-    title: "Take a Proper Break from Your Bali Itinerary",
+    title: "Plan Your Spa Day in Seminyak",
     text: "Some treatments are chosen because your muscles need attention. Others are for tired skin, overworked feet, a scalp that needs care, or simply the feeling that you have been moving from one plan to the next without stopping. Browse the Spa Bali Moon price list to find the treatment that fits your day.",
     closingText: "Visit us in Seminyak or arrange selected treatments at your villa or hotel.",
     backgroundImage: "/images/pricelist/pricelist-5.webp"

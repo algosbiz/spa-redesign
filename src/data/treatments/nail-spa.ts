@@ -12,8 +12,8 @@ const nailSpa: Treatment = {
   category: "beauty",
   cardImage: { src: "/images/beauty/nail-spa/nailart-3.webp", alt: "Nail Art", width: 630, height: 580 },
   seo: {
-    title: "Gel Art & Nails in Seminyak",
-    description: "Indulge in Seminyak's affordable nail care, offering sublime nail salon treatments. Experience fabulous extensions and more today!",
+    title: "Gel Nails & Nail Art Seminyak - Spa Bali Moon",
+    description: "Gel nails and nail art in Seminyak, Bali: gel polish, extensions and designs. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Creative Design",

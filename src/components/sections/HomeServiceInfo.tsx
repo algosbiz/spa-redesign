@@ -111,7 +111,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
               marginBottom: "20px",
             }}
           >
-            Home Service Massage
+            Why Choose Our Home Service Massage
           </h2>
         </div>
         <div className="row justify-content-center">
@@ -219,7 +219,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                   paddingTop: "25px",
                 }}
               >
-                <h3
+                <p
                   style={{
                     fontSize: "20px",
                     lineHeight: "30px",
@@ -239,7 +239,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                     IDR 75,000
                   </span>
                   {" per therapist"}
-                </h3>
+                </p>
               </div>
             </div>
           </div>

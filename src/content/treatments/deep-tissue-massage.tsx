@@ -19,7 +19,7 @@ export default function DeepTissueMassagePage() {
           image="/images/services/deeptissuemassage/deeptissuemassage-1.webp"
           subTitle="Muscle Recovery"
           titleSpan="Deep Tissue Massage"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -149,7 +149,7 @@ export default function DeepTissueMassagePage() {
           image="/images/services/deeptissuemassage/deeptissuemassage-9.webp"
           imageTitle="Muscle Recovery"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Deep Tissue Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Does deep tissue massage hurt?",

@@ -13,8 +13,8 @@ const lymphaticDrainageMassage: Treatment = {
   shortDescription: "A gentle full-body massage that supports drainage and healthy circulation.",
   cardImage: { src: "/images/treatments/cards/lymphaticmassage.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
   seo: {
-    title: "Lymphatic Drainage Massage in Bali - Restore Balance",
-    description: "Experience gentle lymphatic drainage massage in Seminyak, Bali, to reduce swelling, support detox, and boost your immune system.",
+    title: "Lymphatic Drainage Massage Seminyak & Bali - Spa Bali Moon",
+    description: "Lymphatic drainage massage in Seminyak, Bali: a gentle, slow-stroke massage by trained therapists. Book in-spa or at your villa or hotel.",
   },
   hero: {
     eyebrow: "Restore Your Flow",

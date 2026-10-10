@@ -18,8 +18,8 @@ export default function ShiatsuMassagePage() {
         <PageBanner
           image="/images/services/shiatsumassage/shiatsumassage-1.webp"
           subTitle="Japanese Wellness"
-          titleSpan="Traditional Shiatsu"
-          title="Massage"
+          titleSpan="Shiatsu Massage"
+          title="in Seminyak, Bali: Japanese Massage"
         />
       </div>
       <AboutIntro
@@ -135,7 +135,7 @@ export default function ShiatsuMassagePage() {
           image="/images/services/shiatsumassage/shiatsumassage-10.webp"
           imageTitle="Shiatsu Massage"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Shiatsu Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Is Shiatsu Massage performed with oil?",

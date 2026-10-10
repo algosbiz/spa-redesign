@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageBanner from "@/components/sections/PageBanner";
 import AboutIntro from "@/components/sections/AboutIntro";
 import TreatmentPricing from "@/components/sections/TreatmentPricing";
@@ -18,8 +19,8 @@ export default function SportMassagePage() {
         <PageBanner
           image="/images/services/sportsmassage/sportsmassage-1.webp"
           subTitle="Active Recovery"
-          titleSpan="Sport Massage Seminyak"
-          title=""
+          titleSpan="Sports Massage"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -28,8 +29,19 @@ export default function SportMassagePage() {
         primaryImage="/images/services/sportsmassage/sportsmassage-2.webp"
         secondaryImage="/images/services/sportsmassage/sportsmassage-3.webp"
         subTitle="Movement & Recovery"
-        title={<>What Makes Sport Massage Different from a Regular Massage?</>}
-        text="Sport Massage is a targeted treatment designed for active bodies experiencing frequent movement, physical effort, and muscle strain. Through controlled pressure, stretching, and rhythmic movements, it focuses on areas that become tight after exercise, training, surfing, or active travel, helping the body feel more flexible, balanced, and ready for the next activity."
+        title={<>What Makes Sports Massage Different from a Regular Massage?</>}
+        text={
+          <>
+            Sport Massage is a targeted treatment designed for active bodies experiencing frequent movement, physical
+            effort, and muscle strain. Through controlled pressure, stretching, and rhythmic movements, it focuses on
+            areas that become tight after exercise, training, surfing, or active travel, helping the body feel more
+            flexible, balanced, and ready for the next activity. Looking for firmer, slower pressure? See our{" "}
+            <Link prefetch={false} href="/seminyak/deep-tissue-massage/">
+              deep tissue massage in Seminyak
+            </Link>
+            .
+          </>
+        }
         feature1Title="Muscle Recovery"
         feature1Text="Helps release tension from physically demanding activities."
         feature2Title="Active Mobility"
@@ -75,7 +87,7 @@ export default function SportMassagePage() {
         rightShapeSrc="/images/shape/about-right-shape.png"
         image="/images/services/sportsmassage/sportsmassage-6.webp"
         subTitle="Active Bodies"
-        title={<>Who Can Benefit from Sport Massage?</>}
+        title={<>Who Can Benefit from Sports Massage?</>}
         text="Sport Massage is not limited to professional athletes. Anyone who regularly challenges their body through movement can benefit from a treatment focused on muscle comfort and recovery."
         featuresLeft={[
           "Runners and marathon participants",
@@ -98,7 +110,7 @@ export default function SportMassagePage() {
         subTitle="Targeted Treatment"
         badgeTopText="Made for"
         badgeBottomText="Active Recovery"
-        title={<>Areas That Receive the Most Attention During Sport Massage</>}
+        title={<>Areas That Receive the Most Attention During Sports Massage</>}
         text="Our therapists adjust the treatment based on your activity and the areas that feel most affected. Common focus areas include large muscle groups that experience repeated use during exercise, sports, and daily movement."
         featuresLeft={["Shoulders and upper back", "Lower back", "Glutes and hips", "Thighs"]}
         featuresRight={["Calves", "Feet", "Arms"]}
@@ -111,7 +123,7 @@ export default function SportMassagePage() {
         subTitle="Recovery Technique"
         badgeTopText="A Stronger"
         badgeBottomText="Recovery"
-        title={<>What Happens During a Sport Massage?</>}
+        title={<>What Happens During a Sports Massage?</>}
         text="The session begins with a short consultation to understand your activity level and areas needing attention. Our therapist combines techniques such as kneading, compression, stretching, and controlled pressure to ease muscle tightness while adjusting the intensity to your comfort and goals."
         featuresLeft={[
           "Personalised body assessment",
@@ -133,30 +145,30 @@ export default function SportMassagePage() {
           image="/images/services/sportsmassage/sportsmassage-9.webp"
           imageTitle="Sport Massage"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Sports Massage Seminyak: FAQs</>}
           items={[
             {
-              question: "Is Sport Massage only for professional athletes?",
+              question: "Is Sports Massage only for professional athletes?",
               answer:
                 "No. Sport Massage is suitable for anyone with an active lifestyle, including gym-goers, runners, surfers, hikers, and people who experience muscle tightness from regular movement.",
             },
             {
-              question: "What is the difference between Sport Massage and Deep Tissue Massage?",
+              question: "What is the difference between Sports Massage and Deep Tissue Massage?",
               answer:
                 "Both techniques may use firm pressure, but their purpose is different. Sport Massage focuses more on recovery, mobility, and the physical demands of an active lifestyle, while Deep Tissue Massage focuses on releasing deeper areas of long-term muscle tension.",
             },
             {
-              question: "Should I get Sport Massage before or after exercise?",
+              question: "Should I get Sports Massage before or after exercise?",
               answer:
                 "Both options are possible. A pre-activity session usually uses lighter techniques to prepare the body, while a post-activity session focuses more on relaxation and recovery after physical effort.",
             },
             {
-              question: "Will Sport Massage feel painful?",
+              question: "Will Sports Massage feel painful?",
               answer:
                 "Sport Massage may involve stronger pressure than a relaxation massage, but it should not feel painful. Our therapists adjust the intensity based on your comfort and body condition.",
             },
             {
-              question: "How often should I receive Sport Massage?",
+              question: "How often should I receive Sports Massage?",
               answer:
                 "The ideal frequency depends on your activity level, training schedule, and personal preference. Some active individuals enjoy regular sessions, while others book treatments after periods of increased physical demand.",
             },

@@ -37,14 +37,14 @@ export const home = {
   },
 
   hero: {
-    title: "Our Seminyak",
-    highlightedTitle: "Day Spa",
+    title: "Seminyak Spa & Balinese Massage at",
+    highlightedTitle: "Spa Bali Moon",
     text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with home service also available for hotels and villas in nearby areas.",
   },
 
   steps: {
     subTitle: "Book via WhatsApp",
-    title: "How Do You Book Your Spa Experience?",
+    title: "Book a Spa or Massage in Seminyak in 3 Steps",
     items: [
       {
         title: "Choose a Treatment",
@@ -63,7 +63,7 @@ export const home = {
 
   about: {
     subTitle: "Beyond Relaxation",
-    title: "Why Spa Bali Moon Is Part of the Bali Experience",
+    title: "Why Visitors Choose Spa Bali Moon for Massage in Bali",
     text: "After long flights, sightseeing, surfing, or time in the tropical sun, your body needs time to recover. We offer massage, beauty, and body care treatments that ease muscle tension, refresh tired skin, and help you feel refreshed with treatments chosen to suit your body and your time in Bali. Here’s what makes us a trusted choice:",
     /** Shown in two lists of three. */
     features: [
@@ -97,7 +97,7 @@ export const home = {
 
   packages: {
     subTitle: "Spa Packages",
-    title: "Complete Relaxation in Seminyak",
+    title: "Day Spa and Massage in Seminyak",
     text: "Our signature spa packages combine massage, facials, cream baths, body care, and beauty treatments into a complete wellness experience while offering better value than individual bookings. Explore the collections below to find the package that suits you best.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
@@ -179,7 +179,7 @@ export const home = {
 
   faq: {
     image: "/images/homepage/homepage-2.webp",
-    imageTitle: "Time to Unwind",
+    imageTitle: "Book Your Massage in Seminyak Today",
     subTitle: "Frequently Asked Questions",
     title: "Everything You Need to Know",
     items: [

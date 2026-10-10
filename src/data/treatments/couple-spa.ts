@@ -14,8 +14,8 @@ const coupleSpa: Treatment = {
   shortDescription: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
   cardImage: { src: "/images/treatments/cards/couplemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
   seo: {
-    title: "Romantic Couple Massage in Bali",
-    description: "Indulge in a warm candle massage perfect for couples. Includes facial, natural scrub, and Balinese massage. Book for In-Spa or Villa.",
+    title: "Couples Massage Bali - Couple Spa Seminyak - Spa Bali Moon",
+    description: "Couples massage in Bali: warm candle massage with facial, natural scrub and Balinese massage. Book at our Seminyak spa or in your villa.",
   },
   hero: {
     eyebrow: "Together in Relaxation",

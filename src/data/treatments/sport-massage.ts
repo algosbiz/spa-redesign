@@ -13,8 +13,8 @@ const sportMassage: Treatment = {
   shortDescription: "A targeted full-body massage to ease soreness, reduce stiffness, and support recovery.",
   cardImage: { src: "/images/treatments/cards/sportmassage.webp", alt: "Sports Massage", width: 630, height: 580 },
   seo: {
-    title: "Sports Massage in Bali – Recovery & Performance",
-    description: "Sports massage therapy in Seminyak tailored for athletes and active guests. Reduce pain, enhance mobility, and enjoy faster recovery in a relaxing spa setting.",
+    title: "Sports Massage Seminyak & Bali - Recovery & Performance",
+    description: "Sports massage in Seminyak, Bali for athletes and active guests: recovery, mobility and tension relief. Book in-spa or at your villa.",
   },
   hero: {
     eyebrow: "Active Recovery",

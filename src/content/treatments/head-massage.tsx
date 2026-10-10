@@ -19,7 +19,7 @@ export default function HeadMassagePage() {
           image="/images/services/headmassage/headmassage-1.webp"
           subTitle="Stress-Free Therapy"
           titleSpan="Head Massage"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -135,7 +135,7 @@ export default function HeadMassagePage() {
           image="/images/services/headmassage/headmassage-10.webp"
           imageTitle="Scalp Care"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Head Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Can a Head Massage help with stress?",

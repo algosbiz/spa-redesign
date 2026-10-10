@@ -16,7 +16,7 @@ export type NavItem = {
 };
 
 /** A header item. `dropdown` names the list it opens (see treatmentMenu / blogMenuHidden below). */
-export type MainNavItem = NavItem & { dropdown?: "treatments" | "blog" };
+export type MainNavItem = NavItem & { dropdown?: "treatments" | "blog" | "outcall" };
 
 /** Main menu (desktop header and mobile menu), in the live website's order. */
 export const mainNav: MainNavItem[] = [
@@ -24,10 +24,36 @@ export const mainNav: MainNavItem[] = [
   { label: "Pricelist", href: "/seminyak/" },
   // The live site's "Treatments" item only opens the dropdown (it has no page of its own).
   { label: "Treatments", href: "/seminyak/", dropdown: "treatments" },
-  { label: "Outcall", href: "/outcall-home-service-massage/" },
+  { label: "Outcall", href: "/outcall-home-service-massage/", dropdown: "outcall" },
   { label: "Reservation", href: "/reservation/" },
   { label: "Blog", href: "/guide/", dropdown: "blog" },
   { label: "Contact", href: "/contact/" },
+];
+
+/**
+ * Outcall dropdown (SEO, 10 Oct: the header linked to the home service page
+ * only, while the villa & hotel and Kuta pages, which bring in clicks, were
+ * linked from the footer alone). Same pages as the footer's "Home Services".
+ */
+export const outcallMenu: (NavItem & { note: string; image: string })[] = [
+  {
+    label: "Home Service Massage",
+    href: "/outcall-home-service-massage/",
+    note: "Outcall massage anywhere in Bali",
+    image: "/images/homepage/homepage-28.webp",
+  },
+  {
+    label: "Villa & Hotel Massage",
+    href: "/villa-hotel-massage/",
+    note: "In-room massage in Seminyak",
+    image: "/images/services/massagehotelvilla/massagehotelvilla-1.webp",
+  },
+  {
+    label: "Massage Kuta",
+    href: "/massage-kuta/",
+    note: "In-spa and outcall in Kuta",
+    image: "/images/services/massagekuta/massagekuta-1.webp",
+  },
 ];
 
 /** Text of the booking button in the header (it opens WhatsApp), as on the live site. */

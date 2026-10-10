@@ -48,7 +48,7 @@ function Card({
         <span className="site-footer__icon">
           <MenuIcon name={icon} />
         </span>
-        <h3 className="site-footer__card-title">{title}</h3>
+        <div className="site-footer__card-title">{title}</div>
       </div>
       {children}
     </div>

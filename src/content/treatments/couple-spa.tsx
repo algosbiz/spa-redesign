@@ -19,8 +19,8 @@ export default function CoupleSpaPage() {
         <PageBanner
           image="/images/services/couplemassage/couplemassage-1.webp"
           subTitle="Together in Relaxation"
-          titleSpan="Couple Massage"
-          title="Seminyak"
+          titleSpan="Couples Massage in Bali:"
+          title="Couple Spa in Seminyak"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function CoupleSpaPage() {
             "/images/services/couplemassage/couplemassage-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Couples Massage Bali Packages in Seminyak"
           text="Every couple enjoys relaxation differently, which is why we offer several massage styles for two. Whether you prefer gentle Balinese techniques, deeper muscle work, or a warm candle ritual, each experience is designed to help you slow down and enjoy quality time together."
           packages={[
             {
@@ -194,7 +194,7 @@ export default function CoupleSpaPage() {
                 },
               ]}
               subTitle="Side by Side"
-              title="Couple Massage Session"
+              title="Couple Massage Session Options"
               text="Share a relaxing treatment side by side with a massage style that suits both of you. Each option is available for two guests, with different techniques and session lengths to match how you want to relax."
               icon="/images/spa/Couple.svg"
             />
@@ -275,7 +275,7 @@ export default function CoupleSpaPage() {
           image="/images/services/couplemassage/couplemassage-11.webp"
           imageTitle="Relax Together"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Couples Massage Bali Seminyak: FAQs</>}
           items={[
             {
               question: "Is Couple Massage only for romantic couples?",
@@ -323,7 +323,7 @@ export default function CoupleSpaPage() {
         <ReserveCta
           standardSpacing
           backgroundImage="/images/services/couplemassage/couplemassage-12.webp"
-          title="Make Time for Each Other While You're in Bali"
+          title="Book a Couples Massage in Seminyak"
           text="A simple way to share quality time and let the body rest, popular for honeymoons, anniversaries, or a day with friends. At our spa, or at your villa or hotel."
           closingText="Create a memorable wellness experience together and let our therapists take care of the rest."
         />

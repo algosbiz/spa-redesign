@@ -19,7 +19,7 @@ export default function AntiCelluliteMassagePage() {
           image="/images/services/cellulitemassage/cellulitemassage-1.webp"
           subTitle="Body Contouring"
           titleSpan="Cellulite Massage"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -147,7 +147,7 @@ export default function AntiCelluliteMassagePage() {
           image="/images/services/cellulitemassage/cellulitemassage-9.webp"
           imageTitle="Smooth Skin Support"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Cellulite Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Which areas are commonly treated during cellulite massage?",

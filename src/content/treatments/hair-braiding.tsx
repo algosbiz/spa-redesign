@@ -19,7 +19,7 @@ export default function HairBraidingPage() {
           image="/images/services/hairbraiding/hairbraiding-1.webp"
           subTitle="Creative Hairstyles"
           titleSpan="Hair Braiding"
-          title="in Bali"
+          title="in Bali: Braids in Seminyak"
         />
       </div>
       <AboutIntro
@@ -134,7 +134,7 @@ export default function HairBraidingPage() {
           image="/images/services/hairbraiding/hairbraiding-10.webp"
           imageTitle="Braid Styles"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Hair Braiding Seminyak: FAQs</>}
           items={[
             {
               question: "Is Hair Braiding suitable for all hair types?",

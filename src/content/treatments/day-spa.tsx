@@ -1,4 +1,6 @@
+import Link from "next/link";
 import PageBanner from "@/components/sections/PageBanner";
+import { treatmentMenu } from "@/data/navigation";
 import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import AboutSplit from "@/components/sections/AboutSplit";
@@ -93,11 +95,36 @@ export default function DaySpaPage() {
         />
       </div>
       <TreatmentTestimonials paperDecoration={false} />
+      <section className="day-spa-links pt-100 pb-100">
+        <div className="container">
+          <div className="section-header center mb-40">
+            <h2 className="title">Seminyak Spa Treatments</h2>
+            <p>
+              Choose a treatment to see its prices and session options, or{" "}
+              <Link prefetch={false} href="/seminyak/">
+                view the full Seminyak price list
+              </Link>
+              .
+            </p>
+          </div>
+          <ul className="day-spa-links__list">
+            {treatmentMenu
+              .filter((t) => t.href !== "/seminyak/day-spa/")
+              .map((t) => (
+                <li key={t.href}>
+                  <Link prefetch={false} href={t.href}>
+                    {t.label}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+      </section>
       <FaqSection
         paperDecoration
         imageTitle="Your Seminyak Day Spa"
         subTitle="Frequently Asked Questions"
-        title={<>Everything You Need to Know</>}
+        title={<>Day Spa Seminyak: FAQs</>}
         items={[
           {
             question: "What does a day spa in Seminyak usually include?",

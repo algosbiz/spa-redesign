@@ -7,8 +7,8 @@
 export const blogArchivePage = {
   path: "/guide/",
   seo: {
-    title: "Spa Bali Moon Massage Guide",
-    description: "Explore Bali spa tips, massage guides, wellness advice, and relaxation insights from us. Discover expert guides to help you relax, recharge, and enjoy a better spa experience in Bali.",
+    title: "Bali Spa & Massage Guides - Spa Bali Moon",
+    description: "Bali spa and massage guides: what each treatment is, what to expect and which one suits you, from Spa Bali Moon.",
   },
   title: "Blog",
   cardCategory: "Blog",

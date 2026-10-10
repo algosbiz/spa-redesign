@@ -18,8 +18,8 @@ export default function WaxingSalonPage() {
         <PageBanner
           image="/images/services/waxing/waxing-1.webp"
           subTitle="Smooth Finish"
-          titleSpan="Waxing Seminyak"
-          title="in Bali"
+          titleSpan="Waxing"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -175,7 +175,7 @@ export default function WaxingSalonPage() {
           image="/images/services/waxing/waxing-14.webp"
           imageTitle="Waxing Treatment"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Waxing Seminyak: FAQs</>}
           items={[
             {
               question: "How long does waxing results usually last?",

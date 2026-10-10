@@ -19,8 +19,8 @@ export default function CreambathPage() {
         <PageBanner
           image="/images/services/creambath/creambath-1.webp"
           subTitle="Hair & Scalp Wellness"
-          titleSpan="Hair Creambath"
-          title="Seminyak"
+          titleSpan="Hair Cream Bath"
+          title="in Seminyak: Hair Spa & Creambath"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function CreambathPage() {
             "/images/services/creambath/creambath-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Cream Bath Packages in Seminyak"
           text="Our Cream Bath packages combine nourishing hair care with relaxing spa treatments for a more complete wellness experience. From facial care and massage to body treatments, each combination is designed to help you refresh your hair, relax your body, and enjoy more during your spa visit in Bali."
           packages={[
             {
@@ -202,7 +202,7 @@ export default function CreambathPage() {
           image="/images/services/creambath/creambath-11.webp"
           imageTitle="Refresh Your Hair"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Cream Bath Seminyak: FAQs</>}
           items={[
             {
               question: "What is the difference between a creambath and a hair mask?",

@@ -139,7 +139,7 @@ export default function NailSpaPage() {
           image="/images/services/nailart/nailart-10.webp"
           imageTitle="Gel Nail Art"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Gel Nails &amp; Nail Art Seminyak: FAQs</>}
           items={[
             {
               question: "Is Gel Nail Art better than regular nail polish?",

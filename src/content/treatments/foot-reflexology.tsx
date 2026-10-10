@@ -19,7 +19,7 @@ export default function FootReflexologyPage() {
           image="/images/services/footreflexology/footreflexology-1.webp"
           subTitle="Natural Balance"
           titleSpan="Foot Reflexology"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -143,7 +143,7 @@ export default function FootReflexologyPage() {
           image="/images/services/footreflexology/footreflexology-10.webp"
           imageTitle="Reflex Points"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Foot Reflexology Seminyak: FAQs</>}
           items={[
             {
               question: "Is Foot Reflexology the same as a Foot Massage?",

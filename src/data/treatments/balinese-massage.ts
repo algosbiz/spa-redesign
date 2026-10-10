@@ -14,7 +14,7 @@ const balineseMassage: Treatment = {
   cardImage: { src: "/images/treatments/cards/balinesemassage.webp", alt: "Balinese Massage", width: 630, height: 580 },
   seo: {
     title: "Balinese Massage in Seminyak – Traditional Healing",
-    description: "Experience authentic Balinese massage treatment in Seminyak, Bali. Combining long strokes, gentle pressure, and warm oils, this therapy restores harmony and deep relaxation.",
+    description: "Balinese massage in Seminyak, Bali: long strokes, gentle pressure and warm oils for deep relaxation. Book in-spa or at your villa.",
   },
   hero: {
     eyebrow: "Ancient Healing",

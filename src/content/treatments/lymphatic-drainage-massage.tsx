@@ -18,8 +18,8 @@ export default function LymphaticDrainageMassagePage() {
         <PageBanner
           image="/images/services/lymphaticmassage/lymphaticmassage-1.webp"
           subTitle="Restore Your Flow"
-          titleSpan="Lymphatic Massage"
-          title="in Bali"
+          titleSpan="Lymphatic Drainage Massage"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -44,7 +44,7 @@ export default function LymphaticDrainageMassagePage() {
             "/images/services/lymphaticmassage/lymphaticmassage-6.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Duration Options"
+          title="Lymphatic Drainage Massage Session Options"
           text="Every session follows gentle lymphatic drainage principles, with longer durations allowing our therapists to work more thoroughly across different drainage pathways. Each treatment offers a calm, unhurried experience, whether you're easing fluid retention after travel or simply enjoying deeper relaxation."
           packages={[
             {
@@ -104,7 +104,7 @@ export default function LymphaticDrainageMassagePage() {
         subTitle="Guided Pathways"
         badgeTopText="Follow the"
         badgeBottomText="Flow"
-        title={<>Where Does Lymphatic Drainage Go?</>}
+        title={<>Which Areas Does Lymphatic Drainage Massage Target?</>}
         text="Lymphatic Massage uses gentle, rhythmic movements across specific areas of the body to support natural lymphatic flow. The therapist works through key areas in a gradual sequence, with attention given to regions where lymphatic pathways are commonly found. Depending on the treatment, attention may be given to:"
         featuresLeft={["Neck and collarbone", "Underarms", "Abdomen", "Lower back"]}
         featuresRight={["Upper legs", "Calves", "Ankles"]}
@@ -135,7 +135,7 @@ export default function LymphaticDrainageMassagePage() {
           image="/images/services/lymphaticmassage/lymphaticmassage-10.webp"
           imageTitle="Gentle Drainage"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Lymphatic Drainage Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Is Lymphatic Massage the same as Deep Tissue Massage?",

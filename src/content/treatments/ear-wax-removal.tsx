@@ -18,8 +18,8 @@ export default function EarWaxRemovalPage() {
         <PageBanner
           image="/images/services/earcandle/earcandle-1.webp"
           subTitle="Gentle Ear Care"
-          titleSpan="Ear Candle"
-          title="Seminyak"
+          titleSpan="Ear Candle Treatment"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -129,7 +129,7 @@ export default function EarWaxRemovalPage() {
           image="/images/services/earcandle/earcandle-8.webp"
           imageTitle="Gentle Ear Care"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Ear Candle Seminyak: FAQs</>}
           items={[
             {
               question: "What is Ear Candle treatment?",

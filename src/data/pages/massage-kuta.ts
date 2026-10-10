@@ -9,8 +9,8 @@ import type { LandingPage } from "../types";
 export const kutaPage: LandingPage = {
   path: "/massage-kuta/",
   seo: {
-    title: "Affordable Massage in Kuta",
-    description: "Enjoy waves of Relaxation with foot and couple massage in Kuta. Our Traditional Balinese therapists are available for in-spa and outcall.",
+    title: "Massage Kuta - Affordable Spa & Outcall Massage in Bali",
+    description: "Massage in Kuta, Bali: in-spa and outcall massage with traditional Balinese therapists, including foot and couple massage. Book via WhatsApp.",
   },
   hero: {
     eyebrow: "After a Day in the Sun",

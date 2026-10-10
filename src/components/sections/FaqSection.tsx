@@ -105,6 +105,21 @@ export default function FaqSection({
   );
 }
 
+/**
+ * A question numbered "1. How do I…" keeps its number on screen but not in the
+ * heading text: the number is drawn by CSS from `data-num` (src/styles/custom.css).
+ */
+function QuestionText({ text }: { text: string }) {
+  const m = /^(\d+\.)\s+(.*)$/.exec(text);
+  if (!m) return <>{text}</>;
+  return (
+    <>
+      <span className="faq-q-num" data-num={m[1]} aria-hidden="true" />
+      {m[2]}
+    </>
+  );
+}
+
 function Accordion({ items, defaultOpen }: { items: FaqItem[]; defaultOpen: number | null }) {
   const [open, setOpen] = useState<number | null>(defaultOpen);
   return (
@@ -120,7 +135,7 @@ function Accordion({ items, defaultOpen }: { items: FaqItem[]; defaultOpen: numb
                 aria-expanded={isOpen}
                 onClick={() => setOpen((o) => (o === i ? null : i))}
               >
-                {item.question}
+                <QuestionText text={item.question} />
               </button>
             </h3>
             <div className={`accordion-collapse collapse ${isOpen ? "show" : ""}`}>

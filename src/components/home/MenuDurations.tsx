@@ -13,8 +13,10 @@ import { catalogCategories, type CatalogCategory, type CatalogItem, type Catalog
 export type MenuItem = CatalogItem & { children?: { name: string; options: CatalogOption[] }[] };
 
 /** One tab. `timed`: prices go by the duration switch; left out, a tab is
- *  timed when its rows offer two durations or more. */
-export type MenuTab = { id: string; label: string; items: MenuItem[]; timed?: boolean };
+ *  timed when its rows offer two durations or more. `plainTitles`: the rows'
+ *  names are plain text in the same type, not headings (a tab that lists
+ *  treatments another tab lists too, as "Most Popular" does). */
+export type MenuTab = { id: string; label: string; items: MenuItem[]; timed?: boolean; plainTitles?: boolean };
 
 /** Homepage tabs whose prices are per duration. */
 const TIMED: CatalogCategory[] = ["massage", "couple"];
@@ -177,6 +179,7 @@ export default function MenuDurations({
                       item={item}
                       durations={tab.timed ? tab.durations : null}
                       selected={pick(tab.durations)}
+                      plainTitle={tab.plainTitles}
                     />
                   </div>
                 ))}
@@ -220,7 +223,17 @@ function childNotes(item: MenuItem, durations: number[] | null): Note[] {
   });
 }
 
-function DurationRow({ item, durations, selected }: { item: MenuItem; durations: number[] | null; selected: number }) {
+function DurationRow({
+  item,
+  durations,
+  selected,
+  plainTitle = false,
+}: {
+  item: MenuItem;
+  durations: number[] | null;
+  selected: number;
+  plainTitle?: boolean;
+}) {
   const all = [...item.options, ...(item.children ?? []).flatMap((c) => c.options)];
   const perCouple = all.length > 0 && all.every((o) => /2 pax/i.test(o.label));
   // In a timed tab, a row without durations (a cream bath among massages)
@@ -251,6 +264,13 @@ function DurationRow({ item, durations, selected }: { item: MenuItem; durations:
   const current = prices.find((p) => p.minutes === (timed ? selected : null)) ?? prices[0];
   const shown = (minutes: number | null) => minutes === null || minutes === current.minutes;
   const photo = <img loading="lazy" decoding="async" src={item.image} alt={item.name} />;
+  const name = item.href ? (
+    <Link prefetch={false} href={item.href}>
+      {item.name}
+    </Link>
+  ) : (
+    item.name
+  );
 
   return (
     <article className={`treatment-catalog__item${current.amount === null ? " is-unavailable" : ""}`}>
@@ -263,15 +283,11 @@ function DurationRow({ item, durations, selected }: { item: MenuItem; durations:
       )}
       <div className="treatment-catalog__content">
         <div className="treatment-catalog__heading">
-          <h3 className="title">
-            {item.href ? (
-              <Link prefetch={false} href={item.href}>
-                {item.name}
-              </Link>
-            ) : (
-              item.name
-            )}
-          </h3>
+          {plainTitle ? (
+            <div className="title look-h3">{name}</div>
+          ) : (
+            <h3 className="title">{name}</h3>
+          )}
           <div className="v2-dprice">
             {prices.map((p) => (
               // Showing a line again replays the amount's fade-in, so a new price fades in when the duration changes.

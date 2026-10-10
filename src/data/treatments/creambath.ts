@@ -14,8 +14,8 @@ const creambath: Treatment = {
   shortDescription: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
   cardImage: { src: "/images/beauty/cards/creambath.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
   seo: {
-    title: "Hair Cream Bath Bali - Seminyak Spa Experience",
-    description: "Indulge in cream bath therapy in Seminyak, Bali. A soothing hair spa treatment that nourishes roots, relaxes the scalp, and restores natural shine.",
+    title: "Cream Bath Seminyak - Hair Spa & Creambath Bali",
+    description: "Cream bath hair spa in Seminyak, Bali: a nourishing scalp and hair treatment with hair mask options. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Hair & Scalp Wellness",

@@ -151,7 +151,7 @@ export default function CoconutOilMassagePage() {
           image="/images/services/coconutoilmassage/coconutoilmassage-10.webp"
           imageTitle="Pure Coconut Care"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Coconut Oil Massage Seminyak: FAQs</>}
           items={[
             {
               question: "What makes virgin cold-pressed coconut oil different from regular massage oil?",

@@ -14,8 +14,8 @@ const hotStoneMassage: Treatment = {
   shortDescription: "A soothing full-body massage using heated stones to relax muscles and support circulation.",
   cardImage: { src: "/images/treatments/cards/hotstonemassage.webp", alt: "Hot Stone Massage", width: 630, height: 580 },
   seo: {
-    title: "Hot Stone Massage - Spa Bali Moon in Seminyak",
-    description: "Melt into bliss with the best hot stone massages in Bali. Our traditions meet warm serenity, providing a soul-soothing escape.",
+    title: "Hot Stone Massage Bali - Seminyak Spa - Spa Bali Moon",
+    description: "Hot stone massage in Seminyak, Bali: warm stones and traditional techniques for deep relaxation. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Warm Stone Therapy",

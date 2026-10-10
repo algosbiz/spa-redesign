@@ -19,8 +19,8 @@ export default function OutcallPage() {
       <div className="outcall-page">
         <PageBanner
           subTitle="Outcall Spa Service"
-          titleSpan="Home Service"
-          title="Massage in Bali"
+          titleSpan="Outcall Massage in Bali:"
+          title="Home Service to Your Villa or Hotel"
           text="Experience our traditional massage and spa treatments in the comfort of your home, hotel, or villa."
           openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
           image="/images/homepage/homepage-28.webp"
@@ -48,7 +48,7 @@ export default function OutcallPage() {
         />
         <AboutIntro
           subTitle="Spa Bali Moon in Seminyak, Bali"
-          title={<>Home Service Balinese Massage</>}
+          title={<>Outcall Balinese Massage in Bali</>}
           text={
             <>
               Find an authentic Balinese massage without the hassle. Let the stress of the week ease away as you enjoy a
@@ -109,7 +109,7 @@ export default function OutcallPage() {
           subTitle="Reserve Your Home Service Massage"
           badgeTopText="Home Spa"
           badgeBottomText="Booking"
-          title={<>Get Your Massage Service at Home</>}
+          title={<>Book Home Service Massage in Bali</>}
           text="Enjoy professional Balinese massage and spa treatments at your home, hotel, or villa throughout the day. With flexible appointment times and responsive booking support, the process is simple and convenient. When booking a home service, you can expect:"
           featuresLeft={[
             "Individual and group bookings",
@@ -126,7 +126,7 @@ export default function OutcallPage() {
         <div id="outcall-prices">
           <MenuDurations
             subTitle="Prices"
-            title="Professional Care with Thoughtful Details Focused on Comfort and Relaxation"
+            title="Outcall Massage Treatments We Offer"
             spacing="pt-130 pb-130"
             sticky
             tabs={menuTabs([
@@ -722,14 +722,14 @@ export default function OutcallPage() {
                   },
                 ],
               },
-            ])}
+            ], ["Most Popular"])}
           />
         </div>
         <HomeServiceInfo plain />
         <div className="outcall-closing-panel section__decoration-top section__decoration-bottom bg-sub pb-100">
           <FaqSection
             subTitle="Frequently Asked Questions"
-            title={<>Home Service Massage</>}
+            title={<>Outcall Massage Bali: FAQs</>}
             items={[
               {
                 question: "What is an outcall massage?",
@@ -772,7 +772,7 @@ export default function OutcallPage() {
           />
           <ReserveCta
             bottomSpacing={0}
-            title="Home Service Massage in Seminyak"
+            title="Home Service Massage in Seminyak and Beyond"
             text="Professional treatments at your home, hotel, or villa for an extra IDR 75,000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen."
             closingText="For in-spa treatments, bookings are made on-site at your preferred time."
             backgroundImage="/images/outcall/outcall-5.webp"

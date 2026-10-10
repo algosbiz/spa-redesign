@@ -12,7 +12,7 @@ const daySpa: Treatment = {
   cardImage: { src: "/images/treatments/day-spa/dayspa-3.webp", alt: "Day Spa", width: 630, height: 580 },
   seo: {
     title: "Day Spa in Seminyak – Relax & Rejuvenate",
-    description: "Discover day spa treatments in Seminyak, Bali. From massages to facials, our therapies are designed to relax, refresh, and restore your natural glow.",
+    description: "Day spa in Seminyak, Bali: massages, facials and body treatments in one visit. Open daily 9am-11pm at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Take the Day Slowly",

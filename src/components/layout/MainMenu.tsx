@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { MobileMenuEntry } from "@/components/layout/mobileMenuData";
-import { treatmentMenu, treatmentMenuColumns } from "@/data/navigation";
+import { outcallMenu, treatmentMenu, treatmentMenuColumns } from "@/data/navigation";
 
 const strip = (path: string) => path.replace(/\/$/, "") || "/";
 
@@ -20,6 +20,7 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
   const isCurrent = (href: string) => current === strip(href);
   const inTreatments = treatmentMenu.some((t) => isCurrent(t.href));
   const inBlog = current === "/guide" || current.startsWith("/guide/");
+  const inOutcall = outcallMenu.some((o) => isCurrent(o.href));
 
   return (
     <ul className="jsx-nav">
@@ -34,7 +35,7 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
         </Link>
       </li>
       <li className={`jsx-nav treatments-menu-item${inTreatments ? " is-active" : ""}`}>
-        <Link prefetch={false} href="/#0">
+        <Link prefetch={false} href="/seminyak/">
           Treatments <i className="jsx-nav fa-solid fa-angle-down" />
         </Link>
         <ul className="jsx-nav sub-menu treatment-mega-menu">
@@ -56,10 +57,19 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
           ))}
         </ul>
       </li>
-      <li className="jsx-nav">
+      <li className={`jsx-nav outcall-menu-item${inOutcall ? " is-active" : ""}`}>
         <Link prefetch={false} href="/outcall-home-service-massage/">
-          Outcall
+          Outcall <i className="jsx-nav fa-solid fa-angle-down" />
         </Link>
+        <ul className="jsx-nav sub-menu outcall-dropdown-menu">
+          {outcallMenu.map((o) => (
+            <li key={o.href} className="jsx-nav">
+              <Link prefetch={false} href={o.href}>
+                {o.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </li>
       <li className="jsx-nav">
         <Link prefetch={false} href="/reservation/">

@@ -13,8 +13,8 @@ const thaiMassage: Treatment = {
   shortDescription: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
   cardImage: { src: "/images/treatments/cards/thaimassage.webp", alt: "Thai Massage", width: 630, height: 580 },
   seo: {
-    title: "Thai Massage Bali - Stretch, Heal, Renew",
-    description: "Experience authentic Thai massage therapy in Seminyak, Bali. Combining ancient techniques with modern spa comfort, our treatments restore energy and balance.",
+    title: "Thai Massage Seminyak & Bali - Traditional Thai Spa",
+    description: "Thai massage in Seminyak, Bali: traditional stretching and pressure techniques by trained therapists. Book in-spa or at your villa.",
   },
   hero: {
     eyebrow: "Active Release",

@@ -43,7 +43,7 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
                     <LotusIcon className="icon" scope={S} />
                     {faq.subTitle}
                   </p>
-                  <h2 className={`${S} title`}>Questions About Our Spa</h2>
+                  <h2 className={`${S} title`}>Seminyak Spa &amp; Massage: FAQs</h2>
                 </div>
                 <div className="v2-faq__list">
                   {faq.items.map((item, i) => {
@@ -60,9 +60,7 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
                             onClick={() => setOpen((o) => (o === i ? null : i))}
                           >
                             {num && (
-                              <span className="v2-faq__num" aria-hidden="true">
-                                {num}
-                              </span>
+                              <span className="v2-faq__num" data-num={num} aria-hidden="true" />
                             )}
                             <span className="v2-faq__text">{text}</span>
                             {arrow === "line" ? (

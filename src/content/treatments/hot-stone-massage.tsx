@@ -19,8 +19,8 @@ export default function HotStoneMassagePage() {
         <PageBanner
           image="/images/services/hotstonemassage/hotstonemassage-1.webp"
           subTitle="Warm Stone Therapy"
-          titleSpan="Traditional Hot Stone"
-          title="Massage"
+          titleSpan="Hot Stone Massage"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function HotStoneMassagePage() {
             "/images/services/hotstonemassage/hotstonemassage-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Hot Stone Massage Packages in Seminyak"
           text="Hot Stone Massage pairs naturally with treatments that extend relaxation from head to toe. Our carefully selected packages combine soothing warmth with facial care, body treatments, or beauty services, making them ideal for guests looking for a more complete spa experience during their stay in Bali."
           packages={[
             {
@@ -175,7 +175,7 @@ export default function HotStoneMassagePage() {
           image="/images/services/hotstonemassage/hotstonemassage-11.webp"
           imageTitle="Warm Stone Therapy"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Hot Stone Massage Seminyak: FAQs</>}
           items={[
             {
               question: "Are the stones very hot?",

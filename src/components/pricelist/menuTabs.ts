@@ -36,12 +36,13 @@ function details(service: PricedService, options: CatalogOption[]): CatalogOptio
  * treatments, texts and prices, in the page's own order. A treatment listed
  * under another (`children`) shows as a line under it.
  */
-export function menuTabs(tabs: { label: string; services: PricedService[] }[]): MenuTab[] {
+export function menuTabs(tabs: { label: string; services: PricedService[] }[], plainTitles: string[] = []): MenuTab[] {
   return tabs.map((tab) => {
     const id = tab.label.toLowerCase().replace(/\W+/g, "-");
     return {
       id,
       label: tab.label,
+      plainTitles: plainTitles.includes(tab.label) || undefined,
       items: tab.services.map((service) => ({
         id: `${id}-${service.id}`,
         name: service.name,

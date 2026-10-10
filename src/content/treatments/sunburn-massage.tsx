@@ -18,8 +18,8 @@ export default function SunburnMassagePage() {
         <PageBanner
           image="/images/services/sunburntreatment/sunburntreatment-1.webp"
           subTitle="After Sun Care"
-          titleSpan="Sunburn"
-          title="Seminyak"
+          titleSpan="Sunburn Treatment"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -125,7 +125,7 @@ export default function SunburnMassagePage() {
           image="/images/services/sunburntreatment/sunburntreatment-8.webp"
           imageTitle="After Sun Care"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Sunburn Treatment Seminyak: FAQs</>}
           items={[
             {
               question: "Can I get a massage if I have sunburn?",

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import type { ReactNode } from "react";
+import Link from "next/link";
 import FloralDecoration from "@/components/ui/FloralDecoration";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { home } from "@/data/pages/home";
@@ -108,6 +109,13 @@ export default function Steps() {
             ))}
           </div>
         </div>
+        <p className="step-outcall">
+          Prefer to stay in? We also offer{" "}
+          <Link prefetch={false} href="/outcall-home-service-massage/">
+            outcall and home service massage in Bali
+          </Link>
+          .
+        </p>
       </div>
     </section>
   );

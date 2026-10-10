@@ -13,8 +13,8 @@ const earWaxRemoval: Treatment = {
   shortDescription: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
   cardImage: { src: "/images/beauty/cards/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
   seo: {
-    title: "Ear Candle Bali - Traditional Spa Treatment",
-    description: "Book a special ear candle therapy in Seminyak. It gives a warm and comfy feeling. The candle's warmth offers more than just touch.",
+    title: "Ear Candle Bali - Ear Candling in Seminyak",
+    description: "Ear candle treatment in Seminyak, Bali: a warm, relaxing ear candling session. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Gentle Ear Care",

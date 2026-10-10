@@ -13,8 +13,8 @@ const manicurePedicure: Treatment = {
   shortDescription: "A complete hand and foot treatment finished neatly with polish.",
   cardImage: { src: "/images/beauty/cards/manicurepedicure.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
   seo: {
-    title: "Professional Nail Care in Bali – Manicure & Pedicure",
-    description: "Discover manicure and pedicure treatments in Seminyak, Bali. From shaping and polishing to nourishing care, our spa ensures radiant nails and refreshed hands and feet.",
+    title: "Manicure & Pedicure Seminyak - Spa Nail Care",
+    description: "Manicure and pedicure in Seminyak, Bali: shaping, polish and nourishing care for hands and feet. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Polish and Pamper",

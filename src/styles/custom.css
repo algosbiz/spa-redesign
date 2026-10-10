@@ -549,3 +549,80 @@
 .row-btn--glass:is(:hover, :focus-visible) .row-btn__note {
   color: var(--text-color);
 }
+
+/* FAQ numbers drawn by CSS, so the heading text is just the question (SEO, 10 Oct). */
+.v2-faq__num::before,
+.faq-q-num::before {
+  content: attr(data-num);
+}
+.faq-q-num::after {
+  content: " ";
+}
+
+/* A treatment name that is plain text, not a heading, keeps the heading look (SEO, 10 Oct). */
+.v2-treat__title.look-h3,
+.treatment-catalog__heading .title.look-h3 {
+  color: var(--headings-color);
+  font-family: var(--title-font);
+}
+
+/* Day Spa page: links to the treatment pages (SEO, 10 Oct). */
+.day-spa-links__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.day-spa-links__list a {
+  display: block;
+  padding: 14px 20px;
+  border: 1px solid rgba(232, 227, 218, 0.9);
+  border-radius: 12px;
+  background-color: #fff;
+  color: var(--headings-color);
+  font-family: var(--title-font);
+  font-size: 17px;
+  line-height: 26px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.day-spa-links__list a:is(:hover, :focus-visible) {
+  color: var(--theme-color1);
+  border-color: var(--theme-color1);
+}
+
+/* Header "Outcall" dropdown, same look as the Blog one (SEO, 10 Oct). */
+.header__main .main-menu ul li.outcall-menu-item.is-active>a,
+.header__main .main-menu ul li.outcall-menu-item.is-active>a i {
+  color: var(--theme-color1) !important;
+}
+.header__main .main-menu ul li .outcall-dropdown-menu:where(.lh, .lh *) {
+  left: 50%;
+  width: 280px;
+  transform: translate(-50%, 10px);
+}
+.header__main .main-menu ul li:hover .outcall-dropdown-menu:where(.lh, .lh *) {
+  transform: translate(-50%, 0);
+}
+.header__main .main-menu ul li .outcall-dropdown-menu li a:where(.lh, .lh *) {
+  white-space: nowrap;
+}
+.header__main .main-menu ul li.outcall-menu-item .outcall-dropdown-menu li:hover>a,
+.header__main .main-menu ul li.outcall-menu-item .outcall-dropdown-menu li>a:focus-visible {
+  color: var(--theme-color1) !important;
+}
+
+/* Homepage: the link to the outcall page under the booking steps (SEO, 10 Oct). */
+.home-v2 .step-outcall {
+  margin: 48px 0 0;
+  text-align: center;
+}
+.home-v2 .step-outcall a {
+  color: var(--theme-color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.home-v2 .step-outcall a:is(:hover, :focus-visible) {
+  color: var(--headings-color);
+}

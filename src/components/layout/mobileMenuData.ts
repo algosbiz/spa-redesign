@@ -1,11 +1,11 @@
 import { allTreatments } from "@/components/home/treatments";
-import { treatmentMenu } from "@/data/navigation";
+import { outcallMenu, treatmentMenu } from "@/data/navigation";
 import { getBlogMenu } from "@/lib/blog/posts";
 
 /** One row in the mobile menu's Treatments or Blog panel. */
 export type MobileMenuEntry = { label: string; href: string; image: string; note?: string };
 export type MobileMenuGroup = { title: string; items: MobileMenuEntry[] };
-export type MobileMenuData = { treatments: MobileMenuGroup[]; posts: MobileMenuEntry[] };
+export type MobileMenuData = { treatments: MobileMenuGroup[]; posts: MobileMenuEntry[]; outcall: MobileMenuEntry[] };
 
 /**
  * What the mobile menu's two inner panels list, built on the server and handed
@@ -30,6 +30,7 @@ export async function mobileMenuData(): Promise<MobileMenuData> {
       { title: "Massage", items: entries.filter((e) => e.group === "massage").map((e) => e.entry) },
       { title: "Beauty & Body", items: entries.filter((e) => e.group === "beauty").map((e) => e.entry) },
     ],
+    outcall: outcallMenu.map((o) => ({ label: o.label, href: o.href, image: o.image, note: o.note })),
     posts: (await getBlogMenu()).map((p) => ({
       label: p.title,
       href: `/guide/${p.slug}/`,

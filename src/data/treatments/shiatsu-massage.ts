@@ -13,8 +13,8 @@ const shiatsuMassage: Treatment = {
   shortDescription: "An oil-free full-body massage using Japanese pressure-point techniques to ease tension.",
   cardImage: { src: "/images/treatments/cards/shiatsumassage.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
   seo: {
-    title: "Traditional Shiatsu Massage Bali – Flow & Wellness",
-    description: "Experience Japanese Shiatsu massage therapy in Seminyak, Bali. Gentle stretches and focused pressure release muscle tension, restore energy flow, and promote deep relaxation.",
+    title: "Shiatsu Massage Bali - Japanese Massage in Seminyak",
+    description: "Shiatsu massage in Seminyak, Bali: a Japanese massage using gentle stretches and focused pressure. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Japanese Wellness",

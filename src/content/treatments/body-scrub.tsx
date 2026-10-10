@@ -20,7 +20,7 @@ export default function BodyScrubPage() {
           image="/images/services/bodyscrub/bodyscrub-1.webp"
           subTitle="Skin Renewal"
           titleSpan="Body Scrub"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function BodyScrubPage() {
             "/images/services/bodyscrub/bodyscrub-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Body Scrub Packages in Seminyak"
           text="Body scrubs are often combined with massage, facials, and beauty treatments to create a complete wellness session. Our packages are designed for guests looking to refresh both body and mind while enjoying their time in Bali."
           packages={[
             {
@@ -187,7 +187,7 @@ export default function BodyScrubPage() {
           image="/images/services/bodyscrub/bodyscrub-11.webp"
           imageTitle="Renew Your Skin"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Body Scrub Seminyak: FAQs</>}
           items={[
             {
               question: "What happens during a body scrub massage?",

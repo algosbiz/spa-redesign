@@ -14,8 +14,8 @@ export default function VillaHotelMassagePage() {
     <div className="page-wrapper lh p-villa-hotel-massage">
       <PageBanner
         subTitle="In-Room Spa Service"
-        titleSpan="Hotel Villa"
-        title="Massage in Seminyak"
+        titleSpan="Villa & Hotel Massage"
+        title="in Seminyak, Bali"
         buttonText="Book Now"
         image="/images/services/massagehotelvilla/massagehotelvilla-1.webp"
       />
@@ -94,7 +94,7 @@ export default function VillaHotelMassagePage() {
           largeTopPadding
           imageTitle="Relax In Your Room"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>In-Villa Massage Seminyak: FAQs</>}
           items={[
             {
               question: "How do I book a hotel or villa massage in Seminyak?",
@@ -131,7 +131,7 @@ export default function VillaHotelMassagePage() {
       </div>
       <ReserveCta
         standardSpacing
-        title="Bring the Spa Experience to Your Hotel or Villa"
+        title="Book an In-Villa Massage in Bali"
         text="Your Bali itinerary does not have to end at your room. Our therapists bring professional massage and selected treatments to your hotel or villa around Seminyak, carrying everything needed."
         closingText="Send us a message on WhatsApp and we will arrange the rest of the details."
         backgroundImage="/images/services/massagehotelvilla/massagehotelvilla-8.webp"
@@ -141,9 +141,9 @@ export default function VillaHotelMassagePage() {
         subTitle="Our Treatments"
         title={
           <>
-            {"Massage Services for "}
+            {"Villa & Hotel Massage "}
             <br />
-            {" Your Stay"}
+            {" Treatments"}
           </>
         }
       />

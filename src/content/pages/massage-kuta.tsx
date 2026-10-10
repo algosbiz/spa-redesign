@@ -14,8 +14,8 @@ export default function MassageKutaPage() {
     <div className="page-wrapper lh p-massage-kuta">
       <PageBanner
         subTitle="After a Day in the Sun"
-        titleSpan="Massage"
-        title="Kuta"
+        titleSpan="Massage in Kuta, Bali:"
+        title="In-Spa and Outcall"
         buttonText="Book Now"
         image="/images/services/massagekuta/massagekuta-1.webp"
       />
@@ -42,7 +42,7 @@ export default function MassageKutaPage() {
       <TreatmentTestimonials />
       <AboutSplit
         subTitle="Treatment Options"
-        title={<>Which Massage Suits Your Day in Kuta?</>}
+        title={<>Massage Treatments Available in Kuta</>}
         text="The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sport Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements."
         featuresLeft={[
           "Balinese Massage for full-body relaxation",
@@ -64,7 +64,7 @@ export default function MassageKutaPage() {
         subTitle="Complete Experience"
         badgeTopText="Make It a"
         badgeBottomText="Full Spa Day"
-        title={<>More Than a Full-Body Treatment</>}
+        title={<>Spa Treatments Beyond Massage in Kuta</>}
         text="A relaxing spa experience can include more than massage. Add a Bali Moon Facial, Body Scrub, Cream Bath, Manicure, Pedicure, or other beauty treatments to create a more complete session."
         featuresLeft={[
           "Bali Moon Facial with Tea Tree or Gold Mask options",
@@ -94,7 +94,7 @@ export default function MassageKutaPage() {
           largeTopPadding
           imageTitle="Unwind In Kuta"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Massage Kuta: FAQs</>}
           items={[
             {
               question: "What type of massage is best after a long day in Kuta?",

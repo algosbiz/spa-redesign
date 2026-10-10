@@ -24,7 +24,7 @@ export default function BalineseMassagePage() {
             shapeImage="/images/shape/banner-two-shape.png"
             subTitle="Ancient Healing"
             titleSpan="Balinese Massage"
-            title="Seminyak"
+            title="in Seminyak, Bali"
           />
         </div>
         <AboutIntro
@@ -50,7 +50,7 @@ export default function BalineseMassagePage() {
               "/images/services/balinesemassage/balinesemassage-7.webp",
             ]}
             subTitle="Find Yours"
-            title="Our Package Options"
+            title="Balinese Massage Packages in Seminyak"
             text="Balinese massage is often combined with treatments such as facials, cream baths, and nail care to create a more complete spa experience. Our treatment packages are created for guests looking to relax, refresh, and make the most of their massage time in Bali."
             packages={[
               {
@@ -176,7 +176,7 @@ export default function BalineseMassagePage() {
             paperDecoration
             image="/images/services/balinesemassage/balinesemassage-11.webp"
             subTitle="Frequently Asked Questions"
-            title={<>Everything You Need to Know</>}
+            title={<>Balinese Massage Seminyak: FAQs</>}
             items={[
               {
                 question: "What should I wear during a Balinese massage?",

@@ -19,8 +19,8 @@ export default function ThaiMassagePage() {
         <PageBanner
           image="/images/services/thaimassage/thaimassage-1.webp"
           subTitle="Active Release"
-          titleSpan="Traditional Thai Massage"
-          title="in Bali"
+          titleSpan="Thai Massage"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function ThaiMassagePage() {
             "/images/services/thaimassage/thaimassage-7.webp",
           ]}
           subTitle="Choose Yours"
-          title="Our Package Options"
+          title="Thai Massage Packages in Seminyak"
           text="Enjoy a complete Thai Massage experience combined with other relaxing treatments at Spa Bali Moon. Each package is created to provide a balanced wellness session, combining traditional Thai techniques with facial, nail, and body treatments."
           packages={[
             {
@@ -182,7 +182,7 @@ export default function ThaiMassagePage() {
           image="/images/services/thaimassage/thaimassage-11.webp"
           imageTitle="Thai Massage"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Thai Massage Seminyak: FAQs</>}
           items={[
             {
               question: "What is Traditional Thai Massage?",

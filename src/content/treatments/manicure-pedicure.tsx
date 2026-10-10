@@ -20,7 +20,7 @@ export default function ManicurePedicurePage() {
           image="/images/services/manicurepedicure/manicurepedicure-1.webp"
           subTitle="Polish and Pamper"
           titleSpan="Manicure & Pedicure"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function ManicurePedicurePage() {
             "/images/services/manicurepedicure/manicurepedicure-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Manicure &amp; Pedicure Packages in Seminyak"
           text="Complete your nail care with spa treatments that help you feel refreshed from head to toe. Our packages combine professional manicure and pedicure services with massage, facial, or hair care, creating a balanced wellness experience during your stay in Bali."
           packages={[
             {
@@ -184,7 +184,7 @@ export default function ManicurePedicurePage() {
           image="/images/services/manicurepedicure/manicurepedicure-11.webp"
           imageTitle="Nail Care"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Manicure &amp; Pedicure Seminyak: FAQs</>}
           items={[
             {
               question: "What is included in a Manicure & Pedicure?",

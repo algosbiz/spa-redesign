@@ -12,7 +12,7 @@ const FALLBACK_IMAGE = "/images/blog/blog-image1.jpg";
 export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
   return (
     <div className="page-wrapper lh p-guide">
-      <PageTitle pageName="Blog" backgroundImage="/images/blog/blog-1.webp" />
+      <PageTitle pageName="Bali Spa & Massage Guides" backgroundImage="/images/blog/blog-1.webp" />
       <section className="blog-section-two pt-120 pb-90">
         <div className="container">
           <div className="row">

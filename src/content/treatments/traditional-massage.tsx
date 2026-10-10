@@ -19,7 +19,7 @@ export default function TraditionalMassagePage() {
           image="/images/services/traditionalmassage/traditionalmassage-1.webp"
           subTitle="Firm Body Care"
           titleSpan="Traditional Massage"
-          title="Seminyak"
+          title="in Seminyak, Bali"
         />
       </div>
       <AboutIntro
@@ -162,7 +162,7 @@ export default function TraditionalMassagePage() {
           image="/images/services/traditionalmassage/traditionalmassage-10.webp"
           imageTitle="Traditional Massage"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Traditional Massage Seminyak: FAQs</>}
           items={[
             {
               question: "What is Traditional Massage?",

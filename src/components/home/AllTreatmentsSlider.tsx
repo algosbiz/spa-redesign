@@ -34,7 +34,7 @@ export default function AllTreatmentsSlider({
         </div>
         <ScrollRow className="v2-alltreat__row" below="all" indicator="bar" label="All treatments">
           {allTreatments.map((t) => (
-            <TreatmentCard key={t.href} {...t} />
+            <TreatmentCard key={t.href} {...t} heading={false} />
           ))}
         </ScrollRow>
         <div className="v2-popular__more">

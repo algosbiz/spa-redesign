@@ -37,7 +37,7 @@ export default function HomePage() {
         treatments={
           <AllTreatmentsSlider
             subTitle="Massage & Beauty"
-            title="Find Your Spa Treatment"
+            title="Massage & Spa Treatments in Seminyak"
             text={
               <>
                 {/* Kept together so a narrow phone breaks at the comma, not
@@ -47,7 +47,7 @@ export default function HomePage() {
             }
           />
         }
-        menu={<MenuDurations subTitle="Price List" title="Browse Our Spa Menu" sticky />}
+        menu={<MenuDurations subTitle="Price List" title="Full Spa Menu: Massage, Facials & Body Treatments" sticky />}
         faq={<Faq arrow="line" />}
       />
     </>

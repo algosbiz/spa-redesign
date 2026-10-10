@@ -14,7 +14,7 @@ const footReflexology: Treatment = {
   cardImage: { src: "/images/treatments/cards/footreflexology.webp", alt: "Foot Reflexology", width: 630, height: 580 },
   seo: {
     title: "Foot Reflexology in Seminyak, Bali",
-    description: "Experience authentic Bali reflexology in Seminyak. Unwind in our spa where traditional techniques meet relaxing foot therapy.",
+    description: "Foot reflexology in Seminyak, Bali: traditional techniques for tired feet. Book at Spa Bali Moon or at your villa.",
   },
   hero: {
     eyebrow: "Natural Balance",

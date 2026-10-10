@@ -19,8 +19,8 @@ export default function FacialPage() {
         <PageBanner
           image="/images/services/balimoonfacial/balimoonfacial-1.webp"
           subTitle="Skin Rejuvenation"
-          titleSpan="Bali Moon Facial"
-          title="Seminyak"
+          titleSpan="Facial"
+          title="in Seminyak: Bali Moon Facial Treatments"
         />
       </div>
       <AboutIntro
@@ -46,7 +46,7 @@ export default function FacialPage() {
             "/images/services/balimoonfacial/balimoonfacial-7.webp",
           ]}
           subTitle="Find Yours"
-          title="Our Package Options"
+          title="Facial Packages in Seminyak"
           text="Bali Moon Facial is often combined with massage, hair treatments, and nail care to create a complete self-care experience. Our treatment packages are designed for guests looking to relax while giving their skin additional attention during their time in Bali."
           packages={[
             {
@@ -178,7 +178,7 @@ export default function FacialPage() {
           image="/images/services/balimoonfacial/balimoonfacial-11.webp"
           imageTitle="Refresh Your Skin"
           subTitle="Frequently Asked Questions"
-          title={<>Everything You Need to Know</>}
+          title={<>Facial Seminyak: FAQs</>}
           items={[
             {
               question: "What Is a Bali Moon Facial?",
