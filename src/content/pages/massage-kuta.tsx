@@ -88,6 +88,8 @@ export default function MassageKutaPage() {
       <AboutSplit
         subTitle="Treatment Options"
         title={<>Massage Treatments Available in Kuta</>}
+        badgeTopText="In Kuta"
+        badgeBottomText="At your hotel or villa"
         text="The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sports Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements."
         featuresLeft={[
           "Balinese Massage for full-body relaxation",
@@ -107,8 +109,8 @@ export default function MassageKutaPage() {
       />
       <AboutSplitAlt
         subTitle="Complete Experience"
-        badgeTopText="Make It a"
-        badgeBottomText="Full Spa Day"
+        badgeTopText="Add on"
+        badgeBottomText="Facial, scrub or cream bath"
         title={<>Spa Treatments Beyond Massage in Kuta</>}
         text="A relaxing spa experience can include more than massage. Add a Bali Moon Facial, Body Scrub, Cream Bath, Manicure, Pedicure, or other beauty treatments to create a more complete session."
         featuresLeft={[
@@ -126,8 +128,8 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-5.webp"
       />
       <AboutSplit
-        badgeTopText="Just Pick"
-        badgeBottomText="a Time"
+        badgeTopText="Booking"
+        badgeBottomText="Just pick a time"
         // No small heading: without one the section showed the default "About".
         subTitle=""
         title={<>Booking a Massage in Kuta</>}

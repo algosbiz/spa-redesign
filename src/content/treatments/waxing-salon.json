@@ -212,7 +212,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Made with",
+        "badgeBottomText": "Olive oil hot wax"
       }
     },
     {

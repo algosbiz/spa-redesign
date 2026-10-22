@@ -76,18 +76,22 @@ const textAndPhoto: SectionSchema = {
     { key: "featuresRight", label: "Bullet points, right column", kind: "list" },
     { key: "image", label: "Photo", kind: "image", maxWidth: 1200 },
     // A section whose decorative badge was removed (showBadge: false) has none to edit.
+    // The badge is a small card on the photo: a label over a short fact about
+    // the treatment (owner, 22 Oct: "something more on topic" than "17+ Years").
     {
       key: "badgeTopText",
-      label: "Photo badge, top line",
+      label: "Photo badge, small label",
       kind: "text",
-      placeholder: "17+ Years",
+      placeholder: "Made with",
+      hint: "A word or two, shown in small capitals.",
       hideIf: (p) => p.showBadge === false,
     },
     {
       key: "badgeBottomText",
-      label: "Photo badge, bottom line",
+      label: "Photo badge, fact",
       kind: "text",
-      placeholder: "Experience",
+      placeholder: "Warm basalt stones",
+      hint: "A short fact about the treatment, under the label.",
       hideIf: (p) => p.showBadge === false,
     },
     { key: "buttonText", label: "Button text", kind: "text", placeholder: "Learn More" },

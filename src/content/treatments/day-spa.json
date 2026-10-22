@@ -106,7 +106,9 @@
             "buttonText": "Book Now",
             "buttonLink": "https://wa.me/6287863175144",
             "image": "/images/services/dayspaseminyak/dayspa-4.webp",
-            "treatmentLayout": true
+            "treatmentLayout": true,
+            "badgeTopText": "One visit",
+            "badgeBottomText": "Massage, facial & more"
           }
         }
       ]

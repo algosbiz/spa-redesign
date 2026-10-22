@@ -224,7 +224,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Technique",
+        "badgeBottomText": "Stretching, no oil"
       }
     },
     {

@@ -174,7 +174,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Easy for",
+        "badgeBottomText": "Beach & pool days"
       }
     },
     {

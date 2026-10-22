@@ -4,13 +4,13 @@ import { learnMoreLabel } from "@/components/sections/learnMoreLabel";
 import { business } from "@/data/business";
 
 /*
- * The modern look of the text & photo sections (AboutSplit, AboutSplitAlt;
- * owner, 22 Oct: "could we modernize these", tried on the foot massage page
- * first): the button a slim pill ending in a gold circle with its icon (the
- * hero's row buttons stay the hero's own, owner: "the other rectangle
- * buttons are nice being different"), and the photo badge a white card
- * floating in the photo's corner, the photo without its notch.
- * Styles: custom.css ("Text & photo sections, the modern look").
+ * The button and photo badge of the text & photo sections (AboutSplit,
+ * AboutSplitAlt; owner, 22 Oct: "could we modernize these", tried on the
+ * foot massage page, then given to every page). The button is a slim pill
+ * ending in a gold circle with its icon (the hero's row buttons stay the
+ * hero's own: "the other rectangle buttons are nice being different"); the
+ * badge a white card with a gold edge floating in the photo's corner, the
+ * photo without its notch. Styles: custom.css ("Text & photo sections").
  */
 
 /** The section's button: its label, then a gold circle with WhatsApp's icon (a WhatsApp link) or an arrow. */
@@ -46,15 +46,17 @@ export function SplitButton({ text, link }: { text?: ReactNode; link: string }) 
 }
 
 /**
- * The badge as a card: the years since the spa opened, large, beside "Years
- * of Experience"; or the section's own two lines ("Where Tension Lives").
+ * The badge as a card: a small label over a short fact about the section
+ * ("Made with" / "Warm basalt stones"; owner, 22 Oct: "something more on
+ * topic" than "17+ Years Experience"). Without a label, the years since the
+ * spa opened, large, beside "Years of …".
  */
 export function SplitBadge({ top, bottom }: { top?: string | null; bottom: ReactNode }) {
   if (top) {
     return (
       <div className="split-badge split-badge--text">
-        <span className="split-badge__top">{top}</span>
-        <span className="split-badge__label">{bottom}</span>
+        <span className="split-badge__label">{top}</span>
+        <span className="split-badge__top">{bottom}</span>
       </div>
     );
   }

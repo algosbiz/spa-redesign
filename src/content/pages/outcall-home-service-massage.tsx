@@ -210,6 +210,8 @@ export default function OutcallPage() {
             treatmentLayout
             subTitle="Spa & Beauty Service"
             title={<>{"Home Massage & Body Treatments We Bring to You"}</>}
+            badgeTopText="We bring"
+            badgeBottomText="Fresh linen & oils"
             text="Every treatment below is available as a home massage or body treatment at your villa, hotel or home, in Seminyak and across Bali:"
             featuresLeft={[
               <TreatmentItem key="couple" href="/seminyak/couple-spa/" name="Couple Massage">

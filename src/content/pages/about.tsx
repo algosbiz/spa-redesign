@@ -101,6 +101,8 @@ export default function AboutPage() {
       <AboutSplit
         subTitle="Our Therapists"
         title={<>Who Are Spa Bali Moon&apos;s Therapists?</>}
+        badgeTopText="In Seminyak"
+        badgeBottomText="Since 2009"
         text="Our therapists are trained Balinese therapists who ask about your preferred pressure and focus areas before every session, then adjust as they work. Here is what you can expect from our team:"
         featuresLeft={[
           "Experienced Balinese therapists",
@@ -118,8 +120,8 @@ export default function AboutPage() {
       />
       <AboutSplitAlt
         subTitle="What We Use"
-        badgeTopText="Natural"
-        badgeBottomText="Care"
+        badgeTopText="Products"
+        badgeBottomText="Natural oils & spa brands"
         title={<>Which Products Does Spa Bali Moon Use?</>}
         text="Each treatment has its own oils, creams and scrubs, from natural oils to well-known spa brands:"
         featuresLeft={[
@@ -140,8 +142,8 @@ export default function AboutPage() {
       />
       <AboutSplit
         subTitle="Clean & Hygienic"
-        badgeTopText="Fresh For"
-        badgeBottomText="Every Guest"
+        badgeTopText="Hygiene"
+        badgeBottomText="Clean towels for every guest"
         title={<>How Does Spa Bali Moon Keep Treatments Clean?</>}
         text="We prepare every appointment with hygiene in mind, whether you visit the spa or book home service. Here is how we keep each treatment clean:"
         featuresLeft={["Clean towels for every guest", "Sanitised equipment", "Private treatment rooms"]}

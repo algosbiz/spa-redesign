@@ -120,6 +120,8 @@ export default function VillaHotelMassagePage() {
       <AboutSplit
         subTitle="Stay In"
         title={<>The Spa Comes to Your Room</>}
+        badgeTopText="Arrives in"
+        badgeBottomText="Usually 30–60 min"
         text="A massage at your accommodation gives you more time to relax and less time spent travelling between appointments. It is a convenient choice after a long flight, a full day exploring Bali, or simply when you would rather enjoy professional spa care in the privacy of your own space."
         featuresLeft={[
           "No travel to and from the spa",
@@ -137,8 +139,8 @@ export default function VillaHotelMassagePage() {
       />
       <AboutSplitAlt
         subTitle="Treatments for Your Stay "
-        badgeTopText="Spa Comes"
-        badgeBottomText="to You"
+        badgeTopText="Popular in-room"
+        badgeBottomText="Massage, scrub & facial"
         title={<>Treatments That Work Well in Your Hotel or Villa</>}
         text="The right treatment depends on how you want to feel after your session. A Balinese Massage offers a traditional full-body experience, Sports Massage can help ease tired muscles after physical activity, while body scrubs, facials, cream baths, and beauty treatments allow you to create a more complete in-room spa experience."
         featuresLeft={[
@@ -158,8 +160,8 @@ export default function VillaHotelMassagePage() {
         image="/images/services/massagehotelvilla/massagehotelvilla-5.webp"
       />
       <AboutSplit
-        badgeTopText="Ready When"
-        badgeBottomText="You Are"
+        badgeTopText="Booking"
+        badgeBottomText="Open daily 9am – 11pm"
         // No small heading: without one the section showed the default "About".
         subTitle=""
         title={<>{"Booking Your Hotel & Villa Massage"}</>}

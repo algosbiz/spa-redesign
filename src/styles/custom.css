@@ -367,18 +367,6 @@
   height: auto;
 }
 
-/* Photo badge in the corner notch of the about photos ("17 + Years
-   Experience", "Where Tension Lives", "The Art of Focus"…). Owner, 2 Oct:
-   "these need to come out into the larger image framing". Live floats it
-   1.4cqw (8px at full size) inside the notch on every side; it now fills the
-   notch out to the photo's outer left and bottom edges, keeping the 8px gap
-   toward the photo (notch 216x146 of the 570x496 mask). */
-.about-section .image-column .inner-column .info {
-  bottom: 0;
-  left: 0;
-  width: 36.49cqw;
-  height: 24.74cqw;
-}
 
 /* Preloader (owner, 2 Oct, "option b"): it leaves by itself 0.5s after the
    page is first styled instead of waiting for JavaScript. On a slow phone the
@@ -2167,11 +2155,12 @@
   }
 }
 
-/* Text & photo sections, the modern look (owner, 22 Oct: "could we
-   modernize these", the foot massage page first; splitModern.tsx): the
-   button is the homepage hero's row button; the photo keeps no notch, and
-   the badge is a white card floating in its lower corner, a large gold
-   number beside small grey capitals. */
+/* Text & photo sections, button and badge (owner, 22 Oct: "could we
+   modernize these", tried on the foot massage page, then on every page;
+   splitModern.tsx): the button a slim pill (below); the photo keeps no
+   notch, and the badge is a white card floating in its lower corner, a
+   small grey label over a short fact (or a large gold number beside its
+   words). */
 .about-section .split-action {
   display: flex;
 }
@@ -2271,9 +2260,8 @@
   gap: 2px;
 }
 
-/* Text & photo sections whose decorative photo badge was removed (copy
-   rewrite, 15 Oct; showBadge: false): no notch for the badge, just the
-   photo with the mask's rounded corners. */
+/* Text & photo sections: no notch for the badge (it floats on the photo as
+   a card, 22 Oct), just the photo with the mask's rounded corners. */
 .about-section .image-column .inner-column .image-box.image-box--plain {
   -webkit-mask-image: none;
   mask-image: none;
