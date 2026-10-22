@@ -94,7 +94,10 @@ const POPULAR: { name: string; id: string; label: string; therapists: number }[]
   { name: "Balinese Massage, 60 min", id: "balinese-massage", label: "1 Hour", therapists: 1 },
   { name: "Traditional Massage, 60 min", id: "traditional-massage", label: "1 Hour", therapists: 1 },
   { name: "Aromatherapy Massage, 60 min", id: "aromatherapy-massage", label: "1 Hour", therapists: 1 },
+  // Thai and Lymphatic added on the owner's request (22 Oct).
+  { name: "Thai Massage, 60 min", id: "thai-massage", label: "1 Hour", therapists: 1 },
   { name: "Deep Tissue Massage, 60 min", id: "deep-tissue-massage", label: "1 Hour", therapists: 1 },
+  { name: "Lymphatic Massage, 60 min", id: "lymphatic-massage", label: "1 Hour", therapists: 1 },
   {
     name: "Couple Balinese Massage, 60 min (2 therapists)",
     id: "couple-balinese-massage",

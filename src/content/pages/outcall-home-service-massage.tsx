@@ -112,7 +112,7 @@ const FAQ = [
 /** The four badges under the hero buttons. */
 const HERO_CHIPS = [
   "Since 2009 · Seminyak spa",
-  "Table, linen & oils included",
+  "Linen & oils included",
   "From IDR 75.000 per therapist",
   "Open daily 9am – 11pm",
 ];

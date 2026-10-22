@@ -8,7 +8,7 @@ import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import type { MobileMenuData, MobileMenuEntry } from "@/components/layout/mobileMenuData";
 import { mainNav } from "@/data/navigation";
 
-type Panel = "treatments" | "blog" | "outcall";
+type Panel = "treatments" | "blog";
 
 /** Paths are written with a trailing slash; the browser may report either. */
 const same = (a: string, b: string) => a.replace(/\/?$/, "/") === b.replace(/\/?$/, "/");
@@ -100,7 +100,6 @@ export default function MobileMenu({
 
   const inTreatments = data.treatments.some((g) => g.items.some((i) => same(pathname, i.href)));
   const inBlog = pathname.startsWith("/guide/");
-  const inOutcall = data.outcall.some((i) => same(pathname, i.href));
 
   const rows = (items: MobileMenuEntry[], kind: Panel) =>
     items.map((entry) => {
@@ -185,7 +184,7 @@ export default function MobileMenu({
               );
               const style = { "--i": i } as CSSProperties;
               if (it.dropdown) {
-                const current = { treatments: inTreatments, blog: inBlog, outcall: inOutcall }[it.dropdown];
+                const current = { treatments: inTreatments, blog: inBlog }[it.dropdown];
                 return (
                   <li key={it.label} className="mnav__anim" style={style}>
                     <button
@@ -232,12 +231,6 @@ export default function MobileMenu({
           </section>
         )),
         { label: "See the full price list", href: "/seminyak/" },
-      )}
-      {subPanel(
-        "outcall",
-        "Home Service",
-        <ul className="mnav__entries">{rows(data.outcall, "outcall")}</ul>,
-        { label: "Home massage in Seminyak & Bali", href: "/outcall-home-service-massage/" },
       )}
       {subPanel(
         "blog",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { MobileMenuEntry } from "@/components/layout/mobileMenuData";
-import { outcallMenu, treatmentMenu, treatmentMenuColumns } from "@/data/navigation";
+import { treatmentMenu, treatmentMenuColumns } from "@/data/navigation";
 
 const strip = (path: string) => path.replace(/\/$/, "") || "/";
 
@@ -20,7 +20,6 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
   const isCurrent = (href: string) => current === strip(href);
   const inTreatments = treatmentMenu.some((t) => isCurrent(t.href));
   const inBlog = current === "/guide" || current.startsWith("/guide/");
-  const inOutcall = outcallMenu.some((o) => isCurrent(o.href));
 
   return (
     <ul className="jsx-nav">
@@ -63,19 +62,11 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
           ))}
         </ul>
       </li>
-      <li className={`jsx-nav outcall-menu-item${inOutcall ? " is-active" : ""}`}>
+      {/* One link, no dropdown (owner, 22 Oct). Villa & hotel and Kuta are in the footer's Home Services. */}
+      <li className={`jsx-nav outcall-menu-item${isCurrent("/outcall-home-service-massage/") ? " is-active" : ""}`}>
         <Link prefetch={false} href="/outcall-home-service-massage/">
-          Home Service <i className="jsx-nav fa-solid fa-angle-down" />
+          Home Service
         </Link>
-        <ul className="jsx-nav sub-menu outcall-dropdown-menu">
-          {outcallMenu.map((o) => (
-            <li key={o.href} className="jsx-nav">
-              <Link prefetch={false} href={o.href}>
-                {o.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </li>
       <li className="jsx-nav">
         <Link prefetch={false} href="/reservation/">
