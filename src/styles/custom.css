@@ -756,8 +756,12 @@
 .faq-q-num::before {
   content: attr(data-num);
 }
-.faq-q-num::after {
-  content: " ";
+/* A gap, not a space: the question row is a flex box, which drops a space
+   at the end of the number ("1.How much", 22 Oct). */
+.faq-q-num {
+  flex: none;
+  align-self: flex-start;
+  margin-right: 0.3em;
 }
 
 /* A treatment name that is plain text, not a heading, keeps the heading look (SEO, 10 Oct). */
