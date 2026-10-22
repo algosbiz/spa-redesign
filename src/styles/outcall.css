@@ -1161,3 +1161,22 @@
     display: none;
   }
 }
+
+/* 18 · Two actions side by side (owner, 22 Oct): the WhatsApp pill, and the
+   second action as a row button (row-button.css) so the two stand apart. */
+.oc-actions {
+  align-items: center;
+}
+.oc-actions .row-btn {
+  border-color: rgba(var(--theme-color1-rgb), 0.3);
+}
+@media (max-width: 575px) {
+  .oc-actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .oc-actions .row-btn {
+    width: 100%;
+    max-width: 360px;
+  }
+}

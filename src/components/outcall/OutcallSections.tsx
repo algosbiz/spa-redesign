@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { LotusIcon } from "@/components/ui/Lotus";
+import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
 import { priceOf } from "@/data/pricelist";
 import { whatsappChatUrl } from "@/lib/whatsapp";
@@ -162,7 +163,8 @@ export function HomeServicePrices() {
           <Button href={whatsappChatUrl} filled whatsapp>
             Book on WhatsApp
           </Button>
-          <Button href="#price-list">See the full outcall price list</Button>
+          {/* The second action is a row button, not a second pill, so the two stand apart (owner, 22 Oct). */}
+          <RowButton href="#price-list" icon="book" label="See the full price list" note="Every outcall treatment and duration" />
         </div>
       </div>
     </section>
@@ -418,7 +420,12 @@ export function HomeVsSpa() {
           <Button href={whatsappChatUrl} filled whatsapp>
             Book home service
           </Button>
-          <Button href="/seminyak/day-spa/">Visit our Seminyak day spa</Button>
+          <RowButton
+            href="/seminyak/day-spa/"
+            icon="pin"
+            label="Visit our Seminyak day spa"
+            note="Jl. Pangkung Sari No. 30 · 9am – 11pm"
+          />
         </div>
       </div>
     </section>
