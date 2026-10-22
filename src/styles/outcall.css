@@ -842,23 +842,44 @@
 /*     a compact "Visit us" (owner, 21 Oct)                            */
 /* ------------------------------------------------------------------ */
 @media (max-width: 767px) {
-  /* Hero prices: "1 HOUR / PAX" over "IDR 159.000", two lines in each tile. */
+  /* Hero prices as a short price list, one row per length: the length on
+     the left, the price on the right (owner, 22 Oct: three tiles across a
+     phone were "a bit jumbly"). Laptops keep the tiles. */
+  .banner-two__content .banner-prices .banner-prices__list {
+    flex-direction: column;
+  }
+  .banner-prices__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 16px 12px;
+    text-align: left;
+  }
+  .banner-prices__item + .banner-prices__item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .banner-prices__length {
+    min-width: 0;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  /* "/ PAX" never ends up alone on the next line ("Manicure and pedicure"). */
   .banner-prices__unit {
     display: inline;
     margin-top: 0;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .banner-prices__amount {
+    flex-shrink: 0;
+    font-size: 21px;
   }
   .banner-prices__item .banner-prices__cur {
     display: inline;
+    margin-right: 2px;
     font-size: 11px;
-  }
-  .banner-prices__length {
-    font-size: 9.5px;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
-  }
-  .banner-prices__item {
-    gap: 4px;
-    padding: 10px 2px 11px;
   }
 }
 
