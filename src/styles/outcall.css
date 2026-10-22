@@ -1196,26 +1196,29 @@
     position: relative;
     z-index: 2;
   }
+  /* The photo's lower part turns transparent bit by bit (owner, 22 Oct: no
+     sharp line), so it melts into the blurred copy behind it. */
   .banner-two-area--photo-top .banner-two__photo img {
     display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 828 / 367;
     object-fit: cover;
-  }
-  /* A soft fade from the sharp photo into the panel. */
-  .banner-two-area--photo-top .banner-two__photo::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 38%;
-    background: linear-gradient(180deg, rgba(28, 26, 29, 0), rgba(28, 26, 29, 0.55));
+    -webkit-mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
   }
   .banner-two-area--photo-top .banner-two__slider .slide-bg {
     filter: blur(22px) saturate(1.05);
   }
+  /* Lighter just under the photo, where the two meet, darker behind the text. */
   .banner-two-area--photo-top .banner-two__slider .slide-bg::before {
-    background: rgba(28, 26, 29, 0.62);
+    background: linear-gradient(
+      180deg,
+      rgba(28, 26, 29, 0.2) 0,
+      rgba(28, 26, 29, 0.42) 12%,
+      rgba(28, 26, 29, 0.62) 26%,
+      rgba(28, 26, 29, 0.66) 100%
+    );
   }
   .banner-two-area--photo-top .banner-two__content {
     padding-top: 28px;
