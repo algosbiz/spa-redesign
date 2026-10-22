@@ -17,7 +17,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Spa Bali Moon is a day spa in Seminyak, at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm. In one visit you can combine a massage with a facial, body scrub, cream bath, reflexology or a manicure and pedicure, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 399.000 per person.",
+        "text": "Spa Bali Moon is a day spa in Seminyak, at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm. In one visit you can combine a massage with a facial, body scrub, cream bath, reflexology or a manicure and pedicure, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 299.000 per person.",
         "items": [
           {
             "label": "What it is",
@@ -29,7 +29,7 @@
           },
           {
             "label": "Prices",
-            "value": "Treatments from IDR 69.000 per person; spa packages from IDR 399.000 per person (see the price list)"
+            "value": "Treatments from IDR 69.000 per person; spa packages from IDR 299.000 per person (see the price list)"
           },
           {
             "label": "Hours",
@@ -213,15 +213,15 @@
         "items": [
           {
             "question": "What does a day spa in Seminyak usually include?",
-            "answer": "A day spa visit usually includes one or more services such as massage, facial care, body scrubs, Cream Bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 399.000."
+            "answer": "A day spa visit usually includes one or more services such as massage, facial care, body scrubs, Cream Bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 299.000."
           },
           {
             "question": "How many hours should I spend at a day spa?",
-            "answer": "There is no fixed duration. At Spa Bali Moon in Seminyak, a single treatment may take around 1 to 1.5 hours, while several services can be arranged into a longer visit lasting a few hours. Spa packages from IDR 399.000 per person combine two or three treatments in one visit."
+            "answer": "There is no fixed duration. At Spa Bali Moon in Seminyak, a single treatment may take around 1 to 1.5 hours, while several services can be arranged into a longer visit lasting a few hours. Spa packages from IDR 299.000 per person combine two or three treatments in one visit."
           },
           {
             "question": "Can I choose my own treatments?",
-            "answer": "Yes. At Spa Bali Moon you can select individual treatments, from IDR 69.000 per person, or choose a spa package from IDR 399.000 per person. If you are unsure which treatments work well together, message our team on WhatsApp and we can help plan a visit around your schedule and preferences."
+            "answer": "Yes. At Spa Bali Moon you can select individual treatments, from IDR 69.000 per person, or choose a spa package from IDR 299.000 per person. If you are unsure which treatments work well together, message our team on WhatsApp and we can help plan a visit around your schedule and preferences."
           },
           {
             "question": "What is a good spa treatment after a flight?",
@@ -241,7 +241,7 @@
           },
           {
             "question": "How much does a day spa package cost in Seminyak?",
-            "answer": "Spa packages at Spa Bali Moon in Seminyak start at IDR 399.000 per person. The Balinese massage packages, IDR 399.000 to IDR 549.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area."
+            "answer": "Spa packages at Spa Bali Moon in Seminyak start at IDR 299.000 per person. The Balinese massage packages, IDR 399.000 to IDR 549.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area."
           },
           {
             "question": "Where is Spa Bali Moon and when is it open?",

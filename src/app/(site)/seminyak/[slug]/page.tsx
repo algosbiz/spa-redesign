@@ -4,9 +4,10 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { homeServiceLines } from "@/data/homeServiceLines";
-import { priceOf } from "@/data/pricelist";
+import { pricelistPage } from "@/data/pages/pricelist";
+import { priceList, priceOf } from "@/data/pricelist";
 import { treatments } from "@/data/treatments";
-import { withDots } from "@/lib/price";
+import { priceValue, withDots } from "@/lib/price";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -68,8 +69,8 @@ const tile = (length: string, id: string, option: string) => ({ length, amount: 
  * "length IDR amount · …" (owner, 22 Oct: every treatment banner shows its
  * prices), from the price list so they change with it. These pages keep the
  * price line in their quick facts: it says more (the scrub's seven scents,
- * all seven waxing prices). The day spa waits: its quick facts say packages
- * from IDR 399.000, the homepage and price list IDR 299.000.
+ * all seven waxing prices). The day spa shows the lowest treatment and the
+ * lowest one-guest package (Mani Pedi Package C, IDR 299.000 on 22 Oct).
  */
 const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
   "body-scrub": [
@@ -83,6 +84,22 @@ const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
     tile("Under arms", "waxing", "Under Arms"),
     tile("Full legs", "waxing", "Full Legs"),
     tile("Brazilian", "waxing", "Waxing Brazilian"),
+  ],
+  "day-spa": [
+    {
+      length: "Treatments from",
+      amount: withDots(Math.min(...priceList.flatMap((item) => item.options.map((option) => option.price)))),
+    },
+    {
+      length: "Spa packages from",
+      amount: withDots(
+        Math.min(
+          ...pricelistPage.packageGroups
+            .filter((group) => !group.twoPax)
+            .flatMap((group) => group.packages.map((pack) => priceValue(pack.price))),
+        ),
+      ),
+    },
   ],
 };
 
