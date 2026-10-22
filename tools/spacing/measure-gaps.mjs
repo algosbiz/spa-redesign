@@ -3,8 +3,8 @@
  * checks it against the site-wide rule in src/styles/spacing.css: from the
  * last visible thing in one section (text, photo, card, button, icon) to the
  * first in the next is 200px from 992px up, 160px on tablets, 140px on
- * phones; after a top banner photo the gap runs from its torn line (26px
- * less). Torn edges and decorations (leaves, flowers, shapes) are not
+ * phones; after a top banner photo, half that from its torn line (26px
+ * up). Torn edges and decorations (leaves, flowers, shapes) are not
  * content. Where one torn edge sits between two sections, its torn line
  * (26px into the edge image) should be in the middle of the gap: listed
  * when the space above and below it differ by more than 16px.
@@ -189,13 +189,13 @@ for (const w of [...widths].sort((a, b) => b - a)) {
     if (!k.endsWith("@" + w) || v.error) continue;
     for (const g of v.gaps) {
       n++;
-      // after a photo banner the gap runs from its torn line (26px up)
+      // after a photo banner: half a gap from its torn line (26px up), as after any torn edge
       const banner = /banner-two-area/.test(g.from) || (/banner-five-area/.test(g.from) && w >= 992);
       // homepage: the packages' note sits mid-gap (half the gap on each side)
       const noteJoin = g.from.includes("pricing-section-five") && g.to.startsWith("section.service-section");
       // price list: between two of its package groups, half the gap (spacing.css 7b)
       const packageJoin = g.from.includes("package-pricing-section") && g.to.includes("package-pricing-section");
-      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin ? G(w) / 2 : G(w) - (banner ? 26 : 0); // +5: the note's own line spacing
+      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin ? G(w) / 2 : banner ? G(w) / 2 - 26 : G(w); // +5: the note's own line spacing
       const d = g.gap - expect;
       if (Math.abs(d) <= 8) ok++;
       else { const key = `${short(g.from)} -> ${short(g.to)} (${d > 0 ? "+" : ""}${d})`; (bad[key] ??= []).push(k.split(" ")[0].replace("/seminyak/", "sm/").replace("/guide/", "g/").slice(0, 24)); }

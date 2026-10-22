@@ -105,11 +105,15 @@
   --sp-pt: calc(var(--sp-half) - var(--sp-ink-bottom));
 }
 
-/* 6. After a top banner: its torn edge lies over the photo, so the gap runs
-      from the torn line. After a page-title band: the full gap. */
-:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(.banner-two-area, .banner-five-area, :has(> .banner-two-area)) + section,
-:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(.banner-two-area, .banner-five-area, :has(> .banner-two-area)) + :not(section) > section:first-of-type {
-  --sp-pt: calc(var(--sp-gap) - var(--sp-ink-bottom));
+/* 6. After a top banner: its torn edge lies over the photo; the next section
+      starts half a gap below the torn line, as after any torn edge (owner,
+      22 Oct: a whole gap there was "very large un needed space"). After a
+      page-title band: the full gap. (":root:root": on the outcall and
+      Balinese pages the sections sit in a wrapper inside .page-wrapper,
+      where rule 2's "> :not(section) > section" form weighs more.) */
+:root:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(.banner-two-area, .banner-five-area, :has(> .banner-two-area)) + section,
+:root:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(.banner-two-area, .banner-five-area, :has(> .banner-two-area)) + :not(section) > section:first-of-type {
+  --sp-pt: calc(var(--sp-half) - var(--sp-ink-bottom));
 }
 :root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > .page-title + section,
 :root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > .page-title + :not(section) > section:first-of-type {
