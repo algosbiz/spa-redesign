@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { leftLeafShape, rightLeafShape, isLeafShape } from "@/lib/leafShapes";
 import { learnMoreLabel } from "@/components/sections/learnMoreLabel";
+import { SplitBadge, SplitButton } from "@/components/sections/splitModern";
 import { LotusIcon } from "@/components/ui/Lotus";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -23,6 +24,8 @@ export type AboutSplitAltProps = {
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
   rightDecoration?: ReactNode;
+  /** "modern": the row button and the badge as a card (splitModern.tsx; set by the treatment page template). */
+  look?: "classic" | "modern";
 };
 
 /** The gold tick in front of every list item. */
@@ -55,7 +58,9 @@ export default function AboutSplitAlt({
   leftShapeSrc,
   rightShapeSrc,
   rightDecoration,
+  look = "classic",
 }: AboutSplitAltProps) {
+  const modern = look === "modern";
   const leftShape = leftShapeSrc || leftLeafShape(image, "/images/shape/banner-six-shape.png"),
     rightShape = rightShapeSrc || rightLeafShape(image, "/images/shape/mirror-left-shape.png"),
     leftIsLeaf = isLeafShape(leftShape),
@@ -108,10 +113,11 @@ export default function AboutSplitAlt({
                 }}
               >
                 {/* Without its badge the photo loses the notch the badge sat in. */}
-                <div className={showBadge ? "image-box" : "image-box image-box--plain"}>
+                <div className={showBadge && !modern ? "image-box" : "image-box image-box--plain"}>
                   <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
                 </div>
-                {showBadge && (
+                {showBadge && modern && <SplitBadge top={badgeTopText} bottom={badgeBottomText} />}
+                {showBadge && !modern && (
                   <div className="info info--gold">
                     <p className="info-line">
                       {badgeTopText || (
@@ -165,18 +171,22 @@ export default function AboutSplitAlt({
                     ))}
                   </ul>
                 </div>
-                <Link
-                  href={buttonLink}
-                  className="btn-one mt-30 wow fadeInDown"
-                  data-wow-delay="400ms"
-                  data-wow-duration="1500ms"
-                >
-                  {buttonText ?? learnMoreLabel(buttonLink)}
-                  <span className="icon_box">
-                    <i className="fa-regular icon_first fa-arrow-right-long" />
-                    <i className="fa-regular icon_second fa-arrow-right-long" />
-                  </span>
-                </Link>
+                {modern ? (
+                  <SplitButton text={buttonText} link={buttonLink} />
+                ) : (
+                  <Link
+                    href={buttonLink}
+                    className="btn-one mt-30 wow fadeInDown"
+                    data-wow-delay="400ms"
+                    data-wow-duration="1500ms"
+                  >
+                    {buttonText ?? learnMoreLabel(buttonLink)}
+                    <span className="icon_box">
+                      <i className="fa-regular icon_first fa-arrow-right-long" />
+                      <i className="fa-regular icon_second fa-arrow-right-long" />
+                    </span>
+                  </Link>
+                )}
               </div>
             </div>
           </div>

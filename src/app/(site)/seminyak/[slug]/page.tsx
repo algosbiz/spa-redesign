@@ -62,6 +62,13 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
   },
 };
 
+/**
+ * Pages whose text & photo sections have the modern look: the row button,
+ * and the badge as a card on a photo without its notch (owner, 22 Oct:
+ * "could we modernize these", the foot massage page first).
+ */
+const MODERN_SPLITS = new Set(["foot-massage"]);
+
 const tile = (length: string, id: string, option: string) => ({ length, amount: withDots(priceOf(id, option)) });
 
 /**
@@ -196,16 +203,19 @@ export default async function TreatmentPage({ params }: Props) {
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
   const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
+  const splits = MODERN_SPLITS.has(slug)
+    ? withProps(withProps(content.tree, "AboutSplit", { look: "modern" }), "AboutSplitAlt", { look: "modern" })
+    : content.tree;
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
       prices
-        ? withProps(content.tree, "PageBanner", {
+        ? withProps(splits, "PageBanner", {
             prices,
             // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
             priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
           })
-        : content.tree,
+        : splits,
       "QuickFacts",
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
