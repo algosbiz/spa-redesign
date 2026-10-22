@@ -61,10 +61,10 @@ export const pricelistPage = {
   /** The "complete spa menu" block with its two photos. `firstStat`/`secondStat` break after the first words. */
   menu: {
     topSubTitle: "Start With What You Need",
-    topTitle: "Which Massage or Spa Treatment Should You Choose?",
+    topTitle: "Choose Your Treatment",
     topText: "Our treatment menu makes it easy to find the care your body or skin needs, from massage and muscle care to facials, body scrubs, and beauty treatments. Choose the treatment and duration that suit your day.",
     contentSubTitle: "More Than Massage",
-    contentTitle: "What Treatments Does Spa Bali Moon Offer?",
+    contentTitle: "Our Treatments",
     contentText: "Spa Bali Moon brings massage, body care, facials, and beauty services together in one place. Choose a familiar treatment, try something new during your Bali stay, or ask our team for help finding the right option.",
     firstStat: ["Established Since", "2009"] as [string, string],
     secondStat: ["In-Spa &", "Home Service"] as [string, string],
