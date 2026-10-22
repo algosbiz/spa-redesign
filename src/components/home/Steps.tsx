@@ -116,8 +116,8 @@ export default function Steps() {
             <strong>Prefer a massage at your villa?</strong>
           </p>
           <p className="step-outcall-band__text">
-            Our therapists bring the table, fresh linen and oils to villas, hotels and homes in Seminyak, Canggu and
-            across Bali, from IDR 75.000 per therapist.
+            Our therapists bring fresh linen, oils and everything your treatment needs to villas, hotels and homes in
+            Seminyak, Canggu and across Bali, from IDR 75.000 per therapist.
           </p>
           <Link prefetch={false} href="/outcall-home-service-massage/" className="btn-two step-outcall-band__button">
             Outcall &amp; home service massage

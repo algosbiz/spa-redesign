@@ -39,7 +39,7 @@ const FAQ = [
   {
     question: "What should I prepare before my massage?",
     answer:
-      "Comfortable clothing and a little time to relax are usually all you need before a Spa Bali Moon massage. For outcall in Kuta, the therapist brings the massage bed, fresh linen, towels and oils, so you do not need to supply anything. For certain treatments, your therapist may give specific guidance before the session.",
+      "Comfortable clothing and a little time to relax are usually all you need before a Spa Bali Moon massage. For outcall in Kuta, the therapist brings fresh linen, towels, oils and everything your treatment needs, so you do not need to supply anything. For certain treatments, your therapist may give specific guidance before the session.",
   },
   // Copy rewrite, 15 Oct.
   {

@@ -94,9 +94,8 @@ const POPULAR: { name: string; id: string; label: string; therapists: number }[]
   { name: "Balinese Massage, 60 min", id: "balinese-massage", label: "1 Hour", therapists: 1 },
   { name: "Traditional Massage, 60 min", id: "traditional-massage", label: "1 Hour", therapists: 1 },
   { name: "Aromatherapy Massage, 60 min", id: "aromatherapy-massage", label: "1 Hour", therapists: 1 },
-  // Thai and Lymphatic added on the owner's request (22 Oct).
-  { name: "Thai Massage, 60 min", id: "thai-massage", label: "1 Hour", therapists: 1 },
   { name: "Deep Tissue Massage, 60 min", id: "deep-tissue-massage", label: "1 Hour", therapists: 1 },
+  // Lymphatic added on the owner's request (22 Oct).
   { name: "Lymphatic Massage, 60 min", id: "lymphatic-massage", label: "1 Hour", therapists: 1 },
   {
     name: "Couple Balinese Massage, 60 min (2 therapists)",
@@ -181,7 +180,7 @@ const STEPS: { title: string; text: string }[] = [
   },
   {
     title: "Your therapist sets up",
-    text: "They bring a portable massage table, fresh linen, towels and oils, and set up in 5 to 10 minutes in any space of about 2 × 2 metres.",
+    text: "They bring fresh linen, towels, oils and the tools your treatment needs, and have everything ready on your bed in 5 to 10 minutes.",
   },
   {
     title: "Relax, then pay",
@@ -331,7 +330,7 @@ const COMPARE: { row: string; home: string; spa: string }[] = [
   { row: "Hours", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
   {
     row: "Setup",
-    home: "Therapist brings table, linen, towels and oils",
+    home: "Therapist brings fresh linen, oils and everything needed",
     spa: "Private treatment rooms, nothing to arrange",
   },
   { row: "Menu", home: "Most massages and selected beauty treatments", spa: "The full menu and every spa package" },

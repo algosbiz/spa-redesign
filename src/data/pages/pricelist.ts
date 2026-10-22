@@ -1512,7 +1512,7 @@ export const pricelistPage = {
     },
     {
       question: "14. Are towels, oils, and amenities included?",
-      answer: "Yes. Every treatment at our Seminyak spa includes clean towels, professional-grade massage oil, and use of a private treatment room, with no additional charge for amenities. For home service, the Spa Bali Moon therapist brings a portable massage bed, freshly laundered linens and towels, and massage oils, so you do not need to supply anything."
+      answer: "Yes. Every treatment at our Seminyak spa includes clean towels, professional-grade massage oil, and use of a private treatment room, with no additional charge for amenities. For home service, the Spa Bali Moon therapist brings freshly laundered linens and towels, massage oils and any tools your treatment needs, so you do not need to supply anything."
     },
     {
       question: "15. Can I choose the pressure or a specific therapist?",

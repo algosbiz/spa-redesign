@@ -44,12 +44,12 @@ const FAQ = [
   {
     question: "Do I need to prepare anything?",
     answer:
-      "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres; a bedroom, terrace or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
+      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. The massage takes place on your bed, so there is nothing to set up. If you would like it in a particular room, tell us when you book.",
   },
   {
     question: "What does the therapist bring?",
     answer:
-      "A Spa Bali Moon outcall therapist brings a portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else; just leave a space of roughly two by two metres.",
+      "A Spa Bali Moon outcall therapist brings freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else; the massage takes place on your bed.",
   },
   {
     question: "How long does setup take?",
@@ -143,7 +143,7 @@ export default function OutcallPage() {
           subTitle="Home service from our Seminyak spa"
           titleSpan="Outcall & Home Service Massage"
           title="in Seminyak, Bali"
-          text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring the massage table, fresh linen and oils. Home service fee: from IDR 75.000 per therapist. Open daily, 9am to 11pm."
+          text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring fresh linen, oils and everything your treatment needs. Home service fee: from IDR 75.000 per therapist. Open daily, 9am to 11pm."
           image="/images/banners/homeservice-hero.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
           // (7 Oct: the page's search traffic compares prices before booking),

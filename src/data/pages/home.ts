@@ -194,7 +194,7 @@ export const home = {
       {
         question: "2. Can I enjoy the treatments without visiting the spa?",
         answer:
-          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu and North Kuta, and the therapist brings the massage bed, fresh linen and oils.",
+          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu and North Kuta, and the therapist brings fresh linen, oils and everything your treatment needs.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
