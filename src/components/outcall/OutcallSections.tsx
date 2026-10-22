@@ -420,10 +420,11 @@ export function HomeVsSpa() {
           <Button href={whatsappChatUrl} filled whatsapp>
             Book home service
           </Button>
+          {/* Directions to the spa rather than the day spa page, which is not finished yet (owner, 22 Oct). */}
           <RowButton
-            href="/seminyak/day-spa/"
+            href={business.mapsUrl}
             icon="pin"
-            label="Visit our Seminyak day spa"
+            label="Get directions to our spa"
             note="Jl. Pangkung Sari No. 30 · 9am – 11pm"
           />
         </div>

@@ -64,7 +64,7 @@ const FAQ = [
   {
     question: "What if my hotel doesn't allow outside therapists?",
     answer:
-      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at [our Seminyak spa](/seminyak/day-spa/) instead.",
+      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at [our Seminyak spa](/) instead.",
   },
   {
     question: "Which massage is best after a long flight?",
