@@ -6,7 +6,7 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReviewText from "@/components/ui/ReviewText";
-import { googleReviewsUrl, treatmentPageReviews } from "@/data/testimonials";
+import { treatmentPageReviews } from "@/data/testimonials";
 import type { Testimonial } from "@/data/types";
 
 /** Gold quote mark above each review. */
@@ -27,18 +27,17 @@ const Quote = () => (
  * "testimonial-section-two": torn edges, a leaf on the right, no bullets,
  * loop, autoHeight and 5s autoplay. Since the copy rewrite (15 Oct) it shows
  * six chosen reviews under "Reviews of Spa Bali Moon" (they are about the
- * spa, not the treatment on the page) and links to the rest on Google.
+ * spa, not the treatment on the page). No link out to Google (owner, 22 Oct:
+ * keep visitors on the site).
  */
 export default function TreatmentTestimonials({
   paperDecoration = true,
   rightShapeSrc = "/images/shape/testimonial-two-shape-right.png",
   title = "Reviews of Spa Bali Moon",
   reviews = treatmentPageReviews,
-  moreLabel = "Read more reviews on Google",
 }: {
   title?: string;
   reviews?: Testimonial[];
-  moreLabel?: string;
   paperDecoration?: boolean;
   /** `null` hides the right-hand leaf. */
   rightShapeSrc?: string | null;
@@ -133,12 +132,6 @@ export default function TreatmentTestimonials({
             ))}
           </Swiper>
         </div>
-        <p className="treatment-reviews__more">
-          <a href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">
-            {moreLabel}
-            <i className="fa-regular fa-arrow-right-long" aria-hidden="true" />
-          </a>
-        </p>
       </div>
     </section>
   );

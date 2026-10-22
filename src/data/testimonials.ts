@@ -81,5 +81,9 @@ export const homeServiceReviews: Testimonial[] = [
   },
 ];
 
-/** Spa Bali Moon on Google Maps (the place in the /contact/ map), where the rest of the reviews are. */
+/**
+ * Spa Bali Moon on Google Maps (the place in the /contact/ map), where the rest of the reviews are.
+ * Not linked from the review sections (owner, 22 Oct: keep visitors on the site); kept for the
+ * schema's sameAs (roadmap R9) if wanted.
+ */
 export const googleReviewsUrl = "https://www.google.com/maps?cid=16249037415237189663";

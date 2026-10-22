@@ -2147,23 +2147,6 @@
 .treatment-reviews__header .title {
   text-transform: none;
 }
-.treatment-reviews__more {
-  margin: 36px 0 0;
-  text-align: center;
-}
-.treatment-reviews__more a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--title-font);
-  font-size: 18px;
-  color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.treatment-reviews__more a:is(:hover, :focus-visible) {
-  color: var(--headings-color);
-}
 @media (max-width: 767px) {
   .treatment-reviews__header {
     margin-bottom: 24px;

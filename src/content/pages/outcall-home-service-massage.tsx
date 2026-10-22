@@ -263,7 +263,6 @@ export default function OutcallPage() {
             paperDecoration={false}
             title="What Guests Say About Our Home Service"
             reviews={homeServiceReviews}
-            moreLabel="Read all our reviews on Google"
           />
         </div>
         {/* S12 · Outcall Massage Price List */}
