@@ -44,12 +44,12 @@ const FAQ = [
   {
     question: "Do I need to prepare anything?",
     answer:
-      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. The massage takes place on your bed, so there is nothing to set up. If you would like it in a particular room, tell us when you book.",
+      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare. If you have a preference for where the session takes place, tell us when you book.",
   },
   {
     question: "What does the therapist bring?",
     answer:
-      "A Spa Bali Moon outcall therapist brings freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else; the massage takes place on your bed.",
+      "A Spa Bali Moon outcall therapist brings freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
   },
   {
     question: "How long does setup take?",

@@ -253,7 +253,7 @@ export const homeServicePage = {
       },
       {
         question: "Do I need to prepare anything?",
-        answer: "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. The massage takes place on your bed, so there is nothing to set up. If you would like it in a particular room, tell us when you book.",
+        answer: "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare. If you have a preference for where the session takes place, tell us when you book.",
       },
       {
         question: "What does the therapist bring?",

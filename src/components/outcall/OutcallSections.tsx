@@ -180,7 +180,7 @@ const STEPS: { title: string; text: string }[] = [
   },
   {
     title: "Your therapist sets up",
-    text: "They bring fresh linen, towels, oils and the tools your treatment needs, and have everything ready on your bed in 5 to 10 minutes.",
+    text: "They bring fresh linen, towels, oils and the tools your treatment needs, and have everything ready in 5 to 10 minutes.",
   },
   {
     title: "Relax, then pay",
