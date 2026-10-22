@@ -1354,3 +1354,84 @@
     display: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 21. Contact page details on phones: the "Visit us" card (owner,      */
+/*     22 Oct: "apply that to all sections that have that section").    */
+/*     WhatsApp, address and hours in a white card between gold         */
+/*     hairlines; the WhatsApp row is the link, with the arrow.         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .cf-rail__list.jsx-contact {
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact,
+  .cf-rail__list.jsx-contact li.jsx-contact + li.jsx-contact {
+    position: relative;
+    gap: 14px;
+    margin: 0;
+    padding: 15px 16px;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact + li.jsx-contact {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .cf-rail__list.jsx-contact .cf-rail__icon.jsx-contact,
+  .cf-rail__list.jsx-contact li.jsx-contact:hover .cf-rail__icon.jsx-contact {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background-color: var(--theme-color-gray);
+    box-shadow: none;
+    color: var(--theme-color1);
+    font-size: 15px;
+  }
+  .cf-rail__list.jsx-contact h3 {
+    margin: 1px 0 3px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    color: #8f8a83;
+  }
+  .cf-rail__list.jsx-contact span.jsx-contact:not(.cf-rail__icon) {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a) {
+    padding-right: 44px;
+    transition: background-color 0.25s;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a:is(:hover, :focus-visible, :active)) {
+    background-color: var(--theme-color-gray);
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--theme-color1);
+    border-right: 1.5px solid var(--theme-color1);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  .cf-rail__list.jsx-contact a.jsx-contact {
+    position: static;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--theme-color1);
+  }
+  /* The whole row is the link. */
+  .cf-rail__list.jsx-contact a.jsx-contact::after {
+    inset: 0;
+  }
+}
