@@ -1306,3 +1306,51 @@
     margin-top: 24px;
   }
 }
+
+/* The two links as tappable rows, not buttons (owner, 22 Oct: "so many
+   buttons are so close to each other"): the phone number and "Home service
+   in Bali" in gold, the whole fact a link, with the mobile menu's arrow on
+   the right. "Full price list" is the section's one button. */
+@media (max-width: 767px) {
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill) {
+    position: relative;
+    padding-right: 44px;
+    transition: background-color 0.25s;
+  }
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill:is(:hover, :focus-visible, :active)) {
+    background-color: var(--theme-color-gray);
+  }
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--theme-color1);
+    border-right: 1.5px solid var(--theme-color1);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  .visit-us--columns .visit-us__pills {
+    margin-top: 2px;
+  }
+  .visit-us--columns .visit-us__tile .visit-us__pill,
+  .visit-us--columns .visit-us__tile .visit-us__pill:is(:hover, :focus-visible) {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 14px;
+    color: var(--theme-color1);
+  }
+  /* The whole fact is the link. */
+  .visit-us--columns .visit-us__tile .visit-us__pill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .visit-us--columns .visit-us__pill > span[aria-hidden="true"] {
+    display: none;
+  }
+}
