@@ -190,12 +190,23 @@
   .home-v2 .v2-hero .v2-hero__photo img {
     object-position: 85% 50%;
   }
+  /* A longer, eased fade into the cream, reaching 2px past the photo so its
+     last row of pixels never shows as a line (owner, 22 Oct). */
   .home-v2 .v2-hero .v2-hero__photo::after {
-    background: linear-gradient(0deg, #f5f2ec 0%, rgba(245, 242, 236, 0) 42%);
+    bottom: -2px;
+    background: linear-gradient(
+      0deg,
+      #f5f2ec 0%,
+      rgba(245, 242, 236, 0.85) 9%,
+      rgba(245, 242, 236, 0.45) 24%,
+      rgba(245, 242, 236, 0) 46%
+    );
   }
+  /* The text starts under the photo, on cream (owner, 22 Oct: the small
+     line over the title sat on the photo; it was pulled up 30px into it). */
   .home-v2 .v2-hero .v2-hero__inner {
     position: relative;
-    margin-top: -30px;
+    margin-top: 6px;
   }
   .home-v2 .v2-hero .banner-five__content.v2-hero__content {
     max-width: 620px;
