@@ -37,7 +37,7 @@ export const home = {
      * 5144" left the facts (owner: the homepage said too much there): the
      * WhatsApp button shows that number.
      */
-    prices: ["Treatments from IDR 69.000 per person", "Home service: add IDR 75.000 per therapist"],
+    prices: ["Treatments from IDR 69.000 per person", "Home service: add from IDR 75.000 per therapist"],
     visit: [
       { icon: "pin", text: "Jl. Pangkung Sari No. 30, Seminyak" },
       { icon: "clock", text: "Open daily 9am–11pm" },
@@ -88,7 +88,7 @@ export const home = {
   catalog: {
     subTitle: "Our Spa Menu",
     title: "Browse Our Spa Treatments",
-    fee: { label: "Home Service Fee", value: "Extra IDR 75.000/Therapist" },
+    fee: { label: "Home Service Fee", value: "From IDR 75.000/Therapist" },
   },
 
   packageIntro: {
@@ -194,7 +194,7 @@ export const home = {
       {
         question: "2. Can I enjoy the treatments without visiting the spa?",
         answer:
-          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils.",
+          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu and North Kuta, and the therapist brings the massage bed, fresh linen and oils.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
@@ -221,12 +221,12 @@ export const home = {
       {
         question: "7. How much does a massage cost in Seminyak?",
         answer:
-          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist.",
+          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist in the Seminyak area.",
       },
       {
         question: "8. Where is Spa Bali Moon?",
         answer:
-          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Bali, and is open daily from 9am to 11pm. Our therapists also come to your villa or hotel in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta for an extra IDR 75.000 per therapist, and further across Bali on request.",
+          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Bali, and is open daily from 9am to 11pm. Our therapists also come to your villa or hotel in Seminyak, Petitenget and Kerobokan for an extra IDR 75.000 per therapist, in Canggu and North Kuta for IDR 150.000, and further across Bali on request.",
       },
       {
         question: "9. What are your opening hours?",

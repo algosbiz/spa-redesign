@@ -60,13 +60,28 @@ export const business = {
 
   homeService: {
     /**
-     * Extra fee per therapist, in Rupiah.
-     * TODO FEE-01: Terms & Conditions say 75k applies "within Seminyak" and that fees
-     * outside Seminyak vary. Other pages say a flat 75K per therapist.
+     * FEE-01, settled by the owner on 22 Oct 2026: the fee per therapist depends on the area.
+     * IDR 75.000 in the Seminyak area (Seminyak, Petitenget, Kerobokan), IDR 150.000 in
+     * Canggu, North Kuta and Kuta, and confirmed on WhatsApp further out. Wherever the site
+     * gives one figure it says "from IDR 75.000", or ties IDR 75.000 to the Seminyak area.
      */
     feePerTherapist: 75_000,
+    /** The fee in Canggu, North Kuta and Kuta. */
+    feeOuterPerTherapist: 150_000,
     /** How the fee is written in the footer. */
-    feeDisplay: "IDR 75.000 / therapist",
+    feeDisplay: "From IDR 75.000 / therapist",
+    /**
+     * Fee per therapist and the usual drive from the spa, by area (owner, 22 Oct 2026).
+     * `fee: null` means it is confirmed on WhatsApp. Shown on the outcall page (S06).
+     */
+    zones: [
+      { area: "Seminyak & Petitenget", fee: 75_000, travel: "Usually 7 to 10 minutes" },
+      { area: "Kerobokan", fee: 75_000, travel: "Usually 7 to 15 minutes" },
+      { area: "Canggu & North Kuta", fee: 150_000, travel: "Usually 30 to 50 minutes, depending on traffic" },
+      { area: "Kuta", fee: 150_000, travel: "Usually 30 to 50 minutes, depending on traffic" },
+      { area: "Uluwatu, Jimbaran & Nusa Dua", fee: null, travel: "Usually 60 to 90 minutes, depending on traffic" },
+      { area: "Ubud, Sanur & Denpasar", fee: null, travel: "Usually 60 to 90 minutes, depending on traffic" },
+    ],
   },
 
   /**

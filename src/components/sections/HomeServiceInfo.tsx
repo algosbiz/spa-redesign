@@ -229,7 +229,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                     margin: 0,
                   }}
                 >
-                  {"Home service fee: "}
+                  {"Home service fee: from "}
                   <span
                     style={{
                       color: "var(--theme-color1)",

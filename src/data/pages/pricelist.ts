@@ -44,7 +44,7 @@ export const pricelistPage = {
     titleSpan: "Massage in Seminyak:",
     title: "Prices, Treatments & Packages",
     // The quick answer under the H1 (copy rewrite, 15 Oct).
-    text: "Massage at Spa Bali Moon in Seminyak starts at IDR 90.000 for 30 minutes. A one-hour Balinese massage is IDR 159.000 per person, and a couple's massage starts at IDR 319.000 for two. Open daily 9am–11pm at Jl. Pangkung Sari No. 30. Home service adds IDR 75.000 per therapist.",
+    text: "Massage at Spa Bali Moon in Seminyak starts at IDR 90.000 for 30 minutes. A one-hour Balinese massage is IDR 159.000 per person, and a couple's massage starts at IDR 319.000 for two. Open daily 9am–11pm at Jl. Pangkung Sari No. 30. Home service adds IDR 75.000 per therapist in the Seminyak area.",
     buttonText: "Book Now",
     image: "/images/banners/pricelist.webp",
     imagePosition: "70% 50%",
@@ -68,8 +68,8 @@ export const pricelistPage = {
     subTitle: "Best Price",
     title: "How Much Does a Massage Cost in Seminyak?",
     // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
-    text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist.",
-    note: "Home service available — extra IDR 75.000 per therapist.",
+    text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
+    note: "Home service available — extra from IDR 75.000 per therapist.",
     tabs: [
     {
       label: "Massage",
@@ -852,8 +852,8 @@ export const pricelistPage = {
   priceTable: {
     subTitle: "Prices at a Glance",
     title: "How Much Is a 30, 60, 90 or 120-Minute Massage?",
-    text: "Every massage price at Spa Bali Moon in one table, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist.",
-    note: "Home service: add IDR 75.000 per therapist (IDR 150.000 for a couple with two therapists). Open daily 9am–11pm, Jl. Pangkung Sari No. 30, Seminyak.",
+    text: "Every massage price at Spa Bali Moon in one table, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
+    note: "Home service: add IDR 75.000 per therapist in the Seminyak area (IDR 150.000 for a couple with two therapists). Open daily 9am–11pm, Jl. Pangkung Sari No. 30, Seminyak.",
   },
 
   packagesIntro: {
@@ -1468,11 +1468,11 @@ export const pricelistPage = {
     },
     {
       question: "3. Are the prices listed for each treatment?",
-      answer: "Yes. Every treatment and package on the Spa Bali Moon price list has its price listed, in Indonesian rupiah (IDR), with each duration priced separately. For example, Balinese massage is IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours. Home service adds IDR 75.000 per therapist."
+      answer: "Yes. Every treatment and package on the Spa Bali Moon price list has its price listed, in Indonesian rupiah (IDR), with each duration priced separately. For example, Balinese massage is IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours. Home service adds IDR 75.000 per therapist in the Seminyak area."
     },
     {
       question: "4. Can I book a treatment at my hotel or villa?",
-      answer: "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at your hotel or villa in Seminyak and nearby areas, such as Kerobokan, Petitenget, Canggu and North Kuta. An extra IDR 75.000 per therapist applies on top of the treatment price. Send your location and preferred time on WhatsApp to book."
+      answer: "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at your hotel or villa in Seminyak and nearby areas, such as Kerobokan, Petitenget, Canggu and North Kuta. An extra IDR 75.000 per therapist applies in Seminyak, Petitenget and Kerobokan, and IDR 150.000 in Canggu and North Kuta, on top of the treatment price. Send your location and preferred time on WhatsApp to book."
     },
     {
       question: "5. Can I create a custom spa package?",
@@ -1496,7 +1496,7 @@ export const pricelistPage = {
     },
     {
       question: "10. How much extra is home service?",
-      answer: "Spa Bali Moon home service costs an additional IDR 75.000 per therapist on top of the treatment price. Treatments cost the same as in-spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa. For a couple booking with two therapists, the outcall fee is IDR 150.000 total."
+      answer: "Spa Bali Moon home service costs an additional IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta, on top of the treatment price. Treatments cost the same as in-spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa. For a couple booking with two therapists, the outcall fee is IDR 150.000 total."
     },
     {
       question: "11. Which areas do you cover for outcall massage?",
@@ -1508,7 +1508,7 @@ export const pricelistPage = {
     },
     {
       question: "13. Do prices differ between the website and in the spa?",
-      answer: "No. The prices listed on the Spa Bali Moon website are our current rates and apply both in our Seminyak spa and for home service, with the outcall fee of IDR 75.000 per therapist added separately for home visits. If you are ever quoted a different price, please tell us before your treatment."
+      answer: "No. The prices listed on the Spa Bali Moon website are our current rates and apply both in our Seminyak spa and for home service, with the outcall fee, from IDR 75.000 per therapist, added separately for home visits. If you are ever quoted a different price, please tell us before your treatment."
     },
     {
       question: "14. Are towels, oils, and amenities included?",
@@ -1520,7 +1520,7 @@ export const pricelistPage = {
     },
     {
       question: "16. How can I pay for my treatment?",
-      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the IDR 75.000 per therapist fee is added. For payment questions, especially about home service, message us on WhatsApp at +62 878-6317-5144 before your treatment."
+      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the home service fee, from IDR 75.000 per therapist, is added. For payment questions, especially about home service, message us on WhatsApp at +62 878-6317-5144 before your treatment."
     },
     {
       question: "17. What are your opening hours?",

@@ -22,8 +22,8 @@
 | ADDR-01 | 🔴 | Street name spelling: Pangkung vs Panggung | REQUIRES MANUAL REVIEW |
 | ADDR-02 | 🟠 | Short vs full address format (NAP for schema) | REQUIRES MANUAL REVIEW |
 | CONTACT-01 | 🔴 | Two different email addresses | REQUIRES MANUAL REVIEW |
-| FEE-01 | 🔴 | Home-service fee: flat 75K vs distance-based | REQUIRES MANUAL REVIEW |
-| AREA-01 | 🟠 | Home-service area described differently | REQUIRES MANUAL REVIEW |
+| FEE-01 | 🔴 | Home-service fee: flat 75K vs distance-based | ✅ RESOLVED: fee by area (owner, 2026-10-22), see below |
+| AREA-01 | 🟠 | Home-service area described differently | ✅ RESOLVED: areas listed with fee and travel time (owner, 2026-10-22) |
 | PAY-01 | 🟠 | Accepted payment methods differ | ✅ RESOLVED for footer: VISA, Mastercard, Cash (owner, 2026-09-24); bank transfer open |
 | FLOW-01 | 🟠 | Booking CTA destinations are inconsistent (WhatsApp vs /contact/) | REQUIRES MANUAL REVIEW |
 | FLOW-02 | 🟠 | "In-spa bookings are made on-site" vs "book ahead via WhatsApp" | REQUIRES MANUAL REVIEW |
@@ -409,7 +409,12 @@ RECOMMENDATION:
 Requires manual review. The Home Service page's "Home Service Fee" section needs one confirmed rule.
 
 STATUS:
-REQUIRES MANUAL REVIEW
+✅ RESOLVED (owner, 2026-10-22). Fee per therapist by area: IDR 75.000 in Seminyak, Petitenget
+and Kerobokan; IDR 150.000 in Canggu, North Kuta and Kuta; confirmed on WhatsApp for Uluwatu,
+Jimbaran, Nusa Dua, Ubud, Sanur and Denpasar. Stored once in `business.homeService.zones`, with
+the travel time from the spa. Rule for copy: wherever a page gives one figure, it says "from
+IDR 75.000" or ties IDR 75.000 to the Seminyak area. The Kuta page says IDR 150.000. Terms and
+Privacy Policy already say the fee varies outside Seminyak, so they were left as they are.
 
 ### AREA-01
 
@@ -430,7 +435,9 @@ RECOMMENDATION:
 Requires manual review. Not a direct contradiction. The new "Service Area" section will use the Outcall FAQ list verbatim unless told otherwise.
 
 STATUS:
-REQUIRES MANUAL REVIEW
+✅ RESOLVED (owner, 2026-10-22). The outcall page's "Home Service Areas Around Seminyak" section
+lists every area with its fee and travel time (`business.homeService.zones`). Lists that put
+Canggu and North Kuta at the Seminyak fee were corrected.
 
 ### PAY-01
 

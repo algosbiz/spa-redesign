@@ -182,7 +182,7 @@ const facial: Treatment = {
   cta: {
     heading: "Professional Facial Care at Your Spa, Villa, or Hotel",
     paragraphs: [
-      "Professional facial care at our Seminyak spa, or at your villa or hotel for an extra IDR 75.000 per therapist. Personalised skincare, without rearranging your day.",
+      "Professional facial care at our Seminyak spa, or at your villa or hotel for an extra fee from IDR 75.000 per therapist. Personalised skincare, without rearranging your day.",
       "Reserve your appointment and give your skin the attention it deserves.",
     ],
     image: { src: "/images/beauty/facial/balimoonfacial-12.webp", alt: "", width: 1920, height: 898 },

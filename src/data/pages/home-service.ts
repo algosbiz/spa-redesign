@@ -241,8 +241,7 @@ export const homeServicePage = {
         text: "Send your preferred treatment, time, number of guests, and location through WhatsApp, and our team will confirm the booking details.",
       },
     ],
-    // TODO FEE-01: see migration-audit.md
-    feeNote: { before: "Home service fee: ", highlight: "IDR 75.000", after: " per therapist" },
+    feeNote: { before: "Home service fee: from ", highlight: "IDR 75.000", after: " per therapist" },
   },
   faq: {
     heading: "Home Service Massage",

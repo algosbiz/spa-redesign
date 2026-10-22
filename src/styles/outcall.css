@@ -316,22 +316,6 @@
 .oc-card__heading {
   font-weight: 500;
 }
-.oc-areas__group {
-  max-width: 1100px;
-  margin: 0 auto 44px;
-}
-.oc-areas__group:last-child {
-  margin-bottom: 0;
-}
-.oc-areas__label {
-  margin: 0 0 18px;
-  font-family: var(--text-font);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--theme-color1);
-}
 @media (max-width: 991px) {
   .oc-cards {
     grid-template-columns: minmax(0, 1fr);
@@ -469,24 +453,6 @@
 .oc-card--group .oc-card__icon {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Area groups: the label centred between two hairlines. */
-.oc-areas__label {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-align: center;
-}
-.oc-areas__label::before,
-.oc-areas__label::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(var(--theme-color1-rgb), 0.4);
-}
-.oc-areas__group {
-  margin-bottom: 56px;
 }
 
 /* Comparison: one rounded card, the home service column picked out. */
@@ -896,16 +862,38 @@
   }
 }
 
-/* 15 · Arrival time and fee by area (table under the price table in S02) */
-.oc-subtitle {
-  margin: 48px 0 20px;
-  text-align: center;
-  font-size: 26px;
+/* 15 · S06 areas: the fee and travel time by area, then one short note per fee level (owner, 22 Oct) */
+.oc-area-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  max-width: 980px;
+  margin: 44px auto 32px;
 }
-.oc-subtitle-text {
-  max-width: 720px;
-  margin: 0 auto 24px;
-  text-align: center;
+.oc-area-notes__item {
+  min-width: 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.4);
+}
+.oc-area-notes__title {
+  margin: 0 0 8px;
+  font-family: var(--title-font);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--headings-color);
+}
+.oc-area-notes__item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+@media (max-width: 991px) {
+  .oc-area-notes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 640px;
+  }
 }
 .oc-table--arrival {
   margin-bottom: 8px;

@@ -2,7 +2,7 @@
 // Please do not rewrite texts or prices without checking migration/migration-audit.md first.
 //
 // Page: https://spabalimoon.com/terms-and-conditions/
-// TODO FEE-01: this page says the 75k transport fee applies within Seminyak and varies outside.
+// FEE-01 settled (22 Oct): 75k within Seminyak, varying outside, matches the fee by area in business.homeService.zones.
 
 import type { TextPage } from "../types";
 

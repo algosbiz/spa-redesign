@@ -24,12 +24,12 @@ const FAQ = [
   {
     question: "Do you offer massage at hotels and villas near Kuta?",
     answer:
-      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus IDR 75.000 per therapist. Availability and any extra travel cost depend on your location and are confirmed on WhatsApp before you book. See our [home service massage](/outcall-home-service-massage/) page for prices and areas.",
+      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus a home service fee of IDR 150.000 per therapist in Kuta. For other areas, availability and the fee are confirmed on WhatsApp before you book. See our [home service massage](/outcall-home-service-massage/) page for prices and areas.",
   },
   {
     question: "How long do massage sessions usually last?",
     answer:
-      "Massage sessions at Spa Bali Moon run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person). In Kuta, where our therapists come to you, outcall adds IDR 75.000 per therapist.",
+      "Massage sessions at Spa Bali Moon run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person). In Kuta, where our therapists come to you, outcall adds IDR 150.000 per therapist.",
   },
   {
     question: "Can I combine a massage with another spa treatment?",
@@ -45,7 +45,7 @@ const FAQ = [
   {
     question: "How much does a massage in Kuta cost?",
     answer:
-      "A Spa Bali Moon outcall massage in Kuta costs the same as in our Seminyak spa, plus IDR 75.000 per therapist. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. For locations further out, we confirm any extra travel cost on WhatsApp before you book.",
+      "A Spa Bali Moon outcall massage in Kuta costs the same as in our Seminyak spa, plus IDR 150.000 per therapist. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. For locations further out, we confirm any extra travel cost on WhatsApp before you book.",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function MassageKutaPage() {
         titleSpan="Massage in Kuta, Bali:"
         // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
         title="Outcall to Your Hotel or Villa"
-        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 75.000 per therapist, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
+        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
         buttonText="Book Now"
         image="/images/banners/massage-kuta.webp"
       />

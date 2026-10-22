@@ -104,14 +104,8 @@ const POPULAR: { name: string; id: string; label: string; therapists: number }[]
   { name: "Four Hand Massage, 60 min (2 therapists)", id: "four-hand-massage", label: "1 Hour", therapists: 2 },
 ];
 
-const ARRIVAL_ROWS: { area: string; fee: string; arrival: string }[] = [
-  { area: "Seminyak & Petitenget", fee: `${idr(fee)} per therapist`, arrival: "Usually 7 to 10 minutes" },
-  { area: "Kerobokan", fee: `${idr(fee)} per therapist`, arrival: "Usually 7 to 15 minutes" },
-  { area: "Canggu & North Kuta", fee: `${idr(150000)} per therapist`, arrival: "Usually 30 to 50 minutes, depending on traffic" },
-  { area: "Kuta", fee: `${idr(150000)} per therapist`, arrival: "Usually 30 to 50 minutes, depending on traffic" },
-  { area: "Uluwatu, Jimbaran & Nusa Dua", fee: "Confirmed on WhatsApp", arrival: "Usually 60 to 90 minutes, depending on traffic" },
-  { area: "Ubud, Sanur & Denpasar", fee: "Confirmed on WhatsApp", arrival: "Usually 60 to 90 minutes, depending on traffic" },
-];
+/** The fee in Canggu, North Kuta and Kuta. */
+const outerFee = business.homeService.feeOuterPerTherapist;
 
 export function HomeServicePrices() {
   const rows = POPULAR.map((row) => {
@@ -123,8 +117,8 @@ export function HomeServicePrices() {
     <section id="home-service-prices" className={`oc-section oc-prices ${PAPER} pt-130 pb-130`}>
       <div className="container">
         <Header eyebrow="Prices at your villa" title="Home Service Massage Prices in Seminyak">
-          What you pay at your villa, hotel or home is the treatment price plus {idr(fee)} per therapist. These are
-          our most-booked home treatments, with the fee already added:
+          In the Seminyak area, what you pay at your villa, hotel or home is the treatment price plus {idr(fee)} per
+          therapist. These are our most-booked home treatments, with the fee already added:
         </Header>
         <div className="oc-table-wrap">
           <table className="oc-table oc-table--prices">
@@ -151,11 +145,11 @@ export function HomeServicePrices() {
             </tbody>
           </table>
         </div>
-        {/* Owner fact C5: if the owner gives the fee outside this zone, replace the second sentence with
-            "Outside this zone the fee is IDR X per therapist." */}
+        {/* Fees by area: business.homeService.zones (owner, 22 Oct), shown in full in S06. */}
         <p className="oc-note">
-          Totals apply in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. For areas further away, we confirm
-          the total on WhatsApp before you book.
+          Totals apply in Seminyak, Petitenget and Kerobokan. In Canggu, North Kuta and Kuta the fee is{" "}
+          {idr(outerFee)} per therapist, and for areas further away we confirm the total on WhatsApp before you book.{" "}
+          <a href="#areas">See every area</a>.
         </p>
         <div className="oc-actions">
           <Button href={whatsappChatUrl} filled whatsapp>
@@ -252,16 +246,17 @@ export function HowItWorks() {
 /* S06 · Home Service Areas Around Seminyak                                   */
 /* ------------------------------------------------------------------------ */
 
-type Area = { name: string; text: ReactNode };
-
-const NEAR: Area[] = [
+/**
+ * One short note per fee level under the table. The H3s keep the area searches
+ * ("outcall massage canggu" and the like) in headings without the old six cards.
+ */
+const AREA_NOTES: { name: string; text: ReactNode }[] = [
   {
-    name: "Outcall Massage in Seminyak & Petitenget",
-    // Owner fact C1: arrival times live in ARRIVAL_ROWS (S02), estimated from drive distance.
+    name: "Outcall Massage in Seminyak, Petitenget & Kerobokan",
     text: (
       <>
-        Our spa is here, so this is where we arrive fastest. We visit private villas, hotels and homes across
-        Seminyak and Petitenget. For in-room massage at your hotel or villa, see{" "}
+        Our spa is here, so this is where we arrive fastest, for {idr(fee)} per therapist. For in-room massage at
+        your hotel or villa, see{" "}
         <Link prefetch={false} href="/villa-hotel-massage/">
           Villa &amp; Hotel Massage
         </Link>
@@ -270,82 +265,75 @@ const NEAR: Area[] = [
     ),
   },
   {
-    name: "Home Massage in Kerobokan",
-    // Owner fact C2: "Typical arrival: about X minutes."
-    text: "Private villas and homes across Kerobokan, a short drive from the spa.",
-  },
-  {
-    name: "Outcall Massage in Canggu",
-    // Owner fact C3: "Typical arrival: about X minutes."
+    name: "Outcall Massage in Canggu & Kuta",
     text: (
       <>
-        Villas and guesthouses across Canggu and North Kuta. After a day of surfing, a{" "}
+        Villas and hotels across Canggu, North Kuta and Kuta, for {idr(outerFee)} per therapist. After a day of
+        surfing, a{" "}
         <Link prefetch={false} href="/seminyak/sport-massage/">
           sports massage
         </Link>{" "}
-        or{" "}
-        <Link prefetch={false} href="/seminyak/deep-tissue-massage/">
-          deep tissue massage
-        </Link>{" "}
-        helps tired shoulders and legs recover.
-      </>
-    ),
-  },
-];
-
-const FURTHER: Area[] = [
-  {
-    name: "Kuta",
-    text: (
-      <>
-        Hotels and villas in Kuta. See{" "}
+        helps tired legs recover. See also{" "}
         <Link prefetch={false} href="/massage-kuta/">
           Massage Kuta
-        </Link>{" "}
-        for in-spa and outcall options in the area.
+        </Link>
+        .
       </>
     ),
   },
   {
-    name: "Uluwatu, Jimbaran & Nusa Dua",
-    // Owner fact C4: "Please book at least X hours ahead."
-    text: "We travel south to villas and resorts in Uluwatu, Jimbaran and Nusa Dua when a therapist is free. Some larger resorts don't allow outside therapists, so check with reception first.",
-  },
-  {
-    name: "Ubud, Sanur & Denpasar",
-    text: "Send us your address and preferred time, and we'll confirm whether a therapist can travel to you.",
+    name: "Uluwatu, Nusa Dua, Ubud & Further",
+    text: "We travel further when a therapist is free and confirm the fee on WhatsApp. Some larger resorts don't allow outside therapists, so check with reception first.",
   },
 ];
-
-function AreaGroup({ label, areas }: { label: string; areas: Area[] }) {
-  return (
-    <div className="oc-areas__group">
-      <p className="oc-areas__label">{label}</p>
-      <div className="oc-cards">
-        {areas.map((area) => (
-          <div key={area.name} className="oc-card oc-card--area">
-            <span className="oc-card__icon" aria-hidden="true">
-              <MenuIcon name="pin" />
-            </span>
-            <h3 className="oc-card__heading">{area.name}</h3>
-            <p>{area.text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export function HomeServiceAreas() {
   return (
     <section id="areas" className={`oc-section oc-areas ${PAPER} pt-130 pb-130`}>
       <div className="container">
         <Header eyebrow="Where we travel" title="Home Service Areas Around Seminyak">
-          Our therapists leave from our spa on Jl. Pangkung Sari in Seminyak, so the closer you are, the sooner we can
-          usually be with you. Send us your address on WhatsApp and we&apos;ll confirm your arrival time.
+          Our therapists leave from our spa on Jl. Pangkung Sari in Seminyak, so the closer you stay, the sooner they
+          reach you. Here is the home service fee and the usual travel time from the spa for each area:
         </Header>
-        <AreaGroup label={`Standard home service zone · ${idr(fee)} per therapist`} areas={NEAR} />
-        <AreaGroup label="Further afield · subject to therapist availability and travel time" areas={FURTHER} />
+        <div className="oc-table-wrap">
+          <table className="oc-table oc-table--prices oc-table--arrival">
+            <caption className="oc-sr-only">Home service fee and travel time from the spa, by area</caption>
+            <thead>
+              <tr>
+                <th scope="col">Area</th>
+                <th scope="col">Home service fee</th>
+                <th scope="col">Travel time from our spa</th>
+              </tr>
+            </thead>
+            <tbody>
+              {business.homeService.zones.map((z) => (
+                <tr key={z.area}>
+                  <th scope="row">{z.area}</th>
+                  <td data-label="Home service fee">
+                    {z.fee === null ? "Confirmed on WhatsApp" : `${idr(z.fee)} per therapist`}
+                  </td>
+                  <td data-label="Travel time from our spa">{z.travel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="oc-area-notes">
+          {AREA_NOTES.map((note) => (
+            <div key={note.name} className="oc-area-notes__item">
+              <h3 className="oc-area-notes__title">{note.name}</h3>
+              <p>{note.text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="oc-note">
+          Send your address on WhatsApp and we confirm the fee and your therapist&apos;s arrival time before you book.
+        </p>
+        <div className="oc-actions">
+          <Button href={whatsappChatUrl} filled whatsapp>
+            Book on WhatsApp
+          </Button>
+        </div>
       </div>
     </section>
   );
@@ -357,7 +345,7 @@ export function HomeServiceAreas() {
 
 const COMPARE: { row: string; home: string; spa: string }[] = [
   { row: "Where", home: "Your villa, hotel or home", spa: "Jl. Pangkung Sari No. 30, Seminyak" },
-  { row: "Price", home: `Treatment + ${idr(fee)} per therapist`, spa: "Treatment price only" },
+  { row: "Price", home: `Treatment + home service fee, from ${idr(fee)} per therapist`, spa: "Treatment price only" },
   { row: "Hours", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
   {
     row: "Setup",
@@ -404,34 +392,7 @@ export function HomeVsSpa() {
             </tbody>
           </table>
         </div>
-        {/* Arrival time by area. The times are estimates from drive distance; replace with the owner's figures. */}
-        <h3 className="oc-subtitle">Arrival Time and Fee by Area</h3>
-        <p className="oc-subtitle-text">
-          Both options start from our Seminyak spa, so how soon your therapist reaches you depends on where you stay.
-          Here is the home service fee and the usual arrival time for each area:
-        </p>
-        <div className="oc-table-wrap">
-          <table className="oc-table oc-table--prices oc-table--arrival">
-            <caption className="oc-sr-only">Home service fee and therapist arrival time by area</caption>
-            <thead>
-              <tr>
-                <th scope="col">Area</th>
-                <th scope="col">Home service fee</th>
-                <th scope="col">Therapist arrives</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ARRIVAL_ROWS.map((r) => (
-                <tr key={r.area}>
-                  <th scope="row">{r.area}</th>
-                  <td data-label="Home service fee">{r.fee}</td>
-                  <td data-label="Therapist arrives">{r.arrival}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="oc-note">Send your address on WhatsApp and we confirm the fee and your therapist&apos;s arrival time before you book.</p>
+        {/* The fee and travel time by area moved up into S06 (owner, 22 Oct). */}
         <div className="oc-actions">
           <Button href={whatsappChatUrl} filled whatsapp>
             Book home service
@@ -474,7 +435,8 @@ export function GroupMassage() {
             <CardIcon name="lotus" />
             <p className="oc-card__title">Couple massage at your villa</p>
             <p>
-              Side by side, from {couple} for 60 minutes, plus {idr(fee)} per therapist.{" "}
+              Side by side, from {couple} for 60 minutes, plus the home service fee, from {idr(fee)} per
+              therapist.{" "}
               <Link prefetch={false} href="/seminyak/couple-spa/">
                 See couple massage
               </Link>
@@ -484,7 +446,8 @@ export function GroupMassage() {
             <CardIcon name="stones" />
             <p className="oc-card__title">Four hand massage</p>
             <p>
-              Two therapists working together, from {fourHand} for 60 minutes, plus {idr(fee)} per therapist.
+              Two therapists working together, from {fourHand} for 60 minutes, plus the home service fee, from{" "}
+              {idr(fee)} per therapist.
             </p>
           </div>
           <div className="oc-card oc-card--group">

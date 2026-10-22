@@ -3,7 +3,7 @@
 //
 // Page: https://spabalimoon.com/privacy-policy/
 // TODO CONTACT-01: this page shows spabalimoon@gmail.com; the old homepage schema used info@spabalimoon.com.
-// TODO FEE-01: "Transport fees are calculated based on distance and time" differs from the flat 75K fee elsewhere.
+// FEE-01 settled (22 Oct): the fee depends on the area, so "calculated based on distance and time" stays true.
 
 import type { TextPage } from "../types";
 
