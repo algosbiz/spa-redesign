@@ -895,19 +895,62 @@
     max-width: 640px;
   }
 }
-.oc-table--arrival {
-  margin-bottom: 8px;
-}
 .oc-table--arrival td {
   white-space: normal;
 }
+.oc-arrival__clock {
+  display: none;
+}
+.oc-table-note {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-align: center;
+  color: #8f8a83;
+}
 @media (max-width: 767px) {
+  /* Phones (owner, 22 Oct): two lines per area, the name with the drive time
+     on the right, then the fee. No repeated column labels. */
+  .oc-table--arrival tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "area time"
+      "fee fee";
+    column-gap: 16px;
+    row-gap: 4px;
+    padding: 14px 0;
+  }
+  .oc-table--arrival th,
   .oc-table--arrival td {
-    text-align: right;
+    display: block;
+    padding: 0;
+  }
+  .oc-table--arrival th {
+    grid-area: area;
   }
   .oc-table--arrival td::before {
-    flex: none;
-    text-align: left;
+    content: none;
+  }
+  .oc-table--arrival .oc-arrival__fee {
+    grid-area: fee;
+  }
+  .oc-table--arrival .oc-arrival__time {
+    grid-area: time;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-self: end;
+    white-space: nowrap;
+    color: var(--headings-color);
+  }
+  .oc-arrival__clock {
+    display: inline-flex;
+    color: var(--theme-color1);
+  }
+  .oc-arrival__clock svg {
+    width: 15px;
+    height: 15px;
   }
 }
 

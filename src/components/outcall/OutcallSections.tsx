@@ -287,17 +287,24 @@ export function HomeServiceAreas() {
               </tr>
             </thead>
             <tbody>
+              {/* Phones: two lines per area, the name and drive time, then the fee (outcall.css, 15). */}
               {business.homeService.zones.map((z) => (
                 <tr key={z.area}>
                   <th scope="row">{z.area}</th>
-                  <td data-label="Home service fee">
+                  <td className="oc-arrival__fee" data-label="Home service fee">
                     {z.fee === null ? "Confirmed on WhatsApp" : `${idr(z.fee)} per therapist`}
                   </td>
-                  <td data-label="Travel time from our spa">{z.travel}</td>
+                  <td className="oc-arrival__time" data-label="Travel time from our spa">
+                    <span className="oc-arrival__clock" aria-hidden="true">
+                      <MenuIcon name="clock" />
+                    </span>
+                    {z.travel}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <p className="oc-table-note">Usual drive times from our spa; allow longer in heavy traffic.</p>
         </div>
         <div className="oc-area-notes">
           {AREA_NOTES.map((note) => (

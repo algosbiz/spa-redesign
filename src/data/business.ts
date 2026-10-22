@@ -75,13 +75,14 @@ export const business = {
      * Fee per therapist and the usual drive from the spa, by area (owner, 22 Oct 2026).
      * `fee: null` means it is confirmed on WhatsApp. Shown on the outcall page (S06).
      */
+    // Usual drive from the spa; the outcall page adds once that traffic can make it longer.
     zones: [
-      { area: "Seminyak & Petitenget", fee: 75_000, travel: "Usually 7 to 10 minutes" },
-      { area: "Kerobokan", fee: 75_000, travel: "Usually 7 to 15 minutes" },
-      { area: "Canggu & North Kuta", fee: 150_000, travel: "Usually 30 to 50 minutes, depending on traffic" },
-      { area: "Kuta", fee: 150_000, travel: "Usually 30 to 50 minutes, depending on traffic" },
-      { area: "Uluwatu, Jimbaran & Nusa Dua", fee: null, travel: "Usually 60 to 90 minutes, depending on traffic" },
-      { area: "Ubud, Sanur & Denpasar", fee: null, travel: "Usually 60 to 90 minutes, depending on traffic" },
+      { area: "Seminyak & Petitenget", fee: 75_000, travel: "7–10 min" },
+      { area: "Kerobokan", fee: 75_000, travel: "7–15 min" },
+      { area: "Canggu & North Kuta", fee: 150_000, travel: "30–50 min" },
+      { area: "Kuta", fee: 150_000, travel: "30–50 min" },
+      { area: "Uluwatu, Jimbaran & Nusa Dua", fee: null, travel: "60–90 min" },
+      { area: "Ubud, Sanur & Denpasar", fee: null, travel: "60–90 min" },
     ],
   },
 
