@@ -2225,6 +2225,10 @@
   gap: 12px;
   max-width: calc(100% - 32px);
   padding: 12px 18px 12px 16px;
+  /* A thin gold edge, as the header pill, the banner's prices and button
+     and the "Visit us" card (owner, 22 Oct: "a little more something to
+     blend with our latest updates"). */
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.6);
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(8px);
@@ -2236,6 +2240,12 @@
   font-size: 34px;
   line-height: 1;
   color: var(--theme-color1);
+}
+/* A gold hairline between the number and its words, as between the
+   banner's price tiles. */
+.split-badge__num + .split-badge__label {
+  padding-left: 12px;
+  border-left: 1px solid rgba(var(--theme-color1-rgb), 0.35);
 }
 .split-badge__top {
   font-family: var(--title-font);
