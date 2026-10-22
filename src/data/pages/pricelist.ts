@@ -48,6 +48,8 @@ export const pricelistPage = {
     buttonText: "Book Now",
     image: "/images/banners/pricelist.webp",
     imagePosition: "70% 50%",
+    // Phones: the whole photo above the long banner text (owner, 22 Oct).
+    mobilePhoto: "/images/banners/pricelist-wide-sm.webp",
   },
 
   /** The "complete spa menu" block with its two photos. `firstStat`/`secondStat` break after the first words. */
