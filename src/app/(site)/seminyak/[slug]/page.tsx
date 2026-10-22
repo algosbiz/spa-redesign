@@ -59,6 +59,14 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
   },
 };
 
+/**
+ * Treatment pages whose banner has the outcall hero's "Book on WhatsApp" row
+ * button (with the number) in place of "Book Now", and the opening hours
+ * under it as a badge (owner, 22 Oct: "lets first start with the cellulite
+ * page").
+ */
+const ROW_BOOKING = new Set(["anti-cellulite-massage"]);
+
 /*
  * Every treatment page shows the new look of the sections added in October
  * (owner, 19 Oct: they said too much in plain rows, then "looks flat, made
@@ -151,16 +159,19 @@ export default async function TreatmentPage({ params }: Props) {
   // The banner shows the session prices when the quick facts list them;
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
+  const booking = ROW_BOOKING.has(slug)
+    ? withProps(content.tree, "PageBanner", { whatsappRow: true, chips: ["Open daily 9am – 11pm"] })
+    : content.tree;
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
       banner
-        ? withProps(content.tree, "PageBanner", {
+        ? withProps(booking, "PageBanner", {
             prices: banner.prices,
             // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
             priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
           })
-        : content.tree,
+        : booking,
       "QuickFacts",
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),

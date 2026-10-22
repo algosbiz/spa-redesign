@@ -7,6 +7,8 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LotusPaths25 } from "@/components/ui/Lotus";
+import RowButton from "@/components/ui/RowButton";
+import { business } from "@/data/business";
 import type { PriceTiles } from "@/lib/priceTiles";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -29,6 +31,12 @@ export type PageBannerProps = {
   buttonLink?: string;
   /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
   actions?: ReactNode;
+  /**
+   * The outcall hero's "Book on WhatsApp" row button, with the number under
+   * it, in place of "Book Now" (owner, 22 Oct, tried on the cellulite page
+   * first). For pages built from data, where `actions` cannot be written.
+   */
+  whatsappRow?: boolean;
   /** Small badges under the buttons (the outcall page: since 2009, what is included, the fee, the hours). */
   chips?: string[];
   /**
@@ -66,13 +74,25 @@ export default function PageBanner({
   shapeImage = "/images/shape/banner-two-shape.png",
   buttonText = "Book Now",
   buttonLink = whatsappChatUrl,
-  actions,
+  actions: actionsProp,
+  whatsappRow,
   chips,
   prices,
   priceUnit,
   mobilePhoto,
 }: PageBannerProps) {
   const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
+  const actions =
+    actionsProp ??
+    (whatsappRow && (
+      <RowButton
+        href={whatsappChatUrl}
+        icon="whatsapp"
+        label="Book on WhatsApp"
+        note={business.phoneDisplay}
+        className="row-btn--glass"
+      />
+    ));
 
   // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
   // to the DOM while it initialises, then React re-renders the class list it
