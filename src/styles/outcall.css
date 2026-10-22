@@ -789,39 +789,36 @@
 /* 12. Words on the FAQ photo no longer run off it (owner, 21 Oct)      */
 /* ------------------------------------------------------------------ */
 /* Since 22 Oct (owner: "these could also do with a revamp, but … different
-   then the last one with the box inside the corner"): the words sit on a
-   band of dark glass across the photo's foot, a thin gold line along its
-   top and a gold lotus before them, as the banner's price strip; the photo
-   keeps only a light shade at its foot. */
+   then the last one with the box inside the corner"; then a dark band "a
+   bit awkward below the other style"): no box, a centred caption, the gold
+   lotus over the words, on a soft shade at the photo's foot. */
 .faq-section .image-column .inner-column:has(> .title)::after {
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.25));
+  background: linear-gradient(180deg, transparent 50%, rgba(28, 26, 29, 0.6));
 }
 .faq-section .image-column .inner-column .title {
   right: 0;
   bottom: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 22px 32px 24px;
-  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.75);
-  background-color: rgba(28, 26, 29, 0.42);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  font-size: clamp(22px, 2vw, 34px);
+  gap: 10px;
+  padding: 0 32px 34px;
+  font-size: clamp(24px, 2.2vw, 38px);
   white-space: normal;
   line-height: 1.2;
+  text-align: center;
   text-transform: none;
-  text-shadow: none;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 .faq-photo__lotus {
   flex: none;
 }
 @media (max-width: 767px) {
   .faq-section .image-column .inner-column .title {
-    gap: 12px;
-    padding: 16px 20px 18px;
-    font-size: 22px;
+    gap: 8px;
+    padding: 0 20px 24px;
+    font-size: 24px;
   }
 }
 

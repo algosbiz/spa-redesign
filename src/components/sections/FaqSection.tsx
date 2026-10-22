@@ -68,15 +68,15 @@ export default function FaqSection({
               <div className={`${S} inner-column gsap__parallax`}>
                 <img loading="lazy" decoding="async" src={image} alt="Spa facial treatment" className={S} />
                 {/* Empty words on the photo are left out (treatment pages, 15 Oct).
-                    The words sit on a dark glass band with a gold lotus (owner, 22 Oct). */}
+                    The words are a centred caption under a gold lotus (owner, 22 Oct). */}
                 {imageTitle === "" ? null : imageTitleAsHeading ? (
                   <h2 className={`${S} title`}>
-                    <LotusIcon className="faq-photo__lotus" width={22} height={23} />
+                    <LotusIcon className="faq-photo__lotus" width={28} height={29} />
                     {imageTitle}
                   </h2>
                 ) : (
                   <div className={`${S} title look-h2`}>
-                    <LotusIcon className="faq-photo__lotus" width={22} height={23} />
+                    <LotusIcon className="faq-photo__lotus" width={28} height={29} />
                     {imageTitle}
                   </div>
                 )}
