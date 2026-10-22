@@ -1,7 +1,26 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import type { PackageGroup } from "@/data/pages/pricelist";
-import { displayPrice } from "@/lib/price";
+import { displayPrice, priceValue, withDots } from "@/lib/price";
+
+const COUNT = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
+
+/**
+ * A group's prices in words, from its packages: "From IDR 399.000 per person"
+ * over the heading, and "Four packages from IDR 399.000 to IDR 549.000 per
+ * person, each …" opening its text, the answer first (owner, 22 Oct).
+ */
+function priceWords(group: PackageGroup) {
+  const prices = group.packages.map((pack) => priceValue(pack.price));
+  const low = `IDR ${withDots(Math.min(...prices))}`;
+  const high = `IDR ${withDots(Math.max(...prices))}`;
+  const unit = group.twoPax ? "for two" : "per person";
+  const count = COUNT[prices.length] ?? String(prices.length);
+  return {
+    kicker: `From ${low} ${unit}`,
+    answer: `${count} packages from ${low} to ${high} ${unit}, each ${group.includes}.`,
+  };
+}
 
 /** The treatment page each group's cards link to (AEO roadmap R25, 17 Oct). */
 const PAGE_OF_CARD: Record<string, string> = {
@@ -30,6 +49,7 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
         const edges = `${first ? "section__decoration-top" : ""} ${last ? "section__decoration-bottom" : ""}`.trim();
         const icon = icons[group.cardTitle];
         const page = PAGE_OF_CARD[group.cardTitle];
+        const words = priceWords(group);
         return (
           <section
             key={s}
@@ -38,13 +58,13 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
             <div className="container">
               <div className="section-header mb-60 center">
                 <div className="sub-title look-h4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                  {group.subTitle}
+                  {words.kicker}
                 </div>
                 <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                   {group.title}
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                  {group.description}
+                  {words.answer} {group.description}
                 </p>
               </div>
               <div className="row g-4">

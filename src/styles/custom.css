@@ -508,6 +508,12 @@
     font-size: 22px;
   }
 }
+/* Price list package groups: the line over each heading is their price
+   ("From IDR 399.000 per person", owner, 22 Oct), written as it is, not
+   in the theme's capitals. */
+.package-pricing-section .section-header .sub-title {
+  text-transform: none;
+}
 /* /contact/ (owner, 5 Oct): the three labels beside the icons (WhatsApp
    Message, Visit anytime, Opening Times) are now h3 (were h6), with the look
    of live.css's ".cf-rail__list.jsx-contact h6" rule. */
