@@ -46,6 +46,7 @@
 }
 :root {
   --sp-half: calc(var(--sp-gap) / 2);
+  --sp-quarter: calc(var(--sp-gap) / 4);
   /* Space either side of a torn edge, so the edge sits in the middle. */
   --sp-x-top: calc((var(--sp-gap) - var(--sp-edge-top)) / 2);
   --sp-x-bottom: calc((var(--sp-gap) - var(--sp-edge-bottom)) / 2);
@@ -73,6 +74,35 @@
 :root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section) > section {
   --sp-pt: var(--sp-half);
   --sp-pb: var(--sp-half);
+}
+
+/* 1b. Two plain sections in a row (white, no torn edge between them): half
+       a gap in all, the space on each side of a torn line. A whole gap of
+       plain white read as twice the others (owner, 22 Oct: "as the layers
+       are double white its double the gap rule"). Plain: not paper, no torn
+       edge, not a banner or title band; also a wrapper <div> like that
+       around the section. */
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title):has(+ section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title), + :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:first-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom)),
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom):has(+ section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title), + :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:first-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom)) > section:last-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area) {
+  --sp-pb: var(--sp-quarter);
+}
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title), :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom):has(> section:last-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area))) + section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title),
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :is(section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title), :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom):has(> section:last-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area))) + :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:first-of-type:not(.bg-sub, .section__decoration-top, .section__decoration-bottom) {
+  --sp-pt: var(--sp-quarter);
+}
+/* Two plain sections in the same plain wrapper (the outcall page's intro and
+   its figures, its FAQ and closing banner). */
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title):has(+ section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title)) {
+  --sp-pb: var(--sp-quarter);
+}
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) + section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) {
+  --sp-pt: var(--sp-quarter);
+}
+/* A page that ends on a plain section: a quarter gap under it, and a quarter
+   over the (white) footer (see the footer rules at the end). */
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > section:last-child:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title),
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :last-child:not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:last-child:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area) {
+  --sp-pb: var(--sp-quarter);
 }
 
 /* 2. Its own torn edge at the top: half the gap below the torn line. */
@@ -248,17 +278,13 @@
     --sp-in-bottom: 41px;
   }
 }
-/* The outcall page's FAQ without a photo: the same invisible box, top and
-   bottom. */
+/* The outcall page's FAQ without a photo: its paper panel shows from the
+   section's top to its bottom (measured again 22 Oct, when the gaps either
+   side became plain half gaps: the old values hid 47-90px of it). */
 :root body .faq-section--no-image {
-  --sp-in-top: 66px;
-  --sp-in-bottom: 90px;
-}
-@media (max-width: 767px) {
-  :root body .faq-section--no-image {
-    --sp-in-top: 7px;
-    --sp-in-bottom: 30px;
-  }
+  /* the panel starts 21px above the section's own top */
+  --sp-in-top: -21px;
+  --sp-in-bottom: 0px;
 }
 
 /* Contact page: the info rail's cards end above the section's padding. */
@@ -325,10 +351,11 @@
   margin-bottom: 0 !important;
 }
 
-/* The footer: after a page that ends on a torn edge, the space after it;
-   otherwise half the gap. */
+/* The footer (white): after a page that ends on a torn edge, the rest of the
+   half gap after its torn line; otherwise a quarter, after the quarter under
+   the last plain section (1b): half a gap of plain white in all. */
 :root:root:root:not(#sp#sp#sp) body main + footer.site-footer {
-  padding-top: var(--sp-half) !important;
+  padding-top: var(--sp-quarter) !important;
 }
 :root:root:root:not(#sp#sp#sp) body main:has(> .page-wrapper > .section__decoration-bottom:last-child, > .page-wrapper > :last-child > .section__decoration-bottom:last-child, > .page-wrapper > :last-child > :last-child > .section__decoration-bottom:last-child) + footer.site-footer {
   padding-top: calc(var(--sp-half) - var(--sp-ink-bottom)) !important;

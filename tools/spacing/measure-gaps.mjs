@@ -7,7 +7,8 @@
  * up). Torn edges and decorations (leaves, flowers, shapes) are not
  * content. Where one torn edge sits between two sections, its torn line
  * (26px into the edge image) should be in the middle of the gap: listed
- * when the space above and below it differ by more than 16px.
+ * when the space above and below it differ by more than 16px. Between two
+ * plain white sections (no torn edge, not paper) the gap is half.
  *
  *   node tools/spacing/measure-gaps.mjs [base=http://localhost:3100]
  *   WIDTHS=1440,1024,820,390 ONLY=/,/seminyak/ node tools/spacing/measure-gaps.mjs
@@ -126,6 +127,8 @@ async function run(path, w) {
         // its own torn edge, or its wrapper's when it is the wrapper's first / last section
         tornTop: b.matches(".section__decoration-top") || (b.parentElement.matches(".section__decoration-top") && b === b.parentElement.querySelector(":scope > section")),
         tornBottom: b.matches(".section__decoration-bottom") || (b.parentElement.matches(".section__decoration-bottom") && b === [...b.parentElement.querySelectorAll(":scope > section")].pop()),
+        // plain: white, no torn edge, not a banner or title band (spacing.css 1b)
+        plain: !/section__decoration|bg-sub|banner-(two|five)-area|page-title/.test(cls(b) + " " + cls(b.parentElement)),
         top: Y(rect.top), bottom: Y(rect.bottom),
         content: box,
       };
@@ -137,7 +140,7 @@ async function run(path, w) {
       // one torn edge between them (not two, not a banner's over its photo): where its line shows
       const lineAt = a.tornBottom && !b.tornTop && !/banner-(two|five)-area/.test(a.block) ? a.bottom - 26 : b.tornTop && !a.tornBottom ? b.top + 26 : null;
       const line = lineAt === null ? null : { above: lineAt - a.content.bottom, below: b.content.top - lineAt };
-      gaps.push({ from: a.block, to: b.block, gap: b.content.top - a.content.bottom, bgChange: a.bg !== b.bg, line });
+      gaps.push({ from: a.block, to: b.block, gap: b.content.top - a.content.bottom, bgChange: a.bg !== b.bg, line, plain: a.plain && b.plain && a.bg === b.bg });
     }
 
     // closing banner(s)
@@ -195,7 +198,8 @@ for (const w of [...widths].sort((a, b) => b - a)) {
       const noteJoin = g.from.includes("pricing-section-five") && g.to.startsWith("section.service-section");
       // price list: between two of its package groups, half the gap (spacing.css 7b)
       const packageJoin = g.from.includes("package-pricing-section") && g.to.includes("package-pricing-section");
-      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin ? G(w) / 2 : banner ? G(w) / 2 - 26 : G(w); // +5: the note's own line spacing
+      // two plain white sections: half the gap (spacing.css 1b)
+      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin || g.plain ? G(w) / 2 : banner ? G(w) / 2 - 26 : G(w); // +5: the note's own line spacing
       const d = g.gap - expect;
       if (Math.abs(d) <= 8) ok++;
       else { const key = `${short(g.from)} -> ${short(g.to)} (${d > 0 ? "+" : ""}${d})`; (bad[key] ??= []).push(k.split(" ")[0].replace("/seminyak/", "sm/").replace("/guide/", "g/").slice(0, 24)); }
