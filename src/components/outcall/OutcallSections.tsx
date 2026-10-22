@@ -253,36 +253,15 @@ export function HowItWorks() {
  * One short note per fee level under the table. The H3s keep the area searches
  * ("outcall massage canggu" and the like) in headings without the old six cards.
  */
-const AREA_NOTES: { name: string; text: ReactNode }[] = [
+// Plain text, no links: the owner found links too busy here (22 Oct).
+const AREA_NOTES: { name: string; text: string }[] = [
   {
     name: "Outcall Massage in Seminyak, Petitenget & Kerobokan",
-    text: (
-      <>
-        Our spa is here, so this is where we arrive fastest, for {idr(fee)} per therapist. For in-room massage at
-        your hotel or villa, see{" "}
-        <Link prefetch={false} href="/villa-hotel-massage/">
-          Villa &amp; Hotel Massage
-        </Link>
-        .
-      </>
-    ),
+    text: `Our spa is here, so this is where we arrive fastest, for ${idr(fee)} per therapist. We come to villas, hotels and homes across all three areas.`,
   },
   {
     name: "Outcall Massage in Canggu & Kuta",
-    text: (
-      <>
-        Villas and hotels across Canggu, North Kuta and Kuta, for {idr(outerFee)} per therapist. After a day of
-        surfing, a{" "}
-        <Link prefetch={false} href="/seminyak/sport-massage/">
-          sports massage
-        </Link>{" "}
-        helps tired legs recover. See also{" "}
-        <Link prefetch={false} href="/massage-kuta/">
-          Massage Kuta
-        </Link>
-        .
-      </>
-    ),
+    text: `Villas and hotels across Canggu, North Kuta and Kuta, for ${idr(outerFee)} per therapist. After a day of surfing, a sports massage helps tired legs recover.`,
   },
   {
     name: "Uluwatu, Nusa Dua, Ubud & Further",
