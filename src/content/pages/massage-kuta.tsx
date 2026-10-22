@@ -141,7 +141,7 @@ export default function MassageKutaPage() {
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           largeTopPadding
-          imageTitle="Unwind In Kuta"
+          imageTitle="Unwind in Kuta"
           subTitle="Frequently Asked Questions"
           title={<>Massage Kuta: FAQs</>}
           items={FAQ}

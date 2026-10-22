@@ -183,7 +183,7 @@ export default function VillaHotelMassagePage() {
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           largeTopPadding
-          imageTitle="Relax In Your Room"
+          imageTitle="Relax in Your Room"
           subTitle="Frequently Asked Questions"
           title={<>In-Villa Massage Seminyak: FAQs</>}
           items={FAQ}
