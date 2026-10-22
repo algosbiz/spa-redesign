@@ -108,10 +108,11 @@
 .p-massage-kuta .banner-two__slider .slide-bg::before {
   background: linear-gradient(180deg, rgba(28, 26, 29, 0.3), rgba(28, 26, 29, 0.75));
 }
-/* Cellulite banner: the photo slightly soft behind the title, still clear
-   enough to see (owner, 22 Oct). Blurred through the overlay, not with
-   `filter`, so the edges stay sharp and live's slow zoom still runs. */
-.cellulite-massage-banner .banner-two__slider .slide-bg::before {
+/* Treatment page banners: the photo slightly soft behind the title, still
+   clear enough to see (owner, 22 Oct, tried on the cellulite page). Blurred
+   through the overlay, not with `filter`, so the edges stay sharp and live's
+   slow zoom still runs. */
+.treatment-page .banner-two__slider .slide-bg::before {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }

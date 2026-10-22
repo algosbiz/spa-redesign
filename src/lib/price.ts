@@ -1,5 +1,5 @@
 /** 159000 -> "159.000": a dot between the thousands. */
-const withDots = (amount: number) => String(amount).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+export const withDots = (amount: number) => String(amount).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 /**
  * Prices are written in full, with a dot between the thousands: "IDR 159K"

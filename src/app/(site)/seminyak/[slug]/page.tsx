@@ -4,7 +4,9 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { homeServiceLines } from "@/data/homeServiceLines";
+import { priceOf } from "@/data/pricelist";
 import { treatments } from "@/data/treatments";
+import { withDots } from "@/lib/price";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -59,13 +61,30 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
   },
 };
 
+const tile = (length: string, id: string, option: string) => ({ length, amount: withDots(priceOf(id, option)) });
+
 /**
- * Treatment pages whose banner has the outcall hero's "Book on WhatsApp" row
- * button (with the number) in place of "Book Now", and the opening hours
- * under it as a badge (owner, 22 Oct: "lets first start with the cellulite
- * page").
+ * Banner prices for the pages whose quick facts do not write them as
+ * "length IDR amount · …" (owner, 22 Oct: every treatment banner shows its
+ * prices), from the price list so they change with it. These pages keep the
+ * price line in their quick facts: it says more (the scrub's seven scents,
+ * all seven waxing prices). The day spa waits: its quick facts say packages
+ * from IDR 399.000, the homepage and price list IDR 299.000.
  */
-const ROW_BOOKING = new Set(["anti-cellulite-massage"]);
+const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
+  "body-scrub": [
+    tile("Body scrub", "body-scrub", "Body Massage & Scrub · Start From"),
+    tile("Extra body mask", "body-scrub", "Additional Body Mask"),
+  ],
+  creambath: [tile("Cream bath", "cream-bath", "Ginseng"), tile("L'Oreal cream bath", "cream-bath", "L'Oreal")],
+  "ear-candle": [tile("30 minutes", "ear-candle", "30 Minutes")],
+  "sunburn-massage": [tile("1 hour", "aloe-vera-massage", "1 Hour")],
+  "waxing-salon": [
+    tile("Under arms", "waxing", "Under Arms"),
+    tile("Full legs", "waxing", "Full Legs"),
+    tile("Brazilian", "waxing", "Waxing Brazilian"),
+  ],
+};
 
 /*
  * Every treatment page shows the new look of the sections added in October
@@ -159,15 +178,17 @@ export default async function TreatmentPage({ params }: Props) {
   // The banner shows the session prices when the quick facts list them;
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
-  const booking = ROW_BOOKING.has(slug)
-    ? withProps(content.tree, "PageBanner", { whatsappRow: true, chips: ["Open daily 9am – 11pm"] })
-    : content.tree;
+  const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
+  // The outcall hero's "Book on WhatsApp" row button (with the number) in
+  // place of "Book Now", and the opening hours under it as a badge (owner,
+  // 22 Oct: tried on the cellulite page, then given to all).
+  const booking = withProps(content.tree, "PageBanner", { whatsappRow: true, chips: ["Open daily 9am – 11pm"] });
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
-      banner
+      prices
         ? withProps(booking, "PageBanner", {
-            prices: banner.prices,
+            prices,
             // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
             priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
           })
