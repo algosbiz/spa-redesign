@@ -651,6 +651,12 @@
     font-size: 19px;
   }
 }
+/* FAQ headings as written ("Massage Prices in Seminyak: FAQs"), not with
+   the theme's capital on every word ("… In Seminyak", owner, 22 Oct). */
+.faq-section .section-header .title {
+  text-transform: none;
+}
+
 /* The words on an FAQ photo stay on one line (live.css); on a phone a long
    one ("Book Your Massage in Seminyak Today") ran past the photo's edge and
    was cut off. There it may wrap (17 Oct). */
