@@ -7,7 +7,7 @@
 export const blogArchivePage = {
   path: "/guide/",
   seo: {
-    title: "Bali Spa & Massage Guides - Spa Bali Moon",
+    title: "Massage Guides - Spa Bali Moon",
     description: "Bali spa and massage guides: what each treatment is, what to expect and which one suits you, from Spa Bali Moon.",
   },
   title: "Blog",
