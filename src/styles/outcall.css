@@ -1245,3 +1245,64 @@
     padding-top: 28px;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 20. "Visit us" on phones: one compact card (owner, 22 Oct: "needs    */
+/*     some mobile love"). The four facts in a white card between gold  */
+/*     hairlines, as the mobile menu's rows: the icon on the left, the  */
+/*     small grey label over the words, the buttons smaller.            */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .visit-us--columns .visit-us__tiles {
+    margin-top: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .visit-us--columns .visit-us__tile,
+  .visit-us--columns .visit-us__tile + .visit-us__tile {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+    padding: 15px 16px;
+  }
+  .visit-us--columns .visit-us__tile + .visit-us__tile {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .visit-us--columns .visit-us__tile dt {
+    display: contents;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+  .visit-us--columns .visit-us__tile-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    background-color: var(--theme-color-gray);
+    box-shadow: none;
+  }
+  .visit-us--columns .visit-us__tile dd {
+    grid-column: 2;
+    margin: 3px 0 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .visit-us--columns .visit-us__pills {
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .visit-us--columns .visit-us__tile .visit-us__pill {
+    min-height: 32px;
+    padding: 6px 13px;
+    font-size: 12.5px;
+  }
+  .visit-us--columns .visit-us__split-body .visit-us__actions {
+    margin-top: 24px;
+  }
+}
