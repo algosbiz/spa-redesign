@@ -57,8 +57,8 @@
 /* The link to the About page after the text (AEO roadmap, 17 Oct). */
 .site-footer .site-footer__about-link {
   color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
   white-space: nowrap;
 }
 .site-footer .site-footer__cta {

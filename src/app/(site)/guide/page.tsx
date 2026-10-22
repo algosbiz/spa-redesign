@@ -25,7 +25,7 @@ export default async function GuideArchivePage() {
       <JsonLd
         data={blogIndexSchema({
           path: blogArchivePage.path,
-          name: "Bali Spa & Massage Guides",
+          name: "Massage Guides",
           description: blogArchivePage.seo.description,
           posts,
         })}

@@ -641,8 +641,8 @@
 }
 .guide-answer a {
   color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 @media (max-width: 767px) {
   .guide-answer .guide-answer__text {
@@ -671,6 +671,12 @@
 .blog-details__rich :is(h3, h4, h5) {
   font-weight: 400;
 }
+/* Headings pasted into the editor often arrive wrapped in bold, which made
+   H2 Literata 900 and H3 700 (owner, 22 Oct: "strange font"). Bold inside a
+   heading takes the heading's own weight: H2 700, H3–H5 400, as set 12 Oct. */
+.blog-details__rich :is(h1, h2, h3, h4, h5, h6) :is(strong, b) {
+  font-weight: inherit;
+}
 .blog-details__rich h4 {
   font-size: 1.2em;
   line-height: 1.4;
@@ -688,16 +694,14 @@
      text a link keeps the paragraph's font and wraps with it. */
   display: inline;
   font-family: inherit;
-  color: #8a6f1c;
-  text-decoration: underline;
-  text-decoration-color: var(--theme-color1);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: color 0.2s, text-decoration-thickness 0.2s;
+  /* Bold gold, no underline: the site's link style (owner, 22 Oct). */
+  color: var(--theme-color1);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 .blog-details__rich a:is(:hover, :focus-visible) {
-  color: #6d5512;
-  text-decoration-thickness: 2px;
+  color: #8a6f1c;
 }
 
 /*
@@ -853,8 +857,8 @@
 }
 .home-v2 .step-outcall a {
   color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 .home-v2 .step-outcall a:is(:hover, :focus-visible) {
   color: var(--headings-color);
@@ -881,8 +885,8 @@
 }
 .quick-facts__lead a {
   color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 .quick-facts__card {
   padding: 28px 32px;
@@ -1496,11 +1500,9 @@
 }
 .visit-us__line a {
   display: inline;
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--theme-color1);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 5px;
+  color: var(--theme-color1);
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 .visit-us__line a:hover {
   color: var(--theme-color1);
@@ -1697,11 +1699,9 @@
 }
 .visit-us__tile a {
   display: inline;
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--theme-color1);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  color: var(--theme-color1);
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 .visit-us__tile a:hover {
   color: var(--theme-color1);
@@ -1892,8 +1892,8 @@
 }
 .price-table__text a {
   color: var(--theme-color1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
 }
 .price-table__note {
   max-width: 980px;
