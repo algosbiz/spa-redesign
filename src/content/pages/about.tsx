@@ -54,7 +54,6 @@ export default function AboutPage() {
         titleSpan="About Spa Bali Moon"
         title="in Seminyak, Bali"
         text={`Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30, Seminyak, offering Balinese massage, facials, body treatments and beauty services since ${business.foundedYear}. Our therapists work at the spa and at guests' villas and hotels, open daily from 9am to 11pm.`}
-        buttonText="Book Now"
         image="/images/services/dayspaseminyak/dayspa-1.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/services/dayspaseminyak/dayspa-1-wide-sm.webp"

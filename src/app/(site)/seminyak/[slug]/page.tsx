@@ -196,20 +196,16 @@ export default async function TreatmentPage({ params }: Props) {
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
   const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
-  // The outcall hero's "Book on WhatsApp" row button (with the number) in
-  // place of "Book Now", and the opening hours under it as a badge (owner,
-  // 22 Oct: tried on the cellulite page, then given to all).
-  const booking = withProps(content.tree, "PageBanner", { whatsappRow: true, chips: ["Open daily 9am – 11pm"] });
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
       prices
-        ? withProps(booking, "PageBanner", {
+        ? withProps(content.tree, "PageBanner", {
             prices,
             // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
             priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
           })
-        : booking,
+        : content.tree,
       "QuickFacts",
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),

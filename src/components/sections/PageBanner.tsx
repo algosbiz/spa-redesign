@@ -1,7 +1,6 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import Link from "next/link";
 import { useEffect, useRef, type ReactNode } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Pagination } from "swiper/modules";
@@ -27,17 +26,18 @@ export type PageBannerProps = {
    */
   imagePosition?: string;
   shapeImage?: string;
-  buttonText?: string;
-  buttonLink?: string;
-  /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
+  /**
+   * Buttons in place of the one "Book on WhatsApp" row button with the
+   * number, which every banner has otherwise (owner, 22 Oct: tried on the
+   * cellulite page, then "all heros can have the new hero button"; it
+   * replaced live's "Book Now").
+   */
   actions?: ReactNode;
   /**
-   * The outcall hero's "Book on WhatsApp" row button, with the number under
-   * it, in place of "Book Now" (owner, 22 Oct, tried on the cellulite page
-   * first). For pages built from data, where `actions` cannot be written.
+   * Small badges under the buttons: the opening hours on every banner
+   * (owner, 22 Oct, as on the treatment pages); the outcall page adds since
+   * 2009, what is included and the fee.
    */
-  whatsappRow?: boolean;
-  /** Small badges under the buttons (the outcall page: since 2009, what is included, the fee, the hours). */
   chips?: string[];
   /**
    * The session lengths and prices under the title, on a glass strip (owner,
@@ -72,27 +72,21 @@ export default function PageBanner({
   image,
   imagePosition,
   shapeImage = "/images/shape/banner-two-shape.png",
-  buttonText = "Book Now",
-  buttonLink = whatsappChatUrl,
-  actions: actionsProp,
-  whatsappRow,
-  chips,
+  actions = (
+    <RowButton
+      href={whatsappChatUrl}
+      icon="whatsapp"
+      label="Book on WhatsApp"
+      note={business.phoneDisplay}
+      className="row-btn--glass"
+    />
+  ),
+  chips = ["Open daily 9am – 11pm"],
   prices,
   priceUnit,
   mobilePhoto,
 }: PageBannerProps) {
   const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
-  const actions =
-    actionsProp ??
-    (whatsappRow && (
-      <RowButton
-        href={whatsappChatUrl}
-        icon="whatsapp"
-        label="Book on WhatsApp"
-        note={business.phoneDisplay}
-        className="row-btn--glass"
-      />
-    ));
 
   // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
   // to the DOM while it initialises, then React re-renders the class list it
@@ -177,24 +171,7 @@ export default function PageBanner({
                 )}
                 {/* "IDR" never ends a line without its amount. */}
                 {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
-                {actions ? (
-                  <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
-                ) : (
-                  <Link
-                    href={buttonLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-two-light mt-50"
-                    data-animation="fadeInUp"
-                    data-delay="1s"
-                  >
-                    {buttonText}
-                    <span className={`${S} icon_box`}>
-                      <i className={`${S} fa-regular icon_first fa-arrow-right-long`} />
-                      <i className={`${S} fa-regular icon_second fa-arrow-right-long`} />
-                    </span>
-                  </Link>
-                )}
+                <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
                 {chips && chips.length > 0 && (
                   <ul className={`${S} banner-chips`}>
                     {chips.map((chip) => (

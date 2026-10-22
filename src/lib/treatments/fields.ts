@@ -1,4 +1,3 @@
-import { whatsappChatUrl } from "@/lib/whatsapp";
 import type { TreeValue } from "./tree";
 
 /**
@@ -109,8 +108,8 @@ export const SECTIONS: Record<string, SectionSchema> = {
       },
       { key: "title", label: "Page title, second part", kind: "text" },
       { key: "text", label: "Text under the title", kind: "textarea", hint: "Optional." },
-      { key: "buttonText", label: "Button text", kind: "text", placeholder: "Book Now" },
-      { key: "buttonLink", label: "Button link", kind: "link", placeholder: whatsappChatUrl },
+      // No button fields: every banner has the same "Book on WhatsApp" button
+      // and opening-hours badge (owner, 22 Oct).
       {
         key: "image",
         label: "Banner photo",

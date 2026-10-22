@@ -60,7 +60,6 @@ export default function MassageKutaPage() {
         // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
         title="Outcall to Your Hotel or Villa"
         text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
-        buttonText="Book Now"
         image="/images/banners/massage-kuta.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/massage-kuta-wide-sm.webp"
