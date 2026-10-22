@@ -165,11 +165,14 @@ export default function VisitUs({
             label: "In your villa",
             icon: "home" as const,
             text: `+${fee} per therapist (Seminyak area)`,
-            links: [
-              // The columns look keeps only the home service link ("Villa & hotel massage" left out, owner, 21 Oct).
-              ...(columns ? [] : [{ href: "/villa-hotel-massage/", label: "Villa & hotel massage" }]),
-              { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
-            ],
+            // The columns look has no links here: the fee is shown, and guests book through the
+            // phone number above (owner, 21 and 22 Oct). The quick facts still link to the outcall page.
+            links: columns
+              ? undefined
+              : [
+                  { href: "/villa-hotel-massage/", label: "Villa & hotel massage" },
+                  { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
+                ],
           },
         ]
       : []),
