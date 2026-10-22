@@ -89,6 +89,50 @@
     width: 170px;
   }
 }
+
+/* ---- Floating glass header (owner, 22 Oct) ----
+   Below 992px the header is a pill floating 10px from the screen's sides:
+   frosted cream glass, so whatever scrolls under it is blurred and the logo
+   stays readable over photos (the bar used to be see-through for the first
+   100px of a scroll). Once scrolled (`menu-fixed`) it gets a gold edge and a
+   deeper shadow instead of the full-width white bar. Still 70px tall in all:
+   8px, the 54px pill, 8px. The phone and the menu button are cream circles. */
+@media (max-width: 991px) {
+  .lh.header-area,
+  .lh.header-area.menu-fixed {
+    padding: 8px 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .lh.header-area .header-one__wrp {
+    margin: 0 10px;
+  }
+  .lh.header-area .header__main {
+    padding: 6px; /* + the 1px border: 54px with the 40px buttons */
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: 0 4px 16px rgba(28, 26, 29, 0.06);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .lh.header-area.menu-fixed .header__main {
+    border-color: rgba(var(--theme-color1-rgb), 0.34);
+    background-color: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 10px 30px rgba(28, 26, 29, 0.16);
+  }
+  .lh.header-area .header__main .menu-btns :is(.header-call, .menubars) {
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--theme-color-gray);
+    box-shadow: none;
+  }
+  .lh.header-area .header__main .menu-btns :is(.header-call, .menubars):is(:hover, :focus-visible) {
+    background-color: rgba(var(--theme-color1-rgb), 0.16);
+    box-shadow: none;
+  }
+}
 /* live fills the old icon's path gold on hover; these are line icons */
 .header__main .menubars svg.menubars__icon path,
 .header__main .menubars:hover svg.menubars__icon path {
