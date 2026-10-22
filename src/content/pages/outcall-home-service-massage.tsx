@@ -145,6 +145,8 @@ export default function OutcallPage() {
           title="in Seminyak, Bali"
           text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring fresh linen, oils and everything your treatment needs. Home service fee: IDR 75.000 per therapist in the Seminyak area. Open daily, 9am to 11pm."
           image="/images/banners/homeservice-hero.webp"
+          // Phones see the whole villa photo above the text, not a cropped slice (owner, 22 Oct).
+          mobilePhoto="/images/banners/homeservice-hero-wide-sm.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
           // (7 Oct: the page's search traffic compares prices before booking),
           // in the see-through gold version (picked over the white one).

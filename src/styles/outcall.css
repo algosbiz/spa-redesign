@@ -1180,3 +1180,44 @@
     max-width: 360px;
   }
 }
+
+/* 19 · Page banner with the whole photo above the text on phones
+   (PageBanner `mobilePhoto`; owner, 22 Oct, tried on the outcall page
+   first). From 768px nothing changes. On phones: the landscape photo,
+   uncropped, fades into the text panel, which sits on a blurred, darker
+   copy of the same photo so the white text and glass buttons stay as they
+   were. */
+.banner-two__photo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .banner-two-area--photo-top .banner-two__photo {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  .banner-two-area--photo-top .banner-two__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 828 / 367;
+    object-fit: cover;
+  }
+  /* A soft fade from the sharp photo into the panel. */
+  .banner-two-area--photo-top .banner-two__photo::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 38%;
+    background: linear-gradient(180deg, rgba(28, 26, 29, 0), rgba(28, 26, 29, 0.55));
+  }
+  .banner-two-area--photo-top .banner-two__slider .slide-bg {
+    filter: blur(22px) saturate(1.05);
+  }
+  .banner-two-area--photo-top .banner-two__slider .slide-bg::before {
+    background: rgba(28, 26, 29, 0.62);
+  }
+  .banner-two-area--photo-top .banner-two__content {
+    padding-top: 28px;
+  }
+}

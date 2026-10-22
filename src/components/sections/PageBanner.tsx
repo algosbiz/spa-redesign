@@ -39,6 +39,13 @@ export type PageBannerProps = {
   prices?: PriceTiles;
   /** Written after each price: "/ pax", or "/ 2 pax" on the couples page. */
   priceUnit?: string;
+  /**
+   * Phones only (owner, 22 Oct, tried on the outcall page first): the whole
+   * landscape photo at this path is shown above the text, uncropped, instead
+   * of the `-sm` cut behind it; the text sits on a blurred, darkened copy of
+   * the same photo. A ~828px-wide copy of `image` (styles: outcall.css, 19).
+   */
+  mobilePhoto?: string;
 };
 
 const S = "jsx-page-banner";
@@ -63,8 +70,9 @@ export default function PageBanner({
   chips,
   prices,
   priceUnit,
+  mobilePhoto,
 }: PageBannerProps) {
-  const small = image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
+  const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
 
   // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
   // to the DOM while it initialises, then React re-renders the class list it
@@ -83,7 +91,9 @@ export default function PageBanner({
     <>
       <link rel="preload" as="image" href={small} media="(max-width: 767px)" fetchPriority="high" />
       <link rel="preload" as="image" href={image} media="(min-width: 768px)" fetchPriority="high" />
-      <section className={`${S} banner-two-area section__decoration-bottom`}>
+      <section
+        className={`${S} banner-two-area section__decoration-bottom${mobilePhoto ? " banner-two-area--photo-top" : ""}`}
+      >
         <div className={`${S} banner-two__shape`}>
           <img src={shapeImage} alt="" aria-hidden="true" fetchPriority="low" decoding="async" className={S} />
         </div>
@@ -107,6 +117,11 @@ export default function PageBanner({
               }
               className={`${S} slide-bg`}
             />
+            {mobilePhoto && (
+              <div className={`${S} banner-two__photo`}>
+                <img src={mobilePhoto} alt="" width={828} height={367} fetchPriority="high" decoding="async" className={S} />
+              </div>
+            )}
             <div className={`${S} container`}>
               <div className={`${S}  banner-two__content`}>
                 {subTitle !== "" && (
