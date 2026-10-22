@@ -123,7 +123,8 @@ export function HomeServicePrices() {
           therapist. These are our most-booked home treatments, with the fee already added:
         </Header>
         <div className="oc-table-wrap">
-          <table className="oc-table oc-table--prices">
+          {/* Phones: the treatment and its total on one line, the price + fee under it (outcall.css, 15). */}
+          <table className="oc-table oc-table--prices oc-table--villa">
             <caption className="oc-sr-only">Home service prices with the fee added</caption>
             <thead>
               <tr>
@@ -137,8 +138,12 @@ export function HomeServicePrices() {
               {rows.map((r) => (
                 <tr key={r.name}>
                   <th scope="row">{r.name}</th>
-                  <td data-label="Treatment price">{idr(r.price)}</td>
-                  <td data-label="Home service fee">{idr(r.homeFee)}</td>
+                  <td className="oc-villa__price" data-label="Treatment price">
+                    {idr(r.price)}
+                  </td>
+                  <td className="oc-villa__fee" data-label="Home service fee">
+                    {idr(r.homeFee)}
+                  </td>
                   <td data-label="Total at your villa" className="oc-table__total">
                     <strong>{idr(r.total)}</strong>
                   </td>
@@ -331,18 +336,30 @@ export function HomeServiceAreas() {
 /* S07 · Home Service or Our Seminyak Day Spa?                                */
 /* ------------------------------------------------------------------------ */
 
-const COMPARE: { row: string; home: string; spa: string }[] = [
-  { row: "Where", home: "Your villa, hotel or home", spa: "Jl. Pangkung Sari No. 30, Seminyak" },
-  { row: "Price", home: `Treatment + ${idr(fee)} per therapist in the Seminyak area`, spa: "Treatment price only" },
-  { row: "Hours", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
+const COMPARE: { row: string; icon: MenuIconName; home: string; spa: string }[] = [
+  { row: "Where", icon: "pin", home: "Your villa, hotel or home", spa: "Jl. Pangkung Sari No. 30, Seminyak" },
+  {
+    row: "Price",
+    icon: "tag",
+    home: `Treatment + ${idr(fee)} per therapist in the Seminyak area`,
+    spa: "Treatment price only",
+  },
+  { row: "Hours", icon: "clock", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
   {
     row: "Setup",
+    icon: "home",
     home: "Therapist brings fresh linen, oils and everything needed",
     spa: "Private treatment rooms, nothing to arrange",
   },
-  { row: "Menu", home: "Most massages and selected beauty treatments", spa: "The full menu and every spa package" },
+  {
+    row: "Menu",
+    icon: "book",
+    home: "Most massages and selected beauty treatments",
+    spa: "The full menu and every spa package",
+  },
   {
     row: "Best for",
+    icon: "lotus",
     home: "Couples and groups staying in, the evening you land, late bookings",
     spa: "Combining massage with nails, waxing or hair care in one visit",
   },
@@ -355,30 +372,46 @@ export function HomeVsSpa() {
         <Header eyebrow="Two ways to book" title="Home Service or Our Seminyak Day Spa?">
           Every home service therapist works from our day spa in Seminyak. Here&apos;s how the two options compare:
         </Header>
-        {/* The table scrolls sideways inside this box on phones; the page itself does not. */}
-        <div className="oc-table-wrap oc-table-wrap--scroll" role="region" aria-label="Home service compared with our Seminyak day spa" tabIndex={0}>
-          <table className="oc-table oc-table--compare">
-            <thead>
-              <tr>
-                <th scope="col">
-                  <span className="oc-sr-only">Option</span>
-                </th>
-                <th scope="col">Home service</th>
-                <th scope="col">Our Seminyak spa</th>
-              </tr>
-            </thead>
-            <tbody>
-              {COMPARE.map((r) => (
-                <tr key={r.row}>
-                  <th scope="row">
-                    <strong>{r.row}</strong>
+        {/*
+          Phones (owner, 22 Oct): a switch shows one option at a time, styled like the
+          price list's duration switch. Plain radio buttons, so it works without
+          script and both columns stay in the HTML. From 768px the table shows both.
+        */}
+        <div className="oc-compare__box">
+          <input type="radio" name="oc-compare" id="oc-compare-home" className="oc-compare__radio" defaultChecked />
+          <input type="radio" name="oc-compare" id="oc-compare-spa" className="oc-compare__radio" />
+          <div className="oc-compare__switch" role="radiogroup" aria-label="Show">
+            <label htmlFor="oc-compare-home">Home service</label>
+            <label htmlFor="oc-compare-spa">Our Seminyak spa</label>
+          </div>
+          <div className="oc-table-wrap oc-table-wrap--scroll">
+            <table className="oc-table oc-table--compare">
+              <caption className="oc-sr-only">Home service compared with our Seminyak day spa</caption>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span className="oc-sr-only">Option</span>
                   </th>
-                  <td>{r.home}</td>
-                  <td>{r.spa}</td>
+                  <th scope="col">Home service</th>
+                  <th scope="col">Our Seminyak spa</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {COMPARE.map((r) => (
+                  <tr key={r.row}>
+                    <th scope="row">
+                      <span className="oc-compare__icon" aria-hidden="true">
+                        <MenuIcon name={r.icon} />
+                      </span>
+                      <strong>{r.row}</strong>
+                    </th>
+                    <td>{r.home}</td>
+                    <td>{r.spa}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
         {/* The fee and travel time by area moved up into S06 (owner, 22 Oct). */}
         <div className="oc-actions">
