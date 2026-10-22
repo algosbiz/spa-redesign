@@ -132,6 +132,31 @@
     background-color: rgba(var(--theme-color1-rgb), 0.16);
     box-shadow: none;
   }
+
+  /* Pages that open with a photo (a page banner, or the homepage hero): the
+     photo starts at the top of the screen, under the pill, instead of under
+     a strip of page colour (owner, 22 Oct). The header gives back its 70px;
+     banner text keeps its place by moving down the same 70px. The blog and
+     legal pages' title bands are photos too. Any other page (the 404, the
+     admin) keeps the header in its own row. */
+  body:has(.banner-two-area, .v2-hero, .page-title) .lh.header-area {
+    margin-bottom: -70px;
+  }
+  body:has(.banner-two-area) .banner-two__content {
+    padding-top: 220px; /* 150px + the header */
+  }
+  body:has(.page-title) .page-title {
+    padding-top: 245px; /* 175px + the header */
+  }
+}
+@media (max-width: 767px) {
+  body:has(.banner-two-area) .banner-two__content {
+    padding-top: 166px; /* 96px + the header */
+  }
+  /* The whole-photo banner (outcall.css, 19): the photo itself goes under the pill. */
+  body:has(.banner-two-area) .banner-two-area--photo-top .banner-two__content {
+    padding-top: 28px;
+  }
 }
 /* live fills the old icon's path gold on hover; these are line icons */
 .header__main .menubars svg.menubars__icon path,
