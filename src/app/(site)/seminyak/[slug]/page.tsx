@@ -25,7 +25,7 @@ import { appendChild, faqItems, insertBefore, withProps, type TreeNode } from "@
 type Props = { params: Promise<{ slug: string }> };
 
 /**
- * How the "Visit us" heading ("Where Can I Book … in Seminyak?") and the
+ * How the "Visit us" heading ("Book … in Seminyak") and the
  * Service data name a treatment, where its menu name does not read well there.
  */
 const NAMES: Record<string, { heading: string; service: string }> = {

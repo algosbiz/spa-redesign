@@ -65,7 +65,7 @@ export const home = {
 
   about: {
     subTitle: "Beyond Relaxation",
-    title: "Why Visitors Choose Spa Bali Moon for Massage in Bali",
+    title: "A Seminyak Day Spa Since 2009",
     // Copy rewrite, 15 Oct.
     text: "After a long flight, a day of surfing or too long in the sun, your body needs time to recover. Spa Bali Moon offers massage, facials and body care to ease tight muscles and refresh tired skin, and we'll help you pick the treatment that suits how you feel.",
     /** Shown in two lists of three. */

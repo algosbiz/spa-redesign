@@ -67,7 +67,7 @@ export default function MassageKutaPage() {
       <AboutIntro
         removeBottomPadding
         subTitle="A Moment to Reset"
-        title={<>What Can a Massage in Kuta Help With?</>}
+        title={<>What a Massage in Kuta Helps With</>}
         text="Kuta is known for long beach days, surfing, sightseeing, and a lively holiday atmosphere, but all that activity can leave the body feeling stiff, heavy, or overtired. A professional massage offers a chance to slow down, release built-up tension, and feel more comfortable again."
         feature1Title="Restore a Lighter Feeling"
         feature1Text="Targeted massage techniques help release tightness after long days of exploring Bali."

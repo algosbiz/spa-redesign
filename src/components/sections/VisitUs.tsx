@@ -31,8 +31,8 @@ const villaLinks = (
 type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: boolean };
 
 /**
- * `treatment` is how the heading names it: "Where Can I Book {treatment} in
- * Seminyak?", e.g. "Balinese Massage", "a Facial".
+ * `treatment` is how the heading names it: "Book {treatment} in
+ * Seminyak", e.g. "Balinese Massage", "a Facial".
  *
  * "Visit us" on every treatment page and the About page (AEO roadmap R17 and
  * R40, 17 Oct): the address, the hours, in the spa or at your villa, the home
@@ -73,7 +73,7 @@ export default function VisitUs({
   rightShapeSrc = "/images/shape/leaf/2a.png",
 }: {
   treatment: string;
-  /** In place of "Where Can I Book … in Seminyak?" (the About page). */
+  /** In place of "Book … in Seminyak" (the About page). */
   title?: string;
   homeService?: boolean;
   variant?: "split" | "light";
@@ -178,7 +178,7 @@ export default function VisitUs({
   const content = (
     <>
       <p className="visit-us__kicker">Visit Spa Bali Moon</p>
-      <h2 className="title">{title ?? `Where Can I Book ${treatment} in Seminyak?`}</h2>
+      <h2 className="title">{title ?? `Book ${treatment} in Seminyak`}</h2>
       <p className="visit-us__lead">
         You can book {treatment} at Spa Bali Moon, {business.address.short}, open daily from 9am to 11pm
         {homeService ? (

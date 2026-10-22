@@ -859,14 +859,14 @@ export const pricelistPage = {
   /** Every timed price in one table, under the duration switch (AEO roadmap R21, 17 Oct). */
   priceTable: {
     subTitle: "Prices at a Glance",
-    title: "How Much Is a 30, 60, 90 or 120-Minute Massage?",
+    title: "Massage Prices by Length",
     text: "Every massage price at Spa Bali Moon in one table, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
     note: "Home service: add IDR 75.000 per therapist in the Seminyak area (IDR 150.000 for a couple with two therapists). Open daily 9am–11pm, Jl. Pangkung Sari No. 30, Seminyak.",
   },
 
   packagesIntro: {
     subTitle: "All Spa Packages",
-    title: "Can You Combine Treatments in a Spa Package?",
+    title: "Spa Packages in Seminyak",
     text: "We offer multiple spa packages at our spa or as a day spa at home. Some guests know what they want, while others wish to combine treatments. We provide the help, so you can enjoy a laid-back and cozy experience, whether alone, with a partner, or with friends.",
     note: "Browse the packages below to find a combination that fits your plans."
   },

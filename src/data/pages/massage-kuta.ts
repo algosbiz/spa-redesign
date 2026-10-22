@@ -22,7 +22,7 @@ export const kutaPage: LandingPage = {
     {
       type: "intro",
       eyebrow: "A Moment to Reset",
-      heading: "What Can a Massage in Kuta Help With?",
+      heading: "What a Massage in Kuta Helps With",
       paragraphs: [
         "Kuta is known for long beach days, surfing, sightseeing, and a lively holiday atmosphere, but all that activity can leave the body feeling stiff, heavy, or overtired. A professional massage offers a chance to slow down, release built-up tension, and feel more comfortable again.",
       ],
@@ -51,7 +51,7 @@ export const kutaPage: LandingPage = {
     {
       type: "list",
       eyebrow: "Treatment Options",
-      heading: "Which Massage Suits Your Day in Kuta?",
+      heading: "Choose a Massage for Your Day in Kuta",
       paragraphs: [
         "The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sport Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements.",
       ],

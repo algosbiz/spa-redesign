@@ -64,7 +64,7 @@
             "leftShapeSrc": "/images/shape/about-two-left.png",
             "rightShapeSrc": "/images/shape/about-two-right.png",
             "subTitle": "",
-            "title": "What Makes Balinese Massage Unique?",
+            "title": "What Is Balinese Massage?",
             "text": {
               "$jsx": {
                 "type": "Fragment",
@@ -251,7 +251,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
                 "rightShapeSrc": "/images/shape/about-right-shape.png",
                 "subTitle": "",
-                "title": "Why Guests Choose Balinese Massage",
+                "title": "Popular with Travellers and Office Workers",
                 "text": "Our Balinese massage is commonly chosen by travellers, office workers, and active individuals because it combines relaxation techniques with muscle-focused work in a single treatment. Find the benefits that make Balinese massage a favourite among our guests:",
                 "featuresLeft": [
                   "Helps reduce muscle tension",
@@ -291,7 +291,7 @@
                   }
                 },
                 "subTitle": "",
-                "title": "Who Is Balinese Massage Best For?",
+                "title": "Who It Suits",
                 "text": "This treatment is suitable for many different lifestyles and travel situations. Our therapists frequently recommend Balinese massage for guests looking for:",
                 "featuresLeft": [
                   "Travellers recovering from long flights",

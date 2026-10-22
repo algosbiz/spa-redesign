@@ -152,7 +152,7 @@ export default function AboutPage() {
       />
       <VisitUs
         treatment="a treatment"
-        title="Where Is Spa Bali Moon?"
+        title="Find Us in Seminyak"
         photo="/images/banners/contact.webp"
         look="columns"
       />

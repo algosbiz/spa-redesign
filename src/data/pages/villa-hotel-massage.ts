@@ -63,7 +63,7 @@ export const villaHotelPage: LandingPage = {
     {
       type: "list",
       eyebrow: "Stay In",
-      heading: "Why Book a Massage at Your Hotel or Villa?",
+      heading: "The Spa Comes to Your Room",
       paragraphs: [
         "A massage at your accommodation gives you more time to relax and less time spent travelling between appointments. It is a convenient choice after a long flight, a full day exploring Bali, or simply when you would rather enjoy professional spa care in the privacy of your own space.",
       ],

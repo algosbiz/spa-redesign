@@ -54,7 +54,7 @@
         "primaryImage": "/images/services/sportsmassage/sportsmassage-2.webp",
         "secondaryImage": "/images/services/sportsmassage/sportsmassage-3.webp",
         "subTitle": "",
-        "title": "What Makes Sports Massage Different from a Regular Massage?",
+        "title": "What Is Sports Massage?",
         "text": {
           "$jsx": {
             "type": "Fragment",
@@ -163,7 +163,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/sportsmassage/sportsmassage-6.webp",
         "subTitle": "",
-        "title": "Who Can Benefit from Sports Massage?",
+        "title": "Who Sports Massage Suits",
         "text": "Sports massage can be a suitable option for anyone whose regular activities place physical demands on the body. It may also be particularly suitable for:",
         "featuresLeft": [
           "Runners and marathon participants",
@@ -220,7 +220,7 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/sportsmassage/sportsmassage-8.webp",
         "subTitle": "",
-        "title": "What Happens During a Sports Massage?",
+        "title": "What Happens During Your Sports Massage",
         "text": "The session begins with a short consultation to understand your activity level and areas needing attention. Our therapist combines techniques such as kneading, compression, stretching, and controlled pressure to ease muscle tightness while adjusting the intensity to your comfort and goals. The session generally follows these steps:",
         "featuresLeft": [
           "Personalised body assessment",

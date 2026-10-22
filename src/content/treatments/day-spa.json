@@ -46,7 +46,7 @@
       "type": "AboutIntro",
       "props": {
         "subTitle": "",
-        "title": "What Makes a Day Spa Visit Different?",
+        "title": "What Is a Day Spa?",
         "text": "A day spa visit gives you time to enjoy more than one form of care without having to rush from one appointment to the next. At Spa Bali Moon, a visit can include a traditional Balinese massage, facial, body scrub, Cream Bath, reflexology, or beauty service depending on what you are looking for.",
         "feature1Title": "Care from Head to Toe",
         "feature1Text": "Choose from massage, skin care, body treatments, hair care, and beauty services during one visit.",
@@ -89,7 +89,7 @@
           "type": "AboutSplit",
           "props": {
             "subTitle": "",
-            "title": "How Can You Spend Your Day at the Spa?",
+            "title": "Ways to Spend Your Day at the Spa",
             "text": "There is no single way to enjoy a day spa in Seminyak. A guest recovering from a long flight may begin with a gentle massage, while someone preparing for a special occasion may prefer to focus on skin and beauty care.",
             "featuresLeft": [
               "Balinese Massage for traditional full-body care",
@@ -116,7 +116,7 @@
       "props": {
         "paperDecoration": false,
         "subTitle": "",
-        "title": "Is a Longer Spa Visit Worth the Time?",
+        "title": "Why a Longer Visit Is Worth It",
         "text": "Giving yourself more than an hour allows different types of care to work together. A massage can help your body release physical tension, while a facial or body scrub brings attention to the skin.",
         "featuresLeft": [
           "More time to relax during your holiday",

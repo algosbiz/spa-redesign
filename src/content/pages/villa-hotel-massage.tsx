@@ -119,7 +119,7 @@ export default function VillaHotelMassagePage() {
       <TreatmentTestimonials />
       <AboutSplit
         subTitle="Stay In"
-        title={<>Why Book a Massage at Your Hotel or Villa?</>}
+        title={<>The Spa Comes to Your Room</>}
         text="A massage at your accommodation gives you more time to relax and less time spent travelling between appointments. It is a convenient choice after a long flight, a full day exploring Bali, or simply when you would rather enjoy professional spa care in the privacy of your own space."
         featuresLeft={[
           "No travel to and from the spa",
