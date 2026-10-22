@@ -69,7 +69,7 @@ export const pricelistPage = {
     title: "How Much Does a Massage Cost in Seminyak?",
     // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
     text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
-    note: "Home service available — extra from IDR 75.000 per therapist.",
+    note: "Home service available — extra IDR 75.000 per therapist in the Seminyak area.",
     tabs: [
     {
       label: "Massage",
@@ -1508,7 +1508,7 @@ export const pricelistPage = {
     },
     {
       question: "13. Do prices differ between the website and in the spa?",
-      answer: "No. The prices listed on the Spa Bali Moon website are our current rates and apply both in our Seminyak spa and for home service, with the outcall fee, from IDR 75.000 per therapist, added separately for home visits. If you are ever quoted a different price, please tell us before your treatment."
+      answer: "No. The prices listed on the Spa Bali Moon website are our current rates and apply both in our Seminyak spa and for home service, with the outcall fee (IDR 75.000 per therapist in the Seminyak area) added separately for home visits. If you are ever quoted a different price, please tell us before your treatment."
     },
     {
       question: "14. Are towels, oils, and amenities included?",
@@ -1520,7 +1520,7 @@ export const pricelistPage = {
     },
     {
       question: "16. How can I pay for my treatment?",
-      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the home service fee, from IDR 75.000 per therapist, is added. For payment questions, especially about home service, message us on WhatsApp at +62 878-6317-5144 before your treatment."
+      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the home service fee of IDR 75.000 per therapist in the Seminyak area is added. For payment questions, especially about home service, message us on WhatsApp at +62 878-6317-5144 before your treatment."
     },
     {
       question: "17. What are your opening hours?",

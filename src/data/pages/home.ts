@@ -37,7 +37,7 @@ export const home = {
      * 5144" left the facts (owner: the homepage said too much there): the
      * WhatsApp button shows that number.
      */
-    prices: ["Treatments from IDR 69.000 per person", "Home service: add from IDR 75.000 per therapist"],
+    prices: ["Treatments from IDR 69.000 per person", "Home service in Seminyak: add IDR 75.000 per therapist"],
     visit: [
       { icon: "pin", text: "Jl. Pangkung Sari No. 30, Seminyak" },
       { icon: "clock", text: "Open daily 9am–11pm" },
@@ -88,7 +88,7 @@ export const home = {
   catalog: {
     subTitle: "Our Spa Menu",
     title: "Browse Our Spa Treatments",
-    fee: { label: "Home Service Fee", value: "From IDR 75.000/Therapist" },
+    fee: { label: "Home Service Fee", value: "IDR 75.000/Therapist (Seminyak area)" },
   },
 
   packageIntro: {

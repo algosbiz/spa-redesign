@@ -22,7 +22,7 @@
  */
 export const homeServiceLines: Record<string, string> = {
   "balinese-massage":
-    "Staying in tonight? We also bring Balinese massage to your villa or hotel as a [home service massage](/outcall-home-service-massage/), from IDR 75.000 per therapist.",
+    "Staying in tonight? We also bring Balinese massage to your villa or hotel as a [home service massage](/outcall-home-service-massage/), for IDR 75.000 per therapist in the Seminyak area.",
   "deep-tissue-massage":
     "Too sore to travel? Book deep tissue as an [outcall massage in Seminyak](/outcall-home-service-massage/) and your therapist comes to you.",
   "thai-massage":

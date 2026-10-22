@@ -2,7 +2,7 @@
 // Please do not rewrite texts or prices without checking migration/migration-audit.md first.
 //
 // Page: https://spabalimoon.com/reservation/
-// HOURS-01 / FEE-01 settled: open 9am-11pm; the fee is "from IDR 75.000" (business.homeService).
+// HOURS-01 / FEE-01 settled: open 9am-11pm; the fee is IDR 75.000 in the Seminyak area (business.homeService).
 
 /** RESERVATION PAGE TEXT (/reservation/) — booking happens on WhatsApp. */
 export const reservationPage = {
@@ -34,7 +34,7 @@ export const reservationPage = {
         },
         {
           title: "Quick Booking",
-          text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional fee from IDR 75.000 per therapist.",
+          text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional IDR 75.000 per therapist in the Seminyak area.",
         },
       ],
     },
@@ -50,5 +50,5 @@ export const reservationPage = {
     },
   ],
   buttonLabel: "Book Now",
-  note: "Home service extra from IDR 75.000 per therapist",
+  note: "Home service extra IDR 75.000 per therapist (Seminyak area)",
 };

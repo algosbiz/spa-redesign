@@ -326,7 +326,7 @@ export function HomeServiceAreas() {
 
 const COMPARE: { row: string; home: string; spa: string }[] = [
   { row: "Where", home: "Your villa, hotel or home", spa: "Jl. Pangkung Sari No. 30, Seminyak" },
-  { row: "Price", home: `Treatment + home service fee, from ${idr(fee)} per therapist`, spa: "Treatment price only" },
+  { row: "Price", home: `Treatment + ${idr(fee)} per therapist in the Seminyak area`, spa: "Treatment price only" },
   { row: "Hours", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
   {
     row: "Setup",
@@ -416,8 +416,7 @@ export function GroupMassage() {
             <CardIcon name="lotus" />
             <p className="oc-card__title">Couple massage at your villa</p>
             <p>
-              Side by side, from {couple} for 60 minutes, plus the home service fee, from {idr(fee)} per
-              therapist.{" "}
+              Side by side, from {couple} for 60 minutes, plus {idr(fee)} per therapist in the Seminyak area.{" "}
               <Link prefetch={false} href="/seminyak/couple-spa/">
                 See couple massage
               </Link>
@@ -427,8 +426,7 @@ export function GroupMassage() {
             <CardIcon name="stones" />
             <p className="oc-card__title">Four hand massage</p>
             <p>
-              Two therapists working together, from {fourHand} for 60 minutes, plus the home service fee, from{" "}
-              {idr(fee)} per therapist.
+              Two therapists working together, from {fourHand} for 60 minutes, plus {idr(fee)} per therapist in the Seminyak area.
             </p>
           </div>
           <div className="oc-card oc-card--group">

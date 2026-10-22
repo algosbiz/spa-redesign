@@ -46,7 +46,7 @@ const FAQ = [
   {
     question: "How can I pay for my in-room treatment?",
     answer:
-      "Payment options include cash, bank transfer, Visa and Mastercard, subject to availability, so please tell us on WhatsApp how you would like to pay when you book. All prices are in Indonesian rupiah (IDR), and the home service fee, from IDR 75.000 per therapist, is added to the treatment price shown on our price list.",
+      "Payment options include cash, bank transfer, Visa and Mastercard, subject to availability, so please tell us on WhatsApp how you would like to pay when you book. All prices are in Indonesian rupiah (IDR), and the home service fee of IDR 75.000 per therapist in the Seminyak area is added to the treatment price shown on our price list.",
   },
   {
     question: "Which areas do you cover for villa and hotel massage?",

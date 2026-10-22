@@ -17,7 +17,7 @@ const HOME_SERVICE = [
   },
   {
     title: "Quick Booking",
-    text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional fee from IDR 75.000 per therapist.",
+    text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional IDR 75.000 per therapist in the Seminyak area.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function ReservationPage() {
               </span>
             </a>
             <p className="text mt-15" style={{ fontWeight: 700 }}>
-              Home service extra from IDR 75.000 per therapist
+              Home service extra IDR 75.000 per therapist (Seminyak area)
             </p>
           </div>
         </div>

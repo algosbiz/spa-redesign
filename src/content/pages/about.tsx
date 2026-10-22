@@ -23,7 +23,7 @@ const FAQ = [
   },
   {
     question: "Where is Spa Bali Moon?",
-    answer: `Spa Bali Moon is at ${business.address.full}. The day spa is open daily from 9am to 11pm. Book on WhatsApp at ${business.phoneDisplay}, or ask for a therapist to come to your villa or hotel for an extra fee from IDR 75.000 per therapist.`,
+    answer: `Spa Bali Moon is at ${business.address.full}. The day spa is open daily from 9am to 11pm. Book on WhatsApp at ${business.phoneDisplay}, or ask for a therapist to come to your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area.`,
   },
   {
     question: "Who are the therapists at Spa Bali Moon?",
@@ -76,7 +76,7 @@ export default function AboutPage() {
           { label: "Opening hours", value: "Open daily, 9am–11pm", figure: "9am–11pm", detail: "Open daily" },
           {
             label: "Home service",
-            value: "At your villa, hotel or home · from IDR 75.000 per therapist",
+            value: "At your villa, hotel or home · IDR 75.000 per therapist in the Seminyak area",
             figure: "IDR 75.000",
             detail: "per therapist in the Seminyak area, at your villa, hotel or home",
           },
@@ -168,7 +168,7 @@ export default function AboutPage() {
       <ReserveCta
         standardSpacing
         title="Visit Spa Bali Moon in Seminyak"
-        text="Book a massage, facial or body treatment at our Seminyak spa, or have it at your villa or hotel for an extra fee from IDR 75.000 per therapist."
+        text="Book a massage, facial or body treatment at our Seminyak spa, or have it at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."
         closingText="Open daily 9am–11pm. Book on WhatsApp."
         backgroundImage="/images/services/dayspaseminyak/dayspa-8.webp"
       />
