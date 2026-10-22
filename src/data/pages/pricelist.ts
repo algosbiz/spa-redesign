@@ -876,7 +876,7 @@ export const pricelistPage = {
     {
       title: "Balinese Massage Packages",
       includes: "a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial",
-      description: "Our signature Balinese massage is a traditional treatment designed to release muscle tension, ease stress, and restore balance. Available at our Seminyak spa or as a convenient home service, this therapy offers complete relaxation wherever you are. For bookings or package details, please contact us via WhatsApp.",
+      description: "Our signature massage, with long, flowing strokes that ease tension and stress.",
       cardTitle: "Balinese Massage",
       packages: [
         {
@@ -952,7 +952,7 @@ export const pricelistPage = {
     {
       title: "Thai Massage Packages",
       includes: "a 1-hour Thai massage with a facial, cream bath, body scrub or manicure",
-      description: "A good choice if you feel stiff or tired. Gentle pressure and stretching help you feel lighter and more relaxed. Available in-spa or at home. See our packages or contact us on WhatsApp to schedule.",
+      description: "A good choice when you feel stiff or tired: stretching and gentle pressure leave you feeling lighter.",
       cardTitle: "Thai Massage",
       packages: [
         {
@@ -1024,7 +1024,7 @@ export const pricelistPage = {
     {
       title: "Cream Bath Packages",
       includes: "a cream bath with a Thai, Balinese or hot stone massage and a facial, reflexology or body scrub",
-      description: "Ideal when you simply want to slow down. Do a light hair wash, conditioner, and a calming head massage to relax completely. For tailored packages or to schedule a home session, please reach out to us through WhatsApp.",
+      description: "A hair wash, conditioning cream and a calming head massage, for when you simply want to slow down.",
       cardTitle: "Cream Bath",
       packages: [
         {
@@ -1100,7 +1100,7 @@ export const pricelistPage = {
     {
       title: "Body Scrub Packages",
       includes: "a 30-minute body scrub with a Balinese, Thai, hot stone or warm candle massage and a facial, cream bath or head massage",
-      description: "Great for refreshing your skin. A body scrub can go a long way toward removing any dull skin, followed by a relaxing massage so you're feeling good and clean. Get your package from us or book a session on WhatsApp.",
+      description: "A scrub that clears away dull skin, then a massage, so you leave feeling fresh and clean.",
       cardTitle: "Body Scrub",
       packages: [
         {
@@ -1176,7 +1176,7 @@ export const pricelistPage = {
     {
       title: "Hot Stone Massage Packages",
       includes: "a hot stone massage with a facial, pedicure, body scrub, cream bath or reflexology",
-      description: "Great for if you require deeper relaxation. Warm stones are utilized to release tension and relax your body. This can be enjoyed on its own or combined with a full massage for a more complete experience.",
+      description: "Warm stones release deep tension, for when you want to switch off completely.",
       cardTitle: "Hot Stone",
       packages: [
         {
@@ -1244,7 +1244,7 @@ export const pricelistPage = {
     {
       title: "Facial Packages",
       includes: "a 1-hour Bali Moon Facial with a Balinese, Thai or warm candle massage, some with a body scrub or cream bath",
-      description: "A simple facial treatment and cleansing to keep your skin balanced and comfortable. Sessions are in-spa or a home service. For more on your custom treatment, please contact us over WhatsApp.",
+      description: "Cleansing and gentle care that keep your skin balanced and comfortable.",
       cardTitle: "Bali Moon Facial",
       packages: [
         {
@@ -1316,7 +1316,7 @@ export const pricelistPage = {
     {
       title: "Manicure and Pedicure Packages",
       includes: "a manicure and pedicure with a cream bath, Balinese massage or facial",
-      description: "For hands and feet that need a little care. Our manicure and pedicure appointments keep them neat, clean, and refreshed. The treatments are available in-spa or at home. For tailored packages, you can contact us via WhatsApp.",
+      description: "Neat, clean and refreshed hands and feet.",
       cardTitle: "Mani Pedi",
       packages: [
         {
@@ -1388,7 +1388,7 @@ export const pricelistPage = {
     {
       title: "Couples Massage Packages",
       includes: "a 1-hour Balinese or warm candle massage side by side, with an ear candle or a Bali Moon Facial",
-      description: "A soothing massage experience to enjoy side by side. Great to spend a quiet moment together in a peaceful place. Sessions can be conducted in-spa or at home. The opportunity to get custom packages or book reservations are available on WhatsApp.",
+      description: "A quiet hour side by side, to share with someone special.",
       cardTitle: "Couple Massage",
       twoPax: true,
       packages: [
