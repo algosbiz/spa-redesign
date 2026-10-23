@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
-import PageTitle from "@/components/sections/PageTitle";
+import SoftHeader from "@/components/sections/SoftHeader";
 import type { PostSummary } from "@/lib/blog/types";
 
 const FALLBACK_IMAGE = "/images/blog/blog-image1.jpg";
@@ -12,12 +12,14 @@ const FALLBACK_IMAGE = "/images/blog/blog-image1.jpg";
 export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
   return (
     <div className="page-wrapper lh p-guide">
-      <PageTitle pageName="Massage Guides" backgroundImage="/images/blog/blog-1.webp" />
+      <SoftHeader
+        title="Massage Guides"
+        kicker="Spa Bali Moon"
+        trail={[{ label: "Home", href: "/" }, { label: "Massage Guides" }]}
+        intro="What each treatment is, what to expect and which one suits you."
+      />
       <section className="blog-section-two pt-120 pb-90">
         <div className="container">
-          <div className="section-header center mb-60">
-            <p>What each treatment is, what to expect and which one suits you.</p>
-          </div>
           <div className="row">
             {posts.length === 0 ? (
               <div className="col-12 text-center">
@@ -63,7 +65,7 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                             bottom of the card (custom.css). */}
                         <div className="read-more">
                           <Link className="readMore-btn" href={href}>
-                            Read More<span className="sr-only">: {post.title}</span>
+                            Read the guide<span className="sr-only">: {post.title}</span>
                           </Link>
                         </div>
                       </div>

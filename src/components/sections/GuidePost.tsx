@@ -29,17 +29,6 @@ export type GuidePostFull = GuidePostSummary & {
 const S = "jsx-guide-post";
 const FALLBACK_IMAGE = "/images/resource/news-details.jpg";
 
-/** "December 9, 2024", as the live site prints dates. */
-const formatDate = (iso?: string | null) =>
-  iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "";
-
-/** The last save, when it falls on a later day than the publish date (copy rewrite, 15 Oct: "last updated"). */
-const updatedDate = (post: GuidePostSummary) =>
-  post.updated_at && post.published_at && formatDate(post.updated_at) !== formatDate(post.published_at) &&
-  Date.parse(post.updated_at) > Date.parse(post.published_at)
-    ? post.updated_at
-    : null;
-
 /**
  * A blog article — the live "blog-details": the post, a sidebar with a live
  * search and the latest posts, then previous/next links and more articles on
@@ -109,36 +98,7 @@ export default function GuidePost({
             <div className={`${S} col-xl-8 col-lg-7`}>
               <div className={`${S} blog-details__left`}>
                 <div className={`${S} blog-details__content`}>
-                  <ul className={`${S} list-unstyled blog-details__meta`}>
-                    {post.category && (
-                      <li className={S}>
-                        <span className={`${S} blog-details__category`}>
-                          <i className={`${S} fas fa-folder`} /> {post.category}
-                        </span>
-                      </li>
-                    )}
-                    {/* The author, shown since the AEO roadmap (17 Oct); the articles are the spa's own. */}
-                    <li className={S}>
-                      <i className={`${S} fas fa-user-circle`} /> By {post.author || "Spa Bali Moon"}
-                    </li>
-                    {post.show_date !== false && post.published_at && (
-                      <li className={S}>
-                        <i className={`${S} fas fa-calendar-alt`} />{" "}
-                        <time dateTime={post.published_at} className={S}>
-                          {formatDate(post.published_at)}
-                        </time>
-                      </li>
-                    )}
-                    {post.show_date !== false && updatedDate(post) && (
-                      <li className={S}>
-                        Updated{" "}
-                        <time dateTime={updatedDate(post)!} className={S}>
-                          {formatDate(updatedDate(post))}
-                        </time>
-                      </li>
-                    )}
-                  </ul>
-                  {/* No title here: the banner's h1 is the article's only title (owner, 12 Oct). */}
+                  {/* No title, author or dates here: the header above has them (GuideHero; owner, 12 and 23 Oct). */}
                   {answer}
                   <div dangerouslySetInnerHTML={{ __html: post.content_html || "" }} className={`${S} blog-details__rich`} />
                   {closing}
@@ -153,16 +113,8 @@ export default function GuidePost({
                         </span>
                       ))}
                     </p>
+                    {/* Instagram only (owner, 23 Oct: no Facebook links, as in the footer). */}
                     <div className={`${S} blog-details__social-list`}>
-                      <a
-                        href="https://www.facebook.com/spabalimoon"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Spa Bali Moon on Facebook"
-                        className={S}
-                      >
-                        <i aria-hidden="true" className={`${S} fab fa-facebook`} />
-                      </a>
                       <a
                         href="https://www.instagram.com/spabalimoon_/"
                         target="_blank"
@@ -285,7 +237,7 @@ export default function GuidePost({
                         <img loading="lazy" decoding="async" src={prevPost.cover_image || FALLBACK_IMAGE} alt="" className={S} />
                       </span>
                       <span className={`${S} post-nav__text`}>
-                        <span className={`${S} post-nav__label`}>Previous</span>
+                        <span className={`${S} post-nav__label`}>← Previous guide</span>
                         <span className={`${S} post-nav__title`}>{prevPost.title}</span>
                       </span>
                     </Link>
@@ -293,7 +245,7 @@ export default function GuidePost({
                   {nextPost && (
                     <Link href={`/guide/${nextPost.slug}/`} className="post-nav__link post-nav__link--next">
                       <span className={`${S} post-nav__text`}>
-                        <span className={`${S} post-nav__label`}>Next</span>
+                        <span className={`${S} post-nav__label`}>Next guide →</span>
                         <span className={`${S} post-nav__title`}>{nextPost.title}</span>
                       </span>
                       <span className={`${S} post-nav__thumb`}>
@@ -305,7 +257,8 @@ export default function GuidePost({
               )}
               {morePosts.length > 0 && (
                 <>
-                  <h3 className={`${S} post-more__title`}>More Articles</h3>
+                  <p className={`${S} post-more__kicker`}>Keep reading</p>
+                  <h3 className={`${S} post-more__title`}>More Massage Guides</h3>
                   <div className={`${S} post-more__grid`}>
                     {morePosts.map((p) => (
                       <Link key={p.id} href={`/guide/${p.slug}/`} className="post-more__card">
@@ -313,13 +266,12 @@ export default function GuidePost({
                           <img loading="lazy" decoding="async" src={p.cover_image || FALLBACK_IMAGE} alt={p.title} className={S} />
                         </span>
                         <span className={`${S} post-more__body`}>
+                          {/* No dates on the guides (owner, 23 Oct). */}
                           <span className={`${S} post-more__heading`}>{p.title}</span>
-                          {p.show_date !== false && p.published_at && (
-                            <time dateTime={p.published_at} className={`${S} post-more__date`}>
-                              {formatDate(p.published_at)}
-                            </time>
-                          )}
                           {p.excerpt && <span className={`${S} post-more__excerpt`}>{p.excerpt}</span>}
+                          <span className={`${S} post-more__read`}>
+                            Read the guide <span aria-hidden="true">→</span>
+                          </span>
                         </span>
                       </Link>
                     ))}

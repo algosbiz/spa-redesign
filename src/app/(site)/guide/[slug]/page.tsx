@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GuidePost from "@/components/sections/GuidePost";
-import PageTitle from "@/components/sections/PageTitle";
+import SoftHeader from "@/components/sections/SoftHeader";
 import JsonLd from "@/components/seo/JsonLd";
 import GuideAnswer from "@/components/sections/GuideAnswer";
 import { guideAnswers } from "@/data/guide/answers";
@@ -47,6 +47,9 @@ export default async function GuideArticlePage({ params }: Props) {
   const answer = guideAnswers[post.slug];
   // One sentence that links to the outcall page, after the text (20 Oct dev brief, Task 7).
   const homeServiceLine = guideHomeServiceLines[post.slug];
+  // The header's reading time (SoftHeader; no dates shown, owner, 23 Oct).
+  const words = (post.content_html || "").replace(/<[^>]*>/g, " ").split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 200));
 
   return (
     <div className={`page-wrapper lh p-guide-${post.slug}`}>
@@ -61,7 +64,17 @@ export default async function GuideArticlePage({ params }: Props) {
           updatedAt: post.updated_at,
         })}
       />
-      <PageTitle pageName={post.title} backgroundImage={post.cover_image ?? undefined} />
+      <SoftHeader
+        title={post.title}
+        kicker="Massage Guide"
+        trail={[
+          { label: "Home", href: "/" },
+          { label: "Massage Guides", href: "/guide/" },
+        ]}
+        // Three older articles were saved with "Admin" as their author; the articles are the spa's own.
+        meta={[`By ${post.author && post.author !== "Admin" ? post.author : "Spa Bali Moon"}`, `${minutes} min read`]}
+        image={post.cover_image}
+      />
       <GuidePost
         post={{ ...post, content_html: sanitizeHtml(post.content_html) }}
         recentPosts={recentPosts}

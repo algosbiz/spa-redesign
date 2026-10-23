@@ -99,7 +99,7 @@ function Card({
  * Site footer (owner, 2 Oct: "can we also modernize the footer"; of three
  * designs the owner picked this one, "opsi 1"), in the look of the mobile
  * menu: a paper panel with rounded corners; on its left the logo, the about
- * text, a WhatsApp pill, Instagram and Facebook, and the accepted payments;
+ * text, a WhatsApp pill, Instagram, and the accepted payments;
  * on its right white cards with a gold icon each: the day spa (hours, address
  * to Google Maps), contact (phone to WhatsApp), home services (the three
  * pages and the fee) and the newsletter (left out on phones, as live). Under
