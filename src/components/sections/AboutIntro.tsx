@@ -3,6 +3,26 @@ import { leftLeafShape, rightLeafShape, isLeafShape } from "@/lib/leafShapes";
 import { LotusIcon } from "@/components/ui/Lotus";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { business } from "@/data/business";
+
+/**
+ * The seal's ring of words, set round a circle and stretched to close it
+ * exactly (textLength). One section like this per page, so one id.
+ */
+function SealRing({ text }: { text: string }) {
+  return (
+    <svg className="intro-seal__ring" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <path id="intro-seal-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+      </defs>
+      <text>
+        <textPath href="#intro-seal-circle" textLength="236" lengthAdjust="spacing">
+          {text.toUpperCase()}
+        </textPath>
+      </text>
+    </svg>
+  );
+}
 
 export type AboutIntroProps = {
   subTitle?: ReactNode;
@@ -90,8 +110,18 @@ export default function AboutIntro({
                     alt={secondaryAlt}
                   />
                 </div>
-                <Link href="/seminyak" className={`circle-btn${showBrandCard ? " circle-btn--replaced" : ""}`}>
-                  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* A round seal on the photo's corner edge, a ring of words turning around the
+                    lotus or the arrow to the price list, in place of the photo's notch (owner,
+                    23 Oct: "this one is also outdated"; custom.css). */}
+                {showBrandCard ? (
+                  <div className="intro-seal" aria-hidden="true">
+                    <SealRing text={`Spa Bali Moon · Seminyak · Since ${business.foundedYear} · `} />
+                    <img loading="lazy" decoding="async" className="intro-seal__lotus" src="/images/logo/sbm.webp" alt="" />
+                  </div>
+                ) : (
+                <Link href="/seminyak/" className="intro-seal intro-seal--link" aria-label="See all our prices">
+                  <SealRing text="See all prices · Spa Bali Moon · " />
+                  <svg className="intro-seal__arrow" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_1_1364)">
                       <path
                         d="M29.9602 30.9748C29.9819 30.9705 30.0029 30.9645 30.0241 30.9591C30.0437 30.9542 30.0634 30.9499 30.0828 30.9441C30.1036 30.9378 30.1238 30.93 30.1441 30.9226C30.1635 30.9157 30.183 30.9093 30.2021 30.9014C30.2211 30.8936 30.2393 30.8843 30.2578 30.8755C30.2775 30.8663 30.2974 30.8575 30.3166 30.8472C30.3344 30.8377 30.3513 30.8268 30.3685 30.8166C30.3874 30.8053 30.4065 30.7946 30.4249 30.7823C30.444 30.7695 30.4619 30.7553 30.4802 30.7417C30.4957 30.7301 30.5115 30.7194 30.5265 30.7071C30.5589 30.6805 30.59 30.6524 30.6197 30.6228C30.6202 30.6224 30.6207 30.622 30.6211 30.6215C30.6215 30.6211 30.622 30.6206 30.6224 30.6201C30.6519 30.5905 30.68 30.5594 30.7067 30.5269C30.719 30.5119 30.7297 30.4961 30.7412 30.4806C30.7549 30.4624 30.7691 30.4444 30.7819 30.4254C30.7942 30.407 30.8049 30.3878 30.8161 30.3689C30.8264 30.3517 30.8373 30.3348 30.8468 30.317C30.8571 30.2978 30.8658 30.2779 30.8751 30.2583C30.8839 30.2397 30.8931 30.2215 30.901 30.2025C30.9089 30.1834 30.9153 30.1639 30.9222 30.1445C30.9295 30.1241 30.9373 30.104 30.9436 30.0832C30.9495 30.0638 30.9538 30.0441 30.9587 30.0245C30.9641 30.0033 30.97 29.9823 30.9743 29.9607C30.9788 29.938 30.9815 29.9151 30.9848 29.8922C30.9875 29.8734 30.9911 29.8549 30.993 29.8358C30.9972 29.7933 30.9994 29.7507 30.9994 29.7082V12.9164C30.9994 12.2031 30.4211 11.6248 29.7078 11.6248C28.9944 11.6248 28.4161 12.2031 28.4161 12.9164V26.5897L2.20452 0.378068C1.70011 -0.126348 0.88224 -0.126348 0.377824 0.378068C-0.126592 0.882484 -0.126592 1.70035 0.377824 2.20477L26.5895 28.4164H12.9162C12.2028 28.4164 11.6245 28.9947 11.6245 29.7081C11.6245 30.4214 12.2028 30.9998 12.9162 30.9998H29.7078C29.7504 30.9998 29.7929 30.9975 29.8353 30.9934C29.8543 30.9915 29.8729 30.9879 29.8918 30.9852C29.9146 30.9819 29.9375 30.9792 29.9602 30.9748Z"
@@ -100,16 +130,6 @@ export default function AboutIntro({
                     </g>
                   </svg>
                 </Link>
-                {showBrandCard && (
-                  <div className="brand-card" aria-hidden="true">
-                    <img
-                      loading="lazy"
-                      decoding="async"
-                      className="brand-lotus-icon"
-                      src="/images/logo/sbm.webp"
-                      alt=""
-                    />
-                  </div>
                 )}
               </div>
             </div>
