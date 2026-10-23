@@ -12,7 +12,11 @@ export const guideHomeServiceLines: Record<string, string> = {
   "what-is-balinese-massage":
     "You can book a Balinese massage at our Seminyak spa or as a [home massage](/outcall-home-service-massage/) at your villa or hotel.",
   "what-is-thai-massage":
-    "Thai massage needs no oil and little space, which makes it easy to enjoy as a [home service massage](/outcall-home-service-massage/) in your villa.",
+    "Thai massage needs no oil, which makes it easy to enjoy as a [home service massage](/outcall-home-service-massage/) at your villa or hotel.",
+  "facial-massage-for-relaxation":
+    "The Bali Moon Facial is also available at your villa or hotel with our [home service](/outcall-home-service-massage/).",
+  "lymphatic-drainage-massage-all-you-need-to-know":
+    "Lymphatic drainage massage can also be booked at your villa or hotel through our [home service](/outcall-home-service-massage/).",
   "balinese-vs-thai-massage":
     "Both styles are available at our Seminyak spa and through our [outcall and home service](/outcall-home-service-massage/).",
 };
