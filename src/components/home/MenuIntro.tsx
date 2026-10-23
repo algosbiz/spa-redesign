@@ -15,10 +15,18 @@ export function halves<T>(items: T[]): [T[], T[]] {
   return [items.slice(0, half), items.slice(half)];
 }
 
+/** Shorter tab names, so the four fit one bar on a phone (owner, 23 Oct). */
+const TAB_NAMES: Record<string, string> = {
+  "For Couple": "Couples",
+  "For Couples": "Couples",
+  "Couple Package": "Couple Packages",
+};
+
 /**
  * The live catalog's heading (or a page's own), home-service fee and category
  * tabs. `tabs` defaults to the homepage catalog's four; a price page passes
- * its own.
+ * its own. On phones the tabs are one sliding bar (spa-menu.css), and a tab
+ * that is partly out of view slides in when chosen.
  */
 export default function MenuIntro<T extends string = CatalogCategory>({
   category,
@@ -56,10 +64,13 @@ export default function MenuIntro<T extends string = CatalogCategory>({
               key={c.id}
               type="button"
               aria-pressed={active}
-              onClick={() => onCategory(c.id)}
+              onClick={(e) => {
+                onCategory(c.id);
+                e.currentTarget.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+              }}
               className={`jsx-catalog treatment-catalog__category${active ? " is-active" : ""}`}
             >
-              <span className="jsx-catalog">{c.label}</span>
+              <span className="jsx-catalog">{TAB_NAMES[c.label] ?? c.label}</span>
             </button>
           );
         })}

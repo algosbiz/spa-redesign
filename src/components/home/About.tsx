@@ -35,17 +35,30 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                 </div>
                 <img loading="lazy" decoding="async" src="/images/home/homepage-4.webp" alt="Spa treatment room" className="jsx-about image2" />
                 <div className="info">
+                  {/* The lotus in a turning ring of words (owner, 23 Oct: "much cooler,
+                      should have an effect"), without the white card. */}
                   <div className="about-brand-mark">
-                    <img
-                      className="about-brand-mark__logo"
-                      src="/images/logo/sbm.webp"
-                      alt=""
-                      aria-hidden="true"
-                      width="56"
-                      height="44"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <span className="about-brand-mark__seal" aria-hidden="true">
+                      <svg className="about-brand-mark__ring" viewBox="0 0 100 100">
+                        <defs>
+                          <path id="about-brand-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+                        </defs>
+                        <text>
+                          <textPath href="#about-brand-circle" textLength="236" lengthAdjust="spacing">
+                            SEMINYAK · BALI · SINCE 2009 ·{" "}
+                          </textPath>
+                        </text>
+                      </svg>
+                      <img
+                        className="about-brand-mark__logo"
+                        src="/images/logo/sbm.webp"
+                        alt=""
+                        width="56"
+                        height="44"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
                     <span className="about-brand-mark__name">{about.brandMark.name}</span>
                     <span className="about-brand-mark__meta">{about.brandMark.meta}</span>
                     <p className="about-brand-mark__text">{about.brandMark.text}</p>

@@ -222,30 +222,30 @@ export default function OutcallPage() {
             text="Every treatment below is available as a home massage or body treatment at your villa, hotel or home, in Seminyak and across Bali:"
             featuresLeft={[
               <TreatmentItem key="couple" href="/seminyak/couple-spa/" name="Couple Massage">
-                Relax side by side while sharing a massage experience together.
+                Two therapists, so you are both treated at the same time.
               </TreatmentItem>,
               <TreatmentItem key="shiatsu" href="/seminyak/shiatsu-massage/" name="Shiatsu">
-                Release muscle tension using gentle Japanese pressure-point techniques.
+                Japanese pressure-point massage, with no oil.
               </TreatmentItem>,
               <TreatmentItem key="thai" href="/seminyak/thai-massage/" name="Thai Massage">
-                Loosen up with assisted stretching and acupressure.
+                Assisted stretching and acupressure, with no oil.
               </TreatmentItem>,
               <TreatmentItem key="cream" href="/seminyak/creambath/" name="Cream Bath">
-                Cleanse and condition your hair, with a relaxing scalp massage.
+                A hair conditioning treatment with a slow scalp massage.
               </TreatmentItem>,
             ]}
             featuresRight={[
               <TreatmentItem key="scrub" href="/seminyak/body-scrub/" name="Body Scrub">
-                Softly exfoliate the skin and promote smoothness.
+                A full-body scrub that leaves the skin soft and smooth.
               </TreatmentItem>,
-              <TreatmentItem key="mani" href="/seminyak/manicure-pedicure/" name="Mani-Pedi">
-                Maintain clean and well-groomed hands and feet with professional care.
+              <TreatmentItem key="mani" href="/seminyak/manicure-pedicure/" name="Manicure & Pedicure">
+                Neat nails on hands and feet, with colour if you like.
               </TreatmentItem>,
-              <TreatmentItem key="stone" href="/seminyak/hot-stone-massage/" name="Hot Stone">
-                Soothe muscle tension using warm stones for deeper relaxation.
+              <TreatmentItem key="stone" href="/seminyak/hot-stone-massage/" name="Hot Stone Massage">
+                Warm basalt stones to ease tight muscles.
               </TreatmentItem>,
-              <TreatmentItem key="facial" href="/seminyak/facial/" name="Facial Care">
-                Cleanse and refresh the skin to restore a healthy appearance.
+              <TreatmentItem key="facial" href="/seminyak/facial/" name="Bali Moon Facial">
+                Our 1-hour facial, with a tea tree or gold mask.
               </TreatmentItem>,
             ]}
             buttonText="Book Now"
@@ -793,7 +793,7 @@ export default function OutcallPage() {
                       { time: "Full Back", price: "299.000" },
                       { time: "Half Legs", price: "149.000" },
                       { time: "Full Legs", price: "299.000" },
-                      { time: "Waxing Brazilian", price: "350.000" },
+                      { time: "Brazilian", price: "350.000" },
                     ],
                   },
                 ],
@@ -910,14 +910,16 @@ export default function OutcallPage() {
  * what it is for. One <span>, because the list item lays out its children in a
  * row (tick, then text).
  */
+/** A treatment in S05's list: its name (a link to its page), a dash, one line about it. On phones
+ *  the list is a card of rows, the name over the line (outcall.css section 23). */
 function TreatmentItem({ href, name, children }: { href: string; name: string; children: string }) {
   return (
-    <span>
-      <Link prefetch={false} href={href}>
+    <span className="oc-treat">
+      <Link prefetch={false} href={href} className="oc-treat__name">
         {name}
       </Link>
-      {" — "}
-      {children}
+      <span className="oc-treat__dash">{" — "}</span>
+      <span className="oc-treat__text">{children}</span>
     </span>
   );
 }

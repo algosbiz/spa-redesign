@@ -13,31 +13,9 @@
   height: auto;
 }
 
-/* /seminyak/ price list (the homepage design since 1 October): on phones the
-   four tabs sit in two even rows of two (owner, 1 Oct), as they did on this
-   page's old tabs, instead of 3 + 1. The homepage and outcall keep 3 + 1. */
-@media (max-width: 767px) {
-  .pricing-package-section .treatment-catalog__categories {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 400px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .pricing-package-section .treatment-catalog__category {
-    min-width: 0;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-}
-/* "Couple Packages" is 123px: below 360px it only stays on one line with
-   8px either side. */
-@media (max-width: 359px) {
-  .pricing-package-section .treatment-catalog__category {
-    padding-right: 8px;
-    padding-left: 8px;
-  }
-}
+/* /seminyak/ price list: its four tabs sat in two even rows of two on
+   phones (owner, 1 Oct); since 23 Oct every price list's tabs are one
+   sliding bar on phones instead (spa-menu.css). */
 
 /* Since 1 October /seminyak/ and the outcall page show the homepage price
    list instead (MenuDurations, styled in spa-menu.css). The next three blocks
@@ -129,6 +107,51 @@
 @media (max-width: 991px) {
   .about-section-three .image-column .inner-column .info .about-brand-mark__meta {
     font-size: 13px;
+  }
+}
+
+/* The card's effect (owner, 23 Oct: "much cooler, should have an effect"):
+   the lotus in a white circle with a ring of words turning round it, as on
+   the other pages' seals (.intro-seal). No white card round it ("the large
+   white card seems overkill"): the seal, the name and the line sit on the
+   section's paper. The ring stops for people who ask for less motion. */
+.about-section-three .image-column .inner-column .info .about-brand-mark {
+  background: none;
+  box-shadow: none;
+}
+.about-brand-mark__seal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.6);
+  border-radius: 50%;
+  background-color: var(--theme-color-white);
+  box-shadow: 0 18px 40px -22px rgba(28, 26, 29, 0.45);
+}
+.about-brand-mark__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: intro-seal-turn 30s linear infinite;
+}
+.about-brand-mark__ring text {
+  font-family: var(--text-font);
+  font-size: 9px;
+  font-weight: 700;
+  fill: var(--theme-color1);
+}
+.about-section-three .image-column .inner-column .info .about-brand-mark .about-brand-mark__logo {
+  width: 38px;
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-brand-mark__ring {
+    animation: none;
   }
 }
 

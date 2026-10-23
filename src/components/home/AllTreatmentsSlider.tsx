@@ -9,7 +9,9 @@ import { LotusIcon } from "@/components/ui/Lotus";
 /**
  * Option 1 for "all treatments": the 23 treatment pages as the v2 cards in
  * one row that scrolls sideways at every width — four and a peek in view on
- * desktop, the arrows moving a view at a time, a progress bar between them.
+ * desktop, the arrows moving a view at a time, "3 / 23" between them (no
+ * arrows on phones), and a small slide when it first comes into view to show
+ * that it swipes (owner, 23 Oct; filter pills were tried and left out).
  * The heading can be set per page (the homepage uses the owner's wording).
  */
 export default function AllTreatmentsSlider({
@@ -32,7 +34,7 @@ export default function AllTreatmentsSlider({
           <h2 className="title">{title}</h2>
           <p>{text}</p>
         </div>
-        <ScrollRow className="v2-alltreat__row" below="all" indicator="bar" label="All treatments">
+        <ScrollRow className="v2-alltreat__row" below="all" indicator="count" nudge label="All treatments">
           {allTreatments.map((t) => (
             <TreatmentCard key={t.href} {...t} heading={false} />
           ))}

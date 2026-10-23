@@ -44,6 +44,32 @@ const SOCIAL = [
   },
 ];
 
+/**
+ * Phones (owner, 23 Oct: "could the mobile footer be enhanced"): the facts as
+ * one white card of rows, like "Visit us" on phones (outcall.css section 20),
+ * each row a link with the gold arrow but the hours; then the pages in a
+ * second card, as the mobile menu's rows: icon, name, arrow (chips read as
+ * blog tags, owner). Replaces the cards, the WhatsApp pill (the bottom bar
+ * has it) and the lone Instagram circle there; footer.css hides one or the
+ * other.
+ */
+const PHONE_LINKS: { label: string; href: string; icon: MenuIconName }[] = [
+  ...footerDaySpaPages.map((l) => ({ ...l, icon: "lotus" as const })),
+  { ...footerDaySpaLink, icon: "stones" },
+  { label: "Price List", href: "/seminyak/", icon: "tag" },
+  ...footerHomeServices.items.map((l, i) => ({ ...l, icon: (["home", "hotel", "pin"] as const)[i] ?? "home" })),
+];
+
+function PhoneRow({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
+  return (
+    <li className="site-footer__row">
+      <span className="site-footer__row-icon">{icon}</span>
+      <span className="site-footer__row-label">{label}</span>
+      <span className="site-footer__row-value">{children}</span>
+    </li>
+  );
+}
+
 /** A white card in the footer panel: its icon in a circle, its title, then its lines. */
 function Card({
   icon,
@@ -218,6 +244,57 @@ export default function Footer() {
             </div>
           </div>
 
+          <div className="site-footer__phone">
+            <ul className="site-footer__rows">
+              <PhoneRow icon={<MenuIcon name="clock" />} label="Open daily">
+                {business.openingHours.display}
+              </PhoneRow>
+              <PhoneRow icon={<MenuIcon name="pin" />} label="Address">
+                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
+                  {business.address.short}
+                </a>
+              </PhoneRow>
+              <PhoneRow icon={<i className="fa-brands fa-whatsapp" aria-hidden="true" />} label="WhatsApp">
+                <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer">
+                  {business.phoneDisplay}
+                </a>
+              </PhoneRow>
+              <PhoneRow icon={<MenuIcon name="home" />} label="Home service">
+                <Link prefetch={false} href="/outcall-home-service-massage/">
+                  {business.homeService.feeDisplay}
+                </Link>
+              </PhoneRow>
+              {SOCIAL.map((s) => (
+                <PhoneRow
+                  key={s.label}
+                  label={s.label}
+                  icon={
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                      {s.icon}
+                    </svg>
+                  }
+                >
+                  <a href={s.href} target="_blank" rel="noopener noreferrer">
+                    @{s.href.replace(/\/$/, "").split("/").pop()}
+                  </a>
+                </PhoneRow>
+              ))}
+            </ul>
+            <p className="site-footer__kicker">Explore</p>
+            <ul className="site-footer__rows site-footer__nav">
+              {PHONE_LINKS.map((item) => (
+                <li key={item.href} className="site-footer__row">
+                  <span className="site-footer__row-icon">
+                    <MenuIcon name={item.icon} />
+                  </span>
+                  <Link prefetch={false} href={item.href} className="site-footer__nav-link">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="site-footer__cards">
             <Card
               icon="lotus"
@@ -316,7 +393,8 @@ export default function Footer() {
               <>
                 {" "}
                 <span className="site-footer__updated">
-                  · Page updated <time dateTime={updated}>{formatDate(updated)}</time>
+                  <span className="site-footer__sep">· </span>
+                  Page updated <time dateTime={updated}>{formatDate(updated)}</time>
                 </span>
               </>
             ) : null}

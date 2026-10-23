@@ -142,6 +142,66 @@
   }
 }
 @media (max-width: 767px) {
+  /* The four tabs in one bar like the duration switch under it (owner,
+     23 Oct: they wrapped to two lines and the chosen one was hard to see):
+     the chosen tab solid gold, the chosen duration below keeping its gold
+     outline, so the two read as a pair. The bar slides sideways if a phone
+     is too narrow for all four. */
+  .lh .v2-menu .treatment-catalog__categories {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 22px;
+    padding: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background-color: #fff;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+    border-radius: 999px;
+  }
+  .lh .v2-menu .treatment-catalog__categories::-webkit-scrollbar {
+    display: none;
+  }
+  .lh .v2-menu .treatment-catalog__categories .treatment-catalog__category {
+    flex: none;
+    min-height: 40px;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    box-shadow: none;
+    color: var(--theme-color1);
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+  .lh .v2-menu .treatment-catalog__categories .treatment-catalog__category.is-active {
+    background-color: var(--theme-color1);
+    color: #fff;
+  }
+  /* The home service fee as one small line under the heading. */
+  .lh .v2-menu .treatment-catalog__fee {
+    display: block;
+    max-width: 330px;
+    margin: -8px auto 20px;
+    font-family: var(--text-font);
+    font-size: 13.5px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-color);
+  }
+  .lh .v2-menu .treatment-catalog__fee :is(strong, span) {
+    display: inline;
+    font: inherit;
+  }
+  .lh .v2-menu .treatment-catalog__fee strong {
+    font-weight: 700;
+    color: var(--theme-color1);
+  }
+  .lh .v2-menu .treatment-catalog__fee strong::after {
+    content: ": ";
+  }
   .lh .v2-menu--toggle {
     --v2-arrow-gap: 10px;
   }
@@ -318,7 +378,54 @@
   border: 0;
 }
 .lh .v2-menu .v2-notes ul {
-  margin-top: 10px;
+  display: grid;
+  gap: 0;
+  margin-top: 12px;
+}
+/* Each variant a menu line (owner, 23 Oct: the wrapped list with dots was
+   hard to read): the name, a dotted gold leader, the price in gold on the
+   right; a long name wraps and its price stays on the last line. */
+.lh .v2-menu .v2-notes li {
+  display: flex;
+  align-items: baseline;
+  align-items: last baseline;
+  gap: 8px;
+  padding: 5px 0;
+  color: #5f5a54;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.lh .v2-menu .v2-notes li[hidden] {
+  display: none;
+}
+.lh .v2-menu .v2-notes li:has(.v2-note__price)::before {
+  content: none;
+}
+/* A line without a price (a facial's benefits) keeps its gold dot. */
+.lh .v2-menu .v2-notes li:not(:has(.v2-note__price)) {
+  padding-left: 13px;
+}
+.lh .v2-menu .v2-notes li:not(:has(.v2-note__price))::before {
+  top: 13.5px;
+}
+.lh .v2-menu .v2-notes li:has(.v2-note__price)::after {
+  content: "";
+  order: 2;
+  flex: 1 1 20px;
+  min-width: 20px;
+  border-bottom: 1px dotted rgba(var(--theme-color1-rgb), 0.55);
+  transform: translateY(-4px);
+}
+.lh .v2-menu .v2-notes .v2-note__label {
+  order: 1;
+  min-width: 0;
+}
+.lh .v2-menu .v2-notes .v2-note__price {
+  order: 3;
+  flex: none;
+  color: var(--theme-color1);
+  font-weight: 700;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .lh .v2-duration {
@@ -420,10 +527,13 @@ body:has(.v2-duration--sticky.is-stuck) .header-three-area.menu-fixed {
 
 /* Phones: the prices (and the descriptions with them) come in from the
    screen edge a little (owner, on the homepage: "the prices could still come
-   in a bit"); live runs them to the container edge below 768px. */
+   in a bit"); live runs them to the container edge below 768px. The names
+   come in as far (owner, 23 Oct: the left side was much closer to the edge
+   than the right), so each row has the same space on both sides. */
 @media (max-width: 767px) {
   .lh .v2-menu--durations .treatment-catalog__content {
     padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -433,5 +543,6 @@ body:has(.v2-duration--sticky.is-stuck) .header-three-area.menu-fixed {
 @media (max-width: 339px) {
   .lh .v2-menu--durations .treatment-catalog__content {
     padding-right: 4px;
+    padding-left: 4px;
   }
 }

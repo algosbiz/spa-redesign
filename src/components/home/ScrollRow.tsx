@@ -10,8 +10,10 @@ type Props = {
    * every width ("all"). The arrows and indicator show there only.
    */
   below: "lg" | "md" | "all";
-  /** Dots (one per card) or, for long rows, a progress bar. */
-  indicator?: "dots" | "bar";
+  /** Dots (one per card) or, for long rows, a progress bar, or "3 / 23" (the card at the start of the view). */
+  indicator?: "dots" | "bar" | "count";
+  /** Slide the cards a little and back the first time the row comes into view, to show it swipes. */
+  nudge?: boolean;
   /** Name of the row for screen readers. */
   label: string;
   children: ReactNode;
@@ -41,7 +43,7 @@ const START: Position = { active: 0, first: 0, atStart: true, atEnd: false, scro
  * sideways gestures (`data-lenis-prevent-horizontal`), so a trackpad swipe
  * moves the cards instead of the page.
  */
-export default function ScrollRow({ className, below, indicator = "dots", label, children }: Props) {
+export default function ScrollRow({ className, below, indicator = "dots", nudge = false, label, children }: Props) {
   const trackRef = useRef<HTMLDivElement>(null);
   const count = Children.count(children);
   const [pos, setPos] = useState<Position>(START);
@@ -116,6 +118,27 @@ export default function ScrollRow({ className, below, indicator = "dots", label,
     };
   }, [current]);
 
+  // The hint: once, when most of the row is in view, if it can scroll and motion is welcome.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!nudge || !track || !window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+    let timer = 0;
+    const seen = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || track.scrollWidth <= track.clientWidth + 1) return;
+        seen.disconnect();
+        track.classList.add("is-nudging");
+        timer = window.setTimeout(() => track.classList.remove("is-nudging"), 1400);
+      },
+      { threshold: 0.6 },
+    );
+    seen.observe(track);
+    return () => {
+      seen.disconnect();
+      window.clearTimeout(timer);
+    };
+  }, [nudge]);
+
   const go = (i: number) => {
     const track = trackRef.current;
     if (!track) return;
@@ -188,7 +211,11 @@ export default function ScrollRow({ className, below, indicator = "dots", label,
         >
           <i className="fa-regular fa-angle-left" aria-hidden="true" />
         </button>
-        {indicator === "bar" ? (
+        {indicator === "count" ? (
+          <div className="v2-scroll-nav__count" aria-hidden="true">
+            <span>{pos.active + 1}</span> / {count}
+          </div>
+        ) : indicator === "bar" ? (
           <div className="v2-scroll-nav__bar" aria-hidden="true">
             {/* Moved with a transform (a share of its own width), which the
                 browser animates off the main thread; `left` was not. */}
