@@ -2499,8 +2499,8 @@
 /* The opening section's photo (AboutIntro; owner, 23 Oct: "this one is also
    outdated, do you have any fresh ideas"): no notch in its corner; a round
    seal sits on the corner's edge instead, half on the photo, a ring of
-   small gold capitals turning slowly round the lotus (or, on the treatment
-   pages, round the arrow to the price list). */
+   small gold capitals turning slowly round the lotus (on the treatment
+   pages the seal links to the price list). */
 .about-section-two .image-column .inner-column .image-box .image {
   -webkit-mask-image: none;
   mask-image: none;
@@ -2541,14 +2541,12 @@
 .intro-seal__lotus {
   width: 38px;
   height: 38px;
-}
-.intro-seal__arrow {
-  width: 22px;
-  height: 22px;
   transition: transform 0.3s;
 }
-.intro-seal--link:is(:hover, :focus-visible) .intro-seal__arrow {
-  transform: rotate(-45deg);
+/* The lotus on every seal (owner, 23 Oct); the one that links to the price
+   list grows a little when pointed at. */
+.intro-seal--link:is(:hover, :focus-visible) .intro-seal__lotus {
+  transform: scale(1.12);
 }
 @keyframes intro-seal-turn {
   to {
