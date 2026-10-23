@@ -267,7 +267,7 @@ const AREA_NOTES: { name: string; text: string }[] = [
   },
   {
     name: "Outcall Massage in Canggu & Kuta",
-    text: `Villas and hotels across Canggu, North Kuta and Kuta, for ${idr(outerFee)} per therapist. After a day of surfing, a sports massage helps tired legs recover.`,
+    text: `Villas and hotels across Canggu, North Kuta and Kuta, for ${idr(outerFee)} per therapist. After a day of surfing, a sports massage eases tired legs.`,
   },
   {
     name: "Uluwatu, Nusa Dua, Ubud & Further",
@@ -281,7 +281,8 @@ export function HomeServiceAreas() {
       <div className="container">
         <Header eyebrow="Where we travel" title="Home Service Areas Around Seminyak">
           Our therapists leave from our spa on Jl. Pangkung Sari in Seminyak, so the closer you stay, the sooner they
-          reach you. Here is the home service fee and the usual travel time from the spa for each area:
+          reach you. In the Seminyak area a therapist usually arrives within 30 to 60 minutes of booking. Here is the
+          home service fee and the usual drive time from the spa for each area:
         </Header>
         <div className="oc-table-wrap">
           <table className="oc-table oc-table--prices oc-table--arrival">
@@ -346,7 +347,7 @@ const COMPARE: { row: string; icon: MenuIconName; home: string; spa: string }[] 
     home: `Treatment + ${idr(fee)} per therapist in the Seminyak area`,
     spa: "Treatment price only",
   },
-  { row: "Hours", icon: "clock", home: "Daily, 9am – 11pm", spa: "Daily, 9am – 11pm" },
+  { row: "Hours", icon: "clock", home: "Daily, 9am–11pm", spa: "Daily, 9am–11pm" },
   {
     row: "Setup",
     icon: "home",
@@ -371,7 +372,7 @@ export function HomeVsSpa() {
   return (
     <section className="oc-section oc-compare pt-130 pb-130">
       <div className="container">
-        <Header eyebrow="Two ways to book" title="Home Service or Our Seminyak Day Spa?">
+        <Header eyebrow="Two ways to book" title="Home Service Compared with Our Seminyak Spa">
           Every home service therapist works from our day spa in Seminyak. Here&apos;s how the two options compare:
         </Header>
         {/*
@@ -425,7 +426,7 @@ export function HomeVsSpa() {
             href={business.mapsUrl}
             icon="pin"
             label="Get directions to our spa"
-            note="Jl. Pangkung Sari No. 30 · 9am – 11pm"
+            note="Jl. Pangkung Sari No. 30 · 9am–11pm"
           />
         </div>
       </div>
@@ -455,8 +456,8 @@ export function GroupMassage() {
         {/* Owner fact C10 ("We can send up to X therapists to one booking.") and C14 ("We also look after
             wedding parties, birthdays and retreats.") would follow the first paragraph. */}
         <Header eyebrow="More than one guest" title="Couples, Families & Villa Group Massage">
-          Staying with your partner, family or friends? We send several therapists at once, so everyone is treated at
-          the same time in your villa. Tell us how many guests and which treatments on WhatsApp, and we&apos;ll
+          We send several therapists at once, so your partner, family or friends are all treated at the same time in
+          your villa. Tell us how many guests and which treatments on WhatsApp, and we&apos;ll
           confirm how many therapists we can send for your chosen time.
         </Header>
         <div className="oc-cards">
@@ -464,7 +465,7 @@ export function GroupMassage() {
             <CardIcon name="lotus" />
             <p className="oc-card__title">Couple massage at your villa</p>
             <p>
-              Side by side, from {couple} for 60 minutes, plus {idr(fee)} per therapist in the Seminyak area.{" "}
+              Side by side, 60 minutes from {couple} for two, plus {idr(fee)} per therapist in the Seminyak area.{" "}
               <Link prefetch={false} href="/seminyak/couple-spa/">
                 See couple massage
               </Link>

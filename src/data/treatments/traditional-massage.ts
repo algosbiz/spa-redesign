@@ -14,8 +14,8 @@ const traditionalMassage: Treatment = {
   shortDescription: "A firmer full-body massage using deeper pressure to release muscle tension.",
   cardImage: { src: "/images/treatments/cards/traditionalmassage.webp", alt: "Traditional Massage", width: 630, height: 580 },
   seo: {
-    title: "Traditional Balinese Massage Seminyak - Spa Bali Moon",
-    description: "Traditional Balinese massage in Seminyak: firm pressure to relieve tension. Book at Spa Bali Moon in-spa or at your villa.",
+    title: "Traditional Massage in Seminyak - Firm Pressure - Spa Bali Moon",
+    description: "Traditional massage in Seminyak: a firm, full-body massage with warm oil to release tension. Book at Spa Bali Moon or at your villa.",
   },
   hero: {
     eyebrow: "Firm Body Care",

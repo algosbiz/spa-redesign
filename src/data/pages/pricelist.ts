@@ -66,14 +66,14 @@ export const pricelistPage = {
     contentSubTitle: "More Than Massage",
     contentTitle: "Our Treatments",
     contentText: "Spa Bali Moon brings massage, body care, facials, and beauty services together in one place. Choose a familiar treatment, try something new during your Bali stay, or ask our team for help finding the right option.",
-    firstStat: ["Established Since", "2009"] as [string, string],
+    firstStat: ["In Seminyak", "Since 2009"] as [string, string],
     secondStat: ["In-Spa &", "Home Service"] as [string, string],
     contentImage: "/images/pricelist/pricelist-2.webp",
     featureImage: "/images/pricelist/pricelist-3.webp",
   },
 
   priceList: {
-    subTitle: "Best Price",
+    subTitle: "Price List",
     title: "How Much Does a Massage Cost in Seminyak?",
     // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
     text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
@@ -84,7 +84,7 @@ export const pricelistPage = {
       services: [
         {
           name: "Aloe Vera Massage",
-          desc: "A soothing massage that helps calm the skin, reduce irritation, and support gentle recovery after travel or sun exposure.",
+          desc: "A soothing massage with cooling aloe vera for skin that feels hot or tight after a day in the sun.",
           options: [
             {
               time: "1 Hour",
@@ -96,7 +96,7 @@ export const pricelistPage = {
         },
         {
           name: "Aromatherapy Massage",
-          desc: "A calming massage that uses essential oils and gentle strokes to ease tension and support circulation.",
+          desc: "A calming massage that uses essential oils and gentle strokes to ease tension and help you unwind.",
           options: [
             {
               time: "1 Hour",
@@ -140,7 +140,7 @@ export const pricelistPage = {
         },
         {
           name: "Back Massage",
-          desc: "A focused massage that targets back tension to improve circulation and restore comfort.",
+          desc: "A focused massage that eases tension in the back and restores comfort.",
           options: [
             {
               time: "30 Minutes",
@@ -164,7 +164,7 @@ export const pricelistPage = {
         },
         {
           name: "Cellulite Massage",
-          desc: "A targeted massage that helps stimulate circulation and support firmer-looking skin.",
+          desc: "A firm, targeted massage that leaves the skin feeling smooth.",
           options: [
             {
               time: "1 Hour",
@@ -184,7 +184,7 @@ export const pricelistPage = {
         },
         {
           name: "Deep Tissue Massage",
-          desc: "A therapeutic massage that uses deeper pressure to ease muscle stiffness and release tension.",
+          desc: "A firm massage that uses deeper pressure to ease muscle stiffness and release tension.",
           options: [
             {
               time: "1 Hour",
@@ -200,7 +200,7 @@ export const pricelistPage = {
         },
         {
           name: "Foot Reflexology",
-          desc: "A focused massage applying pressure to reflex points on the feet to support circulation and relaxation.",
+          desc: "A focused massage applying pressure to reflex points on the feet for deep relaxation.",
           options: [
             {
               time: "30 Minutes",
@@ -260,7 +260,7 @@ export const pricelistPage = {
         },
         {
           name: "Herbal Massage",
-          desc: "A comforting massage using herbal techniques to support relaxation, circulation, and muscle relief.",
+          desc: "A comforting massage with herbal ingredients to relax tired muscles.",
           options: [
             {
               time: "1 Hour",
@@ -276,7 +276,7 @@ export const pricelistPage = {
         },
         {
           name: "Hot Stone Massage",
-          desc: "A soothing massage using heated basalt stones to relax muscles and encourage circulation.",
+          desc: "A soothing massage using heated basalt stones to warm and relax tired muscles.",
           options: [
             {
               time: "1 Hour",
@@ -316,7 +316,7 @@ export const pricelistPage = {
         },
         {
           name: "Lymphatic Massage",
-          desc: "A gentle massage that supports natural drainage, circulation, and overall body balance.",
+          desc: "A gentle massage with light, rhythmic strokes that leaves the body feeling lighter.",
           options: [
             {
               time: "1 Hour",
@@ -396,7 +396,7 @@ export const pricelistPage = {
         },
         {
           name: "Sports Massage",
-          desc: "A focused massage designed to relieve muscle tightness and support mobility.",
+          desc: "A focused massage to ease tight muscles after sport or a long day.",
           options: [
             {
               time: "1 Hour",
@@ -484,7 +484,7 @@ export const pricelistPage = {
           desc: "A purifying facial treatment for oily or blemish-prone skin using clay, tea tree care, and nourishing oils to restore balance. Benefits:",
           benefits: [
             "Regulates shine and excess oil",
-            "Aids in decreasing redness and breakouts",
+            "Helps skin look calmer and clearer",
             "Soothes and refreshes the skin",
             "Maintains balanced hydration"
           ],
@@ -573,7 +573,7 @@ export const pricelistPage = {
         },
         {
           name: "Biokos Facial",
-          desc: "A customized facial treatment for dry, normal, or oily skin, including a facial massage and mask.",
+          desc: "A customised facial treatment for dry, normal, or oily skin, including a facial massage and mask.",
           options: [
             {
               time: "Biokos",
@@ -656,11 +656,11 @@ export const pricelistPage = {
               price: "IDR 139.000"
             },
             {
-              time: "Nail Color Feet & Hands",
+              time: "Nail Colour Feet & Hands",
               price: "IDR 138.000"
             },
             {
-              time: "Nail Color Feet or Hands",
+              time: "Nail Colour Feet or Hands",
               price: "IDR 69.000"
             },
             {
@@ -722,7 +722,7 @@ export const pricelistPage = {
       services: [
         {
           name: "Couple Balinese Massage",
-          desc: "1 Hour – Balinese Massage",
+          desc: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
           options: [
             {
               time: "1 Hour · Balinese Massage · 2 Pax",
@@ -777,7 +777,7 @@ export const pricelistPage = {
           image: "/images/listmenu/coupledeeptissumassage.webp"
         },
         {
-          name: "Couple Warm Candle Oil Massages",
+          name: "Couple Warm Candle Oil Massage",
           desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
           options: [
             {
@@ -809,7 +809,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 639.000"
+              price: "IDR 625.000"
             }
           ],
           id: "couple-package-a",
@@ -821,7 +821,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 709.000"
+              price: "IDR 699.000"
             }
           ],
           id: "couple-package-b",
@@ -833,7 +833,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 849.000"
+              price: "IDR 845.000"
             }
           ],
           id: "couple-package-c",
@@ -845,7 +845,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 929.000"
+              price: "IDR 919.000"
             }
           ],
           id: "couple-package-d",
@@ -867,7 +867,7 @@ export const pricelistPage = {
   packagesIntro: {
     subTitle: "All Spa Packages",
     title: "Spa Packages in Seminyak",
-    text: "We offer multiple spa packages at our spa or as a day spa at home. Some guests know what they want, while others wish to combine treatments. We provide the help, so you can enjoy a laid-back and cozy experience, whether alone, with a partner, or with friends.",
+    text: "Our packages combine a massage with a facial, cream bath, body scrub or nail care in one visit. Prices are per person; couple packages are for two. Selected packages can also be booked as home service.",
     note: "Browse the packages below to find a combination that fits your plans."
   },
 
@@ -931,7 +931,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 399.000",
+          price: "IDR 379.000",
           items: [
             {
               duration: "1 Hr",
@@ -956,7 +956,7 @@ export const pricelistPage = {
       cardTitle: "Thai Massage",
       packages: [
         {
-          price: "IDR 549.000",
+          price: "IDR 539.000",
           items: [
             {
               duration: "1 Hr",
@@ -973,7 +973,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 649.000",
+          price: "IDR 609.000",
           items: [
             {
               duration: "1 Hr",
@@ -990,7 +990,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449.000",
+          price: "IDR 445.000",
           items: [
             {
               duration: "1 Hr",
@@ -1028,7 +1028,7 @@ export const pricelistPage = {
       cardTitle: "Cream Bath",
       packages: [
         {
-          price: "IDR 649.000",
+          price: "IDR 609.000",
           items: [
             {
               duration: "1 Hr",
@@ -1045,7 +1045,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 499.000",
           items: [
             {
               duration: "1 Hr",
@@ -1128,7 +1128,7 @@ export const pricelistPage = {
               service: "Body Scrub"
             },
             {
-              duration: "1,5 Hr",
+              duration: "1.5 Hr",
               service: "Hot Stone"
             },
             {
@@ -1183,7 +1183,7 @@ export const pricelistPage = {
           price: "IDR 549.000",
           items: [
             {
-              duration: "1,5 Hr",
+              duration: "1.5 Hr",
               service: "Hot Stone"
             },
             {
@@ -1197,7 +1197,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 499.000",
           items: [
             {
               duration: "1 Hr",
@@ -1214,7 +1214,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449.000",
+          price: "IDR 435.000",
           items: [
             {
               duration: "1 Hr",
@@ -1227,10 +1227,10 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 519.000",
+          price: "IDR 499.000",
           items: [
             {
-              duration: "1,5 Hr",
+              duration: "1.5 Hr",
               service: "Hot Stone"
             },
             {
@@ -1265,7 +1265,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 649.000",
+          price: "IDR 609.000",
           items: [
             {
               duration: "1 Hr",
@@ -1282,7 +1282,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449.000",
+          price: "IDR 445.000",
           items: [
             {
               duration: "1 Hr",
@@ -1367,7 +1367,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 399.000",
+          price: "IDR 379.000",
           items: [
             {
               duration: "30 Mins",
@@ -1393,7 +1393,7 @@ export const pricelistPage = {
       twoPax: true,
       packages: [
         {
-          price: "IDR 639.000",
+          price: "IDR 625.000",
           items: [
             {
               duration: "1 Hr",
@@ -1406,7 +1406,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 709.000",
+          price: "IDR 699.000",
           items: [
             {
               duration: "1 Hr",
@@ -1419,7 +1419,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 849.000",
+          price: "IDR 845.000",
           items: [
             {
               duration: "1 Hr",
@@ -1432,7 +1432,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 929.000",
+          price: "IDR 919.000",
           items: [
             {
               duration: "1 Hr",
@@ -1472,11 +1472,11 @@ export const pricelistPage = {
     },
     {
       question: "2. How do I choose the right treatment?",
-      answer: "Start with what you want from your visit. At Spa Bali Moon, Balinese Massage (IDR 159.000 for 1 hour) is popular for general relaxation, while Sports Massage and Deep Tissue Massage (both IDR 269.000 for 1 hour) suit muscle tightness and recovery. Our team can also recommend a treatment based on how you feel."
+      answer: "Start with what you want from your visit. At Spa Bali Moon, Balinese Massage (IDR 159.000 for 1 hour) is popular for general relaxation, while Sports Massage and Deep Tissue Massage (both IDR 269.000 for 1 hour) suit tight, tired muscles. Our team can also recommend a treatment based on how you feel."
     },
     {
       question: "3. Can I combine several treatments into one visit?",
-      answer: "Yes. At Spa Bali Moon, massage, facials, body scrubs, cream baths, manicures, pedicures, and other services can be combined through our spa packages or selected treatment combinations. Packages start at IDR 299.000 per person, and a 1-hour Balinese Massage with a 30-minute manicure and 30-minute pedicure is IDR 399.000 per person."
+      answer: "Yes. At Spa Bali Moon, massage, facials, body scrubs, cream baths, manicures, pedicures, and other services can be combined through our spa packages or selected treatment combinations. Packages start at IDR 299.000 per person, and a 1-hour Balinese Massage with a 30-minute manicure and 30-minute pedicure is IDR 379.000 per person."
     },
     {
       question: "4. Are the prices listed for each treatment?",
@@ -1484,7 +1484,7 @@ export const pricelistPage = {
     },
     {
       question: "5. Can I book a treatment at my hotel or villa?",
-      answer: "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at your hotel or villa in Seminyak and nearby areas, such as Kerobokan, Petitenget, Canggu and North Kuta. An extra IDR 75.000 per therapist applies in Seminyak, Petitenget and Kerobokan, and IDR 150.000 in Canggu and North Kuta, on top of the treatment price. Send your location and preferred time on WhatsApp to book."
+      answer: "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at your hotel or villa in Seminyak and nearby areas, such as Kerobokan, Petitenget, Canggu, North Kuta and Kuta. An extra IDR 75.000 per therapist applies in Seminyak, Petitenget and Kerobokan, and IDR 150.000 in Canggu, North Kuta and Kuta, on top of the treatment price. Send your location and preferred time on WhatsApp to book."
     },
     {
       question: "6. Can I create a custom spa package?",
@@ -1508,15 +1508,15 @@ export const pricelistPage = {
     },
     {
       question: "11. How much extra is home service?",
-      answer: "Spa Bali Moon home service costs an additional IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta, on top of the treatment price. Treatments cost the same as in-spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa. For a couple booking with two therapists, the outcall fee is IDR 150.000 total."
+      answer: "Spa Bali Moon home service costs an additional IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta, on top of the treatment price. Treatments cost the same as in-spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa in the Seminyak area. For a couple with two therapists in the Seminyak area, the fee is IDR 150.000 in total."
     },
     {
       question: "12. Which areas do you cover for outcall massage?",
-      answer: "Spa Bali Moon covers Seminyak and surrounding areas, including Kerobokan, Petitenget, Canggu and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar and Ubud, subject to therapist availability and travel time. Message us on WhatsApp with your location and we will confirm availability and any additional travel cost before you book."
+      answer: "Spa Bali Moon covers Seminyak and surrounding areas, including Kerobokan, Petitenget, Canggu, North Kuta and Kuta. We also travel to Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar and Ubud, subject to therapist availability and travel time. Message us on WhatsApp with your location and we will confirm availability and any additional travel cost before you book."
     },
     {
       question: "13. Is tipping expected?",
-      answer: "Tipping is not required at Spa Bali Moon and is never added automatically, whether you visit our Seminyak spa or book home service at your villa or hotel. A tip is appreciated but entirely at your discretion, and our therapists are paid regardless of whether you leave one or not."
+      answer: "Tipping is not required at Spa Bali Moon and is never added automatically, whether you visit our Seminyak spa or book home service at your villa or hotel. A tip is appreciated but entirely at your discretion, and our therapists are paid either way."
     },
     {
       question: "14. Do prices differ between the website and in the spa?",
@@ -1532,18 +1532,18 @@ export const pricelistPage = {
     },
     {
       question: "17. How can I pay for my treatment?",
-      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the home service fee of IDR 75.000 per therapist in the Seminyak area is added. For payment questions, especially about home service, message us on WhatsApp at +62 878-6317-5144 before your treatment."
+      answer: "Spa Bali Moon accepts Visa, Mastercard and cash. All prices are in Indonesian rupiah (IDR) and are the same at our Seminyak spa and for home service, where the home service fee of IDR 75.000 per therapist in the Seminyak area is added. For home service, you pay your therapist after the treatment, in cash or by card."
     },
     {
       question: "18. What are your opening hours?",
-      answer: "Spa Bali Moon is open daily from 9am to 11pm (09:00 to 23:00) at Jl. Pangkung Sari No. 30, Seminyak. Home service and WhatsApp booking are available during the same hours, and walk-ins are welcome at the spa. In busy periods, book ahead on WhatsApp at +62 878-6317-5144."
+      answer: "Spa Bali Moon is open daily from 9am to 11pm at Jl. Pangkung Sari No. 30, Seminyak. Home service and WhatsApp booking are available during the same hours, and walk-ins are welcome at the spa. In busy periods, book ahead on WhatsApp at +62 878-6317-5144."
     }
   ],
   },
 
   reserve: {
     title: "Plan Your Spa Day in Seminyak",
-    text: "Some treatments are chosen because your muscles need attention. Others are for tired skin, overworked feet, a scalp that needs care, or simply the feeling that you have been moving from one plan to the next without stopping. Browse the Spa Bali Moon price list to find the treatment that fits your day.",
+    text: "Some treatments are chosen because your muscles need attention. Others are for tired skin, overworked feet, a scalp that needs care, or simply the feeling that you have been moving from one plan to the next without stopping.",
     closingText: "Visit us in Seminyak or arrange selected treatments at your villa or hotel.",
     backgroundImage: "/images/pricelist/pricelist-5.webp"
   },

@@ -15,6 +15,9 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
       <PageTitle pageName="Massage Guides" backgroundImage="/images/blog/blog-1.webp" />
       <section className="blog-section-two pt-120 pb-90">
         <div className="container">
+          <div className="section-header center mb-60">
+            <p>What each treatment is, what to expect and which one suits you.</p>
+          </div>
           <div className="row">
             {posts.length === 0 ? (
               <div className="col-12 text-center">
@@ -45,7 +48,7 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                       </div>
                       <div className="content-box">
                         <div className="info look-h6">
-                          <span>{post.author || "Admin"}</span>
+                          <span>{post.author || "Spa Bali Moon"}</span>
                           {post.category ? <span className="dot">{post.category}</span> : null}
                         </div>
                         <h2 className="title look-h4">

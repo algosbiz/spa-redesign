@@ -14,11 +14,8 @@
  * adds it (app/(site)/seminyak/[slug]/page.tsx). Write a link as
  * [words](/address/).
  *
- * Not yet here: hair-braiding and nail-spa. The brief's sentences for them say
- * hair braiding and nail art are available as home service; that is the
- * owner's fact C13. Add them when it is confirmed:
- *   "hair-braiding": "Hair braiding is also available at your villa with our [home service](/outcall-home-service-massage/).",
- *   "nail-spa": "Nail art is also available at your villa with our [home service](/outcall-home-service-massage/).",
+ * Hair braiding and nail art are home services too (the owner confirmed fact
+ * C13 on 23 Oct).
  */
 export const homeServiceLines: Record<string, string> = {
   "balinese-massage":
@@ -32,7 +29,7 @@ export const homeServiceLines: Record<string, string> = {
   "couple-spa":
     "Want a couples massage in your own villa? Two therapists can come to you with our [outcall and home service massage](/outcall-home-service-massage/).",
   "shiatsu-massage":
-    "Shiatsu needs no oil and little space, so it works well as a [massage at your villa or hotel](/outcall-home-service-massage/).",
+    "Shiatsu needs no oil, so it works well as a [massage at your villa or hotel](/outcall-home-service-massage/).",
   "sport-massage":
     "After a surf or a long ride, book a sports massage at your villa with our [outcall massage service](/outcall-home-service-massage/) in Seminyak and Canggu.",
   "hot-stone-massage":
@@ -63,6 +60,8 @@ export const homeServiceLines: Record<string, string> = {
     "Ear candling is also available as part of our [home service in Bali](/outcall-home-service-massage/), often added to a massage.",
   "waxing-salon":
     "Waxing can also be booked at your villa with our [home service](/outcall-home-service-massage/).",
+  "hair-braiding": "Hair braiding is also available at your villa with our [home service](/outcall-home-service-massage/).",
+  "nail-spa": "Nail art is also available at your villa with our [home service](/outcall-home-service-massage/).",
   "day-spa":
     "Prefer to stay in? Our home service is delivered by the same therapists who work here. See [outcall and home service massage](/outcall-home-service-massage/).",
 };

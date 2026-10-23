@@ -140,7 +140,7 @@
    and half the bar wide. Owner, 8 Oct (picked from five mock-ups): the
    button on the left half and, on the right half, when the chat is
    answered in a paper-coloured pill of the same size: a gold clock in a
-   white circle, then "From 9am - 11pm" ("From" small and gold, the hours
+   white circle, then "Open 9am–11pm" ("Open" small and gold, the hours
    in Literata). The bar's shadow is the sticky header's, turned upward.
    The floating button and the extra page padding depend on the bar being
    there, so taking it out of layout.tsx undoes all of this. */

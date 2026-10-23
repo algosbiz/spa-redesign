@@ -31,7 +31,7 @@ const FALLBACK_IMAGE = "/images/resource/news-details.jpg";
 
 /** "December 9, 2024", as the live site prints dates. */
 const formatDate = (iso?: string | null) =>
-  iso ? new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }) : "";
+  iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "";
 
 /** The last save, when it falls on a later day than the publish date (copy rewrite, 15 Oct: "last updated"). */
 const updatedDate = (post: GuidePostSummary) =>

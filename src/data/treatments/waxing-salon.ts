@@ -14,7 +14,7 @@ const waxingSalon: Treatment = {
   cardImage: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
   seo: {
     title: "Waxing Seminyak - Brazilian & Full Body Wax - Spa Bali Moon",
-    description: "Waxing in Seminyak, Bali: from brows to full body, in a relaxing spa setting. Book at Spa Bali Moon.",
+    description: "Waxing in Seminyak, Bali: arms, legs, back and Brazilian, in a relaxing spa setting. Book at Spa Bali Moon.",
   },
   hero: {
     eyebrow: "Smooth Finish",
@@ -156,7 +156,7 @@ const waxingSalon: Treatment = {
         "Half and full legs",
         "Back and full back",
         "Brazilian waxing in a private setting",
-        "Facial waxing areas such as lip, chin, and eyebrows",
+        "Hard wax for delicate areas",
         "Men's waxing options available",
       ],
       button: { label: "Book Now" },
@@ -211,7 +211,7 @@ const waxingSalon: Treatment = {
       },
       {
         question: "Is waxing suitable for men?",
-        answer: "Yes. Spa Bali Moon provides waxing options for men, including areas such as the back and Manzilian, with techniques adjusted for comfort.",
+        answer: "Yes. Spa Bali Moon provides waxing options for men, such as the back and full back, with techniques adjusted for comfort.",
       },
     ],
   },

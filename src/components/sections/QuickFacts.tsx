@@ -7,9 +7,9 @@ import SectionShapes from "@/components/ui/SectionShapes";
  */
 export type QuickFact = { label: string; value: string; figure?: string; detail?: string };
 
-/** "October 15, 2026", as the guide articles print dates (Bali time). */
+/** "15 October 2026", British date order, as the footer prints dates (Bali time). */
 const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "Asia/Makassar" });
+  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Makassar" });
 
 /**
  * "1 hour IDR 300.000 · 1.5 hours IDR 440.000 · …": a line breaks between the

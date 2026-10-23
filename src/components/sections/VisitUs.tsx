@@ -32,7 +32,8 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
 
 /**
  * `treatment` is how the heading names it: "Book {treatment} in
- * Seminyak", e.g. "Balinese Massage", "a Facial".
+ * Seminyak", e.g. "a Balinese Massage", "a Facial"; `inline` how the
+ * sentence under it does, in lower case ("a facial"; defaults to `treatment`).
  *
  * "Visit us" on every treatment page and the About page (AEO roadmap R17 and
  * R40, 17 Oct): the address, the hours, in the spa or at your villa, the home
@@ -64,6 +65,7 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
  */
 export default function VisitUs({
   treatment,
+  inline = treatment,
   title,
   homeService = true,
   variant = "split",
@@ -73,6 +75,7 @@ export default function VisitUs({
   rightShapeSrc = "/images/shape/leaf/2a.png",
 }: {
   treatment: string;
+  inline?: string;
   /** In place of "Book … in Seminyak" (the About page). */
   title?: string;
   homeService?: boolean;
@@ -94,7 +97,7 @@ export default function VisitUs({
         </>
       ),
     },
-    { label: "Open daily", body: "9am – 11pm" },
+    { label: "Open daily", body: "9am–11pm" },
     ...(homeService
       ? [
           {
@@ -140,7 +143,7 @@ export default function VisitUs({
       // The columns look (every treatment page) leaves "Get directions" out (owner, 21 Oct).
       links: columns ? undefined : [{ href: business.mapsUrl, label: "Get directions", external: true }],
     },
-    { label: "Open daily", icon: "clock", text: "9am – 11pm" },
+    { label: "Open daily", icon: "clock", text: "9am–11pm" },
     {
       label: "Booking",
       icon: "chat",
@@ -180,11 +183,11 @@ export default function VisitUs({
       <p className="visit-us__kicker">Visit Spa Bali Moon</p>
       <h2 className="title">{title ?? `Book ${treatment} in Seminyak`}</h2>
       <p className="visit-us__lead">
-        You can book {treatment} at Spa Bali Moon, {business.address.short}, open daily from 9am to 11pm
+        You can book {inline} at Spa Bali Moon, {business.address.short}, open daily from 9am to 11pm
         {homeService ? (
           <>
-            , or have it at your villa or hotel for an extra {fee} per therapist in the Seminyak area. Prices are the same in the spa and at
-            your villa.
+            , or have it at your villa or hotel for an extra {fee} per therapist in the Seminyak area. Treatment prices are the same at the
+            spa and at your villa.
           </>
         ) : (
           "."

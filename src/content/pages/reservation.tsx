@@ -9,11 +9,11 @@ const HOME_SERVICE = [
   },
   {
     title: "Stress-Free Setup",
-    text: "No preparation is needed, simply relax while we take care of transport and setup.",
+    text: "Your therapist has everything ready in 5 to 10 minutes, and your treatment time starts once setup is done.",
   },
   {
     title: "Flexible Hours",
-    text: "Available daily from 9:00 AM to 11:00 PM. Pick a time and location that works best for you.",
+    text: "Daily 9am–11pm. In the Seminyak area a therapist usually arrives within 30 to 60 minutes.",
   },
   {
     title: "Quick Booking",
@@ -22,10 +22,10 @@ const HOME_SERVICE = [
 ];
 
 const DAY_SPA = [
-  { title: "Open Daily", text: "From 9:00 AM to 11:00 PM—walk-ins welcome or book ahead." },
-  { title: "Tranquil Setting", text: "Air-conditioned rooms, soft music, and a calming ambiance for your comfort." },
-  { title: "Variety of Treatments", text: "Choose from Balinese massage, facials, coconut oil therapy, and more." },
-  { title: "Easy Reservations", text: "Tap our WhatsApp button to book your preferred time quickly and easily." },
+  { title: "Open Daily", text: "Daily 9am–11pm; walk-ins welcome or book ahead." },
+  { title: "Tranquil Setting", text: "Air-conditioned rooms, soft music, and a calming ambience for your comfort." },
+  { title: "Variety of Treatments", text: "Choose from 23 treatments, including Balinese massage, facials and coconut oil massage." },
+  { title: "Cash or Card", text: "Pay by cash, Visa or Mastercard." },
 ];
 
 /** One of the two booking routes: heading, gold tagline and a lotus list. */
@@ -113,7 +113,7 @@ export default function ReservationPage() {
           <div className="section-header center mb-60">
             <div className="sub-title look-h4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <LotusIcon className="brand-lotus-icon-svg" />
-              Your Spa Experience is One Click Away
+              Book on WhatsApp
             </div>
             <h2 className="title look-h2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginBottom: "20px" }}>
               Book Your Treatment
@@ -124,21 +124,20 @@ export default function ReservationPage() {
               data-wow-duration="1500ms"
               style={{ maxWidth: "800px", margin: "0 auto" }}
             >
-              We value your time and aim to make the reservation process as smooth as possible. Simply click the button
-              below to book your appointment, and our team will take care of the arrangements to ensure everything is
-              ready for your scheduled time.
+              Book on WhatsApp at +62 878-6317-5144, daily 9am–11pm. Tell us the treatment and time, and whether you&apos;d
+              like it at our Seminyak spa or at your villa or hotel; we confirm availability and the total price.
             </p>
           </div>
           <div className="row g-4">
             <Option
               title="Home Service Massage (Hotel & Villa)"
-              tagline="Treat yourself to a relaxing spa experience at your home, hotel, or villa"
+              tagline="A therapist comes to your villa, hotel or home"
               items={HOME_SERVICE}
               animation="fadeInLeft"
             />
             <Option
               title="Day Spa Bookings (Seminyak Location)"
-              tagline="Visit our spa in Seminyak to enjoy a peaceful and comfortable space"
+              tagline="Jl. Pangkung Sari No. 30, Petitenget, Seminyak"
               items={DAY_SPA}
               animation="fadeInRight"
             />

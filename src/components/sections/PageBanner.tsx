@@ -81,7 +81,7 @@ export default function PageBanner({
       className="row-btn--glass"
     />
   ),
-  chips = ["Open daily 9am – 11pm"],
+  chips = ["Open daily 9am–11pm"],
   prices,
   priceUnit,
   mobilePhoto,

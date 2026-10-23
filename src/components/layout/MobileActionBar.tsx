@@ -10,7 +10,7 @@ import { whatsappChatUrl } from "@/lib/whatsapp";
  * at the size it had there (half the bar). Owner, 8 Oct: the button on the
  * left half and, on the right, the hours the chat is answered in a
  * paper-coloured pill (picked from five mock-ups): a gold clock in a white
- * circle and "From 9am - 11pm" (the footer's hours, src/data/business.ts).
+ * circle and "Open 9am–11pm" (the footer's hours, src/data/business.ts).
  * Styles in
  * src/styles/custom.css; the floating button only hides while this bar is on
  * the page, so removing it from src/app/layout.tsx brings the floating
@@ -29,7 +29,7 @@ export default function MobileActionBar() {
             <MenuIcon name="clock" />
           </span>
           <span className="mobile-action-bar__hours-text">
-            <span className="mobile-action-bar__hours-from">From</span> {business.openingHours.display}
+            <span className="mobile-action-bar__hours-from">Open</span> {business.openingHours.display}
           </span>
         </span>
       </div>

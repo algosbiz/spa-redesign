@@ -157,7 +157,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                     },
                     {
                       title: "Flexible Scheduling",
-                      desc: "Home service is available daily from 9:00 AM to 11:00 PM, making it easier to arrange a treatment around your Bali plans.",
+                      desc: "Home service is available daily from 9am to 11pm, so you can fit a treatment around your Bali plans.",
                     },
                     {
                       title: "Simple Booking via WhatsApp",

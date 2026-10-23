@@ -207,9 +207,9 @@ export default function ContactSection({
                 Spa Bali Moon
               </h3>
               <p className="jsx-contact-form cf-map__addr">
-                Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361
+                Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan, Kuta Utara, Badung, Bali 80361
               </p>
-              <p className="jsx-contact-form cf-map__hours">Open daily · 9:00 – 23:00</p>
+              <p className="jsx-contact-form cf-map__hours">Open daily · 9am–11pm</p>
               <a href={DIRECTIONS} target="_blank" rel="noreferrer" className="jsx-contact-form cf-map__btn">
                 Get Directions
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="jsx-contact-form">

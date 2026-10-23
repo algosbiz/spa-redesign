@@ -48,7 +48,7 @@
           },
           {
             "label": "Packages for two",
-            "value": "From IDR 639.000 (Balinese massage and ear candle) to IDR 929.000 (warm candle massage and facial)"
+            "value": "From IDR 625.000 (Balinese massage and ear candle) to IDR 919.000 (warm candle massage and facial)"
           },
           {
             "label": "Where",
@@ -69,8 +69,8 @@
         "primaryImage": "/images/services/couplemassage/couplemassage-2-warm.webp",
         "secondaryImage": "/images/services/couplemassage/couplemassage-3-warm.webp",
         "subTitle": "",
-        "title": "The Couples Massage Experience",
-        "text": "A Couple Massage is a shared spa experience where two guests receive treatments side by side, each with their own therapist. While it's popular with couples, it's also suitable for friends and family members who want to relax together. Each guest can choose their preferred pressure, creating a personalised treatment within the same relaxing environment.",
+        "title": "What Is a Couples Massage?",
+        "text": "A couples massage is two guests massaged side by side, each by their own therapist. It's popular with couples, but friends and family book it too, and each of you chooses your own pressure.",
         "feature1Title": "Side-by-Side Treatment",
         "feature1Text": "Enjoy your massage together in a private room or through our villa and hotel home service.",
         "feature2Title": "Personalised for Each Guest",
@@ -95,10 +95,10 @@
             ],
             "subTitle": "",
             "title": "Couples Massage Packages in Seminyak",
-            "text": "Every couple enjoys relaxation differently, which is why we offer several massage styles for two. Whether you prefer gentle Balinese techniques, deeper muscle work, or a warm candle ritual, each experience is designed to help you slow down and enjoy quality time together.",
+            "text": "Our four couples packages pair a 1-hour Balinese or warm candle massage with an ear candle or a Bali Moon Facial. Prices are for two guests together.",
             "packages": [
               {
-                "price": "IDR 639.000",
+                "price": "IDR 625.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -107,7 +107,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 709.000",
+                "price": "IDR 699.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -116,7 +116,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 849.000",
+                "price": "IDR 845.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -125,7 +125,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 929.000",
+                "price": "IDR 919.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -260,7 +260,7 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Couple Massage Session Options",
+                  "title": "Couples Massage Sessions",
                   "text": "Share a relaxing treatment side by side with a massage style that suits both of you. Each option is available for two guests, with different techniques and session lengths to match how you want to relax.",
                   "icon": "/images/spa/Couple.svg"
                 }
@@ -289,7 +289,7 @@
                 "text": "Booking"
               },
               {
-                "title": "Customized",
+                "title": "Customised",
                 "text": "Packages"
               },
               {
@@ -312,7 +312,7 @@
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
         "subTitle": "",
         "title": "Massage for Two, Side by Side",
-        "text": "Couple Massage is popular in Bali because it offers couples a relaxing way to spend quality time together, whether they are celebrating a special occasion or taking a break during their holiday. Some of the main reasons include:",
+        "text": "A couples massage is a relaxing way to spend time together in Bali, for a special occasion or a break in your holiday. Why guests book one:",
         "featuresLeft": [
           "Popular for honeymoon trips",
           "A favourite anniversary activity",
@@ -345,8 +345,8 @@
         },
         "image": "/images/services/couplemassage/couplemassage-9.webp",
         "subTitle": "",
-        "title": "Couple Massage isn't Just for Couples",
-        "text": "A Couple Massage can be enjoyed by two people who want to relax side by side, regardless of their relationship. This makes it a suitable choice for:",
+        "title": "A Couples Massage Isn't Just for Couples",
+        "text": "Any two people who want to relax side by side can book one, whatever their relationship. It suits:",
         "featuresLeft": [
           "Romantic couples",
           "Honeymooners",
@@ -369,8 +369,8 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/couplemassage/couplemassage-10-warm.webp",
         "subTitle": "",
-        "title": "What to Expect During Your Couple Massage",
-        "text": "Your Couple Massage is arranged so that both guests can enjoy the treatment together while still having their individual preferences considered. From the initial consultation to the treatment itself, each part of the experience is designed to provide comfort, privacy, and personalised attention. The experience includes:",
+        "title": "What to Expect During Your Couples Massage",
+        "text": "You each have a short consultation first, then two therapists work side by side, each at the pressure their guest prefers. What's included:",
         "featuresLeft": [
           "Brief consultation before treatment",
           "Individual pressure preferences",
@@ -405,15 +405,15 @@
             "items": [
               {
                 "question": "How much is a couples massage in Seminyak?",
-                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak costs IDR 319.000 for two for 1 hour, IDR 479.000 for 1.5 hours and IDR 659.000 for 2 hours, with two therapists side by side in a private couples room. Couple packages start at IDR 639.000 for two. All prices are for both guests together; home service adds IDR 150.000 for two therapists in the Seminyak area."
+                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak costs IDR 319.000 for two for 1 hour, IDR 479.000 for 1.5 hours and IDR 659.000 for 2 hours, with two therapists side by side in a private couples room. Couple packages start at IDR 625.000 for two. All prices are for both guests together; home service adds IDR 150.000 for two therapists in the Seminyak area."
               },
               {
                 "question": "Is a couples massage only for romantic couples?",
-                "answer": "No. Couple Massage at Spa Bali Moon simply means two people enjoying treatments together, side by side, each with their own therapist. Friends, siblings, parents with adult children and other family members regularly book this experience as well. Prices start at IDR 319.000 for two for 1 hour of couple Balinese massage."
+                "answer": "No. At Spa Bali Moon a couples massage simply means two people having treatments side by side, each with their own therapist. Friends, siblings, parents with adult children and other family members book it too."
               },
               {
                 "question": "Are we in the same room for a couples massage?",
-                "answer": "Yes. With a couples massage at Spa Bali Moon, both guests receive their treatments side by side with two therapists in the same private treatment room at our Seminyak spa, or during the same home service appointment at your villa or hotel. Home service costs an extra IDR 150.000 for two therapists."
+                "answer": "Yes. With a couples massage at Spa Bali Moon, both guests receive their treatments side by side with two therapists in the same private treatment room at our Seminyak spa, or during the same home service appointment at your villa or hotel. Home service costs an extra IDR 150.000 for two therapists in the Seminyak area."
               },
               {
                 "question": "Can we each choose a different pressure?",
@@ -421,11 +421,11 @@
               },
               {
                 "question": "Can we each have a different treatment?",
-                "answer": "It depends on the package you choose: different massage options may be available for each guest. Spa Bali Moon's couple massages come in Balinese, traditional, deep tissue and warm candle styles. Message us on WhatsApp at +62 878-6317-5144 and our team will be happy to recommend the most suitable combination when booking."
+                "answer": "It depends on the package: in some, each guest can have a different massage. Our couples massages come in Balinese, traditional, deep tissue and warm candle styles; tell us on WhatsApp at +62 878-6317-5144 what you'd each like and we'll suggest a combination."
               },
               {
                 "question": "Is a couples massage good for a honeymoon?",
-                "answer": "Yes. Couple Massage is one of Spa Bali Moon's most popular experiences for honeymoon trips, anniversaries, birthdays and other special occasions, offering a relaxing way to spend quality time together. You can enjoy it side by side in a private room at our Seminyak spa or at your villa or hotel, from IDR 319.000 for two."
+                "answer": "Yes. A couples massage is one of Spa Bali Moon's most popular treatments for honeymoons, anniversaries, birthdays and other special occasions. You can enjoy it side by side in a private room at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "Which treatments can we have as a couple?",
@@ -433,22 +433,22 @@
               },
               {
                 "question": "Can we have a couples massage at our villa or hotel?",
-                "answer": "Yes. For a couples massage at your villa or hotel, Spa Bali Moon sends two therapists to your accommodation so you can relax side by side. In the Seminyak area, a home service fee of IDR 75.000 per therapist applies, so IDR 150.000 for two, on top of the treatment price from IDR 319.000 for two. Book on WhatsApp."
+                "answer": "Yes. For a couples massage at your villa or hotel, Spa Bali Moon sends two therapists to your accommodation so you can relax side by side. In the Seminyak area, a home service fee of IDR 75.000 per therapist applies, so IDR 150.000 for two, on top of the treatment price. Your therapists bring fresh linen, oils and everything the massage needs."
               },
               {
                 "question": "What is included in a couples spa package?",
-                "answer": "Spa Bali Moon has four couple packages, each priced for two guests. Package A is a 1-hour Balinese massage plus a 30-minute ear candle (IDR 639.000 for two). Package B is a 1-hour Balinese massage plus a 1-hour Bali Moon facial (IDR 709.000). Packages C and D use the warm candle massage instead (IDR 849.000 and IDR 929.000)."
+                "answer": "Spa Bali Moon has four couple packages, each priced for two guests. Package A is a 1-hour Balinese massage plus a 30-minute ear candle (IDR 625.000 for two). Package B is a 1-hour Balinese massage plus a 1-hour Bali Moon Facial (IDR 699.000). Packages C and D use the warm candle massage instead (IDR 845.000 and IDR 919.000)."
               },
               {
                 "question": "Can we book a couples massage over Christmas and New Year?",
-                "answer": "Yes. Spa Bali Moon is open daily from 9am to 11pm, and holiday weeks are busy in Seminyak, so message us on WhatsApp at +62 878-6317-5144 a few days ahead. You can relax side by side in a private room at our spa or at your villa (IDR 150.000 for two therapists), from IDR 319.000 for two."
+                "answer": "Yes. Spa Bali Moon is open daily from 9am to 11pm, and holiday weeks are busy in Seminyak, so message us on WhatsApp at +62 878-6317-5144 a few days ahead. You can relax side by side in a private room at our spa or at your villa (IDR 150.000 for two therapists in the Seminyak area)."
               },
               {
                 "question": "How long does a couples massage take?",
-                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 319.000 for two), 1.5 hours (IDR 479.000) or 2 hours (IDR 659.000). Couple packages, which add an ear candle or a facial, start at IDR 639.000 for two."
+                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 319.000 for two), 1.5 hours (IDR 479.000) or 2 hours (IDR 659.000). Couple packages, which add an ear candle or a facial, start at IDR 625.000 for two."
               },
               {
-                "question": "Can we each ask for a female or male therapist?",
+                "question": "Can we each ask for a female or male therapist for our couples massage?",
                 "answer": "Yes. Tell us each guest's preference when you book on WhatsApp and we'll arrange two therapists to match, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -467,7 +467,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Discover More Ways to Relax Together",
+            "title": "More Spa Treatments",
             "embedded": true,
             "related": [
               "/seminyak/facial/",
@@ -490,9 +490,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/couplemassage/couplemassage-12.webp",
-            "title": "Book a Couples Massage in Seminyak",
+            "title": "A Couples Massage at Our Spa or Your Villa",
             "text": "A simple way to share quality time and let the body rest, popular for honeymoons, anniversaries, or a day with friends. At our spa, or at your villa or hotel.",
-            "closingText": "Create a memorable wellness experience together and let our therapists take care of the rest."
+            "closingText": "Tell us each guest's pressure and treatment when you book."
           }
         }
       ]

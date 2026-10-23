@@ -37,7 +37,7 @@
           },
           {
             "label": "Where",
-            "value": "Spa Bali Moon, Seminyak, or selected hotels and villas"
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
           },
           {
             "label": "Booking",
@@ -54,8 +54,8 @@
         "primaryImage": "/images/services/footmassage/footmassage-2.webp",
         "secondaryImage": "/images/services/footmassage/footmassage-3.webp",
         "subTitle": "",
-        "title": "Foot Massage for Daily Comfort and Recovery",
-        "text": "Your feet absorb constant pressure throughout the day, whether from walking, standing, travelling, or exercising. Foot Massage focuses on the muscles, joints, and soft tissues of the feet and lower legs using relaxing massage techniques inspired by traditional reflexology. The treatment helps ease built-up tension, improve local circulation, and restore comfort, making it a popular choice after long days exploring Bali or spending hours on your feet.",
+        "title": "What Is a Foot Massage?",
+        "text": "A foot massage works the muscles and soft tissues of the feet and lower legs with warm oil and some pressure techniques borrowed from reflexology. It eases the tension that builds up from walking, standing and travelling, which makes it a popular choice after a long day exploring Bali.",
         "feature1Title": "Foot Recovery",
         "feature1Text": "Helps reduce fatigue caused by walking, standing, and everyday activities.",
         "feature2Title": "Reflexology-Inspired",
@@ -79,7 +79,7 @@
             ],
             "subTitle": "",
             "title": "Choose the Right Duration",
-            "text": "Different session lengths allow our therapist to focus on specific areas or provide more detailed care for both the feet and lower legs. Whether you need a quick refresh or a longer recovery session, each treatment is adjusted to your comfort.",
+            "text": "One hour covers tired feet; 1.5 or 2 hours leave more time for the ankles, calves and lower legs. The pressure is adjusted to your comfort in every session.",
             "packages": [
               {
                 "price": "IDR 159.000",
@@ -128,7 +128,7 @@
                 "text": "Therapists"
               },
               {
-                "title": "Gentle",
+                "title": "Adjustable",
                 "text": "Pressure"
               },
               {
@@ -155,7 +155,7 @@
         "image": "/images/services/footmassage/footmassage-7.webp",
         "subTitle": "",
         "title": "When a Foot Massage Helps Most",
-        "text": "A Foot Massage can be especially enjoyable when your feet have been working hard throughout the day. Whether you've spent hours exploring Bali, standing for long periods, or travelling, a dedicated foot treatment gives tired feet focused attention. It can be particularly helpful after situations such as:",
+        "text": "A foot massage is most welcome after a long day of walking, standing or travelling. Guests often book one for:",
         "featuresLeft": [
           "Tired feet after sightseeing or exploring",
           "Sore arches or heels after extended walking",
@@ -189,7 +189,7 @@
         "image": "/images/services/footmassage/footmassage-8.webp",
         "subTitle": "",
         "title": "Areas We Focus On",
-        "text": "A Foot Massage focuses on several areas of the feet and lower legs that can become tired or tense throughout the day. Each area receives focused attention to help create a more comfortable and relaxed feeling. The massage may focus on:",
+        "text": "The massage covers the parts of the feet and lower legs that tire most during the day:",
         "featuresLeft": [
           "Soles that absorb daily impact",
           "Arches that support body weight",
@@ -213,7 +213,7 @@
         "image": "/images/services/footmassage/footmassage-9.webp",
         "subTitle": "",
         "title": "How Our Foot Massage Is Performed",
-        "text": "Our Foot Massage uses a combination of gentle techniques to work through tension in the feet and lower legs. Warm natural oils help create smooth, comfortable movements, while focused pressure is applied to areas that may feel particularly tired after walking or standing. The treatment can be tailored to your comfort, with techniques such as:",
+        "text": "Our foot massage uses a combination of gentle techniques to work through tension in the feet and lower legs. Warm natural oils help create smooth, comfortable movements, while focused pressure is applied to areas that may feel particularly tired after walking or standing. The treatment can be tailored to your comfort, with techniques such as:",
         "featuresLeft": [
           "Warm oil for smooth massage movements",
           "Gentle circular massage techniques",
@@ -252,11 +252,11 @@
               },
               {
                 "question": "Can a foot massage help after walking all day?",
-                "answer": "Yes. Many guests book a foot massage at Spa Bali Moon after sightseeing, shopping or long walks around Bali, because it helps reduce tiredness and discomfort in the feet, arches, heels and calves. A 1-hour session is IDR 159.000 per person, at our Seminyak spa or at selected hotels and villas."
+                "answer": "Yes. Many guests book a foot massage at Spa Bali Moon after sightseeing, shopping or long walks around Bali, because it helps reduce tiredness and discomfort in the feet, arches, heels and calves."
               },
               {
                 "question": "Does a foot massage include the lower legs?",
-                "answer": "Yes. Depending on the session you choose, your Spa Bali Moon therapist also massages the ankles and lower legs to ease muscle tightness connected to tired feet. Longer sessions of 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) give more time for the lower legs as well as the soles and heels."
+                "answer": "Yes. Depending on the session you choose, your Spa Bali Moon therapist also massages the ankles and lower legs to ease muscle tightness connected to tired feet. Longer sessions of 1.5 or 2 hours give more time for the lower legs as well as the soles and heels."
               },
               {
                 "question": "Does a foot massage use strong pressure?",
@@ -264,15 +264,15 @@
               },
               {
                 "question": "Can I have a foot massage at my villa or hotel?",
-                "answer": "Yes. Spa Bali Moon offers foot massage as home service at selected hotels, villas and accommodations around Seminyak, for an extra IDR 75.000 per therapist on top of the treatment price, from IDR 159.000 for 1 hour. Send your location and preferred time on WhatsApp at +62 878-6317-5144, between 9am and 11pm."
+                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen, oils and everything a foot massage needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. Send your location and preferred time on WhatsApp at +62 878-6317-5144, 9am to 11pm."
               },
               {
-                "question": "Does foot massage help neuropathy?",
+                "question": "Can a foot massage help my neuropathy?",
                 "answer": "Foot massage may help relieve discomfort and promote relaxation, but it does not treat the underlying cause of neuropathy. If you have reduced sensation in your feet, speak with a healthcare professional before booking a massage, and tell your Spa Bali Moon therapist before the session so the pressure can be kept gentle and comfortable."
               },
               {
-                "question": "Is foot massage good for plantar fasciitis?",
-                "answer": "Foot massage may help ease tension and discomfort associated with plantar fasciitis, and gentle massage of the soles and heels can be particularly soothing. It should not replace professional treatment when symptoms persist. Tell your Spa Bali Moon therapist where it hurts before the session, so they can keep the pressure comfortable."
+                "question": "Can I have a foot massage if I have plantar fasciitis?",
+                "answer": "Yes. Gentle massage of the soles and heels can ease tension and feel particularly soothing, but it does not replace professional treatment when symptoms persist. Tell your Spa Bali Moon therapist where it hurts before the session, so they can keep the pressure comfortable."
               },
               {
                 "question": "Can I get a foot massage while pregnant?",
@@ -280,18 +280,18 @@
               },
               {
                 "question": "Why does a foot massage feel so good?",
-                "answer": "A foot massage can feel good because it relaxes tense muscles, stimulates the feet and promotes a sense of calm. The combination of gentle pressure, warm natural oils and soothing movements can also help reduce everyday stress. At Spa Bali Moon in Seminyak, a 1-hour foot massage is IDR 159.000 per person."
+                "answer": "A foot massage can feel good because it relaxes tense muscles, stimulates the feet and promotes a sense of calm. The combination of gentle pressure, warm natural oils and soothing movements can also help reduce everyday stress."
               },
               {
                 "question": "How much does a foot massage cost in Seminyak?",
-                "answer": "A foot massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. For a shorter session, 30 minutes of foot reflexology is IDR 99.000. Home service at selected hotels and villas adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "A foot massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. For a shorter session, 30 minutes of foot reflexology is IDR 99.000. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "How long does a foot massage take?",
                 "answer": "A foot massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my foot massage?",
                 "answer": "Yes. Tell us your preference when you book your foot massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -310,7 +310,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Give More Than Your Feet a Break",
+            "title": "Treatments to Pair with a Foot Massage",
             "embedded": true,
             "related": [
               "/seminyak/foot-reflexology/",
@@ -333,9 +333,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/footmassage/footmassage-11.webp",
-            "title": "Give Your Feet the Attention They Rarely Receive",
-            "text": "Your feet carry every walk and every adventure. A dedicated Foot Massage eases the tension they collect and leaves each step lighter. At our spa, or at your villa or hotel.",
-            "closingText": "Reserve your session and step back into your day feeling lighter."
+            "title": "Ease Tired Feet After a Day in Bali",
+            "text": "After a day of walking, a foot massage eases the tension your feet collect. At our spa, or at your villa or hotel.",
+            "closingText": "Reserve your foot massage on WhatsApp, 9am to 11pm."
           }
         }
       ]

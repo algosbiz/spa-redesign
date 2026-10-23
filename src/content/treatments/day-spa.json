@@ -17,7 +17,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Spa Bali Moon is a day spa in Seminyak, at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm. In one visit you can combine a massage with a facial, body scrub, cream bath, reflexology or a manicure and pedicure, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 299.000 per person.",
+        "text": "Spa Bali Moon is a day spa in Seminyak, at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm. In one visit you can combine a massage with a facial, body scrub, cream bath, reflexology or a manicure and pedicure, in a private room. Treatments start at IDR 69.000 per person, and spa packages at IDR 299.000 per person.",
         "items": [
           {
             "label": "What it is",
@@ -47,7 +47,7 @@
       "props": {
         "subTitle": "",
         "title": "What Is a Day Spa?",
-        "text": "A day spa visit gives you time to enjoy more than one form of care without having to rush from one appointment to the next. At Spa Bali Moon, a visit can include a traditional Balinese massage, facial, body scrub, Cream Bath, reflexology, or beauty service depending on what you are looking for.",
+        "text": "A day spa is a spa you visit for a few hours, with no overnight stay, to have one or several treatments without rushing between appointments. At Spa Bali Moon, a visit can include a Balinese massage, facial, body scrub, cream bath, reflexology or a manicure and pedicure.",
         "feature1Title": "Care from Head to Toe",
         "feature1Text": "Choose from massage, skin care, body treatments, hair care, and beauty services during one visit.",
         "feature2Title": "Made Around Your Time",
@@ -90,18 +90,18 @@
           "props": {
             "subTitle": "",
             "title": "Ways to Spend Your Day at the Spa",
-            "text": "There is no single way to enjoy a day spa in Seminyak. A guest recovering from a long flight may begin with a gentle massage, while someone preparing for a special occasion may prefer to focus on skin and beauty care.",
+            "text": "After a long flight you might start with a gentle massage; before a special occasion, you might focus on skin and beauty care.",
             "featuresLeft": [
-              "Balinese Massage for traditional full-body care",
-              "Aromatherapy Massage for gentle relaxation with essential oils",
-              "Sport and Deep Tissue Massage for tired or tight muscles",
-              "Body Scrub to refresh and smooth the skin"
+              "Balinese massage for traditional full-body care",
+              "Aromatherapy massage for gentle relaxation with essential oils",
+              "Sports and deep tissue massage for tired or tight muscles",
+              "Body scrub to refresh and smooth the skin"
             ],
             "featuresRight": [
               "Facials to cleanse and care for the complexion",
-              "Cream Bath for the hair, scalp, and a soothing head massage",
-              "Foot Reflexology for focused pressure-point care",
-              "Manicure and Pedicure for polished hands and feet"
+              "Cream bath for the hair, scalp, and a soothing head massage",
+              "Foot reflexology for focused pressure-point care",
+              "Manicure and pedicure for polished hands and feet"
             ],
             "buttonText": "Book Now",
             "buttonLink": "https://wa.me/6287863175144",
@@ -122,7 +122,6 @@
         "text": "Giving yourself more than an hour allows different types of care to work together. A massage can help your body release physical tension, while a facial or body scrub brings attention to the skin.",
         "featuresLeft": [
           "More time to relax during your holiday",
-          "Multiple treatments in one visit",
           "Massage, body care, facials, and beauty treatments"
         ],
         "featuresRight": [
@@ -147,7 +146,7 @@
           "type": "AboutSplit",
           "props": {
             "title": "Skilled Therapists in a Comfortable Seminyak Space",
-            "text": "Our therapists are trained to deliver treatments with attention and care, adjusting each session to your body's condition. Located in the heart of Seminyak, Spa Bali Moon offers a calm and welcoming environment with private rooms, including spaces for couples — plus home service options so you can enjoy our day spa in your villa or hotel.",
+            "text": "Our therapists adjust every treatment to how your body feels on the day. Spa Bali Moon has been in Seminyak since 2009, with calm private rooms, including rooms for couples, and the same therapists also come to villas and hotels.",
             "featuresLeft": [
               "Trained, attentive therapists",
               "Traditional & modern techniques",
@@ -215,11 +214,11 @@
         "items": [
           {
             "question": "What does a day spa in Seminyak usually include?",
-            "answer": "A day spa visit usually includes one or more services such as massage, facial care, body scrubs, Cream Bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 299.000."
+            "answer": "A day spa visit usually includes one or more services such as massage, facial care, body scrubs, cream bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room."
           },
           {
             "question": "How many hours should I spend at a day spa?",
-            "answer": "There is no fixed duration. At Spa Bali Moon in Seminyak, a single treatment may take around 1 to 1.5 hours, while several services can be arranged into a longer visit lasting a few hours. Spa packages from IDR 299.000 per person combine two or three treatments in one visit."
+            "answer": "Plan on 1 to 1.5 hours for a single treatment at Spa Bali Moon, or a few hours if you combine several. Spa packages combine two or three treatments in one visit."
           },
           {
             "question": "Can I choose my own treatments for a day spa visit?",
@@ -227,15 +226,15 @@
           },
           {
             "question": "Which spa treatment is best after a flight?",
-            "answer": "A relaxing full-body massage, such as a Balinese massage (IDR 159.000 per person for 1 hour), is often a good place to begin after a flight. Depending on how you feel, you can follow it with a facial, body scrub, Cream Bath or foot treatment for a longer visit at Spa Bali Moon."
+            "answer": "A relaxing full-body massage, such as a Balinese massage, is often a good place to begin after a flight. Depending on how you feel, you can follow it with a facial, body scrub, cream bath or foot treatment for a longer visit at Spa Bali Moon."
           },
           {
             "question": "Can I book a day spa at my hotel or villa?",
-            "answer": "Yes, for selected treatments. Spa Bali Moon arranges home service at hotels and villas in Seminyak and nearby areas, and our therapists bring the equipment required for the services in your booking. Prices match our spa menu, plus IDR 75.000 per therapist in the Seminyak area. Send your treatments, location, date and time on WhatsApp."
+            "answer": "Yes, for selected treatments. Spa Bali Moon arranges home service at hotels and villas in Seminyak and nearby areas, and our therapists bring fresh linen, oils and everything your treatments need. Prices match our spa menu, plus IDR 75.000 per therapist in the Seminyak area. Send your treatments, location, date and time on WhatsApp."
           },
           {
             "question": "Do I need to book a day spa in advance?",
-            "answer": "Booking in advance is recommended, especially at weekends, on holidays and during busy periods in Seminyak, as it helps Spa Bali Moon arrange your preferred treatments and appointment time. Book on WhatsApp at +62 878-6317-5144; we are open daily from 9am to 11pm at Jl. Pangkung Sari No. 30, Seminyak."
+            "answer": "Booking in advance is recommended, especially at weekends, on holidays and during busy periods in Seminyak, as it helps Spa Bali Moon arrange your preferred treatments and appointment time. Book on WhatsApp at +62 878-6317-5144."
           },
           {
             "question": "How do I book home service for a day spa?",
@@ -243,14 +242,14 @@
           },
           {
             "question": "How much does a day spa package cost in Seminyak?",
-            "answer": "Spa packages at Spa Bali Moon in Seminyak start at IDR 299.000 per person. The Balinese massage packages, IDR 399.000 to IDR 549.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area."
+            "answer": "Spa packages at Spa Bali Moon in Seminyak start at IDR 299.000 per person. The Balinese massage packages, IDR 379.000 to IDR 549.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area."
           },
           {
             "question": "Where is Spa Bali Moon and when is it open?",
-            "answer": "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Seminyak, Bali, and is open daily from 9am to 11pm. A day spa in Seminyak since 2009, it has private rooms, including rooms for couples, and offers home service at your villa or hotel. Book on WhatsApp at +62 878-6317-5144."
+            "answer": "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Seminyak, Bali, and is open daily from 9am to 11pm. A day spa in Seminyak since 2009, it has private rooms, including rooms for couples, and offers home service at your villa or hotel."
           },
           {
-            "question": "Can I ask for a female or male therapist?",
+            "question": "Can I ask for a female or male therapist for my day spa visit?",
             "answer": "Yes. Tell us your preference when you book your day spa visit on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
           }
         ],
@@ -264,7 +263,7 @@
         "bottomSpacing": 100,
         "title": "Leave Room in Your Bali Holiday for Yourself",
         "text": "Seminyak fills a day quickly. A few hours at Spa Bali Moon is a reason to slow down: choose a massage, add body or beauty care, and leave feeling rested.",
-        "closingText": "Visit Spa Bali Moon in Seminyak or arrange selected services at your hotel, villa, or private accommodation through our home service.",
+        "closingText": "Choose your treatments and how long to stay.",
         "backgroundImage": "/images/services/dayspaseminyak/dayspa-8.webp"
       }
     },

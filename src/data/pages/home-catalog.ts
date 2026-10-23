@@ -39,7 +39,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/sunburn-massage/",
     image: "/images/listmenu/aloeveramassage.webp",
-    desc: "A cooling full-body massage that soothes the skin and supports gentle recovery.",
+    desc: "A cooling full-body massage with aloe vera that soothes sun-warmed skin.",
     options: [
       { label: "1 Hour", price: "IDR 250.000" },
     ],
@@ -81,7 +81,7 @@ export const catalog: CatalogItem[] = [
     benefits: [
       "Boosts natural glow",
       "Improves skin smoothness and elasticity",
-      "Deeply moisturizes",
+      "Deeply moisturises",
       "Revives overall skin vitality",
     ],
     options: [
@@ -158,7 +158,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/anti-cellulite-massage/",
     image: "/images/treatments/cards/cellulitemassage-warm.webp",
-    desc: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
+    desc: "A firm, targeted full-body massage that leaves the skin feeling smooth.",
     options: [
       { label: "1 Hour", price: "IDR 350.000" },
       { label: "1.5 Hours", price: "IDR 520.000" },
@@ -201,7 +201,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 639.000", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 625.000", details: ["30 Minutes Ear Candle"] },
     ],
   },
   {
@@ -213,7 +213,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 709.000", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 699.000", details: ["1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -225,7 +225,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 849.000", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 845.000", details: ["30 Minutes Ear Candle"] },
     ],
   },
   {
@@ -237,7 +237,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 929.000", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 919.000", details: ["1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -274,7 +274,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/deep-tissue-massage/",
     image: "/images/listmenu/deeptissuemassage.webp",
-    desc: "A focused full-body massage using deeper pressure to release knots and improve mobility.",
+    desc: "A focused full-body massage using deeper pressure to ease knots and tight muscles.",
     options: [
       { label: "1 Hour", price: "IDR 269.000" },
       { label: "1.5 Hours", price: "IDR 359.000" },
@@ -346,7 +346,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/contact/",
     image: "/images/listmenu/fourhandmassage.webp",
-    desc: "A synchronized full-body massage delivered by two therapists working in harmony.",
+    desc: "A synchronised full-body massage delivered by two therapists working in harmony.",
     options: [
       { label: "1 Hour", price: "IDR 339.000" },
       { label: "1.5 Hours", price: "IDR 499.000" },
@@ -401,7 +401,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/contact/",
     image: "/images/listmenu/herbalmassage.webp",
-    desc: "A comforting full-body massage with herbal ingredients to support relaxation and circulation.",
+    desc: "A comforting full-body massage with herbal ingredients for deep relaxation.",
     options: [
       { label: "1 Hour", price: "IDR 199.000" },
       { label: "2 Hours", price: "IDR 399.000" },
@@ -413,7 +413,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/hot-stone-massage/",
     image: "/images/listmenu/hotstonemassage.webp",
-    desc: "A soothing full-body massage using heated stones to relax muscles and support circulation.",
+    desc: "A soothing full-body massage using heated stones to warm and relax tired muscles.",
     options: [
       { label: "1 Hour", price: "IDR 250.000" },
       { label: "1.5 Hours", price: "IDR 380.000" },
@@ -426,7 +426,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/lymphatic-drainage-massage/",
     image: "/images/treatments/cards/lymphaticmassage-warm.webp",
-    desc: "A gentle full-body massage that supports drainage and healthy circulation.",
+    desc: "A gentle full-body massage with light, rhythmic strokes that leaves the body feeling lighter.",
     options: [
       { label: "1 Hour", price: "IDR 300.000" },
       { label: "1.5 Hours", price: "IDR 440.000" },
@@ -444,8 +444,8 @@ export const catalog: CatalogItem[] = [
       { label: "Manicure & Pedicure", price: "IDR 238.000" },
       { label: "Manicure", price: "IDR 99.000" },
       { label: "Pedicure", price: "IDR 139.000" },
-      { label: "Nail Color Feet & Hands", price: "IDR 138.000" },
-      { label: "Nail Color Feet or Hands", price: "IDR 69.000" },
+      { label: "Nail Colour Feet & Hands", price: "IDR 138.000" },
+      { label: "Nail Colour Feet or Hands", price: "IDR 69.000" },
       { label: "Nail Remover Feet & Hands", price: "IDR 98.000" },
       { label: "Nail Gel Feet & Hands", price: "IDR 438.000" },
       { label: "Nail Gel Feet or Hands", price: "IDR 219.000" },
@@ -483,7 +483,7 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/sport-massage/",
     image: "/images/listmenu/sportmassage.webp",
-    desc: "A targeted full-body massage to ease soreness, reduce stiffness, and support recovery.",
+    desc: "A targeted full-body massage to ease sore, stiff muscles after sport or a long day.",
     options: [
       { label: "1 Hour", price: "IDR 269.000" },
       { label: "1.5 Hours", price: "IDR 359.000" },

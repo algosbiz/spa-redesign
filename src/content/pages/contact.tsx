@@ -18,10 +18,10 @@ export default function ContactPage() {
       />
       <ContactSection
         formSubTitle="Get in Touch"
-        formTitle="How Can We Help?"
+        formTitle="Send Us a Message"
         infoSubTitle="Questions or Bookings"
         infoTitle="Let’s Arrange Your Visit"
-        infoText="Contact Spa Bali Moon to check availability, ask about treatments and packages, or arrange a massage and spa service at our Seminyak location or through selected home service options."
+        infoText="Message us on WhatsApp to check availability, ask about a treatment or package, or book at our Seminyak spa or at your villa or hotel."
         contactItems={[
           {
             icon: "fa-phone-plus",
@@ -31,11 +31,11 @@ export default function ContactPage() {
           },
           {
             icon: "fa-location-dot",
-            title: "Visit anytime",
-            text: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
+            title: "Visit us",
+            text: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan, Kuta Utara, Badung, Bali 80361",
           },
           // Hours confirmed as 9am–11pm, as on every other page (copy rewrite, 15 Oct; was 22:00).
-          { icon: "fa-clock", title: "Opening Times", text: "Open Daily: 9:00 - 23:00" },
+          { icon: "fa-clock", title: "Opening Times", text: "Open daily 9am–11pm" },
         ]}
       />
     </div>

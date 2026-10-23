@@ -59,7 +59,7 @@ export default function MassageKutaPage() {
         titleSpan="Massage in Kuta, Bali:"
         // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
         title="Outcall to Your Hotel or Villa"
-        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
+        text="In Kuta, a Spa Bali Moon therapist comes to your hotel, villa or home from our spa in Seminyak, usually a 30 to 50-minute drive. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
         image="/images/banners/massage-kuta.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/massage-kuta-wide-sm.webp"
@@ -99,7 +99,7 @@ export default function MassageKutaPage() {
         ]}
         featuresRight={[
           "Lymphatic Massage for gentle, light-pressure care",
-          "Bali Moon Facial for cleansing and skin refreshment",
+          "Couple Massage for shared relaxation",
           "Head Massage for scalp, neck, and shoulder tension",
           "Foot Reflexology for pressure-point foot care",
         ]}
@@ -120,8 +120,7 @@ export default function MassageKutaPage() {
         ]}
         featuresRight={[
           "Manicure and Pedicure for hands and feet",
-          "Couple Massage for shared relaxation",
-          "Selected treatments available at hotels and villas",
+          "Ear Candle for gentle relaxation",
         ]}
         buttonText="Book Now"
         buttonLink="https://wa.me/6287863175144"
@@ -133,7 +132,7 @@ export default function MassageKutaPage() {
         // No small heading: without one the section showed the default "About".
         subTitle=""
         title={<>Booking a Massage in Kuta</>}
-        text="Just share your Kuta hotel or address and a preferred time. Our friendly team will confirm quickly and send a therapist ready to help you relax."
+        text="Send your Kuta hotel or villa address and preferred time on WhatsApp. We confirm the total, including IDR 150.000 per therapist, and your therapist's arrival time."
         featuresLeft={["Same-day appointments", "Flexible timing", "Quick WhatsApp booking"]}
         featuresRight={["Clear, honest pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagekuta/massagekuta-6.webp"
@@ -151,8 +150,8 @@ export default function MassageKutaPage() {
       <ReserveCta
         standardSpacing
         title="Take Time to Feel Better in Kuta"
-        text="When the pace catches up with you, a professional massage is a welcome pause. Traditional Balinese therapies, targeted recovery work, and relaxing beauty treatments."
-        closingText="Visit us for your treatment or ask about selected home service options at your hotel or villa in nearby areas."
+        text="When the pace catches up with you, a massage at your hotel or villa is a welcome pause: Balinese massage, sports massage after surfing, or a facial."
+        closingText="Our therapists come to hotels, villas and homes across Kuta for IDR 150.000 per therapist, or you can visit our spa in Seminyak."
         backgroundImage="/images/services/massagekuta/massagekuta-8.webp"
       />
       <ServiceSlider

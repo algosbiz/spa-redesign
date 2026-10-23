@@ -15,8 +15,8 @@
 | PRICE-05 | 🟠 | Traditional Massage 30 min option missing on its own page | REQUIRES MANUAL REVIEW |
 | PRICE-06 | 🟢 | Live prices changed after migration: Aromatherapy, Cellulite, Hot Stone Massage and six packages | RESOLVED (updated to the live values, 2026-09-25) |
 | PRICE-07 | 🟢 | Live /seminyak/ and /outcall-home-service-massage/ changed again: Waxing Brazilian price, six descriptions, Balinese Massage Packages added, Couple Packages tab | RESOLVED (updated to the live values, 2026-09-26) |
-| DUR-01 | 🔴 | Couple Warm Candle top tier: 2 Hours vs 2.5 Hours | REQUIRES MANUAL REVIEW |
-| DUR-02 | 🔴 | Couple Package total durations | REQUIRES MANUAL REVIEW |
+| DUR-01 | 🔴 | Couple Warm Candle top tier: 2 Hours vs 2.5 Hours | ✅ RESOLVED: 2 Hours on every page (owner, 2026-10-23) |
+| DUR-02 | 🔴 | Couple Package total durations | ✅ RESOLVED: written as on the price list, e.g. "1 Hour Balinese Massage + 30 Mins Ear Candle" (owner, 2026-10-23) |
 | DUR-03 | 🟢 | Ear Candle duration wording | REQUIRES MANUAL REVIEW |
 | HOURS-01 | 🔴 | Opening hours: 9am–11pm vs 9:00–22:00 | REQUIRES MANUAL REVIEW |
 | ADDR-01 | 🔴 | Street name spelling: Pangkung vs Panggung | REQUIRES MANUAL REVIEW |

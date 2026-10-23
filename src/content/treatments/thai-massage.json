@@ -58,7 +58,7 @@
         "secondaryImage": "/images/services/thaimassage/thaimassage-3.webp",
         "subTitle": "",
         "title": "What Is Thai Massage?",
-        "text": "Traditional Thai Massage is an ancient wellness technique that combines rhythmic pressure, assisted stretching, and controlled body movements to improve flexibility and ease physical tension. Unlike oil-based massage styles that focus mainly on flowing strokes, Thai Massage uses guided stretches and pressure points to encourage better mobility, body awareness, and overall relaxation.",
+        "text": "Thai massage is a traditional oil-free massage that combines rhythmic pressure with assisted stretching to ease stiffness and help you move more freely. Instead of long strokes with oil, your therapist works with pressure points and guided stretches while you stay in comfortable clothes.",
         "feature1Title": "Assisted Stretching",
         "feature1Text": "Uses guided movements inspired by traditional Thai techniques to help improve flexibility.",
         "feature2Title": "Pressure Point Focus",
@@ -83,10 +83,10 @@
             ],
             "subTitle": "",
             "title": "Thai Massage Packages in Seminyak",
-            "text": "Enjoy a complete Thai Massage experience combined with other relaxing treatments at Spa Bali Moon. Each package is created to provide a balanced wellness session, combining traditional Thai techniques with facial, nail, and body treatments.",
+            "text": "Each package starts with a 1-hour Thai massage and adds a Bali Moon Facial, a manicure, a cream bath or a body scrub.",
             "packages": [
               {
-                "price": "IDR 549.000",
+                "price": "IDR 539.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -96,7 +96,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 649.000",
+                "price": "IDR 609.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -106,7 +106,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 449.000",
+                "price": "IDR 445.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -160,7 +160,7 @@
                   ],
                   "subTitle": "",
                   "title": "Thai Massage Duration Options",
-                  "text": "Thai Massage combines assisted stretching with pressure techniques to support flexibility and ease areas that feel tight from daily movement or travel. Longer sessions allow more time to work through the body and spend extra attention on areas that need it most.",
+                  "text": "Choose 30 minutes for a few tight spots, 1 hour for a full-body session, or 1.5 hours for more time on stretching and mobility.",
                   "icon": "/images/spa/thai.svg"
                 }
               }
@@ -211,7 +211,7 @@
         "image": "/images/services/thaimassage/thaimassage-8.webp",
         "subTitle": "",
         "title": "Stretching and Pressure, No Oil",
-        "text": "Thai Massage takes a more active approach than many traditional relaxation massages. Instead of relying mainly on flowing strokes, our treatment combines hands-on pressure with guided stretching to create a more dynamic experience. Guests may choose Thai Massage for reasons such as:",
+        "text": "Thai massage is a more active treatment than a relaxation massage. Guests often choose it for reasons such as:",
         "featuresLeft": [
           "Helps ease stiffness from daily activities",
           "Supports easier movement and flexibility",
@@ -245,7 +245,7 @@
         "image": "/images/services/thaimassage/thaimassage-9.webp",
         "subTitle": "",
         "title": "A Full-Body Treatment",
-        "text": "Thai Massage takes a full-body approach, with our therapist moving between different areas throughout the session. The focus can be adjusted according to your comfort and the parts of the body that need more attention. Common focus areas are:",
+        "text": "A Thai massage covers the whole body, and your therapist can spend more time on the areas that need it. Common focus areas are:",
         "featuresLeft": [
           "Back and shoulders affected by long sitting",
           "Neck area with daily posture tension",
@@ -267,15 +267,15 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/thaimassage/thaimassage-10.webp",
         "subTitle": "",
-        "title": "How Does Traditional Thai Massage Work?",
-        "text": "Traditional Thai Massage follows a structured approach that combines pressure and guided movement rather than continuous oil-based strokes. Our therapist works through the body at a steady pace, adapting the techniques throughout the session to create a comfortable balance between passive movement and relaxation. The treatment may involve:",
+        "title": "How Thai Massage Works",
+        "text": "Your therapist works through the body at a steady pace, adjusting pressure and stretches to what feels comfortable. A session may include:",
         "featuresLeft": [
           "Uses hands, thumbs, palms, and elbows for pressure",
           "Includes Thai-inspired assisted stretching",
-          "Performed without oil for better control"
+          "Performed without oil"
         ],
         "featuresRight": [
-          "Focuses on flexibility and alignment",
+          "Focuses on flexibility and stiff areas",
           "Adjusted to your comfort level",
           "Balances relaxation and active bodywork"
         ],
@@ -303,19 +303,19 @@
             "items": [
               {
                 "question": "What is traditional Thai massage?",
-                "answer": "Traditional Thai Massage is an oil-free bodywork technique that combines pressure, assisted stretching and movement to improve body comfort, flexibility and relaxation. At Spa Bali Moon in Seminyak, the therapist uses hands, thumbs, palms and elbows for pressure while guiding you through stretches. Sessions run 30 minutes, 1 hour or 1.5 hours, from IDR 133.000 per person."
+                "answer": "Traditional Thai massage is an oil-free massage that combines pressure, assisted stretching and movement to ease stiffness and help you relax. At Spa Bali Moon in Seminyak, the therapist uses hands, thumbs, palms and elbows for pressure while guiding you through stretches. Sessions run 30 minutes, 1 hour or 1.5 hours."
               },
               {
                 "question": "Is Thai massage suitable for beginners?",
-                "answer": "Yes. Beginners can enjoy Thai Massage at Spa Bali Moon because our therapists adjust the intensity and stretching movements to your comfort level. Wear comfortable clothing you can move in, as the oil-free massage includes stretching. Sessions are 30 minutes (IDR 133.000), 1 hour (IDR 259.000) or 1.5 hours (IDR 379.000) per person."
+                "answer": "Yes. Beginners can enjoy a Thai massage at Spa Bali Moon because our therapists adjust the intensity and stretching movements to your comfort level."
               },
               {
                 "question": "What should I wear for a Thai massage?",
-                "answer": "Wear comfortable clothing you can move in, because Thai Massage at Spa Bali Moon includes stretching and guided movements. Unlike oil massage, it is performed without oil and does not require direct skin contact for the entire session. The same applies at our Seminyak spa and when you book home service at your villa or hotel."
+                "answer": "Wear comfortable clothing you can move in, because a Thai massage at Spa Bali Moon includes stretching and guided movements. No oil is used and you stay in your clothes, at our Seminyak spa and at your villa or hotel."
               },
               {
                 "question": "Is Thai massage good after a long flight?",
-                "answer": "Yes. Many travellers choose Thai Massage at Spa Bali Moon after long journeys because the stretching techniques can help the body feel less restricted and more comfortable. Your therapist can focus on areas that feel stiff after travelling, such as the back and shoulders. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "Yes. Many travellers choose a Thai massage at Spa Bali Moon after long journeys because the stretching techniques can help the body feel less restricted and more comfortable. Your therapist can focus on areas that feel stiff after travelling, such as the back and shoulders."
               },
               {
                 "question": "Is Thai massage dangerous?",
@@ -327,11 +327,11 @@
               },
               {
                 "question": "Can I combine Thai massage with other treatments?",
-                "answer": "Yes. Spa Bali Moon has four Thai Massage packages, each including 1 hour of Thai Massage. Package C adds a Bali Moon Facial (IDR 449.000), Package A a facial and manicure (IDR 549.000), Package D a cream bath and body scrub (IDR 539.000), and Package B a cream bath and facial (IDR 649.000), all per person."
+                "answer": "Yes. Spa Bali Moon has four Thai massage packages, each including 1 hour of Thai massage. Package C adds a Bali Moon Facial (IDR 445.000), Package A a facial and manicure (IDR 539.000), Package D a cream bath and body scrub (IDR 539.000), and Package B a cream bath and facial (IDR 609.000), all per person."
               },
               {
                 "question": "How much does Thai massage cost in Seminyak?",
-                "answer": "IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. Thai Massage packages with a facial, manicure, cream bath or body scrub cost IDR 449.000 to IDR 649.000 per person."
+                "answer": "IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. Thai massage packages with a facial, manicure, cream bath or body scrub cost IDR 445.000 to IDR 609.000 per person."
               },
               {
                 "question": "How long is a Thai massage?",
@@ -350,7 +350,7 @@
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my Thai massage?",
                 "answer": "Yes. Tell us your preference when you book your Thai massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -392,9 +392,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/thaimassage/thaimassage-12.webp",
-            "title": "Increase Your Flexibility with Traditional Thai Massage at Spa Bali Moon",
-            "text": "Traditional Thai Massage combines rhythmic pressure with assisted stretching to ease stiffness and bring movement back, welcome after long flights or active days. At our spa, or at your villa.",
-            "closingText": "Reserve your Thai Massage package and move through Bali feeling lighter."
+            "title": "Ease Stiffness with a Traditional Thai Massage at Spa Bali Moon",
+            "text": "Traditional Thai massage combines rhythmic pressure with assisted stretching to ease stiffness and bring movement back, welcome after long flights or active days. At our spa, or at your villa.",
+            "closingText": "Reserve your Thai massage and move through Bali feeling lighter."
           }
         }
       ]
