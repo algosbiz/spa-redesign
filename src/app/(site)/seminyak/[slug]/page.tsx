@@ -4,7 +4,10 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { homeServiceLines } from "@/data/homeServiceLines";
+import { pricelistPage } from "@/data/pages/pricelist";
+import { priceList, priceOf } from "@/data/pricelist";
 import { treatments } from "@/data/treatments";
+import { priceValue, withDots } from "@/lib/price";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -22,7 +25,7 @@ import { appendChild, faqItems, insertBefore, withProps, type TreeNode } from "@
 type Props = { params: Promise<{ slug: string }> };
 
 /**
- * How the "Visit us" heading ("Where Can I Book … in Seminyak?") and the
+ * How the "Visit us" heading ("Book … in Seminyak") and the
  * Service data name a treatment, where its menu name does not read well there.
  */
 const NAMES: Record<string, { heading: string; service: string }> = {
@@ -57,6 +60,47 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
     leftShapeSrc: "/images/shape/banner-three-shape.png",
     rightShapeSrc: "/images/shape/service-four-shape-right.png",
   },
+};
+
+const tile = (length: string, id: string, option: string) => ({ length, amount: withDots(priceOf(id, option)) });
+
+/**
+ * Banner prices for the pages whose quick facts do not write them as
+ * "length IDR amount · …" (owner, 22 Oct: every treatment banner shows its
+ * prices), from the price list so they change with it. These pages keep the
+ * price line in their quick facts: it says more (the scrub's seven scents,
+ * all seven waxing prices). The day spa shows the lowest treatment and the
+ * lowest one-guest package (Mani Pedi Package C, IDR 299.000 on 22 Oct).
+ */
+const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
+  "body-scrub": [
+    tile("Body scrub", "body-scrub", "Body Massage & Scrub · Start From"),
+    tile("Extra body mask", "body-scrub", "Additional Body Mask"),
+  ],
+  creambath: [tile("Cream bath", "cream-bath", "Ginseng"), tile("L'Oreal cream bath", "cream-bath", "L'Oreal")],
+  "ear-candle": [tile("30 minutes", "ear-candle", "30 Minutes")],
+  "sunburn-massage": [tile("1 hour", "aloe-vera-massage", "1 Hour")],
+  "waxing-salon": [
+    tile("Under arms", "waxing", "Under Arms"),
+    tile("Full legs", "waxing", "Full Legs"),
+    tile("Brazilian", "waxing", "Waxing Brazilian"),
+  ],
+  "day-spa": [
+    {
+      length: "Treatments from",
+      amount: withDots(Math.min(...priceList.flatMap((item) => item.options.map((option) => option.price)))),
+    },
+    {
+      length: "Spa packages from",
+      amount: withDots(
+        Math.min(
+          ...pricelistPage.packageGroups
+            .filter((group) => !group.twoPax)
+            .flatMap((group) => group.packages.map((pack) => priceValue(pack.price))),
+        ),
+      ),
+    },
+  ],
 };
 
 /*
@@ -151,12 +195,13 @@ export default async function TreatmentPage({ params }: Props) {
   // The banner shows the session prices when the quick facts list them;
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
+  const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
-      banner
+      prices
         ? withProps(content.tree, "PageBanner", {
-            prices: banner.prices,
+            prices,
             // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
             priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
           })

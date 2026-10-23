@@ -225,8 +225,8 @@ export const homeServicePage = {
         text: "Every appointment is prepared with clean linens, sanitised equipment, and quality massage oils for a safe and comfortable experience.",
       },
       {
-        title: "Full Spa Setup Provided to You",
-        text: "Therapists bring the massage setup, towels, oils, and treatment essentials, so you do not need to prepare equipment before the session.",
+        title: "Linen, Oils & Essentials Brought to You",
+        text: "Therapists bring fresh linen, towels, oils, and treatment essentials, so you do not need to prepare equipment before the session.",
       },
       {
         title: "On-Time & Reliable Service",
@@ -241,8 +241,7 @@ export const homeServicePage = {
         text: "Send your preferred treatment, time, number of guests, and location through WhatsApp, and our team will confirm the booking details.",
       },
     ],
-    // TODO FEE-01: see migration-audit.md
-    feeNote: { before: "Home service fee: ", highlight: "IDR 75.000", after: " per therapist" },
+    feeNote: { before: "Home service fee: ", highlight: "IDR 75.000", after: " per therapist in the Seminyak area" },
   },
   faq: {
     heading: "Home Service Massage",
@@ -254,11 +253,11 @@ export const homeServicePage = {
       },
       {
         question: "Do I need to prepare anything?",
-        answer: "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres and a bedroom, terrace, or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
+        answer: "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare. If you have a preference for where the session takes place, tell us when you book.",
       },
       {
         question: "What does the therapist bring?",
-        answer: "A portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
+        answer: "Freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
       },
       {
         question: "How long does setup take?",

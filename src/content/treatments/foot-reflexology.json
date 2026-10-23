@@ -167,7 +167,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Focus",
+        "badgeBottomText": "Reflex points on the feet"
       }
     },
     {
@@ -185,7 +187,7 @@
         },
         "image": "/images/services/footreflexology/footreflexology-8.webp",
         "subTitle": "",
-        "title": "Where Does Foot Reflexology Focus?",
+        "title": "Reflex Points on the Feet",
         "text": "Foot Reflexology uses focused pressure on specific areas of the feet based on traditional reflexology principles. Rather than applying the same pressure everywhere, we work through different zones to create a balanced and comfortable treatment. Our session may focus on:",
         "featuresLeft": [
           "Toes and forefoot reflex points",
@@ -209,7 +211,7 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footreflexology/footreflexology-9.webp",
         "subTitle": "",
-        "title": "What Is a Foot Reflexology Session Like?",
+        "title": "What a Reflexology Session Is Like",
         "text": "A Foot Reflexology session follows a gentle, structured approach that combines warm-up movements with focused pressure on selected reflex points. The therapist adjusts the technique throughout the treatment to keep the pressure comfortable while maintaining a steady rhythm. The session typically involves:",
         "featuresLeft": [
           "Gentle warm-up techniques",
@@ -261,11 +263,11 @@
               },
               {
                 "question": "Is home service available?",
-                "answer": "Yes. Foot reflexology from Spa Bali Moon is available at our Seminyak spa and at selected villas and hotels throughout Seminyak and nearby areas. Home service adds IDR 75.000 per therapist to the treatment price, which starts at IDR 99.000 per person for 30 minutes. Book on WhatsApp at +62 878-6317-5144."
+                "answer": "Yes. Foot reflexology from Spa Bali Moon is available at our Seminyak spa and at selected villas and hotels throughout Seminyak and nearby areas. In the Seminyak area, home service adds IDR 75.000 per therapist to the treatment price, which starts at IDR 99.000 per person for 30 minutes. Book on WhatsApp at +62 878-6317-5144."
               },
               {
                 "question": "How much does foot reflexology cost in Seminyak?",
-                "answer": "Foot reflexology at Spa Bali Moon in Seminyak costs IDR 99.000 for 30 minutes, IDR 169.000 for 1 hour and IDR 239.000 for 1.5 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
+                "answer": "Foot reflexology at Spa Bali Moon in Seminyak costs IDR 99.000 for 30 minutes, IDR 169.000 for 1 hour and IDR 239.000 for 1.5 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
               }
             ]
           }

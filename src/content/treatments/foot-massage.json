@@ -154,7 +154,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/footmassage/footmassage-7.webp",
         "subTitle": "",
-        "title": "When Is a Foot Massage Most Helpful?",
+        "title": "When a Foot Massage Helps Most",
         "text": "A Foot Massage can be especially enjoyable when your feet have been working hard throughout the day. Whether you've spent hours exploring Bali, standing for long periods, or travelling, a dedicated foot treatment gives tired feet focused attention. It can be particularly helpful after situations such as:",
         "featuresLeft": [
           "Tired feet after sightseeing or exploring",
@@ -168,7 +168,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Ideal after",
+        "badgeBottomText": "Long days on your feet"
       }
     },
     {
@@ -186,7 +188,7 @@
         },
         "image": "/images/services/footmassage/footmassage-8.webp",
         "subTitle": "",
-        "title": "Where Does Foot Massage Work?",
+        "title": "Areas We Focus On",
         "text": "A Foot Massage focuses on several areas of the feet and lower legs that can become tired or tense throughout the day. Each area receives focused attention to help create a more comfortable and relaxed feeling. The massage may focus on:",
         "featuresLeft": [
           "Soles that absorb daily impact",
@@ -282,7 +284,7 @@
               },
               {
                 "question": "How much does a foot massage cost in Seminyak?",
-                "answer": "A foot massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. For a shorter session, 30 minutes of foot reflexology is IDR 99.000. Home service at selected hotels and villas adds IDR 75.000 per therapist."
+                "answer": "A foot massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. For a shorter session, 30 minutes of foot reflexology is IDR 99.000. Home service at selected hotels and villas adds IDR 75.000 per therapist in the Seminyak area."
               }
             ]
           }

@@ -64,7 +64,7 @@
             "leftShapeSrc": "/images/shape/about-two-left.png",
             "rightShapeSrc": "/images/shape/about-two-right.png",
             "subTitle": "",
-            "title": "What Makes Balinese Massage Unique?",
+            "title": "What Is Balinese Massage?",
             "text": {
               "$jsx": {
                 "type": "Fragment",
@@ -251,7 +251,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
                 "rightShapeSrc": "/images/shape/about-right-shape.png",
                 "subTitle": "",
-                "title": "Why Guests Choose Balinese Massage",
+                "title": "Popular with Travellers and Office Workers",
                 "text": "Our Balinese massage is commonly chosen by travellers, office workers, and active individuals because it combines relaxation techniques with muscle-focused work in a single treatment. Find the benefits that make Balinese massage a favourite among our guests:",
                 "featuresLeft": [
                   "Helps reduce muscle tension",
@@ -265,7 +265,9 @@
                 ],
                 "buttonText": "Book Now",
                 "buttonLink": "https://wa.me/6287863175144",
-                "treatmentLayout": true
+                "treatmentLayout": true,
+                "badgeTopText": "Popular after",
+                "badgeBottomText": "Long flights & surfing"
               }
             }
           ]
@@ -291,7 +293,7 @@
                   }
                 },
                 "subTitle": "",
-                "title": "Who Is Balinese Massage Best For?",
+                "title": "Who It Suits",
                 "text": "This treatment is suitable for many different lifestyles and travel situations. Our therapists frequently recommend Balinese massage for guests looking for:",
                 "featuresLeft": [
                   "Travellers recovering from long flights",
@@ -401,7 +403,7 @@
                   },
                   {
                     "question": "How much does a Balinese massage cost in Seminyak?",
-                    "answer": "A Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Packages with a manicure and pedicure, cream bath or facial start at IDR 399.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist."
+                    "answer": "A Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Packages with a manicure and pedicure, cream bath or facial start at IDR 399.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
                   },
                   {
                     "question": "Which massage is best if I've never had one before?",
@@ -421,7 +423,7 @@
                   },
                   {
                     "question": "Can I have a Balinese massage at my villa or hotel?",
-                    "answer": "Yes. Spa Bali Moon offers the same Balinese massage as home service at your villa, hotel or private accommodation for an extra IDR 75.000 per therapist, on top of the treatment price from IDR 159.000 per person for 1 hour. Book on WhatsApp at +62 878-6317-5144, between 9am and 11pm daily."
+                    "answer": "Yes. Spa Bali Moon offers the same Balinese massage as home service at your villa, hotel or private accommodation for an extra IDR 75.000 per therapist in the Seminyak area, on top of the treatment price from IDR 159.000 per person for 1 hour. Book on WhatsApp at +62 878-6317-5144, between 9am and 11pm daily."
                   }
                 ]
               }
@@ -484,7 +486,7 @@
                 "standardSpacing": true,
                 "backgroundImage": "/images/services/balinesemassage/balinesemassage-12.webp",
                 "title": "Enjoy Balinese Massage Wherever You Stay",
-                "text": "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75.000 per therapist. Our therapists adjust the pressure to suit you, gentle through to firm.",
+                "text": "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Our therapists adjust the pressure to suit you, gentle through to firm.",
                 "closingText": "Reserve a session that fits your plans, in our spa or at your villa."
               }
             }

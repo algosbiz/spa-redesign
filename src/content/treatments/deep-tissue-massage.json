@@ -144,7 +144,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/deeptissuemassage/deeptissuemassage-6.webp",
         "subTitle": "",
-        "title": "Why Do People Get Deep Tissue Massage?",
+        "title": "When Deep Tissue Massage Helps",
         "text": "People often choose Deep Tissue Massage when they feel a regular massage doesn't focus enough on areas of persistent tension. It is particularly popular among active travellers, office workers, and people who regularly experience muscle tightness. Some of the main reasons to choose Deep Tissue Massage include:",
         "featuresLeft": [
           "Relieving the feeling of tight muscles",
@@ -158,7 +158,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Pressure",
+        "badgeBottomText": "Slow, firm & focused"
       }
     },
     {
@@ -176,7 +178,7 @@
         },
         "image": "/images/services/deeptissuemassage/deeptissuemassage-7.webp",
         "subTitle": "",
-        "title": "Which Parts of the Body Are Commonly Treated?",
+        "title": "Areas We Focus On",
         "text": "During a Deep Tissue Massage session, we typically focus on areas affected by posture, movement patterns, or physical activities. But depending on your needs, common areas that may receive focused attention include:",
         "featuresLeft": [
           "Shoulders and upper back from desk work or travel",
@@ -200,7 +202,7 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/deeptissuemassage/deeptissuemassage-8.webp",
         "subTitle": "",
-        "title": "How Does Deep Tissue Massage Work?",
+        "title": "How Deep Tissue Massage Works",
         "text": "We combine several manual techniques to address areas of muscle tension and stiffness. We also adjust the technique and pressure according to the treatment area, your needs, and your comfort level. Common techniques may include:",
         "featuresLeft": [
           "Sustained pressure for deeper muscle work",
@@ -268,7 +270,7 @@
               },
               {
                 "question": "How much does a deep tissue massage cost in Seminyak?",
-                "answer": "IDR 269.000 for 1 hour and IDR 359.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist. For two people, the Couple Deep Tissue Massage costs IDR 539.000 for 1 hour or IDR 719.000 for 1.5 hours."
+                "answer": "IDR 269.000 for 1 hour and IDR 359.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. For two people, the Couple Deep Tissue Massage costs IDR 539.000 for 1 hour or IDR 719.000 for 1.5 hours."
               }
             ]
           }

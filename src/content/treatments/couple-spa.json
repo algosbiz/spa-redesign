@@ -52,7 +52,7 @@
           },
           {
             "label": "Where",
-            "value": "A private room at Spa Bali Moon, Seminyak, or at your villa or hotel (IDR 75.000 per therapist, so IDR 150.000 for two)"
+            "value": "A private room at Spa Bali Moon, Seminyak, or at your villa or hotel (IDR 75.000 per therapist in the Seminyak area, so IDR 150.000 for two)"
           },
           {
             "label": "Booking",
@@ -311,7 +311,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
         "subTitle": "",
-        "title": "Why Is Couple Massage So Popular in Bali?",
+        "title": "Massage for Two, Side by Side",
         "text": "Couple Massage is popular in Bali because it offers couples a relaxing way to spend quality time together, whether they are celebrating a special occasion or taking a break during their holiday. Some of the main reasons include:",
         "featuresLeft": [
           "Popular for honeymoon trips",
@@ -325,7 +325,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Popular for",
+        "badgeBottomText": "Honeymoons & anniversaries"
       }
     },
     {
@@ -431,7 +433,7 @@
               },
               {
                 "question": "Can we have a couples massage at our villa or hotel?",
-                "answer": "Yes. For a couples massage at your villa or hotel, Spa Bali Moon sends two therapists to your accommodation so you can relax side by side. A home service fee of IDR 75.000 per therapist applies, so IDR 150.000 for two, on top of the treatment price from IDR 319.000 for two. Book on WhatsApp."
+                "answer": "Yes. For a couples massage at your villa or hotel, Spa Bali Moon sends two therapists to your accommodation so you can relax side by side. In the Seminyak area, a home service fee of IDR 75.000 per therapist applies, so IDR 150.000 for two, on top of the treatment price from IDR 319.000 for two. Book on WhatsApp."
               },
               {
                 "question": "What is included in a couples spa package?",

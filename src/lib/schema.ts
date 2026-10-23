@@ -207,11 +207,18 @@ export function homeServiceSchema({
         url,
         provider,
         areaServed: areas.map((area) => ({ "@type": "Place", name: `${area}, Bali` })),
+        // The fee depends on the area (business.homeService.zones): a range, not one price.
         offers: {
           "@type": "Offer",
           name: "Home service fee, per therapist",
-          price: amount(business.homeService.feePerTherapist),
-          priceCurrency: "IDR",
+          description:
+            "IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan; IDR 150.000 in Canggu, North Kuta and Kuta; confirmed on WhatsApp further out. Added to the treatment price.",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            minPrice: amount(business.homeService.feePerTherapist),
+            maxPrice: amount(business.homeService.feeOuterPerTherapist),
+            priceCurrency: "IDR",
+          },
           url,
           seller: provider,
         },

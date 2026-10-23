@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { leftLeafShape, rightLeafShape, isLeafShape } from "@/lib/leafShapes";
-import { learnMoreLabel } from "@/components/sections/learnMoreLabel";
+import { SplitBadge, SplitButton } from "@/components/sections/splitModern";
 import { LotusIcon } from "@/components/ui/Lotus";
-import Link from "next/link";
 import type { ReactNode } from "react";
 
 export type AboutSplitAltProps = {
@@ -107,23 +106,11 @@ export default function AboutSplitAlt({
                   float: "left",
                 }}
               >
-                {/* Without its badge the photo loses the notch the badge sat in. */}
-                <div className={showBadge ? "image-box" : "image-box image-box--plain"}>
+                {/* No notch for the badge: it floats on the photo as a card (splitModern.tsx). */}
+                <div className="image-box image-box--plain">
                   <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
                 </div>
-                {showBadge && (
-                  <div className="info info--gold">
-                    <p className="info-line">
-                      {badgeTopText || (
-                        <>
-                          <span className="count">17</span> <span>+</span>
-                          {" Years"}
-                        </>
-                      )}
-                    </p>
-                    <p className="info-line title">{badgeBottomText}</p>
-                  </div>
-                )}
+                {showBadge && <SplitBadge top={badgeTopText} bottom={badgeBottomText} />}
               </div>
             </div>
             <div className="col-lg-7 content-column">
@@ -165,18 +152,7 @@ export default function AboutSplitAlt({
                     ))}
                   </ul>
                 </div>
-                <Link
-                  href={buttonLink}
-                  className="btn-one mt-30 wow fadeInDown"
-                  data-wow-delay="400ms"
-                  data-wow-duration="1500ms"
-                >
-                  {buttonText ?? learnMoreLabel(buttonLink)}
-                  <span className="icon_box">
-                    <i className="fa-regular icon_first fa-arrow-right-long" />
-                    <i className="fa-regular icon_second fa-arrow-right-long" />
-                  </span>
-                </Link>
+                <SplitButton text={buttonText} link={buttonLink} />
               </div>
             </div>
           </div>

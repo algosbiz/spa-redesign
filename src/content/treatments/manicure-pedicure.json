@@ -256,7 +256,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/manicurepedicure/manicurepedicure-8.webp",
         "subTitle": "",
-        "title": "Why Is Regular Nail Care Important?",
+        "title": "Why Regular Nail Care Matters",
         "text": "Regular nail care is about more than keeping your hands and feet looking neat. Manicure & Pedicure treatments give attention to the nails, cuticles, and surrounding skin, helping maintain a clean and well-groomed appearance as part of your regular self-care routine. Regular care can help with:",
         "featuresLeft": [
           "Maintaining healthy-looking nails",
@@ -270,7 +270,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Care for",
+        "badgeBottomText": "Nails, cuticles & skin"
       }
     },
     {
@@ -312,7 +314,7 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/manicurepedicure/manicurepedicure-10.webp",
         "subTitle": "",
-        "title": "What Can You Expect During Your Appointment?",
+        "title": "What to Expect at Your Appointment",
         "text": "Our Manicure & Pedicure appointment follows a simple sequence, starting with an assessment of your nails and ending with the finish you have selected. The treatment is carried out step by step, with attention to keeping your nails and skin clean, comfortable, and well cared for. The appointment typically covers:",
         "featuresLeft": [
           "Consultation and nail assessment",
@@ -364,11 +366,11 @@
               },
               {
                 "question": "Can I book Manicure & Pedicure at my villa or hotel?",
-                "answer": "Yes. Spa Bali Moon therapists provide manicure and pedicure as professional home service throughout Seminyak and nearby areas, bringing all required equipment. Home service adds IDR 75.000 per therapist to the treatment price: IDR 99.000 for a manicure, IDR 139.000 for a pedicure or IDR 238.000 for both, per person. Book on WhatsApp."
+                "answer": "Yes. Spa Bali Moon therapists provide manicure and pedicure as professional home service throughout Seminyak and nearby areas, bringing all required equipment. In the Seminyak area, home service adds IDR 75.000 per therapist to the treatment price: IDR 99.000 for a manicure, IDR 139.000 for a pedicure or IDR 238.000 for both, per person. Book on WhatsApp."
               },
               {
                 "question": "How much does a manicure and pedicure cost in Seminyak?",
-                "answer": "A manicure and pedicure at Spa Bali Moon in Seminyak costs IDR 238.000 per person, or IDR 99.000 for a manicure and IDR 139.000 for a pedicure. Nail colour is from IDR 69.000 and gel from IDR 219.000. Home service adds IDR 75.000 per therapist. Packages from IDR 299.000 per person add a cream bath, massage or facial."
+                "answer": "A manicure and pedicure at Spa Bali Moon in Seminyak costs IDR 238.000 per person, or IDR 99.000 for a manicure and IDR 139.000 for a pedicure. Nail colour is from IDR 69.000 and gel from IDR 219.000. Home service adds IDR 75.000 per therapist in the Seminyak area. Packages from IDR 299.000 per person add a cream bath, massage or facial."
               }
             ]
           }

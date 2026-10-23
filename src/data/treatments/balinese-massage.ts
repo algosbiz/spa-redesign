@@ -197,7 +197,7 @@ const balineseMassage: Treatment = {
   cta: {
     heading: "Enjoy Balinese Massage Wherever You Stay",
     paragraphs: [
-      "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75.000 per therapist. Our therapists adjust the pressure to suit you, gentle through to firm.",
+      "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Our therapists adjust the pressure to suit you, gentle through to firm.",
       "Reserve a session that fits your plans, in our spa or at your villa.",
     ],
     image: { src: "/images/treatments/balinese-massage/balinesemassage-12.webp", alt: "", width: 1920, height: 898 },

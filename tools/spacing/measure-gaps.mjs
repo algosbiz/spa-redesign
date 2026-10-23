@@ -3,9 +3,12 @@
  * checks it against the site-wide rule in src/styles/spacing.css: from the
  * last visible thing in one section (text, photo, card, button, icon) to the
  * first in the next is 200px from 992px up, 160px on tablets, 140px on
- * phones; after a top banner photo the gap runs from the middle of its torn
- * edge (37px less). Torn edges and decorations (leaves, flowers, shapes)
- * are not content.
+ * phones; after a top banner photo, half that from its torn line (26px
+ * up). Torn edges and decorations (leaves, flowers, shapes) are not
+ * content. Where one torn edge sits between two sections, its torn line
+ * (26px into the edge image) should be in the middle of the gap: listed
+ * when the space above and below it differ by more than 16px. Between two
+ * plain white sections (no torn edge, not paper) the gap is half.
  *
  *   node tools/spacing/measure-gaps.mjs [base=http://localhost:3100]
  *   WIDTHS=1440,1024,820,390 ONLY=/,/seminyak/ node tools/spacing/measure-gaps.mjs
@@ -38,6 +41,18 @@ async function run(path, w) {
   await page.addStyleTag({ content: "#preloader{display:none!important} *,*::before,*::after{animation:none!important;transition:none!important}" });
   await page.evaluate(async () => {
     for (const img of document.querySelectorAll("img[loading=lazy]")) img.loading = "eager";
+    // Scroll through the page first, as a visitor does: parts that fade in
+    // when they come into view (the closing banner's photo box) are hidden
+    // until then, and would not count as content.
+    // Lenis (smooth scroll, laptops) would ease each jump: stopped while this runs.
+    window.lenis?.stop?.();
+    document.documentElement.style.scrollBehavior = "auto";
+    const to = (y) => window.scrollTo(0, y);
+    for (let y = 0; y < document.documentElement.scrollHeight; y += 500) {
+      to(y);
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    to(0);
     await new Promise((r) => setTimeout(r, 1200));
   });
   const r = await page.evaluate(() => {
@@ -80,7 +95,9 @@ async function run(path, w) {
         if (/^(IMG|VIDEO|IFRAME|PICTURE|CANVAS)$/.test(tag) || (tag === "svg" && !el.closest("button, a"))) { add(el, rect); continue; }
         // a visible box: own background, photo or border
         const ownBg = alpha(cs.backgroundColor) > 0.05 && cs.backgroundColor !== blockBg && el !== block;
-        const photo = /url\(/.test(cs.backgroundImage);
+        // a photo, or a wash you can see (the closing banner shows its dark
+        // wash alone until its photo loads near the viewport: LazyBackground)
+        const photo = /url\(/.test(cs.backgroundImage) || (/gradient\(/.test(cs.backgroundImage) && [...cs.backgroundImage.matchAll(/rgba?\([^)]+\)/g)].some((m) => alpha(m[0]) > 0.3));
         const border = ["Top", "Bottom"].some((s) => parseFloat(cs[`border${s}Width`]) > 0 && alpha(cs[`border${s}Color`]) > 0.2);
         // the homepage's row buttons show as a white box with a faint border
         if (ownBg || photo || border || el.classList.contains("row-btn")) add(el, rect);
@@ -107,6 +124,11 @@ async function run(path, w) {
         block: name(b),
         bg: bgOf(b),
         torn: /section__decoration-(top|bottom)/.test(cls(b) + " " + cls(b.parentElement)),
+        // its own torn edge, or its wrapper's when it is the wrapper's first / last section
+        tornTop: b.matches(".section__decoration-top") || (b.parentElement.matches(".section__decoration-top") && b === b.parentElement.querySelector(":scope > section")),
+        tornBottom: b.matches(".section__decoration-bottom") || (b.parentElement.matches(".section__decoration-bottom") && b === [...b.parentElement.querySelectorAll(":scope > section")].pop()),
+        // plain: white, no torn edge, not a banner or title band (spacing.css 1b)
+        plain: !/section__decoration|bg-sub|banner-(two|five)-area|page-title/.test(cls(b) + " " + cls(b.parentElement)),
         top: Y(rect.top), bottom: Y(rect.bottom),
         content: box,
       };
@@ -115,7 +137,10 @@ async function run(path, w) {
     for (let i = 1; i < rows.length; i++) {
       const a = rows[i - 1], b = rows[i];
       if (!a.content || !b.content) continue;
-      gaps.push({ from: a.block, to: b.block, gap: b.content.top - a.content.bottom, bgChange: a.bg !== b.bg });
+      // one torn edge between them (not two, not a banner's over its photo): where its line shows
+      const lineAt = a.tornBottom && !b.tornTop && !/banner-(two|five)-area/.test(a.block) ? a.bottom - 26 : b.tornTop && !a.tornBottom ? b.top + 26 : null;
+      const line = lineAt === null ? null : { above: lineAt - a.content.bottom, below: b.content.top - lineAt };
+      gaps.push({ from: a.block, to: b.block, gap: b.content.top - a.content.bottom, bgChange: a.bg !== b.bg, line, plain: a.plain && b.plain && a.bg === b.bg });
     }
 
     // closing banner(s)
@@ -167,13 +192,14 @@ for (const w of [...widths].sort((a, b) => b - a)) {
     if (!k.endsWith("@" + w) || v.error) continue;
     for (const g of v.gaps) {
       n++;
-      // after a photo banner the gap runs from the middle of its torn edge (37px up)
+      // after a photo banner: half a gap from its torn line (26px up), as after any torn edge
       const banner = /banner-two-area/.test(g.from) || (/banner-five-area/.test(g.from) && w >= 992);
       // homepage: the packages' note sits mid-gap (half the gap on each side)
       const noteJoin = g.from.includes("pricing-section-five") && g.to.startsWith("section.service-section");
       // price list: between two of its package groups, half the gap (spacing.css 7b)
       const packageJoin = g.from.includes("package-pricing-section") && g.to.includes("package-pricing-section");
-      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin ? G(w) / 2 : G(w) - (banner ? 37 : 0); // +5: the note's own line spacing
+      // two plain white sections: half the gap (spacing.css 1b)
+      const expect = noteJoin ? G(w) / 2 + 5 : packageJoin || g.plain ? G(w) / 2 : banner ? G(w) / 2 - 26 : G(w); // +5: the note's own line spacing
       const d = g.gap - expect;
       if (Math.abs(d) <= 8) ok++;
       else { const key = `${short(g.from)} -> ${short(g.to)} (${d > 0 ? "+" : ""}${d})`; (bad[key] ??= []).push(k.split(" ")[0].replace("/seminyak/", "sm/").replace("/guide/", "g/").slice(0, 24)); }
@@ -181,4 +207,18 @@ for (const w of [...widths].sort((a, b) => b - a)) {
   }
   console.log(`\n== ${w}: ${ok}/${n} within ±8px of the rule (${G(w)}px)`);
   for (const [k, ps] of Object.entries(bad).sort((a, b) => b[1].length - a[1].length)) console.log("  ", String(ps.length).padStart(3), k, "|", ps.slice(0, 3).join(" "));
+  // torn lines in the middle of their gap
+  let lines = 0, centred = 0; const offCentre = {};
+  for (const [k, v] of Object.entries(out)) {
+    if (!k.endsWith("@" + w) || v.error) continue;
+    for (const g of v.gaps) {
+      if (!g.line) continue;
+      lines++;
+      const d = g.line.above - g.line.below;
+      if (Math.abs(d) <= 16) centred++;
+      else { const key = `${short(g.from)} -> ${short(g.to)} (${g.line.above}/${g.line.below})`; (offCentre[key] ??= []).push(k.split(" ")[0].replace("/seminyak/", "sm/").replace("/guide/", "g/").slice(0, 24)); }
+    }
+  }
+  console.log(`   torn lines in the middle of their gap (±8px): ${centred}/${lines}`);
+  for (const [k, ps] of Object.entries(offCentre).sort((a, b) => b[1].length - a[1].length)) console.log("  ", String(ps.length).padStart(3), k, "|", ps.slice(0, 3).join(" "));
 }

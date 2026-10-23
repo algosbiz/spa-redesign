@@ -1,12 +1,13 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import Link from "next/link";
 import { useEffect, useRef, type ReactNode } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LotusPaths25 } from "@/components/ui/Lotus";
+import RowButton from "@/components/ui/RowButton";
+import { business } from "@/data/business";
 import type { PriceTiles } from "@/lib/priceTiles";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -25,11 +26,18 @@ export type PageBannerProps = {
    */
   imagePosition?: string;
   shapeImage?: string;
-  buttonText?: string;
-  buttonLink?: string;
-  /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
+  /**
+   * Buttons in place of the one "Book on WhatsApp" row button with the
+   * number, which every banner has otherwise (owner, 22 Oct: tried on the
+   * cellulite page, then "all heros can have the new hero button"; it
+   * replaced live's "Book Now").
+   */
   actions?: ReactNode;
-  /** Small badges under the buttons (the outcall page: since 2009, what is included, the fee, the hours). */
+  /**
+   * Small badges under the buttons: the opening hours on every banner
+   * (owner, 22 Oct, as on the treatment pages); the outcall page adds since
+   * 2009, what is included and the fee.
+   */
   chips?: string[];
   /**
    * The session lengths and prices under the title, on a glass strip (owner,
@@ -39,6 +47,13 @@ export type PageBannerProps = {
   prices?: PriceTiles;
   /** Written after each price: "/ pax", or "/ 2 pax" on the couples page. */
   priceUnit?: string;
+  /**
+   * Phones only (owner, 22 Oct, tried on the outcall page first): the whole
+   * landscape photo at this path is shown above the text, uncropped, instead
+   * of the `-sm` cut behind it; the text sits on a blurred, darkened copy of
+   * the same photo. A ~828px-wide copy of `image` (styles: outcall.css, 19).
+   */
+  mobilePhoto?: string;
 };
 
 const S = "jsx-page-banner";
@@ -57,14 +72,21 @@ export default function PageBanner({
   image,
   imagePosition,
   shapeImage = "/images/shape/banner-two-shape.png",
-  buttonText = "Book Now",
-  buttonLink = whatsappChatUrl,
-  actions,
-  chips,
+  actions = (
+    <RowButton
+      href={whatsappChatUrl}
+      icon="whatsapp"
+      label="Book on WhatsApp"
+      note={business.phoneDisplay}
+      className="row-btn--glass"
+    />
+  ),
+  chips = ["Open daily 9am – 11pm"],
   prices,
   priceUnit,
+  mobilePhoto,
 }: PageBannerProps) {
-  const small = image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
+  const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
 
   // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
   // to the DOM while it initialises, then React re-renders the class list it
@@ -83,7 +105,9 @@ export default function PageBanner({
     <>
       <link rel="preload" as="image" href={small} media="(max-width: 767px)" fetchPriority="high" />
       <link rel="preload" as="image" href={image} media="(min-width: 768px)" fetchPriority="high" />
-      <section className={`${S} banner-two-area section__decoration-bottom`}>
+      <section
+        className={`${S} banner-two-area section__decoration-bottom${mobilePhoto ? " banner-two-area--photo-top" : ""}`}
+      >
         <div className={`${S} banner-two__shape`}>
           <img src={shapeImage} alt="" aria-hidden="true" fetchPriority="low" decoding="async" className={S} />
         </div>
@@ -107,6 +131,11 @@ export default function PageBanner({
               }
               className={`${S} slide-bg`}
             />
+            {mobilePhoto && (
+              <div className={`${S} banner-two__photo`}>
+                <img src={mobilePhoto} alt="" width={828} height={367} fetchPriority="high" decoding="async" className={S} />
+              </div>
+            )}
             <div className={`${S} container`}>
               <div className={`${S}  banner-two__content`}>
                 {subTitle !== "" && (
@@ -142,24 +171,7 @@ export default function PageBanner({
                 )}
                 {/* "IDR" never ends a line without its amount. */}
                 {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
-                {actions ? (
-                  <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
-                ) : (
-                  <Link
-                    href={buttonLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-two-light mt-50"
-                    data-animation="fadeInUp"
-                    data-delay="1s"
-                  >
-                    {buttonText}
-                    <span className={`${S} icon_box`}>
-                      <i className={`${S} fa-regular icon_first fa-arrow-right-long`} />
-                      <i className={`${S} fa-regular icon_second fa-arrow-right-long`} />
-                    </span>
-                  </Link>
-                )}
+                <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
                 {chips && chips.length > 0 && (
                   <ul className={`${S} banner-chips`}>
                     {chips.map((chip) => (

@@ -24,12 +24,12 @@ const FAQ = [
   {
     question: "Do you offer massage at hotels and villas near Kuta?",
     answer:
-      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus IDR 75.000 per therapist. Availability and any extra travel cost depend on your location and are confirmed on WhatsApp before you book. See our [home service massage](/outcall-home-service-massage/) page for prices and areas.",
+      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus a home service fee of IDR 150.000 per therapist in Kuta. For other areas, availability and the fee are confirmed on WhatsApp before you book. See our [home service massage](/outcall-home-service-massage/) page for prices and areas.",
   },
   {
     question: "How long do massage sessions usually last?",
     answer:
-      "Massage sessions at Spa Bali Moon run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person). In Kuta, where our therapists come to you, outcall adds IDR 75.000 per therapist.",
+      "Massage sessions at Spa Bali Moon run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person). In Kuta, where our therapists come to you, outcall adds IDR 150.000 per therapist.",
   },
   {
     question: "Can I combine a massage with another spa treatment?",
@@ -39,13 +39,13 @@ const FAQ = [
   {
     question: "What should I prepare before my massage?",
     answer:
-      "Comfortable clothing and a little time to relax are usually all you need before a Spa Bali Moon massage. For outcall in Kuta, the therapist brings the massage bed, fresh linen, towels and oils, so you do not need to supply anything. For certain treatments, your therapist may give specific guidance before the session.",
+      "Comfortable clothing and a little time to relax are usually all you need before a Spa Bali Moon massage. For outcall in Kuta, the therapist brings fresh linen, towels, oils and everything your treatment needs, so you do not need to supply anything. For certain treatments, your therapist may give specific guidance before the session.",
   },
   // Copy rewrite, 15 Oct.
   {
     question: "How much does a massage in Kuta cost?",
     answer:
-      "A Spa Bali Moon outcall massage in Kuta costs the same as in our Seminyak spa, plus IDR 75.000 per therapist. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. For locations further out, we confirm any extra travel cost on WhatsApp before you book.",
+      "A Spa Bali Moon outcall massage in Kuta costs the same as in our Seminyak spa, plus IDR 150.000 per therapist. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. For locations further out, we confirm any extra travel cost on WhatsApp before you book.",
   },
 ];
 
@@ -59,14 +59,15 @@ export default function MassageKutaPage() {
         titleSpan="Massage in Kuta, Bali:"
         // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
         title="Outcall to Your Hotel or Villa"
-        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 75.000 per therapist, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
-        buttonText="Book Now"
+        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
         image="/images/banners/massage-kuta.webp"
+        // Phones: the whole photo above the long banner text (owner, 22 Oct).
+        mobilePhoto="/images/banners/massage-kuta-wide-sm.webp"
       />
       <AboutIntro
         removeBottomPadding
         subTitle="A Moment to Reset"
-        title={<>What Can a Massage in Kuta Help With?</>}
+        title={<>What a Massage in Kuta Helps With</>}
         text="Kuta is known for long beach days, surfing, sightseeing, and a lively holiday atmosphere, but all that activity can leave the body feeling stiff, heavy, or overtired. A professional massage offers a chance to slow down, release built-up tension, and feel more comfortable again."
         feature1Title="Restore a Lighter Feeling"
         feature1Text="Targeted massage techniques help release tightness after long days of exploring Bali."
@@ -87,6 +88,8 @@ export default function MassageKutaPage() {
       <AboutSplit
         subTitle="Treatment Options"
         title={<>Massage Treatments Available in Kuta</>}
+        badgeTopText="In Kuta"
+        badgeBottomText="At your hotel or villa"
         text="The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sports Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements."
         featuresLeft={[
           "Balinese Massage for full-body relaxation",
@@ -106,8 +109,8 @@ export default function MassageKutaPage() {
       />
       <AboutSplitAlt
         subTitle="Complete Experience"
-        badgeTopText="Make It a"
-        badgeBottomText="Full Spa Day"
+        badgeTopText="Add on"
+        badgeBottomText="Facial, scrub or cream bath"
         title={<>Spa Treatments Beyond Massage in Kuta</>}
         text="A relaxing spa experience can include more than massage. Add a Bali Moon Facial, Body Scrub, Cream Bath, Manicure, Pedicure, or other beauty treatments to create a more complete session."
         featuresLeft={[
@@ -125,8 +128,8 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-5.webp"
       />
       <AboutSplit
-        badgeTopText="Just Pick"
-        badgeBottomText="a Time"
+        badgeTopText="Booking"
+        badgeBottomText="Just pick a time"
         // No small heading: without one the section showed the default "About".
         subTitle=""
         title={<>Booking a Massage in Kuta</>}
@@ -138,7 +141,7 @@ export default function MassageKutaPage() {
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           largeTopPadding
-          imageTitle="Unwind In Kuta"
+          imageTitle="Unwind in Kuta"
           subTitle="Frequently Asked Questions"
           title={<>Massage Kuta: FAQs</>}
           items={FAQ}

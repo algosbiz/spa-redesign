@@ -44,17 +44,17 @@ const FAQ = [
   {
     question: "Do I need to prepare anything?",
     answer:
-      "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres; a bedroom, terrace or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
+      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare. If you have a preference for where the session takes place, tell us when you book.",
   },
   {
     question: "What does the therapist bring?",
     answer:
-      "A Spa Bali Moon outcall therapist brings a portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else; just leave a space of roughly two by two metres.",
+      "A Spa Bali Moon outcall therapist brings freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Setup takes around five to ten minutes when your therapist arrives, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage at your villa or hotel is a full 60 minutes of treatment, at the spa price plus IDR 75.000 per therapist.",
+      "Setup takes around five to ten minutes when your therapist arrives, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage at your villa or hotel is a full 60 minutes of treatment, at the spa price plus IDR 75.000 per therapist in the Seminyak area.",
   },
   {
     question: "Which areas do you cover for home service?",
@@ -64,7 +64,7 @@ const FAQ = [
   {
     question: "What if my hotel doesn't allow outside therapists?",
     answer:
-      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at [our Seminyak spa](/seminyak/day-spa/) instead.",
+      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at [our Seminyak spa](/) instead.",
   },
   {
     question: "Which massage is best after a long flight?",
@@ -74,7 +74,7 @@ const FAQ = [
   {
     question: "How much does a home service massage cost in Seminyak?",
     answer:
-      "The treatment price plus IDR 75.000 per therapist. A 60-minute Balinese massage at your villa in Seminyak is IDR 159.000 + IDR 75.000 = IDR 234.000. Couples treatments use two therapists, so the fee is IDR 150.000. See [home service prices](#home-service-prices).",
+      "The treatment price plus the home service fee: IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. A 60-minute Balinese massage at your villa in Seminyak is IDR 159.000 + IDR 75.000 = IDR 234.000. Couples treatments use two therapists, so the fee doubles. See [home service prices](#home-service-prices).",
   },
   // Copy rewrite, 15 Oct (kept: it is the page's one answer about how soon a therapist arrives).
   {
@@ -90,7 +90,7 @@ const FAQ = [
   {
     question: "Can we book a couples massage at our villa or hotel?",
     answer:
-      "Yes. Two therapists arrive together and set up side by side, so you're both treated at the same time. Couples massage starts from IDR 319.000 for 60 minutes, plus IDR 75.000 per therapist.",
+      "Yes. Two therapists arrive together and set up side by side, so you're both treated at the same time. Couples massage starts from IDR 319.000 for 60 minutes, plus IDR 75.000 per therapist in the Seminyak area.",
   },
   {
     question: "Can I ask for a female or male therapist?",
@@ -112,8 +112,8 @@ const FAQ = [
 /** The four badges under the hero buttons. */
 const HERO_CHIPS = [
   "Since 2009 · Seminyak spa",
-  "Table, linen & oils included",
-  "IDR 75.000 per therapist",
+  "Linen & oils included",
+  "IDR 75.000 per therapist in Seminyak",
   "Open daily 9am – 11pm",
 ];
 
@@ -132,7 +132,7 @@ export default function OutcallPage() {
           name: "Outcall & Home Service Massage",
           serviceType: "Outcall massage",
           description:
-            "Home service massage across Bali: a Spa Bali Moon therapist comes to your home, villa or hotel. Spa prices plus IDR 75.000 per therapist.",
+            "Home service massage across Bali: a Spa Bali Moon therapist comes to your home, villa or hotel. Spa prices plus IDR 75.000 per therapist in the Seminyak area.",
           areas: [...homeServiceAreas.near, ...homeServiceAreas.further],
         })}
       />
@@ -143,8 +143,10 @@ export default function OutcallPage() {
           subTitle="Home service from our Seminyak spa"
           titleSpan="Outcall & Home Service Massage"
           title="in Seminyak, Bali"
-          text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring the massage table, fresh linen and oils. Home service fee: IDR 75.000 per therapist. Open daily, 9am to 11pm."
+          text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring fresh linen, oils and everything your treatment needs. Home service fee: IDR 75.000 per therapist in the Seminyak area. Open daily, 9am to 11pm."
           image="/images/banners/homeservice-hero.webp"
+          // Phones see the whole villa photo above the text, not a cropped slice (owner, 22 Oct).
+          mobilePhoto="/images/banners/homeservice-hero-wide-sm.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
           // (7 Oct: the page's search traffic compares prices before booking),
           // in the see-through gold version (picked over the white one).
@@ -208,6 +210,8 @@ export default function OutcallPage() {
             treatmentLayout
             subTitle="Spa & Beauty Service"
             title={<>{"Home Massage & Body Treatments We Bring to You"}</>}
+            badgeTopText="We bring"
+            badgeBottomText="Fresh linen & oils"
             text="Every treatment below is available as a home massage or body treatment at your villa, hotel or home, in Seminyak and across Bali:"
             featuresLeft={[
               <TreatmentItem key="couple" href="/seminyak/couple-spa/" name="Couple Massage">
@@ -263,7 +267,6 @@ export default function OutcallPage() {
             paperDecoration={false}
             title="What Guests Say About Our Home Service"
             reviews={homeServiceReviews}
-            moreLabel="Read all our reviews on Google"
           />
         </div>
         {/* S12 · Outcall Massage Price List */}
@@ -273,7 +276,7 @@ export default function OutcallPage() {
           <MenuDurations
             subTitle="Prices"
             title="Outcall Massage Price List"
-            intro="Treatment prices below are the same as at our Seminyak spa. Home service adds IDR 75.000 per therapist."
+            intro="Treatment prices below are the same as at our Seminyak spa. Home service adds IDR 75.000 per therapist in the Seminyak area and IDR 150.000 in Canggu and Kuta."
             spacing="pt-130 pb-130"
             sticky
             paper={false}

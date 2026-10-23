@@ -63,7 +63,7 @@ export const villaHotelPage: LandingPage = {
     {
       type: "list",
       eyebrow: "Stay In",
-      heading: "Why Book a Massage at Your Hotel or Villa?",
+      heading: "The Spa Comes to Your Room",
       paragraphs: [
         "A massage at your accommodation gives you more time to relax and less time spent travelling between appointments. It is a convenient choice after a long flight, a full day exploring Bali, or simply when you would rather enjoy professional spa care in the privacy of your own space.",
       ],
@@ -105,7 +105,7 @@ export const villaHotelPage: LandingPage = {
       eyebrow: "About",
       heading: "Booking Your Hotel & Villa Massage",
       paragraphs: [
-        "Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A small travel fee of IDR 75.000 per therapist applies for home and hotel visits.",
+        "Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A small travel fee of IDR 75.000 per therapist applies for home and hotel visits in Seminyak.",
       ],
       items: [
         "Quick WhatsApp booking",
@@ -149,7 +149,7 @@ export const villaHotelPage: LandingPage = {
       },
       {
         question: "Is there an additional fee for home service?",
-        answer: "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak and nearby areas.",
+        answer: "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak, Petitenget and Kerobokan, and IDR 150.000 in Canggu, North Kuta and Kuta.",
       },
       {
         question: "How can I pay for my in-room treatment?",

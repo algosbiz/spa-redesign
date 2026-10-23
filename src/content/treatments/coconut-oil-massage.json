@@ -168,7 +168,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Made with",
+        "badgeBottomText": "Virgin coconut oil"
       }
     },
     {
@@ -186,7 +188,7 @@
         },
         "image": "/images/services/coconutoilmassage/coconutoilmassage-8.webp",
         "subTitle": "",
-        "title": "Who Usually Chooses This Massage?",
+        "title": "Who It Suits",
         "text": "While the massage itself focuses on relaxation, the use of virgin coconut oil can make the treatment appealing to guests with different skin-care and wellness preferences. This massage may be a good fit for:",
         "featuresLeft": [
           "Guests with dry-feeling skin",
@@ -258,7 +260,7 @@
               },
               {
                 "question": "Can I book this massage as a home service?",
-                "answer": "Yes. Spa Bali Moon offers the virgin coconut oil massage at our Seminyak spa and as a home service at villas and hotels throughout Seminyak and nearby areas. Home service adds IDR 75.000 per therapist to the session price, from IDR 300.000 per person for 1 hour. Book on WhatsApp, and mention any coconut allergy."
+                "answer": "Yes. Spa Bali Moon offers the virgin coconut oil massage at our Seminyak spa and as a home service at villas and hotels throughout Seminyak and nearby areas. In the Seminyak area, home service adds IDR 75.000 per therapist to the session price, from IDR 300.000 per person for 1 hour. Book on WhatsApp, and mention any coconut allergy."
               },
               {
                 "question": "Is this massage only for relaxation?",
@@ -274,7 +276,7 @@
               },
               {
                 "question": "How much does a coconut oil massage cost in Seminyak?",
-                "answer": "A virgin coconut oil massage at Spa Bali Moon in Seminyak costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist. We accept Visa, Mastercard or cash, and you can book on WhatsApp."
+                "answer": "A virgin coconut oil massage at Spa Bali Moon in Seminyak costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. We accept Visa, Mastercard or cash, and you can book on WhatsApp."
               }
             ]
           }

@@ -212,7 +212,7 @@ const antiCelluliteMassage: Treatment = {
   cta: {
     heading: "Support Smoother Skin Wherever You Prefer to Relax",
     paragraphs: [
-      "Focused body care at our spa, or in the privacy of your villa or hotel. Home service is an extra IDR 75.000 per therapist within Seminyak and nearby areas.",
+      "Focused body care at our spa, or in the privacy of your villa or hotel. Home service is an extra IDR 75.000 per therapist in the Seminyak area.",
       "Reserve your session and let our therapists help you create a treatment plan that fits your comfort and body goals.",
     ],
     image: { src: "/images/treatments/anti-cellulite-massage/cellulitemassage-10.webp", alt: "", width: 1920, height: 898 },

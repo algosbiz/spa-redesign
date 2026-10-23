@@ -316,22 +316,6 @@
 .oc-card__heading {
   font-weight: 500;
 }
-.oc-areas__group {
-  max-width: 1100px;
-  margin: 0 auto 44px;
-}
-.oc-areas__group:last-child {
-  margin-bottom: 0;
-}
-.oc-areas__label {
-  margin: 0 0 18px;
-  font-family: var(--text-font);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--theme-color1);
-}
 @media (max-width: 991px) {
   .oc-cards {
     grid-template-columns: minmax(0, 1fr);
@@ -469,24 +453,6 @@
 .oc-card--group .oc-card__icon {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Area groups: the label centred between two hairlines. */
-.oc-areas__label {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-align: center;
-}
-.oc-areas__label::before,
-.oc-areas__label::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(var(--theme-color1-rgb), 0.4);
-}
-.oc-areas__group {
-  margin-bottom: 56px;
 }
 
 /* Comparison: one rounded card, the home service column picked out. */
@@ -822,17 +788,37 @@
 /* ------------------------------------------------------------------ */
 /* 12. Words on the FAQ photo no longer run off it (owner, 21 Oct)      */
 /* ------------------------------------------------------------------ */
+/* Since 22 Oct (owner: "these could also do with a revamp, but … different
+   then the last one with the box inside the corner"; then a dark band "a
+   bit awkward below the other style"): no box, a centred caption, the gold
+   lotus over the words, on a soft shade at the photo's foot. */
+.faq-section .image-column .inner-column:has(> .title)::after {
+  background: linear-gradient(180deg, transparent 50%, rgba(28, 26, 29, 0.6));
+}
 .faq-section .image-column .inner-column .title {
-  right: 40px;
-  left: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 32px 34px;
+  font-size: clamp(24px, 2.2vw, 38px);
   white-space: normal;
-  line-height: 1.15;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+  line-height: 1.2;
+  text-align: center;
+  text-transform: none;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+.faq-photo__lotus {
+  flex: none;
 }
 @media (max-width: 767px) {
   .faq-section .image-column .inner-column .title {
-    right: 20px;
-    left: 20px;
+    gap: 8px;
+    padding: 0 20px 24px;
+    font-size: 24px;
   }
 }
 
@@ -876,50 +862,193 @@
 /*     a compact "Visit us" (owner, 21 Oct)                            */
 /* ------------------------------------------------------------------ */
 @media (max-width: 767px) {
-  /* Hero prices: "1 HOUR / PAX" over "IDR 159.000", two lines in each tile. */
+  /* Hero prices as a short price list, one row per length: the length on
+     the left, the price on the right (owner, 22 Oct: three tiles across a
+     phone were "a bit jumbly"). Laptops keep the tiles. */
+  .banner-two__content .banner-prices .banner-prices__list {
+    flex-direction: column;
+  }
+  .banner-prices__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 16px 12px;
+    text-align: left;
+  }
+  .banner-prices__item + .banner-prices__item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .banner-prices__length {
+    min-width: 0;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  /* "/ PAX" never ends up alone on the next line ("Manicure and pedicure"). */
   .banner-prices__unit {
     display: inline;
     margin-top: 0;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .banner-prices__amount {
+    flex-shrink: 0;
+    font-size: 21px;
   }
   .banner-prices__item .banner-prices__cur {
     display: inline;
+    margin-right: 2px;
     font-size: 11px;
-  }
-  .banner-prices__length {
-    font-size: 9.5px;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
-  }
-  .banner-prices__item {
-    gap: 4px;
-    padding: 10px 2px 11px;
   }
 }
 
-/* 15 · Arrival time and fee by area (table under the price table in S02) */
-.oc-subtitle {
-  margin: 48px 0 20px;
-  text-align: center;
-  font-size: 26px;
+/* 15 · S06 areas: the fee and travel time by area, then one short note per fee level (owner, 22 Oct) */
+.oc-area-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  max-width: 980px;
+  margin: 44px auto 32px;
 }
-.oc-subtitle-text {
-  max-width: 720px;
-  margin: 0 auto 24px;
-  text-align: center;
+.oc-area-notes__item {
+  min-width: 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.4);
 }
-.oc-table--arrival {
-  margin-bottom: 8px;
+.oc-area-notes__title {
+  margin: 0 0 8px;
+  font-family: var(--title-font);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--headings-color);
+}
+.oc-area-notes__item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+@media (max-width: 991px) {
+  .oc-area-notes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 640px;
+  }
 }
 .oc-table--arrival td {
   white-space: normal;
 }
+.oc-arrival__clock {
+  display: none;
+}
+.oc-table-note {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-align: center;
+  color: #8f8a83;
+}
 @media (max-width: 767px) {
+  /* Phones (owner, 22 Oct): two lines per area, the name with the drive time
+     on the right, then the fee. No repeated column labels. */
+  .oc-table--arrival tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "area time"
+      "fee fee";
+    column-gap: 16px;
+    row-gap: 4px;
+    padding: 14px 0;
+  }
+  .oc-table--arrival th,
   .oc-table--arrival td {
-    text-align: right;
+    display: block;
+    padding: 0;
+  }
+  .oc-table--arrival th {
+    grid-area: area;
   }
   .oc-table--arrival td::before {
-    flex: none;
-    text-align: left;
+    content: none;
+  }
+  .oc-table--arrival .oc-arrival__fee {
+    grid-area: fee;
+  }
+  .oc-table--arrival .oc-arrival__time {
+    grid-area: time;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-self: end;
+    white-space: nowrap;
+    color: var(--headings-color);
+  }
+  .oc-arrival__clock {
+    display: inline-flex;
+    color: var(--theme-color1);
+  }
+  .oc-arrival__clock svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* S02 prices on phones (owner, 22 Oct): the treatment and its total on one
+     line, then "IDR 159.000 + IDR 75.000 home service fee" in small grey. */
+  .oc-table--villa tr {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name name total"
+      "price fee fee";
+    column-gap: 5px;
+    row-gap: 3px;
+    padding: 14px 0;
+  }
+  .oc-table--villa th,
+  .oc-table--villa td {
+    display: block;
+    padding: 0;
+  }
+  .oc-table--villa th {
+    grid-area: name;
+    padding-right: 12px;
+    text-wrap: balance; /* no lone "min" on a second line */
+  }
+  .oc-table--villa td::before {
+    content: none;
+  }
+  .oc-table--villa .oc-villa__price {
+    grid-area: price;
+  }
+  .oc-table--villa .oc-villa__fee {
+    grid-area: fee;
+  }
+  .oc-table--villa .oc-villa__price,
+  .oc-table--villa .oc-villa__fee {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #8f8a83;
+    white-space: nowrap;
+  }
+  .oc-table--villa .oc-villa__fee::before,
+  .oc-table--villa .oc-villa__fee::after {
+    font: inherit;
+    letter-spacing: 0;
+    text-transform: none;
+    color: inherit;
+  }
+  .oc-table--villa .oc-villa__fee::before {
+    content: "+ ";
+  }
+  .oc-table--villa .oc-villa__fee::after {
+    content: " home service fee";
+  }
+  .oc-table--villa .oc-table__total {
+    grid-area: total;
+    justify-self: end;
+    align-self: start;
   }
 }
 
@@ -935,4 +1064,394 @@
 }
 .oc-paper-band .oc-licensed {
   padding-bottom: 80px;
+}
+
+/* 17 · S07 comparison (owner, 22 Oct): a gold line icon beside each row
+   label; on phones, a switch shows one option at a time instead of a table
+   that scrolls sideways. The switch is two radio buttons (no script), drawn
+   like the price list's duration switch (spa-menu.css, .v2-duration__switch). */
+/* The radios sit inside the box, so focusing one (a tap on the switch) does not scroll the page. */
+.oc-compare__box {
+  position: relative;
+}
+.oc-compare__radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .oc-compare__radio {
+    display: none; /* both options show, so nothing to switch */
+  }
+}
+.oc-compare__switch {
+  display: none;
+}
+.oc-compare__icon {
+  display: inline-flex;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: var(--theme-color1);
+}
+.oc-compare__icon svg {
+  width: 18px;
+  height: 18px;
+}
+.oc-table--compare tbody th strong {
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .oc-compare__switch {
+    display: flex;
+    gap: 4px;
+    max-width: 380px;
+    margin: 0 auto 18px;
+    padding: 4px;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+    border-radius: 999px;
+    background-color: #fff;
+  }
+  .oc-compare__switch label {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: var(--theme-color1);
+    font-family: var(--title-font);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s, box-shadow 0.25s;
+  }
+  .oc-compare__switch label:hover {
+    background-color: rgba(var(--theme-color1-rgb), 0.1);
+  }
+  #oc-compare-home:checked ~ .oc-compare__switch label[for="oc-compare-home"],
+  #oc-compare-spa:checked ~ .oc-compare__switch label[for="oc-compare-spa"] {
+    box-shadow: inset 0 0 0 1px var(--theme-color1);
+  }
+  #oc-compare-home:focus-visible ~ .oc-compare__switch label[for="oc-compare-home"],
+  #oc-compare-spa:focus-visible ~ .oc-compare__switch label[for="oc-compare-spa"] {
+    outline: 2px solid var(--theme-color1);
+    outline-offset: 2px;
+  }
+
+  /* One option at a time, label beside value, nothing scrolls sideways. */
+  .oc-compare__box .oc-table-wrap--scroll {
+    overflow: visible;
+  }
+  .oc-compare__box .oc-table--compare {
+    min-width: 0;
+  }
+  .oc-compare__box .oc-table--compare thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .oc-compare__box .oc-table--compare,
+  .oc-compare__box .oc-table--compare tbody {
+    display: block;
+  }
+  .oc-compare__box .oc-table--compare tr {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 12px;
+    padding: 15px 18px;
+    border-bottom: 1px solid #ece7de;
+  }
+  .oc-compare__box .oc-table--compare tbody tr:last-child {
+    border-bottom: 0;
+  }
+  .oc-compare__box .oc-table--compare th,
+  .oc-compare__box .oc-table--compare tbody td {
+    display: block;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  .oc-compare__box .oc-table--compare tbody th {
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+    white-space: normal;
+  }
+  .oc-compare__box .oc-compare__icon {
+    margin-right: 8px;
+  }
+  .oc-compare__box .oc-compare__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  #oc-compare-home:checked ~ .oc-table-wrap .oc-table--compare td:nth-child(3),
+  #oc-compare-spa:checked ~ .oc-table-wrap .oc-table--compare td:nth-child(2) {
+    display: none;
+  }
+}
+
+/* 18 · Two actions side by side (owner, 22 Oct): the WhatsApp pill, and the
+   second action as a row button (row-button.css) so the two stand apart. */
+.oc-actions {
+  align-items: center;
+}
+.oc-actions .row-btn {
+  border-color: rgba(var(--theme-color1-rgb), 0.3);
+}
+@media (max-width: 575px) {
+  .oc-actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .oc-actions .row-btn {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* 19 · Page banner with the whole photo above the text on phones
+   (PageBanner `mobilePhoto`; owner, 22 Oct, tried on the outcall page
+   first). From 768px nothing changes. On phones: the landscape photo,
+   uncropped, fades into the text panel, which sits on a blurred, darker
+   copy of the same photo so the white text and glass buttons stay as they
+   were. */
+.banner-two__photo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .banner-two-area--photo-top .banner-two__photo {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  /* The photo's lower part turns transparent bit by bit (owner, 22 Oct: no
+     sharp line), so it melts into the blurred copy behind it. */
+  .banner-two-area--photo-top .banner-two__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 828 / 367;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+  }
+  .banner-two-area--photo-top .banner-two__slider .slide-bg {
+    filter: blur(22px) saturate(1.05);
+  }
+  /* Lighter just under the photo, where the two meet, darker behind the text. */
+  .banner-two-area--photo-top .banner-two__slider .slide-bg::before {
+    background: linear-gradient(
+      180deg,
+      rgba(28, 26, 29, 0.2) 0,
+      rgba(28, 26, 29, 0.42) 12%,
+      rgba(28, 26, 29, 0.62) 26%,
+      rgba(28, 26, 29, 0.66) 100%
+    );
+  }
+  .banner-two-area--photo-top .banner-two__content {
+    padding-top: 28px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 20. "Visit us" on phones: one compact card (owner, 22 Oct: "needs    */
+/*     some mobile love"). The four facts in a white card between gold  */
+/*     hairlines, as the mobile menu's rows: the icon on the left, the  */
+/*     small grey label over the words, the buttons smaller.            */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .visit-us--columns .visit-us__tiles {
+    margin-top: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .visit-us--columns .visit-us__tile,
+  .visit-us--columns .visit-us__tile + .visit-us__tile {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+    padding: 15px 16px;
+  }
+  .visit-us--columns .visit-us__tile + .visit-us__tile {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .visit-us--columns .visit-us__tile dt {
+    display: contents;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+  .visit-us--columns .visit-us__tile-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    background-color: var(--theme-color-gray);
+    box-shadow: none;
+  }
+  .visit-us--columns .visit-us__tile dd {
+    grid-column: 2;
+    margin: 3px 0 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .visit-us--columns .visit-us__pills {
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .visit-us--columns .visit-us__tile .visit-us__pill {
+    min-height: 32px;
+    padding: 6px 13px;
+    font-size: 12.5px;
+  }
+  .visit-us--columns .visit-us__split-body .visit-us__actions {
+    margin-top: 24px;
+  }
+}
+
+/* The two links as tappable rows, not buttons (owner, 22 Oct: "so many
+   buttons are so close to each other"): the phone number and "Home service
+   in Bali" in gold, the whole fact a link, with the mobile menu's arrow on
+   the right. "Full price list" is the section's one button. */
+@media (max-width: 767px) {
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill) {
+    position: relative;
+    padding-right: 44px;
+    transition: background-color 0.25s;
+  }
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill:is(:hover, :focus-visible, :active)) {
+    background-color: var(--theme-color-gray);
+  }
+  .visit-us--columns .visit-us__tile:has(.visit-us__pill)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--theme-color1);
+    border-right: 1.5px solid var(--theme-color1);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  .visit-us--columns .visit-us__pills {
+    margin-top: 2px;
+  }
+  .visit-us--columns .visit-us__tile .visit-us__pill,
+  .visit-us--columns .visit-us__tile .visit-us__pill:is(:hover, :focus-visible) {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 14px;
+    color: var(--theme-color1);
+  }
+  /* The whole fact is the link. */
+  .visit-us--columns .visit-us__tile .visit-us__pill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .visit-us--columns .visit-us__pill > span[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 21. Contact page details on phones: the "Visit us" card (owner,      */
+/*     22 Oct: "apply that to all sections that have that section").    */
+/*     WhatsApp, address and hours in a white card between gold         */
+/*     hairlines; the WhatsApp row is the link, with the arrow.         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .cf-rail__list.jsx-contact {
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact,
+  .cf-rail__list.jsx-contact li.jsx-contact + li.jsx-contact {
+    position: relative;
+    gap: 14px;
+    margin: 0;
+    padding: 15px 16px;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact + li.jsx-contact {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .cf-rail__list.jsx-contact .cf-rail__icon.jsx-contact,
+  .cf-rail__list.jsx-contact li.jsx-contact:hover .cf-rail__icon.jsx-contact {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background-color: var(--theme-color-gray);
+    box-shadow: none;
+    color: var(--theme-color1);
+    font-size: 15px;
+  }
+  .cf-rail__list.jsx-contact h3 {
+    margin: 1px 0 3px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    color: #8f8a83;
+  }
+  .cf-rail__list.jsx-contact span.jsx-contact:not(.cf-rail__icon) {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a) {
+    padding-right: 44px;
+    transition: background-color 0.25s;
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a:is(:hover, :focus-visible, :active)) {
+    background-color: var(--theme-color-gray);
+  }
+  .cf-rail__list.jsx-contact li.jsx-contact:has(a)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--theme-color1);
+    border-right: 1.5px solid var(--theme-color1);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  .cf-rail__list.jsx-contact a.jsx-contact {
+    position: static;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--theme-color1);
+  }
+  /* The whole row is the link. */
+  .cf-rail__list.jsx-contact a.jsx-contact::after {
+    inset: 0;
+  }
 }

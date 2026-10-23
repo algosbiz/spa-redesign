@@ -148,8 +148,8 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                       desc: "Every appointment is prepared with clean linens, sanitised equipment, and quality massage oils for a safe and comfortable experience.",
                     },
                     {
-                      title: "Full Spa Setup Provided to You",
-                      desc: "Therapists bring the massage setup, towels, oils, and treatment essentials, so you do not need to prepare equipment before the session.",
+                      title: "Linen, Oils & Essentials Brought to You",
+                      desc: "Therapists bring fresh linen, towels, oils, and treatment essentials, so you do not need to prepare equipment before the session.",
                     },
                     {
                       title: "On-Time & Reliable Service",
@@ -229,7 +229,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                     margin: 0,
                   }}
                 >
-                  {"Home service fee: "}
+                  {"Home service fee: from "}
                   <span
                     style={{
                       color: "var(--theme-color1)",

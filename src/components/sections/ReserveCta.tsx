@@ -36,7 +36,7 @@ export type ReserveCtaProps = {
  */
 export default function ReserveCta({
   title = "Experience True Relaxation with Our Day Spa",
-  text = "Get professional spa treatments at your home, hotel, or villa, bringing relaxation and care right to your space. Home service is available for an additional IDR 75.000 per therapist within Seminyak and nearby areas, and in-spa treatments can be booked at a time that suits you.",
+  text = "Get professional spa treatments at your home, hotel, or villa, bringing relaxation and care right to your space. Home service is available for an additional IDR 75.000 per therapist in the Seminyak area, and in-spa treatments can be booked at a time that suits you.",
   closingText = "Reserve a time that suits you and let our experts at the Day Spa take care of you.",
   backgroundImage = "/images/bg/contact-five-bg.jpg",
   standardSpacing = false,

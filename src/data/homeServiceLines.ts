@@ -22,9 +22,9 @@
  */
 export const homeServiceLines: Record<string, string> = {
   "balinese-massage":
-    "Staying in tonight? We also bring Balinese massage to your villa or hotel as a [home service massage](/outcall-home-service-massage/), for IDR 75.000 per therapist.",
+    "Staying in tonight? We also bring Balinese massage to your villa or hotel as a [home service massage](/outcall-home-service-massage/), for IDR 75.000 per therapist in the Seminyak area.",
   "deep-tissue-massage":
-    "Too sore to travel? Book deep tissue as an [outcall massage in Seminyak](/outcall-home-service-massage/) and your therapist brings the table to you.",
+    "Too sore to travel? Book deep tissue as an [outcall massage in Seminyak](/outcall-home-service-massage/) and your therapist comes to you.",
   "thai-massage":
     "Thai massage is also available at your villa through our [home service](/outcall-home-service-massage/), anywhere from Seminyak to Canggu.",
   "traditional-massage":
@@ -46,7 +46,7 @@ export const homeServiceLines: Record<string, string> = {
   "head-massage":
     "Book a head massage at your villa or hotel with our [home service massage](/outcall-home-service-massage/), or add it to another treatment.",
   "coconut-oil-massage":
-    "Our coconut oil massage is also available as a [home massage across Bali](/outcall-home-service-massage/), for IDR 75.000 per therapist.",
+    "Our coconut oil massage is also available as a [home massage across Bali](/outcall-home-service-massage/), from IDR 75.000 per therapist.",
   "anti-cellulite-massage":
     "Cellulite massage can also be booked at your villa through our [outcall and home service](/outcall-home-service-massage/).",
   "sunburn-massage":

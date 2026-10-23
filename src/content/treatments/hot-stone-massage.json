@@ -57,7 +57,7 @@
         "primaryImage": "/images/services/hotstonemassage/hotstonemassage-2.webp",
         "secondaryImage": "/images/services/hotstonemassage/hotstonemassage-3.webp",
         "subTitle": "",
-        "title": "Why Does Hot Stone Massage Feel Different?",
+        "title": "What Is Hot Stone Massage?",
         "text": "Hot Stone Massage combines traditional massage techniques with smooth heated basalt stones to create a deeply relaxing treatment. The warmth allows muscles to soften before deeper massage techniques are applied, making it easier to release tension without excessive pressure. This treatment is often chosen by guests seeking both physical relaxation and a calming wellness experience.",
         "feature1Title": "Heated Basalt Stones",
         "feature1Text": "Naturally retains warmth to help relax muscles throughout the treatment.",
@@ -209,7 +209,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/hotstonemassage/hotstonemassage-8.webp",
         "subTitle": "",
-        "title": "How Can Hot Stone Massage Support Your Wellbeing?",
+        "title": "Hot Stone Massage Benefits",
         "text": "Hot Stone Massage combines the soothing warmth of heated stones with flowing massage techniques to help you feel more relaxed and comfortable. The warmth can help prepare your muscles for massage, while the treatment offers a calming experience many guests enjoy after travel, busy days, or physical activity. Some of the key benefits are:",
         "featuresLeft": [
           "Helps soften tight muscles before massage",
@@ -223,7 +223,9 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "badgeTopText": "Made with",
+        "badgeBottomText": "Warm basalt stones"
       }
     },
     {
@@ -241,7 +243,7 @@
         },
         "image": "/images/services/hotstonemassage/hotstonemassage-9.webp",
         "subTitle": "",
-        "title": "Where Are the Warm Stones Used?",
+        "title": "Where the Stones Are Placed",
         "text": "Warm stones can be placed on different parts of the body depending on where you want to focus the treatment. Larger stones are generally used on broader areas, while smaller stones allow for more focused warmth. Common areas for warm stone placement are:",
         "featuresLeft": [
           "Back and shoulders",
@@ -317,7 +319,7 @@
               },
               {
                 "question": "Can I receive Hot Stone Massage at my villa or hotel?",
-                "answer": "Yes. Spa Bali Moon therapists provide Hot Stone Massage as a home service at villas and hotels throughout Seminyak and nearby areas, bringing all the necessary equipment for a comfortable treatment. Home service adds IDR 75.000 per therapist to the usual price, from IDR 250.000 per person for 1 hour. Book on WhatsApp."
+                "answer": "Yes. Spa Bali Moon therapists provide Hot Stone Massage as a home service at villas and hotels throughout Seminyak and nearby areas, bringing all the necessary equipment for a comfortable treatment. In the Seminyak area, home service adds IDR 75.000 per therapist to the usual price, from IDR 250.000 per person for 1 hour. Book on WhatsApp."
               },
               {
                 "question": "What is a hot stone massage?",
@@ -325,7 +327,7 @@
               },
               {
                 "question": "How much does a hot stone massage cost in Seminyak?",
-                "answer": "A hot stone massage at Spa Bali Moon in Seminyak costs IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person. Four packages from IDR 449.000 per person add a body scrub, cream bath, facial or pedicure. Home service at your villa or hotel adds IDR 75.000 per therapist."
+                "answer": "A hot stone massage at Spa Bali Moon in Seminyak costs IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person. Four packages from IDR 449.000 per person add a body scrub, cream bath, facial or pedicure. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               }
             ]
           }

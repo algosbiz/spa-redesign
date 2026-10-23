@@ -23,7 +23,7 @@ const FAQ = [
   },
   {
     question: "Where is Spa Bali Moon?",
-    answer: `Spa Bali Moon is at ${business.address.full}. The day spa is open daily from 9am to 11pm. Book on WhatsApp at ${business.phoneDisplay}, or ask for a therapist to come to your villa or hotel for an extra IDR 75.000 per therapist.`,
+    answer: `Spa Bali Moon is at ${business.address.full}. The day spa is open daily from 9am to 11pm. Book on WhatsApp at ${business.phoneDisplay}, or ask for a therapist to come to your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area.`,
   },
   {
     question: "Who are the therapists at Spa Bali Moon?",
@@ -54,8 +54,9 @@ export default function AboutPage() {
         titleSpan="About Spa Bali Moon"
         title="in Seminyak, Bali"
         text={`Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30, Seminyak, offering Balinese massage, facials, body treatments and beauty services since ${business.foundedYear}. Our therapists work at the spa and at guests' villas and hotels, open daily from 9am to 11pm.`}
-        buttonText="Book Now"
         image="/images/services/dayspaseminyak/dayspa-1.webp"
+        // Phones: the whole photo above the long banner text (owner, 22 Oct).
+        mobilePhoto="/images/services/dayspaseminyak/dayspa-1-wide-sm.webp"
       />
       <QuickFacts
         text={`For ${years} years, Spa Bali Moon has offered traditional Balinese massage and spa care in Seminyak. Guests visit our day spa or book the same treatments at their villa, hotel or home, at the same prices plus a home service fee.`}
@@ -76,9 +77,9 @@ export default function AboutPage() {
           { label: "Opening hours", value: "Open daily, 9am–11pm", figure: "9am–11pm", detail: "Open daily" },
           {
             label: "Home service",
-            value: "At your villa, hotel or home · IDR 75.000 per therapist",
+            value: "At your villa, hotel or home · IDR 75.000 per therapist in the Seminyak area",
             figure: "IDR 75.000",
-            detail: "per therapist, at your villa, hotel or home",
+            detail: "per therapist in the Seminyak area, at your villa, hotel or home",
           },
           { label: "Address", value: business.address.full },
           { label: "Payment", value: "Visa, Mastercard or cash" },
@@ -100,6 +101,8 @@ export default function AboutPage() {
       <AboutSplit
         subTitle="Our Therapists"
         title={<>Who Are Spa Bali Moon&apos;s Therapists?</>}
+        badgeTopText="In Seminyak"
+        badgeBottomText="Since 2009"
         text="Our therapists are trained Balinese therapists who ask about your preferred pressure and focus areas before every session, then adjust as they work. Here is what you can expect from our team:"
         featuresLeft={[
           "Experienced Balinese therapists",
@@ -117,8 +120,8 @@ export default function AboutPage() {
       />
       <AboutSplitAlt
         subTitle="What We Use"
-        badgeTopText="Natural"
-        badgeBottomText="Care"
+        badgeTopText="Products"
+        badgeBottomText="Natural oils & spa brands"
         title={<>Which Products Does Spa Bali Moon Use?</>}
         text="Each treatment has its own oils, creams and scrubs, from natural oils to well-known spa brands:"
         featuresLeft={[
@@ -139,8 +142,8 @@ export default function AboutPage() {
       />
       <AboutSplit
         subTitle="Clean & Hygienic"
-        badgeTopText="Fresh For"
-        badgeBottomText="Every Guest"
+        badgeTopText="Hygiene"
+        badgeBottomText="Clean towels for every guest"
         title={<>How Does Spa Bali Moon Keep Treatments Clean?</>}
         text="We prepare every appointment with hygiene in mind, whether you visit the spa or book home service. Here is how we keep each treatment clean:"
         featuresLeft={["Clean towels for every guest", "Sanitised equipment", "Private treatment rooms"]}
@@ -151,7 +154,7 @@ export default function AboutPage() {
       />
       <VisitUs
         treatment="a treatment"
-        title="Where Is Spa Bali Moon?"
+        title="Find Us in Seminyak"
         photo="/images/banners/contact.webp"
         look="columns"
       />
@@ -168,7 +171,7 @@ export default function AboutPage() {
       <ReserveCta
         standardSpacing
         title="Visit Spa Bali Moon in Seminyak"
-        text="Book a massage, facial or body treatment at our Seminyak spa, or have it at your villa or hotel for an extra IDR 75.000 per therapist."
+        text="Book a massage, facial or body treatment at our Seminyak spa, or have it at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."
         closingText="Open daily 9am–11pm. Book on WhatsApp."
         backgroundImage="/images/services/dayspaseminyak/dayspa-8.webp"
       />
