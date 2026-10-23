@@ -76,6 +76,13 @@ const FAQ = [
     answer:
       "The treatment price plus the home service fee: IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. A 60-minute Balinese massage at your villa in Seminyak is IDR 159.000 + IDR 75.000 = IDR 234.000. Couples treatments use two therapists, so the fee doubles. See [home service prices](#home-service-prices).",
   },
+  // Brand Radar, 23 Oct: ChatGPT's "outcall massage seminyak" answer quoted a
+  // competitor's 90-minute price; the totals by length, ready to quote.
+  {
+    question: "How much is a 60, 90 or 120-minute massage at my villa?",
+    answer:
+      "For a Balinese massage at your villa or hotel in the Seminyak area, per person: 60 minutes is IDR 159.000 + IDR 75.000 = IDR 234.000, 90 minutes IDR 239.000 + IDR 75.000 = IDR 314.000, and 120 minutes IDR 330.000 + IDR 75.000 = IDR 405.000. In Canggu, North Kuta and Kuta the home service fee is IDR 150.000 per therapist.",
+  },
   // Copy rewrite, 15 Oct (kept: it is the page's one answer about how soon a therapist arrives).
   {
     question: "Can I book an outcall massage on the same day?",
