@@ -105,7 +105,7 @@ const lymphaticDrainageMassage: Treatment = {
       items: [
         { title: "Experienced", text: "Therapists" },
         { title: "Flexible", text: "Booking" },
-        { title: "Slimming", text: "Cream" },
+        { title: "Light", text: "Pressure" },
         { title: "Outcall", text: "Available" },
       ],
     },
@@ -169,7 +169,6 @@ const lymphaticDrainageMassage: Treatment = {
       items: [
         "Brief body consultation",
         "Gentle oil application",
-        "Slimming cream massage",
         "Slow rhythmic drainage techniques",
         "Treatment along lymph pathways",
         "Relaxing full-body finish",
