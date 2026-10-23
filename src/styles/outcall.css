@@ -1455,3 +1455,253 @@
     inset: 0;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 22. FAQs on phones: one white card per question (owner, 23 Oct:      */
+/*     "the FAQ ui is a bit outdated"), in the look of the "Visit us"   */
+/*     card and the phone footer: a gold hairline edge, a soft shadow,  */
+/*     the toggle a gold plus in a paper circle that turns into a white */
+/*     cross on gold when the answer opens; the open card's edge goes   */
+/*     a shade more gold and its answer sits under a hairline. Every    */
+/*     FaqSection (treatment pages, About, villa, Kuta, home service,   */
+/*     price list). :root:root outranks the theme's per-page rules.     */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  :root:root .faq-accordion .accordion {
+    display: grid;
+    gap: 10px;
+  }
+  :root:root .faq-section .faq-accordion {
+    margin-top: 22px;
+  }
+  :root:root .faq-accordion .accordion .accordion-item {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  :root:root .faq-accordion .accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+    border-color: rgba(var(--theme-color1-rgb), 0.5);
+    box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
+  }
+  :root:root .faq-accordion .accordion .accordion-item .accordion-header button {
+    align-items: flex-start;
+    min-height: 60px;
+    padding: 16px 58px 16px 18px;
+    font-size: 16.5px;
+    line-height: 1.5;
+    background-color: transparent;
+  }
+  :root:root .faq-accordion .accordion .accordion-button:not(.collapsed) {
+    color: var(--theme-color1);
+  }
+  /* The price list's question numbers in gold, as on the homepage. */
+  :root:root .faq-accordion .faq-q-num {
+    color: var(--theme-color1);
+  }
+  :root:root .faq-accordion .accordion .accordion-button::before,
+  :root:root .faq-accordion .accordion .accordion-button.collapsed::before {
+    content: "";
+    top: 15px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:
+      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
+      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
+      var(--theme-color-gray);
+    transition: transform 0.3s ease, background-color 0.3s;
+  }
+  :root:root .faq-accordion .accordion .accordion-button:not(.collapsed)::before {
+    background:
+      linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
+      linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
+      var(--theme-color1);
+    transform: rotate(135deg);
+  }
+  :root:root .faq-accordion .accordion .accordion-item .accordion-body {
+    margin: 0 18px;
+    padding: 14px 0 18px;
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  :root:root .faq-accordion .accordion .accordion-body p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .faq-accordion .accordion-collapse.show .accordion-body {
+    animation: faq-card-open 0.3s ease;
+  }
+  /* The home service page's two columns of questions: the cards replace
+     its white column boxes, with the same gap between the columns. */
+  :root:root .faq-section .faq-grid .faq-grid-column {
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  :root:root .faq-section .faq-grid > .row {
+    --bs-gutter-y: 10px;
+  }
+}
+@keyframes faq-card-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-accordion .accordion-collapse.show .accordion-body {
+    animation: none;
+  }
+}
+
+/* The homepage FAQ (its own markup, home/Faq.tsx) in the same cards (owner,
+   23 Oct: "and new FAQ as well, can be all page"): the gold number stays,
+   the grey chevron becomes the cards' plus in a paper circle. */
+@media (max-width: 767px) {
+  :root:root .home-v2 .v2-faq .v2-faq__list {
+    display: grid;
+    gap: 10px;
+    border-top: 0;
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__item {
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__item.is-open {
+    border-color: rgba(var(--theme-color1-rgb), 0.5);
+    box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__question button {
+    gap: 10px;
+    padding: 16px 14px 16px 18px;
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__num {
+    flex-basis: 22px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__text {
+    font-size: 16.5px;
+    line-height: 25px;
+  }
+  :root:root .home-v2 .v2-faq .is-open .v2-faq__text {
+    color: var(--theme-color1);
+  }
+  :root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: -2px;
+    border: 0;
+    border-radius: 50%;
+    background:
+      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
+      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
+      var(--theme-color-gray);
+    transition: transform 0.3s ease, background-color 0.3s;
+  }
+  :root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) > * {
+    display: none;
+  }
+  :root:root .home-v2 .v2-faq .is-open :is(.v2-faq__arrow, .treatment-catalog__toggle) {
+    background:
+      linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
+      linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
+      var(--theme-color1);
+    transform: rotate(135deg);
+  }
+  :root:root .home-v2 .v2-faq .v2-faq__answer p {
+    margin: 0 18px 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  :root:root .home-v2 .v2-faq .is-open .v2-faq__answer {
+    margin-top: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 23. Home service page, S05 on phones: the treatments we bring as one */
+/*     white card of rows (owner, 23 Oct: the ticked list looked        */
+/*     untidy), like the phone footer's "Explore" card: the name in     */
+/*     Literata over its line, a gold hairline between rows, the whole  */
+/*     row a link to the treatment's page with the gold arrow.          */
+/* ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .outcall-treatment-panel .content-column .inner-column .list {
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .outcall-treatment-panel .content-column .inner-column .list ul {
+    margin: 0;
+    padding: 0;
+  }
+  .outcall-treatment-panel .content-column .inner-column .list ul li,
+  .outcall-treatment-panel .content-column .inner-column .list ul li:not(:last-child) {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 13px 44px 13px 18px;
+    transition: background-color 0.25s;
+  }
+  .outcall-treatment-panel .content-column .inner-column .list ul + ul li:first-child,
+  .outcall-treatment-panel .content-column .inner-column .list li + li {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .outcall-treatment-panel .list li > svg,
+  .outcall-treatment-panel .oc-treat__dash {
+    display: none;
+  }
+  .outcall-treatment-panel .list li:has(a:is(:hover, :focus-visible, :active)) {
+    background-color: var(--theme-color-gray);
+  }
+  .outcall-treatment-panel .list li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--theme-color1);
+    border-right: 1.5px solid var(--theme-color1);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  .outcall-treatment-panel .oc-treat__name {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--headings-color);
+  }
+  .outcall-treatment-panel .oc-treat__name::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .outcall-treatment-panel .oc-treat__text {
+    display: block;
+    margin-top: 2px;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+}

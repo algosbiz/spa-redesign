@@ -98,6 +98,15 @@
 :root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section, .bg-sub, .section__decoration-top, .section__decoration-bottom) > section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) + section:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) {
   --sp-pt: var(--sp-quarter);
 }
+/* Two sections on the same paper band (the outcall page's licensed band and
+   its reviews): the same half gap, paper to paper reading as one colour
+   (owner, 23 Oct: "this gap is a bit large"). */
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > .bg-sub:not(section) > section:not(.section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title):has(+ section:not(.section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title)) {
+  --sp-pb: var(--sp-quarter);
+}
+:root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > .bg-sub:not(section) > section:not(.section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) + section:not(.section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title) {
+  --sp-pt: var(--sp-quarter);
+}
 /* A page that ends on a plain section: a quarter gap under it, and a quarter
    over the (white) footer (see the footer rules at the end). */
 :root body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > section:last-child:not(.bg-sub, .section__decoration-top, .section__decoration-bottom, .banner-two-area, .banner-five-area, .page-title),

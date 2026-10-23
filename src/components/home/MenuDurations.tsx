@@ -41,11 +41,16 @@ function fromPrice(options: CatalogOption[]) {
 
 /** Options that share a price, in menu order: "Chocolate, Coconut, … · IDR 169.000". */
 function byPrice(options: CatalogOption[]) {
-  const groups: { labels: string[]; price: string }[] = [];
+  const groups: { labels: string[]; price: string; from: boolean }[] = [];
   for (const o of options) {
+    // "Back · Start From": its price is a starting price, shown "from" when
+    // it has its line to itself (the scrubs share theirs with seven scents).
+    const from = /start from/i.test(o.label);
     const group = groups.find((g) => g.price === o.price);
-    if (group) group.labels.push(cleanLabel(o.label));
-    else groups.push({ labels: [cleanLabel(o.label)], price: o.price });
+    if (group) {
+      group.labels.push(cleanLabel(o.label));
+      group.from = false;
+    } else groups.push({ labels: [cleanLabel(o.label)], price: o.price, from });
   }
   return groups;
 }
@@ -284,6 +289,22 @@ function TitleLines({ name }: { name: string }) {
   );
 }
 
+/**
+ * A variant under a treatment as a menu line (owner, 23 Oct: the wrapped,
+ * dotted list was hard to read): its name, a dotted leader and its price in
+ * gold on the right (spa-menu.css). Notes without a price are just text.
+ */
+function NoteText({ text }: { text: string }) {
+  const at = text.lastIndexOf(" · ");
+  if (at < 0) return <span className="v2-note__label">{text}</span>;
+  return (
+    <>
+      <span className="v2-note__label">{text.slice(0, at)}</span>
+      <span className="v2-note__price">{text.slice(at + 3)}</span>
+    </>
+  );
+}
+
 function DurationRow({
   item,
   durations,
@@ -316,8 +337,10 @@ function DurationRow({
     prices = [{ minutes: null, ...fromPrice(options) }];
     notes = [
       ...(options.length > 1
-        ? byPrice(options).map((g) => `${g.labels.join(", ")} · ${displayPrice(g.price)}`)
-        : options.flatMap((o) => o.details ?? [])
+        ? byPrice(options).map((g) => `${g.labels.join(", ")} · ${g.from ? "from " : ""}${displayPrice(g.price)}`)
+        : // What a one-price treatment's price is for ("30 Minutes", a couple package's contents) is a
+          // menu line with that price too (owner, 23 Oct: "update all with the dots"); benefits stay a list.
+          options.flatMap((o) => (o.details?.length === 1 ? [`${o.details[0]} · ${displayPrice(o.price)}`] : (o.details ?? [])))
       ).map((text) => ({ text, minutes: null })),
       ...(item.options.length ? childNotes(item, null) : []),
     ];
@@ -371,7 +394,7 @@ function DurationRow({
             <ul>
               {notes.map((n) => (
                 <li key={`${n.text}-${n.minutes}`} hidden={!shown(n.minutes)}>
-                  {n.text}
+                  <NoteText text={n.text} />
                 </li>
               ))}
             </ul>

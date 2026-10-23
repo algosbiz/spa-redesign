@@ -201,7 +201,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 625.000", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 625.000", details: ["1 Hour Balinese Massage + 30 Mins Ear Candle"] },
     ],
   },
   {
@@ -213,7 +213,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 699.000", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 699.000", details: ["1 Hour Balinese Massage + 1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -225,7 +225,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 845.000", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 845.000", details: ["1 Hour Warm Candle Massage + 30 Mins Ear Candle"] },
     ],
   },
   {
@@ -237,7 +237,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 919.000", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 919.000", details: ["1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -543,7 +543,7 @@ export const catalog: CatalogItem[] = [
       { label: "Full Back", price: "IDR 299.000" },
       { label: "Half Legs", price: "IDR 149.000" },
       { label: "Full Legs", price: "IDR 299.000" },
-      { label: "Waxing Brazilian", price: "IDR 350.000" },
+      { label: "Brazilian", price: "IDR 350.000" },
     ],
   },
 ];

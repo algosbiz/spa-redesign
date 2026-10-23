@@ -1,6 +1,18 @@
 import { LotusPaths } from "@/components/ui/Lotus";
 
-export type MenuIconName = "lotus" | "tag" | "stones" | "home" | "calendar" | "book" | "chat" | "mail" | "clock" | "info" | "pin";
+export type MenuIconName =
+  | "lotus"
+  | "tag"
+  | "stones"
+  | "home"
+  | "hotel"
+  | "calendar"
+  | "book"
+  | "chat"
+  | "mail"
+  | "clock"
+  | "info"
+  | "pin";
 
 /** One line icon per menu item, drawn alike (24px grid, 1.5 stroke, round). */
 const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
@@ -37,6 +49,14 @@ const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
       <path d="M3 10.5L12 3.5l9 7" />
       <path d="M5.5 9v11.5h13V9" />
       <path d="M12 17.5s-3.2-1.9-3.2-3.9a1.7 1.7 0 0 1 3.2-.8 1.7 1.7 0 0 1 3.2.8c0 2-3.2 3.9-3.2 3.9z" />
+    </>
+  ),
+  // A hotel: the footer's Villa & Hotel Massage link on phones (23 Oct).
+  hotel: (
+    <>
+      <path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3.5 21h17" />
+      <path d="M10 21v-3.5h4V21" />
+      <path d="M9 7.5h1M14 7.5h1M9 11h1M14 11h1M9 14.5h1M14 14.5h1" />
     </>
   ),
   calendar: (

@@ -708,7 +708,7 @@ export const pricelistPage = {
               price: "IDR 299.000"
             },
             {
-              time: "Waxing Brazilian",
+              time: "Brazilian",
               price: "IDR 350.000"
             }
           ],
