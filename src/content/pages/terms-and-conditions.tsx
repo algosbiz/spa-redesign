@@ -315,7 +315,7 @@ export default function TermsPage() {
                   </div>
                   <p style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#5f5a54", margin: 0 }}>
                     {"We are open daily from "}
-                    <strong>9:00 AM to 11:00 PM</strong>, seven days a week.
+                    <strong>9am to 11pm</strong>, seven days a week.
                   </p>
                 </div>
                 <div style={{ borderTop: "1px solid rgba(95, 90, 84, 0.12)", paddingTop: "40px", textAlign: "center" }}>

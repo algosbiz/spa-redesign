@@ -59,7 +59,7 @@
           "$jsx": {
             "type": "Fragment",
             "children": [
-              "Sports Massage is a targeted treatment designed for active bodies experiencing frequent movement, physical effort, and muscle strain. Through controlled pressure, stretching, and rhythmic movements, it focuses on areas that become tight after exercise, training, surfing, or active travel, helping the body feel more flexible, balanced, and ready for the next activity. Looking for firmer, slower pressure? See our",
+              "A sports massage is a firm, targeted massage for muscles that are tight after exercise, surfing or active travel. Your therapist uses kneading, compression, stretching and controlled pressure on the areas you've worked hardest, so they feel looser and ready for the next activity. Looking for firmer, slower pressure? See our",
               " ",
               {
                 "type": "Link",
@@ -97,7 +97,7 @@
             ],
             "subTitle": "",
             "title": "Our Session Options",
-            "text": "Different activities place different demands on the body. A shorter session works well for focused recovery, while a longer treatment allows more time to work through multiple areas affected by training, travel, or repetitive movement.",
+            "text": "Choose 1 hour for one or two problem areas after a workout, or 1.5 hours for full-body recovery across several muscle groups.",
             "packages": [
               {
                 "price": "IDR 269.000",
@@ -137,7 +137,7 @@
                 "text": "Therapists"
               },
               {
-                "title": "Deep",
+                "title": "Firm",
                 "text": "Pressure"
               },
               {
@@ -164,11 +164,11 @@
         "image": "/images/services/sportsmassage/sportsmassage-6.webp",
         "subTitle": "",
         "title": "Who Sports Massage Suits",
-        "text": "Sports massage can be a suitable option for anyone whose regular activities place physical demands on the body. It may also be particularly suitable for:",
+        "text": "A sports massage suits anyone with a physically active routine, especially:",
         "featuresLeft": [
           "Runners and marathon participants",
           "Surfers and water sports enthusiasts",
-          "Gym and strength training enthusiasts"
+          "Gym-goers and strength trainers"
         ],
         "featuresRight": [
           "Cyclists and endurance athletes",
@@ -197,8 +197,8 @@
         },
         "image": "/images/services/sportsmassage/sportsmassage-7.webp",
         "subTitle": "",
-        "title": "Areas That Receive the Most Attention During Sports Massage",
-        "text": "Sports Massage focuses on the areas that experience the most physical demand from exercise, sports, and active daily routines. Our therapist can adjust the focus according to your activities and individual needs, with attention commonly given to:",
+        "title": "Where Your Therapist Focuses",
+        "text": "Your therapist focuses on the muscles your sport or activity uses most, commonly:",
         "featuresLeft": [
           "Shoulders and upper back",
           "Lower back",
@@ -258,23 +258,23 @@
             "items": [
               {
                 "question": "Is a sports massage only for professional athletes?",
-                "answer": "No. Sports Massage at Spa Bali Moon is suitable for anyone with an active lifestyle, including gym-goers, runners, surfers, cyclists, hikers, and people who experience muscle tightness from regular movement. It also suits travellers with physically active itineraries. Sessions are 1 hour (IDR 269.000) or 1.5 hours (IDR 359.000) per person."
+                "answer": "No. A sports massage at Spa Bali Moon suits anyone with an active lifestyle, including gym-goers, runners, surfers, cyclists, hikers, and people who experience muscle tightness from regular movement. It also suits travellers with physically active itineraries."
               },
               {
                 "question": "How is a sports massage different from a deep tissue massage?",
-                "answer": "Both techniques may use firm pressure, but their purpose is different. Sports Massage focuses more on recovery, mobility, and the physical demands of an active lifestyle, while Deep Tissue Massage focuses on releasing deeper areas of long-term muscle tension. At Spa Bali Moon, both cost IDR 269.000 for 1 hour or IDR 359.000 for 1.5 hours per person."
+                "answer": "Both techniques may use firm pressure, but their purpose is different. A sports massage focuses more on recovery, mobility, and the physical demands of an active lifestyle, while a deep tissue massage focuses on releasing deeper areas of long-term muscle tension. At Spa Bali Moon, both cost IDR 269.000 for 1 hour or IDR 359.000 for 1.5 hours per person."
               },
               {
                 "question": "Should I get a sports massage before or after exercise?",
-                "answer": "Both options are possible. A pre-activity Sports Massage usually uses lighter techniques to prepare the body, while a post-activity session focuses more on relaxation and recovery after physical effort. At Spa Bali Moon, each session begins with a short consultation, so tell your therapist about your plans and the intensity can match your goals."
+                "answer": "Either works. A pre-activity sports massage usually uses lighter techniques to prepare the body, while a post-activity session focuses more on relaxation and recovery after physical effort. At Spa Bali Moon, each session begins with a short consultation, so tell your therapist about your plans and the intensity can match your goals."
               },
               {
                 "question": "Is a sports massage painful?",
-                "answer": "No, it should not feel painful, although Sports Massage may involve stronger pressure than a relaxation massage. At Spa Bali Moon, our therapists adjust the intensity based on your comfort and body condition, starting with warm-up techniques before targeted pressure on tense areas. Let your therapist know straight away if anything feels too strong."
+                "answer": "No, it should not feel painful, although a sports massage may involve stronger pressure than a relaxation massage. At Spa Bali Moon, our therapists adjust the intensity based on your comfort and body condition, starting with warm-up techniques before targeted pressure on tense areas. Let your therapist know straight away if anything feels too strong."
               },
               {
                 "question": "How often should I get a sports massage?",
-                "answer": "It depends on your activity level, training schedule, and personal preference. Some active individuals enjoy regular Sports Massage sessions, while others book treatments after periods of increased physical demand, such as surfing or an active Bali itinerary. At Spa Bali Moon, 1 hour (IDR 269.000) suits post-workout recovery and specific problem areas."
+                "answer": "It depends on how active you are. Some guests book a sports massage regularly, others after a few days of surfing or an active Bali itinerary."
               },
               {
                 "question": "How much does a sports massage cost in Seminyak?",
@@ -293,7 +293,7 @@
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my sports massage?",
                 "answer": "Yes. Tell us your preference when you book your sports massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -335,9 +335,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/sportsmassage/sportsmassage-10.webp",
-            "title": "Renew Your Body After Every Challenge",
-            "text": "Training, outdoor adventures, and long days exploring Bali leave muscles tired and restricted. Sports Massage uses controlled pressure and recovery techniques to restore comfort and movement.",
-            "closingText": "Reserve your Sports Massage and feel ready for your next activity."
+            "title": "Recover After Surfing, Training and Long Days Out",
+            "text": "Training, outdoor adventures, and long days exploring Bali leave muscles tired and restricted. A sports massage uses firm, controlled pressure to ease tired, tight muscles.",
+            "closingText": "Reserve your sports massage and feel ready for your next activity."
           }
         }
       ]

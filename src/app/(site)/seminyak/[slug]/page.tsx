@@ -25,20 +25,40 @@ import { appendChild, faqItems, insertBefore, withProps, type TreeNode } from "@
 type Props = { params: Promise<{ slug: string }> };
 
 /**
- * How the "Visit us" heading ("Book … in Seminyak") and the
- * Service data name a treatment, where its menu name does not read well there.
+ * How "Visit us" names a treatment: in its heading ("Book … in Seminyak") and
+ * in its sentence ("You can book … at Spa Bali Moon", lower case mid-sentence:
+ * owner, 23 Oct). `service`: the Service data's name, where the menu name does
+ * not read well there.
  */
-const NAMES: Record<string, { heading: string; service: string }> = {
-  "body-scrub": { heading: "a Body Scrub", service: "Body Scrub" },
-  "couple-spa": { heading: "a Couples Massage", service: "Couples Massage" },
-  creambath: { heading: "a Cream Bath", service: "Cream Bath" },
-  "day-spa": { heading: "a Day Spa Visit", service: "Day Spa" },
-  "ear-candle": { heading: "an Ear Candle Treatment", service: "Ear Candle Treatment" },
-  facial: { heading: "a Facial", service: "Facial" },
-  "lymphatic-drainage-massage": { heading: "Lymphatic Drainage Massage", service: "Lymphatic Drainage Massage" },
-  "manicure-pedicure": { heading: "a Manicure and Pedicure", service: "Manicure and Pedicure" },
-  "nail-spa": { heading: "Gel Nails and Nail Art", service: "Gel Nails and Nail Art" },
-  "sunburn-massage": { heading: "a Sunburn Treatment", service: "Sunburn Treatment (Aloe Vera Massage)" },
+const NAMES: Record<string, { heading: string; inline: string; service?: string }> = {
+  "anti-cellulite-massage": { heading: "a Cellulite Massage", inline: "a cellulite massage" },
+  "balinese-massage": { heading: "a Balinese Massage", inline: "a Balinese massage" },
+  "body-scrub": { heading: "a Body Scrub", inline: "a body scrub", service: "Body Scrub" },
+  "coconut-oil-massage": { heading: "a Coconut Oil Massage", inline: "a coconut oil massage" },
+  "couple-spa": { heading: "a Couples Massage", inline: "a couples massage", service: "Couples Massage" },
+  creambath: { heading: "a Cream Bath", inline: "a cream bath", service: "Cream Bath" },
+  "day-spa": { heading: "a Day Spa Visit", inline: "a day spa visit", service: "Day Spa" },
+  "deep-tissue-massage": { heading: "a Deep Tissue Massage", inline: "a deep tissue massage" },
+  "ear-candle": { heading: "an Ear Candle Treatment", inline: "an ear candle treatment", service: "Ear Candle Treatment" },
+  facial: { heading: "a Facial", inline: "a facial", service: "Facial" },
+  "foot-massage": { heading: "a Foot Massage", inline: "a foot massage" },
+  "foot-reflexology": { heading: "Foot Reflexology", inline: "foot reflexology" },
+  "hair-braiding": { heading: "Hair Braiding", inline: "hair braiding" },
+  "head-massage": { heading: "a Head Massage", inline: "a head massage" },
+  "hot-stone-massage": { heading: "a Hot Stone Massage", inline: "a hot stone massage" },
+  "lymphatic-drainage-massage": {
+    heading: "a Lymphatic Drainage Massage",
+    inline: "a lymphatic drainage massage",
+    service: "Lymphatic Drainage Massage",
+  },
+  "manicure-pedicure": { heading: "a Manicure and Pedicure", inline: "a manicure and pedicure", service: "Manicure and Pedicure" },
+  "nail-spa": { heading: "Gel Nails and Nail Art", inline: "gel nails and nail art", service: "Gel Nails and Nail Art" },
+  "shiatsu-massage": { heading: "a Shiatsu Massage", inline: "a shiatsu massage" },
+  "sport-massage": { heading: "a Sports Massage", inline: "a sports massage" },
+  "sunburn-massage": { heading: "a Sunburn Treatment", inline: "a sunburn treatment", service: "Sunburn Treatment (Aloe Vera Massage)" },
+  "thai-massage": { heading: "a Thai Massage", inline: "a Thai massage" },
+  "traditional-massage": { heading: "a Traditional Massage", inline: "a traditional massage" },
+  "waxing-salon": { heading: "Waxing", inline: "waxing" },
 };
 
 /**
@@ -189,7 +209,7 @@ export default async function TreatmentPage({ params }: Props) {
   const { slug } = await params;
   const content = await getTreatmentContent(slug);
   if (!content) notFound();
-  const names = NAMES[slug] ?? { heading: content.name, service: content.name };
+  const names = NAMES[slug] ?? { heading: content.name, inline: content.name };
   // The quick facts end with the date the page last changed; "Visit us"
   // (AEO roadmap, 17 Oct) sits before the related treatments.
   // The banner shows the session prices when the quick facts list them;
@@ -212,7 +232,7 @@ export default async function TreatmentPage({ params }: Props) {
   );
   const visited = insertBefore(decorated, ["ServiceSlider", "TreatmentLinks"], {
     type: "VisitUs",
-    props: { treatment: names.heading, look: "columns" },
+    props: { treatment: names.heading, inline: names.inline, look: "columns" },
   });
   // One sentence that links to the outcall page, at the end of the quick facts block, inside its
   // section, so it adds no gap of its own between two sections (20 Oct dev brief, Task 6; the
@@ -229,7 +249,7 @@ export default async function TreatmentPage({ params }: Props) {
       <JsonLd
         data={treatmentSchema({
           slug,
-          name: names.service,
+          name: names.service ?? content.name,
           description: content.seo.description,
           image: bannerImage(content.tree),
         })}

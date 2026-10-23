@@ -44,12 +44,12 @@ const FAQ = [
   {
     question: "Do I need to prepare anything?",
     answer:
-      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare. If you have a preference for where the session takes place, tell us when you book.",
+      "No. Our therapists bring fresh linen, towels, oils and everything your treatment needs. There is nothing to prepare.",
   },
   {
     question: "What does the therapist bring?",
     answer:
-      "A Spa Bali Moon outcall therapist brings freshly laundered linens and towels, professional massage oils, and any tools your chosen treatment needs. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
+      "A Spa Bali Moon outcall therapist brings fresh linen and towels for every guest, professional massage oils, and any tools your chosen treatment needs. You do not need to supply towels, sheets, or anything else.",
   },
   {
     question: "How long does setup take?",
@@ -59,7 +59,7 @@ const FAQ = [
   {
     question: "Which areas do you cover for home service?",
     answer:
-      "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm. See [our home service areas](#areas) for more detail.",
+      "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, North Kuta and Kuta. We also travel to Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm. See [our home service areas](#areas) for more detail.",
   },
   {
     question: "What if my hotel doesn't allow outside therapists?",
@@ -69,7 +69,7 @@ const FAQ = [
   {
     question: "Which massage is best after a long flight?",
     answer:
-      "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, which helps with circulation and sleep after a long journey. Foot reflexology is a good shorter option if your legs and feet feel swollen. Read more in our [jet lag recovery guide](/guide/jet-lag-recovery-best-treatments-after-a-long-flight/).",
+      "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, so you can relax and rest after a long journey. Foot reflexology is a good shorter option if your legs and feet feel heavy. Read more in our [jet lag recovery guide](/guide/jet-lag-recovery-best-treatments-after-a-long-flight/).",
   },
   {
     question: "How much does a home service massage cost in Seminyak?",
@@ -97,7 +97,7 @@ const FAQ = [
   {
     question: "Can we book a couples massage at our villa or hotel?",
     answer:
-      "Yes. Two therapists arrive together and set up side by side, so you're both treated at the same time. Couples massage starts from IDR 319.000 for 60 minutes, plus IDR 75.000 per therapist in the Seminyak area.",
+      "Yes. Two therapists arrive together, so you're both treated at the same time. A 60-minute couple Balinese massage is IDR 319.000 for two, plus IDR 75.000 per therapist (IDR 150.000) in the Seminyak area.",
   },
   {
     question: "Can I ask for a female or male therapist?",
@@ -121,7 +121,7 @@ const HERO_CHIPS = [
   "Since 2009 · Seminyak spa",
   "Linen & oils included",
   "IDR 75.000 per therapist in Seminyak",
-  "Open daily 9am – 11pm",
+  "Open daily 9am–11pm",
 ];
 
 /**
@@ -205,7 +205,7 @@ export default function OutcallPage() {
             { title: "Easy Booking", text: "via WhatsApp" },
             { title: "Spa Treatments", text: "at Your Place" },
             { title: "Flexible", text: "Spa Packages" },
-            { title: "Open Daily", text: "9am - 11pm" },
+            { title: "Open Daily", text: "9am–11pm" },
           ]}
         />
         </div>
@@ -228,10 +228,10 @@ export default function OutcallPage() {
                 Release muscle tension using gentle Japanese pressure-point techniques.
               </TreatmentItem>,
               <TreatmentItem key="thai" href="/seminyak/thai-massage/" name="Thai Massage">
-                Improve flexibility and posture with assisted stretching and acupressure.
+                Loosen up with assisted stretching and acupressure.
               </TreatmentItem>,
               <TreatmentItem key="cream" href="/seminyak/creambath/" name="Cream Bath">
-                Revitalize your hair while supporting softness and freshness.
+                Cleanse and condition your hair, with a relaxing scalp massage.
               </TreatmentItem>,
             ]}
             featuresRight={[
@@ -283,7 +283,7 @@ export default function OutcallPage() {
           <MenuDurations
             subTitle="Prices"
             title="Outcall Massage Price List"
-            intro="Treatment prices below are the same as at our Seminyak spa. Home service adds IDR 75.000 per therapist in the Seminyak area and IDR 150.000 in Canggu and Kuta."
+            intro="Treatment prices below are the same as at our Seminyak spa. Home service adds IDR 75.000 per therapist in the Seminyak area and IDR 150.000 in Canggu, North Kuta and Kuta."
             spacing="pt-130 pb-130"
             sticky
             paper={false}
@@ -320,7 +320,7 @@ export default function OutcallPage() {
                   {
                     id: "popular-four-hand",
                     name: "Four Hand Massage",
-                    desc: "Delivered by two therapists working together in synchronized movements.",
+                    desc: "Delivered by two therapists working together in synchronised movements.",
                     image: "/images/listmenu/fourhandmassage.webp",
                     options: [
                       { time: "1 Hour", price: "339.000" },
@@ -331,7 +331,7 @@ export default function OutcallPage() {
                   {
                     id: "popular-lymphatic",
                     name: "Lymphatic Massage",
-                    desc: "Applied gently to support natural drainage and promote healthy circulation.",
+                    desc: "Light, rhythmic strokes that leave the body feeling lighter and relaxed.",
                     image: "/images/treatments/cards/lymphaticmassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "300.000" },
@@ -348,8 +348,8 @@ export default function OutcallPage() {
                       { time: "Manicure & Pedicure", price: "238.000" },
                       { time: "Manicure", price: "99.000" },
                       { time: "Pedicure", price: "139.000" },
-                      { time: "Nail Color Feet & Hands", price: "138.000" },
-                      { time: "Nail Color Feet or Hands", price: "69.000" },
+                      { time: "Nail Colour Feet & Hands", price: "138.000" },
+                      { time: "Nail Colour Feet or Hands", price: "69.000" },
                       { time: "Nail Remover Feet & Hands", price: "98.000" },
                       { time: "Nail Gel Feet & Hands", price: "438.000" },
                       { time: "Nail Gel Feet or Hands", price: "219.000" },
@@ -358,7 +358,7 @@ export default function OutcallPage() {
                   {
                     id: "popular-sports",
                     name: "Sports Massage",
-                    desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
+                    desc: "Targeted to ease sore, stiff muscles after sport or a long day.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
                       { time: "1 Hour", price: "269.000" },
@@ -396,7 +396,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-aloe-vera",
                     name: "Aloe Vera Massage",
-                    desc: "Using cooling aloe vera to help soothe the skin and support gentle recovery.",
+                    desc: "Using cooling aloe vera to soothe sun-warmed skin.",
                     image: "/images/listmenu/aloeveramassage.webp",
                     options: [{ time: "1 Hour", price: "250.000" }],
                   },
@@ -438,7 +438,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-cellulite",
                     name: "Cellulite Massage",
-                    desc: "Targeting specific areas to help stimulate circulation and support skin firmness.",
+                    desc: "Targeting specific areas with firm strokes, leaving the skin feeling smooth.",
                     image: "/images/treatments/cards/cellulitemassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "350.000" },
@@ -485,20 +485,20 @@ export default function OutcallPage() {
                         options: [
                           { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                           { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
-                          { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
+                          { time: "2 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
                         ],
                       },
                       {
                         name: "Couple Massage Packages",
                         desc: "A well-balanced couple’s massage package created for relaxing together.",
                         options: [
-                          { time: "Package A · 1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" },
+                          { time: "Package A · 1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "625.000" },
                           {
-                            time: "Package B · 2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax",
-                            price: "709.000",
+                            time: "Package B · 1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax",
+                            price: "699.000",
                           },
-                          { time: "Package C · 1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" },
-                          { time: "Package D · 2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" },
+                          { time: "Package C · 1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "845.000" },
+                          { time: "Package D · 1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "919.000" },
                         ],
                       },
                     ],
@@ -506,7 +506,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-deep-tissue",
                     name: "Deep Tissue Massage",
-                    desc: "Focused on deeper pressure to help release muscle knots and support better movement.",
+                    desc: "Focused on deeper pressure to ease knots and tight muscles.",
                     image: "/images/listmenu/deeptissuemassage.webp",
                     options: [
                       { time: "1 Hour", price: "269.000" },
@@ -516,7 +516,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-four-hand",
                     name: "Four Hand Massage",
-                    desc: "Delivered by two therapists working together in synchronized movements.",
+                    desc: "Delivered by two therapists working together in synchronised movements.",
                     image: "/images/listmenu/fourhandmassage.webp",
                     options: [
                       { time: "1 Hour", price: "339.000" },
@@ -527,7 +527,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-four-hand-candle",
                     name: "Four Hand Warm Candle",
-                    desc: "Performed by two therapists working in synchronized movements for deeper relaxation.",
+                    desc: "Performed by two therapists working in synchronised movements for deeper relaxation.",
                     image: "/images/listmenu/organicwarmcandle.webp",
                     options: [
                       { time: "1 Hour – Four Hand Warm Candle", price: "539.000" },
@@ -538,7 +538,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-foot-reflexology",
                     name: "Foot Reflexology",
-                    desc: "Applying pressure to reflex points on the feet to help restore body balance.",
+                    desc: "Applying pressure to reflex points on the feet for deep relaxation.",
                     image: "/images/listmenu/footreflexology.webp",
                     options: [
                       { time: "30 Minutes", price: "99.000" },
@@ -571,7 +571,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-herbal",
                     name: "Herbal Massage",
-                    desc: "Using herbal ingredients to support relaxation and encourage circulation.",
+                    desc: "Using herbal ingredients for a calm, relaxing massage.",
                     image: "/images/listmenu/herbalmassage.webp",
                     options: [
                       { time: "1 Hour", price: "199.000" },
@@ -581,7 +581,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-lymphatic",
                     name: "Lymphatic Massage",
-                    desc: "Applied gently to support natural drainage and promote healthy circulation.",
+                    desc: "Light, rhythmic strokes that leave the body feeling lighter and relaxed.",
                     image: "/images/treatments/cards/lymphaticmassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "300.000" },
@@ -603,7 +603,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-sports",
                     name: "Sports Massage",
-                    desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
+                    desc: "Targeted to ease sore, stiff muscles after sport or a long day.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
                       { time: "1 Hour", price: "269.000" },
@@ -658,7 +658,7 @@ export default function OutcallPage() {
                   {
                     id: "massage-warm-stone",
                     name: "Hot Stone Massage",
-                    desc: "Using heated stones to help relax muscles and support healthy circulation.",
+                    desc: "Using heated stones to warm and relax tired muscles.",
                     image: "/images/listmenu/hotstonemassage.webp",
                     options: [
                       { time: "1 Hour", price: "250.000" },
@@ -693,7 +693,7 @@ export default function OutcallPage() {
                     benefits: [
                       "Boosts natural glow",
                       "Improves skin smoothness and elasticity",
-                      "Deeply moisturizes",
+                      "Deeply moisturises",
                       "Revives overall skin vitality",
                     ],
                   },
@@ -774,8 +774,8 @@ export default function OutcallPage() {
                       { time: "Manicure & Pedicure", price: "238.000" },
                       { time: "Manicure", price: "99.000" },
                       { time: "Pedicure", price: "139.000" },
-                      { time: "Nail Color Feet & Hands", price: "138.000" },
-                      { time: "Nail Color Feet or Hands", price: "69.000" },
+                      { time: "Nail Colour Feet & Hands", price: "138.000" },
+                      { time: "Nail Colour Feet or Hands", price: "69.000" },
                       { time: "Nail Remover Feet & Hands", price: "98.000" },
                       { time: "Nail Gel Feet & Hands", price: "438.000" },
                       { time: "Nail Gel Feet or Hands", price: "219.000" },
@@ -841,7 +841,7 @@ export default function OutcallPage() {
                     options: [
                       { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
-                      { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
+                      { time: "2 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
                     ],
                   },
                 ],
@@ -855,28 +855,28 @@ export default function OutcallPage() {
                     desc: "",
                     // One photo per package, as on /seminyak/ (live repeats A=B and C=D).
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" }],
+                    options: [{ time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "625.000" }],
                   },
                   {
                     id: "couple-package-b",
                     name: "Couple Massage Package B",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax", price: "709.000" }],
+                    options: [{ time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax", price: "699.000" }],
                   },
                   {
                     id: "couple-package-c",
                     name: "Couple Massage Package C",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" }],
+                    options: [{ time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "845.000" }],
                   },
                   {
                     id: "couple-package-d",
                     name: "Couple Massage Package D",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" }],
+                    options: [{ time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "919.000" }],
                   },
                 ],
               },
@@ -896,7 +896,7 @@ export default function OutcallPage() {
             bottomSpacing={0}
             title="Home Service Massage in Seminyak and Beyond"
             text="Professional treatments at your home, hotel, or villa for an extra IDR 75.000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen."
-            closingText="For in-spa treatments, bookings are made on-site at your preferred time."
+            closingText="Treatments at our Seminyak spa are booked on WhatsApp too."
             backgroundImage="/images/outcall/outcall-5.webp"
           />
         </div>

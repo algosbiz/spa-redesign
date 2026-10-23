@@ -187,27 +187,26 @@ export const homeServicePage = {
       packagesDescription: "A well-balanced couple’s massage package created for relaxing together.",
     },
     couplePackagesTitle: "Couple Packages",
-    // Couple package labels exactly as written on this page, with the photo the live page shows beside each.
-    // TODO DUR-02: packages B and D say 2.5 Hours here, but include 1 Hr + 1 Hr on other pages.
+    // Couple package labels, with the photo the live page shows beside each; lengths as on the price list (owner, 23 Oct).
     packageLabels: {
       "Package A": {
         heading: "Couple Massage Package A",
-        label: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax",
+        label: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax",
         image: { src: "/images/listmenu/couplemassagepackage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
       },
       "Package B": {
         heading: "Couple Massage Package B",
-        label: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax",
+        label: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax",
         image: { src: "/images/listmenu/couplemassagepackage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
       },
       "Package C": {
         heading: "Couple Massage Package C",
-        label: "1.5 Hours – Warm Candle + Ear Candle · 2 pax",
+        label: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax",
         image: { src: "/images/listmenu/couplemassagepackage.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
       },
       "Package D": {
         heading: "Couple Massage Package D",
-        label: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax",
+        label: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax",
         image: { src: "/images/listmenu/couplemassagepackage.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
       },
     },

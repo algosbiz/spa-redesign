@@ -515,7 +515,7 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <p style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#5f5a54", margin: 0 }}>
                     {"Spa Bali Moon operates daily from "}
-                    <strong>9:00 AM to 11:00 PM</strong>, offering both in‑spa and home service treatments.
+                    <strong>9am to 11pm</strong>, offering both in‑spa and home service treatments.
                   </p>
                 </div>
                 <div style={{ borderTop: "1px solid rgba(95, 90, 84, 0.12)", paddingTop: "40px" }}>

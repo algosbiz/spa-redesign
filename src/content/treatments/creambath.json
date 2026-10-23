@@ -58,8 +58,8 @@
         "primaryImage": "/images/services/creambath/creambath-2.webp",
         "secondaryImage": "/images/services/creambath/creambath-3.webp",
         "subTitle": "",
-        "title": "The Ritual Behind a Cream Bath Treatment",
-        "text": "A creambath is a popular Indonesian hair and scalp treatment that combines nourishing hair cream with a gentle scalp massage. Unlike a regular hair mask, this treatment focuses on both the hair strands and scalp, helping improve softness, moisture, and overall hair condition. Commonly enjoyed after sun exposure, swimming, or frequent styling, a creambath offers a relaxing way to refresh and care for your hair.",
+        "title": "What Is a Cream Bath?",
+        "text": "A cream bath is a popular Indonesian hair and scalp treatment that combines nourishing hair cream with a gentle scalp massage. Unlike a regular hair mask, it cares for the scalp as well as the hair, leaving it softer and better conditioned. It's a relaxing way to care for your hair after sun, swimming or frequent styling.",
         "feature1Title": "Hair Conditioning",
         "feature1Text": "Nourishing ingredients help improve hair softness, hydration, and manageability.",
         "feature2Title": "Scalp Relaxation",
@@ -84,10 +84,10 @@
             ],
             "subTitle": "",
             "title": "Cream Bath Packages in Seminyak",
-            "text": "Our Cream Bath packages combine nourishing hair care with relaxing spa treatments for a more complete wellness experience. From facial care and massage to body treatments, each combination is designed to help you refresh your hair, relax your body, and enjoy more during your spa visit in Bali.",
+            "text": "Each of our four cream bath packages adds a Thai, Balinese or hot stone massage and a Bali Moon Facial, reflexology or body scrub.",
             "packages": [
               {
-                "price": "IDR 649.000",
+                "price": "IDR 609.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Cream Bath",
@@ -97,7 +97,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 549.000",
+                "price": "IDR 499.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Cream Bath",
@@ -172,7 +172,7 @@
                       "price": "IDR 165.000",
                       "duration": "NR",
                       "details": [
-                        "Complete Creambath treatment",
+                        "Complete cream bath treatment",
                         "Hair and scalp care",
                         "Relaxing head massage"
                       ]
@@ -188,8 +188,8 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Creambath & Hair Mask Options",
-                  "text": "We offer several Creambath and Hair Mask options using different formulas and product choices. Each treatment includes cleansing, conditioning, and a relaxing head massage, with prices varying by product.",
+                  "title": "Cream Bath and Hair Mask Options",
+                  "text": "Choose from five cream bath formulas or a hair mask. Each includes cleansing, conditioning and a relaxing head massage; the price depends on the product.",
                   "icon": "/images/spa/CreamBath.svg"
                 }
               }
@@ -217,7 +217,7 @@
                 "text": "Booking"
               },
               {
-                "title": "Customized",
+                "title": "Customised",
                 "text": "Packages"
               },
               {
@@ -240,7 +240,7 @@
         "image": "/images/services/creambath/creambath-8.webp",
         "subTitle": "",
         "title": "Choose Your Cream Bath Formula",
-        "text": "Each creambath formula uses different ingredients to address common hair and scalp needs, from moisture and softness to scalp comfort and manageability. Depending on your hair condition and what you want from the treatment, you may prefer:",
+        "text": "Each cream uses different ingredients. Depending on your hair, you may prefer:",
         "featuresLeft": [
           "Ginseng to support healthier-looking hair",
           "Avocado for moisture and softness",
@@ -248,8 +248,8 @@
         ],
         "featuresRight": [
           "L'Oreal for smoother, more manageable hair",
-          "Suitable for dry and damaged hair",
-          "Ideal after swimming or sun exposure"
+          "NR for complete hair and scalp care",
+          "Hair Mask for conditioning through the lengths"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -274,7 +274,7 @@
         "image": "/images/services/creambath/creambath-9.webp",
         "subTitle": "",
         "title": "How a Cream Bath Cares for Your Hair",
-        "text": "Depending on your hair condition, the treatment can help improve how your hair feels and looks, particularly when it has been affected by dryness, styling, sun exposure, or swimming. Benefits may include:",
+        "text": "A cream bath helps hair that sun, salt water, swimming or styling has dried out. Benefits may include:",
         "featuresLeft": [
           "Helps improve hair moisture and softness",
           "Supports a smoother, healthier-looking appearance",
@@ -297,8 +297,8 @@
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/creambath/creambath-10.webp",
         "subTitle": "",
-        "title": "Inside a Traditional Creambath Session",
-        "text": "Our Creambath session combines hair conditioning with a relaxing scalp treatment. The process begins with selecting a suitable cream formula based on your hair needs, followed by a gentle application from the roots to the ends. A soothing scalp massage helps the cream absorb while releasing tension, then the treatment is completed with a rinse and finishing step to leave the hair feeling soft, refreshed, and manageable.",
+        "title": "Inside a Cream Bath Session",
+        "text": "Your therapist checks your hair and scalp and helps you choose a cream, then applies it from roots to ends. A slow scalp massage works it in and eases tension, and a rinse and finish leave your hair soft and easy to manage.",
         "featuresLeft": [
           "Hair and scalp assessment",
           "Cream application from roots to ends",
@@ -333,35 +333,35 @@
             "items": [
               {
                 "question": "How is a cream bath different from a hair mask?",
-                "answer": "Both nourish the hair, but a creambath treats the scalp as well as the strands, with a relaxing scalp massage that helps work the cream evenly through the hair. At Spa Bali Moon in Seminyak you can choose either: the Hair Mask and most creambath formulas are IDR 165.000 per person, and L'Oreal is IDR 195.000."
+                "answer": "Both nourish the hair, but a cream bath treats the scalp as well as the strands, with a relaxing scalp massage that helps work the cream evenly through the hair. At Spa Bali Moon in Seminyak you can choose either: the Hair Mask and most cream bath formulas are IDR 165.000 per person, and L'Oreal is IDR 195.000."
               },
               {
                 "question": "Is a cream bath suitable for coloured or chemically treated hair?",
-                "answer": "Yes. Creambath treatments at Spa Bali Moon are suitable for coloured, highlighted and chemically treated hair. Your therapist starts with a hair and scalp assessment and can recommend the most appropriate formula from Ginseng, Avocado, Aloe Vera, NR, Hair Mask (each IDR 165.000 per person) or L'Oreal (IDR 195.000)."
+                "answer": "Yes. Cream baths at Spa Bali Moon are suitable for coloured, highlighted and chemically treated hair. Your therapist starts with a hair and scalp assessment and can recommend the best formula: Ginseng, Avocado, Aloe Vera, NR, Hair Mask or L'Oreal."
               },
               {
                 "question": "Which cream bath is best for dry hair?",
-                "answer": "Many guests with dry hair choose the Avocado or L'Oreal creambath at Spa Bali Moon in Seminyak. Avocado is chosen for moisture and softness (IDR 165.000 per person), and L'Oreal for smoother, more manageable hair (IDR 195.000 per person). Your therapist assesses your hair first and can suggest the better match."
+                "answer": "Many guests with dry hair choose the Avocado or L'Oreal cream bath at Spa Bali Moon in Seminyak. Avocado is chosen for moisture and softness, and L'Oreal for smoother, more manageable hair. Your therapist assesses your hair first and can suggest the better match."
               },
               {
                 "question": "How often should I get a cream bath?",
-                "answer": "Many people book a creambath every two to four weeks as part of their hair care routine, depending on hair condition, styling habits and environmental exposure. In Bali, guests often add one after sun, salt water or swimming. At Spa Bali Moon in Seminyak, most formulas are IDR 165.000 per person."
+                "answer": "Many people book a cream bath every two to four weeks, depending on their hair and how often they style it. In Bali, guests often add one after sun, salt water or swimming."
               },
               {
                 "question": "Can I have a cream bath after swimming or a day at the beach?",
-                "answer": "Yes. A creambath is one of the most popular treatments after swimming, salt water or sun exposure, because it helps restore moisture and improve hair softness. At Spa Bali Moon you can book one in our Seminyak spa or at your villa or hotel, from IDR 165.000 per person; home service adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "Yes. A cream bath is one of the most popular treatments after swimming, salt water or sun, because it helps restore moisture and softness to the hair. At Spa Bali Moon you can have one at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "Does a cream bath include a scalp massage?",
-                "answer": "Yes. Every creambath at Spa Bali Moon includes a relaxing scalp and head massage. After the cream is applied from roots to ends, the massage helps it absorb and lets you unwind as it is worked through the hair and scalp. It finishes with a rinse, and prices start at IDR 165.000 per person."
+                "answer": "Yes. Every cream bath at Spa Bali Moon includes a relaxing scalp and head massage. After the cream is applied from roots to ends, the massage works it through the hair and scalp while you unwind. It finishes with a rinse."
               },
               {
                 "question": "How is a cream bath different from a regular hair wash?",
-                "answer": "A regular hair wash mainly cleanses the hair and scalp, while a creambath is a more intensive conditioning and relaxation treatment. At Spa Bali Moon, a creambath combines a nourishing hair cream applied from roots to ends with a relaxing scalp massage, then a rinse, so it offers both hair care and relaxation."
+                "answer": "A regular hair wash mainly cleanses the hair and scalp, while a cream bath is a deeper conditioning and relaxation treatment. At Spa Bali Moon, a cream bath combines a nourishing hair cream applied from roots to ends with a relaxing scalp massage, then a rinse, so it offers both hair care and relaxation."
               },
               {
                 "question": "Should I wash my hair before a cream bath?",
-                "answer": "No. You generally do not need to wash your hair before a creambath at Spa Bali Moon. Your therapist assesses your hair and scalp as part of the treatment. Just avoid applying excessive styling products beforehand so the cream can be applied and massaged in comfortably."
+                "answer": "No. You generally do not need to wash your hair before a cream bath at Spa Bali Moon. Your therapist assesses your hair and scalp as part of the treatment. Just avoid applying excessive styling products beforehand so the cream can be applied and massaged in comfortably."
               },
               {
                 "question": "How much does a cream bath cost in Seminyak?",
@@ -369,22 +369,22 @@
               },
               {
                 "question": "Where can I get a cream bath or hair spa in Seminyak?",
-                "answer": "You can get a cream bath or hair spa at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, open daily from 9am to 11pm, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Formulas start at IDR 165.000 per person. Book on WhatsApp at +62 878-6317-5144."
+                "answer": "You can get a cream bath or hair spa at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, open daily from 9am to 11pm, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "How long does a cream bath take?",
-                "answer": "A cream bath at Spa Bali Moon in Seminyak takes around an hour and costs IDR 165.000 per person, or IDR 195.000 with L’Oreal. Some spa packages include a shorter 30-minute cream bath."
+                "answer": "A cream bath at Spa Bali Moon in Seminyak takes around an hour and costs IDR 165.000 per person, or IDR 195.000 with L'Oreal. Some spa packages include a shorter 30-minute cream bath."
               },
               {
                 "question": "Can I have a cream bath at my villa or hotel?",
-                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen and everything a cream bath needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. Book on WhatsApp at +62 878-6317-5144, 9am to 11pm."
+                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen and everything a cream bath needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta."
               },
               {
                 "question": "Can I book a cream bath for today?",
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my cream bath?",
                 "answer": "Yes. Tell us your preference when you book your cream bath on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -403,7 +403,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Discover More Ways to Nourish and Unwind",
+            "title": "More Hair, Skin and Body Treatments",
             "embedded": true,
             "related": [
               "/seminyak/head-massage/",
@@ -427,8 +427,8 @@
             "standardSpacing": true,
             "backgroundImage": "/images/services/creambath/creambath-12.webp",
             "title": "Restore Your Hair After Bali's Tropical Days",
-            "text": "Sun, salt water, and humidity take their toll on hair. A Creambath restores moisture, softens dry strands, and adds relaxing scalp care. At our spa, or at your villa or hotel.",
-            "closingText": "Refresh your hair and enjoy a calming self-care moment designed around your needs."
+            "text": "Sun, salt water, and humidity take their toll on hair. A cream bath restores moisture, softens dry strands, and adds relaxing scalp care. At our spa, or at your villa or hotel.",
+            "closingText": "Book a cream bath on its own or add it to a massage."
           }
         }
       ]

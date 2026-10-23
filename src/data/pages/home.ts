@@ -50,7 +50,7 @@ export const home = {
     items: [
       {
         title: "Choose a Treatment",
-        text: "Browse our massage, facial, beauty, and spa treatments to find the experience that suits your schedule and preferences.",
+        text: "Pick a massage, facial or beauty treatment and how long you'd like it.",
       },
       {
         title: "Book via WhatsApp",
@@ -58,7 +58,7 @@ export const home = {
       },
       {
         title: "Relax Your Way",
-        text: "Visit our spa in Seminyak or enjoy the same professional treatment from the comfort of your villa or accommodation.",
+        text: "Come to our spa in Seminyak, or have the same treatment at your villa or hotel.",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const home = {
     text: "After a long flight, a day of surfing or too long in the sun, your body needs time to recover. Spa Bali Moon offers massage, facials and body care to ease tight muscles and refresh tired skin, and we'll help you pick the treatment that suits how you feel.",
     /** Shown in two lists of three. */
     features: [
-      "Established since 2009",
+      "In Seminyak since 2009",
       "Traditional & modern massage treatments",
       "Beauty and facial services",
       "In-spa and home service available",
@@ -88,20 +88,20 @@ export const home = {
   catalog: {
     subTitle: "Our Spa Menu",
     title: "Browse Our Spa Treatments",
-    fee: { label: "Home Service Fee", value: "IDR 75.000/Therapist (Seminyak area)" },
+    fee: { label: "Home Service Fee", value: "IDR 75.000 per therapist (Seminyak area)" },
   },
 
   packageIntro: {
     subTitle: "More to Enjoy",
     title: "Looking for More Than One Treatment?",
-    text: "A great spa experience often includes more than one treatment. Our spa packages combine massage, facials, body scrubs, cream baths, and beauty treatments into carefully selected experiences that let you enjoy more while offering better overall value.",
+    text: "A great spa experience often includes more than one treatment. Our spa packages combine massage, facials, body scrubs, cream baths, and beauty treatments in one visit.",
     note: "Every package is available at our spa, and selected combinations can also be arranged as home service, making it easy to enjoy professional spa care wherever you're staying.",
   },
 
   packages: {
     subTitle: "Spa Packages",
     title: "Day Spa and Massage in Seminyak",
-    text: "Our signature spa packages combine massage, facials, cream baths, body care, and beauty treatments into a complete wellness experience while offering better value than individual bookings. Explore the collections below to find the package that suits you best.",
+    text: "Each package pairs a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial, priced per person.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
     cards: [
@@ -138,7 +138,7 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package D",
-        price: "399.000",
+        price: "379.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["30 Mins", "Manicure"],
@@ -194,7 +194,7 @@ export const home = {
       {
         question: "2. Can I have a treatment at my villa or hotel?",
         answer:
-          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu and North Kuta, and the therapist brings fresh linen, oils and everything your treatment needs.",
+          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu, North Kuta and Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu, North Kuta and Kuta, and the therapist brings fresh linen, oils and everything your treatment needs.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
@@ -204,17 +204,17 @@ export const home = {
       {
         question: "4. Can I combine different treatments in one visit?",
         answer:
-          "Absolutely. At Spa Bali Moon, many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure or waxing to create a more complete spa experience. Ready-made spa packages start at IDR 299.000 per person; for example, a 1-hour Balinese massage with a 30-minute manicure and 30-minute pedicure is IDR 399.000 per person.",
+          "Absolutely. At Spa Bali Moon, many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure or waxing to create a more complete spa experience. Ready-made spa packages start at IDR 299.000 per person; for example, a 1-hour Balinese massage with a 30-minute manicure and 30-minute pedicure is IDR 379.000 per person.",
       },
       {
         question: "5. How do I choose the right treatment?",
         answer:
-          "Tell the Spa Bali Moon team how you're feeling or what you'd like to achieve, whether that's relaxation, muscle recovery, skin care or time to unwind, and we'll happily recommend the most suitable treatment. Balinese Massage suits general relaxation, while Sports and Deep Tissue Massage suit muscle tightness. Ask us on WhatsApp at +62 878-6317-5144.",
+          "Balinese Massage suits general relaxation, while Sports and Deep Tissue Massage suit muscle tightness. Not sure? Tell us how you feel on WhatsApp at +62 878-6317-5144 and we'll suggest a treatment.",
       },
       {
         question: "6. Is Spa Bali Moon a licensed spa?",
         answer:
-          "Yes. Spa Bali Moon is an established spa operating from a physical location at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, and has served guests in Bali since 2009. Our home service is delivered by the same therapists who work in our spa, and you are welcome to visit us in person before booking.",
+          "Yes. Spa Bali Moon is a licensed day spa at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, and has served guests since 2009. Our home service is delivered by the same therapists who work in our spa, and you are welcome to visit us in person before booking.",
       },
       // Copy rewrite, 15 Oct: the questions people search, answered with
       // facts already on the site.
@@ -226,7 +226,7 @@ export const home = {
       {
         question: "8. Where is Spa Bali Moon?",
         answer:
-          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Bali, and is open daily from 9am to 11pm. Our therapists also come to your villa or hotel in Seminyak, Petitenget and Kerobokan for an extra IDR 75.000 per therapist, in Canggu and North Kuta for IDR 150.000, and further across Bali on request.",
+          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Bali, and is open daily from 9am to 11pm. Our therapists also come to your villa or hotel in Seminyak, Petitenget and Kerobokan for an extra IDR 75.000 per therapist, in Canggu, North Kuta and Kuta for IDR 150.000, and further across Bali on request.",
       },
       {
         question: "9. What are your opening hours?",
@@ -237,10 +237,10 @@ export const home = {
   },
 
   reserve: {
-    title: "A Better Way to Experience Wellness in Bali",
-    text: "Some treatments are for tired muscles. Others for tired skin, overworked feet, or simply the feeling of moving from one plan to the next. Browse the price list and find yours.",
+    title: "Book at Our Spa or at Your Villa",
+    text: "Some treatments are for tired muscles. Others for tired skin, overworked feet, or simply the feeling of moving from one plan to the next.",
     closingText:
-      "Visit our spa in Seminyak or enjoy the same trusted care through our home service, delivered by experienced therapists directly to your villa or hotel.",
+      "Visit our spa in Seminyak, or book the same treatments at your villa or hotel.",
     backgroundImage: "/images/home/homepage-5.webp",
   },
 };

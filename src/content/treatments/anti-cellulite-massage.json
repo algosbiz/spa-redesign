@@ -25,11 +25,11 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Cellulite massage at Spa Bali Moon in Seminyak is a firm, targeted massage on the thighs, hips, buttocks and abdomen that supports circulation and can temporarily improve the look of skin texture. Sessions are 1 hour (IDR 350.000), 1.5 hours (IDR 520.000) or 2 hours (IDR 695.000) per person. It is not a permanent solution, and results build gradually over regular sessions.",
+        "text": "Cellulite massage at Spa Bali Moon in Seminyak is a firm, targeted massage on the thighs, hips, buttocks and abdomen that can temporarily improve the look of skin texture. Sessions are 1 hour (IDR 350.000), 1.5 hours (IDR 520.000) or 2 hours (IDR 695.000) per person. It is not a permanent solution, and results build gradually over regular sessions.",
         "items": [
           {
             "label": "Treatment",
-            "value": "Firm, targeted massage on the thighs, hips, buttocks and abdomen to support circulation and skin texture"
+            "value": "Firm, targeted massage on the thighs, hips, buttocks and abdomen, for temporarily smoother-looking skin"
           },
           {
             "label": "Length and price",
@@ -54,12 +54,12 @@
         "primaryImage": "/images/services/cellulitemassage/cellulitemassage-2.webp",
         "secondaryImage": "/images/services/cellulitemassage/cellulitemassage-3.webp",
         "subTitle": "",
-        "title": "Can Massage Help Improve the Appearance of Cellulite?",
-        "text": "Cellulite massage is a targeted body treatment designed to support circulation, encourage lymphatic movement, and improve the appearance of uneven skin texture commonly associated with cellulite. The treatment uses firm, controlled techniques that focus on areas such as the thighs, hips, buttocks, and abdomen where cellulite often develops. Our therapists adjust the intensity according to your comfort level and treatment goals.",
+        "title": "What Is Cellulite Massage?",
+        "text": "Cellulite massage is a firm, targeted body massage that can temporarily improve the look of uneven skin texture associated with cellulite. Your therapist works on the areas where cellulite often shows, such as the thighs, hips, buttocks and abdomen, and adjusts the intensity to your comfort.",
         "feature1Title": "Targeted Areas",
-        "feature1Text": "Commonly focuses on the thighs, hips, buttocks, and stomach area.",
+        "feature1Text": "Commonly focuses on the thighs, hips, buttocks and abdomen.",
         "feature2Title": "Firm Pressure",
-        "feature2Text": "Uses controlled movements designed to stimulate circulation and tissue mobility."
+        "feature2Text": "Firm, controlled movements that stay within your comfort."
       }
     },
     {
@@ -79,7 +79,7 @@
             ],
             "subTitle": "",
             "title": "Treatment Duration & Pricing",
-            "text": "Every cellulite massage session is tailored to your body and treatment goals. Choose the session length that best suits the areas you'd like us to focus on. Longer sessions allow more time to work across multiple areas while maintaining steady and targeted techniques.",
+            "text": "Choose the length by how many areas you want treated: 1 hour suits one or two areas, and 2 hours covers all the main ones.",
             "packages": [
               {
                 "name": "1 Hour",
@@ -155,9 +155,8 @@
         "image": "/images/services/cellulitemassage/cellulitemassage-6.webp",
         "subTitle": "",
         "title": "What Causes Cellulite",
-        "text": "Cellulite develops when fat deposits beneath the skin push against connective tissue, creating the uneven or dimpled appearance many people notice on the thighs, hips, or buttocks. But several common factors are associated with its appearance:",
+        "text": "Cellulite develops when fat deposits beneath the skin push against connective tissue, creating the uneven or dimpled appearance many people notice on the thighs, hips, or buttocks. Common factors linked to it:",
         "featuresLeft": [
-          "Commonly appears on thighs and buttocks",
           "Can affect people of different body types",
           "Often influenced by genetics and hormones"
         ],
@@ -188,17 +187,17 @@
         },
         "image": "/images/services/cellulitemassage/cellulitemassage-7.webp",
         "subTitle": "",
-        "title": "How Cellulite Massage Supports Your Wellness",
-        "text": "Cellulite massage combines targeted massage techniques with focused pressure and rhythmic movements to address areas where cellulite commonly appears. Some of the reasons why many people choose cellulite massage include:",
+        "title": "What Cellulite Massage Can Do",
+        "text": "Cellulite massage uses focused pressure and rhythmic movements on the areas where cellulite usually shows. Why guests choose it:",
         "featuresLeft": [
-          "Supports healthy circulation",
-          "Encourages lymphatic movement",
-          "May help reduce fluid retention"
+          "Leaves the skin feeling warm and smooth",
+          "Firm, rhythmic strokes that feel invigorating",
+          "Legs and hips can feel lighter afterwards"
         ],
         "featuresRight": [
           "Can improve skin smoothness temporarily",
-          "Helps soften tight or dense tissue areas",
-          "Often included in body contouring routines"
+          "Eases tight areas",
+          "Fits into a regular body-care routine"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -213,7 +212,7 @@
         "image": "/images/services/cellulitemassage/cellulitemassage-8.webp",
         "subTitle": "",
         "title": "How the Treatment Works",
-        "text": "Each session is designed to provide focused attention to the selected areas while allowing the treatment intensity to be adjusted according to your comfort. The process generally includes:",
+        "text": "Your therapist works on the areas you choose, at an intensity that stays comfortable. Each session includes:",
         "featuresLeft": [
           "Consultation regarding treatment areas",
           "Focused work on selected body zones",
@@ -221,7 +220,6 @@
         ],
         "featuresRight": [
           "Adjustable pressure throughout the session",
-          "Treatment tailored to your comfort level",
           "Available at the spa or through home service"
         ],
         "buttonText": "Book Now",
@@ -248,27 +246,27 @@
             "items": [
               {
                 "question": "Which areas does a cellulite massage treat?",
-                "answer": "Cellulite massage at Spa Bali Moon commonly focuses on the thighs, hips, buttocks and abdomen, although other areas may be included depending on your goals. Your therapist confirms the areas with you first. Sessions of 1 hour (IDR 350.000 per person) suit one or two areas, and 2 hours (IDR 695.000) covers all main areas."
+                "answer": "Cellulite massage at Spa Bali Moon commonly focuses on the thighs, hips, buttocks and abdomen, although other areas may be included depending on your goals. Your therapist confirms the areas with you first. A 1-hour session suits one or two areas, and 2 hours covers all the main areas."
               },
               {
                 "question": "Does a cellulite massage remove cellulite permanently?",
-                "answer": "No. Cellulite massage at Spa Bali Moon is not a permanent solution, but regular treatments may help improve circulation, reduce fluid buildup and temporarily improve the appearance of skin texture. Any results build gradually over regular sessions. Sessions are 1 hour, 1.5 hours or 2 hours, from IDR 350.000 per person."
+                "answer": "No. Cellulite massage at Spa Bali Moon is not a permanent solution. Regular sessions can temporarily improve the look of skin texture; results build gradually and fade once you stop."
               },
               {
                 "question": "How is a cellulite massage different from a lymphatic massage?",
-                "answer": "Cellulite massage uses firmer, more targeted techniques that focus on tissue mobility and skin texture, mainly on the thighs, hips, buttocks and abdomen. Lymphatic massage uses lighter movements designed to encourage fluid drainage and relaxation. Spa Bali Moon offers both in Seminyak, and cellulite massage is IDR 350.000 per person for 1 hour."
+                "answer": "Cellulite massage uses firmer, more targeted techniques that focus on the look of skin texture, mainly on the thighs, hips, buttocks and abdomen. Lymphatic massage uses much lighter, rhythmic movements and feels gentler and more relaxing. Spa Bali Moon offers both in Seminyak."
               },
               {
                 "question": "Is a cellulite massage painful?",
-                "answer": "It should not be. Cellulite massage at Spa Bali Moon uses firmer pressure than a traditional relaxation massage, but it should remain comfortable throughout the session. Your therapist adjusts the intensity to your comfort level and can change the pressure at any time, so tell them if it feels too strong."
+                "answer": "It should not be. Cellulite massage at Spa Bali Moon uses firmer pressure than a relaxing Balinese massage, but it should remain comfortable throughout the session. Your therapist adjusts the intensity to your comfort level and can change the pressure at any time, so tell them if it feels too strong."
               },
               {
                 "question": "How many cellulite massage sessions do I need?",
-                "answer": "There is no fixed number. Many guests choose regular cellulite massage sessions over several weeks as part of their body wellness routine, as results are generally gradual rather than immediate. At Spa Bali Moon, our therapists can help you create a treatment plan that fits your comfort and body goals."
+                "answer": "There is no fixed number. Many guests book regular sessions over several weeks, because results build gradually and are temporary. At Spa Bali Moon, your therapist can help you plan sessions around your comfort and goals."
               },
               {
                 "question": "Who is a cellulite massage for?",
-                "answer": "Cellulite massage at Spa Bali Moon may suit adults who want targeted body massage in their wellness and skincare routine, particularly those concerned about the appearance of cellulite on the thighs, hips, buttocks or abdomen. It can also suit people who enjoy firm massage techniques and want a relaxing body treatment focused on specific areas."
+                "answer": "It suits adults who want a firm, focused massage on the thighs, hips, buttocks or abdomen, especially those who would like to soften the look of cellulite there for a while. It also suits anyone who simply enjoys firm pressure on specific areas."
               },
               {
                 "question": "What is the difference between cellulite and stretch marks?",
@@ -284,14 +282,14 @@
               },
               {
                 "question": "Can I have a cellulite massage at my villa or hotel?",
-                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen, oils and everything a cellulite massage needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. Book on WhatsApp at +62 878-6317-5144, 9am to 11pm."
+                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen, oils and everything a cellulite massage needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta."
               },
               {
                 "question": "Can I book a cellulite massage for today?",
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my cellulite massage?",
                 "answer": "Yes. Tell us your preference when you book your cellulite massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -310,7 +308,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Continue Your Body-Care Journey",
+            "title": "More Body Treatments",
             "embedded": true,
             "related": [
               "/seminyak/lymphatic-drainage-massage/",
@@ -333,9 +331,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/cellulitemassage/cellulitemassage-10.webp",
-            "title": "Support Smoother Skin Wherever You Prefer to Relax",
+            "title": "Cellulite Massage at Our Spa or Your Villa",
             "text": "Focused body care at our spa, or in the privacy of your villa or hotel. Home service is an extra IDR 75.000 per therapist in the Seminyak area.",
-            "closingText": "Reserve your session and let our therapists help you create a treatment plan that fits your comfort and body goals."
+            "closingText": "Choose 1, 1.5 or 2 hours, at our spa or at your villa."
           }
         }
       ]

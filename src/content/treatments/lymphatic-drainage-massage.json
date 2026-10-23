@@ -24,7 +24,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Lymphatic drainage massage at Spa Bali Moon in Seminyak is a slow, very light massage that follows the body's lymph pathways. Sessions run from 1 to 2 hours, from IDR 300.000 per person for one hour, at our spa or at your villa or hotel. It's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
+        "text": "Lymphatic drainage massage at Spa Bali Moon in Seminyak is a slow, very light massage that follows the body's lymph pathways. Sessions are 1, 1.5 or 2 hours, at our spa or at your villa or hotel. It's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
         "items": [
           {
             "label": "Treatment",
@@ -47,8 +47,8 @@
             "value": "Heavy or puffy legs after travel, a gentle relaxing massage"
           },
           {
-            "label": "Not suitable for",
-            "value": "A suspected blood clot, infection or fever, heart or kidney conditions, cancer treatment, pregnancy or recent surgery; check with a doctor first"
+            "label": "Check with a doctor first",
+            "value": "A suspected blood clot, infection or fever, heart or kidney conditions, cancer treatment, pregnancy or recent surgery"
           }
         ]
       }
@@ -61,7 +61,7 @@
         "primaryImage": "/images/services/lymphaticmassage/lymphaticmassage-2.webp",
         "secondaryImage": "/images/services/lymphaticmassage/lymphaticmassage-3.webp",
         "subTitle": "",
-        "title": "What Does the Lymphatic System Actually Do?",
+        "title": "What Is Lymphatic Drainage Massage?",
         "text": {
           "$jsx": {
             "type": "Fragment",
@@ -84,8 +84,8 @@
         },
         "feature1Title": "Gentle Drainage",
         "feature1Text": "Encourages healthy lymph movement using light, rhythmic strokes.",
-        "feature2Title": "Body Balance",
-        "feature2Text": "Supports circulation, fluid movement, and everyday comfort."
+        "feature2Title": "Lighter Feeling",
+        "feature2Text": "Can leave your legs and body feeling lighter and more comfortable."
       }
     },
     {
@@ -112,8 +112,8 @@
                 "name": "1 Hour",
                 "treatments": [
                   "First lymphatic massage",
-                  "Mild swelling",
-                  "Recovery after travel"
+                  "Puffy ankles after a flight",
+                  "Heavy legs after travel"
                 ]
               },
               {
@@ -121,7 +121,7 @@
                 "name": "1.5 Hours",
                 "treatments": [
                   "Full-body lymphatic drainage",
-                  "Fluid retention",
+                  "Legs that feel heavy",
                   "Deeper relaxation"
                 ]
               },
@@ -129,9 +129,9 @@
                 "price": "IDR 580.000",
                 "name": "2 Hours",
                 "treatments": [
-                  "Comprehensive body treatment",
+                  "Unhurried full-body session",
                   "Multiple focus areas",
-                  "Extended recovery session"
+                  "Extra time for legs and ankles"
                 ]
               }
             ]
@@ -158,8 +158,8 @@
                 "text": "Booking"
               },
               {
-                "title": "Slimming",
-                "text": "Cream"
+                "title": "Light",
+                "text": "Pressure"
               },
               {
                 "title": "Outcall",
@@ -183,8 +183,8 @@
         "title": "When Lymphatic Massage Helps",
         "text": "Lymphatic massage can be a good choice when your body feels heavy or puffy after travel or a long time sitting. It's gentle and relaxing, and it fits into a regular wellness routine. Guests often book it for:",
         "featuresLeft": [
-          "Feelings of fluid retention",
-          "Puffiness",
+          "Heavy legs after sitting for hours",
+          "Puffy ankles",
           "Comfort after travel"
         ],
         "featuresRight": [
@@ -243,10 +243,9 @@
         "featuresLeft": [
           "Brief body consultation",
           "Gentle oil application",
-          "Slimming cream massage"
+          "Slow rhythmic drainage techniques"
         ],
         "featuresRight": [
-          "Slow rhythmic drainage techniques",
           "Treatment along lymph pathways",
           "Relaxing full-body finish"
         ],
@@ -282,43 +281,43 @@
               },
               {
                 "question": "Where can I get a lymphatic drainage massage in Seminyak?",
-                "answer": "Spa Bali Moon offers lymphatic drainage massage at our spa on Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Sessions start at IDR 300.000 per person for 1 hour. Book by WhatsApp at +62 878-6317-5144; we are open daily from 9am to 11pm."
+                "answer": "Spa Bali Moon offers lymphatic drainage massage at our spa on Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Book by WhatsApp at +62 878-6317-5144; we are open daily from 9am to 11pm."
               },
               {
                 "question": "Is a lymphatic massage the same as a deep tissue massage?",
-                "answer": "No. Deep tissue massage uses firm pressure on deeper muscle layers. Lymphatic massage at Spa Bali Moon is manual lymphatic drainage (MLD): very light, rhythmic strokes that follow the lymph pathways just under the skin, because firm pressure isn't needed. Lymphatic drainage starts at IDR 300.000 per person for 1 hour, and deep tissue at IDR 269.000."
+                "answer": "No. Deep tissue massage uses firm pressure on deeper muscle layers. Lymphatic massage at Spa Bali Moon is manual lymphatic drainage (MLD): very light, rhythmic strokes that follow the lymph pathways just under the skin, because firm pressure isn't needed."
               },
               {
                 "question": "Can a lymphatic massage help with swollen legs after travelling?",
-                "answer": "Lymphatic drainage massage is often chosen for that. Long flights, road trips and long periods of sitting can cause temporary fluid retention, and gentle lymphatic drainage can leave your legs feeling lighter and more comfortable. If your legs are painful, red or swollen on one side only, see a doctor first."
+                "answer": "It can leave them feeling lighter and more comfortable. Long flights, road trips and long periods of sitting can cause temporary fluid retention, and lymphatic drainage massage is often chosen for that. If your legs are painful, red or swollen on one side only, see a doctor first."
               },
               {
                 "question": "Does a lymphatic massage remove toxins from the body?",
-                "answer": "Not as a medical detox. Your lymphatic system already carries waste and excess fluid away. Lymphatic drainage massage at Spa Bali Moon supports that normal process with slow, light strokes along the lymph pathways and can leave you feeling lighter, but it is a relaxation treatment, not a medical one."
+                "answer": "No. Your lymphatic system already carries waste and excess fluid away on its own, and a massage does not detox the body. Lymphatic drainage massage at Spa Bali Moon uses slow, light strokes along the lymph pathways and can leave you feeling lighter; it is a relaxation treatment, not a medical one."
               },
               {
                 "question": "Does a lymphatic massage feel gentle?",
-                "answer": "Yes. Lymphatic drainage massage at Spa Bali Moon uses deliberately light pressure, because lymph vessels sit close to the skin and firm pressure isn't needed. Your therapist works slowly with rhythmic strokes along the lymph pathways, in a set order, after a short chat about how you feel and what you'd like focused on."
+                "answer": "Yes. Lymphatic drainage massage at Spa Bali Moon uses deliberately light pressure. Your therapist works slowly with rhythmic strokes along the lymph pathways, in a set order, after a short chat about how you feel and what you'd like focused on."
               },
               {
                 "question": "Can I combine a lymphatic massage with other treatments?",
-                "answer": "Yes. Many guests add a facial, foot reflexology or a body treatment to the same visit at Spa Bali Moon in Seminyak. Tell us which treatments you would like when you book on WhatsApp at +62 878-6317-5144. A lymphatic drainage massage starts at IDR 300.000 per person for 1 hour."
+                "answer": "Yes. Many guests add a facial, foot reflexology or a body treatment to the same visit at Spa Bali Moon in Seminyak. Tell us which treatments you would like when you book on WhatsApp at +62 878-6317-5144."
               },
               {
                 "question": "Is lymphatic drainage real?",
-                "answer": "Yes. Lymphatic drainage is a real massage technique: a gentle method designed to encourage the movement of lymph fluid. It's commonly used to help with swelling and relaxation, but it is not a cure for any medical condition. At Spa Bali Moon in Seminyak it is offered as a relaxation treatment, from IDR 300.000 per person."
+                "answer": "Yes. Lymphatic drainage is a real massage technique: a gentle method designed to encourage the movement of lymph fluid. It is not a cure for any medical condition, and at Spa Bali Moon in Seminyak it is offered as a relaxation treatment."
               },
               {
                 "question": "Does lymphatic drainage work on the face?",
-                "answer": "Yes. Facial lymphatic drainage uses gentle movements around the face and neck to encourage lymph flow, and it can help reduce temporary puffiness and leave the face feeling refreshed. At Spa Bali Moon, the lymphatic drainage massage works on the body, including the neck and collarbone, and many guests add a facial to the same visit."
+                "answer": "Yes, and at Spa Bali Moon you can have it as part of the 1-hour Bali Moon Facial, which includes an argan oil lymphatic facial massage. Our lymphatic drainage massage itself works on the body, from the neck and collarbone down."
               },
               {
-                "question": "Can lymphatic drainage make you sick?",
+                "question": "Can a lymphatic drainage massage make me feel unwell?",
                 "answer": "Lymphatic drainage massage is gentle, but some people feel tired, thirsty or slightly light-headed afterwards. Drink water and rest. If you feel unwell or have a medical condition, check with a doctor before booking, and mention it to your Spa Bali Moon therapist in the short chat before your session starts."
               },
               {
                 "question": "How often should I get a lymphatic drainage massage?",
-                "answer": "There is no fixed rule. Many guests book one lymphatic drainage massage at Spa Bali Moon after a long flight or during their stay in Bali, while others book it regularly as part of a wellness routine. Ask your therapist what suits you. Sessions start at IDR 300.000 per person for 1 hour."
+                "answer": "There is no fixed rule. Many guests book one lymphatic drainage massage at Spa Bali Moon after a long flight or during their stay in Bali, while others book it regularly as part of a wellness routine. Ask your therapist what suits you."
               },
               {
                 "question": "Who should not book a lymphatic drainage massage?",
@@ -329,7 +328,7 @@
                 "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen, oils and everything a lymphatic drainage massage needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. Book on WhatsApp at +62 878-6317-5144, 9am to 11pm."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my lymphatic drainage massage?",
                 "answer": "Yes. Tell us your preference when you book your lymphatic drainage massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -348,7 +347,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Keep Your Wellness Journey Flowing",
+            "title": "Treatments to Pair with Lymphatic Massage",
             "embedded": true,
             "related": [
               "/seminyak/foot-reflexology/",
@@ -371,7 +370,7 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/lymphaticmassage/lymphaticmassage-11.webp",
-            "title": "Renew Balance from the Inside Out with Lymphatic Massage",
+            "title": "Feel Lighter After a Long Flight",
             "text": "Book a lymphatic drainage massage in Seminyak, at our spa or at your villa or hotel.",
             "closingText": "Message us on WhatsApp between 9am and 11pm."
           }

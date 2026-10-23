@@ -25,11 +25,11 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "The Bali Moon Facial at Spa Bali Moon in Seminyak is a cleanse, steam, red clay scrub, Argan Oil lymphatic facial massage and a mask matched to your skin. Choose the Tea Tree Facial (IDR 196.000) for oily or blemish-prone skin, or the Gold Facial (IDR 269.000) for dull or dry skin, per person, at our spa or at your villa or hotel.",
+        "text": "The Bali Moon Facial at Spa Bali Moon in Seminyak is a 1-hour facial: cleanse, steam, red clay scrub, argan oil lymphatic facial massage and a mask matched to your skin. Choose the Tea Tree Facial for oily or blemish-prone skin or the Gold Facial for dull or dry skin, at our spa or at your villa or hotel. The Tea Tree Facial is IDR 196.000 and the Gold Facial IDR 269.000 per person.",
         "items": [
           {
             "label": "Treatment",
-            "value": "Bali Moon Facial: cleanse, steam, red clay scrub, Argan Oil lymphatic facial massage, mask, rose water toning"
+            "value": "Bali Moon Facial: cleanse, steam, red clay scrub, argan oil lymphatic facial massage, mask, rose water toning"
           },
           {
             "label": "Price per person",
@@ -37,7 +37,7 @@
           },
           {
             "label": "Packages",
-            "value": "Four packages that add massage, cream bath or body scrub (see below)"
+            "value": "Four packages that add a massage, some with a body scrub or cream bath (see below)"
           },
           {
             "label": "Where",
@@ -59,7 +59,7 @@
         "secondaryImage": "/images/services/balimoonfacial/balimoonfacial-3.webp",
         "subTitle": "",
         "title": "What Is the Bali Moon Facial?",
-        "text": "Bali Moon Facial is our signature facial treatment designed to refresh, hydrate, and support healthy-looking skin while providing a relaxing spa experience. The treatment combines gentle cleansing, steaming, exfoliation, lymphatic facial massage using Argan Oil, and a targeted mask selected according to your skin's needs.",
+        "text": "The Bali Moon Facial is our signature 1-hour facial. A gentle cleanse, steam, exfoliation, an argan oil lymphatic facial massage and a mask chosen for your skin (Tea Tree or Gold) leave it refreshed and hydrated.",
         "feature1Title": "Tea Tree Mask",
         "feature1Text": "Helps balance excess oil, calm blemishes, and support clearer-looking skin.",
         "feature2Title": "Gold Mask",
@@ -84,7 +84,7 @@
             ],
             "subTitle": "",
             "title": "Facial Packages in Seminyak",
-            "text": "Bali Moon Facial is often combined with massage, hair treatments, and nail care to create a complete self-care experience. Our treatment packages are designed for guests looking to relax while giving their skin additional attention during their time in Bali.",
+            "text": "Each of our four facial packages pairs the 1-hour Bali Moon Facial with a 1-hour massage, and three of them add a body scrub or cream bath. Prices are per person. Want a manicure and pedicure too? Our package with a manicure and pedicure, a Balinese massage and the Bali Moon Facial is IDR 549.000 per person.",
             "packages": [
               {
                 "price": "IDR 439.000",
@@ -97,7 +97,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 649.000",
+                "price": "IDR 609.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -107,7 +107,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 449.000",
+                "price": "IDR 445.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -152,7 +152,7 @@
                   ],
                   "subTitle": "",
                   "title": "Bali Moon Facial Options",
-                  "text": "We offer two facial treatment options, giving you a simple choice depending on the type of facial you prefer. Both treatments follow our complete facial care routine and are available as individual sessions.",
+                  "text": "Both versions take 1 hour and follow the same six steps; only the mask differs. Tea Tree suits oily or blemish-prone skin, Gold suits dull or dry skin.",
                   "icon": "/images/spa/Balinese.svg"
                 }
               }
@@ -176,11 +176,11 @@
                 "text": "Skin Types"
               },
               {
-                "title": "Personalized",
+                "title": "Personalised",
                 "text": "Mask Selection"
               },
               {
-                "title": "Customized",
+                "title": "Customised",
                 "text": "Packages"
               },
               {
@@ -203,7 +203,7 @@
         "image": "/images/services/balimoonfacial/balimoonfacial-8.webp",
         "subTitle": "",
         "title": "What a Facial Helps With",
-        "text": "While every skin type behaves differently, regular facial treatments are commonly used to help manage surface impurities, maintain hydration, and support overall skin condition. Guests choose facial treatments for a variety of skincare goals, such as:",
+        "text": "Guests book a facial to clear surface impurities, add moisture and freshen up dull skin. Common reasons:",
         "featuresLeft": [
           "Supports hydration and moisture balance",
           "Helps remove excess oil and impurities",
@@ -237,7 +237,7 @@
         "image": "/images/services/balimoonfacial/balimoonfacial-9.webp",
         "subTitle": "",
         "title": "Choose Your Mask: Tea Tree or Gold",
-        "text": "The right mask depends on what your skin needs at the time of your treatment. Tea Tree and Gold masks offer different benefits, making them suitable for different skin types and concerns. We can help you choose the most appropriate option based on your skin's condition:",
+        "text": "The right mask depends on how your skin feels on the day. Your therapist can help you choose:",
         "featuresLeft": [
           "Tea Tree for oily and congested skin",
           "Tea Tree for blemish-prone skin",
@@ -246,7 +246,7 @@
         "featuresRight": [
           "Gold for softening and comforting the skin",
           "Tea Tree or Gold for combination skin, depending on your needs",
-          "Gold may be suitable for skin affected by sun exposure"
+          "Gold for skin that feels dry after a day in the sun"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -261,15 +261,15 @@
         "image": "/images/services/balimoonfacial/balimoonfacial-10.webp",
         "subTitle": "",
         "title": "What to Expect During Your Facial",
-        "text": "Your facial follows a series of carefully selected steps designed to cleanse, exfoliate, nourish, and refresh your skin:",
+        "text": "Your facial follows six steps that cleanse, exfoliate, nourish and refresh your skin:",
         "featuresLeft": [
           "Milk cleanser to remove surface buildup",
           "Warm steam to soften and prepare the pores",
           "Red clay scrub for gentle exfoliation"
         ],
         "featuresRight": [
-          "Argan Oil lymphatic facial massage",
-          "Tea Tree or Gold Mask application",
+          "Argan oil lymphatic facial massage",
+          "Tea Tree or Gold mask application",
           "Rose water toning to finish the treatment"
         ],
         "buttonText": "Book Now",
@@ -296,23 +296,23 @@
             "items": [
               {
                 "question": "What is a Bali Moon Facial?",
-                "answer": "The Bali Moon Facial is Spa Bali Moon's signature facial treatment in Seminyak, Bali, designed to cleanse, refresh and nourish the skin in a relaxing spa setting. It combines cleansing, steam, exfoliation, an Argan Oil lymphatic facial massage and a mask chosen for your skin: Tea Tree (IDR 196.000) or Gold (IDR 269.000) per person."
+                "answer": "The Bali Moon Facial is Spa Bali Moon's signature 1-hour facial in Seminyak, Bali, to cleanse, refresh and nourish the skin. It combines cleansing, steam, exfoliation, an argan oil lymphatic facial massage and a mask chosen for your skin: Tea Tree or Gold."
               },
               {
                 "question": "Can a facial help after spending time in the Bali sun?",
-                "answer": "Yes. After sightseeing, swimming or sun exposure, a Bali Moon Facial at Spa Bali Moon can help cleanse the skin, restore moisture and leave your complexion refreshed. Many visitors book one as holiday self-care. The Gold Facial (IDR 269.000 per person) may suit skin that feels dry or tired after sun."
+                "answer": "Yes, for skin that feels dry or tired after a day in the sun: a Bali Moon Facial at Spa Bali Moon cleanses the skin, restores moisture and leaves your complexion refreshed, and the Gold Facial focuses on hydration. If your skin is sunburnt, book our aloe vera sunburn treatment instead."
               },
               {
                 "question": "What are the benefits of a Bali Moon Facial?",
-                "answer": "A Bali Moon Facial can help cleanse the skin, remove surface impurities, improve hydration and leave the skin feeling refreshed and rejuvenated. At Spa Bali Moon in Seminyak, the Tea Tree mask helps balance excess oil and calm blemishes, while the Gold mask focuses on hydration, elasticity and a healthy-looking glow."
+                "answer": "A Bali Moon Facial can help cleanse the skin, remove surface impurities, improve hydration and leave the skin feeling refreshed. At Spa Bali Moon in Seminyak, the Tea Tree mask helps balance excess oil and calm blemishes, while the Gold mask focuses on hydration, elasticity and a healthy-looking glow."
               },
               {
                 "question": "Where can I get a Bali Moon Facial in Seminyak?",
-                "answer": "You can get a Bali Moon Facial at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, Bali, open daily from 9am to 11pm. It pairs professional facial care with the calming atmosphere of a Balinese spa. Our therapists can also come to your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."
+                "answer": "You can get a Bali Moon Facial at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, Bali, open daily from 9am to 11pm. Our therapists can also come to your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "How much does a facial cost in Seminyak?",
-                "answer": "The Bali Moon Tea Tree Facial is IDR 196.000 and the Bali Moon Gold Facial is IDR 269.000 per person at Spa Bali Moon in Seminyak. Four facial packages from IDR 439.000 per person add a massage, cream bath or body scrub. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "The Bali Moon Tea Tree Facial is IDR 196.000 and the Bali Moon Gold Facial is IDR 269.000 per person at Spa Bali Moon in Seminyak. Four facial packages from IDR 439.000 per person add a massage, some with a body scrub or cream bath. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "Which facial is right for my skin?",
@@ -320,7 +320,7 @@
               },
               {
                 "question": "What happens during the Bali Moon Facial?",
-                "answer": "The Bali Moon Facial at Spa Bali Moon follows six steps: a milk cleanser to remove surface buildup, warm steam to soften and prepare the pores, a red clay scrub for gentle exfoliation, an Argan Oil lymphatic facial massage, a Tea Tree or Gold mask chosen for your skin, and a rose water toner to finish."
+                "answer": "The Bali Moon Facial at Spa Bali Moon follows six steps: a milk cleanser to remove surface buildup, warm steam to soften and prepare the pores, a red clay scrub for gentle exfoliation, an argan oil lymphatic facial massage, a Tea Tree or Gold mask chosen for your skin, and a rose water toner to finish."
               },
               {
                 "question": "How long does a facial take?",
@@ -335,7 +335,7 @@
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my facial?",
                 "answer": "Yes. Tell us your preference when you book your facial on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -354,7 +354,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Complete Your Glow Beyond a Facial",
+            "title": "Treatments to Pair with a Facial",
             "embedded": true,
             "related": [
               "/seminyak/body-scrub/",
@@ -377,9 +377,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/balimoonfacial/balimoonfacial-12.webp",
-            "title": "Professional Facial Care at Your Spa, Villa, or Hotel",
-            "text": "Professional facial care at our Seminyak spa, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Personalised skincare, without rearranging your day.",
-            "closingText": "Reserve your appointment and give your skin the attention it deserves."
+            "title": "The Bali Moon Facial at Our Spa or Your Villa",
+            "text": "A 1-hour facial at our Seminyak spa, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area.",
+            "closingText": "Reserve your facial on WhatsApp, 9am to 11pm."
           }
         }
       ]

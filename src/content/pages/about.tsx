@@ -33,7 +33,7 @@ const FAQ = [
   {
     question: "How does Spa Bali Moon keep treatments hygienic?",
     answer:
-      "Every appointment at Spa Bali Moon is prepared with clean linen, sanitised equipment and quality massage oils. Each treatment includes clean towels and a private treatment room at our Seminyak spa. For home service, the therapist brings freshly laundered linen and towels, and nothing is reused between guests.",
+      "Every appointment at Spa Bali Moon is prepared with clean linen, sanitised equipment and quality massage oils. Each treatment includes clean towels and a private treatment room at our Seminyak spa. For home service, the therapist brings freshly laundered linen and towels for every guest.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function AboutPage() {
         subTitle="About Us"
         titleSpan="About Spa Bali Moon"
         title="in Seminyak, Bali"
-        text={`Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30, Seminyak, offering Balinese massage, facials, body treatments and beauty services since ${business.foundedYear}. Our therapists work at the spa and at guests' villas and hotels, open daily from 9am to 11pm.`}
+        text={`Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30, Seminyak, offering Balinese massage, facials, body treatments and beauty services since ${business.foundedYear}. The spa is open daily from 9am to 11pm, and our therapists also come to guests' villas and hotels.`}
         image="/images/services/dayspaseminyak/dayspa-1.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/services/dayspaseminyak/dayspa-1-wide-sm.webp"
@@ -89,7 +89,7 @@ export default function AboutPage() {
       <AboutIntro
         removeBottomPadding
         subTitle="Our Story"
-        title={<>How Long Has Spa Bali Moon Been in Seminyak?</>}
+        title={<>In Seminyak Since {business.foundedYear}</>}
         text={`Spa Bali Moon has offered traditional Balinese massage and spa treatments in Seminyak since ${business.foundedYear}. Guests come to our day spa on Jl. Pangkung Sari for massage, facials, body scrubs, cream baths and nail care, and our therapists also bring the same treatments to villas, hotels and homes in Seminyak and nearby areas.`}
         feature1Title={`Since ${business.foundedYear}`}
         feature1Text={`${years} years of Balinese massage and spa care in Seminyak.`}
@@ -100,13 +100,13 @@ export default function AboutPage() {
       />
       <AboutSplit
         subTitle="Our Therapists"
-        title={<>Who Are Spa Bali Moon&apos;s Therapists?</>}
+        title={<>Our Therapists</>}
         badgeTopText="In Seminyak"
         badgeBottomText="Since 2009"
         text="Our therapists are trained Balinese therapists who ask about your preferred pressure and focus areas before every session, then adjust as they work. Here is what you can expect from our team:"
         featuresLeft={[
           "Experienced Balinese therapists",
-          "Traditional & modern massage treatments",
+          "Female or male therapist on request",
           "Pressure adjusted to suit you",
         ]}
         featuresRight={[
@@ -122,7 +122,7 @@ export default function AboutPage() {
         subTitle="What We Use"
         badgeTopText="Products"
         badgeBottomText="Natural oils & spa brands"
-        title={<>Which Products Does Spa Bali Moon Use?</>}
+        title={<>The Products We Use</>}
         text="Each treatment has its own oils, creams and scrubs, from natural oils to well-known spa brands:"
         featuresLeft={[
           "Virgin cold-press coconut oil",
@@ -144,10 +144,10 @@ export default function AboutPage() {
         subTitle="Clean & Hygienic"
         badgeTopText="Hygiene"
         badgeBottomText="Clean towels for every guest"
-        title={<>How Does Spa Bali Moon Keep Treatments Clean?</>}
+        title={<>How We Keep Treatments Clean</>}
         text="We prepare every appointment with hygiene in mind, whether you visit the spa or book home service. Here is how we keep each treatment clean:"
         featuresLeft={["Clean towels for every guest", "Sanitised equipment", "Private treatment rooms"]}
-        featuresRight={["Fresh linen brought to your villa", "Nothing reused between guests", "Quality massage oils"]}
+        featuresRight={["Fresh linen brought to your villa", "Quality massage oils"]}
         buttonText="Book Now"
         buttonLink={whatsappChatUrl}
         image="/images/services/dayspaseminyak/dayspa-6.webp"

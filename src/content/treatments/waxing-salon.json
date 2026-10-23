@@ -25,11 +25,11 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Waxing at Spa Bali Moon in Seminyak uses olive oil hot wax in a private treatment setting, for women and men. Prices start at IDR 99.000 for under arms, IDR 299.000 for full legs and IDR 350.000 for a Brazilian wax. It is also available at your villa or hotel, for an extra IDR 75.000 per therapist in the Seminyak area. Book on WhatsApp.",
+        "text": "Waxing at Spa Bali Moon in Seminyak uses olive oil strip wax for larger areas and a strawberry hard wax for delicate areas, in a private treatment setting, for women and men. It is also available at your villa or hotel, for an extra IDR 75.000 per therapist in the Seminyak area.",
         "items": [
           {
             "label": "Treatment",
-            "value": "Hair removal with olive oil hot wax, in a private treatment setting"
+            "value": "Hair removal with olive oil strip wax, and hard wax for delicate areas, in a private treatment setting"
           },
           {
             "label": "Prices",
@@ -37,7 +37,7 @@
           },
           {
             "label": "For",
-            "value": "Women and men (including back and Manzilian)"
+            "value": "Women and men"
           },
           {
             "label": "Where",
@@ -59,7 +59,7 @@
         "secondaryImage": "/images/services/waxing/waxing-3.webp",
         "subTitle": "",
         "title": "What Is Professional Waxing?",
-        "text": "Waxing Treatment is a professional hair removal method that removes hair from the root, leaving skin smoother for longer than shaving. Our therapists use quality wax products and hygienic techniques to treat different areas, including arms, legs, and sensitive areas such as Brazilian waxing, with care and comfort in mind.",
+        "text": "Waxing removes hair from the root, so skin stays smooth for longer than after shaving. We use olive oil strip wax for larger areas such as arms, legs and back, and Mancine Strawberry Hard Wax for delicate areas such as a Brazilian.",
         "feature1Title": "Longer-Lasting",
         "feature1Text": "Removes hair from the root for smoother skin that lasts longer than shaving.",
         "feature2Title": "Gentle Finish",
@@ -87,7 +87,7 @@
             ],
             "subTitle": "",
             "title": "Our Waxing Options",
-            "text": "Every area of the body has different needs, which is why Spa Bali Moon provides various waxing options for both everyday grooming and special occasions. Each service is performed carefully to help you achieve smooth and well-maintained skin.",
+            "text": "Prices are per area, from IDR 99.000 for under arms to IDR 350.000 for a Brazilian. An appointment takes around an hour, depending on the areas you choose.",
             "packages": [
               {
                 "price": "IDR 159.000",
@@ -145,7 +145,7 @@
               },
               {
                 "price": "IDR 350.000",
-                "name": "Waxing Brazilian",
+                "name": "Brazilian",
                 "treatments": [
                   "Private treatment setting",
                   "Careful technique for sensitive areas",
@@ -199,7 +199,7 @@
         "image": "/images/services/waxing/waxing-11.webp",
         "subTitle": "",
         "title": "Smooth Skin for Your Bali Holiday",
-        "text": "We offer a practical way to manage unwanted hair while keeping the skin looking neat and well cared for. With different treatment options available, you can choose waxing based on your preferred level of hair removal, the area being treated, and your personal routine. You may choose waxing for reasons such as:",
+        "text": "Waxing keeps skin smooth for weeks, which suits a beach holiday. Guests choose it for these reasons:",
         "featuresLeft": [
           "Removes unwanted hair from the root",
           "Leaves skin feeling smooth and refreshed",
@@ -214,7 +214,7 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "badgeTopText": "Made with",
-        "badgeBottomText": "Olive oil hot wax"
+        "badgeBottomText": "Olive oil strip wax"
       }
     },
     {
@@ -233,7 +233,7 @@
         "image": "/images/services/waxing/waxing-12.webp",
         "subTitle": "",
         "title": "Areas We Wax",
-        "text": "Waxing can be tailored to different grooming preferences, whether you need a small area treated or want to remove hair from a larger section of the body. The appropriate method and level of care can be selected according to the area being treated. Common options are:",
+        "text": "We wax small and large areas and choose the wax for each one:",
         "featuresLeft": [
           "Arms and underarms",
           "Half and full legs",
@@ -241,7 +241,7 @@
         ],
         "featuresRight": [
           "Brazilian waxing in a private setting",
-          "Facial waxing areas such as lip, chin, and eyebrows",
+          "Hard wax for delicate areas",
           "Men's waxing options available"
         ],
         "buttonText": "Book Now",
@@ -257,7 +257,7 @@
         "image": "/images/services/waxing/waxing-13.webp",
         "subTitle": "",
         "title": "How Waxing Works",
-        "text": "A Waxing Treatment follows a straightforward process, with each stage carried out according to the area being treated and your skin's comfort. Our therapist prepares the skin, applies the appropriate waxing method, and finishes the session with simple care instructions. The process typically involves:",
+        "text": "Waxing follows a simple process, adjusted to the area and your skin's comfort. Your therapist prepares the skin, applies the right wax and finishes with simple aftercare advice. The process typically involves:",
         "featuresLeft": [
           "Skin preparation before waxing",
           "Mancine Strawberry Hard Wax for delicate areas",
@@ -292,7 +292,7 @@
             "items": [
               {
                 "question": "How long do waxing results last?",
-                "answer": "Waxing results can last several weeks, depending on your natural hair growth cycle, because waxing removes hair from the root and keeps skin smoother for longer than shaving. With regular sessions, many guests notice hair grows back softer and finer over time. At Spa Bali Moon in Seminyak, prices start at IDR 99.000 for under arms."
+                "answer": "Waxing results can last several weeks, depending on your natural hair growth cycle, because waxing removes hair from the root and keeps skin smoother for longer than shaving. With regular sessions, many guests notice hair grows back softer and finer over time."
               },
               {
                 "question": "Is waxing painful?",
@@ -300,19 +300,19 @@
               },
               {
                 "question": "Should I shave before my waxing appointment?",
-                "answer": "No. You do not need to shave before waxing at Spa Bali Moon. Hair should be long enough for the wax to grip properly, usually around 1/4 inch. Your therapist prepares the skin before waxing and gives aftercare guidance afterwards. Waxing is available at our Seminyak spa or at your villa or hotel; book on WhatsApp."
+                "answer": "No. You do not need to shave before waxing at Spa Bali Moon. Hair should be long enough for the wax to grip properly, usually about 6 mm (¼ inch). Your therapist prepares the skin before waxing and gives aftercare guidance afterwards."
               },
               {
                 "question": "Do you offer Brazilian waxing?",
-                "answer": "Yes. Brazilian waxing at Spa Bali Moon in Seminyak costs IDR 350.000 and is done in a private treatment setting with careful techniques to maintain comfort and discretion. For delicate areas we use Mancine Strawberry Hard Wax, and your therapist checks your comfort throughout. Book on WhatsApp at +62 878-6317-5144, daily 9am to 11pm."
+                "answer": "Yes. Brazilian waxing at Spa Bali Moon in Seminyak costs IDR 350.000 and is done in a private treatment setting with careful techniques to maintain comfort and discretion. For delicate areas we use Mancine Strawberry Hard Wax, and your therapist checks your comfort throughout."
               },
               {
                 "question": "What should I avoid after waxing?",
-                "answer": "After waxing, avoid hot showers, intense sun exposure and strong exfoliation for a short period so the skin can remain calm. At Spa Bali Moon in Seminyak, your therapist finishes every waxing treatment with simple aftercare instructions. If you are waxing before a beach day in Bali, keep the sun-exposure advice in mind and follow those instructions."
+                "answer": "After waxing, avoid hot showers, intense sun exposure and strong exfoliation for a short period so the skin can remain calm. At Spa Bali Moon in Seminyak, your therapist finishes every waxing treatment with simple aftercare instructions."
               },
               {
                 "question": "Is waxing suitable for men?",
-                "answer": "Yes. Spa Bali Moon in Seminyak provides waxing options for men, including areas such as the back and Manzilian, with techniques adjusted for comfort and skin sensitivity. Back waxing is from IDR 139.000 and full back is IDR 299.000. Treatments take place in a private setting at our spa, or at your villa or hotel."
+                "answer": "Yes. Spa Bali Moon in Seminyak provides waxing options for men, such as the back and full back, with techniques adjusted for comfort and skin sensitivity. Back waxing is from IDR 139.000 and full back is IDR 299.000. Treatments take place in a private setting at our spa, or at your villa or hotel."
               },
               {
                 "question": "How much does waxing cost in Seminyak?",
@@ -331,8 +331,8 @@
                 "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
-                "answer": "Yes. Tell us your preference when you book your waxing on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
+                "question": "Can I ask for a female or male therapist for my waxing?",
+                "answer": "Yes. Tell us your preference when you book your wax on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
           }
@@ -350,7 +350,7 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Complete Your Smooth-Skin Ritual",
+            "title": "Book More Than Waxing",
             "embedded": true,
             "related": [
               "/seminyak/body-scrub/",
@@ -373,9 +373,9 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/waxing/waxing-15.webp",
-            "title": "Smooth Skin Starts with the Right Care at Spa Bali Moon",
-            "text": "Careful technique, quality products, and personal service keep your skin smooth and refreshed, for a beach holiday, a special occasion, or your regular routine. At our spa or yours.",
-            "closingText": "Reserve your Waxing Treatment and enjoy smooth, well-maintained skin."
+            "title": "Waxing at Spa Bali Moon, Seminyak",
+            "text": "Careful technique, quality products, and personal service keep your skin smooth and refreshed, for a beach holiday, a special occasion, or your regular routine. At our spa, or at your villa or hotel.",
+            "closingText": "Book your wax at our spa or at your villa."
           }
         }
       ]

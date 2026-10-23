@@ -21,8 +21,8 @@ const provider = { "@id": SPA_ID };
 
 /** Home service areas, as the outcall page lists them. */
 export const homeServiceAreas = {
-  near: ["Seminyak", "Petitenget", "Kerobokan", "Canggu", "North Kuta"],
-  further: ["Kuta", "Jimbaran", "Uluwatu", "Nusa Dua", "Sanur", "Denpasar", "Ubud"],
+  near: ["Seminyak", "Petitenget", "Kerobokan", "Canggu", "North Kuta", "Kuta"],
+  further: ["Jimbaran", "Uluwatu", "Nusa Dua", "Sanur", "Denpasar", "Ubud"],
 };
 
 /** The spa: DaySpa with address, phone, map position, hours, prices and profiles. */

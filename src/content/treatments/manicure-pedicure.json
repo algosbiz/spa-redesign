@@ -58,9 +58,9 @@
         "primaryImage": "/images/services/manicurepedicure/manicurepedicure-2.webp",
         "secondaryImage": "/images/services/manicurepedicure/manicurepedicure-3.webp",
         "subTitle": "",
-        "title": "More Than Beautiful Nails",
-        "text": "A professional Manicure & Pedicure focuses on both appearance and nail health. Beyond shaping and polishing, the treatment includes nail cleaning, cuticle care, skin conditioning, and hydration to help keep hands and feet looking neat while maintaining everyday comfort. Suitable for regular maintenance or as part of a relaxing spa visit, it offers practical care with lasting results.",
-        "feature1Title": "Healthy Nails",
+        "title": "What Is a Manicure and Pedicure?",
+        "text": "A manicure and pedicure is nail care for your hands and feet: trimming, shaping, cuticle care and moisturising, finished with polish or gel if you like. A manicure or a pedicure takes about 30 minutes; both together take about an hour.",
+        "feature1Title": "Tidy Nails",
         "feature1Text": "Professional care helps maintain clean, tidy, and well-shaped nails.",
         "feature2Title": "Soft Skin",
         "feature2Text": "Hydration and conditioning leave hands and feet feeling smoother."
@@ -84,7 +84,7 @@
             ],
             "subTitle": "",
             "title": "Manicure & Pedicure Packages in Seminyak",
-            "text": "Complete your nail care with spa treatments that help you feel refreshed from head to toe. Our packages combine professional manicure and pedicure services with massage, facial, or hair care, creating a balanced wellness experience during your stay in Bali.",
+            "text": "Each package pairs a manicure and pedicure with a Balinese massage, a cream bath or a Bali Moon Facial, or two of these.",
             "packages": [
               {
                 "price": "IDR 449.000",
@@ -116,7 +116,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 399.000",
+                "price": "IDR 379.000",
                 "name": "Package D",
                 "treatments": [
                   "30 Mins Pedicure",
@@ -160,7 +160,7 @@
                     },
                     {
                       "price": "IDR 138.000",
-                      "duration": "Nail Color Feet & Hands",
+                      "duration": "Nail Colour Feet & Hands",
                       "details": [
                         "Nail colour application",
                         "For hands and feet",
@@ -169,7 +169,7 @@
                     },
                     {
                       "price": "IDR 69.000",
-                      "duration": "Nail Color Feet or Hands",
+                      "duration": "Nail Colour Feet or Hands",
                       "details": [
                         "Nail colour application",
                         "For hands or feet",
@@ -206,7 +206,7 @@
                   ],
                   "subTitle": "",
                   "title": "Manicure & Pedicure Treatment Options",
-                  "text": "We offers manicure, pedicure, gel colour, gel nail, and removal services for hands and feet. Each option can be booked individually, making it easy to match your appointment with the nail care you need.",
+                  "text": "Book a manicure or a pedicure (about 30 minutes each) or both (about an hour), and add nail colour, gel or nail removal for hands, feet or both. Each option can be booked on its own.",
                   "icon": "/images/spa/Manicure.svg"
                 }
               }
@@ -257,7 +257,7 @@
         "image": "/images/services/manicurepedicure/manicurepedicure-8.webp",
         "subTitle": "",
         "title": "Why Regular Nail Care Matters",
-        "text": "Regular nail care is about more than keeping your hands and feet looking neat. Manicure & Pedicure treatments give attention to the nails, cuticles, and surrounding skin, helping maintain a clean and well-groomed appearance as part of your regular self-care routine. Regular care can help with:",
+        "text": "Regular nail care keeps nails tidy and the skin around them soft. It helps with:",
         "featuresLeft": [
           "Maintaining healthy-looking nails",
           "Keeping cuticles soft and cared for",
@@ -265,8 +265,7 @@
         ],
         "featuresRight": [
           "Keeping nails neatly shaped",
-          "Enhancing the appearance of hands and feet",
-          "Making nail care part of your regular self-care routine"
+          "Enhancing the appearance of hands and feet"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -291,7 +290,7 @@
         "image": "/images/services/manicurepedicure/manicurepedicure-9.webp",
         "subTitle": "",
         "title": "Professional Care from Nails to Skin",
-        "text": "Our Manicure & Pedicure session gives attention to both the nails and the surrounding skin, with each part of the treatment carried out to leave your hands and feet feeling clean and well cared for. Depending on the service selected, your treatment may cover:",
+        "text": "Depending on the service you choose, your manicure and pedicure may include:",
         "featuresLeft": [
           "Nail trimming and shaping",
           "Gentle cuticle care",
@@ -315,7 +314,7 @@
         "image": "/images/services/manicurepedicure/manicurepedicure-10.webp",
         "subTitle": "",
         "title": "What to Expect at Your Appointment",
-        "text": "Our Manicure & Pedicure appointment follows a simple sequence, starting with an assessment of your nails and ending with the finish you have selected. The treatment is carried out step by step, with attention to keeping your nails and skin clean, comfortable, and well cared for. The appointment typically covers:",
+        "text": "Your appointment starts with a look at your nails and ends with the finish you chose. It usually covers:",
         "featuresLeft": [
           "Consultation and nail assessment",
           "Nail cleaning and shaping",
@@ -354,11 +353,11 @@
               },
               {
                 "question": "What is the difference between a manicure and a pedicure?",
-                "answer": "A manicure focuses on the hands and fingernails, while a pedicure treats the feet, toenails and areas such as the heels and cuticles. At Spa Bali Moon in Seminyak, a manicure costs IDR 99.000 and a pedicure IDR 139.000 per person, or IDR 238.000 for both, at our spa or at your villa or hotel."
+                "answer": "A manicure focuses on the hands and fingernails, while a pedicure treats the feet, toenails and areas such as the heels and cuticles. You can have either, or both, at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "How often should I have a manicure and pedicure?",
-                "answer": "Many guests book a manicure and pedicure every two to three weeks, although the ideal schedule depends on nail growth and personal preference. At Spa Bali Moon in Seminyak, both together cost IDR 238.000 per person, and gel nails, at IDR 219.000 for hands or feet, give a longer-lasting finish."
+                "answer": "Many guests book a manicure and pedicure every two to three weeks, although the ideal schedule depends on nail growth and personal preference. Gel nails give a longer-lasting finish."
               },
               {
                 "question": "Can I choose gel nails instead of regular polish?",
@@ -366,7 +365,7 @@
               },
               {
                 "question": "Can I have a manicure and pedicure at my villa or hotel?",
-                "answer": "Yes. Spa Bali Moon therapists provide manicure and pedicure as professional home service throughout Seminyak and nearby areas, bringing all required equipment. In the Seminyak area, home service adds IDR 75.000 per therapist to the treatment price: IDR 99.000 for a manicure, IDR 139.000 for a pedicure or IDR 238.000 for both, per person. Book on WhatsApp."
+                "answer": "Yes. A Spa Bali Moon therapist comes to your villa or hotel with everything a manicure and pedicure needs. You pay the spa price (IDR 99.000 for a manicure, IDR 139.000 for a pedicure or IDR 238.000 for both, per person) plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta."
               },
               {
                 "question": "How much does a manicure and pedicure cost in Seminyak?",
@@ -377,7 +376,7 @@
                 "answer": "A manicure or a pedicure at Spa Bali Moon in Seminyak takes about 30 minutes, and both together about an hour. A manicure is IDR 99.000, a pedicure IDR 139.000 and both IDR 238.000 per person."
               },
               {
-                "question": "Can I ask for a female or male therapist?",
+                "question": "Can I ask for a female or male therapist for my manicure and pedicure?",
                 "answer": "Yes. Tell us your preference when you book your manicure and pedicure on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
               }
             ]
@@ -421,7 +420,7 @@
             "backgroundImage": "/images/services/manicurepedicure/manicurepedicure-12.webp",
             "title": "Keep Your Hands and Feet Looking Their Best",
             "text": "Well-groomed nails are about comfort as much as appearance. Professional manicure and pedicure care in a calm setting, at our spa or at your villa or hotel.",
-            "closingText": "Reserve your Manicure & Pedicure treatment and enjoy polished, comfortable care."
+            "closingText": "Reserve your manicure and pedicure and leave with neat, polished nails."
           }
         }
       ]

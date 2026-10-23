@@ -33,7 +33,7 @@ export const business = {
      */
     short: "Jl. Pangkung Sari No. 30, Seminyak, Bali",
     /** Full address as written on /contact/, used wherever the address is shown (copy rewrite, 15 Oct). */
-    full: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
+    full: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan, Kuta Utara, Badung, Bali 80361",
     /** Structured version for Google (schema.org). Built from the full address above. */
     street: "Jl. Pangkung Sari No. 30",
     locality: "Seminyak",
@@ -47,13 +47,13 @@ export const business = {
     "https://www.google.com/maps/dir/?api=1&destination=Spa%20Bali%20Moon%2C%20Jl.%20Pangkung%20Sari%20No.%2030%2C%20Petitenget%2C%20Seminyak%2C%20Kerobokan%2C%20Kuta%20Utara%2C%20Badung%2C%20Bali%2080361",
 
   /**
-   * Opening hours as written in the footer ("Open Daily: 9am - 11pm").
+   * Opening hours as written in the footer ("Open Daily: 9am–11pm").
    * HOURS-01: confirmed as 9am–11pm (copy rewrite, 15 Oct); /contact/ now says
    * 9:00 - 23:00 too, and Google Maps shows the same.
    */
   openingHours: {
     label: "Open Daily",
-    display: "9am - 11pm",
+    display: "9am–11pm",
     opens: "09:00",
     closes: "23:00",
   },
@@ -70,7 +70,7 @@ export const business = {
     /** The fee in Canggu, North Kuta and Kuta. */
     feeOuterPerTherapist: 150_000,
     /** How the fee is written in the footer. */
-    feeDisplay: "IDR 75.000 / therapist (Seminyak area)",
+    feeDisplay: "IDR 75.000 per therapist (Seminyak area)",
     /**
      * Fee per therapist and the usual drive from the spa, by area (owner, 22 Oct 2026).
      * `fee: null` means it is confirmed on WhatsApp. Shown on the outcall page (S06).
@@ -101,7 +101,7 @@ export const business = {
 
   /** Short "About Us" text used in the footer and the mobile menu. */
   aboutText:
-    "Spa Bali Moon is a Seminyak day spa offering traditional Balinese massage and spa treatments since 2009, with outcall and home service massage across Bali.",
+    "Spa Bali Moon is a day spa in Seminyak that has offered traditional Balinese massage and spa treatments since 2009, at the spa and at villas and hotels across Bali.",
 } as const;
 
 /** Years in business, e.g. 17 in 2026. Used for the "17 + Years Experience" badge (CONTENT-10). */

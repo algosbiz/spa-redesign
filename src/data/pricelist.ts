@@ -169,9 +169,9 @@
     pricelistName: "Four Hand Massage",
     pricelistDescription: "A coordinated massage performed by two therapists working in harmony for deeper relaxation.",
     homeServiceName: "Four Hand Massage",
-    homeServiceDescription: "Delivered by two therapists working together in synchronized movements.",
+    homeServiceDescription: "Delivered by two therapists working together in synchronised movements.",
     homeName: "Four Hand Massage",
-    homeDescription: "A synchronized full-body massage delivered by two therapists working in harmony.",
+    homeDescription: "A synchronised full-body massage delivered by two therapists working in harmony.",
   },
   {
     id: "herbal-massage",
@@ -305,7 +305,7 @@
     pricelistName: "Four Hand Warm Candle",
     pricelistDescription: "A deeply relaxing treatment where two therapists work together using warmed oils.",
     homeServiceName: "Four Hand Warm Candle",
-    homeServiceDescription: "Performed by two therapists working in synchronized movements for deeper relaxation.",
+    homeServiceDescription: "Performed by two therapists working in synchronised movements for deeper relaxation.",
     homeName: "Four Hand Warm Candle",
     homeDescription: "A deeply relaxing massage where two therapists work together using warmed oils.",
   },
@@ -454,7 +454,7 @@
     homeServiceBenefits: [
       "Boosts natural glow",
       "Improves skin smoothness and elasticity",
-      "Deeply moisturizes",
+      "Deeply moisturises",
       "Revives overall skin vitality",
     ],
     homeName: "Bali Moon Gold Facial",
@@ -462,7 +462,7 @@
     homeBenefits: [
       "Boosts natural glow",
       "Improves skin smoothness and elasticity",
-      "Deeply moisturizes",
+      "Deeply moisturises",
       "Revives overall skin vitality",
     ],
   },
@@ -515,7 +515,7 @@
     ],
     pricelistName: "Biokos Facial",
     // PRICE-07: live /seminyak/ text since 2026-09-26 (was "Spa Facials For Dry, Normal & Oily Face").
-    pricelistDescription: "A customized facial treatment for dry, normal, or oily skin, including a facial massage and mask.",
+    pricelistDescription: "A customised facial treatment for dry, normal, or oily skin, including a facial massage and mask.",
     homeServiceName: "Biokos Facial",
     // PRICE-07: live Home Service text since 2026-09-26 (was "Spa Facials For Dry, Normal & Oily Face").
     homeServiceDescription: "Custom facial care adjusted for dry, normal, or oily skin, including facial massage and mask application.",
@@ -649,7 +649,7 @@
       },
     ],
     pricelistName: "Couple Balinese Massage",
-    pricelistDescription: "1 Hour – Balinese Massage",
+    pricelistDescription: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
     homeServiceName: "Couple Balinese Massage",
     // PRICE-07: live Home Service text since 2026-09-26 (was "Performed side by side using steady pressure and flowing techniques for shared relaxation.").
     homeServiceDescription: "Designed for two to relax together while easing the body and sharing a calm moment.",
@@ -745,12 +745,11 @@
       {
         label: "2 Hours · Warm Candle Massage · 2 Pax",
         price: 999_000,
-        homeServiceLabel: "2.5 Hours – Warm Candle Massage · 2 pax",
+        homeServiceLabel: "2 Hours – Warm Candle Massage · 2 pax",
         homeLabel: "2 Hours · 2 pax",
-        note: "TODO DUR-01: Home Service page says 2.5 Hours, Pricelist says 2 Hours (migration-audit.md)",
       },
     ],
-    pricelistName: "Couple Warm Candle Oil Massages",
+    pricelistName: "Couple Warm Candle Oil Massage",
     pricelistDescription: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
     homeServiceName: "Couple Massage Warm Candle",
     // PRICE-07: live Home Service text since 2026-09-26 (was "Using gently warmed candle oils to help soften muscles and create a calming shared experience.").
