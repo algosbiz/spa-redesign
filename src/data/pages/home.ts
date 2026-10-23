@@ -192,7 +192,7 @@ export const home = {
           "Advance booking is recommended at Spa Bali Moon, although walk-ins are welcome at our Seminyak spa on Jl. Pangkung Sari No. 30. Booking ahead lets us prepare your preferred therapist, treatment and appointment time, especially during busy travel seasons. We are open daily 9am to 11pm; book on WhatsApp at +62 878-6317-5144.",
       },
       {
-        question: "2. Can I enjoy the treatments without visiting the spa?",
+        question: "2. Can I have a treatment at my villa or hotel?",
         answer:
           "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan or IDR 150.000 in Canggu and North Kuta, and the therapist brings fresh linen, oils and everything your treatment needs.",
       },
