@@ -2435,3 +2435,63 @@
   white-space: normal;
   color: var(--headings-color);
 }
+
+/* The opening section's two features (AboutIntro; owner, 23 Oct: "looking
+   to much like the old site … keeping creative"): one white card with a
+   thin gold edge and a gold hairline between the two, as the "Visit us"
+   card and the photo badges. Each icon sits in a round tile instead of the
+   theme's blob: the first solid gold with the icon in white, the second
+   paper with the icon in gold, as the old pair alternated. */
+.about-section-two .content-column .intro-features {
+  overflow: hidden;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  border-radius: 18px;
+  background-color: var(--theme-color-white);
+  box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box {
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0;
+  padding: 20px 22px;
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box + .inner-box {
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box .icon-box {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+  border-radius: 50%;
+  background-color: var(--theme-color-gray);
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box:first-child .icon-box {
+  border-color: var(--theme-color1);
+  background-color: var(--theme-color1);
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box .icon-box .icon-bg {
+  display: none;
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box .icon-box .icon {
+  position: static;
+  width: 26px;
+  height: auto;
+  transform: none;
+}
+.about-section-two .content-column .inner-column .intro-features .inner-box:hover .icon-box .icon {
+  transform: rotateY(1turn);
+}
+.about-section-two .content-column .inner-column .intro-features .content h3 {
+  margin: 1px 0 4px;
+  font-size: 20px !important; /* the markup sets 22px / 32px inline */
+  line-height: 1.3 !important;
+}
+.about-section-two .content-column .inner-column .intro-features .content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
