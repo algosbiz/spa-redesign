@@ -692,8 +692,9 @@
 }
 /* The theme's line heights (65px for h2) are for one-line section titles;
    an article heading that wraps keeps its lines together. */
+/* H2 medium, not bold (owner, 23 Oct: "some of the headings look too bold"). */
 .blog-details__rich h2 {
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.3;
 }
 .blog-details__rich h3 {
@@ -704,7 +705,7 @@
 }
 /* Headings pasted into the editor often arrive wrapped in bold, which made
    H2 Literata 900 and H3 700 (owner, 22 Oct: "strange font"). Bold inside a
-   heading takes the heading's own weight: H2 700, H3–H5 400, as set 12 Oct. */
+   heading takes the heading's own weight: H2 500 (700 until 23 Oct), H3–H5 400. */
 .blog-details__rich :is(h1, h2, h3, h4, h5, h6) :is(strong, b) {
   font-weight: inherit;
 }

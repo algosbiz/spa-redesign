@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import PageTitle from "@/components/sections/PageTitle";
+import SoftHeader from "@/components/sections/SoftHeader";
 
 /** /terms-and-conditions/ — generated from the live page's component tree, section for section. */
 export default function TermsPage() {
   return (
     <div className="page-wrapper lh p-terms-and-conditions">
-      <PageTitle pageName="Terms & Conditions" backgroundImage="/images/legal/privacy-terms.webp" />
+      <SoftHeader title="Terms & Conditions" kicker="Spa Bali Moon" trail={[{ label: "Home", href: "/" }, { label: "Terms & Conditions" }]} />
       <section
         className="terms-conditions-section pt-120 pb-120"
         style={{ backgroundColor: "#fcfaf6", position: "relative", overflow: "hidden", zIndex: 1 }}
