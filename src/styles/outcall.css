@@ -145,6 +145,14 @@
   font-weight: 700;
   color: var(--headings-color);
 }
+/* S02: the parts of a treatment's name read as one line ("Balinese Massage,
+   60 min"); the theme's spans are inline blocks, which drop the space after
+   the comma. Phones set them apart (15). */
+.oc-villa__name,
+.oc-villa__punct,
+.oc-villa__tag {
+  display: inline;
+}
 .oc-table__total strong {
   font-family: var(--title-font);
   font-size: 18px;
@@ -950,38 +958,72 @@
   color: #8f8a83;
 }
 @media (max-width: 767px) {
-  /* Phones (owner, 22 Oct): two lines per area, the name with the drive time
-     on the right, then the fee. No repeated column labels. */
+  /* Phones (24 Oct: the two tables looked like loose lines on the paper):
+     each table is one white card, as "Visit us" and the comparison, its rows
+     between hairlines. */
+  .oc-table--villa,
+  .oc-table--arrival {
+    overflow: hidden;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+  }
+  .oc-table--villa tbody tr,
+  .oc-table--arrival tbody tr {
+    border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  }
+  .oc-table--villa tbody tr:last-child,
+  .oc-table--arrival tbody tr:last-child {
+    border-bottom: 0;
+  }
+  .oc-table--villa td::before,
+  .oc-table--arrival td::before {
+    content: none;
+  }
+
+  /* S06 areas: the area with its fee in gold under it, and the drive time
+     as a small tag on the right. */
   .oc-table--arrival tr {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
       "area time"
-      "fee fee";
-    column-gap: 16px;
-    row-gap: 4px;
-    padding: 14px 0;
+      "fee time";
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 3px;
+    padding: 15px 18px;
   }
   .oc-table--arrival th,
   .oc-table--arrival td {
     display: block;
     padding: 0;
   }
-  .oc-table--arrival th {
+  .oc-table--arrival tbody th {
     grid-area: area;
-  }
-  .oc-table--arrival td::before {
-    content: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
   }
   .oc-table--arrival .oc-arrival__fee {
     grid-area: fee;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--theme-color1);
   }
   .oc-table--arrival .oc-arrival__time {
     grid-area: time;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    justify-self: end;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background-color: rgba(var(--theme-color1-rgb), 0.1);
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.2;
     white-space: nowrap;
     color: var(--headings-color);
   }
@@ -990,34 +1032,82 @@
     color: var(--theme-color1);
   }
   .oc-arrival__clock svg {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
   }
 
-  /* S02 prices on phones (owner, 22 Oct): the treatment and its total on one
-     line, then "IDR 159.000 + IDR 75.000 home service fee" in small grey. */
-  .oc-table--villa tr {
+  /* S02 prices: a header strip ("Treatment", "Total at your villa"), then per
+     treatment its name and total on one line, the length (and "2 therapists")
+     as small gold tags, and "IDR 159.000 + IDR 75.000 home service fee" in
+     small grey. */
+  .oc-table--villa thead {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+  .oc-table--villa thead tr {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
+    background-color: var(--theme-color-gray);
+    border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  }
+  .oc-table--villa thead th {
+    display: block;
+    padding: 0;
+    border: 0;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+  }
+  .oc-table--villa thead th:nth-child(2),
+  .oc-table--villa thead th:nth-child(3) {
+    display: none;
+  }
+  .oc-table--villa tbody tr {
     display: grid;
     grid-template-columns: max-content minmax(0, 1fr) auto;
     grid-template-areas:
       "name name total"
       "price fee fee";
     column-gap: 5px;
-    row-gap: 3px;
-    padding: 14px 0;
+    row-gap: 6px;
+    padding: 15px 18px;
   }
   .oc-table--villa th,
   .oc-table--villa td {
     display: block;
     padding: 0;
   }
-  .oc-table--villa th {
+  .oc-table--villa tbody th {
     grid-area: name;
     padding-right: 12px;
-    text-wrap: balance; /* no lone "min" on a second line */
   }
-  .oc-table--villa td::before {
-    content: none;
+  .oc-villa__name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .oc-villa__punct {
+    display: none;
+  }
+  .oc-villa__tag {
+    display: inline-block;
+    margin: 6px 4px 0 0;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background-color: rgba(var(--theme-color1-rgb), 0.1);
+    font-family: var(--text-font);
+    font-size: 10.5px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--theme-color1);
   }
   .oc-table--villa .oc-villa__price {
     grid-area: price;
@@ -1027,7 +1117,7 @@
   }
   .oc-table--villa .oc-villa__price,
   .oc-table--villa .oc-villa__fee {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.5;
     color: #8f8a83;
     white-space: nowrap;
@@ -1049,6 +1139,17 @@
     grid-area: total;
     justify-self: end;
     align-self: start;
+  }
+}
+/* The narrowest phones: "IDR 339.000 + IDR 150.000 home service fee" still on one line. */
+@media (max-width: 359px) {
+  .oc-table--villa tbody tr {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .oc-table--villa .oc-villa__price,
+  .oc-table--villa .oc-villa__fee {
+    font-size: 12px;
   }
 }
 
@@ -1147,9 +1248,12 @@
     outline-offset: 2px;
   }
 
-  /* One option at a time, label beside value, nothing scrolls sideways. */
+  /* One option at a time, label beside value, nothing scrolls sideways. The
+     card's edge and hairlines as the price and area cards (15). */
   .oc-compare__box .oc-table-wrap--scroll {
     overflow: visible;
+    border-color: rgba(var(--theme-color1-rgb), 0.28);
+    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
   }
   .oc-compare__box .oc-table--compare {
     min-width: 0;
@@ -1171,7 +1275,7 @@
     align-items: start;
     column-gap: 12px;
     padding: 15px 18px;
-    border-bottom: 1px solid #ece7de;
+    border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.18);
   }
   .oc-compare__box .oc-table--compare tbody tr:last-child {
     border-bottom: 0;

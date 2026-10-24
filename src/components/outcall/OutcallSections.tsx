@@ -90,21 +90,25 @@ function Header({ eyebrow, title, children }: { eyebrow: string; title: string; 
 /* S02 · Home Service Massage Prices in Seminyak                              */
 /* ------------------------------------------------------------------------ */
 
-/** The most-booked home treatments. Totals are worked out from the price list, so they follow it when prices change. */
-const POPULAR: { name: string; id: string; label: string; therapists: number }[] = [
-  { name: "Balinese Massage, 60 min", id: "balinese-massage", label: "1 Hour", therapists: 1 },
-  { name: "Traditional Massage, 60 min", id: "traditional-massage", label: "1 Hour", therapists: 1 },
-  { name: "Aromatherapy Massage, 60 min", id: "aromatherapy-massage", label: "1 Hour", therapists: 1 },
-  { name: "Deep Tissue Massage, 60 min", id: "deep-tissue-massage", label: "1 Hour", therapists: 1 },
+/**
+ * The most-booked home treatments. Totals are worked out from the price list, so they follow it when prices change.
+ * A row reads "Balinese Massage, 60 min", or "… (2 therapists)" when two come.
+ */
+const POPULAR: { name: string; length: string; id: string; label: string; therapists: number }[] = [
+  { name: "Balinese Massage", length: "60 min", id: "balinese-massage", label: "1 Hour", therapists: 1 },
+  { name: "Traditional Massage", length: "60 min", id: "traditional-massage", label: "1 Hour", therapists: 1 },
+  { name: "Aromatherapy Massage", length: "60 min", id: "aromatherapy-massage", label: "1 Hour", therapists: 1 },
+  { name: "Deep Tissue Massage", length: "60 min", id: "deep-tissue-massage", label: "1 Hour", therapists: 1 },
   // Lymphatic added on the owner's request (22 Oct).
-  { name: "Lymphatic Massage, 60 min", id: "lymphatic-massage", label: "1 Hour", therapists: 1 },
+  { name: "Lymphatic Massage", length: "60 min", id: "lymphatic-massage", label: "1 Hour", therapists: 1 },
   {
-    name: "Couple Balinese Massage, 60 min (2 therapists)",
+    name: "Couple Balinese Massage",
+    length: "60 min",
     id: "couple-balinese-massage",
     label: "1 Hour · Balinese Massage · 2 Pax",
     therapists: 2,
   },
-  { name: "Four Hand Massage, 60 min (2 therapists)", id: "four-hand-massage", label: "1 Hour", therapists: 2 },
+  { name: "Four Hand Massage", length: "60 min", id: "four-hand-massage", label: "1 Hour", therapists: 2 },
 ];
 
 /** The fee in Canggu, North Kuta and Kuta. */
@@ -114,7 +118,7 @@ export function HomeServicePrices() {
   const rows = POPULAR.map((row) => {
     const price = priceOf(row.id, row.label);
     const homeFee = fee * row.therapists;
-    return { name: row.name, price, homeFee, total: price + homeFee };
+    return { name: row.name, length: row.length, therapists: row.therapists, price, homeFee, total: price + homeFee };
   });
   return (
     <section id="home-service-prices" className={`oc-section oc-prices ${PAPER} pt-130 pb-130`}>
@@ -124,7 +128,8 @@ export function HomeServicePrices() {
           therapist. These are our most-booked home treatments, with the fee already added:
         </Header>
         <div className="oc-table-wrap">
-          {/* Phones: the treatment and its total on one line, the price + fee under it (outcall.css, 15). */}
+          {/* Phones: one white card, the treatment and its total on one line, the length as a small
+              tag and the price + fee under it (outcall.css, 15). */}
           <table className="oc-table oc-table--prices oc-table--villa">
             <caption className="oc-sr-only">Home service prices with the fee added</caption>
             <thead>
@@ -138,7 +143,20 @@ export function HomeServicePrices() {
             <tbody>
               {rows.map((r) => (
                 <tr key={r.name}>
-                  <th scope="row">{r.name}</th>
+                  {/* The comma and brackets are hidden on phones, where the length and therapists are tags. */}
+                  <th scope="row">
+                    <span className="oc-villa__name">{r.name}</span>
+                    <span className="oc-villa__punct">, </span>
+                    <span className="oc-villa__tag">{r.length}</span>
+                    {r.therapists > 1 ? (
+                      <>
+                        {" "}
+                        <span className="oc-villa__punct">(</span>
+                        <span className="oc-villa__tag">{r.therapists} therapists</span>
+                        <span className="oc-villa__punct">)</span>
+                      </>
+                    ) : null}
+                  </th>
                   <td className="oc-villa__price" data-label="Treatment price">
                     {idr(r.price)}
                   </td>
@@ -295,7 +313,8 @@ export function HomeServiceAreas() {
               </tr>
             </thead>
             <tbody>
-              {/* Phones: two lines per area, the name and drive time, then the fee (outcall.css, 15). */}
+              {/* Phones: one white card, the fee under each area's name and the drive time as a
+                  small tag (outcall.css, 15). */}
               {business.homeService.zones.map((z) => (
                 <tr key={z.area}>
                   <th scope="row">{z.area}</th>
