@@ -309,9 +309,9 @@
             "embedded": true,
             "related": [
               "/seminyak/manicure-pedicure/",
-              "/seminyak/hair-braiding/",
-              "/seminyak/waxing-salon/",
-              "/seminyak/creambath/"
+              "/seminyak/facial/",
+              "/seminyak/creambath/",
+              "/seminyak/hair-braiding/"
             ]
           }
         }

@@ -308,13 +308,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Body Treatments",
+            "title": "Treatments to Pair with Cellulite Massage",
             "embedded": true,
             "related": [
-              "/seminyak/lymphatic-drainage-massage/",
-              "/seminyak/cupping-therapy/",
+              "/seminyak/facial/",
               "/seminyak/body-scrub/",
-              "/seminyak/coconut-oil-massage/"
+              "/seminyak/foot-massage/",
+              "/seminyak/manicure-pedicure/"
             ]
           }
         }

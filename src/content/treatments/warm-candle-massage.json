@@ -306,13 +306,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Massages and Body Treatments",
+            "title": "Treatments to Pair with a Warm Candle Massage",
             "embedded": true,
             "related": [
-              "/seminyak/coconut-oil-massage/",
-              "/seminyak/hot-stone-massage/",
+              "/seminyak/facial/",
+              "/seminyak/couple-spa/",
               "/seminyak/body-scrub/",
-              "/seminyak/couple-spa/"
+              "/seminyak/manicure-pedicure/"
             ]
           }
         }

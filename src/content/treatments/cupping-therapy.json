@@ -231,13 +231,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Massages and Body Treatments",
+            "title": "Treatments to Pair with Cupping Therapy",
             "embedded": true,
             "related": [
-              "/seminyak/balinese-massage/",
-              "/seminyak/deep-tissue-massage/",
-              "/seminyak/sport-massage/",
-              "/seminyak/shiatsu-massage/"
+              "/seminyak/facial/",
+              "/seminyak/foot-massage/",
+              "/seminyak/creambath/",
+              "/seminyak/manicure-pedicure/"
             ]
           }
         }

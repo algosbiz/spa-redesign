@@ -448,15 +448,15 @@
             {
               "type": "ServiceSlider",
               "props": {
-                "title": "More Massages and Treatments",
+                "title": "Treatments to Pair with a Balinese Massage",
                 "leftShapeSrc": "/images/shape/service-shape-left.png",
                 "rightShapeSrc": "/images/shape/service-shape-right.png",
                 "embedded": true,
                 "related": [
-                  "/seminyak/warm-candle-massage/",
-                  "/seminyak/hot-stone-massage/",
                   "/seminyak/facial/",
-                  "/seminyak/couple-spa/"
+                  "/seminyak/couple-spa/",
+                  "/seminyak/manicure-pedicure/",
+                  "/seminyak/creambath/"
                 ]
               }
             }
