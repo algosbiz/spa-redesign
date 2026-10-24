@@ -221,7 +221,7 @@ export const home = {
       {
         question: "7. How much does a massage cost in Seminyak?",
         answer:
-          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist in the Seminyak area.",
+          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and [couple massages](/seminyak/couple-spa/) start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist in the Seminyak area.",
       },
       {
         question: "8. Where is Spa Bali Moon?",
