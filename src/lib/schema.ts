@@ -54,7 +54,7 @@ export function spaSchema() {
     },
     // Where Google Maps places the spa (the /contact/ map).
     geo: { "@type": "GeoCoordinates", latitude: -8.6780657, longitude: 115.1607164 },
-    hasMap: business.mapsUrl,
+    hasMap: business.listings.google,
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -69,8 +69,9 @@ export function spaSchema() {
       "@type": "Place",
       name: `${name}, Bali`,
     })),
-    // TODO (roadmap R9): add the Google Business Profile and TripAdvisor links once the owner sends them.
-    sameAs: [business.social.facebook, business.social.instagram],
+    // The spa's profiles elsewhere. Facebook left out: the page is unused and
+    // the owner wants no Facebook links (23 Oct).
+    sameAs: [business.listings.google, business.listings.tripadvisor, business.social.instagram],
     // The Google Business Profile's rating, as the owner sent it on 24 Oct 2026
     // (4.3 from 196 Google reviews). Keep it equal to the profile, or remove it.
     aggregateRating: {

@@ -88,6 +88,17 @@ export const business = {
    */
   acceptedPayments: ["VISA", "Mastercard", "Cash"],
 
+  /**
+   * The spa's listings elsewhere (24 Oct, from the owner's Google search):
+   * its Google Business Profile ("Spa Bali Moon - Day Spa Seminyak", 4.3 from
+   * 196 reviews) and its TripAdvisor page.
+   */
+  listings: {
+    google: "https://www.google.com/maps?cid=16249037415237189663",
+    tripadvisor:
+      "https://www.tripadvisor.com/Attraction_Review-g13356179-d12063707-Reviews-Spa_Bali_Moon-Kerobokan_Kelod_North_Kuta_Bali.html",
+  },
+
   /** Found on the old blog pages. */
   social: {
     facebook: "https://www.facebook.com/spabalimoon",
