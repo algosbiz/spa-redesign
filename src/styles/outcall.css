@@ -1352,18 +1352,39 @@
     -webkit-mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
   }
+  /* The whole photo squeezed into the banner, as on the homepage, so the
+     glass carries all its colours rather than a narrow slice of the middle. */
   .banner-two-area--photo-top .banner-two__slider .slide-bg {
-    filter: blur(22px) saturate(1.05);
+    background-size: 100% 100%;
+    filter: blur(22px) saturate(1.1) brightness(1.08);
   }
-  /* Lighter just under the photo, where the two meet, darker behind the text. */
+  /* Lighter just under the photo, where the two meet, darker behind the
+     text. How dark is per photo (24 Oct: one gradient left the spa-room
+     photos dark and the light ones too pale): --glass-shade from
+     src/data/bannerGlass.ts, about the homepage glass's brightness each. */
   .banner-two-area--photo-top .banner-two__slider .slide-bg::before {
     background: linear-gradient(
       180deg,
-      rgba(28, 26, 29, 0.2) 0,
-      rgba(28, 26, 29, 0.42) 12%,
-      rgba(28, 26, 29, 0.62) 26%,
-      rgba(28, 26, 29, 0.66) 100%
+      rgba(28, 26, 29, calc(var(--glass-shade, 0.55) * 0.125)) 0,
+      rgba(28, 26, 29, calc(var(--glass-shade, 0.55) * 0.55)) 100px,
+      rgba(28, 26, 29, calc(var(--glass-shade, 0.55) * 0.9)) 220px,
+      rgba(28, 26, 29, var(--glass-shade, 0.55)) 100%
     );
+  }
+  /* Treatment pages (PageBanner `mobileTall`, 24 Oct): their photos are
+     close-ups, and the whole landscape photo was a thin strip with a third of
+     it under the header. It fills a taller box instead, cropped at the sides
+     around the subject (`imagePosition`, set on the image), clear down past
+     the header before it melts into the glass. 72vw tall: PageBanner's
+     TALL_SIZES follows from it. */
+  .banner-two-area--photo-tall .banner-two__photo img {
+    aspect-ratio: 375 / 270;
+    -webkit-mask-image: linear-gradient(180deg, #000 58%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, #000 58%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+  /* A soft shadow under the lighter glass's type, as on the homepage. */
+  .banner-two-area--photo-top .banner-two__content :is(.sub-title, .text, .opening-times) {
+    text-shadow: 0 1px 10px rgba(28, 26, 29, 0.35);
   }
   .banner-two-area--photo-top .banner-two__content {
     padding-top: 28px;

@@ -7,6 +7,7 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LotusPaths25 } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
+import { glassShade } from "@/data/bannerGlass";
 import { business } from "@/data/business";
 import type { PriceTiles } from "@/lib/priceTiles";
 import { whatsappChatUrl } from "@/lib/whatsapp";
@@ -51,10 +52,22 @@ export type PageBannerProps = {
    * Phones only (owner, 22 Oct, tried on the outcall page first): the whole
    * landscape photo at this path is shown above the text, uncropped, instead
    * of the `-sm` cut behind it; the text sits on a blurred, darkened copy of
-   * the same photo. A ~828px-wide copy of `image` (styles: outcall.css, 19).
+   * the same photo. A ~828px-wide copy of `image` (styles: outcall.css, 19),
+   * darkened as much as src/data/bannerGlass.ts says for it.
    */
   mobilePhoto?: string;
+  /**
+   * With `mobilePhoto`: the photo on top fills a taller box, cropped at its
+   * sides around `imagePosition`, from the full-size file on sharp screens;
+   * the glass behind the text still comes from `mobilePhoto` (24 Oct: on the
+   * treatment pages' close-ups the whole landscape photo was a thin strip, a
+   * third of it under the header).
+   */
+  mobileTall?: boolean;
 };
+
+/** How wide the photo is drawn in the taller box (outcall.css, 19): 72vw tall, 1920x850. */
+const TALL_SIZES = "163vw";
 
 const S = "jsx-page-banner";
 
@@ -85,8 +98,13 @@ export default function PageBanner({
   prices,
   priceUnit,
   mobilePhoto,
+  mobileTall = false,
 }: PageBannerProps) {
   const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
+  const tall = !!mobilePhoto && mobileTall;
+  // The `-wide-sm` copy for 1x phones (it is loaded for the glass anyway), the full photo for sharper ones.
+  const tallSrcSet = tall && mobilePhoto !== image ? `${mobilePhoto} 828w, ${image} 1920w` : undefined;
+  const shade = mobilePhoto ? glassShade[mobilePhoto] : undefined;
 
   // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
   // to the DOM while it initialises, then React re-renders the class list it
@@ -103,10 +121,19 @@ export default function PageBanner({
 
   return (
     <>
-      <link rel="preload" as="image" href={small} media="(max-width: 767px)" fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href={small}
+        {...(tallSrcSet && { imageSrcSet: tallSrcSet, imageSizes: TALL_SIZES })}
+        media="(max-width: 767px)"
+        fetchPriority="high"
+      />
       <link rel="preload" as="image" href={image} media="(min-width: 768px)" fetchPriority="high" />
       <section
-        className={`${S} banner-two-area section__decoration-bottom${mobilePhoto ? " banner-two-area--photo-top" : ""}`}
+        className={`${S} banner-two-area section__decoration-bottom${mobilePhoto ? " banner-two-area--photo-top" : ""}${
+          tall ? " banner-two-area--photo-tall" : ""
+        }`}
       >
         <div className={`${S} banner-two__shape`}>
           <img src={shapeImage} alt="" aria-hidden="true" fetchPriority="low" decoding="async" className={S} />
@@ -127,13 +154,24 @@ export default function PageBanner({
                   "--hero-lg": `url(${image})`,
                   "--hero-sm": `url(${small})`,
                   ...(imagePosition && { "--hero-pos": imagePosition }),
+                  ...(shade !== undefined && { "--glass-shade": shade }),
                 } as React.CSSProperties
               }
               className={`${S} slide-bg`}
             />
             {mobilePhoto && (
               <div className={`${S} banner-two__photo`}>
-                <img src={mobilePhoto} alt="" width={828} height={367} fetchPriority="high" decoding="async" className={S} />
+                <img
+                  src={mobilePhoto}
+                  {...(tallSrcSet && { srcSet: tallSrcSet, sizes: TALL_SIZES })}
+                  alt=""
+                  width={828}
+                  height={367}
+                  fetchPriority="high"
+                  decoding="async"
+                  className={S}
+                  {...(tall && imagePosition && { style: { objectPosition: imagePosition } })}
+                />
               </div>
             )}
             <div className={`${S} container`}>

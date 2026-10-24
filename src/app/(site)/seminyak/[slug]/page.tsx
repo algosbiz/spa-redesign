@@ -180,6 +180,17 @@ function bannerImage(tree: TreeNode): string | undefined {
   return undefined;
 }
 
+/**
+ * The whole photo above the banner text on phones, on a blurred copy of it
+ * (PageBanner `mobilePhoto`; 24 Oct: every hero gets the outcall page's glass
+ * look). Each built-in banner has an 828x367 `-wide-sm` copy beside it; a
+ * photo uploaded in /admin/ has none, so it is shown itself.
+ */
+function bannerMobilePhoto(image: string | undefined): string | undefined {
+  if (!image) return undefined;
+  return image.startsWith("/images/") ? image.replace(/(\.[a-z0-9]+)$/i, "-wide-sm$1") : image;
+}
+
 // Built once and kept until the page is saved in /admin/ (which rebuilds it),
 // as the guide pages. A database error is thrown on purpose: Next then keeps
 // serving the last good page instead of the built-in version.
@@ -216,16 +227,20 @@ export default async function TreatmentPage({ params }: Props) {
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
   const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
+  const image = bannerImage(content.tree);
+  const mobilePhoto = bannerMobilePhoto(image);
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
-      prices
-        ? withProps(content.tree, "PageBanner", {
-            prices,
-            // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
-            priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
-          })
-        : content.tree,
+      withProps(content.tree, "PageBanner", {
+        // A taller photo on top: these photos are close-ups (24 Oct).
+        ...(mobilePhoto && { mobilePhoto, mobileTall: true }),
+        ...(prices && {
+          prices,
+          // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
+          priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
+        }),
+      }),
       "QuickFacts",
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
@@ -251,7 +266,7 @@ export default async function TreatmentPage({ params }: Props) {
           slug,
           name: names.service ?? content.name,
           description: content.seo.description,
-          image: bannerImage(content.tree),
+          image,
         })}
       />
       <FaqJsonLd items={faqItems(content.tree)} />

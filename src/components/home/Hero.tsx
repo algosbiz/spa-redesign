@@ -35,6 +35,9 @@ export default function Hero() {
   const { hero } = home;
   return (
     <section id="home" className="banner-five-area section__decoration-bottom mb-130 v2-hero">
+      {/* Phones only: a blurred, darker copy of the photo behind the text, the
+          other banners' glass look (24 Oct; home-v2.css). */}
+      <div className="v2-hero__glass" aria-hidden="true" />
       <div className="v2-hero__photo">
         {/* The owner's banner photo, 8 Oct: two Spa Bali Moon therapists giving
             a couple back massages, bare wall on the left (owner's file

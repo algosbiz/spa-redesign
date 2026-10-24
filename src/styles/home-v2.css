@@ -296,6 +296,126 @@
   }
 }
 
+/* Phones: the glass look of every other banner (24 Oct; outcall.css, 19).
+   The whole photo on top melts into a blurred, darker copy of itself that
+   runs behind the text, the type turns white and the two row buttons take
+   the banners' gold glass (custom.css, .row-btn--glass). From 768px nothing
+   changes. */
+.home-v2 .v2-hero .v2-hero__glass {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* The whole photo squeezed into the hero, so the glass carries all its
+     colours (wall, skin, towels) instead of a narrow, dark slice of a
+     therapist's uniform. */
+  .home-v2 .v2-hero .v2-hero__glass {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: url(/images/home/homepage-banner-1200.webp) center / 100% 100% no-repeat;
+    filter: blur(22px) saturate(1.1) brightness(1.08);
+    transform: scale(1.12);
+  }
+  /* Lighter just under the photo, where the two meet, a little darker behind
+     the text; lighter than the other banners' (owner, 24 Oct: "too dark for
+     the homepage"). */
+  .home-v2 .v2-hero .v2-hero__glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(28, 26, 29, 0.05) 0,
+      rgba(28, 26, 29, 0.22) 160px,
+      rgba(28, 26, 29, 0.36) 340px,
+      rgba(28, 26, 29, 0.4) 100%
+    );
+  }
+  /* The photo's lower part turns transparent bit by bit instead of fading
+     into the cream. */
+  .home-v2 .v2-hero .v2-hero__photo::after {
+    display: none;
+  }
+  .home-v2 .v2-hero .v2-hero__photo img {
+    -webkit-mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, #000 45%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  /* White type, the amounts and links in the light gold of the banner prices. */
+  .home-v2 .v2-hero .section-header .sub-title,
+  .home-v2 .v2-hero .banner-five__content .title,
+  .home-v2 .v2-hero .banner-five__content .title span,
+  .home-v2 .v2-hero .v2-hero__feature-text strong {
+    color: var(--theme-color-white);
+  }
+  .home-v2 .v2-hero .banner-five__content .title {
+    text-shadow: 0 3px 14px rgba(28, 26, 29, 0.3);
+  }
+  /* The lighter glass: a soft shadow keeps the smaller type readable where
+     the towels make it pale. */
+  .home-v2 .v2-hero :is(.sub-title, .v2-hero__prices, .v2-hero__text, .v2-hero__feature-text, .v2-hero__fact) {
+    text-shadow: 0 1px 10px rgba(28, 26, 29, 0.35);
+  }
+  .home-v2 .v2-hero .v2-hero__prices {
+    color: rgba(255, 255, 255, 0.92);
+  }
+  .home-v2 .v2-hero .v2-hero__price strong,
+  .home-v2 .v2-hero .v2-hero__text a:not([class]),
+  .home-v2 .v2-hero .v2-hero__fact-icon {
+    color: #e8d3a2;
+  }
+  .home-v2 .v2-hero .v2-hero__text a:not([class]):hover {
+    color: var(--theme-color-white);
+  }
+  .home-v2 .v2-hero .v2-hero__text {
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .home-v2 .v2-hero .v2-hero__feature-text span {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .home-v2 .v2-hero .v2-hero__visit {
+    border-top-color: rgba(255, 255, 255, 0.22);
+  }
+  .home-v2 .v2-hero .v2-hero__fact {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* The row buttons as .row-btn--glass: frosted gold, white type, white on hover. */
+  .home-v2 .v2-hero .row-btn {
+    background-color: rgba(var(--theme-color1-rgb), 0.24);
+    border-color: rgba(var(--theme-color1-rgb), 0.85);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .home-v2 .v2-hero .row-btn .row-btn__icon {
+    color: var(--theme-color-white);
+    background-color: var(--theme-color1);
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .home-v2 .v2-hero .row-btn :is(.row-btn__label, .row-btn__arrow) {
+    color: var(--theme-color-white);
+  }
+  .home-v2 .v2-hero .row-btn .row-btn__note {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s;
+  }
+  .home-v2 .v2-hero .row-btn:is(:hover, :focus-visible) {
+    background-color: var(--theme-color-white);
+    border-color: var(--theme-color1);
+  }
+  .home-v2 .v2-hero .row-btn:is(:hover, :focus-visible) .row-btn__icon {
+    color: var(--theme-color1);
+    background-color: var(--theme-color-gray);
+  }
+  .home-v2 .v2-hero .row-btn:is(:hover, :focus-visible) :is(.row-btn__label, .row-btn__arrow) {
+    color: var(--theme-color1);
+  }
+  .home-v2 .v2-hero .row-btn:is(:hover, :focus-visible) .row-btn__note {
+    color: var(--text-color);
+  }
+}
+
 /* ------------------------------------------------------------------------
    Steps: unchanged on desktop. Once they stack (below 992px) each step is a
    white card (owner, 23 Oct: the blobs looked dated), in the family of the
