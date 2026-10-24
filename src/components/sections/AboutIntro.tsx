@@ -101,14 +101,12 @@ export default function AboutIntro({
                   <div className="image" data-depth="0.03">
                     <img loading="lazy" decoding="async" src={primaryImage} alt={primaryAlt} />
                   </div>
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    data-depth="0.05"
-                    className="circle-image"
-                    src={secondaryImage}
-                    alt={secondaryAlt}
-                  />
+                  {/* The second photo as an arch in a white frame on the large photo's
+                      corner, a gold hairline arch behind it, in place of the big round
+                      photo (owner, 24 Oct: "keep the creativity but modernize"; custom.css). */}
+                  <span className="intro-inset" data-depth="0.05">
+                    <img loading="lazy" decoding="async" src={secondaryImage} alt={secondaryAlt} />
+                  </span>
                 </div>
                 {/* A round seal on the photo's corner edge, a ring of words turning around the
                     lotus (a link to the price list on the treatment pages), in place of the notch (owner,
