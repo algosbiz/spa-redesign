@@ -18,13 +18,8 @@ export const business = {
   /** How the phone / WhatsApp number is written on the website. */
   phoneDisplay: "+62 878-6317-5144",
 
-  /**
-   * TODO CONTACT-01: two different emails were found and no page shows one in the footer.
-   *   - "info@spabalimoon.com"   (only in the old homepage schema, not visible)
-   *   - "spabalimoon@gmail.com"  (visible on /privacy-policy/)
-   * Leave empty until the owner confirms which one to publish.
-   */
-  email: undefined as string | undefined,
+  /** The spa's email (owner, 24 Oct: info@spabalimoon.com; the Gmail address the privacy page showed is not used). */
+  email: "info@spabalimoon.com",
 
   address: {
     /**
@@ -92,6 +87,17 @@ export const business = {
    * Each name needs a logo in src/components/layout/PaymentLogo.tsx.
    */
   acceptedPayments: ["VISA", "Mastercard", "Cash"],
+
+  /**
+   * The spa's listings elsewhere (24 Oct, from the owner's Google search):
+   * its Google Business Profile ("Spa Bali Moon - Day Spa Seminyak", 4.3 from
+   * 196 reviews) and its TripAdvisor page.
+   */
+  listings: {
+    google: "https://www.google.com/maps?cid=16249037415237189663",
+    tripadvisor:
+      "https://www.tripadvisor.com/Attraction_Review-g13356179-d12063707-Reviews-Spa_Bali_Moon-Kerobokan_Kelod_North_Kuta_Bali.html",
+  },
 
   /** Found on the old blog pages. */
   social: {

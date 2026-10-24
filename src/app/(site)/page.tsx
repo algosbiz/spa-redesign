@@ -3,8 +3,10 @@ import Faq from "@/components/home/Faq";
 import HomeLayout from "@/components/home/HomeLayout";
 import AllTreatmentsSlider from "@/components/home/AllTreatmentsSlider";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
 import MenuDurations from "@/components/home/MenuDurations";
 import { home } from "@/data/pages/home";
+import { websiteSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import "@/styles/home-v2.css";
 import "@/styles/home-v2-options.css";
@@ -30,6 +32,7 @@ export default function HomePage() {
     <>
       {/* The spa's DaySpa data is in the site layout, on every page (17 Oct). */}
       <FaqJsonLd items={home.faq.items} />
+      <JsonLd data={websiteSchema()} />
       <HomeLayout
         className="home-v3"
         aboutSubTitle="About Us"

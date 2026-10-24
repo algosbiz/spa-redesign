@@ -2,7 +2,7 @@
 // Please do not rewrite texts or prices without checking migration/migration-audit.md first.
 //
 // Page: https://spabalimoon.com/privacy-policy/
-// TODO CONTACT-01: this page shows spabalimoon@gmail.com; the old homepage schema used info@spabalimoon.com.
+// Email: info@spabalimoon.com (owner, 24 Oct).
 // FEE-01 settled (22 Oct): the fee depends on the area, so "calculated based on distance and time" stays true.
 
 import type { TextPage } from "../types";
@@ -107,7 +107,7 @@ export const privacyPolicyPage: TextPage = {
       text: "If you have questions about this Privacy Policy or wish to exercise your rights, please contact us via:",
     },
     { kind: "heading", level: 6, text: "Email" },
-    { kind: "link", label: "spabalimoon@gmail.com", href: "mailto:spabalimoon@gmail.com" },
+    { kind: "link", label: "info@spabalimoon.com", href: "mailto:info@spabalimoon.com" },
     { kind: "heading", level: 6, text: "WhatsApp" },
     { kind: "link", label: "+62 878-6317-5144", href: "whatsapp" },
     { kind: "heading", level: 6, text: "Address" },
