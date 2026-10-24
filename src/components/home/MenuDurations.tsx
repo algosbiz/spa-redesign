@@ -290,6 +290,15 @@ function TitleLines({ name }: { name: string }) {
 }
 
 /**
+ * More price lines than this fold under a "Full price list" toggle (24 Oct:
+ * Manicure Pedicure's eight lines stretched its card far past its
+ * neighbour's). Shorter lists, and a facial's benefits, stay open. A native
+ * <details>, so it opens before the page's script runs and the folded prices
+ * stay in the HTML.
+ */
+const FOLD_AFTER = 3;
+
+/**
  * A variant under a treatment as a menu line (owner, 23 Oct: the wrapped,
  * dotted list was hard to read): its name, a dotted leader and its price in
  * gold on the right (spa-menu.css). Notes without a price are just text.
@@ -347,6 +356,19 @@ function DurationRow({
   }
   const current = prices.find((p) => p.minutes === (timed ? selected : null)) ?? prices[0];
   const shown = (minutes: number | null) => minutes === null || minutes === current.minutes;
+  const shownNotes = notes.filter((n) => shown(n.minutes));
+  const pricedCount = shownNotes.filter((n) => n.text.includes(" · ")).length;
+  const list = notes.length > 0 && (
+    <div className="treatment-catalog__option v2-notes" hidden={!shownNotes.length}>
+      <ul>
+        {notes.map((n) => (
+          <li key={`${n.text}-${n.minutes}`} hidden={!shown(n.minutes)}>
+            <NoteText text={n.text} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
   const photo = <img loading="lazy" decoding="async" src={item.image} alt={item.name} />;
   const name = item.href ? (
     <Link prefetch={false} href={item.href}>
@@ -389,16 +411,17 @@ function DurationRow({
           </div>
         </div>
         {item.desc && <p className="treatment-catalog__description">{item.desc}</p>}
-        {notes.length > 0 && (
-          <div className="treatment-catalog__option v2-notes" hidden={!notes.some((n) => shown(n.minutes))}>
-            <ul>
-              {notes.map((n) => (
-                <li key={`${n.text}-${n.minutes}`} hidden={!shown(n.minutes)}>
-                  <NoteText text={n.text} />
-                </li>
-              ))}
-            </ul>
-          </div>
+        {pricedCount > FOLD_AFTER ? (
+          <details className="v2-fold">
+            <summary className="v2-fold__toggle">
+              <span className="v2-fold__label">Full price list</span>
+              <span className="v2-fold__count">{pricedCount} prices</span>
+              <span className="v2-fold__chevron" aria-hidden="true" />
+            </summary>
+            {list}
+          </details>
+        ) : (
+          list
         )}
       </div>
     </article>

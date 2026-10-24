@@ -427,6 +427,88 @@
   font-weight: 700;
   white-space: nowrap;
 }
+/* A long price list folded (MenuDurations, FOLD_AFTER; 24 Oct): a white row
+   under the description, as the site's row buttons: "Full price list", the
+   number of prices in small gold capitals and a gold chevron that turns over
+   when it opens. The lines fade in under it. */
+.lh .v2-menu .v2-fold {
+  margin-top: 16px;
+}
+.lh .v2-menu .v2-fold__toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+  border-radius: 12px;
+  background-color: var(--theme-color-white);
+  list-style: none;
+  cursor: pointer;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.lh .v2-menu .v2-fold__toggle::-webkit-details-marker {
+  display: none;
+}
+.lh .v2-menu .v2-fold__toggle:hover,
+.lh .v2-menu .v2-fold[open] .v2-fold__toggle {
+  border-color: var(--theme-color1);
+}
+.lh .v2-menu .v2-fold__toggle:hover {
+  box-shadow: 0 10px 22px -16px rgba(var(--theme-color1-rgb), 0.7);
+}
+.lh .v2-menu .v2-fold__toggle:focus-visible {
+  outline: 2px solid var(--theme-color1);
+  outline-offset: 2px;
+}
+.lh .v2-menu .v2-fold__label {
+  font-family: var(--title-font);
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--headings-color);
+}
+.lh .v2-menu .v2-fold__count {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.lh .v2-menu .v2-fold__chevron {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin: -4px 2px 0 0;
+  border-right: 1.5px solid var(--theme-color1);
+  border-bottom: 1.5px solid var(--theme-color1);
+  transform: rotate(45deg);
+  transition: transform 0.25s, margin 0.25s;
+}
+.lh .v2-menu .v2-fold[open] .v2-fold__chevron {
+  margin-top: 4px;
+  transform: rotate(-135deg);
+}
+.lh .v2-menu .v2-fold .v2-notes ul {
+  margin-top: 8px;
+}
+.lh .v2-menu .v2-fold[open] .v2-notes {
+  animation: v2-fold-in 0.3s ease-out;
+}
+@keyframes v2-fold-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lh .v2-menu .v2-fold[open] .v2-notes {
+    animation: none;
+  }
+  .lh .v2-menu .v2-fold__chevron {
+    transition: none;
+  }
+}
 @media (max-width: 767px) {
   .lh .v2-duration {
     flex-direction: column;
