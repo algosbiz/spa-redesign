@@ -1,12 +1,14 @@
 /** A quick-facts price line read as one price per session length. */
-export type PriceTiles = { caption?: string; tiles: { length: string; amount: string }[] };
+export type PriceTiles = { caption?: string; tiles: { length: string; amount: string; was?: string }[] };
 
 /**
  * "Per person: 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR
  * 330.000" -> its caption ("Per person") and one entry per length, or null
  * when the value is not a list of lengths and prices (the admin's words).
  * A note in brackets after a price stays with its name ("Nail gel IDR
- * 219.000 (hands or feet)" -> "Nail gel (hands or feet)").
+ * 219.000 (hands or feet)" -> "Nail gel (hands or feet)"). "(was IDR …)" is
+ * the price before a package discount, shown struck through (owner, 24 Oct:
+ * cupping with a Balinese massage, "IDR 600.000 (was IDR 659.000)").
  */
 export function priceTiles(value: string): PriceTiles | null {
   const colon = /^([^:·]+):\s*(.+)$/.exec(value);
@@ -14,5 +16,11 @@ export function priceTiles(value: string): PriceTiles | null {
     .split(" · ")
     .map((part) => /^(.+?)\s+IDR\s+([\d.]+)(\s+\([^)]*\))?$/.exec(part.trim()));
   if (parts.length < 2 || parts.some((p) => !p)) return null;
-  return { caption: colon?.[1], tiles: parts.map((p) => ({ length: p![1] + (p![3] ?? ""), amount: p![2] })) };
+  return {
+    caption: colon?.[1],
+    tiles: parts.map((p) => {
+      const was = /^\s*\(was IDR ([\d.]+)\)$/.exec(p![3] ?? "");
+      return was ? { length: p![1], amount: p![2], was: was[1] } : { length: p![1] + (p![3] ?? ""), amount: p![2] };
+    }),
+  };
 }
