@@ -37,6 +37,7 @@ const NAMES: Record<string, { heading: string; inline: string; service?: string 
   "coconut-oil-massage": { heading: "a Coconut Oil Massage", inline: "a coconut oil massage" },
   "couple-spa": { heading: "a Couples Massage", inline: "a couples massage", service: "Couples Massage" },
   creambath: { heading: "a Cream Bath", inline: "a cream bath", service: "Cream Bath" },
+  "cupping-therapy": { heading: "Cupping Therapy", inline: "cupping therapy" },
   "day-spa": { heading: "a Day Spa Visit", inline: "a day spa visit", service: "Day Spa" },
   "deep-tissue-massage": { heading: "a Deep Tissue Massage", inline: "a deep tissue massage" },
   "ear-candle": { heading: "an Ear Candle Treatment", inline: "an ear candle treatment", service: "Ear Candle Treatment" },
@@ -58,6 +59,7 @@ const NAMES: Record<string, { heading: string; inline: string; service?: string 
   "sunburn-massage": { heading: "a Sunburn Treatment", inline: "a sunburn treatment", service: "Sunburn Treatment (Aloe Vera Massage)" },
   "thai-massage": { heading: "a Thai Massage", inline: "a Thai massage" },
   "traditional-massage": { heading: "a Traditional Massage", inline: "a traditional massage" },
+  "warm-candle-massage": { heading: "a Warm Candle Massage", inline: "a warm candle massage" },
   "waxing-salon": { heading: "Waxing", inline: "waxing" },
 };
 
@@ -90,7 +92,7 @@ const tile = (length: string, id: string, option: string) => ({ length, amount: 
  * prices), from the price list so they change with it. These pages keep the
  * price line in their quick facts: it says more (the scrub's seven scents,
  * all seven waxing prices). The day spa shows the lowest treatment and the
- * lowest one-guest package (Mani Pedi Package C, IDR 299.000 on 22 Oct).
+ * lowest one-guest package (Balinese and Mani Pedi Package D, IDR 375.000 on 24 Oct).
  */
 const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
   "body-scrub": [

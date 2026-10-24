@@ -45,13 +45,12 @@ const SOCIAL = [
 ];
 
 /**
- * Phones (owner, 23 Oct: "could the mobile footer be enhanced"): the facts as
- * one white card of rows, like "Visit us" on phones (outcall.css section 20),
- * each row a link with the gold arrow but the hours; then the pages in a
- * second card, as the mobile menu's rows: icon, name, arrow (chips read as
- * blog tags, owner). Replaces the cards, the WhatsApp pill (the bottom bar
- * has it) and the lone Instagram circle there; footer.css hides one or the
- * other.
+ * The facts as one white card of rows, like "Visit us" on phones (outcall.css
+ * section 20), each row a link with the gold arrow but the hours; then the
+ * pages in a second card, as the mobile menu's rows: icon, name, arrow (chips
+ * read as blog tags, owner). Made for phones (owner, 23 Oct: "could the mobile
+ * footer be enhanced"), on every screen since 24 Oct ("on desktop we can
+ * still modernize the footer … more like mobile"): side by side from 768px.
  */
 const PHONE_LINKS: { label: string; href: string; icon: MenuIconName }[] = [
   ...footerDaySpaPages.map((l) => ({ ...l, icon: "lotus" as const })),
@@ -70,43 +69,16 @@ function PhoneRow({ icon, label, children }: { icon: ReactNode; label: string; c
   );
 }
 
-/** A white card in the footer panel: its icon in a circle, its title, then its lines. */
-function Card({
-  icon,
-  title,
-  className = "",
-  children,
-}: {
-  icon: MenuIconName;
-  title: ReactNode;
-  className?: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className={`site-footer__card ${className}`.trim()}>
-      <div className="site-footer__card-head">
-        <span className="site-footer__icon">
-          <MenuIcon name={icon} />
-        </span>
-        <div className="site-footer__card-title">{title}</div>
-      </div>
-      {children}
-    </div>
-  );
-}
-
 /**
  * Site footer (owner, 2 Oct: "can we also modernize the footer"; of three
  * designs the owner picked this one, "opsi 1"), in the look of the mobile
  * menu: a paper panel with rounded corners; on its left the logo, the about
- * text, a WhatsApp pill, Instagram, and the accepted payments;
- * on its right white cards with a gold icon each: the day spa (hours, address
- * to Google Maps), contact (phone to WhatsApp), home services (the three
- * pages and the fee) and the newsletter (left out on phones, as live). Under
- * the panel the copyright line. The old footer's rose line art ("the flower
- * art from before"), in gold, fills the empty sides on wide screens and the
- * panel's bottom corners below 1500px.
- * Same content as live's five columns. The newsletter posts to
+ * text, the accepted payments and the newsletter (left out on phones, as
+ * live); on its right the "Visit us" card of rows (hours, address to Google
+ * Maps, WhatsApp, the home service fee, Instagram) and the "Explore" card of
+ * pages. Under the panel the copyright line. The old footer's rose line art
+ * ("the flower art from before"), in gold, fills the empty sides on wide
+ * screens and the panel's bottom corners below 1500px. The newsletter posts to
  * /api/subscribe/ and shows the reply under the field for 5 seconds, as on
  * the live site. Styles: src/styles/footer.css.
  */
@@ -196,29 +168,6 @@ export default function Footer() {
                 About Spa Bali Moon
               </Link>
             </p>
-            <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="btn-two site-footer__cta">
-              <i className="fa-brands fa-whatsapp" aria-hidden="true" />
-              Book on WhatsApp
-            </a>
-            <ul className="site-footer__social">
-              {SOCIAL.map((s) => (
-                <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`Spa Bali Moon on ${s.label}`}>
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      {s.icon}
-                    </svg>
-                  </a>
-                </li>
-              ))}
-            </ul>
             <div className="site-footer__payments">
               <p className="site-footer__label">Accepted Payments</p>
               <div className="footer__payment-list">
@@ -242,9 +191,34 @@ export default function Footer() {
                 </span>
               </div>
             </div>
+            <div className="site-footer__newsletter-block">
+              <p className="site-footer__label">Join Our Newsletter</p>
+              <form className="site-footer__newsletter" onSubmit={subscribe}>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  aria-label="Your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === "loading"}
+                  required
+                />
+                <button type="submit" className="btn-two" disabled={status === "loading"}>
+                  {status === "loading" ? "Sending..." : "Subscribe"}
+                </button>
+              </form>
+              {message ? (
+                <p className="site-footer__note" style={{ color: status === "success" ? "#28a745" : "#dc3545" }}>
+                  {message}
+                </p>
+              ) : (
+                <p className="site-footer__note">Just the occasional note about new treatments and offers.</p>
+              )}
+            </div>
           </div>
 
           <div className="site-footer__phone">
+            <p className="site-footer__kicker">Visit us</p>
             <ul className="site-footer__rows">
               <PhoneRow icon={<MenuIcon name="clock" />} label="Open daily">
                 {business.openingHours.display}
@@ -294,93 +268,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-          <div className="site-footer__cards">
-            <Card
-              icon="lotus"
-              title={
-                <Link prefetch={false} href={footerDaySpaLink.href}>
-                  {footerDaySpaLink.label}
-                </Link>
-              }
-            >
-              <dl className="site-footer__fields">
-                <div>
-                  <dt>{business.openingHours.label}</dt>
-                  <dd>{business.openingHours.display}</dd>
-                </div>
-                <div>
-                  <dt>Address</dt>
-                  <dd>
-                    <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
-                      {business.address.full}
-                    </a>
-                  </dd>
-                </div>
-              </dl>
-              <ul className="site-footer__links">
-                {footerDaySpaPages.map((item) => (
-                  <li key={item.label}>
-                    <Link prefetch={false} href={item.href}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-            <Card icon="chat" title="Contact Us">
-              <dl className="site-footer__fields">
-                <div>
-                  <dt>Phone &amp; WhatsApp</dt>
-                  <dd>
-                    <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer">
-                      {business.phoneDisplay}
-                    </a>
-                  </dd>
-                </div>
-              </dl>
-            </Card>
-            <Card icon="home" title={footerHomeServices.label}>
-              <ul className="site-footer__links">
-                {footerHomeServices.items.map((item) => (
-                  <li key={item.label}>
-                    <Link prefetch={false} href={item.href}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <dl className="site-footer__fields">
-                <div>
-                  <dt>Home service fee</dt>
-                  <dd>{business.homeService.feeDisplay}</dd>
-                </div>
-              </dl>
-            </Card>
-            <Card icon="mail" title="Join Our Newsletter" className="site-footer__newsletter-block">
-              <form className="site-footer__newsletter" onSubmit={subscribe}>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  aria-label="Your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={status === "loading"}
-                  required
-                />
-                <button type="submit" className="btn-two" disabled={status === "loading"}>
-                  {status === "loading" ? "Sending..." : "Subscribe"}
-                </button>
-              </form>
-              {message ? (
-                <p className="site-footer__note" style={{ color: status === "success" ? "#28a745" : "#dc3545" }}>
-                  {message}
-                </p>
-              ) : (
-                <p className="site-footer__note">Just the occasional note about new treatments and offers.</p>
-              )}
-            </Card>
-          </div>
         </div>
 
         <div className="footer__bottom site-footer__bottom">
@@ -393,8 +280,7 @@ export default function Footer() {
               <>
                 {" "}
                 <span className="site-footer__updated">
-                  <span className="site-footer__sep">· </span>
-                  Page updated <time dateTime={updated}>{formatDate(updated)}</time>
+                  <span className="site-footer__sep">·</span> Page updated <time dateTime={updated}>{formatDate(updated)}</time>
                 </span>
               </>
             ) : null}

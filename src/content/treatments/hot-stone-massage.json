@@ -36,7 +36,7 @@
           },
           {
             "label": "Packages",
-            "value": "Four packages from IDR 435.000 per person (hot stone with body scrub, cream bath, facial or pedicure)"
+            "value": "Four packages from IDR 420.000 per person (hot stone with body scrub, cream bath, facial or pedicure)"
           },
           {
             "label": "Where",
@@ -86,7 +86,7 @@
             "text": "Each package starts with a 1- or 1.5-hour hot stone massage and adds a body scrub and head massage, a cream bath and reflexology, a Bali Moon Facial, or a pedicure. Prices are per person.",
             "packages": [
               {
-                "price": "IDR 549.000",
+                "price": "IDR 585.000",
                 "name": "Package A",
                 "treatments": [
                   "1.5 Hr Hot Stone",
@@ -96,17 +96,17 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 499.000",
+                "price": "IDR 480.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Hot Stone",
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "30 Mins Reflexology"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 435.000",
+                "price": "IDR 420.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Hot Stone",
@@ -115,7 +115,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 499.000",
+                "price": "IDR 480.000",
                 "name": "Package D",
                 "treatments": [
                   "1.5 Hr Hot Stone",
@@ -327,7 +327,7 @@
               },
               {
                 "question": "How much does a hot stone massage cost in Seminyak?",
-                "answer": "A hot stone massage at Spa Bali Moon in Seminyak costs IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person. Four packages from IDR 435.000 per person add a body scrub, cream bath, facial or pedicure. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "A hot stone massage at Spa Bali Moon in Seminyak costs IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person. Four packages from IDR 420.000 per person add a body scrub, cream bath, facial or pedicure. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "How long does a hot stone massage take?",

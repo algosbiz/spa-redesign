@@ -34,7 +34,7 @@ const FAQ = [
   {
     question: "Can I combine a massage with another spa treatment?",
     answer:
-      "Yes. Spa Bali Moon guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Ready-made spa packages start at IDR 299.000 per person. Our team can recommend combinations based on the experience you are looking for; message us on WhatsApp at +62 878-6317-5144.",
+      "Yes. Spa Bali Moon guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Ready-made spa packages start at IDR 375.000 per person. Our team can recommend combinations based on the experience you are looking for; message us on WhatsApp at +62 878-6317-5144.",
   },
   {
     question: "What should I prepare before my massage?",

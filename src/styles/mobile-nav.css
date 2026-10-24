@@ -1,6 +1,7 @@
 /**
- * MOBILE HEADER AND MENU (owner, 2 Oct), below 992px where the header shows
- * the menu button:
+ * MOBILE HEADER AND MENU (owner, 2 Oct), below 1200px where the header shows
+ * the menu button (below 992px until 24 Oct, when tablets in landscape got it
+ * too instead of a two-row menu):
  *  - the logo in the middle of the header ("center the spa bali moon text"),
  *    the WhatsApp phone on its left, the menu button on its right;
  *  - the menu button is hot stones in a white square instead of four
@@ -24,7 +25,7 @@
  */
 
 /* ---- Header ---- */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .header__main {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -97,7 +98,7 @@
    100px of a scroll). Once scrolled (`menu-fixed`) it gets a gold edge and a
    deeper shadow instead of the full-width white bar. Still 70px tall in all:
    8px, the 54px pill, 8px. The phone and the menu button are cream circles. */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .lh.header-area,
   .lh.header-area.menu-fixed {
     padding: 8px 0;
@@ -132,7 +133,18 @@
     background-color: rgba(var(--theme-color1-rgb), 0.16);
     box-shadow: none;
   }
-
+}
+/* The phone and menu buttons from 992px too, where the theme hides them; the
+   search lives in the menu there. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lh.header-area .menu-btns :is(.header-call, .menubars).d-lg-none {
+    display: flex !important;
+  }
+  .lh.header-area .menu-btns .header-search {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
   /* Pages that open with a photo (a page banner, or the homepage hero): the
      photo starts at the top of the screen, under the pill, instead of under
      a strip of page colour (owner, 22 Oct). The header gives back its 70px;
@@ -147,6 +159,146 @@
   }
   body:has(.page-title) .page-title {
     padding-top: 245px; /* 175px + the header */
+  }
+}
+/* ---- Desktop header (owner, 24 Oct: "on desktop we can still modernize the
+   … menu to be more like mobile") ----
+   From 1200px the header is the phones' floating glass pill, 12px from the
+   top, as wide as the page's content: the logo, the menu in the site's serif
+   (Literata 16px, as the mobile menu's rows, instead of bold capitals), and
+   the search in a cream circle; the WhatsApp phone in the same circle until
+   1400px, then "Book an Appointment". Dropdowns are white cards with the gold
+   hairline, opening just under the pill. It replaces the 1200–1599px tuning
+   that kept the old bar on one row (custom.css, 19 Oct): at 1280px the search
+   had dropped onto a second row and the button was gone. */
+@media (min-width: 1200px) {
+  .lh.header-area,
+  .lh.header-area.menu-fixed {
+    padding: 12px 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .lh.header-area .header-one__wrp {
+    max-width: min(1434px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+  .lh.header-area .header__main {
+    flex-wrap: nowrap;
+    column-gap: 20px;
+    padding: 8px 8px 8px 24px;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: 0 4px 16px rgba(28, 26, 29, 0.06);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .lh.header-area.menu-fixed .header__main {
+    border-color: rgba(var(--theme-color1-rgb), 0.34);
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 10px 30px rgba(28, 26, 29, 0.16);
+  }
+  .lh.header-area .logo {
+    flex: 0 0 auto;
+    width: 190px;
+  }
+  .lh.header-area .main-menu {
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: 0;
+  }
+  .lh.header-area .main-menu > nav > ul {
+    gap: clamp(16px, calc((100vw - 1100px) / 12), 34px);
+  }
+  .lh.header-area .main-menu > nav > ul > li > a {
+    padding: 14px 0;
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .lh.header-area .main-menu > nav > ul > li > a i {
+    margin-left: 2px;
+    font-size: 11px;
+  }
+  /* Dropdowns: white cards under the pill (the pill's 9px padding and edge,
+     then a 9px gap; the 0.3s fade keeps them open while the pointer crosses it). */
+  .lh.header-area .main-menu ul li .sub-menu {
+    top: calc(100% + 18px);
+    padding: 8px 0;
+    border: 1px solid rgba(var(--theme-color1-rgb), 0.2);
+    border-radius: 18px;
+    box-shadow: 0 22px 44px -24px rgba(28, 26, 29, 0.4);
+  }
+  .lh.header-area .main-menu ul li .sub-menu li a {
+    font-family: var(--title-font);
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .lh.header-area .menu-btns {
+    flex: 0 0 auto;
+    gap: 10px;
+  }
+  /* The search, and below 1400px the WhatsApp phone: cream circles, as the
+     phone and menu buttons on phones. */
+  .lh.header-area .menu-btns .search-trigger,
+  .lh.header-area .menu-btns .header-call.d-lg-none {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--theme-color1);
+    background-color: var(--theme-color-gray);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  .lh.header-area .menu-btns :is(.search-trigger, .header-call):is(:hover, :focus-visible) {
+    color: var(--theme-color1);
+    background-color: rgba(var(--theme-color1-rgb), 0.16);
+  }
+  .lh.header-area .menu-btns .header-call svg {
+    width: 21px;
+    height: 21px;
+  }
+  .lh.header-area .menu-btns .book-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 22px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1400px) {
+  .lh.header-area .menu-btns .header-call.d-lg-none {
+    display: none !important;
+  }
+  /* "Book an Appointment" centred in its pill (owner, 24 Oct): the theme's
+     d-xxl-inline-block forced inline-block, so the flex centring never applied
+     and the words sat high; in the menu's serif, as the site's other buttons. */
+  .lh.header-area .menu-btns .book-now.d-xxl-inline-block {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 44px;
+    padding: 0 24px;
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .lh.header-area .menu-btns .book-now svg {
+    flex: none;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {

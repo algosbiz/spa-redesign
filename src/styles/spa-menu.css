@@ -341,6 +341,11 @@
   .lh .v2-menu--durations .v2-tbr {
     display: none;
   }
+  /* Inline, not the theme's inline-block, which dropped the space before the
+     dash ("Balinese Massage- Relaxing", sweep 24 Oct). */
+  .lh .v2-menu--durations .v2-tdash {
+    display: inline;
+  }
 }
 /* A new price fades up when the duration changes. */
 .lh .v2-menu--durations .v2-price__amount {
@@ -458,15 +463,26 @@
   margin-bottom: 46px;
   padding: 10px 0;
 }
-/* The strip starts 2px up under the header, so no hairline of the list shows
-   between them where the header's edge falls between pixels (125% screens). */
+/* Pinned, it floats as a glass pill of its own under the header's (owner,
+   24 Oct: the full-width white strip under the floating header "needs to
+   somehow be adjusted"): as wide as "Prices for" and the switch, with the
+   header's frosted cream, gold hairline and shadow. */
+.lh .v2-duration--sticky {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
 .lh .v2-duration--sticky::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: -2px calc(50% - 50vw) 0;
-  background-color: #fff;
-  box-shadow: 0 12px 20px -16px rgba(28, 26, 29, 0.3);
+  inset: 2px -14px;
+  background-color: rgba(255, 255, 255, 0.86);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.24);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(28, 26, 29, 0.14);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -493,6 +509,9 @@ body:has(.v2-duration--sticky.is-stuck) .header-three-area.menu-fixed {
   }
   .lh .v2-duration--sticky.is-stuck .v2-duration__caption {
     visibility: hidden;
+  }
+  .lh .v2-duration--sticky::before {
+    inset: 36px -8px 2px;
   }
   .lh .v2-menu--sticky .treatment-catalog__item :is(a, button) {
     scroll-margin-top: calc(var(--v2-stick-top, 68px) + 76px);

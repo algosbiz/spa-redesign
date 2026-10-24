@@ -2,19 +2,18 @@
  * SITE FOOTER (owner, 2 Oct: "can we also modernize the footer"; of three
  * designs the owner picked "opsi 1"), in the look of the mobile menu
  * (src/styles/mobile-nav.css): a paper panel with rounded corners; on its
- * left the logo, the about text, a WhatsApp pill (the site's .btn-two at the
- * phone pill size), Instagram and Facebook, and the accepted payments; on its
- * right white cards, each with a gold line icon in a paper circle and a
- * title (Our Day Spa, Contact Us, Home Services, Join Our Newsletter). Under
- * the panel the copyright line with the legal links. Below 1200px the brand
- * column sits over the cards; on phones everything is one centred column and
- * the newsletter is left out (as live). From 1500px the old footer's rose
- * line art, in gold, fills the empty sides ("the flower art from before"):
- * against the screen edge and behind the panel, never on text. Type is the
- * site's own: Literata 20/30 (h5) for the card titles, Literata 16/24 for
- * the links, Mulish for the rest. The footer's top padding comes from
- * src/styles/spacing.css (one gap rule).
- * Markup: src/components/layout/Footer.tsx.
+ * left the logo, the about text, the accepted payments and the newsletter;
+ * on its right two white cards of rows: "Visit us" (hours, address, WhatsApp,
+ * the home service fee, Instagram) and "Explore" (the pages), as made for
+ * phones on 23 Oct and brought to every screen on 24 Oct (owner: "on desktop
+ * we can still modernize the footer … more like mobile"). Under the panel the
+ * copyright line with the legal links. From 1200px the brand column sits
+ * beside the cards, which sit side by side from 768px; on phones everything
+ * is one centred column and the newsletter is left out (as live). From
+ * 1500px the old footer's rose line art, in gold, fills the empty sides ("the
+ * flower art from before"): against the screen edge and behind the panel,
+ * never on text. The footer's top padding comes from src/styles/spacing.css
+ * (one gap rule). Markup: src/components/layout/Footer.tsx.
  */
 .site-footer {
   position: relative;
@@ -25,15 +24,20 @@
 /* Drawn only when it nears the screen (PageSpeed, 21 Oct), so a page's first
    paint does not wait for its layout or for the icon fonts it uses. It
    already clips what overflows it, so nothing looks different. Until it is
-   first drawn its height is the one below, less its padding: phones and
-   tablets, then from 1200px, where the brand column sits beside the cards. */
+   first drawn its height is the one below, less its padding: phones, tablets,
+   then from 1200px, where the brand column sits beside the cards. */
 .site-footer {
   content-visibility: auto;
-  contain-intrinsic-block-size: auto 1250px;
+  contain-intrinsic-block-size: auto 1450px;
+}
+@media (min-width: 768px) {
+  .site-footer {
+    contain-intrinsic-block-size: auto 1000px;
+  }
 }
 @media (min-width: 1200px) {
   .site-footer {
-    contain-intrinsic-block-size: auto 730px;
+    contain-intrinsic-block-size: auto 640px;
   }
 }
 .site-footer > .container {
@@ -41,14 +45,14 @@
   z-index: 1;
 }
 
-/* ---- Shared pieces ---- */
+/* ---- Brand column ---- */
 .site-footer__logo img {
   display: block;
   width: 240px;
   height: auto;
 }
 .site-footer__about {
-  margin: 20px 0 24px;
+  margin: 20px 0 0;
   font-family: var(--text-font);
   font-size: 15px;
   line-height: 26px;
@@ -61,47 +65,6 @@
   text-decoration: none; /* bold gold, no underline (owner, 22 Oct) */
   white-space: nowrap;
 }
-.site-footer .site-footer__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 48px;
-  padding: 0 26px;
-  font-family: var(--title-font);
-  font-size: 15px;
-  background-color: var(--theme-color-white);
-}
-.site-footer__cta .fa-whatsapp {
-  font-size: 18px;
-}
-.site-footer__social {
-  display: flex;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.site-footer__social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--theme-color1);
-  background-color: var(--theme-color-white);
-  border: 1px solid transparent;
-  border-radius: 50%;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.site-footer__social a:is(:hover, :focus-visible) {
-  border-color: var(--theme-color1);
-  box-shadow: var(--rollover-shadow, none);
-}
-.site-footer__social svg {
-  width: 20px;
-  height: 20px;
-}
 .site-footer__label {
   margin: 0 0 10px;
   font-family: var(--text-font);
@@ -110,83 +73,13 @@
   line-height: 18px;
   color: var(--headings-color);
 }
-.site-footer__card-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+.site-footer .site-footer__payments,
+.site-footer__newsletter-block {
+  margin-top: 28px;
 }
-.site-footer__icon {
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--theme-color1);
-  background-color: var(--theme-color-gray);
-  border-radius: 50%;
-}
-.site-footer__icon svg {
-  width: 22px;
-  height: 22px;
-}
-.site-footer .site-footer__card-title {
-  margin: 0;
-  font-family: var(--title-font);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  color: var(--headings-color);
-}
-.site-footer__card-title a,
-.site-footer__fields a,
-.site-footer__links a,
-.site-footer__bottom a {
-  color: inherit;
-  transition: color 0.3s;
-}
-.site-footer__card-title a:is(:hover, :focus-visible),
-.site-footer__fields a:is(:hover, :focus-visible),
-.site-footer__links a:is(:hover, :focus-visible),
-.site-footer__bottom a:is(:hover, :focus-visible) {
-  color: var(--theme-color1);
-}
-/* live sets links in Literata: these read as the text around them */
-.site-footer__fields a,
-.site-footer__bottom a {
-  font: inherit;
-}
-.site-footer__fields {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-}
-.site-footer__fields dt {
-  font-family: var(--text-font);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-  color: var(--text-color);
-}
-.site-footer__fields dd {
-  margin: 0;
-  font-family: var(--text-font);
-  font-size: 15px;
-  line-height: 22px;
-  color: var(--headings-color);
-}
-.site-footer__links {
-  display: grid;
-  gap: 6px;
-  margin: 0 0 14px;
-  padding: 0;
-  list-style: none;
-}
-.site-footer__links a {
-  font-family: var(--title-font);
-  font-size: 16px;
-  line-height: 24px;
+.site-footer__newsletter-block {
+  width: 100%;
+  max-width: 440px;
 }
 .site-footer__newsletter {
   display: flex;
@@ -223,6 +116,8 @@
   line-height: 20px;
   color: var(--text-color);
 }
+
+/* ---- Under the panel: copyright and legal links ---- */
 .site-footer .site-footer__bottom {
   display: flex;
   flex-wrap: wrap;
@@ -239,6 +134,14 @@
   font-size: 14px;
   line-height: 22px;
   color: var(--text-color);
+}
+.site-footer__bottom a {
+  font: inherit;
+  color: inherit;
+  transition: color 0.3s;
+}
+.site-footer__bottom a:is(:hover, :focus-visible) {
+  color: var(--theme-color1);
 }
 .site-footer__legal {
   display: flex;
@@ -285,7 +188,8 @@
   left: auto;
   transform: scaleX(-1);
 }
-/* ---- The panel and its cards ---- */
+
+/* ---- The panel ---- */
 .site-footer .site-footer__panel {
   position: relative;
   display: grid;
@@ -340,30 +244,178 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.site-footer .site-footer__social {
-  margin-top: 20px;
-}
-.site-footer .site-footer__payments {
-  margin-top: 28px;
-}
-.site-footer .site-footer__cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: start;
-  gap: 16px;
-}
-.site-footer .site-footer__card {
-  height: 100%;
-  padding: 22px;
-  background-color: var(--theme-color-white);
-  border-radius: 22px;
-}
 @media (max-width: 1199px) {
   .site-footer .site-footer__panel {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
     padding: 40px 40px 96px;
   }
+}
+/* Tablets: the brand column runs full width over the cards, so it splits in
+   two: the logo and about text on the left, payments and newsletter on the
+   right. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-footer .site-footer__brand {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    column-gap: 48px;
+    align-items: start;
+  }
+  .site-footer__logo,
+  .site-footer__about {
+    grid-column: 1;
+  }
+  .site-footer .site-footer__payments {
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 0;
+  }
+  .site-footer__newsletter-block {
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 20px;
+  }
+}
+
+/* ---- The two cards of rows (owner, 23 Oct: "could the mobile footer be
+   enhanced"; every screen since 24 Oct): like "Visit us" on phones
+   (outcall.css section 20), the icon in a paper circle, the small grey label
+   over the words, a gold hairline between rows, and each linked row tappable
+   as a whole with the mobile menu's gold arrow. Under "Explore" the pages in
+   a second card of rows (chips read as blog tags, owner). ---- */
+.site-footer__phone {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+/* Side by side from tablets: each card under its small heading. */
+@media (min-width: 768px) {
+  .site-footer__phone {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    gap: 12px 16px;
+  }
+}
+.site-footer__kicker {
+  margin: 0;
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.site-footer__rows {
+  align-self: start;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background-color: var(--theme-color-white);
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
+}
+.site-footer__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: center;
+  padding: 13px 16px;
+  text-align: left;
+}
+.site-footer__row + .site-footer__row {
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+}
+.site-footer__row-icon {
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--theme-color1);
+  background-color: var(--theme-color-gray);
+  border-radius: 50%;
+}
+.site-footer__row-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.site-footer__row-icon .fa-whatsapp {
+  font-size: 17px;
+}
+.site-footer__row-label {
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8f8a83;
+}
+.site-footer__row-value {
+  margin-top: 2px;
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--headings-color);
+}
+.site-footer .site-footer__row-value a {
+  font: inherit;
+  font-weight: 700;
+  color: var(--theme-color1);
+}
+/* The whole row is the link, with the arrow on the right. */
+.site-footer__row:has(a) {
+  padding-right: 44px;
+  transition: background-color 0.25s;
+}
+.site-footer__row:has(a:is(:hover, :focus-visible, :active)) {
+  background-color: var(--theme-color-gray);
+}
+.site-footer__row:has(a)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid var(--theme-color1);
+  border-right: 1.5px solid var(--theme-color1);
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.25s;
+  pointer-events: none;
+}
+.site-footer__row:has(a:is(:hover, :focus-visible))::after {
+  transform: translate(3px, -50%) rotate(45deg);
+}
+.site-footer__row-value a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+/* The pages: the same card, each row the page's icon, its name and the arrow. */
+.site-footer__nav .site-footer__row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.site-footer__nav .site-footer__row-icon {
+  grid-row: auto;
+}
+.site-footer .site-footer__nav-link {
+  font-family: var(--title-font);
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--headings-color);
+}
+.site-footer__nav-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 /* ---- Phones: one centred column, no newsletter (as live) ---- */
@@ -382,14 +434,32 @@
   .site-footer__newsletter-block {
     display: none;
   }
-  .site-footer .site-footer__cta {
-    width: 100%;
-  }
-  .site-footer__payments {
+  .site-footer .site-footer__payments {
+    margin-top: 24px;
     text-align: center;
   }
   .site-footer__payments .footer__payment-list {
     justify-content: center;
+  }
+  .site-footer .site-footer__panel {
+    gap: 28px;
+    padding: 32px 20px 76px;
+    border-radius: 24px;
+  }
+  .site-footer .site-footer__brand {
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer__kicker {
+    text-align: center;
+  }
+  /* "Visit us" heads the first card only on wider screens, where the two
+     cards sit side by side; "Explore" keeps its line between them. */
+  .site-footer__kicker:first-child {
+    display: none;
+  }
+  .site-footer__rows + .site-footer__kicker {
+    margin: 10px 0 -4px;
   }
   .site-footer .site-footer__bottom {
     flex-direction: column;
@@ -397,171 +467,7 @@
     gap: 4px;
     text-align: center;
   }
-
-  .site-footer .site-footer__panel {
-    padding: 32px 20px 76px;
-    border-radius: 24px;
-  }
-  .site-footer .site-footer__panel {
-    gap: 28px;
-  }
-  .site-footer .site-footer__brand {
-    align-items: center;
-    text-align: center;
-  }
-  .site-footer .site-footer__cards {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-  .site-footer .site-footer__card {
-    padding: 18px;
-  }
-
-}
-
-/* ---- Phones (owner, 23 Oct: "could the mobile footer be enhanced"): one
-   white card of rows instead of the three cards, like "Visit us" on phones
-   (outcall.css section 20): the icon in a paper circle, the small grey label
-   over the words, a gold hairline between rows, and each linked row tappable
-   as a whole with the mobile menu's gold arrow. Under "Explore" the pages
-   in a second card of rows (chips read as blog tags, owner). The WhatsApp
-   pill and the lone Instagram circle go: the bottom bar and the card's rows
-   have them. The "Page updated" date takes its own line, without the dot. ---- */
-.site-footer__phone {
-  display: none;
-}
-@media (max-width: 767px) {
-  .site-footer .site-footer__cards,
-  .site-footer .site-footer__cta,
-  .site-footer .site-footer__social {
-    display: none;
-  }
-  .site-footer .site-footer__about {
-    margin-bottom: 0;
-  }
-  .site-footer .site-footer__payments {
-    margin-top: 24px;
-  }
-  .site-footer__phone {
-    display: grid;
-    gap: 16px;
-  }
-  .site-footer__rows {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-    background-color: var(--theme-color-white);
-    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
-    border-radius: 18px;
-    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
-  }
-  .site-footer__row {
-    position: relative;
-    display: grid;
-    grid-template-columns: 36px minmax(0, 1fr);
-    column-gap: 14px;
-    align-items: center;
-    padding: 13px 16px;
-    text-align: left;
-  }
-  .site-footer__row + .site-footer__row {
-    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
-  }
-  .site-footer__row-icon {
-    grid-row: 1 / span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    color: var(--theme-color1);
-    background-color: var(--theme-color-gray);
-    border-radius: 50%;
-  }
-  .site-footer__row-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-  .site-footer__row-icon .fa-whatsapp {
-    font-size: 17px;
-  }
-  .site-footer__row-label {
-    font-family: var(--text-font);
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #8f8a83;
-  }
-  .site-footer__row-value {
-    margin-top: 2px;
-    font-family: var(--text-font);
-    font-size: 15px;
-    line-height: 1.45;
-    color: var(--headings-color);
-  }
-  .site-footer .site-footer__row-value a {
-    font: inherit;
-    font-weight: 700;
-    color: var(--theme-color1);
-  }
-  /* The whole row is the link, with the arrow on the right. */
-  .site-footer__row:has(a) {
-    padding-right: 44px;
-    transition: background-color 0.25s;
-  }
-  .site-footer__row:has(a:is(:hover, :focus-visible, :active)) {
-    background-color: var(--theme-color-gray);
-  }
-  .site-footer__row:has(a)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 22px;
-    width: 8px;
-    height: 8px;
-    border-top: 1.5px solid var(--theme-color1);
-    border-right: 1.5px solid var(--theme-color1);
-    transform: translateY(-50%) rotate(45deg);
-    pointer-events: none;
-  }
-  .site-footer__row-value a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-  /* The pages: the same card, each row the page's icon, its name and the arrow. */
-  .site-footer__kicker {
-    margin: 10px 0 -4px;
-    font-family: var(--text-font);
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--theme-color1);
-  }
-  .site-footer__nav .site-footer__row {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .site-footer__nav .site-footer__row-icon {
-    grid-row: auto;
-  }
-  .site-footer .site-footer__nav-link {
-    font-family: var(--title-font);
-    font-size: 16px;
-    line-height: 1.4;
-    color: var(--headings-color);
-  }
-  .site-footer__nav-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
+  /* The "Page updated" date takes its own line, without the dot. */
   .site-footer__updated {
     display: block;
   }

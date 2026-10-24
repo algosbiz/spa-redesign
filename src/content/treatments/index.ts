@@ -23,6 +23,8 @@ import sunburnMassage from "./sunburn-massage.json";
 import thaiMassage from "./thai-massage.json";
 import traditionalMassage from "./traditional-massage.json";
 import waxingSalon from "./waxing-salon.json";
+import cuppingTherapy from "./cupping-therapy.json";
+import warmCandleMassage from "./warm-candle-massage.json";
 
 /**
  * The original body of every treatment page, keyed by slug: the element tree
@@ -39,6 +41,7 @@ export const treatmentSeeds = {
   "coconut-oil-massage": coconutOilMassage,
   "couple-spa": coupleSpa,
   "creambath": creambath,
+  "cupping-therapy": cuppingTherapy,
   "day-spa": daySpa,
   "deep-tissue-massage": deepTissueMassage,
   "ear-candle": earCandle,
@@ -56,5 +59,6 @@ export const treatmentSeeds = {
   "sunburn-massage": sunburnMassage,
   "thai-massage": thaiMassage,
   "traditional-massage": traditionalMassage,
+  "warm-candle-massage": warmCandleMassage,
   "waxing-salon": waxingSalon,
 } as unknown as Record<string, TreeNode>;

@@ -44,6 +44,7 @@ export const treatmentMenu: (NavItem & { keywords: string })[] = [
   { label: "Couple Massage", href: "/seminyak/couple-spa/", keywords: "couple massage couples two pax honeymoon anniversary" },
   { label: "Coconut Oil Massage", href: "/seminyak/coconut-oil-massage/", keywords: "virgin coconut oil massage natural nourishment" },
   { label: "Cream Bath", href: "/seminyak/creambath/", keywords: "cream bath creambath hair scalp wellness" },
+  { label: "Cupping Therapy", href: "/seminyak/cupping-therapy/", keywords: "cupping therapy cups pump suction" },
   { label: "Deep Tissue Massage", href: "/seminyak/deep-tissue-massage/", keywords: "deep tissue massage muscle recovery tension stiffness" },
   { label: "Ear Candle", href: "/seminyak/ear-candle/", keywords: "ear candle ear candling gentle ear care" },
   { label: "Facial", href: "/seminyak/facial/", keywords: "facial bali moon skin rejuvenation mask skincare" },
@@ -60,6 +61,7 @@ export const treatmentMenu: (NavItem & { keywords: string })[] = [
   { label: "Sunburn Treatment", href: "/seminyak/sunburn-massage/", keywords: "sunburn treatment skin soothing bali sun" },
   { label: "Traditional Massage", href: "/seminyak/traditional-massage/", keywords: "traditional massage spa bali" },
   { label: "Thai Massage", href: "/seminyak/thai-massage/", keywords: "thai massage stretching pressure" },
+  { label: "Warm Candle Massage", href: "/seminyak/warm-candle-massage/", keywords: "warm candle massage shea butter candle wax oil" },
   { label: "Waxing", href: "/seminyak/waxing-salon/", keywords: "waxing hair removal beauty" },
 ];
 
@@ -101,9 +103,14 @@ export const legalLinks: NavItem[] = [
 ];
 
 /** The mega menu shows the treatments in columns of 6, 6, 6 and 5, as live. */
-export const treatmentMenuColumns = [0, 6, 12, 18].map((start, i, starts) =>
-  treatmentMenu.slice(start, starts[i + 1])
-);
+// Four even columns, the first ones a link longer when the count does not divide
+// (25 treatments since 24 Oct: 7, 6, 6, 6).
+export const treatmentMenuColumns = Array.from({ length: 4 }, (_, i) => {
+  const base = Math.floor(treatmentMenu.length / 4);
+  const extra = treatmentMenu.length % 4;
+  const start = i * base + Math.min(i, extra);
+  return treatmentMenu.slice(start, start + base + (i < extra ? 1 : 0));
+});
 
 /**
  * Header search: what the live site's search box matches against, in its

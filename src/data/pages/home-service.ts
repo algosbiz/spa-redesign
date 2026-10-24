@@ -123,6 +123,7 @@ export const homeServicePage = {
           "balinese-massage",
           "back-massage",
           "cellulite-massage",
+          "cupping-therapy",
           "group:couple-massage",
           "deep-tissue-massage",
           "four-hand-massage",

@@ -1,5 +1,6 @@
 import { cache } from "react";
 import { treatmentSeeds } from "@/content/treatments";
+import { sitemapPages } from "@/data/sitemap";
 import { getTreatment } from "@/data/treatments";
 import { getSql, isDatabaseConfigured, toTimestamp } from "@/lib/blog/db";
 import { applySavedTree } from "./merge";
@@ -51,6 +52,16 @@ const SAVED_BEFORE_IGNORED = "2026-10-17T02:00:00Z";
 /** When the built-in pages were last changed: the copy rewrite. Shown as "Last updated". */
 export const BUILT_IN_UPDATED_AT = SAVED_BEFORE_IGNORED;
 
+/**
+ * A built-in page's own last change: its sitemap date when that is later than
+ * the copy rewrite (new pages and price changes, 24 Oct), so "Last updated"
+ * and the sitemap agree.
+ */
+function builtInUpdatedAt(slug: string): string {
+  const page = sitemapPages.find((p) => p.loc.endsWith(treatmentPath(slug)));
+  return page && Date.parse(page.lastmod) > Date.parse(BUILT_IN_UPDATED_AT) ? page.lastmod : BUILT_IN_UPDATED_AT;
+}
+
 type SavedRow = { body: TreeNode; seo: Partial<TreatmentSeo> | null; updated_at: string | null };
 
 async function readSaved(slug: string): Promise<SavedRow | null> {
@@ -98,9 +109,9 @@ export const getTreatmentContent = cache(async (slug: string): Promise<Treatment
     original: { tree: seed, seo: treatment.seo },
     editedAt: saved ? saved.updated_at : null,
     updatedAt:
-      saved?.updated_at && Date.parse(saved.updated_at) > Date.parse(BUILT_IN_UPDATED_AT)
+      saved?.updated_at && Date.parse(saved.updated_at) > Date.parse(builtInUpdatedAt(slug))
         ? saved.updated_at
-        : BUILT_IN_UPDATED_AT,
+        : builtInUpdatedAt(slug),
   };
 });
 

@@ -31,7 +31,7 @@ const OWN_PAGE: Record<string, { image: string; desc: string }> = {
 };
 
 /**
- * All 23 treatment pages, in the live homepage slider's order, with each
+ * All 25 treatment pages (the last two added 24 Oct), in the live homepage slider's order, with each
  * one's photo, icon, menu description and starting price (add-ons such as
  * "Additional Body Mask" left out, as in the v2 spa menu).
  */

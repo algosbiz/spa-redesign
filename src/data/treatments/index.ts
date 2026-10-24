@@ -35,6 +35,8 @@ import sunburnMassage from "./sunburn-massage";
 import traditionalMassage from "./traditional-massage";
 import thaiMassage from "./thai-massage";
 import waxingSalon from "./waxing-salon";
+import cuppingTherapy from "./cupping-therapy";
+import warmCandleMassage from "./warm-candle-massage";
 import daySpa from "./day-spa";
 
     /** Order = order of the "Treatments" menu on the old site (Day Spa is last; it was only in the footer). */
@@ -62,6 +64,8 @@ import daySpa from "./day-spa";
   traditionalMassage,
   thaiMassage,
   waxingSalon,
+  warmCandleMassage,
+  cuppingTherapy,
   daySpa,
     ];
 
@@ -76,11 +80,13 @@ import daySpa from "./day-spa";
   "balinese-massage",
   "deep-tissue-massage",
   "sport-massage",
+  "cupping-therapy",
   "thai-massage",
   "lymphatic-drainage-massage",
   "shiatsu-massage",
   "traditional-massage",
   "coconut-oil-massage",
+  "warm-candle-massage",
   "foot-massage",
   "body-scrub",
   "creambath",

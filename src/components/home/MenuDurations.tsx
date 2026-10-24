@@ -8,8 +8,8 @@ import { displayPrice, durationLabel, durationOf, priceValue, startingOption } f
 import { catalogCategories, type CatalogCategory, type CatalogItem, type CatalogOption } from "@/data/pages/home-catalog";
 
 /** A row of the menu: a catalog card, or a price page's treatment with the
- *  treatments listed under it (Four Hand Warm Candle under Organic Warm
- *  Candle; the couple massages under "Couple Massage" on the outcall page). */
+ *  treatments listed under it (Four Hand Warm Candle under Natural Warm
+ *  Candle Massage; the couple massages under "Couple Massage" on the outcall page). */
 export type MenuItem = CatalogItem & { children?: { name: string; options: CatalogOption[] }[] };
 
 /** One tab. `timed`: prices go by the duration switch; left out, a tab is

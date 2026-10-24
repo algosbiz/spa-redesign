@@ -78,12 +78,12 @@
             "leftShapeSrc": "/images/shape/package-four-shape-left.png",
             "images": [
               "/images/services/waxing/waxing-4.webp",
-              "/images/services/waxing/waxing-5.webp",
-              "/images/services/waxing/waxing-6.webp",
               "/images/services/waxing/waxing-7.webp",
-              "/images/services/waxing/waxing-8.webp",
               "/images/services/waxing/waxing-9.webp",
-              "/images/services/waxing/waxing-10.webp"
+              "/images/services/waxing/waxing-16.webp",
+              "/images/services/waxing/waxing-8.webp",
+              "/images/services/waxing/waxing-10.webp",
+              "/images/services/waxing/waxing-5.webp"
             ],
             "subTitle": "",
             "title": "Our Waxing Options",

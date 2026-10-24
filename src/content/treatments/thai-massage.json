@@ -86,7 +86,7 @@
             "text": "Each package starts with a 1-hour Thai massage and adds a Bali Moon Facial, a manicure, a cream bath or a body scrub.",
             "packages": [
               {
-                "price": "IDR 539.000",
+                "price": "IDR 510.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -96,17 +96,17 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 609.000",
+                "price": "IDR 570.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Thai Massage",
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Bali Moon Facial"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 445.000",
+                "price": "IDR 425.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -115,11 +115,11 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 539.000",
+                "price": "IDR 545.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Thai Massage",
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "30 Mins Body Scrub"
                 ],
                 "suffix": "per person"
@@ -327,7 +327,7 @@
               },
               {
                 "question": "Can I combine Thai massage with other treatments?",
-                "answer": "Yes. Spa Bali Moon has four Thai massage packages, each including 1 hour of Thai massage. Package C adds a Bali Moon Facial (IDR 445.000), Package A a facial and manicure (IDR 539.000), Package D a cream bath and body scrub (IDR 539.000), and Package B a cream bath and facial (IDR 609.000), all per person."
+                "answer": "Yes. Spa Bali Moon has four Thai massage packages, each including 1 hour of Thai massage. Package C adds a Bali Moon Facial (IDR 425.000), Package A a facial and manicure (IDR 510.000), Package D a cream bath and body scrub (IDR 545.000), and Package B a cream bath and facial (IDR 570.000), all per person."
               },
               {
                 "question": "How much does Thai massage cost in Seminyak?",

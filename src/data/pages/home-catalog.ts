@@ -201,7 +201,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 625.000", details: ["1 Hour Balinese Massage + 30 Mins Ear Candle"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 605.000", details: ["1 Hour Balinese Massage + 30 Mins Ear Candle"] },
     ],
   },
   {
@@ -213,7 +213,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 699.000", details: ["1 Hour Balinese Massage + 1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 675.000", details: ["1 Hour Balinese Massage + 1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -225,7 +225,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 845.000", details: ["1 Hour Warm Candle Massage + 30 Mins Ear Candle"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 810.000", details: ["1 Hour Warm Candle Massage + 30 Mins Ear Candle"] },
     ],
   },
   {
@@ -237,7 +237,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 919.000", details: ["1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 875.000", details: ["1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -260,12 +260,24 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplewarmcandle.webp",
-    desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
+    image: "/images/listmenu/couplewarmcandle-2.webp",
+    desc: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },
       { label: "1.5 Hours · 2 pax", price: "IDR 799.000" },
       { label: "2 Hours · 2 pax", price: "IDR 999.000" },
+    ],
+  },
+  {
+    id: "cupping-therapy",
+    name: "Cupping Therapy",
+    category: "massage",
+    href: "/seminyak/cupping-therapy/",
+    image: "/images/listmenu/cuppingtherapy.webp",
+    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame.",
+    options: [
+      { label: "1 Hour", price: "IDR 500.000" },
+      { label: "2 Hours with Balinese Massage", price: "IDR 600.000" },
     ],
   },
   {
@@ -278,6 +290,7 @@ export const catalog: CatalogItem[] = [
     options: [
       { label: "1 Hour", price: "IDR 269.000" },
       { label: "1.5 Hours", price: "IDR 359.000" },
+      { label: "2 Hours", price: "IDR 518.000" },
     ],
   },
   {
@@ -355,11 +368,11 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: "four-hand-warm-candle",
-    name: "Four Hand Warm Candle",
+    name: "Four Hand Warm Candle Massage",
     category: "massage",
-    href: "/contact/",
+    href: "/seminyak/warm-candle-massage/",
     image: "/images/listmenu/organicwarmcandle.webp",
-    desc: "A deeply relaxing massage where two therapists work together using warmed oils.",
+    desc: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
     options: [
       { label: "1 Hour", price: "IDR 539.000" },
       { label: "1.5 Hours", price: "IDR 799.000" },
@@ -390,6 +403,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/headmassage.webp",
     desc: "A focused head massage that helps release built-up stress and quiet the mind.",
     options: [
+      { label: "30 Minutes", price: "IDR 90.000" },
       { label: "1 Hour", price: "IDR 159.000" },
       { label: "1.5 Hours", price: "IDR 239.000" },
       { label: "2 Hours", price: "IDR 330.000" },
@@ -453,11 +467,11 @@ export const catalog: CatalogItem[] = [
   },
   {
     id: "organic-warm-candle-oil-massage",
-    name: "Organic Warm Candle Oil Massage",
+    name: "Natural Warm Candle Massage",
     category: "massage",
-    href: "/contact/",
+    href: "/seminyak/warm-candle-massage/",
     image: "/images/listmenu/organicwarmcandle.webp",
-    desc: "A warming full-body massage using natural oils to soften muscles and calm the body.",
+    desc: "Lukewarm wax from a natural shea butter candle, dripped onto your skin and massaged in.",
     options: [
       { label: "1 Hour", price: "IDR 269.000" },
       { label: "1.5 Hours", price: "IDR 399.000" },

@@ -79,48 +79,48 @@
             "images": [
               "/images/services/creambath/creambath-4.webp",
               "/images/services/creambath/creambath-5.webp",
-              "/images/services/creambath/creambath-6.webp",
-              "/images/services/creambath/creambath-7.webp"
+              "/images/services/creambath/creambath-11.webp",
+              "/images/services/creambath/creambath-12.webp"
             ],
             "subTitle": "",
             "title": "Cream Bath Packages in Seminyak",
             "text": "Each of our four cream bath packages adds a Thai, Balinese or hot stone massage and a Bali Moon Facial, reflexology or body scrub.",
             "packages": [
               {
-                "price": "IDR 609.000",
+                "price": "IDR 570.000",
                 "name": "Package A",
                 "treatments": [
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Thai Massage",
                   "1 Hr Bali Moon Facial"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 499.000",
+                "price": "IDR 480.000",
                 "name": "Package B",
                 "treatments": [
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Hot Stone",
                   "30 Mins Reflexology"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 449.000",
+                "price": "IDR 485.000",
                 "name": "Package C",
                 "treatments": [
-                  "30 Mins Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Balinese Massage",
                   "1 Hr Bali Moon Facial"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 539.000",
+                "price": "IDR 545.000",
                 "name": "Package D",
                 "treatments": [
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Thai Massage",
                   "30 Mins Body Scrub"
                 ],
@@ -365,7 +365,7 @@
               },
               {
                 "question": "How much does a cream bath cost in Seminyak?",
-                "answer": "A cream bath at Spa Bali Moon in Seminyak is IDR 165.000 per person for the Ginseng, Avocado, Aloe Vera, NR and Hair Mask formulas, and IDR 195.000 for L'Oreal. Four packages from IDR 449.000 per person add a massage, facial, body scrub or reflexology. Home service adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "A cream bath at Spa Bali Moon in Seminyak is IDR 165.000 per person for the Ginseng, Avocado, Aloe Vera, NR and Hair Mask formulas, and IDR 195.000 for L'Oreal. Four packages from IDR 480.000 per person add a massage, facial, body scrub or reflexology. Home service adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "Where can I get a cream bath or hair spa in Seminyak?",
@@ -373,7 +373,7 @@
               },
               {
                 "question": "How long does a cream bath take?",
-                "answer": "A cream bath at Spa Bali Moon in Seminyak takes around an hour and costs IDR 165.000 per person, or IDR 195.000 with L'Oreal. Some spa packages include a shorter 30-minute cream bath."
+                "answer": "A cream bath at Spa Bali Moon in Seminyak takes 30 to 60 minutes and costs IDR 165.000 per person, or IDR 195.000 with L'Oreal. In a spa package it takes 45 to 55 minutes."
               },
               {
                 "question": "Can I have a cream bath at my villa or hotel?",

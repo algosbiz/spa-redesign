@@ -1457,8 +1457,9 @@
 }
 
 /* ------------------------------------------------------------------ */
-/* 22. FAQs on phones: one white card per question (owner, 23 Oct:      */
-/*     "the FAQ ui is a bit outdated"), in the look of the "Visit us"   */
+/* 22. FAQs: one white card per question (owner, 23 Oct: "the FAQ ui  */
+/*     is a bit outdated"; every screen size since 24 Oct), in the     */
+/*     look of the "Visit us"                                           */
 /*     card and the phone footer: a gold hairline edge, a soft shadow,  */
 /*     the toggle a gold plus in a paper circle that turns into a white */
 /*     cross on gold when the answer opens; the open card's edge goes   */
@@ -1466,86 +1467,104 @@
 /*     FaqSection (treatment pages, About, villa, Kuta, home service,   */
 /*     price list). :root:root outranks the theme's per-page rules.     */
 /* ------------------------------------------------------------------ */
-@media (max-width: 767px) {
-  :root:root .faq-accordion .accordion {
-    display: grid;
-    gap: 10px;
+:root:root .faq-accordion .accordion {
+  display: grid;
+  gap: 10px;
+}
+:root:root .faq-section .faq-accordion {
+  margin-top: 22px;
+}
+:root:root .faq-accordion .accordion .accordion-item {
+  margin: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+:root:root .faq-accordion .accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-color: rgba(var(--theme-color1-rgb), 0.5);
+  box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
+}
+:root:root .faq-accordion .accordion .accordion-item .accordion-header button {
+  align-items: flex-start;
+  min-height: 60px;
+  padding: 16px 58px 16px 18px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  background-color: transparent;
+}
+:root:root .faq-accordion .accordion .accordion-button:not(.collapsed) {
+  color: var(--theme-color1);
+}
+/* The price list's question numbers in gold, as on the homepage. */
+:root:root .faq-accordion .faq-q-num {
+  color: var(--theme-color1);
+}
+:root:root .faq-accordion .accordion .accordion-button::before,
+:root:root .faq-accordion .accordion .accordion-button.collapsed::before {
+  content: "";
+  top: 15px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
+    linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
+    var(--theme-color-gray);
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+:root:root .faq-accordion .accordion .accordion-button:not(.collapsed)::before {
+  background:
+    linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
+    linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
+    var(--theme-color1);
+  transform: rotate(135deg);
+}
+:root:root .faq-accordion .accordion .accordion-item .accordion-body {
+  margin: 0 18px;
+  padding: 14px 0 18px;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+}
+:root:root .faq-accordion .accordion .accordion-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.faq-accordion .accordion-collapse.show .accordion-body {
+  animation: faq-card-open 0.3s ease;
+}
+/* The home service page's two columns of questions: the cards replace
+   its white column boxes, with the same gap between the columns. */
+:root:root .faq-section .faq-grid .faq-grid-column {
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+:root:root .faq-section .faq-grid > .row {
+  --bs-gutter-y: 10px;
+}
+/* The photo beside the questions (from 1400px, where they sit side by side)
+   kept square instead of stretched to the height of the list, where a 895px
+   photo was blown up to some 800x1500 and looked blurred (owner, 24 Oct:
+   "many glitches"); it stays in view while the questions scroll past. The
+   section clips instead of hiding its overflow, so the photo can stick. */
+@media (min-width: 1400px) {
+  :root:root .faq-section {
+    overflow: clip;
   }
-  :root:root .faq-section .faq-accordion {
-    margin-top: 22px;
+  :root:root .faq-section .image-column {
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
   }
-  :root:root .faq-accordion .accordion .accordion-item {
-    margin: 0;
-    overflow: hidden;
-    background-color: #fff;
-    border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
-    border-radius: 16px;
-    box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
-    transition: border-color 0.25s, box-shadow 0.25s;
-  }
-  :root:root .faq-accordion .accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
-    border-color: rgba(var(--theme-color1-rgb), 0.5);
-    box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
-  }
-  :root:root .faq-accordion .accordion .accordion-item .accordion-header button {
-    align-items: flex-start;
-    min-height: 60px;
-    padding: 16px 58px 16px 18px;
-    font-size: 16.5px;
-    line-height: 1.5;
-    background-color: transparent;
-  }
-  :root:root .faq-accordion .accordion .accordion-button:not(.collapsed) {
-    color: var(--theme-color1);
-  }
-  /* The price list's question numbers in gold, as on the homepage. */
-  :root:root .faq-accordion .faq-q-num {
-    color: var(--theme-color1);
-  }
-  :root:root .faq-accordion .accordion .accordion-button::before,
-  :root:root .faq-accordion .accordion .accordion-button.collapsed::before {
-    content: "";
-    top: 15px;
-    right: 14px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background:
-      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
-      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
-      var(--theme-color-gray);
-    transition: transform 0.3s ease, background-color 0.3s;
-  }
-  :root:root .faq-accordion .accordion .accordion-button:not(.collapsed)::before {
-    background:
-      linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
-      linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
-      var(--theme-color1);
-    transform: rotate(135deg);
-  }
-  :root:root .faq-accordion .accordion .accordion-item .accordion-body {
-    margin: 0 18px;
-    padding: 14px 0 18px;
-    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
-  }
-  :root:root .faq-accordion .accordion .accordion-body p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .faq-accordion .accordion-collapse.show .accordion-body {
-    animation: faq-card-open 0.3s ease;
-  }
-  /* The home service page's two columns of questions: the cards replace
-     its white column boxes, with the same gap between the columns. */
-  :root:root .faq-section .faq-grid .faq-grid-column {
-    padding: 0;
-    background: none;
-    border: 0;
-    box-shadow: none;
-  }
-  :root:root .faq-section .faq-grid > .row {
-    --bs-gutter-y: 10px;
+  :root:root .faq-section .image-column .inner-column {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-height: calc(100vh - 160px);
   }
 }
 @keyframes faq-card-open {
@@ -1563,72 +1582,112 @@
 /* The homepage FAQ (its own markup, home/Faq.tsx) in the same cards (owner,
    23 Oct: "and new FAQ as well, can be all page"): the gold number stays,
    the grey chevron becomes the cards' plus in a paper circle. */
-@media (max-width: 767px) {
+:root:root .home-v2 .v2-faq .v2-faq__list {
+  display: grid;
+  gap: 10px;
+  border-top: 0;
+}
+:root:root .home-v2 .v2-faq .v2-faq__item {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+:root:root .home-v2 .v2-faq .v2-faq__item.is-open {
+  border-color: rgba(var(--theme-color1-rgb), 0.5);
+  box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
+}
+:root:root .home-v2 .v2-faq .v2-faq__question button {
+  gap: 10px;
+  padding: 16px 14px 16px 18px;
+}
+:root:root .home-v2 .v2-faq .v2-faq__num {
+  flex-basis: 22px;
+  font-size: 15px;
+  line-height: 25px;
+}
+:root:root .home-v2 .v2-faq .v2-faq__text {
+  font-size: 16.5px;
+  line-height: 25px;
+}
+:root:root .home-v2 .v2-faq .is-open .v2-faq__text {
+  color: var(--theme-color1);
+}
+:root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  margin-top: -2px;
+  border: 0;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
+    linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
+    var(--theme-color-gray);
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+:root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) > * {
+  display: none;
+}
+:root:root .home-v2 .v2-faq .is-open :is(.v2-faq__arrow, .treatment-catalog__toggle) {
+  background:
+    linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
+    linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
+    var(--theme-color1);
+  transform: rotate(135deg);
+}
+:root:root .home-v2 .v2-faq .v2-faq__answer p {
+  margin: 0 18px 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+  font-size: 15px;
+  line-height: 1.7;
+}
+:root:root .home-v2 .v2-faq .is-open .v2-faq__answer {
+  margin-top: 0;
+}
+
+/* From tablets up the cards get a little more room and larger questions. */
+@media (min-width: 768px) {
+  :root:root .faq-accordion .accordion,
   :root:root .home-v2 .v2-faq .v2-faq__list {
-    display: grid;
-    gap: 10px;
-    border-top: 0;
+    gap: 12px;
   }
-  :root:root .home-v2 .v2-faq .v2-faq__item {
-    overflow: hidden;
-    background-color: #fff;
-    border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
-    border-radius: 16px;
-    box-shadow: 0 14px 30px -26px rgba(28, 26, 29, 0.4);
-    transition: border-color 0.25s, box-shadow 0.25s;
+  :root:root .faq-accordion .accordion .accordion-item .accordion-header button {
+    min-height: 68px;
+    padding: 20px 70px 20px 24px;
+    font-size: 19px;
   }
-  :root:root .home-v2 .v2-faq .v2-faq__item.is-open {
-    border-color: rgba(var(--theme-color1-rgb), 0.5);
-    box-shadow: 0 18px 36px -26px rgba(28, 26, 29, 0.45);
+  :root:root .faq-accordion .accordion .accordion-button::before,
+  :root:root .faq-accordion .accordion .accordion-button.collapsed::before {
+    top: 19px;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+  }
+  :root:root .faq-accordion .accordion .accordion-item .accordion-body {
+    margin: 0 24px;
+    padding: 16px 0 22px;
+  }
+  :root:root .faq-accordion .accordion .accordion-body p,
+  :root:root .home-v2 .v2-faq .v2-faq__answer p {
+    font-size: 16px;
   }
   :root:root .home-v2 .v2-faq .v2-faq__question button {
-    gap: 10px;
-    padding: 16px 14px 16px 18px;
-  }
-  :root:root .home-v2 .v2-faq .v2-faq__num {
-    flex-basis: 22px;
-    font-size: 15px;
-    line-height: 25px;
+    padding: 20px 20px 20px 24px;
   }
   :root:root .home-v2 .v2-faq .v2-faq__text {
-    font-size: 16.5px;
-    line-height: 25px;
+    font-size: 19px;
+    line-height: 28px;
   }
-  :root:root .home-v2 .v2-faq .is-open .v2-faq__text {
-    color: var(--theme-color1);
-  }
-  :root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) {
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
-    margin-top: -2px;
-    border: 0;
-    border-radius: 50%;
-    background:
-      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 12px 1.5px no-repeat,
-      linear-gradient(var(--theme-color1), var(--theme-color1)) center / 1.5px 12px no-repeat,
-      var(--theme-color-gray);
-    transition: transform 0.3s ease, background-color 0.3s;
-  }
-  :root:root .home-v2 .v2-faq :is(.v2-faq__arrow, .treatment-catalog__toggle) > * {
-    display: none;
-  }
-  :root:root .home-v2 .v2-faq .is-open :is(.v2-faq__arrow, .treatment-catalog__toggle) {
-    background:
-      linear-gradient(#fff, #fff) center / 12px 1.5px no-repeat,
-      linear-gradient(#fff, #fff) center / 1.5px 12px no-repeat,
-      var(--theme-color1);
-    transform: rotate(135deg);
+  :root:root .home-v2 .v2-faq .v2-faq__num {
+    line-height: 28px;
   }
   :root:root .home-v2 .v2-faq .v2-faq__answer p {
-    margin: 0 18px 18px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  :root:root .home-v2 .v2-faq .is-open .v2-faq__answer {
-    margin-top: 0;
+    margin: 0 24px 22px;
+    padding-top: 16px;
   }
 }
 
@@ -2046,4 +2105,527 @@
 }
 .p-guide .blog-block .readMore-btn::after {
   content: " →";
+}
+
+/* ------------------------------------------------------------------ */
+/* 27. Spa packages (PackageCard: the price list's groups and the       */
+/*     homepage; owner, 24 Oct: the cards looked like the old theme,    */
+/*     keep the staff's codes, add the total time): a white card with   */
+/*     a gold hairline edge, the icon in a paper circle beside "PACKAGE */
+/*     B" in small gold capitals over the name, the price in gold, the  */
+/*     treatments on hairline rows with their lengths in gold, the      */
+/*     total time with a clock, Reserve at the foot. On phones each     */
+/*     price-list group slides sideways instead of stacking four tall   */
+/*     cards (the homepage row already does).                           */
+/* ------------------------------------------------------------------ */
+.pkg-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px 22px 24px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 20px;
+  box-shadow: 0 20px 44px -34px rgba(28, 26, 29, 0.45);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.pkg-card:hover {
+  border-color: rgba(var(--theme-color1-rgb), 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 26px 50px -32px rgba(28, 26, 29, 0.5);
+}
+.pkg-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.pkg-card__icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--theme-color-gray);
+}
+.pkg-card__icon :is(img, svg) {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.pkg-card .pkg-card__title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+}
+.pkg-card__code {
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.pkg-card__name,
+.pkg-card__name a {
+  font-family: var(--title-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--headings-color);
+}
+.pkg-card__name a:is(:hover, :focus-visible) {
+  color: var(--theme-color1);
+}
+/* "Same as Mani Pedi Package A": a quiet line under the name, plain
+   italic text (a shaded box was too much, owner, 24 Oct). */
+.pkg-card .pkg-card__note {
+  margin: -8px 0 14px;
+  font-family: var(--text-font);
+  font-size: 12.5px;
+  font-style: italic;
+  line-height: 1.45;
+  color: #8f8a83;
+}
+.pkg-card .pkg-card__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 6px;
+  margin: 0 0 14px;
+  font-family: var(--title-font);
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--theme-color1);
+}
+.pkg-card__price span {
+  white-space: nowrap;
+  font-family: var(--text-font);
+  font-size: 13px;
+  color: var(--text-color);
+}
+/* The treatments' total when booked one by one, struck through just above
+   the package price (preview, owner, 24 Oct: "Save IDR …" lines were too
+   much); only where every treatment has a like-for-like menu price
+   (src/lib/packageSaving.ts). */
+.pkg-card .pkg-card__was {
+  margin: -6px 0 2px;
+  font-family: var(--text-font);
+  font-size: 13.5px;
+  line-height: 1.3;
+  color: #8f8a83;
+}
+.pkg-card__was s {
+  text-decoration-color: rgba(var(--theme-color1-rgb), 0.8);
+  text-decoration-thickness: 1.5px;
+}
+.pkg-card .pkg-card__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+}
+.pkg-card .pkg-card__items li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: baseline;
+  margin: 0;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.14);
+  font-family: var(--text-font);
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+.pkg-card__duration {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--theme-color1);
+}
+.pkg-card__service {
+  color: var(--headings-color);
+}
+.pkg-card .pkg-card__total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 20px;
+  font-family: var(--text-font);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--headings-color);
+}
+.pkg-card__total svg {
+  width: 17px;
+  height: 17px;
+  color: var(--theme-color1);
+}
+.pkg-card .pkg-card__cta {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+@media (max-width: 767px) {
+  .package-pricing-section .section-header.mb-60 {
+    margin-bottom: 28px;
+  }
+  .package-pricing-section .pkg-row {
+    --bs-gutter-x: 14px;
+    flex-wrap: nowrap;
+    margin-inline: calc(50% - 50vw);
+    padding: 4px calc(50vw - 50% + 7px) 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: calc(50vw - 50% + 7px);
+    scrollbar-width: none;
+  }
+  .package-pricing-section .pkg-row::-webkit-scrollbar {
+    display: none;
+  }
+  .package-pricing-section .pkg-row > .pkg-col {
+    flex: 0 0 84%;
+    max-width: 84%;
+    scroll-snap-align: start;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 28. Warm candle massage and cupping pages (new, 24 Oct): the layout */
+/*     the other treatment pages get from live.css ("__jsx-coconut-oil-*/
+/*     massage" and the like), for their own classes.                  */
+/* ------------------------------------------------------------------ */
+.warm-candle-massage-banner .banner-two__content .title:where(.lh, .lh *),
+.cupping-therapy-banner .banner-two__content .title:where(.lh, .lh *) {
+  max-width: 1200px;
+}
+.warm-candle-massage-banner .banner-two__content .title span:where(.lh, .lh *),
+.cupping-therapy-banner .banner-two__content .title span:where(.lh, .lh *) {
+  display: inline;
+}
+.warm-candle-massage-pricing .pricing-section-three > .container:where(.lh, .lh *),
+.cupping-therapy-pricing .pricing-section-three > .container:where(.lh, .lh *),
+.warm-candle-massage-funfact .funfact-section > .container:where(.lh, .lh *),
+.cupping-therapy-funfact .funfact-section > .container:where(.lh, .lh *) {
+  max-width: 1200px;
+}
+.warm-candle-massage-pricing .pricing-section-three .shape2:where(.lh, .lh *),
+.cupping-therapy-pricing .pricing-section-three .shape2:where(.lh, .lh *) {
+  bottom: 70px;
+}
+@media (min-width: 992px) {
+  .warm-candle-massage-pricing .pricing-section-three .pricing-block .inner-box:where(.lh, .lh *),
+  .cupping-therapy-pricing .pricing-section-three .pricing-block .inner-box:where(.lh, .lh *) {
+    padding: 20px;
+  }
+  .warm-candle-massage-pricing .pricing-section-three .image-column:where(.lh, .lh *),
+  .cupping-therapy-pricing .pricing-section-three .image-column:where(.lh, .lh *) {
+    display: flex;
+  }
+  .warm-candle-massage-pricing .pricing-section-three .image-column .image-box:where(.lh, .lh *),
+  .cupping-therapy-pricing .pricing-section-three .image-column .image-box:where(.lh, .lh *) {
+    flex: 1;
+    position: relative;
+    min-height: 0;
+  }
+  .warm-candle-massage-pricing .pricing-section-three .image-column .image-box img:where(.lh, .lh *),
+  .cupping-therapy-pricing .pricing-section-three .image-column .image-box img:where(.lh, .lh *) {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 1400px) {
+  .warm-candle-massage-faq .faq-section .content-column .inner-column:where(.lh, .lh *),
+  .cupping-therapy-faq .faq-section .content-column .inner-column:where(.lh, .lh *) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+.warm-candle-massage-services .service-section-two .section-header .title:where(.lh, .lh *),
+.cupping-therapy-services .service-section-two .section-header .title:where(.lh, .lh *) {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* 29. Site sweep fixes (owner, 24 Oct: "double check all pages for any */
+/*     glitches or out of place ness"): every page at 1740px and 390px. */
+/* ------------------------------------------------------------------ */
+/* Big headings share their words out evenly instead of leaving one alone on
+   the last line ("…in Seminyak, / Bali", "Treatment / Options"). */
+:root:root :is(h1, h2, h3, .title) {
+  text-wrap: balance;
+}
+
+/* The two tick lists of the treatment pages' split sections: the theme centred
+   them against each other and pushed them apart, so a shorter list started
+   lower, against the right edge. Now both start at the top with an even gap,
+   ticks stay full size when a line wraps, and on phones they make one list. */
+.about-section .content-column .inner-column .list {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px 48px;
+}
+.about-section .content-column .inner-column .list ul li {
+  align-items: flex-start;
+}
+.about-section .content-column .inner-column .list ul li > svg {
+  flex: none;
+}
+@media (max-width: 767px) {
+  .about-section .content-column .inner-column .list {
+    flex-direction: column;
+  }
+}
+
+/* Links inside the treatment pages' intro and split texts, and the villa page's
+   booking text, in the site's link style (bold gold) like the rest. */
+:is(.about-section-two, .about-section) .text a:not([class]),
+.p-villa-hotel-massage :is(p, li) a:not([class]) {
+  display: inline;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--theme-color1);
+  text-decoration: none;
+}
+:is(.about-section-two, .about-section) .text a:not([class]):is(:hover, :focus-visible),
+.p-villa-hotel-massage :is(p, li) a:not([class]):is(:hover, :focus-visible) {
+  color: #8a6f1c;
+}
+
+/* Guide articles: the theme hides every line break below 1400px, which in an
+   article joined sentences ("mobility.Key characteristics"). */
+.blog-details__rich br {
+  display: inline;
+}
+/* Their tables on phones: wider columns (one word a line before) and a hint
+   that the table scrolls sideways. */
+@media (max-width: 767px) {
+  .blog-details__rich .post-table :is(th, td) {
+    min-width: 150px;
+  }
+  .blog-details__rich .post-table::before {
+    content: "Swipe to see the whole table →";
+    position: sticky;
+    left: 0;
+    display: block;
+    padding: 8px 14px;
+    font-family: var(--text-font);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--theme-color1);
+    background: #fdfbf7;
+    border-bottom: 1px solid #ece3d3;
+  }
+  /* "Latest Posts" repeated the "More Massage Guides" cards right below it. */
+  .blog-details .sidebar__post {
+    display: none;
+  }
+  /* The "Next guide" card like the "Previous" one: photo first. */
+  .post-more .post-nav__link--next .post-nav__thumb {
+    order: -1;
+  }
+}
+
+/* Privacy policy and terms on phones: the card's 50px sides inside the
+   section's left the text a 260px column, and the address icon shrank into an
+   oval next to the long address. */
+.p-privacy-policy .col-md-4 > div > div:first-child,
+.p-terms-and-conditions .col-md-4 > div > div:first-child {
+  flex: none;
+}
+@media (max-width: 767px) {
+  .p-privacy-policy .col-lg-10 > div,
+  .p-terms-and-conditions .col-lg-10 > div {
+    padding: 32px 20px !important;
+  }
+}
+
+/* Guide articles: numbered lists with their numbers (the theme removed them,
+   so the jet lag "first 24 hours" plan read as seven stray bold lines; owner,
+   24 Oct), each in a cream circle as the other lists have the lotus. And text
+   in a <span> flows with its sentence: the theme makes every span an
+   inline-block, which put a long name ("Representative List of the Intangible
+   Cultural Heritage of Humanity") on a line of its own. */
+.blog-details__rich ol {
+  margin: 0 0 1.2em;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: guide-step;
+}
+.blog-details__rich ol > li {
+  position: relative;
+  margin-bottom: 0.7em;
+  padding-left: 42px;
+  counter-increment: guide-step;
+}
+.blog-details__rich ol > li::before {
+  content: counter(guide-step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  font-family: var(--title-font);
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--theme-color1);
+  background-color: var(--theme-color-gray);
+  border-radius: 50%;
+}
+.blog-details__rich span {
+  display: inline;
+}
+
+/* ------------------------------------------------------------------ */
+/* 30. Closing booking banner (owner, 24 Oct: "should stay creative     */
+/*     with the alternative images, but should modify or adjust         */
+/*     design"): ReserveCta as a white card with the gold hairline, the */
+/*     page's photo in full colour beside the words, a gold WhatsApp    */
+/*     button; the photo on top on tablets and phones.                  */
+/* ------------------------------------------------------------------ */
+.reserve-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -40px rgba(28, 26, 29, 0.45);
+}
+.reserve-card__photo {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.reserve-card__badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-family: var(--text-font);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--headings-color);
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+}
+.reserve-card__badge svg {
+  width: 16px;
+  height: 16px;
+  color: var(--theme-color1);
+}
+.reserve-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 44px 40px 32px;
+}
+.reserve-card__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.reserve-card .title {
+  margin: 0;
+  font-size: clamp(30px, 2.9vw, 44px);
+  line-height: 1.15;
+  color: var(--headings-color);
+}
+.reserve-card__text {
+  margin: 16px 0 0;
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-color);
+}
+.reserve-card__note {
+  margin: 14px 0 0;
+  padding-left: 14px;
+  font-family: var(--text-font);
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #8f8a83;
+  border-left: 2px solid rgba(var(--theme-color1-rgb), 0.5);
+}
+.reserve-card .reserve-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  margin-top: 28px;
+  padding: 0 28px;
+  font-family: var(--title-font);
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--theme-color1);
+  border-radius: 999px;
+  box-shadow: 0 14px 26px -16px rgba(var(--theme-color1-rgb), 0.9);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.reserve-card .reserve-card__btn:is(:hover, :focus-visible) {
+  color: #fff;
+  background-color: #987426;
+  transform: translateY(-1px);
+}
+.reserve-card__btn .fa-whatsapp {
+  font-size: 19px;
+}
+@media (max-width: 991px) {
+  .reserve-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .reserve-card__photo {
+    min-height: 300px;
+  }
+  .reserve-card__body {
+    padding: 28px 22px 26px;
+  }
+}
+@media (max-width: 575px) {
+  .reserve-card {
+    padding: 10px;
+    border-radius: 24px;
+  }
+  .reserve-card__photo {
+    min-height: 220px;
+    border-radius: 16px;
+  }
+  .reserve-card .reserve-card__btn {
+    justify-content: center;
+    width: 100%;
+  }
 }

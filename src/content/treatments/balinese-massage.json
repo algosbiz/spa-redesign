@@ -43,7 +43,7 @@
               },
               {
                 "label": "Packages",
-                "value": "From IDR 379.000 per person: Balinese massage with manicure and pedicure, cream bath or facial (four packages, see below)"
+                "value": "From IDR 375.000 per person: Balinese massage with manicure and pedicure, cream bath or facial (four packages, see below)"
               },
               {
                 "label": "Where",
@@ -111,17 +111,17 @@
                 "text": "Our four packages pair a 1-hour Balinese massage with a manicure and pedicure, a cream bath or a Bali Moon Facial.",
                 "packages": [
                   {
-                    "price": "IDR 449.000",
+                    "price": "IDR 520.000",
                     "name": "Package A",
                     "treatments": [
                       "1 Hr Balinese Massage",
                       "1 Hr Mani & Pedi",
-                      "30 Mins Cream Bath"
+                      "45–55 Mins Cream Bath"
                     ],
                     "suffix": "per person"
                   },
                   {
-                    "price": "IDR 549.000",
+                    "price": "IDR 545.000",
                     "name": "Package B",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -131,17 +131,17 @@
                     "suffix": "per person"
                   },
                   {
-                    "price": "IDR 449.000",
+                    "price": "IDR 485.000",
                     "name": "Package C",
                     "treatments": [
                       "1 Hr Balinese Massage",
-                      "30 Mins Cream Bath",
+                      "45–55 Mins Cream Bath",
                       "1 Hr Bali Moon Facial"
                     ],
                     "suffix": "per person"
                   },
                   {
-                    "price": "IDR 379.000",
+                    "price": "IDR 375.000",
                     "name": "Package D",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -376,7 +376,7 @@
               "props": {
                 "removeTopPadding": true,
                 "paperDecoration": true,
-                "image": "/images/services/balinesemassage/balinesemassage-11.webp",
+                "image": "/images/services/balinesemassage/balinesemassage-13.webp",
                 "imageTitle": "",
                 "subTitle": "Frequently Asked Questions",
                 "title": "Balinese Massage Seminyak: FAQs",
@@ -403,7 +403,7 @@
                   },
                   {
                     "question": "How much does a Balinese massage cost in Seminyak?",
-                    "answer": "A Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Packages with a manicure and pedicure, cream bath or facial start at IDR 379.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                    "answer": "A Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Packages with a manicure and pedicure, cream bath or facial start at IDR 375.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
                   },
                   {
                     "question": "Which massage is best if I've never had one before?",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 /** A link written in a text as [words](/address/). */
 const LINK = /\[([^\]\n]+)\]\(([^)\s]+)\)/g;
@@ -34,7 +34,9 @@ export function linkedText(text: string): ReactNode {
   }
   if (!parts.length) return text;
   if (last < text.length) parts.push(text.slice(last));
-  return parts;
+  // Every piece keyed: passed from a server page into a client component (the
+  // guide's closing line), the unkeyed strings drew React's "unique key" warning.
+  return parts.map((part, i) => (typeof part === "string" ? <Fragment key={`t${i}`}>{part}</Fragment> : part));
 }
 
 /** The same text without its markup, for structured data: "[words](/address/)" -> "words". */

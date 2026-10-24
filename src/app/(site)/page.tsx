@@ -41,7 +41,7 @@ export default function HomePage() {
               <>
                 {/* Copy rewrite, 15 Oct. The last words kept together so a
                     narrow phone does not leave one alone on a line. */}
-                23 massage and spa treatments at our Seminyak spa, most of them also at your villa or hotel.
+                25 massage and spa treatments at our Seminyak spa, most of them also at your villa or hotel.
                 Prices are per person;{" "}
                 <span style={{ whiteSpace: "nowrap" }}>couple massage prices are for two.</span>
               </>

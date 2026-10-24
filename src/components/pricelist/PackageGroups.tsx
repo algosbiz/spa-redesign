@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import Link from "next/link";
+import PackageCard, { packageNotes } from "@/components/pricelist/PackageCard";
 import type { PackageGroup } from "@/data/pages/pricelist";
-import { displayPrice, priceValue, withDots } from "@/lib/price";
+import { packageSaving } from "@/lib/packageSaving";
+import { priceValue, withDots } from "@/lib/price";
 
 const COUNT = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
 
@@ -41,6 +42,7 @@ const PAGE_OF_CARD: Record<string, string> = {
  */
 export default function PackageGroups({ groups, icons }: { groups: PackageGroup[]; icons: Record<string, string> }) {
   const sorted = [...groups].sort((a, b) => a.title.localeCompare(b.title));
+  const notes = packageNotes(groups);
   return (
     <>
       {sorted.map((group, s) => {
@@ -67,52 +69,23 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
                   {words.answer} {group.description}
                 </p>
               </div>
-              <div className="row g-4">
+              {/* Four cards a row on laptops; on phones the group's cards slide sideways (outcall.css section 27). */}
+              <div className="row g-4 pkg-row">
                 {group.packages.map((pack, i) => (
-                  <div
-                    key={i}
-                    className="col-sm-6 col-xl-3 col-lg-4 pricing-block-five wow fadeInLeft"
-                    data-wow-delay={`${200 * i}ms`}
-                    data-wow-duration="1500ms"
-                  >
-                    <div className="inner-box">
-                      <div className="shape">
-                        <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="image" />
-                      </div>
-                      <div className="icon">
-                        <img loading="lazy" decoding="async" src={icon} alt={`${group.cardTitle} icon`} />
-                      </div>
-                      <h3>
-                        {page ? (
-                          <Link prefetch={false} href={page} className="package-card__link">
-                            {group.cardTitle}
-                          </Link>
-                        ) : (
-                          group.cardTitle
-                        )}{" "}
-                        <br /> Package {String.fromCharCode(65 + i)}
-                      </h3>
-                      <h4 className="price">
-                        {displayPrice(pack.price)}
-                        {/* Couple prices are for two; the others per person (copy rewrite, 15 Oct). */}
-                        <span className="pax-note">{group.twoPax ? "2 pax" : "per person"}</span>
-                      </h4>
-                      <ul>
-                        {pack.items.map((item, j) => (
-                          <li key={j}>
-                            <span className="duration">{item.duration}</span>
-                            <span className="service">{item.service}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Link prefetch={false} href="/contact/" className="btn-two mt-35">
-                        Reserve
-                        <span className="icon_box">
-                          <i className="fa-regular icon_first fa-arrow-right-long" />
-                          <i className="fa-regular icon_second fa-arrow-right-long" />
-                        </span>
-                      </Link>
-                    </div>
+                  <div key={i} className="col-sm-6 col-xl-3 col-lg-4 pkg-col">
+                    <PackageCard
+                      code={`Package ${String.fromCharCode(65 + i)}`}
+                      name={group.cardTitle}
+                      href={page}
+                      icon={<img loading="lazy" decoding="async" src={icon} alt="" />}
+                      price={pack.price}
+                      // Couple prices are for two; the others per person (copy rewrite, 15 Oct).
+                      unit={group.twoPax ? "for two" : "per person"}
+                      items={pack.items}
+                      cta={{ href: "/contact/" }}
+                      note={notes.get(`${group.cardTitle}|${String.fromCharCode(65 + i)}`)}
+                      saving={packageSaving(pack.items, pack.price, group.twoPax)}
+                    />
                   </div>
                 ))}
               </div>
