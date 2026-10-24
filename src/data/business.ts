@@ -18,13 +18,8 @@ export const business = {
   /** How the phone / WhatsApp number is written on the website. */
   phoneDisplay: "+62 878-6317-5144",
 
-  /**
-   * TODO CONTACT-01: two different emails were found and no page shows one in the footer.
-   *   - "info@spabalimoon.com"   (only in the old homepage schema, not visible)
-   *   - "spabalimoon@gmail.com"  (visible on /privacy-policy/)
-   * Leave empty until the owner confirms which one to publish.
-   */
-  email: undefined as string | undefined,
+  /** The spa's email (owner, 24 Oct: info@spabalimoon.com; the Gmail address the privacy page showed is not used). */
+  email: "info@spabalimoon.com",
 
   address: {
     /**

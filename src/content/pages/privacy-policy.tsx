@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import SoftHeader from "@/components/sections/SoftHeader";
+import { business } from "@/data/business";
 
 /** /privacy-policy/ — generated from the live page's component tree, section for section. */
 export default function PrivacyPolicyPage() {
@@ -570,10 +571,10 @@ export default function PrivacyPolicyPage() {
                             Email
                           </div>
                           <a
-                            href="mailto:spabalimoon@gmail.com"
+                            href={`mailto:${business.email}`}
                             style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "#707070" }}
                           >
-                            spabalimoon@gmail.com
+                            {business.email}
                           </a>
                         </div>
                       </div>

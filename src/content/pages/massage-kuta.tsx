@@ -8,6 +8,9 @@ import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
+import { homeServiceSchema } from "@/lib/schema";
+import { kutaPage } from "@/data/pages/massage-kuta";
 
 /** The page's questions, also given to search engines as FAQPage data. */
 const FAQ = [
@@ -54,6 +57,15 @@ export default function MassageKutaPage() {
   return (
     <div className="page-wrapper lh p-massage-kuta">
       <FaqJsonLd items={FAQ} />
+      {/* Home service in Kuta: the spa itself is in Seminyak (owner, 24 Oct: no second address). */}
+      <JsonLd
+        data={homeServiceSchema({
+          path: "/massage-kuta/",
+          name: "Massage in Kuta",
+          description: kutaPage.seo.description,
+          areas: ["Kuta", "North Kuta"],
+        })}
+      />
       <PageBanner
         subTitle="After a Day in the Sun"
         titleSpan="Massage in Kuta, Bali:"

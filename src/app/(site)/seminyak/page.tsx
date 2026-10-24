@@ -7,6 +7,8 @@ import PackageIntro from "@/components/sections/PackageIntro";
 import PageBanner from "@/components/sections/PageBanner";
 import ReserveCta from "@/components/sections/ReserveCta";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
+import { priceListSchema } from "@/lib/schema";
 import HomeServiceLine from "@/components/sections/HomeServiceLine";
 import Testimonials from "@/components/sections/Testimonials";
 import VideoSection from "@/components/sections/VideoSection";
@@ -40,6 +42,7 @@ export default function PricelistPage() {
   return (
     <div className="page-wrapper lh p-pricelist">
       <FaqJsonLd items={page.faq.items} />
+      <JsonLd data={priceListSchema()} />
       <PageBanner {...page.banner} />
       {/* 20 Oct dev brief, Task 6: one sentence to the outcall page, before the first section. */}
       <HomeServiceLine text={priceListHomeServiceLine} />

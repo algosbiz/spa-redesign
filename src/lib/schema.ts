@@ -4,16 +4,21 @@
  * the same way the visitor reads them on the page.
  *
  *   spaSchema()          the spa itself, on every page (src/app/(site)/layout.tsx)
+ *   websiteSchema()      the site's name for search results, homepage
+ *   priceListSchema()    every treatment and package with its prices, /seminyak/
  *   treatmentSchema()    Service + Offers in IDR + breadcrumb, treatment pages
- *   homeServiceSchema()  Service with the areas served, outcall and villa pages
+ *   homeServiceSchema()  Service with the areas served, outcall, villa and Kuta pages
  *   articleSchema()      Article + breadcrumb, guide articles
+ *   pageSchema()         where a plain page sits in the site (About, Contact)
  *
  * Other blocks point at the spa by its @id instead of repeating it.
  */
 import { business } from "@/data/business";
 import { priceList } from "@/data/pricelist";
 import { home } from "@/data/pages/home";
+import { pricelistPage } from "@/data/pages/pricelist";
 import { absoluteUrl } from "@/lib/seo";
+import { whatsappChatUrl } from "@/lib/whatsapp";
 
 export const SPA_ID = `${business.url}/#spa`;
 
@@ -38,8 +43,7 @@ export function spaSchema() {
     description: home.seo.description,
     foundingDate: String(business.foundedYear),
     telephone: business.phoneDisplay,
-    // TODO CONTACT-01: the old homepage schema's email, kept until the owner confirms one.
-    email: "info@spabalimoon.com",
+    email: business.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: `${business.address.street}, Petitenget`,
@@ -67,14 +71,43 @@ export function spaSchema() {
     })),
     // TODO (roadmap R9): add the Google Business Profile and TripAdvisor links once the owner sends them.
     sameAs: [business.social.facebook, business.social.instagram],
-    // TODO (roadmap R11): the live homepage's rating. Keep it equal to the Google profile, or remove it.
+    // The Google Business Profile's rating, as the owner sent it on 24 Oct 2026
+    // (4.3 from 196 Google reviews). Keep it equal to the profile, or remove it.
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 4.2,
-      reviewCount: 193,
+      ratingValue: 4.3,
+      reviewCount: 196,
       bestRating: 5,
       worstRating: 1,
     },
+    // Languages at reception (owner, 24 Oct: Japanese too).
+    knowsLanguage: ["English", "Indonesian", "Japanese"],
+    // What guests ask about (owner, 24 Oct: the spa has Wi-Fi and showers).
+    amenityFeature: ["Wi-Fi", "Showers"].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
+    // Booking is on WhatsApp (every page's button), so assistants know how to book.
+    potentialAction: {
+      "@type": "ReserveAction",
+      name: "Book on WhatsApp",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: whatsappChatUrl,
+        actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"],
+      },
+    },
+  };
+}
+
+/** The site itself, so search results can show "Spa Bali Moon" as its name (homepage only). */
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${business.url}/#website`,
+    name: business.name,
+    alternateName: `${business.name} Seminyak`,
+    url: `${business.url}/`,
+    inLanguage: "en",
+    publisher: provider,
   };
 }
 
@@ -94,12 +127,43 @@ function breadcrumb(crumbs: Crumb[]) {
 
 const amount = (price: number) => String(price);
 
-/** "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two". */
+/**
+ * "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two"; "2 Hours · with
+ * Balinese Massage" -> "2 hours with Balinese Massage" (the cupping combo);
+ * "Back · Start From" -> "Back".
+ */
 const offerLabel = (label: string) => {
   const forTwo = /2 pax/i.test(label);
-  const time = label.split(/\s+[·–-]\s+/)[0].replace(/\bHours?\b|\bMinutes?\b/g, (w) => w.toLowerCase());
+  const [first, ...rest] = label.split(/\s+[·–-]\s+/);
+  const time = first.replace(/\bHours?\b|\bMinutes?\b/g, (w) => w.toLowerCase());
+  const withPart = rest.find((r) => /^with\b/i.test(r));
+  if (withPart) return `${time} ${withPart}`;
   return forTwo ? `${time}, for two` : time;
 };
+
+/** A treatment's name as people say it: the homepage's ("Balinese Massage"), not the price list's "Balinese Massage - Relaxing". */
+const cleanName = (item: (typeof priceList)[number]) => item.homeName ?? item.pricelistName ?? item.id;
+
+/** A price in IDR as an Offer; a "start from" price as the lowest of a range. */
+function offer(name: string, price: number, url: string, from = false) {
+  return {
+    "@type": "Offer",
+    name,
+    ...(from
+      ? { priceSpecification: { "@type": "PriceSpecification", minPrice: amount(price), priceCurrency: "IDR" } }
+      : { price: amount(price), priceCurrency: "IDR" }),
+    url,
+    seller: provider,
+  };
+}
+
+type Pack = (typeof pricelistPage.packageGroups)[number];
+
+/** A spa package in words: "Couple Massage package A: 1 Hr Balinese Massage, 30 Mins Ear Candle". */
+const packageName = (group: Pack, i: number) =>
+  `${group.cardTitle} package ${String.fromCharCode(65 + i)}: ${group.packages[i].items.map((x) => `${x.duration} ${x.service}`).join(", ")}`;
+
+const priceOfPack = (price: string) => Number(price.replace(/\D/g, ""));
 
 /**
  * Prices of the pages whose treatments have no row of their own in
@@ -122,22 +186,112 @@ function offersFor(slug: string, url: string) {
   const fromPriceList = priceList
     .filter((item) => item.pageSlug === slug)
     .flatMap((item) =>
-      item.options
-        .filter((o) => !/start from/i.test(o.label))
-        .map((o) => ({
-          name: `${item.pricelistName ?? item.id} – ${o.label === "Price" ? "per person" : offerLabel(o.label)}`,
-          price: o.price,
-        }))
+      item.options.map((o) =>
+        offer(
+          `${cleanName(item)}, ${o.label === "Price" ? "per person" : offerLabel(o.label)}`,
+          o.price,
+          url,
+          /start from/i.test(o.label)
+        )
+      )
     );
-  const offers = fromPriceList.length ? fromPriceList : (PAGE_OFFERS[slug] ?? []);
-  return offers.map((o) => ({
-    "@type": "Offer",
-    name: o.name,
-    price: amount(o.price),
-    priceCurrency: "IDR",
-    url,
-    seller: provider,
+  const offers = fromPriceList.length ? fromPriceList : (PAGE_OFFERS[slug] ?? []).map((o) => offer(o.name, o.price, url));
+  // The couple page also sells the couple packages (priced for two).
+  const couple = slug === "couple-spa" ? pricelistPage.packageGroups.find((g) => g.twoPax) : undefined;
+  const packages = couple ? couple.packages.map((p, i) => offer(`${packageName(couple, i)}, for two`, priceOfPack(p.price), url)) : [];
+  // The day spa page sells the spa packages: their range, per person.
+  const singles = pricelistPage.packageGroups.filter((g) => !g.twoPax).flatMap((g) => g.packages.map((p) => priceOfPack(p.price)));
+  const daySpa =
+    slug === "day-spa"
+      ? [
+          {
+            "@type": "AggregateOffer",
+            name: "Spa packages, per person",
+            lowPrice: amount(Math.min(...singles)),
+            highPrice: amount(Math.max(...singles)),
+            priceCurrency: "IDR",
+            offerCount: new Set(singles).size,
+            url: absoluteUrl("/seminyak/"),
+            seller: provider,
+          },
+        ]
+      : [];
+  return [...offers, ...packages, ...daySpa];
+}
+
+const CATEGORY_NAMES: Record<string, string> = { massage: "Massage", beauty: "Beauty", couple: "For couples" };
+
+/**
+ * The price list (/seminyak/): the spa's whole menu as an OfferCatalog on the
+ * spa itself (same @id, so it joins the spa node every page has): each
+ * treatment with its lowest and highest price, grouped as on the page, then
+ * the spa packages. Prices come from src/data/pricelist.ts and the package
+ * groups, as the page's do.
+ */
+export function priceListSchema() {
+  const url = absoluteUrl("/seminyak/");
+  const groups = Object.entries(CATEGORY_NAMES).map(([category, name]) => ({
+    "@type": "OfferCatalog",
+    name,
+    itemListElement: priceList
+      .filter((item) => item.category === category && !item.pricelistParentId)
+      .map((item) => {
+        const prices = item.options.map((o) => o.price);
+        return {
+          "@type": "AggregateOffer",
+          itemOffered: {
+            "@type": "Service",
+            name: cleanName(item),
+            ...(item.pageSlug ? { url: absoluteUrl(`/seminyak/${item.pageSlug}/`) } : {}),
+          },
+          lowPrice: amount(Math.min(...prices)),
+          highPrice: amount(Math.max(...prices)),
+          priceCurrency: "IDR",
+          offerCount: prices.length,
+        };
+      }),
   }));
+  // Identical packages listed under several treatments are one package.
+  const seen = new Set<string>();
+  const packages = pricelistPage.packageGroups.flatMap((g) =>
+    g.packages.flatMap((p, i) => {
+      const key = `${p.price}|${p.items.map((x) => `${x.duration} ${x.service}`.toLowerCase()).sort().join("+")}`;
+      if (seen.has(key)) return [];
+      seen.add(key);
+      return [offer(`${packageName(g, i)}${g.twoPax ? ", for two" : ", per person"}`, priceOfPack(p.price), url)];
+    })
+  );
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DaySpa",
+        "@id": SPA_ID,
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          "@id": `${url}#catalog`,
+          name: "Spa Bali Moon price list",
+          url,
+          itemListElement: [...groups, { "@type": "OfferCatalog", name: "Spa packages", itemListElement: packages }],
+        },
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Price List", path: "/seminyak/" },
+      ]),
+    ],
+  };
+}
+
+/** Where a plain page (About, Contact) sits in the site. */
+export function pageSchema(name: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    ...breadcrumb([
+      { name: "Home", path: "/" },
+      { name, path },
+    ]),
+  };
 }
 
 /** A treatment page: the Service with its prices, and where it sits in the site. */

@@ -7,6 +7,8 @@ import FaqSection from "@/components/sections/FaqSection";
 import VisitUs from "@/components/sections/VisitUs";
 import ReserveCta from "@/components/sections/ReserveCta";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
+import { pageSchema } from "@/lib/schema";
 import { business, yearsOfExperience } from "@/data/business";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -49,6 +51,7 @@ export default function AboutPage() {
   return (
     <div className="page-wrapper lh p-about">
       <FaqJsonLd items={FAQ} />
+      <JsonLd data={pageSchema("About", "/about/")} />
       <PageBanner
         subTitle="About Us"
         titleSpan="About Spa Bali Moon"
