@@ -25,7 +25,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Deep tissue massage at Spa Bali Moon in Seminyak is a firm, slow massage that works deeper into tight muscles. Sessions are 1 hour (IDR 269.000) or 1.5 hours (IDR 359.000) per person, at our spa or at your villa or hotel. Your therapist adjusts the pressure to your feedback, so it should feel intense but stay within your comfort.",
+        "text": "Deep tissue massage at Spa Bali Moon in Seminyak is a firm, slow massage that works deeper into tight muscles. Sessions are 1 hour (IDR 269.000), 1.5 hours (IDR 359.000) or 2 hours (IDR 518.000) per person, at our spa or at your villa or hotel. Your therapist adjusts the pressure to your feedback, so it should feel intense but stay within your comfort.",
         "items": [
           {
             "label": "Treatment",
@@ -33,7 +33,7 @@
           },
           {
             "label": "Length and price",
-            "value": "Per person: 1 hour IDR 269.000 · 1.5 hours IDR 359.000"
+            "value": "Per person: 1 hour IDR 269.000 · 1.5 hours IDR 359.000 · 2 hours IDR 518.000"
           },
           {
             "label": "Where",
@@ -74,7 +74,8 @@
             "leftShapeSrc": "/images/shape/package-four-shape-left.png",
             "images": [
               "/images/services/deeptissuemassage/deeptissuemassage-4.webp",
-              "/images/services/deeptissuemassage/deeptissuemassage-5.webp"
+              "/images/services/deeptissuemassage/deeptissuemassage-5.webp",
+              "/images/services/deeptissuemassage/deeptissuemassage-11.webp"
             ],
             "subTitle": "",
             "title": "Choose Your Duration",
@@ -96,6 +97,15 @@
                   "Multiple areas with muscle tightness",
                   "Guests needing extended treatment time",
                   "More detailed deep pressure techniques"
+                ]
+              },
+              {
+                "price": "IDR 518.000",
+                "name": "2 Hours",
+                "treatments": [
+                  "Full-body deep tissue work",
+                  "Several tight areas in one session",
+                  "After a big surf or hiking day"
                 ]
               }
             ]
@@ -269,11 +279,11 @@
               },
               {
                 "question": "How much does a deep tissue massage cost in Seminyak?",
-                "answer": "IDR 269.000 for 1 hour and IDR 359.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. For two people, a couple deep tissue massage costs IDR 539.000 for 1 hour or IDR 719.000 for 1.5 hours."
+                "answer": "IDR 269.000 for 1 hour, IDR 359.000 for 1.5 hours and IDR 518.000 for 2 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. For two people, a couple deep tissue massage costs IDR 539.000 for 1 hour or IDR 719.000 for 1.5 hours."
               },
               {
                 "question": "How long does a deep tissue massage take?",
-                "answer": "A deep tissue massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 269.000) or 1.5 hours (IDR 359.000) per person."
+                "answer": "A deep tissue massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 269.000), 1.5 hours (IDR 359.000) or 2 hours (IDR 518.000) per person."
               },
               {
                 "question": "Can I book a deep tissue massage for today?",

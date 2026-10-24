@@ -338,45 +338,6 @@
   }
 }
 
-/* Closing banners (owner, 1 Oct: the lymphatic page's "is the good size …
-   we can have all the same including home page"). All 29 were the same
-   width and padding; only their height followed their text (413–512px on
-   desktop). Each is now at least as tall as the lymphatic banner at the
-   same screen width, with its content centred: 483px from 992px up, 512px on
-   tablets, 444px from 576px, and on phones a line through the lymphatic
-   banner's own heights (679px at 320, 534px at 430, 444px at 575), which
-   grow as its text wraps. A banner with more text than lymphatic's (Shiatsu
-   on desktop) is still taller by that text. */
-.reserve-cta-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 483px;
-}
-.reserve-cta-banner > div {
-  width: 100%;
-}
-@media (max-width: 991px) {
-  .reserve-cta-banner {
-    min-height: 512px;
-  }
-}
-@media (max-width: 767px) {
-  .reserve-cta-banner {
-    min-height: 444px;
-  }
-}
-@media (max-width: 575px) {
-  .reserve-cta-banner {
-    min-height: calc(534px + (430px - 100vw) * 0.62);
-  }
-}
-@media (max-width: 430px) {
-  .reserve-cta-banner {
-    min-height: calc(679px - (100vw - 320px) * 1.318);
-  }
-}
-
 /* 404 page (live's own markup, same on live): its wrapper has no gutter, so
    the grid row's -12px margins ran past the screen (12px of sideways scroll
    on desktop), and the 700px image ran past a phone screen (up to 380px).
@@ -832,52 +793,6 @@
   color: var(--theme-color1) !important;
 }
 
-/* 1400–1599px (1440px laptops): since "About" joined the menu (17 Oct) the
-   header no longer fit one row there; "Book an Appointment" and the search
-   dropped under the logo and the header stood 156px tall. A little less
-   room around the logo, the menu and the button keeps it one row, the menu
-   gaps growing back to live's 40px by about 1530px (19 Oct). */
-@media (min-width: 1400px) and (max-width: 1599px) {
-  .lh.header-area .header-one__wrp {
-    margin-right: 32px;
-    margin-left: 32px;
-  }
-  .lh.header-area .header__main {
-    column-gap: 24px;
-  }
-  .lh.header-area .logo {
-    flex: 0 0 210px;
-    width: 210px;
-    min-width: 0;
-    max-width: 210px;
-  }
-  .lh.header-area .logo img {
-    width: 210px;
-    height: auto;
-  }
-  .lh.header-area .main-menu ul {
-    column-gap: clamp(22px, calc((100vw - 1246px) / 7), 40px);
-  }
-  .lh.header-area .menu-btns {
-    column-gap: 18px;
-  }
-  .lh.header-area .book-now {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-/* 1200–1399px: the same, without the button (it shows from 1400px). The
-   menu was one row here until "About" (1200–1279px broke into two rows);
-   its gaps now give way first, back to 40px by about 1290px. Below 1200px
-   the header is two rows by design (logo, then the menu). */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .lh.header-area .header__main {
-    column-gap: 16px;
-  }
-  .lh.header-area .main-menu ul {
-    column-gap: clamp(24px, calc((100vw - 1011px) / 7), 40px);
-  }
-}
 /* From 1400px live's content is up to 1434px wide, which left 12px at the
    screen edge on a 1440px laptop (47px at 1536px): at least 48px now. */
 @media (min-width: 1400px) {

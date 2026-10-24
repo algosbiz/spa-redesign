@@ -44,6 +44,10 @@ export const homeServiceLines: Record<string, string> = {
     "Book a head massage at your villa or hotel with our [home service massage](/outcall-home-service-massage/), or add it to another treatment.",
   "coconut-oil-massage":
     "Our coconut oil massage is also available as a [home massage across Bali](/outcall-home-service-massage/), from IDR 75.000 per therapist.",
+  "cupping-therapy":
+    "Cupping is also available as [home service at your villa or hotel](/outcall-home-service-massage/): your therapist brings the cups and pump, from IDR 75.000 per therapist.",
+  "warm-candle-massage":
+    "We bring the candles too: the warm candle massage is also available as [home service at your villa or hotel](/outcall-home-service-massage/), from IDR 75.000 per therapist.",
   "anti-cellulite-massage":
     "Cellulite massage can also be booked at your villa through our [outcall and home service](/outcall-home-service-massage/).",
   "sunburn-massage":

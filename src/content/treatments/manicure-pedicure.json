@@ -87,17 +87,17 @@
             "text": "Each package pairs a manicure and pedicure with a Balinese massage, a cream bath or a Bali Moon Facial, or two of these.",
             "packages": [
               {
-                "price": "IDR 449.000",
+                "price": "IDR 520.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Mani & Pedi",
                   "1 Hr Balinese Massage",
-                  "30 Mins Cream Bath"
+                  "45–55 Mins Cream Bath"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 549.000",
+                "price": "IDR 545.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Mani & Pedi",
@@ -107,16 +107,16 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 299.000",
+                "price": "IDR 380.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Mani & Pedi",
-                  "30 Mins Cream Bath"
+                  "45–55 Mins Cream Bath"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 379.000",
+                "price": "IDR 375.000",
                 "name": "Package D",
                 "treatments": [
                   "30 Mins Pedicure",
@@ -369,7 +369,7 @@
               },
               {
                 "question": "How much does a manicure and pedicure cost in Seminyak?",
-                "answer": "A manicure and pedicure at Spa Bali Moon in Seminyak costs IDR 238.000 per person, or IDR 99.000 for a manicure and IDR 139.000 for a pedicure. Nail colour is from IDR 69.000 and gel from IDR 219.000. Home service adds IDR 75.000 per therapist in the Seminyak area. Packages from IDR 299.000 per person add a cream bath, massage or facial."
+                "answer": "A manicure and pedicure at Spa Bali Moon in Seminyak costs IDR 238.000 per person, or IDR 99.000 for a manicure and IDR 139.000 for a pedicure. Nail colour is from IDR 69.000 and gel from IDR 219.000. Home service adds IDR 75.000 per therapist in the Seminyak area. Packages from IDR 375.000 per person add a cream bath, massage or facial."
               },
               {
                 "question": "How long does a manicure and pedicure take?",

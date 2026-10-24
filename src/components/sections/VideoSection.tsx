@@ -2,9 +2,9 @@
 import type { ReactNode } from "react";
 
 export type VideoSectionProps = {
-  topSubTitle: string;
-  topTitle: string;
-  topText: string;
+  topSubTitle?: string;
+  topTitle?: string;
+  topText?: string;
   contentSubTitle: string;
   contentTitle: string;
   contentText: string;
@@ -68,17 +68,22 @@ export default function VideoSection(p: VideoSectionProps) {
         <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/video-shape.png" alt="image" />
       </div>
       <div className="container">
-        <div className="section-header mb-60 center">
-          <div className="sub-title look-h4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-            {p.topSubTitle}
+        {/* The centred heading over the block is optional (the price list
+            dropped it, owner 24 Oct: two headings in a row "seems a bit
+            awkward"; the one beside the photo says it). */}
+        {p.topTitle ? (
+          <div className="section-header mb-60 center">
+            <div className="sub-title look-h4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+              {p.topSubTitle}
+            </div>
+            <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              {p.topTitle}
+            </h2>
+            <p className="text wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+              {p.topText}
+            </p>
           </div>
-          <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-            {p.topTitle}
-          </h2>
-          <p className="text wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-            {p.topText}
-          </p>
-        </div>
+        ) : null}
         <div className="row align-items-center g-4">
           <div className="col-lg-6 video-column">
             <div className="inner-box">

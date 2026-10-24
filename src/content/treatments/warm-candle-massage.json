@@ -1,0 +1,340 @@
+{
+  "type": "div",
+  "props": {
+    "className": "page-wrapper lh p-warm-candle-massage"
+  },
+  "children": [
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-banner"
+      },
+      "children": [
+        {
+          "type": "PageBanner",
+          "props": {
+            "image": "/images/banners/warm-candle-massage.webp",
+            "imagePosition": "82% 35%",
+            "subTitle": "",
+            "titleSpan": "Natural Warm Candle Massage",
+            "title": "in Seminyak, Bali"
+          }
+        }
+      ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "The warm candle massage at Spa Bali Moon in Seminyak is a full-body massage with a 100% natural shea butter candle. Your therapist drips the candle's lukewarm wax onto your skin, where it melts into a rich oil, and massages it in. Sessions are 1 hour (IDR 269.000), 1.5 hours (IDR 399.000) or 2 hours (IDR 499.000) per person, at our spa or at your villa or hotel.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Full-body massage with lukewarm wax from a natural shea butter candle"
+          },
+          {
+            "label": "Length and price",
+            "value": "Per person: 1 hour IDR 269.000 · 1.5 hours IDR 399.000 · 2 hours IDR 499.000"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "AboutIntro",
+      "props": {
+        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "rightShapeSrc": "/images/shape/about-two-right.png",
+        "primaryImage": "/images/services/warmcandlemassage/warmcandlemassage-2.webp",
+        "secondaryImage": "/images/services/warmcandlemassage/warmcandlemassage-12.webp",
+        "subTitle": "",
+        "title": "What Is a Warm Candle Massage?",
+        "text": "A warm candle massage uses a massage candle instead of bottled oil. Ours are 100% natural: shea butter with coconut or soy wax, scented with aromas such as frangipani. The candle stays lit during your massage, and as its top melts your therapist drips the lukewarm wax onto your skin, where it turns into a rich oil and is massaged in with long, flowing strokes.",
+        "feature1Title": "100% Natural",
+        "feature1Text": "Shea butter with coconut or soy wax, and natural aromas such as frangipani.",
+        "feature2Title": "Lukewarm, Never Hot",
+        "feature2Text": "The candle melts at a low heat, so the wax feels comfortably warm on the skin."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-pricing"
+      },
+      "children": [
+        {
+          "type": "TreatmentPricing",
+          "props": {
+            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "images": [
+              "/images/services/warmcandlemassage/warmcandlemassage-4.webp",
+              "/images/services/warmcandlemassage/warmcandlemassage-5.webp",
+              "/images/services/warmcandlemassage/warmcandlemassage-6.webp"
+            ],
+            "subTitle": "",
+            "title": "Session Duration & Pricing",
+            "text": "Choose 1, 1.5 or 2 hours. At IDR 269.000 for an hour, it costs less than a regular massage at most Seminyak hotel spas.",
+            "packages": [
+              {
+                "price": "IDR 269.000",
+                "name": "1 Hour",
+                "treatments": [
+                  "First-time guests",
+                  "A full-body warm candle massage",
+                  "An evening treat after the beach"
+                ]
+              },
+              {
+                "price": "IDR 399.000",
+                "name": "1.5 Hours",
+                "treatments": [
+                  "More time on back and shoulders",
+                  "A slower, unhurried massage",
+                  "Guests who want to fully unwind"
+                ]
+              },
+              {
+                "price": "IDR 499.000",
+                "name": "2 Hours",
+                "treatments": [
+                  "The full warm candle experience",
+                  "Longer time on every area",
+                  "A special occasion"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-funfact"
+      },
+      "children": [
+        {
+          "type": "Funfacts",
+          "props": {
+            "items": [
+              {
+                "title": "100%",
+                "text": "Natural Candle"
+              },
+              {
+                "title": "Lukewarm",
+                "text": "Wax"
+              },
+              {
+                "title": "Couples",
+                "text": "Welcome"
+              },
+              {
+                "title": "Outcall",
+                "text": "Available"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TreatmentTestimonials",
+      "props": {}
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "image": "/images/services/warmcandlemassage/warmcandlemassage-7.webp",
+        "subTitle": "",
+        "title": "How a Warm Candle Massage Works",
+        "text": "The candle is lit when your massage begins and stays lit while you relax. Your therapist drips the melted wax onto your skin and works it in. What to expect:",
+        "featuresLeft": [
+          "A natural shea butter candle, lit in the room",
+          "Lukewarm wax dripped onto the skin",
+          "It melts into a rich, soft oil"
+        ],
+        "featuresRight": [
+          "Massaged in with long, flowing strokes",
+          "Natural aromas such as frangipani",
+          "Skin left soft and smooth"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "badgeTopText": "Made with",
+        "badgeBottomText": "Natural shea butter"
+      }
+    },
+    {
+      "type": "AboutSplitAlt",
+      "props": {
+        "leftShapeSrc": "/images/shape/step-shape-left.png",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "rightDecoration": {
+          "$jsx": {
+            "type": "FloralDecoration",
+            "props": {
+              "clustered": true
+            }
+          }
+        },
+        "image": "/images/services/warmcandlemassage/warmcandlemassage-13.webp",
+        "subTitle": "",
+        "title": "For Two, or With Four Hands",
+        "text": "The warm candle massage also comes for couples, side by side in a private room, and as a four hand massage with two therapists at once:",
+        "featuresLeft": [
+          "Couple warm candle massage, priced for two",
+          "From IDR 539.000 for 1 hour",
+          "Side by side in a private room"
+        ],
+        "featuresRight": [
+          "Four hand warm candle massage",
+          "Two therapists, from IDR 539.000",
+          "At our spa or at your villa"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "showBadge": false
+      }
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/banner-three-shape2.png",
+        "image": "/images/services/warmcandlemassage/warmcandlemassage-15.webp",
+        "subTitle": "",
+        "title": "What's in Our Massage Candles",
+        "text": "Every candle is made from natural ingredients, chosen for how they feel on the skin. What goes into it:",
+        "featuresLeft": [
+          "Shea butter, rich and soft",
+          "Coconut or soy wax, depending on the batch",
+          "Natural aromas such as frangipani"
+        ],
+        "featuresRight": [
+          "100% natural ingredients",
+          "Melts lukewarm, never hot",
+          "The same candles for couples and four hands"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-faq"
+      },
+      "children": [
+        {
+          "type": "FaqSection",
+          "props": {
+            "removeTopPadding": true,
+            "paperDecoration": true,
+            "image": "/images/services/warmcandlemassage/warmcandlemassage-14.webp",
+            "imageTitle": "",
+            "subTitle": "Frequently Asked Questions",
+            "title": "Warm Candle Massage Seminyak: FAQs",
+            "items": [
+              {
+                "question": "What is a warm candle massage?",
+                "answer": "A warm candle massage is a full-body massage with a natural massage candle instead of bottled oil. At Spa Bali Moon in Seminyak the candle is made of shea butter with coconut or soy wax. It stays lit during your massage, and your therapist drips its lukewarm wax onto your skin, where it turns into oil and is massaged in with long, flowing strokes."
+              },
+              {
+                "question": "Is the candle wax hot?",
+                "answer": "No. The candle melts at a low heat, so the wax is lukewarm when it reaches your skin, never hot. If you would like it a little cooler, tell your therapist at any time."
+              },
+              {
+                "question": "What is in the massage candle?",
+                "answer": "Our massage candles are 100% natural: shea butter with coconut or soy wax, depending on the batch, scented with natural aromas such as frangipani. If you have an allergy, tell us when you book on WhatsApp."
+              },
+              {
+                "question": "How is it different from a regular oil massage?",
+                "answer": "The massage uses the same long, flowing strokes, but the oil is different. Melted shea butter is richer than most massage oils and reaches your skin lukewarm, so it feels soft and smooth, and many of our guests choose it over a regular oil massage."
+              },
+              {
+                "question": "Is a warm candle massage the same as an ear candle treatment?",
+                "answer": "No, they are different treatments. The warm candle massage is a full-body massage that uses melted shea butter wax as the massage oil. An ear candle treatment is a separate, relaxing treatment for the ears with a hollow candle."
+              },
+              {
+                "question": "Can couples have a warm candle massage together?",
+                "answer": "Yes. The couple warm candle massage is for two guests side by side in a private room: IDR 539.000 for 1 hour, IDR 799.000 for 1.5 hours and IDR 999.000 for 2 hours, for two. Couple packages C and D add an ear candle or a Bali Moon Facial (IDR 810.000 and IDR 875.000 for two)."
+              },
+              {
+                "question": "What is a four hand warm candle massage?",
+                "answer": "Two therapists massage you at the same time, in matching movements, with the same lukewarm candle wax. At Spa Bali Moon it costs IDR 539.000 for 1 hour, IDR 799.000 for 1.5 hours and IDR 999.000 for 2 hours per person."
+              },
+              {
+                "question": "Is the warm candle massage part of a spa package?",
+                "answer": "Yes. Our package with a 30-minute body scrub, a 1-hour warm candle massage and a 1-hour Bali Moon Facial is IDR 580.000 per person, and couple packages C and D include a warm candle massage for two."
+              },
+              {
+                "question": "Can I have a warm candle massage at my villa or hotel?",
+                "answer": "Yes. Spa Bali Moon offers the warm candle massage as home service at villas and hotels in Seminyak and nearby areas, and your therapist brings the candles, fresh linen and everything else the massage needs. Home service adds IDR 75.000 per therapist in the Seminyak area."
+              },
+              {
+                "question": "How much does a warm candle massage cost in Seminyak?",
+                "answer": "A warm candle massage at Spa Bali Moon in Seminyak costs IDR 269.000 for 1 hour, IDR 399.000 for 1.5 hours and IDR 499.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
+              },
+              {
+                "question": "Can I ask for a female or male therapist for my warm candle massage?",
+                "answer": "Yes. Tell us your preference when you book your warm candle massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-services"
+      },
+      "children": [
+        {
+          "type": "ServiceSlider",
+          "props": {
+            "leftShapeSrc": "/images/shape/service-shape-left.png",
+            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "title": "More Massages and Body Treatments",
+            "embedded": true,
+            "related": [
+              "/seminyak/balinese-massage/",
+              "/seminyak/coconut-oil-massage/",
+              "/seminyak/hot-stone-massage/",
+              "/seminyak/couple-spa/"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-warm-candle-massage warm-candle-massage-paper-section section__decoration-top section__decoration-bottom bg-sub"
+      },
+      "children": [
+        {
+          "type": "ReserveCta",
+          "props": {
+            "standardSpacing": true,
+            "backgroundImage": "/images/services/warmcandlemassage/warmcandlemassage-11.webp",
+            "title": "Warm Candle Massage at Our Spa or Your Villa",
+            "text": "A full-body massage with lukewarm wax from a natural shea butter candle, at our spa in Seminyak or through home service at your villa or hotel.",
+            "closingText": "Tell us about any allergies when you book."
+          }
+        }
+      ]
+    }
+  ]
+}

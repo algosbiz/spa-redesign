@@ -170,7 +170,7 @@
             }
           }
         },
-        "image": "/images/services/sunburntreatment/sunburntreatment-6.webp",
+        "image": "/images/services/sunburntreatment/sunburntreatment-7.webp",
         "subTitle": "",
         "title": "Areas We Treat",
         "text": "The treatment can cover one area or several, depending on where you caught the sun. Common areas of care are:",
@@ -194,7 +194,7 @@
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
-        "image": "/images/services/sunburntreatment/sunburntreatment-7.webp",
+        "image": "/images/services/sunburntreatment/sunburntreatment-8.webp",
         "subTitle": "",
         "title": "What to Expect from a Sunburn Treatment",
         "text": "Your therapist checks your skin first, then works slowly, adjusting each step to how it feels. A typical session involves:",
@@ -225,7 +225,7 @@
           "props": {
             "removeTopPadding": true,
             "paperDecoration": true,
-            "image": "/images/services/sunburntreatment/sunburntreatment-8.webp",
+            "image": "/images/services/sunburntreatment/sunburntreatment-6.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Sunburn Treatment Seminyak: FAQs",

@@ -87,7 +87,7 @@
             "text": "Each of our four body scrub packages pairs a 30-minute scrub with a Balinese, Thai, hot stone or warm candle massage and a Bali Moon Facial, cream bath or head massage.",
             "packages": [
               {
-                "price": "IDR 439.000",
+                "price": "IDR 485.000",
                 "name": "Package A",
                 "treatments": [
                   "30 Mins Body Scrub",
@@ -97,7 +97,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 549.000",
+                "price": "IDR 585.000",
                 "name": "Package B",
                 "treatments": [
                   "30 Mins Body Scrub",
@@ -107,17 +107,17 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 539.000",
+                "price": "IDR 545.000",
                 "name": "Package C",
                 "treatments": [
                   "30 Mins Body Scrub",
                   "1 Hr Thai Massage",
-                  "1 Hr Cream Bath"
+                  "45–55 Mins Cream Bath"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 549.000",
+                "price": "IDR 580.000",
                 "name": "Package D",
                 "treatments": [
                   "30 Mins Body Scrub",
@@ -213,6 +213,30 @@
       "props": {}
     },
     {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "image": "/images/services/bodyscrub/bodyscrub-8.webp",
+        "subTitle": "",
+        "title": "Body Scrub Benefits",
+        "text": "A regular body scrub refreshes the skin and leaves it smoother. What it does:",
+        "featuresLeft": [
+          "Helps remove dead skin cells and buildup",
+          "Supports smoother skin texture",
+          "May improve the appearance of dry areas"
+        ],
+        "featuresRight": [
+          "Helps moisturisers and body oils absorb better",
+          "Helps maintain softer and brighter-looking skin"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "badgeTopText": "Choose from",
+        "badgeBottomText": "Seven natural scents"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -247,55 +271,6 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
-        "image": "/images/services/bodyscrub/bodyscrub-8.webp",
-        "subTitle": "",
-        "title": "Body Scrub Benefits",
-        "text": "A regular body scrub refreshes the skin and leaves it smoother. What it does:",
-        "featuresLeft": [
-          "Helps remove dead skin cells and buildup",
-          "Supports smoother skin texture",
-          "May improve the appearance of dry areas"
-        ],
-        "featuresRight": [
-          "Helps moisturisers and body oils absorb better",
-          "Helps maintain softer and brighter-looking skin"
-        ],
-        "buttonText": "Book Now",
-        "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true,
-        "badgeTopText": "Choose from",
-        "badgeBottomText": "Seven natural scents"
-      }
-    },
-    {
-      "type": "AboutSplitAlt",
-      "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-three-shape2.png",
-        "image": "/images/services/bodyscrub/bodyscrub-9.webp",
-        "subTitle": "",
-        "title": "Choose Your Natural Scrub",
-        "text": "Every scrub exfoliates just as gently; they differ in scent and in what they bring to your skin.",
-        "featuresLeft": [
-          "Coconut for moisture and softness",
-          "Chocolate for a rich nourishing experience",
-          "Strawberry for refreshing and brightening"
-        ],
-        "featuresRight": [
-          "Bengkoang for smoother-looking skin",
-          "Green Tea for a calming treatment",
-          "Jasmine and Spa Sari for a traditional aromatic experience"
-        ],
-        "buttonText": "Book Now",
-        "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true,
-        "showBadge": false
-      }
-    },
-    {
-      "type": "AboutSplit",
-      "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-10.webp",
         "subTitle": "",
@@ -310,6 +285,30 @@
           "Additional attention to rough areas",
           "Subtle natural fragrance after treatment",
           "Available for spa and home service bookings"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "showBadge": false
+      }
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/banner-three-shape2.png",
+        "image": "/images/services/bodyscrub/bodyscrub-9.webp",
+        "subTitle": "",
+        "title": "Choose Your Natural Scrub",
+        "text": "Every scrub exfoliates just as gently; they differ in scent and in what they bring to your skin.",
+        "featuresLeft": [
+          "Coconut for moisture and softness",
+          "Chocolate for a rich nourishing experience",
+          "Strawberry for refreshing and brightening"
+        ],
+        "featuresRight": [
+          "Bengkoang for smoother-looking skin",
+          "Green Tea for a calming treatment",
+          "Jasmine and Spa Sari for a traditional aromatic experience"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -363,7 +362,7 @@
               },
               {
                 "question": "How much does a body scrub cost in Seminyak?",
-                "answer": "A body scrub at Spa Bali Moon in Seminyak is IDR 169.000 per person, whichever of the seven scents you choose. An additional body mask is IDR 100.000. Four packages from IDR 439.000 per person add a massage, facial, hot stone or cream bath. Home service adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "A body scrub at Spa Bali Moon in Seminyak is IDR 169.000 per person, whichever of the seven scents you choose. An additional body mask is IDR 100.000. Four packages from IDR 485.000 per person add a massage, facial, hot stone or cream bath. Home service adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "Where can I get a body scrub in Seminyak?",
@@ -371,7 +370,7 @@
               },
               {
                 "question": "How long does a body scrub take?",
-                "answer": "A body scrub at Spa Bali Moon in Seminyak takes around an hour and costs IDR 169.000 per person, in any of seven scents. In a spa package the scrub is a shorter 30-minute version."
+                "answer": "A body scrub at Spa Bali Moon in Seminyak takes 30 to 60 minutes and costs IDR 169.000 per person, in any of seven scents. In a spa package the scrub is the shorter 30-minute version, so the whole visit takes less time."
               },
               {
                 "question": "Can I have a body scrub at my villa or hotel?",

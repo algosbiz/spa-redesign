@@ -7,7 +7,7 @@ import { allTreatments } from "@/components/home/treatments";
 import { LotusIcon } from "@/components/ui/Lotus";
 
 /**
- * Option 1 for "all treatments": the 23 treatment pages as the v2 cards in
+ * Option 1 for "all treatments": every treatment page (25 since 24 Oct) as the v2 cards in
  * one row that scrolls sideways at every width — four and a peek in view on
  * desktop, the arrows moving a view at a time, "3 / 23" between them (no
  * arrows on phones), and a small slide when it first comes into view to show
@@ -17,7 +17,7 @@ import { LotusIcon } from "@/components/ui/Lotus";
 export default function AllTreatmentsSlider({
   subTitle = "Our Treatments",
   title = "Find the Treatment for You",
-  text = "All 23 of our treatments, at our Seminyak spa or as home service.",
+  text = `All ${allTreatments.length} of our treatments, at our Seminyak spa or as home service.`,
 }: {
   subTitle?: string;
   title?: string;

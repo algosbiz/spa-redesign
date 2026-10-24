@@ -1,0 +1,265 @@
+{
+  "type": "div",
+  "props": {
+    "className": "page-wrapper lh p-cupping-therapy"
+  },
+  "children": [
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-banner"
+      },
+      "children": [
+        {
+          "type": "PageBanner",
+          "props": {
+            "image": "/images/banners/cupping-therapy.webp",
+            "imagePosition": "50% 50%",
+            "subTitle": "",
+            "titleSpan": "Cupping Therapy",
+            "title": "in Seminyak, Bali"
+          }
+        }
+      ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Cupping therapy at Spa Bali Moon in Seminyak uses solid cups and a small hand pump to create gentle suction on your back and shoulders, with no flame. A session is 1 hour (IDR 500.000) per person, or 2 hours with a 1-hour Balinese massage (IDR 600.000), at our spa or at your villa or hotel. Cupping can leave round marks that fade within a few days.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Cupping with solid cups and a hand pump, no flame"
+          },
+          {
+            "label": "Length and price",
+            "value": "Per person: 1 hour IDR 500.000 · 2 hours with massage IDR 600.000"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "AboutIntro",
+      "props": {
+        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "rightShapeSrc": "/images/shape/about-two-right.png",
+        "primaryImage": "/images/services/cuppingtherapy/cuppingtherapy-2.webp",
+        "secondaryImage": "/images/services/cuppingtherapy/cuppingtherapy-3.webp",
+        "subTitle": "",
+        "title": "What Is Cupping Therapy?",
+        "text": "Cupping is a traditional technique in which cups are placed on the skin to create suction. At Spa Bali Moon your therapist places solid cups on your back and shoulders and draws the air out with a small hand pump, so there is no flame or heat. The suction lifts the skin and the muscle beneath it, a deep, pulling feeling that many guests find relaxing.",
+        "feature1Title": "Hand Pump, No Flame",
+        "feature1Text": "The suction comes from a small hand pump, never from fire or heat.",
+        "feature2Title": "A Full Hour",
+        "feature2Text": "Time for your back, shoulders and any area you ask for."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-pricing"
+      },
+      "children": [
+        {
+          "type": "TreatmentPricing",
+          "props": {
+            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "images": [
+              "/images/services/cuppingtherapy/cuppingtherapy-4.webp",
+              "/images/services/cuppingtherapy/cuppingtherapy-5.webp"
+            ],
+            "subTitle": "",
+            "title": "Session & Pricing",
+            "text": "A cupping session is 1 hour. To add a massage, the 2-hour session pairs it with a 1-hour Balinese massage for IDR 600.000, less than the IDR 659.000 they cost separately.",
+            "packages": [
+              {
+                "price": "IDR 500.000",
+                "name": "1 Hour",
+                "treatments": [
+                  "Cupping on your back and shoulders",
+                  "Solid cups and a hand pump",
+                  "At our spa or your villa"
+                ]
+              },
+              {
+                "price": "IDR 600.000",
+                "name": "2 Hours with Massage",
+                "treatments": [
+                  "1 hour of cupping",
+                  "A 1-hour Balinese massage",
+                  "Less than booking both separately"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-funfact"
+      },
+      "children": [
+        {
+          "type": "Funfacts",
+          "props": {
+            "items": [
+              {
+                "title": "Hand",
+                "text": "Pump"
+              },
+              {
+                "title": "No",
+                "text": "Flame"
+              },
+              {
+                "title": "1 Hour",
+                "text": "Session"
+              },
+              {
+                "title": "Outcall",
+                "text": "Available"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TreatmentTestimonials",
+      "props": {}
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "image": "/images/services/cuppingtherapy/cuppingtherapy-7.webp",
+        "subTitle": "",
+        "title": "What to Expect",
+        "text": "Cupping feels quite different from a massage. What to expect during and after your session:",
+        "featuresLeft": [
+          "Cups placed on your back and shoulders",
+          "A deep, pulling sensation",
+          "Suction adjusted to what feels right"
+        ],
+        "featuresRight": [
+          "Round marks that fade in a few days",
+          "Plan around beach photos if marks matter",
+          "Add a Balinese massage in the 2-hour session"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true,
+        "badgeTopText": "With",
+        "badgeBottomText": "A hand pump"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-faq"
+      },
+      "children": [
+        {
+          "type": "FaqSection",
+          "props": {
+            "removeTopPadding": true,
+            "paperDecoration": true,
+            "image": "/images/services/cuppingtherapy/cuppingtherapy-10.webp",
+            "imageTitle": "",
+            "subTitle": "Frequently Asked Questions",
+            "title": "Cupping Therapy Seminyak: FAQs",
+            "items": [
+              {
+                "question": "What is cupping therapy?",
+                "answer": "Cupping is a traditional technique in which cups are placed on the skin to create suction. At Spa Bali Moon in Seminyak your therapist places solid cups on your back and shoulders and draws the air out with a small hand pump. The suction lifts the skin and the muscle beneath it, which feels like a deep, pulling stretch."
+              },
+              {
+                "question": "Does cupping hurt?",
+                "answer": "Most guests describe a strong pulling feeling rather than pain. Your therapist controls the suction with the hand pump, so tell them at any time if you would like it lighter."
+              },
+              {
+                "question": "Will cupping leave marks?",
+                "answer": "Often, yes. Cupping can leave round, pink to dark purple marks where the cups were placed. They are not painful and usually fade within a few days to a week, so plan around any beach photos or special events."
+              },
+              {
+                "question": "Do you use fire or heat?",
+                "answer": "No. Spa Bali Moon uses solid cups with a small hand pump to draw out the air, so there is no flame, no heat and no hot glass on your skin."
+              },
+              {
+                "question": "Can I combine cupping with a massage?",
+                "answer": "Yes. The 2-hour session combines 1 hour of cupping with a 1-hour Balinese massage for IDR 600.000 per person, less than the IDR 659.000 the two cost when booked separately."
+              },
+              {
+                "question": "How much does cupping cost in Seminyak?",
+                "answer": "Cupping therapy at Spa Bali Moon in Seminyak costs IDR 500.000 for 1 hour per person, or IDR 600.000 for 2 hours with a 1-hour Balinese massage. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
+              },
+              {
+                "question": "Can I have cupping at my villa or hotel?",
+                "answer": "Yes. Spa Bali Moon offers cupping therapy as home service at villas and hotels in Seminyak and nearby areas; your therapist brings the cups, the pump, fresh linen and everything else the session needs. Home service adds IDR 75.000 per therapist in the Seminyak area."
+              },
+              {
+                "question": "Is cupping suitable for everyone?",
+                "answer": "Not always. Tell us when you book if you are pregnant, take blood-thinning medication, or have sensitive, sunburnt or broken skin, so we can let you know whether cupping is right for you."
+              },
+              {
+                "question": "Can I ask for a female or male therapist for cupping?",
+                "answer": "Yes. Tell us your preference when you book your cupping session on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-services"
+      },
+      "children": [
+        {
+          "type": "ServiceSlider",
+          "props": {
+            "leftShapeSrc": "/images/shape/service-shape-left.png",
+            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "title": "More Massages and Body Treatments",
+            "embedded": true,
+            "related": [
+              "/seminyak/deep-tissue-massage/",
+              "/seminyak/sport-massage/",
+              "/seminyak/balinese-massage/",
+              "/seminyak/hot-stone-massage/"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "props": {
+        "className": "jsx-cupping-therapy cupping-therapy-paper-section section__decoration-top section__decoration-bottom bg-sub"
+      },
+      "children": [
+        {
+          "type": "ReserveCta",
+          "props": {
+            "standardSpacing": true,
+            "backgroundImage": "/images/services/cuppingtherapy/cuppingtherapy-11.webp",
+            "title": "Cupping Therapy at Our Spa or Your Villa",
+            "text": "Cupping with solid cups and a hand pump, on its own or with a Balinese massage, at our spa in Seminyak or at your villa or hotel.",
+            "closingText": "Cupping can leave round marks for a few days."
+          }
+        }
+      ]
+    }
+  ]
+}

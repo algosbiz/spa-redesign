@@ -60,12 +60,11 @@ export const pricelistPage = {
 
   /** The "complete spa menu" block with its two photos. `firstStat`/`secondStat` break after the first words. */
   menu: {
-    topSubTitle: "Start With What You Need",
-    topTitle: "Choose Your Treatment",
-    topText: "Our treatment menu makes it easy to find the care your body or skin needs, from massage and muscle care to facials, body scrubs, and beauty treatments. Choose the treatment and duration that suit your day.",
-    contentSubTitle: "More Than Massage",
-    contentTitle: "Our Treatments",
-    contentText: "Spa Bali Moon brings massage, body care, facials, and beauty services together in one place. Choose a familiar treatment, try something new during your Bali stay, or ask our team for help finding the right option.",
+    // One heading instead of two in a row (owner, 24 Oct: "seems a bit awkward"):
+    // the centred "Choose Your Treatment" and "Our Treatments" beside the photo.
+    contentSubTitle: "Start With What You Need",
+    contentTitle: "Choose Your Treatment",
+    contentText: "Massage and muscle care, facials, body scrubs and beauty treatments, all in one place in Seminyak. Choose a familiar treatment or try something new during your Bali stay, and ask our team on WhatsApp if you would like help choosing.",
     firstStat: ["In Seminyak", "Since 2009"] as [string, string],
     secondStat: ["In-Spa &", "Home Service"] as [string, string],
     contentImage: "/images/pricelist/pricelist-2.webp",
@@ -183,6 +182,22 @@ export const pricelistPage = {
           image: "/images/treatments/cards/cellulitemassage-warm.webp"
         },
         {
+          name: "Cupping Therapy",
+          desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+          options: [
+            {
+              time: "1 Hour",
+              price: "IDR 500.000"
+            },
+            {
+              time: "2 Hours · with Balinese Massage",
+              price: "IDR 600.000"
+            }
+          ],
+          id: 30,
+          image: "/images/listmenu/cuppingtherapy.webp"
+        },
+        {
           name: "Deep Tissue Massage",
           desc: "A firm massage that uses deeper pressure to ease muscle stiffness and release tension.",
           options: [
@@ -193,6 +208,10 @@ export const pricelistPage = {
             {
               time: "1.5 Hours",
               price: "IDR 359.000"
+            },
+            {
+              time: "2 Hours",
+              price: "IDR 518.000"
             }
           ],
           id: 13,
@@ -299,6 +318,10 @@ export const pricelistPage = {
           desc: "A calming massage that helps release tension around the head and scalp.",
           options: [
             {
+              time: "30 Minutes",
+              price: "IDR 90.000"
+            },
+            {
               time: "1 Hour",
               price: "IDR 159.000"
             },
@@ -335,26 +358,26 @@ export const pricelistPage = {
           image: "/images/treatments/cards/lymphaticmassage-warm.webp"
         },
         {
-          name: "Organic Warm Candle Oil Massage",
-          desc: "A warming massage using natural candle oils to relax muscles and ease tension.",
+          name: "Natural Warm Candle Massage",
+          desc: "Our richest massage oil: lukewarm wax from a 100% natural shea butter candle, scented with aromas like frangipani, dripped onto your skin and massaged in.",
           options: [
             {
-              time: "1 Hour · Warm Candle Wax Balinese",
+              time: "1 Hour",
               price: "IDR 269.000"
             },
             {
-              time: "1.5 Hours · Warm Candle Wax Balinese",
+              time: "1.5 Hours",
               price: "IDR 399.000"
             },
             {
-              time: "2 Hours · Warm Candle Wax Balinese",
+              time: "2 Hours",
               price: "IDR 499.000"
             }
           ],
           children: [
             {
-              name: "Four Hand Warm Candle",
-              desc: "A deeply relaxing treatment where two therapists work together using warmed oils.",
+              name: "Four Hand Warm Candle Massage",
+              desc: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
               options: [
                 {
                   time: "1 Hour · Four Hand Warm Candle",
@@ -777,8 +800,8 @@ export const pricelistPage = {
           image: "/images/listmenu/coupledeeptissumassage.webp"
         },
         {
-          name: "Couple Warm Candle Oil Massage",
-          desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
+          name: "Couple Warm Candle Massage",
+          desc: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
           options: [
             {
               time: "1 Hour · Warm Candle Massage · 2 Pax",
@@ -794,7 +817,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-4",
-          image: "/images/listmenu/couplewarmcandle.webp"
+          image: "/images/listmenu/couplewarmcandle-2.webp"
         }
       ]
     },
@@ -809,7 +832,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 625.000"
+              price: "IDR 605.000"
             }
           ],
           id: "couple-package-a",
@@ -821,7 +844,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 699.000"
+              price: "IDR 675.000"
             }
           ],
           id: "couple-package-b",
@@ -833,7 +856,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 845.000"
+              price: "IDR 810.000"
             }
           ],
           id: "couple-package-c",
@@ -845,7 +868,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 919.000"
+              price: "IDR 875.000"
             }
           ],
           id: "couple-package-d",
@@ -880,7 +903,7 @@ export const pricelistPage = {
       cardTitle: "Balinese Massage",
       packages: [
         {
-          price: "IDR 449.000",
+          price: "IDR 520.000",
           items: [
             {
               duration: "1 Hr",
@@ -891,13 +914,13 @@ export const pricelistPage = {
               service: "Mani & Pedi"
             },
             {
-              duration: "30 Mins",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             }
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 545.000",
           items: [
             {
               duration: "1 Hr",
@@ -914,14 +937,14 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449.000",
+          price: "IDR 485.000",
           items: [
             {
               duration: "1 Hr",
               service: "Balinese Massage"
             },
             {
-              duration: "30 Mins",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -931,7 +954,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 379.000",
+          price: "IDR 375.000",
           items: [
             {
               duration: "1 Hr",
@@ -956,7 +979,7 @@ export const pricelistPage = {
       cardTitle: "Thai Massage",
       packages: [
         {
-          price: "IDR 539.000",
+          price: "IDR 510.000",
           items: [
             {
               duration: "1 Hr",
@@ -973,14 +996,14 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 609.000",
+          price: "IDR 570.000",
           items: [
             {
               duration: "1 Hr",
               service: "Thai Massage"
             },
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -990,7 +1013,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 445.000",
+          price: "IDR 425.000",
           items: [
             {
               duration: "1 Hr",
@@ -1003,14 +1026,14 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539.000",
+          price: "IDR 545.000",
           items: [
             {
               duration: "1 Hr",
               service: "Thai Massage"
             },
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1028,10 +1051,10 @@ export const pricelistPage = {
       cardTitle: "Cream Bath",
       packages: [
         {
-          price: "IDR 609.000",
+          price: "IDR 570.000",
           items: [
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1045,10 +1068,10 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 499.000",
+          price: "IDR 480.000",
           items: [
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1062,10 +1085,10 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449.000",
+          price: "IDR 485.000",
           items: [
             {
-              duration: "30 Mins",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1079,10 +1102,10 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539.000",
+          price: "IDR 545.000",
           items: [
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1104,7 +1127,7 @@ export const pricelistPage = {
       cardTitle: "Body Scrub",
       packages: [
         {
-          price: "IDR 439.000",
+          price: "IDR 485.000",
           items: [
             {
               duration: "30 Mins",
@@ -1121,7 +1144,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 585.000",
           items: [
             {
               duration: "30 Mins",
@@ -1138,7 +1161,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539.000",
+          price: "IDR 545.000",
           items: [
             {
               duration: "30 Mins",
@@ -1149,13 +1172,13 @@ export const pricelistPage = {
               service: "Thai Massage"
             },
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             }
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 580.000",
           items: [
             {
               duration: "30 Mins",
@@ -1180,7 +1203,7 @@ export const pricelistPage = {
       cardTitle: "Hot Stone",
       packages: [
         {
-          price: "IDR 549.000",
+          price: "IDR 585.000",
           items: [
             {
               duration: "1.5 Hr",
@@ -1197,14 +1220,14 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 499.000",
+          price: "IDR 480.000",
           items: [
             {
               duration: "1 Hr",
               service: "Hot Stone"
             },
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1214,7 +1237,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 435.000",
+          price: "IDR 420.000",
           items: [
             {
               duration: "1 Hr",
@@ -1227,7 +1250,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 499.000",
+          price: "IDR 480.000",
           items: [
             {
               duration: "1.5 Hr",
@@ -1248,7 +1271,7 @@ export const pricelistPage = {
       cardTitle: "Bali Moon Facial",
       packages: [
         {
-          price: "IDR 439.000",
+          price: "IDR 485.000",
           items: [
             {
               duration: "1 Hr",
@@ -1265,14 +1288,14 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 609.000",
+          price: "IDR 570.000",
           items: [
             {
               duration: "1 Hr",
               service: "Bali Moon Facial"
             },
             {
-              duration: "1 Hr",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             },
             {
@@ -1282,7 +1305,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 445.000",
+          price: "IDR 425.000",
           items: [
             {
               duration: "1 Hr",
@@ -1295,7 +1318,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 580.000",
           items: [
             {
               duration: "1 Hr",
@@ -1320,7 +1343,7 @@ export const pricelistPage = {
       cardTitle: "Mani Pedi",
       packages: [
         {
-          price: "IDR 449.000",
+          price: "IDR 520.000",
           items: [
             {
               duration: "1 Hr",
@@ -1331,13 +1354,13 @@ export const pricelistPage = {
               service: "Balinese Massage"
             },
             {
-              duration: "30 Mins",
+              duration: "45–55 Mins",
               service: "Cream bath"
             }
           ]
         },
         {
-          price: "IDR 549.000",
+          price: "IDR 545.000",
           items: [
             {
               duration: "1 Hr",
@@ -1354,20 +1377,20 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 299.000",
+          price: "IDR 380.000",
           items: [
             {
               duration: "1 Hr",
               service: "Mani & Pedi"
             },
             {
-              duration: "30 Mins",
+              duration: "45–55 Mins",
               service: "Cream Bath"
             }
           ]
         },
         {
-          price: "IDR 379.000",
+          price: "IDR 375.000",
           items: [
             {
               duration: "30 Mins",
@@ -1393,7 +1416,7 @@ export const pricelistPage = {
       twoPax: true,
       packages: [
         {
-          price: "IDR 625.000",
+          price: "IDR 605.000",
           items: [
             {
               duration: "1 Hr",
@@ -1406,7 +1429,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 699.000",
+          price: "IDR 675.000",
           items: [
             {
               duration: "1 Hr",
@@ -1419,7 +1442,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 845.000",
+          price: "IDR 810.000",
           items: [
             {
               duration: "1 Hr",
@@ -1432,7 +1455,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 919.000",
+          price: "IDR 875.000",
           items: [
             {
               duration: "1 Hr",
@@ -1476,7 +1499,7 @@ export const pricelistPage = {
     },
     {
       question: "3. Can I combine several treatments into one visit?",
-      answer: "Yes. At Spa Bali Moon, massage, facials, body scrubs, cream baths, manicures, pedicures, and other services can be combined through our spa packages or selected treatment combinations. Packages start at IDR 299.000 per person, and a 1-hour Balinese Massage with a 30-minute manicure and 30-minute pedicure is IDR 379.000 per person."
+      answer: "Yes. At Spa Bali Moon, massage, facials, body scrubs, cream baths, manicures, pedicures, and other services can be combined through our spa packages or selected treatment combinations. Packages start at IDR 375.000 per person, for a 1-hour Balinese Massage with a 30-minute manicure and 30-minute pedicure."
     },
     {
       question: "4. Are the prices listed for each treatment?",

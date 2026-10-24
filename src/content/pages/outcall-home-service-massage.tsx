@@ -480,8 +480,8 @@ export default function OutcallPage() {
                         ],
                       },
                       {
-                        name: "Couple Massage Warm Candle",
-                        desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
+                        name: "Couple Warm Candle Massage",
+                        desc: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
                         options: [
                           { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                           { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
@@ -492,15 +492,25 @@ export default function OutcallPage() {
                         name: "Couple Massage Packages",
                         desc: "A well-balanced couple’s massage package created for relaxing together.",
                         options: [
-                          { time: "Package A · 1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "625.000" },
+                          { time: "Package A · 1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "605.000" },
                           {
                             time: "Package B · 1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax",
-                            price: "699.000",
+                            price: "675.000",
                           },
-                          { time: "Package C · 1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "845.000" },
-                          { time: "Package D · 1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "919.000" },
+                          { time: "Package C · 1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "810.000" },
+                          { time: "Package D · 1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "875.000" },
                         ],
                       },
+                    ],
+                  },
+                  {
+                    id: "massage-cupping",
+                    name: "Cupping Therapy",
+                    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+                    image: "/images/listmenu/cuppingtherapy.webp",
+                    options: [
+                      { time: "1 Hour", price: "500.000" },
+                      { time: "2 Hours – with Balinese Massage", price: "600.000" },
                     ],
                   },
                   {
@@ -511,6 +521,7 @@ export default function OutcallPage() {
                     options: [
                       { time: "1 Hour", price: "269.000" },
                       { time: "1.5 Hours", price: "359.000" },
+                      { time: "2 Hours", price: "518.000" },
                     ],
                   },
                   {
@@ -526,8 +537,8 @@ export default function OutcallPage() {
                   },
                   {
                     id: "massage-four-hand-candle",
-                    name: "Four Hand Warm Candle",
-                    desc: "Performed by two therapists working in synchronised movements for deeper relaxation.",
+                    name: "Four Hand Warm Candle Massage",
+                    desc: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
                     image: "/images/listmenu/organicwarmcandle.webp",
                     options: [
                       { time: "1 Hour – Four Hand Warm Candle", price: "539.000" },
@@ -563,6 +574,7 @@ export default function OutcallPage() {
                     desc: "Focused on the head area to help release built-up stress and promote mental ease.",
                     image: "/images/listmenu/headmassage.webp",
                     options: [
+                      { time: "30 Minutes", price: "90.000" },
                       { time: "1 Hour", price: "159.000" },
                       { time: "1.5 Hours", price: "239.000" },
                       { time: "2 Hours", price: "330.000" },
@@ -591,13 +603,13 @@ export default function OutcallPage() {
                   },
                   {
                     id: "massage-warm-candle",
-                    name: "Organic Warm Candle Oil Massage",
-                    desc: "Using natural, warmed oils to help relax the body and soften muscle tension.",
+                    name: "Natural Warm Candle Massage",
+                    desc: "Our richest massage oil, at your villa: lukewarm wax from a 100% natural shea butter candle, dripped onto your skin and massaged in.",
                     image: "/images/listmenu/organicwarmcandle.webp",
                     options: [
-                      { time: "1 Hour – Warm Candle Wax Balinese", price: "269.000" },
-                      { time: "1.5 Hours – Warm Candle Wax Balinese", price: "399.000" },
-                      { time: "2 Hours – Warm Candle Wax Balinese", price: "499.000" },
+                      { time: "1 Hour", price: "269.000" },
+                      { time: "1.5 Hours", price: "399.000" },
+                      { time: "2 Hours", price: "499.000" },
                     ],
                   },
                   {
@@ -835,9 +847,9 @@ export default function OutcallPage() {
                   },
                   {
                     id: "couple-warm-candle",
-                    name: "Couple Massage Warm Candle",
-                    desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
-                    image: "/images/listmenu/couplewarmcandle.webp",
+                    name: "Couple Warm Candle Massage",
+                    desc: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
+                    image: "/images/listmenu/couplewarmcandle-2.webp",
                     options: [
                       { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
@@ -855,28 +867,28 @@ export default function OutcallPage() {
                     desc: "",
                     // One photo per package, as on /seminyak/ (live repeats A=B and C=D).
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "625.000" }],
+                    options: [{ time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 pax", price: "605.000" }],
                   },
                   {
                     id: "couple-package-b",
                     name: "Couple Massage Package B",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax", price: "699.000" }],
+                    options: [{ time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 pax", price: "675.000" }],
                   },
                   {
                     id: "couple-package-c",
                     name: "Couple Massage Package C",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "845.000" }],
+                    options: [{ time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 pax", price: "810.000" }],
                   },
                   {
                     id: "couple-package-d",
                     name: "Couple Massage Package D",
                     desc: "",
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "919.000" }],
+                    options: [{ time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 pax", price: "875.000" }],
                   },
                 ],
               },

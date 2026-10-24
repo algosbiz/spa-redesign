@@ -48,7 +48,7 @@
           },
           {
             "label": "Packages for two",
-            "value": "From IDR 625.000 (Balinese massage and ear candle) to IDR 919.000 (warm candle massage and facial)"
+            "value": "From IDR 605.000 (Balinese massage and ear candle) to IDR 875.000 (warm candle massage and facial)"
           },
           {
             "label": "Where",
@@ -98,7 +98,7 @@
             "text": "Our four couples packages pair a 1-hour Balinese or warm candle massage with an ear candle or a Bali Moon Facial. Prices are for two guests together.",
             "packages": [
               {
-                "price": "IDR 625.000",
+                "price": "IDR 605.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -107,7 +107,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 699.000",
+                "price": "IDR 675.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -116,7 +116,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 845.000",
+                "price": "IDR 810.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -125,7 +125,7 @@
                 "suffix": "for two guests"
               },
               {
-                "price": "IDR 919.000",
+                "price": "IDR 875.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -405,7 +405,7 @@
             "items": [
               {
                 "question": "How much is a couples massage in Seminyak?",
-                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak costs IDR 319.000 for two for 1 hour, IDR 479.000 for 1.5 hours and IDR 659.000 for 2 hours, with two therapists side by side in a private couples room. Couple packages start at IDR 625.000 for two. All prices are for both guests together; home service adds IDR 150.000 for two therapists in the Seminyak area."
+                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak costs IDR 319.000 for two for 1 hour, IDR 479.000 for 1.5 hours and IDR 659.000 for 2 hours, with two therapists side by side in a private couples room. Couple packages start at IDR 605.000 for two. All prices are for both guests together; home service adds IDR 150.000 for two therapists in the Seminyak area."
               },
               {
                 "question": "Is a couples massage only for romantic couples?",
@@ -437,7 +437,7 @@
               },
               {
                 "question": "What is included in a couples spa package?",
-                "answer": "Spa Bali Moon has four couple packages, each priced for two guests. Package A is a 1-hour Balinese massage plus a 30-minute ear candle (IDR 625.000 for two). Package B is a 1-hour Balinese massage plus a 1-hour Bali Moon Facial (IDR 699.000). Packages C and D use the warm candle massage instead (IDR 845.000 and IDR 919.000)."
+                "answer": "Spa Bali Moon has four couple packages, each priced for two guests. Package A is a 1-hour Balinese massage plus a 30-minute ear candle (IDR 605.000 for two). Package B is a 1-hour Balinese massage plus a 1-hour Bali Moon Facial (IDR 675.000). Packages C and D use the warm candle massage instead (IDR 810.000 and IDR 875.000)."
               },
               {
                 "question": "Can we book a couples massage over Christmas and New Year?",
@@ -445,7 +445,7 @@
               },
               {
                 "question": "How long does a couples massage take?",
-                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 319.000 for two), 1.5 hours (IDR 479.000) or 2 hours (IDR 659.000). Couple packages, which add an ear candle or a facial, start at IDR 625.000 for two."
+                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 319.000 for two), 1.5 hours (IDR 479.000) or 2 hours (IDR 659.000). Couple packages, which add an ear candle or a facial, start at IDR 605.000 for two."
               },
               {
                 "question": "Can we each ask for a female or male therapist for our couples massage?",

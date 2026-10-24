@@ -108,6 +108,24 @@
     homeDescription: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
   },
   {
+    // Added 24 Oct (owner): cupping, 1 hour only; the 2 hours add a 1-hour
+    // Balinese massage at the package scale (500.000 + 159.000 = 659.000, 9% off).
+    id: "cupping-therapy",
+    category: "massage",
+    pageSlug: "cupping-therapy",
+    image: { src: "/images/treatments/cards/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
+    options: [
+      { label: "1 Hour", price: 500_000 },
+      { label: "2 Hours · with Balinese Massage", price: 600_000, homeLabel: "2 Hours with Balinese Massage" },
+    ],
+    pricelistName: "Cupping Therapy",
+    pricelistDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+    homeServiceName: "Cupping Therapy",
+    homeServiceDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+    homeName: "Cupping Therapy",
+    homeDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame.",
+  },
+  {
     id: "deep-tissue-massage",
     category: "massage",
     pageSlug: "deep-tissue-massage",
@@ -115,6 +133,7 @@
     options: [
       { label: "1 Hour", price: 269_000 },
       { label: "1.5 Hours", price: 359_000 },
+      { label: "2 Hours", price: 518_000 }, // added 24 Oct (owner)
     ],
     pricelistName: "Deep Tissue Massage",
     pricelistDescription: "A therapeutic massage that uses deeper pressure to ease muscle stiffness and release tension.",
@@ -212,6 +231,8 @@
     pageSlug: "head-massage",
     image: { src: "/images/treatments/cards/headmassage.webp", alt: "Head Massage", width: 630, height: 580 },
     options: [
+      // Added 24 Oct (owner): the 30-minute head massage from the packages, on every menu.
+      { label: "30 Minutes", price: 90_000 },
       { label: "1 Hour", price: 159_000 },
       { label: "1.5 Hours", price: 239_000 },
       { label: "2 Hours", price: 330_000 },
@@ -243,44 +264,45 @@
   {
     id: "organic-warm-candle-oil-massage",
     category: "massage",
+    pageSlug: "warm-candle-massage",
     image: {
       src: "/images/treatments/cards/organicwarmcandle.webp",
-      alt: "Organic Warm Candle Oil Massage",
+      alt: "Natural Warm Candle Massage",
       width: 630,
       height: 580,
     },
     options: [
       {
-        label: "1 Hour · Warm Candle Wax Balinese",
+        label: "1 Hour",
         price: 269_000,
-        homeServiceLabel: "1 Hour – Warm Candle Wax Balinese",
+        homeServiceLabel: "1 Hour",
         homeLabel: "1 Hour",
       },
       {
-        label: "1.5 Hours · Warm Candle Wax Balinese",
+        label: "1.5 Hours",
         price: 399_000,
-        homeServiceLabel: "1.5 Hours – Warm Candle Wax Balinese",
+        homeServiceLabel: "1.5 Hours",
         homeLabel: "1.5 Hours",
       },
       {
-        label: "2 Hours · Warm Candle Wax Balinese",
+        label: "2 Hours",
         price: 499_000,
-        homeServiceLabel: "2 Hours – Warm Candle Wax Balinese",
+        homeServiceLabel: "2 Hours",
         homeLabel: "2 Hours",
       },
     ],
-    pricelistName: "Organic Warm Candle Oil Massage",
-    // PRICE-07: live /seminyak/ text since 2026-09-26 (was "1 Hr – warm candle wax balinese").
-    pricelistDescription: "A warming massage using natural candle oils to relax muscles and ease tension.",
-    homeServiceName: "Organic Warm Candle Oil Massage",
-    homeServiceDescription: "Using natural, warmed oils to help relax the body and soften muscle tension.",
-    homeName: "Organic Warm Candle Oil Massage",
-    homeDescription: "A warming full-body massage using natural oils to soften muscles and calm the body.",
+    pricelistName: "Natural Warm Candle Massage",
+    // Named and described with the owner, 24 Oct (was "Organic Warm Candle Oil Massage").
+    pricelistDescription: "Our richest massage oil: lukewarm wax from a 100% natural shea butter candle, scented with aromas like frangipani, dripped onto your skin and massaged in.",
+    homeServiceName: "Natural Warm Candle Massage",
+    homeServiceDescription: "Our richest massage oil, at your villa: lukewarm wax from a 100% natural shea butter candle, dripped onto your skin and massaged in.",
+    homeName: "Natural Warm Candle Massage",
+    homeDescription: "Lukewarm wax from a natural shea butter candle, dripped onto your skin and massaged in.",
   },
   {
     id: "four-hand-warm-candle",
     category: "massage",
-    image: { src: "/images/treatments/cards/organicwarmcandle.webp", alt: "Four Hand Warm Candle", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/organicwarmcandle.webp", alt: "Four Hand Warm Candle Massage", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Four Hand Warm Candle",
@@ -302,12 +324,12 @@
       },
     ],
     pricelistParentId: "organic-warm-candle-oil-massage",
-    pricelistName: "Four Hand Warm Candle",
-    pricelistDescription: "A deeply relaxing treatment where two therapists work together using warmed oils.",
-    homeServiceName: "Four Hand Warm Candle",
-    homeServiceDescription: "Performed by two therapists working in synchronised movements for deeper relaxation.",
-    homeName: "Four Hand Warm Candle",
-    homeDescription: "A deeply relaxing massage where two therapists work together using warmed oils.",
+    pricelistName: "Four Hand Warm Candle Massage",
+    pricelistDescription: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
+    homeServiceName: "Four Hand Warm Candle Massage",
+    homeServiceDescription: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
+    homeName: "Four Hand Warm Candle Massage",
+    homeDescription: "Two therapists at once, with lukewarm wax from our natural shea butter candles dripped onto your skin and massaged in.",
   },
   {
     id: "shiatsu-massage",
@@ -728,7 +750,7 @@
     id: "couple-warm-candle-massage",
     category: "couple",
     pageSlug: "couple-spa",
-    image: { src: "/images/listmenu/couplewarmcandle.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/couplewarmcandle-2.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Warm Candle Massage · 2 Pax",
@@ -749,11 +771,11 @@
         homeLabel: "2 Hours · 2 pax",
       },
     ],
-    pricelistName: "Couple Warm Candle Oil Massage",
-    pricelistDescription: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
-    homeServiceName: "Couple Massage Warm Candle",
+    pricelistName: "Couple Warm Candle Massage",
+    pricelistDescription: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
+    homeServiceName: "Couple Warm Candle Massage",
     // PRICE-07: live Home Service text since 2026-09-26 (was "Using gently warmed candle oils to help soften muscles and create a calming shared experience.").
-    homeServiceDescription: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
+    homeServiceDescription: "Two warm candle massages side by side: lukewarm wax from a natural shea butter candle, dripped onto the skin and massaged in.",
     homeName: "Couple Warm Candle Massage",
     homeDescription: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
   },

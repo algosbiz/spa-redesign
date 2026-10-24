@@ -17,7 +17,7 @@ export const home = {
   seo: {
     title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
     description:
-      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
+      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 25 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
     // The spa's structured data (DaySpa) is built in src/lib/schema.ts and
     // shown on every page since the AEO roadmap (17 Oct).
   },
@@ -108,17 +108,17 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package A",
-        price: "449.000",
+        price: "520.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["1 Hr", "Mani & Pedi"],
-          ["30 Mins", "Cream bath"],
+          ["45–55 Mins", "Cream bath"],
         ],
       },
       {
         treatment: "Balinese Massage",
         name: "Package B",
-        price: "549.000",
+        price: "545.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["1 Hr", "Mani & Pedi"],
@@ -128,17 +128,17 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package C",
-        price: "449.000",
+        price: "485.000",
         items: [
           ["1 Hr", "Balinese Massage"],
-          ["30 Mins", "Cream bath"],
+          ["45–55 Mins", "Cream bath"],
           ["1 Hr", "Bali Moon Facial"],
         ],
       },
       {
         treatment: "Balinese Massage",
         name: "Package D",
-        price: "379.000",
+        price: "375.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["30 Mins", "Manicure"],
@@ -204,7 +204,7 @@ export const home = {
       {
         question: "4. Can I combine different treatments in one visit?",
         answer:
-          "Absolutely. At Spa Bali Moon, many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure or waxing to create a more complete spa experience. Ready-made spa packages start at IDR 299.000 per person; for example, a 1-hour Balinese massage with a 30-minute manicure and 30-minute pedicure is IDR 379.000 per person.",
+          "Absolutely. At Spa Bali Moon, many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure or waxing to create a more complete spa experience. Ready-made spa packages start at IDR 375.000 per person; for example, a 1-hour Balinese massage with a 30-minute manicure and 30-minute pedicure is IDR 379.000 per person.",
       },
       {
         question: "5. How do I choose the right treatment?",
@@ -360,6 +360,17 @@ const SLIDES = [
     image: "/images/treatments/cards/coconutoilmassage-warm.webp",
     icon: "/images/spa/CoconutOil.svg",
   },
+  // The two pages added on 24 Oct (owner).
+  {
+    name: "Warm Candle Massage",
+    image: "/images/treatments/cards/organicwarmcandle.webp",
+    icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Cupping Therapy",
+    image: "/images/treatments/cards/cuppingtherapy.webp",
+    icon: "/images/spa/DeepTissue.svg",
+  },
   {
     name: "Hair Braiding",
     image: "/images/treatments/cards/creambath-warm.webp",
@@ -378,6 +389,7 @@ const MENU_NAME: Record<string, string> = {
   "Coconut Oil Massage": "Virgin Cold-Press Coconut Oil Massage",
   "Couple Massage": "Couple Massage Balinese",
   "Cream Bath": "Hair Cream Bath",
+  "Warm Candle Massage": "Natural Warm Candle Massage",
   "Sunburn Treatment": "Aloe Vera Massage",
 };
 

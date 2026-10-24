@@ -19,7 +19,7 @@ const years = yearsOfExperience();
 const FAQ = [
   {
     question: "When was Spa Bali Moon founded?",
-    answer: `Spa Bali Moon was founded in ${business.foundedYear} and has offered traditional Balinese massage and spa treatments in Seminyak for ${years} years. Today the spa at Jl. Pangkung Sari No. 30 offers 23 massage, facial, body and beauty treatments, open daily from 9am to 11pm, with home service at villas and hotels.`,
+    answer: `Spa Bali Moon was founded in ${business.foundedYear} and has offered traditional Balinese massage and spa treatments in Seminyak for ${years} years. Today the spa at Jl. Pangkung Sari No. 30 offers 25 massage, facial, body and beauty treatments, open daily from 9am to 11pm, with home service at villas and hotels.`,
   },
   {
     question: "Where is Spa Bali Moon?",
@@ -70,7 +70,7 @@ export default function AboutPage() {
           },
           {
             label: "Treatments",
-            value: "23 massage, facial, body and beauty treatments · from IDR 69.000 per person",
+            value: "25 massage, facial, body and beauty treatments · from IDR 69.000 per person",
             figure: "23",
             detail: "massage, facial, body and beauty treatments, from IDR 69.000 per person",
           },
@@ -126,7 +126,7 @@ export default function AboutPage() {
         text="Each treatment has its own oils, creams and scrubs, from natural oils to well-known spa brands:"
         featuresLeft={[
           "Virgin cold-press coconut oil",
-          "Aromatherapy and organic warm candle oils",
+          "Aromatherapy and natural warm candle oils",
           "Argan Oil in every Bali Moon Facial",
           "Biokos, Mustika Ratu, Sari Ayu and Viva facials",
         ]}

@@ -24,7 +24,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "A head massage at Spa Bali Moon in Seminyak works the scalp, temples, neck and upper shoulders, with or without oil. Sessions are 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person, at our spa or at your villa or hotel. It's a good choice after long screen time or when your head and neck feel tight.",
+        "text": "A head massage at Spa Bali Moon in Seminyak works the scalp, temples, neck and upper shoulders, with or without oil. Sessions are 30 minutes (IDR 90.000), 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person, at our spa or at your villa or hotel. It's a good choice after long screen time or when your head and neck feel tight.",
         "items": [
           {
             "label": "Treatment",
@@ -32,7 +32,7 @@
           },
           {
             "label": "Length and price",
-            "value": "Per person: 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR 330.000"
+            "value": "Per person: 30 minutes IDR 90.000 · 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR 330.000"
           },
           {
             "label": "Where",
@@ -74,12 +74,22 @@
             "images": [
               "/images/services/headmassage/headmassage-4.webp",
               "/images/services/headmassage/headmassage-5.webp",
-              "/images/services/headmassage/headmassage-6.webp"
+              "/images/services/headmassage/headmassage-6.webp",
+              "/images/services/headmassage/headmassage-12.webp"
             ],
             "subTitle": "",
             "title": "Our Duration Options",
-            "text": "Our head massage comes in 1, 1.5 or 2 hours, adjusted to the pressure you like and the areas that need extra attention. A 30-minute head massage is also part of one of our packages, with a 1.5-hour hot stone massage and a 30-minute body scrub.",
+            "text": "Our head massage comes in 30 minutes, 1 hour, 1.5 hours or 2 hours, adjusted to the pressure you like and the areas that need extra attention. The 30-minute head massage is also part of one of our packages, with a 1.5-hour hot stone massage and a 30-minute body scrub.",
             "packages": [
+              {
+                "price": "IDR 90.000",
+                "name": "30 Minutes",
+                "treatments": [
+                  "A quick reset for head and neck",
+                  "A short break between plans",
+                  "Adding to another treatment"
+                ]
+              },
               {
                 "price": "IDR 159.000",
                 "name": "1 Hour",
@@ -275,11 +285,11 @@
               },
               {
                 "question": "How much does a head massage cost in Seminyak?",
-                "answer": "A head massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
+                "answer": "A head massage at Spa Bali Moon in Seminyak costs IDR 90.000 for 30 minutes, IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
               },
               {
                 "question": "How long does a head massage take?",
-                "answer": "A head massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person."
+                "answer": "A head massage at Spa Bali Moon in Seminyak takes 30 minutes (IDR 90.000), 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person."
               },
               {
                 "question": "Can I book a head massage for today?",

@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import { ArrowBox, PACKAGE_ICONS } from "@/components/home/icons";
 import ScrollRow from "@/components/home/ScrollRow";
 import { LotusIcon } from "@/components/ui/Lotus";
+import PackageCard, { packageNotes } from "@/components/pricelist/PackageCard";
 import { home } from "@/data/pages/home";
-import { displayPrice } from "@/lib/price";
+import { pricelistPage } from "@/data/pages/pricelist";
+import { packageSaving } from "@/lib/packageSaving";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /**
@@ -16,6 +17,7 @@ import { whatsappChatUrl } from "@/lib/whatsapp";
  */
 export default function Packages() {
   const { packages, packageIntro } = home;
+  const notes = packageNotes(pricelistPage.packageGroups);
   return (
     <div className="jsx-home homepage-pricing-services-join homepage-pricing-section">
       <section className="pricing-section-five section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130 v2-packages">
@@ -38,35 +40,22 @@ export default function Packages() {
           </div>
           <ScrollRow className="row g-4 v2-packages__row" below="md" label="Spa packages">
             {packages.cards.map((card, i) => (
-              <div key={card.name} className="col-sm-6 col-xl-3 pricing-block-five">
-                <div className="inner-box">
-                  <div className="shape">
-                    <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="" />
-                  </div>
-                  <div className="icon">{PACKAGE_ICONS[i]}</div>
-                  <div className="look-h4">
-                    {`${card.treatment} `}
-                    <br />
-                    {` ${card.name}`}
-                  </div>
-                  <div className="price look-h2">
-                    {displayPrice(card.price)}
-                    {/* As on /seminyak/ (copy rewrite, 15 Oct). */}
-                    <span className="pax-note">per person</span>
-                  </div>
-                  <ul>
-                    {card.items.map(([duration, service]) => (
-                      <li key={service}>
-                        <span className="duration">{duration}</span>
-                        <span className="service">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="btn-two mt-35">
-                    Reserve
-                    <ArrowBox />
-                  </a>
-                </div>
+              <div key={card.name} className="col-sm-6 col-xl-3 pkg-col">
+                <PackageCard
+                  code={card.name}
+                  name={card.treatment}
+                  icon={PACKAGE_ICONS[i]}
+                  price={card.price}
+                  unit="per person"
+                  items={card.items.map(([duration, service]) => ({ duration, service }))}
+                  cta={{ href: whatsappChatUrl, external: true }}
+                  // The price list's "Same as …" line, by the card's code ("Balinese Massage|A").
+                  note={notes.get(`${card.treatment}|${card.name.replace("Package ", "")}`)}
+                  saving={packageSaving(
+                    card.items.map(([duration, service]) => ({ duration, service })),
+                    card.price
+                  )}
+                />
               </div>
             ))}
           </ScrollRow>

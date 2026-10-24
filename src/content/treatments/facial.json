@@ -84,10 +84,10 @@
             ],
             "subTitle": "",
             "title": "Facial Packages in Seminyak",
-            "text": "Each of our four facial packages pairs the 1-hour Bali Moon Facial with a 1-hour massage, and three of them add a body scrub or cream bath. Prices are per person. Want a manicure and pedicure too? Our package with a manicure and pedicure, a Balinese massage and the Bali Moon Facial is IDR 549.000 per person.",
+            "text": "Each of our four facial packages pairs the 1-hour Bali Moon Facial with a 1-hour massage, and three of them add a body scrub or cream bath. Prices are per person. Want a manicure and pedicure too? Our package with a manicure and pedicure, a Balinese massage and the Bali Moon Facial is IDR 545.000 per person.",
             "packages": [
               {
-                "price": "IDR 439.000",
+                "price": "IDR 485.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -97,17 +97,17 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 609.000",
+                "price": "IDR 570.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
-                  "1 Hr Cream Bath",
+                  "45–55 Mins Cream Bath",
                   "1 Hr Thai Massage"
                 ],
                 "suffix": "per person"
               },
               {
-                "price": "IDR 445.000",
+                "price": "IDR 425.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -116,7 +116,7 @@
                 "suffix": "per person"
               },
               {
-                "price": "IDR 549.000",
+                "price": "IDR 580.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -312,7 +312,7 @@
               },
               {
                 "question": "How much does a facial cost in Seminyak?",
-                "answer": "The Bali Moon Tea Tree Facial is IDR 196.000 and the Bali Moon Gold Facial is IDR 269.000 per person at Spa Bali Moon in Seminyak. Four facial packages from IDR 439.000 per person add a massage, some with a body scrub or cream bath. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "The Bali Moon Tea Tree Facial is IDR 196.000 and the Bali Moon Gold Facial is IDR 269.000 per person at Spa Bali Moon in Seminyak. Four facial packages from IDR 425.000 per person add a massage, some with a body scrub or cream bath. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "Which facial is right for my skin?",

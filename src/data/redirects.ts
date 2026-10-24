@@ -181,6 +181,13 @@ export const proposedRedirects: OldUrlRedirect[] = [
   { from: "/cheap-massage-seminyak-bali-price-list/extra-massage-service-in-seminyak.html", to: "/outcall-home-service-massage/" },
   { from: "/cheap-massage-seminyak-bali-price-list/facial.html", to: "/seminyak/facial/" },
   { from: "/cheap-massage-seminyak-bali-price-list/the-packages.html", to: "/seminyak/" },
+  // The warm candle massage page (new 24 Oct): the old name and likely guesses.
+  { from: "/seminyak/organic-warm-candle-oil-massage/", to: "/seminyak/warm-candle-massage/" },
+  { from: "/seminyak/candle-massage/", to: "/seminyak/warm-candle-massage/" },
+  { from: "/warm-candle-massage/", to: "/seminyak/warm-candle-massage/" },
+  // The cupping therapy page (new 24 Oct): likely guesses.
+  { from: "/seminyak/cupping/", to: "/seminyak/cupping-therapy/" },
+  { from: "/cupping-therapy/", to: "/seminyak/cupping-therapy/" },
   { from: "/index.html", to: "/" },
   { from: "/contact.html", to: "/contact/" },
   { from: "/appointments.html", to: "/reservation/" },
