@@ -574,33 +574,7 @@
   }
 }
 
-/* "3 / 23" between the arrows (no arrows on phones, where a swipe does it)
-   and the one-time nudge that shows the row swipes (owner, 23 Oct). */
-.home-v2 .v2-scroll-nav__count {
-  min-width: 72px;
-  font-family: var(--title-font);
-  font-size: 15px;
-  line-height: 44px;
-  text-align: center;
-  color: var(--text-color);
-}
-.home-v2 .v2-scroll-nav__count span {
-  font-weight: 600;
-  color: var(--theme-color1);
-}
-.home-v2 .v2-scroll-track.is-nudging > * {
-  animation: v2-row-nudge 1.3s ease-in-out;
-}
-@keyframes v2-row-nudge {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  35%,
-  55% {
-    transform: translateX(-44px);
-  }
-}
+/* The "3 / 23" count and the one-time nudge moved to treat-cards.css (24 Oct). */
 @media (max-width: 767px) {
   .home-v2 .v2-alltreat .v2-scroll-nav__arrow {
     display: none;

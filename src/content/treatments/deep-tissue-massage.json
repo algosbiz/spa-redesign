@@ -309,13 +309,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Massages for Tired Muscles",
+            "title": "Treatments to Pair with a Deep Tissue Massage",
             "embedded": true,
             "related": [
-              "/seminyak/sport-massage/",
-              "/seminyak/traditional-massage/",
-              "/seminyak/thai-massage/",
-              "/seminyak/hot-stone-massage/"
+              "/seminyak/facial/",
+              "/seminyak/couple-spa/",
+              "/seminyak/foot-massage/",
+              "/seminyak/creambath/"
             ]
           }
         }

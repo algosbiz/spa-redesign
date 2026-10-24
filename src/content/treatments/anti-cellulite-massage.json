@@ -254,7 +254,7 @@
               },
               {
                 "question": "How is a cellulite massage different from a lymphatic massage?",
-                "answer": "Cellulite massage uses firmer, more targeted techniques that focus on the look of skin texture, mainly on the thighs, hips, buttocks and abdomen. Lymphatic massage uses much lighter, rhythmic movements and feels gentler and more relaxing. Spa Bali Moon offers both in Seminyak."
+                "answer": "Cellulite massage uses firmer, more targeted techniques that focus on the look of skin texture, mainly on the thighs, hips, buttocks and abdomen. [Lymphatic massage](/seminyak/lymphatic-drainage-massage/) uses much lighter, rhythmic movements and feels gentler and more relaxing. Spa Bali Moon offers both in Seminyak."
               },
               {
                 "question": "Is a cellulite massage painful?",
@@ -308,13 +308,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Body Treatments",
+            "title": "Treatments to Pair with Cellulite Massage",
             "embedded": true,
             "related": [
-              "/seminyak/lymphatic-drainage-massage/",
+              "/seminyak/facial/",
               "/seminyak/body-scrub/",
-              "/seminyak/balinese-massage/",
-              "/seminyak/coconut-oil-massage/"
+              "/seminyak/foot-massage/",
+              "/seminyak/manicure-pedicure/"
             ]
           }
         }

@@ -2412,3 +2412,72 @@
     height: 32px;
   }
 }
+
+/* The second photo (owner, 24 Oct: "keep the creativity but modernize" the
+   big round photo laid over the large one): an arch, the shape of a Balinese
+   temple gate, in a white frame with a soft shadow on the large photo's lower
+   right corner, and a gold hairline arch a little behind it. The seal moves
+   to the lower left so the two do not meet. Phones keep the one photo. The
+   radii make a half circle on a 4:5 box (50% of the width across, 40% of the
+   height down). */
+.intro-inset {
+  position: absolute;
+  right: -130px;
+  bottom: -60px;
+  z-index: 2;
+  width: 250px;
+  aspect-ratio: 4 / 5;
+}
+.intro-inset::before {
+  content: "";
+  position: absolute;
+  inset: -16px -16px 16px 16px;
+  z-index: -1;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.55);
+  border-radius: 50% 50% 26px 26px / 40% 40% 26px 26px;
+}
+.intro-inset img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 7px solid var(--theme-color-white);
+  border-radius: 50% 50% 26px 26px / 40% 40% 26px 26px;
+  background-color: var(--theme-color-white);
+  box-shadow: 0 34px 60px -32px rgba(28, 26, 29, 0.55);
+}
+@media (min-width: 576px) {
+  .about-section-two .image-column .inner-column {
+    margin-bottom: 72px;
+  }
+  .about-section-two .intro-seal {
+    right: auto;
+    left: 32px;
+  }
+}
+/* Laptops: less over the gap, so the hairline stays clear of the text column. */
+@media (max-width: 1399px) {
+  .intro-inset {
+    right: -56px;
+    width: 190px;
+  }
+}
+/* Tablets: the text is under the photos, so the arch can sit further out again. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .intro-inset {
+    right: -90px;
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .intro-inset {
+    right: 18px;
+    bottom: -48px;
+    width: 160px;
+  }
+}
+@media (max-width: 575px) {
+  .intro-inset {
+    display: none;
+  }
+}

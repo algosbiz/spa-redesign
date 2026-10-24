@@ -221,7 +221,7 @@ export const home = {
       {
         question: "7. How much does a massage cost in Seminyak?",
         answer:
-          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist in the Seminyak area.",
+          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and [couple massages](/seminyak/couple-spa/) start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist in the Seminyak area.",
       },
       {
         question: "8. Where is Spa Bali Moon?",
@@ -250,7 +250,9 @@ export const home = {
 /* ------------------------------------------------------------------------ */
 
 /**
- * The slider under the About section, in the live order. Each card takes its
+ * The slider under the About section: the best sellers first (owner, 24 Oct:
+ * after the Balinese massage, facial, couples and lymphatic, then mani-pedi,
+ * foot massage and cream bath), then the live order. Each card takes its
  * link, photo and "From" price from the spa menu (home-catalog.ts); `image`
  * is only the fallback for the two cards that have no menu entry.
  */
@@ -259,6 +261,31 @@ const SLIDES = [
     name: "Balinese Massage",
     image: "/images/listmenu/balinesemassage.webp",
     icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Bali Moon Facial",
+    image: "/images/listmenu/balimoonteatreefacial.webp",
+    icon: "/images/spa/Balinese.svg",
+  },
+  {
+    name: "Couple Massage",
+    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
+    icon: "/images/spa/Couple.svg",
+  },
+  {
+    name: "Lymphatic Massage",
+    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
+    icon: "/images/spa/Lymphatic.svg",
+  },
+  {
+    name: "Manicure Pedicure",
+    image: "/images/treatments/cards/manicurepedicure-warm.webp",
+    icon: "/images/spa/Manicure.svg",
+  },
+  {
+    name: "Foot Massage",
+    image: "/images/listmenu/footmassage.webp",
+    icon: "/images/spa/FootMassage.svg",
   },
   {
     name: "Cream Bath",
@@ -274,11 +301,6 @@ const SLIDES = [
     name: "Sports Massage",
     image: "/images/listmenu/sportmassage.webp",
     icon: "/images/spa/sports.svg",
-  },
-  {
-    name: "Bali Moon Facial",
-    image: "/images/listmenu/balimoonteatreefacial.webp",
-    icon: "/images/spa/Balinese.svg",
   },
   {
     name: "Deep Tissue Massage",
@@ -306,11 +328,6 @@ const SLIDES = [
     icon: "/images/spa/EarCandle.svg",
   },
   {
-    name: "Lymphatic Massage",
-    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
-    icon: "/images/spa/Lymphatic.svg",
-  },
-  {
     name: "Traditional Massage",
     image: "/images/listmenu/traditionalmassage.webp",
     icon: "/images/spa/Balinese.svg",
@@ -321,24 +338,9 @@ const SLIDES = [
     icon: "/images/spa/cellulite.svg",
   },
   {
-    name: "Foot Massage",
-    image: "/images/listmenu/footmassage.webp",
-    icon: "/images/spa/FootMassage.svg",
-  },
-  {
-    name: "Manicure Pedicure",
-    image: "/images/treatments/cards/manicurepedicure-warm.webp",
-    icon: "/images/spa/Manicure.svg",
-  },
-  {
     name: "Thai Massage",
     image: "/images/treatments/cards/thaimassage-warm.webp",
     icon: "/images/spa/thai.svg",
-  },
-  {
-    name: "Couple Massage",
-    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
-    icon: "/images/spa/Couple.svg",
   },
   {
     name: "Foot Reflexology",

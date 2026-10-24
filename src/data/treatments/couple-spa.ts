@@ -15,7 +15,7 @@ const coupleSpa: Treatment = {
   cardImage: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
   seo: {
     title: "Couples Massage Bali - Couple Spa Seminyak - Spa Bali Moon",
-    description: "Couples massage in Bali: warm candle massage with facial, natural scrub and Balinese massage. Book at our Seminyak spa or in your villa.",
+    description: "Couples massage in Seminyak, Bali: side by side in a private room, from IDR 319.000 for two, plus couple spa packages. At our spa or your villa.",
   },
   hero: {
     eyebrow: "Together in Relaxation",

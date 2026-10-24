@@ -268,7 +268,7 @@
               },
               {
                 "question": "Can couples have a warm candle massage together?",
-                "answer": "Yes. The couple warm candle massage is for two guests side by side in a private room: IDR 539.000 for 1 hour, IDR 799.000 for 1.5 hours and IDR 999.000 for 2 hours, for two. Couple packages C and D add an ear candle or a Bali Moon Facial (IDR 810.000 and IDR 875.000 for two)."
+                "answer": "Yes. The [couple warm candle massage](/seminyak/couple-spa/) is for two guests side by side in a private room: IDR 539.000 for 1 hour, IDR 799.000 for 1.5 hours and IDR 999.000 for 2 hours, for two. Couple packages C and D add an ear candle or a Bali Moon Facial (IDR 810.000 and IDR 875.000 for two)."
               },
               {
                 "question": "What is a four hand warm candle massage?",
@@ -306,13 +306,13 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Massages and Body Treatments",
+            "title": "Treatments to Pair with a Warm Candle Massage",
             "embedded": true,
             "related": [
-              "/seminyak/balinese-massage/",
-              "/seminyak/coconut-oil-massage/",
-              "/seminyak/hot-stone-massage/",
-              "/seminyak/couple-spa/"
+              "/seminyak/facial/",
+              "/seminyak/couple-spa/",
+              "/seminyak/body-scrub/",
+              "/seminyak/manicure-pedicure/"
             ]
           }
         }
