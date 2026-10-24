@@ -123,7 +123,7 @@ export function HomeServicePrices() {
   return (
     <section id="home-service-prices" className={`oc-section oc-prices ${PAPER} pt-130 pb-130`}>
       <div className="container">
-        <Header eyebrow="Prices at your villa" title="Home Service Massage Prices in Seminyak">
+        <Header eyebrow="Prices at Your Villa" title="Home Service Massage Prices in Seminyak">
           In the Seminyak area, what you pay at your villa, hotel or home is the treatment price plus {idr(fee)} per
           therapist. These are our most-booked home treatments, with the fee already added:
         </Header>
@@ -227,7 +227,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className={`oc-section oc-how ${PAPER} pt-130 pb-130`}>
       <div className="container">
-        <Header eyebrow="From message to massage" title="How Our Outcall Massage Works" />
+        <Header eyebrow="From Message to Massage" title="How Our Outcall Massage Works" />
         {/* Four steps in a row of cards, then the photo beside what to expect. */}
         <ol className="oc-steps">
           {STEPS.map((step, i) => (
@@ -297,7 +297,7 @@ export function HomeServiceAreas() {
   return (
     <section id="areas" className={`oc-section oc-areas ${PAPER} pt-130 pb-130`}>
       <div className="container">
-        <Header eyebrow="Where we travel" title="Home Service Areas Around Seminyak">
+        <Header eyebrow="Where We Travel" title="Home Service Areas Around Seminyak">
           Our therapists leave from our spa on Jl. Pangkung Sari in Seminyak, so the closer you stay, the sooner they
           reach you. In the Seminyak area a therapist usually arrives within 30 to 60 minutes of booking. Here is the
           home service fee and the usual drive time from the spa for each area:
@@ -391,7 +391,7 @@ export function HomeVsSpa() {
   return (
     <section className="oc-section oc-compare pt-130 pb-130">
       <div className="container">
-        <Header eyebrow="Two ways to book" title="Home Service Compared with Our Seminyak Spa">
+        <Header eyebrow="Two Ways to Book" title="Home Service Compared with Our Seminyak Spa">
           Every home service therapist works from our day spa in Seminyak. Here&apos;s how the two options compare:
         </Header>
         {/*
@@ -474,7 +474,7 @@ export function GroupMassage() {
       <div className="container">
         {/* Owner fact C10 ("We can send up to X therapists to one booking.") and C14 ("We also look after
             wedding parties, birthdays and retreats.") would follow the first paragraph. */}
-        <Header eyebrow="More than one guest" title="Couples, Families & Villa Group Massage">
+        <Header eyebrow="More Than One Guest" title="Couples, Families & Villa Group Massage">
           We send several therapists at once, so your partner, family or friends are all treated at the same time in
           your villa. Tell us how many guests and which treatments on WhatsApp, and we&apos;ll
           confirm how many therapists we can send for your chosen time.
@@ -517,7 +517,7 @@ export function LicensedSpa({ plain = false }: { plain?: boolean }) {
   return (
     <section className={`oc-section oc-licensed ${plain ? "" : PAPER} pt-130 pb-130`}>
       <div className="container">
-        <Header eyebrow="Who's coming to your villa" title="A Licensed Seminyak Spa, Coming to You">
+        <Header eyebrow="Who's Coming to Your Villa" title="A Licensed Seminyak Spa, Coming to You">
           Spa Bali Moon has run a day spa at Jl. Pangkung Sari No. 30, Seminyak since {business.foundedYear}. Home
           service is delivered by the same therapists who work in our spa, and you&apos;re welcome to visit us before
           you book. We offer professional relaxation and therapeutic massage only.

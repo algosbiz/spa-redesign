@@ -2492,6 +2492,17 @@
 :root:root :is(h1, h2, h3, .title) {
   text-wrap: balance;
 }
+/* Section headings as written, not with every word capitalised (owner, 24
+   Oct: "How Much Does A Massage Cost In Seminyak?" looked off): proper title
+   case, the small words lower case ("How Much Does a Massage Cost in
+   Seminyak?"). The theme capitalised every section title and kicker. */
+:root:root :is(.section-header, .section-header__flex) :is(.title, .sub-title) {
+  text-transform: none;
+}
+/* Their intro paragraphs without a lone last word ("… in the Seminyak / area."). */
+:root:root .section-header p {
+  text-wrap: pretty;
+}
 
 /* The two tick lists of the treatment pages' split sections: the theme centred
    them against each other and pushed them apart, so a shorter list started
