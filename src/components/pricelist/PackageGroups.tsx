@@ -2,6 +2,7 @@
 import PackageCard, { packageNotes } from "@/components/pricelist/PackageCard";
 import type { PackageGroup } from "@/data/pages/pricelist";
 import { packageSaving } from "@/lib/packageSaving";
+import { linkedText } from "@/lib/linkedText";
 import { priceValue, withDots } from "@/lib/price";
 
 const COUNT = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
@@ -66,7 +67,7 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
                   {group.title}
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                  {words.answer} {group.description}
+                  {words.answer} {linkedText(group.description)}
                 </p>
               </div>
               {/* Four cards a row on laptops; on phones the group's cards slide sideways (outcall.css section 27). */}

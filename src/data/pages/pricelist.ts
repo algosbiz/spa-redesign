@@ -1411,7 +1411,8 @@ export const pricelistPage = {
     {
       title: "Couples Massage Packages",
       includes: "a 1-hour Balinese or warm candle massage side by side, with an ear candle or a Bali Moon Facial",
-      description: "A quiet hour side by side, to share with someone special.",
+      // The link: the couple page is the one to rank for couples searches (24 Oct).
+      description: "A quiet hour side by side, to share with someone special. More about our [couples massage in Seminyak](/seminyak/couple-spa/).",
       cardTitle: "Couple Massage",
       twoPax: true,
       packages: [
