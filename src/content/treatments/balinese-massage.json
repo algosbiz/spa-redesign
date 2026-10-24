@@ -453,10 +453,10 @@
                 "rightShapeSrc": "/images/shape/service-shape-right.png",
                 "embedded": true,
                 "related": [
+                  "/seminyak/warm-candle-massage/",
                   "/seminyak/hot-stone-massage/",
-                  "/seminyak/foot-reflexology/",
-                  "/seminyak/body-scrub/",
-                  "/seminyak/facial/"
+                  "/seminyak/facial/",
+                  "/seminyak/couple-spa/"
                 ]
               }
             }
