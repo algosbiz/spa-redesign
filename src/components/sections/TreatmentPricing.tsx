@@ -9,7 +9,8 @@ export type TreatmentPricingProps = {
   title?: ReactNode;
   text?: ReactNode;
   /** `image` exists in some live data but the live component shows `images[i]`. */
-  packages?: { price: string; suffix?: string; name: string; treatments: string[]; image?: string }[];
+  /** `was`: the price before a package discount, struck through above the price. */
+  packages?: { price: string; was?: string; suffix?: string; name: string; treatments: string[]; image?: string }[];
   leftShapeSrc?: string;
   images?: string[];
   topContent?: ReactNode;
@@ -110,6 +111,12 @@ export default function TreatmentPricing({
                       <div className="shape">
                         <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="image" />
                       </div>
+                      {e.was ? (
+                        <p className="package-was">
+                          <span className="sr-only">Normally </span>
+                          <s>{displayPrice(e.was)}</s>
+                        </p>
+                      ) : null}
                       <p className="price package-price">
                         {displayPrice(e.price)}{" "}
                         {/* "per person" / "for two guests" (copy rewrite, 15 Oct): a line of its own. */}

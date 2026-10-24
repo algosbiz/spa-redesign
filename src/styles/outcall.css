@@ -2492,6 +2492,17 @@
 :root:root :is(h1, h2, h3, .title) {
   text-wrap: balance;
 }
+/* Section headings as written, not with every word capitalised (owner, 24
+   Oct: "How Much Does A Massage Cost In Seminyak?" looked off): proper title
+   case, the small words lower case ("How Much Does a Massage Cost in
+   Seminyak?"). The theme capitalised every section title and kicker. */
+:root:root :is(.section-header, .section-header__flex) :is(.title, .sub-title) {
+  text-transform: none;
+}
+/* Their intro paragraphs without a lone last word ("… in the Seminyak / area."). */
+:root:root .section-header p {
+  text-wrap: pretty;
+}
 
 /* The two tick lists of the treatment pages' split sections: the theme centred
    them against each other and pushed them apart, so a shorter list started
@@ -2753,4 +2764,31 @@
     justify-content: center;
     width: 100%;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* 31. Struck-through "was" prices (owner, 24 Oct: cupping with a      */
+/*     Balinese massage, normally IDR 659.000): above the price in the  */
+/*     banner's price tiles and on the treatment pages' price cards.    */
+/* ------------------------------------------------------------------ */
+.banner-prices__was {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--text-font);
+  font-size: 13px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration-color: rgba(var(--theme-color1-rgb), 0.95);
+  text-decoration-thickness: 1.5px;
+}
+.pricing-block .inner-box .package-was {
+  margin: 0 0 -4px;
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 1.3;
+  color: #8f8a83;
+}
+.package-was s {
+  text-decoration-color: rgba(var(--theme-color1-rgb), 0.8);
+  text-decoration-thickness: 1.5px;
 }

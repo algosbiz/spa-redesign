@@ -33,7 +33,7 @@
           },
           {
             "label": "Length and price",
-            "value": "Per person: 1 hour IDR 500.000 · 2 hours with massage IDR 600.000"
+            "value": "Per person: 1 hour IDR 500.000 · 2 hours with massage IDR 600.000 (was IDR 659.000)"
           },
           {
             "label": "Where",
@@ -91,6 +91,7 @@
               },
               {
                 "price": "IDR 600.000",
+                "was": "IDR 659.000",
                 "name": "2 Hours with Massage",
                 "treatments": [
                   "1 hour of cupping",

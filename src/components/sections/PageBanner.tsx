@@ -199,6 +199,11 @@ export default function PageBanner({
                             {priceUnit ? <span className={`${S} banner-prices__unit`}> {priceUnit.toUpperCase()}</span> : null}
                           </span>{" "}
                           <span className={`${S} banner-prices__amount`}>
+                            {tile.was ? (
+                              <s className={`${S} banner-prices__was`}>
+                                <span className="sr-only">Normally </span>IDR {tile.was}
+                              </s>
+                            ) : null}
                             <span className={`${S} banner-prices__cur`}>IDR</span> {tile.amount}
                           </span>
                         </li>

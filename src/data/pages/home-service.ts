@@ -213,7 +213,7 @@ export const homeServicePage = {
     },
   },
   info: {
-    eyebrow: "Treat yourself to a Balinese spa experience right where you are",
+    eyebrow: "Treat Yourself to a Balinese Spa Experience Right Where You Are",
     heading: "Home Service Massage",
     items: [
       {
