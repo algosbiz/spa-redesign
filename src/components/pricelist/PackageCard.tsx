@@ -15,7 +15,7 @@ function spell(total: number): string {
 
 /**
  * The treatments' lengths added up: "2.5 hours", or a range when one is
- * ("45–55 Mins" cream bath, owner, 24 Oct): "2 hours 45–55 minutes".
+ * ("45–55 Mins"): "2 hours 45–55 minutes". No package uses one since 25 Oct.
  */
 export function totalTime(durations: string[]): string | null {
   const parts = durations.map(lengthOf);

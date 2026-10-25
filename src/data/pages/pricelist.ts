@@ -914,7 +914,7 @@ export const pricelistPage = {
               service: "Mani & Pedi"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             }
           ]
@@ -944,7 +944,7 @@ export const pricelistPage = {
               service: "Balinese Massage"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1003,7 +1003,7 @@ export const pricelistPage = {
               service: "Thai Massage"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1033,7 +1033,7 @@ export const pricelistPage = {
               service: "Thai Massage"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1054,7 +1054,7 @@ export const pricelistPage = {
           price: "IDR 570.000",
           items: [
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1071,7 +1071,7 @@ export const pricelistPage = {
           price: "IDR 480.000",
           items: [
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1088,7 +1088,7 @@ export const pricelistPage = {
           price: "IDR 485.000",
           items: [
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1105,7 +1105,7 @@ export const pricelistPage = {
           price: "IDR 545.000",
           items: [
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1172,7 +1172,7 @@ export const pricelistPage = {
               service: "Thai Massage"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             }
           ]
@@ -1227,7 +1227,7 @@ export const pricelistPage = {
               service: "Hot Stone"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1295,7 +1295,7 @@ export const pricelistPage = {
               service: "Bali Moon Facial"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             },
             {
@@ -1354,7 +1354,7 @@ export const pricelistPage = {
               service: "Balinese Massage"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream bath"
             }
           ]
@@ -1384,7 +1384,7 @@ export const pricelistPage = {
               service: "Mani & Pedi"
             },
             {
-              duration: "45–55 Mins",
+              duration: "45 Mins",
               service: "Cream Bath"
             }
           ]
