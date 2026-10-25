@@ -73,7 +73,10 @@ export default function VisitUs({
   look = "rows",
   leftShapeSrc = "/images/shape/testimonial-two-shape-left.png",
   rightShapeSrc = "/images/shape/leaf/2a.png",
+  note,
 }: {
+  /** A sentence after the lead (the homepage: the spa's showers and Wi-Fi). */
+  note?: string;
   treatment: string;
   inline?: string;
   /** In place of "Book … in Seminyak" (the About page). */
@@ -192,6 +195,7 @@ export default function VisitUs({
         ) : (
           "."
         )}
+        {note && <> {note}</>}
       </p>
       {tiles ? (
         <dl className="visit-us__tiles">
