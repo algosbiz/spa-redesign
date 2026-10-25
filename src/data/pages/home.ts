@@ -15,18 +15,21 @@ import { catalog, type CatalogItem } from "./home-catalog";
  */
 export const home = {
   seo: {
-    title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
+    // Owner, 25 Oct: the homepage is the page for "day spa in Seminyak", with
+    // the Day Spa page folded into it; "Home Service" is back in the title
+    // (it left on 6 Oct and home service searches slipped).
+    title: "Day Spa in Seminyak & Home Service Massage | Spa Bali Moon",
     description:
-      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 25 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
+      "Day spa in Seminyak since 2009: Balinese massage, facials and spa packages, or home service at your villa or hotel. 25 treatments from IDR 69.000.",
     // The spa's structured data (DaySpa) is built in src/lib/schema.ts and
     // shown on every page since the AEO roadmap (17 Oct).
   },
 
   hero: {
-    // The H1 reads "Seminyak Spa & Balinese Massage at Spa Bali Moon"; "at"
+    // The H1 reads "Day Spa in Seminyak at Spa Bali Moon" (25 Oct); "at"
     // opens the last line (the highlighted part is a line of its own), so it
     // never stands alone on a line (19 Oct).
-    title: "Seminyak Spa & Balinese Massage",
+    title: "Day Spa in Seminyak",
     highlightedTitle: "at Spa Bali Moon",
     text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, [facials](/seminyak/facial/), and beauty services at our Seminyak spa, with [home service](/outcall-home-service-massage/) also available for hotels and villas in nearby areas.",
     /*
