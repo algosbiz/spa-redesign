@@ -4,6 +4,7 @@ import AboutIntro from "@/components/sections/AboutIntro";
 import AboutSplit from "@/components/sections/AboutSplit";
 import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
+import FeaturedPackage from "@/components/pricelist/FeaturedPackage";
 import Funfacts from "@/components/sections/Funfacts";
 import HomeServiceLine from "@/components/sections/HomeServiceLine";
 import PageBanner from "@/components/sections/PageBanner";
@@ -27,6 +28,8 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   AboutSplitAlt,
   DecorationMotion,
   FaqSection,
+  // The new special (lymphatic and facial pages, 25 Oct).
+  FeaturedPackage,
   FloralDecoration,
   Funfacts,
   HomeServiceLine,

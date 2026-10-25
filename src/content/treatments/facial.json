@@ -162,6 +162,12 @@
       ]
     },
     {
+      "type": "FeaturedPackage",
+      "props": {
+        "section": true
+      }
+    },
+    {
       "type": "div",
       "props": {
         "className": "jsx-facial bali-moon-facial-funfact"

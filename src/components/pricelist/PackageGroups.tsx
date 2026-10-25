@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import PackageCard, { packageNotes } from "@/components/pricelist/PackageCard";
+import type { ReactNode } from "react";
 import type { PackageGroup } from "@/data/pages/pricelist";
 import { packageSaving } from "@/lib/packageSaving";
 import { linkedText } from "@/lib/linkedText";
@@ -41,7 +42,16 @@ const PAGE_OF_CARD: Record<string, string> = {
  * is a "pricing-section-five" band; the first gets the torn top edge and the
  * last the torn bottom edge, so together they read as one paper band.
  */
-export default function PackageGroups({ groups, icons }: { groups: PackageGroup[]; icons: Record<string, string> }) {
+export default function PackageGroups({
+  groups,
+  icons,
+  featured,
+}: {
+  groups: PackageGroup[];
+  icons: Record<string, string>;
+  /** Shown at the top of the first band, before its group (the new special, 25 Oct). */
+  featured?: ReactNode;
+}) {
   const sorted = [...groups].sort((a, b) => a.title.localeCompare(b.title));
   const notes = packageNotes(groups);
   return (
@@ -59,6 +69,7 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
             className={`pricing-section-five package-pricing-section bg-sub ${edges}${first ? " pt-100" : " pt-40"}${last ? " pb-100" : " pb-40"}`}
           >
             <div className="container">
+              {first && featured}
               <div className="section-header mb-60 center">
                 <div className="sub-title look-h4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                   {words.kicker}

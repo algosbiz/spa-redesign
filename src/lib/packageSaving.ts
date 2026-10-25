@@ -29,6 +29,8 @@ const PRICES: Record<string, (twoPax: boolean) => number> = {
   "30|pedicure": () => priceOf("manicure-pedicure", "Pedicure"),
   "60|mani & pedi": () => priceOf("manicure-pedicure", "Manicure & Pedicure"),
   "30|ear candle": (two) => priceOf("ear-candle", "30 Minutes") * (two ? 2 : 1),
+  "60|lymphatic": () => priceOf("lymphatic-massage", "1 Hour"),
+  "60|bali moon gold facial": () => priceOf("bali-moon-gold-facial", "Price"),
 };
 
 /** "1 Hr", "1,5 Hr", "30 Mins", "45–55 Mins" -> [shortest, longest] in minutes; null when it is not a length. */

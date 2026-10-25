@@ -140,6 +140,12 @@
       ]
     },
     {
+      "type": "FeaturedPackage",
+      "props": {
+        "section": true
+      }
+    },
+    {
       "type": "div",
       "props": {
         "className": "jsx-lymphatic-drainage-massage lymphatic-massage-funfact"

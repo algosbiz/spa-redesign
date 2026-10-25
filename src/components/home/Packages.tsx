@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowBox, PACKAGE_ICONS } from "@/components/home/icons";
 import ScrollRow from "@/components/home/ScrollRow";
 import { LotusIcon } from "@/components/ui/Lotus";
+import FeaturedPackage from "@/components/pricelist/FeaturedPackage";
 import PackageCard, { packageNotes } from "@/components/pricelist/PackageCard";
 import { home } from "@/data/pages/home";
 import { pricelistPage } from "@/data/pages/pricelist";
@@ -38,6 +39,8 @@ export default function Packages() {
               </Link>
             </div>
           </div>
+          {/* The new special (owner, 25 Oct). */}
+          <FeaturedPackage />
           <ScrollRow className="row g-4 v2-packages__row" below="md" label="Spa packages">
             {packages.cards.map((card, i) => (
               <div key={card.name} className="col-sm-6 col-xl-3 pkg-col">

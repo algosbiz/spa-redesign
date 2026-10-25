@@ -101,7 +101,7 @@ export const home = {
   packages: {
     subTitle: "Spa Packages",
     title: "Day Spa and Massage in Seminyak",
-    text: "Each package pairs a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial, priced per person.",
+    text: "Our newest package pairs a lymphatic massage with the Gold Facial; the others pair a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial. Prices are per person.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
     cards: [
