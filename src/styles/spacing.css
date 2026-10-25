@@ -214,7 +214,7 @@
      that show (white cards on paper) */
   --sp-in-bottom: 35px;
 }
-:root body div[class*="-services"]:not(.balinese-massage-services, .day-spa-services) > .service-section-two {
+:root body div[class*="-services"]:not(.balinese-massage-services) > .service-section-two {
   /* treatment pages: white cards on white, so the cards' own padding (40px,
      room for the arrow that shows on hover) is empty too, and the row is as
      tall as its tallest card, hidden ones included; 80px at every width

@@ -4,10 +4,9 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { homeServiceLines } from "@/data/homeServiceLines";
-import { pricelistPage } from "@/data/pages/pricelist";
-import { priceList, priceOf } from "@/data/pricelist";
+import { priceOf } from "@/data/pricelist";
 import { treatments } from "@/data/treatments";
-import { priceValue, withDots } from "@/lib/price";
+import { withDots } from "@/lib/price";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -38,7 +37,6 @@ const NAMES: Record<string, { heading: string; inline: string; service?: string 
   "couple-spa": { heading: "a Couples Massage", inline: "a couples massage", service: "Couples Massage" },
   creambath: { heading: "a Cream Bath", inline: "a cream bath", service: "Cream Bath" },
   "cupping-therapy": { heading: "Cupping Therapy", inline: "cupping therapy" },
-  "day-spa": { heading: "a Day Spa Visit", inline: "a day spa visit", service: "Day Spa" },
   "deep-tissue-massage": { heading: "a Deep Tissue Massage", inline: "a deep tissue massage" },
   "ear-candle": { heading: "an Ear Candle Treatment", inline: "an ear candle treatment", service: "Ear Candle Treatment" },
   facial: { heading: "a Facial", inline: "a facial", service: "Facial" },
@@ -78,10 +76,6 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
     leftShapeSrc: "/images/shape/banner-six-shape2.png",
     rightShapeSrc: "/images/shape/step-shape-left.png",
   },
-  TreatmentLinks: {
-    leftShapeSrc: "/images/shape/banner-three-shape.png",
-    rightShapeSrc: "/images/shape/service-four-shape-right.png",
-  },
 };
 
 const tile = (length: string, id: string, option: string) => ({ length, amount: withDots(priceOf(id, option)) });
@@ -106,22 +100,6 @@ const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
     tile("Under arms", "waxing", "Under Arms"),
     tile("Full legs", "waxing", "Full Legs"),
     tile("Brazilian", "waxing", "Waxing Brazilian"),
-  ],
-  "day-spa": [
-    {
-      length: "Treatments from",
-      amount: withDots(Math.min(...priceList.flatMap((item) => item.options.map((option) => option.price)))),
-    },
-    {
-      length: "Spa packages from",
-      amount: withDots(
-        Math.min(
-          ...pricelistPage.packageGroups
-            .filter((group) => !group.twoPax)
-            .flatMap((group) => group.packages.map((pack) => priceValue(pack.price))),
-        ),
-      ),
-    },
   ],
 };
 
@@ -247,7 +225,7 @@ export default async function TreatmentPage({ params }: Props) {
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
   );
-  const visited = insertBefore(decorated, ["ServiceSlider", "TreatmentLinks"], {
+  const visited = insertBefore(decorated, ["ServiceSlider"], {
     type: "VisitUs",
     props: { treatment: names.heading, inline: names.inline, look: "columns" },
   });

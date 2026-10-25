@@ -233,6 +233,27 @@ export const home = {
         answer:
           "Spa Bali Moon is open daily from 9am to 11pm at Jl. Pangkung Sari No. 30, Petitenget, Seminyak. Home service at your villa or hotel and WhatsApp booking are available during the same hours, and walk-ins are welcome at the spa. To book ahead, message us on WhatsApp at +62 878-6317-5144.",
       },
+      // From the Day Spa page, folded into the homepage (owner, 25 Oct).
+      {
+        question: "10. What does a day spa visit in Seminyak include?",
+        answer:
+          "A day spa visit usually includes one or more services such as massage, [facials](/seminyak/facial/), body scrubs, cream bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room.",
+      },
+      {
+        question: "11. How many hours should I spend at a day spa?",
+        answer:
+          "Plan on 1 to 1.5 hours for a single treatment at Spa Bali Moon, or a few hours if you combine several. Spa packages combine two or three treatments in one visit.",
+      },
+      {
+        question: "12. Which spa treatment is best after a flight?",
+        answer:
+          "A relaxing full-body massage, such as a Balinese massage, is often a good place to begin after a flight, or a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) if your legs feel heavy. Depending on how you feel, you can follow it with a facial, body scrub, cream bath or foot treatment for a longer visit at Spa Bali Moon.",
+      },
+      {
+        question: "13. How much does a day spa package cost in Seminyak?",
+        answer:
+          "Spa packages at Spa Bali Moon in Seminyak start at IDR 375.000 per person. The Balinese massage packages, IDR 375.000 to IDR 545.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area.",
+      },
     ],
   },
 

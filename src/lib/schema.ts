@@ -201,24 +201,7 @@ function offersFor(slug: string, url: string) {
   // The couple page also sells the couple packages (priced for two).
   const couple = slug === "couple-spa" ? pricelistPage.packageGroups.find((g) => g.twoPax) : undefined;
   const packages = couple ? couple.packages.map((p, i) => offer(`${packageName(couple, i)}, for two`, priceOfPack(p.price), url)) : [];
-  // The day spa page sells the spa packages: their range, per person.
-  const singles = pricelistPage.packageGroups.filter((g) => !g.twoPax).flatMap((g) => g.packages.map((p) => priceOfPack(p.price)));
-  const daySpa =
-    slug === "day-spa"
-      ? [
-          {
-            "@type": "AggregateOffer",
-            name: "Spa packages, per person",
-            lowPrice: amount(Math.min(...singles)),
-            highPrice: amount(Math.max(...singles)),
-            priceCurrency: "IDR",
-            offerCount: new Set(singles).size,
-            url: absoluteUrl("/seminyak/"),
-            seller: provider,
-          },
-        ]
-      : [];
-  return [...offers, ...packages, ...daySpa];
+  return [...offers, ...packages];
 }
 
 const CATEGORY_NAMES: Record<string, string> = { massage: "Massage", beauty: "Beauty", couple: "For couples" };

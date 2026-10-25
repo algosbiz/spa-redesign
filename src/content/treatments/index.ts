@@ -5,7 +5,6 @@ import bodyScrub from "./body-scrub.json";
 import coconutOilMassage from "./coconut-oil-massage.json";
 import coupleSpa from "./couple-spa.json";
 import creambath from "./creambath.json";
-import daySpa from "./day-spa.json";
 import deepTissueMassage from "./deep-tissue-massage.json";
 import earCandle from "./ear-candle.json";
 import facial from "./facial.json";
@@ -42,7 +41,6 @@ export const treatmentSeeds = {
   "couple-spa": coupleSpa,
   "creambath": creambath,
   "cupping-therapy": cuppingTherapy,
-  "day-spa": daySpa,
   "deep-tissue-massage": deepTissueMassage,
   "ear-candle": earCandle,
   "facial": facial,

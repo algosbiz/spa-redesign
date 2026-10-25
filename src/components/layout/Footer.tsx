@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { business } from "@/data/business";
-import { footerDaySpaLink, footerDaySpaPages, footerHomeServices, legalLinks } from "@/data/navigation";
+import { footerDaySpaPages, footerHomeServices, legalLinks } from "@/data/navigation";
 import { sitemapPages } from "@/data/sitemap";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -54,7 +54,6 @@ const SOCIAL = [
  */
 const PHONE_LINKS: { label: string; href: string; icon: MenuIconName }[] = [
   ...footerDaySpaPages.map((l) => ({ ...l, icon: "lotus" as const })),
-  { ...footerDaySpaLink, icon: "stones" },
   { label: "Price List", href: "/seminyak/", icon: "tag" },
   ...footerHomeServices.items.map((l, i) => ({ ...l, icon: (["home", "hotel", "pin"] as const)[i] ?? "home" })),
 ];

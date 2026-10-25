@@ -252,11 +252,6 @@ export const SECTIONS: Record<string, SectionSchema> = {
       },
     ],
   },
-  TreatmentLinks: {
-    label: "Treatment links",
-    fields: [{ key: "title", label: "Heading", kind: "text" }, paragraph],
-    note: "The list of treatments under the text comes from the website menu.",
-  },
   ServiceSlider: {
     label: "Other treatments",
     fields: [{ key: "title", label: "Heading", kind: "text" }],

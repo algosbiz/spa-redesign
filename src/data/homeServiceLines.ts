@@ -66,8 +66,6 @@ export const homeServiceLines: Record<string, string> = {
     "Waxing can also be booked at your villa with our [home service](/outcall-home-service-massage/).",
   "hair-braiding": "Hair braiding is also available at your villa with our [home service](/outcall-home-service-massage/).",
   "nail-spa": "Nail art is also available at your villa with our [home service](/outcall-home-service-massage/).",
-  "day-spa":
-    "Prefer to stay in? Our home service is delivered by the same therapists who work here. See [outcall and home service massage](/outcall-home-service-massage/).",
 };
 
 /** The price list page (/seminyak/), which is not a treatment page. */
