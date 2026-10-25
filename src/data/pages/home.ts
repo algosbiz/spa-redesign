@@ -112,7 +112,7 @@ export const home = {
         items: [
           ["1 Hr", "Balinese Massage"],
           ["1 Hr", "Mani & Pedi"],
-          ["45–55 Mins", "Cream bath"],
+          ["45 Mins", "Cream bath"],
         ],
       },
       {
@@ -131,7 +131,7 @@ export const home = {
         price: "485.000",
         items: [
           ["1 Hr", "Balinese Massage"],
-          ["45–55 Mins", "Cream bath"],
+          ["45 Mins", "Cream bath"],
           ["1 Hr", "Bali Moon Facial"],
         ],
       },

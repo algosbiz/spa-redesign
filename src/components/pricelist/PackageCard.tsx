@@ -15,7 +15,7 @@ function spell(total: number): string {
 
 /**
  * The treatments' lengths added up: "2.5 hours", or a range when one is
- * ("45–55 Mins" cream bath, owner, 24 Oct): "2 hours 45–55 minutes".
+ * ("45–55 Mins"): "2 hours 45–55 minutes". No package uses one since 25 Oct.
  */
 export function totalTime(durations: string[]): string | null {
   const parts = durations.map(lengthOf);
@@ -110,7 +110,11 @@ export default function PackageCard({
           {icon}
         </span>
         <h3 className="pkg-card__title">
-          <span className="pkg-card__code">{code}</span>
+          {/* The code guests book by, with the letter large ("Package A";
+              owner, 25 Oct: more prominent, so there is no confusion when booking). */}
+          <span className="pkg-card__code">
+            {code.slice(0, -1).trim()} <b>{code.slice(-1)}</b>
+          </span>
           <span className="pkg-card__name">
             {href ? (
               <Link prefetch={false} href={href}>

@@ -7,8 +7,8 @@ import { priceValue } from "@/lib/price";
  * Tree Facial, the cheaper of the two (owner, 23 Oct). A couple package's
  * massage is the couple massage (for two) and its add-ons count twice.
  * A cream bath or body scrub takes 30 to 60 minutes at its menu price;
- * packages list the cream bath as 45–55 minutes and the scrub as 30 (owner,
- * 24 Oct), and both count at the menu price.
+ * packages list the cream bath as 45 minutes (owner, 25 Oct: 45–55 was
+ * confusing) and the scrub as 30, and both count at the menu price.
  */
 const PRICES: Record<string, (twoPax: boolean) => number> = {
   "60|balinese massage": (two) =>

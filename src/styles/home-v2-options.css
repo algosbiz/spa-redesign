@@ -500,79 +500,8 @@
   }
 }
 
-/* ------------------------------------------------------------------------
-   "Find the Treatment for You" on phones: photo-led cards (owner, 23 Oct:
-   "it's nice, but do you have any ideas"). Each card is its photo, taller
-   (4:5), with the name in white over a soft dark fade at the bottom, the
-   price in a frosted pill and the small gold icon above the name; the line
-   of text and "Learn More" go, as the whole card opens the treatment (the
-   photo is already a link to it; the text over it lets taps through).
-   ------------------------------------------------------------------------ */
-@media (max-width: 767px) {
-  .home-v2 .v2-alltreat__row > .v2-treat {
-    position: relative;
-    aspect-ratio: 4 / 5;
-    border: 0;
-    border-radius: 22px;
-    background-color: #2a2622;
-    box-shadow: 0 22px 44px -30px rgba(28, 26, 29, 0.55);
-    transition: transform 0.25s ease;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat:active {
-    transform: scale(0.98);
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__media {
-    position: absolute;
-    inset: 0;
-    aspect-ratio: auto;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__body {
-    position: absolute;
-    inset: auto 0 0;
-    padding: 70px 20px 20px;
-    background: linear-gradient(to top, rgba(28, 26, 29, 0.88) 0%, rgba(28, 26, 29, 0.55) 55%, rgba(28, 26, 29, 0) 100%);
-    pointer-events: none;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 0 12px;
-    border: 0;
-    box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__icon img {
-    width: 20px;
-    height: 20px;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__title,
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__title a {
-    color: #fff;
-    font-size: 22px;
-    line-height: 1.25;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__title a {
-    pointer-events: auto;
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat .v2-treat__price {
-    display: inline-flex;
-    align-self: flex-start;
-    margin-top: 10px;
-    padding: 5px 12px;
-    font-family: var(--text-font);
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 999px;
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
-  .home-v2 .v2-alltreat__row > .v2-treat :is(.v2-treat__text, .v2-treat__link) {
-    display: none;
-  }
-}
+/* "Find the Treatment for You" on phones: the same white cards as on desktop
+   and on the treatment pages (owner, 25 Oct; the photo-led tiles of 23 Oct are gone). */
 
 /* The "3 / 23" count and the one-time nudge moved to treat-cards.css (24 Oct). */
 @media (max-width: 767px) {
