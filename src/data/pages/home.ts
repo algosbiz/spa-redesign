@@ -110,7 +110,7 @@ export const home = {
      * 12% at 931.000, rounded down to 5.000).
      */
     featured: {
-      kicker: "New package",
+      kicker: "New special",
       name: "Lymphatic & Gold Facial",
       href: "/seminyak/lymphatic-drainage-massage/",
       text: "A gentle lymphatic drainage massage, then the Bali Moon Gold Facial with gold and argan oil: two hours to feel lighter and leave glowing.",
