@@ -2810,14 +2810,30 @@
 }
 
 /* ------------------------------------------------------------------ */
-/* 32. Featured package (homepage, owner, 25 Oct: the new lymphatic    */
-/*     and Gold Facial package, tried on the homepage first): the      */
+/* 32. Featured package (owner, 25 Oct: the new special, lymphatic and */
+/*     the Gold Facial, on the homepage and the price list): the       */
 /*     package card made wide over the four, its two treatments' photos */
 /*     side by side on the left, the details on the right; on phones   */
 /*     the photos sit on top.                                          */
 /* ------------------------------------------------------------------ */
-.v2-packages__featured {
+/* The band of its own on the lymphatic and facial pages, after the prices. */
+.pkg-featured-section {
+  padding: 10px 0 100px;
+}
+.pkg-featured-section .pkg-featured {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .pkg-featured-section {
+    padding-bottom: 70px;
+  }
+}
+/* On the price list it sits over the first group's heading. */
+.pkg-featured {
   margin-bottom: 30px;
+}
+.package-pricing-section .pkg-featured {
+  margin-bottom: 70px;
 }
 .pkg-card.pkg-card--wide {
   display: grid;

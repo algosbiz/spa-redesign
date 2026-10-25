@@ -103,27 +103,6 @@ export const home = {
     title: "Day Spa and Massage in Seminyak",
     text: "Our newest package pairs a lymphatic massage with the Gold Facial; the others pair a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial. Prices are per person.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
-    /**
-     * A new package tried on the homepage first (owner, 25 Oct): the
-     * lymphatic massage, the most booked, with the Gold Facial. IDR 525.000
-     * against 569.000 one by one (the package rule: 5% off at 397.000 up to
-     * 12% at 931.000, rounded down to 5.000).
-     */
-    featured: {
-      kicker: "New special",
-      name: "Lymphatic & Gold Facial",
-      href: "/seminyak/lymphatic-drainage-massage/",
-      text: "A gentle lymphatic drainage massage, then the Bali Moon Gold Facial with gold and argan oil: two hours to feel lighter and leave glowing.",
-      price: "525.000",
-      items: [
-        ["1 Hr", "Lymphatic Massage"],
-        ["1 Hr", "Bali Moon Gold Facial"],
-      ] as [string, string][],
-      images: [
-        { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic drainage massage at Spa Bali Moon" },
-        { src: "/images/listmenu/balimoongoldfacial.webp", alt: "Bali Moon Gold Facial" },
-      ],
-    },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
     cards: [
       {

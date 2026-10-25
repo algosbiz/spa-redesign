@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MenuDurations from "@/components/home/MenuDurations";
+import FeaturedPackage from "@/components/pricelist/FeaturedPackage";
 import PackageGroups from "@/components/pricelist/PackageGroups";
 import { menuTabs } from "@/components/pricelist/menuTabs";
 import FaqSection from "@/components/sections/FaqSection";
@@ -58,7 +59,8 @@ export default function PricelistPage() {
         />
       </div>
       <PackageIntro {...page.packagesIntro} />
-      <PackageGroups groups={page.packageGroups} icons={page.packageIcons} />
+      {/* The new special first (owner, 25 Oct). */}
+      <PackageGroups groups={page.packageGroups} icons={page.packageIcons} featured={<FeaturedPackage />} />
       <Testimonials />
       <div className="jsx-pricelist pricing-faq-section">
         <FaqSection {...page.faq} imageTitleAsHeading />

@@ -17,6 +17,7 @@ import { business } from "@/data/business";
 import { priceList } from "@/data/pricelist";
 import { home } from "@/data/pages/home";
 import { pricelistPage } from "@/data/pages/pricelist";
+import { newSpecial } from "@/data/special";
 import { absoluteUrl } from "@/lib/seo";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -273,7 +274,17 @@ export function priceListSchema() {
           "@id": `${url}#catalog`,
           name: "Spa Bali Moon price list",
           url,
-          itemListElement: [...groups, { "@type": "OfferCatalog", name: "Spa packages", itemListElement: packages }],
+          itemListElement: [
+            ...groups,
+            {
+              "@type": "OfferCatalog",
+              name: "Spa packages",
+              itemListElement: [
+                offer(`${newSpecial.name}: ${newSpecial.items.map(([d, t]) => `${d} ${t}`).join(", ")}, per person`, priceOfPack(newSpecial.price), url),
+                ...packages,
+              ],
+            },
+          ],
         },
       },
       breadcrumb([
