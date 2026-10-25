@@ -16,9 +16,10 @@ import { catalog, type CatalogItem } from "./home-catalog";
 export const home = {
   seo: {
     // Owner, 25 Oct: the homepage is the page for "day spa in Seminyak", with
-    // the Day Spa page folded into it; "Home Service" is back in the title
-    // (it left on 6 Oct and home service searches slipped).
-    title: "Day Spa in Seminyak & Home Service Massage | Spa Bali Moon",
+    // the Day Spa page folded into it. "Home Service" stays out of the title:
+    // the home service page owns those searches (its title has it, and it
+    // regained them after 20 Oct); the description still offers it.
+    title: "Day Spa & Balinese Massage in Seminyak | Spa Bali Moon",
     description:
       "Day spa in Seminyak since 2009: Balinese massage, facials and spa packages, or home service at your villa or hotel. 25 treatments from IDR 69.000.",
     // The spa's structured data (DaySpa) is built in src/lib/schema.ts and
