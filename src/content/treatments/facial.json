@@ -36,6 +36,10 @@
             "value": "Tea Tree Facial (oily or blemish-prone skin) IDR 196.000 · Gold Facial (dull or dry skin) IDR 269.000"
           },
           {
+            "label": "Other facials",
+            "value": "Biokos, Mustika Ratu, Sari Ayu or Viva facial for dry, normal or oily skin, IDR 169.000–179.000"
+          },
+          {
             "label": "Packages",
             "value": "Four packages that add a massage, some with a body scrub or cream bath (see below)"
           },
@@ -323,6 +327,10 @@
               {
                 "question": "Which facial is right for my skin?",
                 "answer": "At Spa Bali Moon, choose the Tea Tree Facial (IDR 196.000 per person) for oily, congested or blemish-prone skin, and the Gold Facial (IDR 269.000 per person) for dry, dehydrated or dull skin, or skin that feels tired after sun. For combination skin, tell your therapist how it feels and we'll suggest one."
+              },
+              {
+                "question": "Do you offer other facials besides the Bali Moon Facial?",
+                "answer": "Yes. Spa Bali Moon in Seminyak also offers a customised facial with a facial massage and mask for dry, normal or oily skin, with your choice of Biokos (IDR 179.000), Mustika Ratu, Sari Ayu or Viva products (IDR 169.000 each). The Bali Moon Facial, with its Tea Tree (IDR 196.000) or Gold mask (IDR 269.000), is our signature facial."
               },
               {
                 "question": "What happens during the Bali Moon Facial?",

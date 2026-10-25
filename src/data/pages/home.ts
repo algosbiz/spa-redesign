@@ -28,7 +28,7 @@ export const home = {
     // never stands alone on a line (19 Oct).
     title: "Seminyak Spa & Balinese Massage",
     highlightedTitle: "at Spa Bali Moon",
-    text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with [home service](/outcall-home-service-massage/) also available for hotels and villas in nearby areas.",
+    text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, [facials](/seminyak/facial/), and beauty services at our Seminyak spa, with [home service](/outcall-home-service-massage/) also available for hotels and villas in nearby areas.",
     /*
      * The quick facts of the copy rewrite (15 Oct), in two places since
      * 19 Oct (owner): the prices as a small subheading under the title, the

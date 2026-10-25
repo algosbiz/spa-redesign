@@ -6,6 +6,7 @@ import Faq from "@/components/home/Faq";
 import Hero from "@/components/home/Hero";
 import Packages from "@/components/home/Packages";
 import WhyDifferent from "@/components/home/WhyDifferent";
+import VisitUs from "@/components/sections/VisitUs";
 import Testimonials from "@/components/sections/Testimonials";
 import HydrateLater from "@/components/ui/HydrateLater";
 
@@ -51,6 +52,16 @@ export default function HomeLayout({
       </HydrateLater>
       <HydrateLater>
         <WhyDifferent />
+      </HydrateLater>
+      {/* The spa itself, in Seminyak: address, hours, booking (owner, 25 Oct: help the homepage for
+          "spa seminyak"; the same section as on the treatment pages and About). */}
+      <HydrateLater>
+        <VisitUs
+          treatment="a treatment"
+          title="Visit Our Day Spa in Seminyak"
+          look="columns"
+          note="The spa has showers and Wi-Fi for guests."
+        />
       </HydrateLater>
       <HydrateLater>{faq}</HydrateLater>
       <HydrateLater>

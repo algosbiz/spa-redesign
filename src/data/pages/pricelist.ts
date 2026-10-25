@@ -1267,7 +1267,7 @@ export const pricelistPage = {
     {
       title: "Facial Packages",
       includes: "a 1-hour Bali Moon Facial with a Balinese, Thai or warm candle massage, some with a body scrub or cream bath",
-      description: "Cleansing and gentle care that keep your skin balanced and comfortable.",
+      description: "Cleansing and gentle care that keep your skin balanced and comfortable. More about our [facials in Seminyak](/seminyak/facial/).",
       cardTitle: "Bali Moon Facial",
       packages: [
         {

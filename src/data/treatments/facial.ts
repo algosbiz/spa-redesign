@@ -12,8 +12,10 @@ const facial: Treatment = {
   category: "beauty",
   cardImage: { src: "/images/beauty/cards/balimoonteatreefacial.webp", alt: "Facial", width: 630, height: 580 },
   seo: {
-    title: "Facial Seminyak - Organic Facials at Spa Bali Moon",
-    description: "Facial in Seminyak, Bali: Bali Moon facials with organic scrubs, warm steam and natural masks. Book in-spa or at your villa.",
+    // Owner, 25 Oct: only some of the facial products are organic, so the title
+    // names the two facials instead, and the description opens with the price.
+    title: "Facial Seminyak: Tea Tree & Gold Facials - Spa Bali Moon",
+    description: "Facials in Seminyak from IDR 196.000: the Bali Moon Tea Tree or Gold Facial, with steam, clay scrub, argan oil massage and a mask. At our spa or your villa.",
   },
   hero: {
     eyebrow: "Skin Rejuvenation",

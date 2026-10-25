@@ -82,6 +82,9 @@ function PhoneRow({ icon, label, children }: { icon: ReactNode; label: string; c
  * /api/subscribe/ and shows the reply under the field for 5 seconds, as on
  * the live site. Styles: src/styles/footer.css.
  */
+const DAY_SPA = "day spa in Seminyak";
+const [aboutBefore, aboutAfter = ""] = business.aboutText.split(DAY_SPA);
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -162,7 +165,12 @@ export default function Footer() {
               />
             </Link>
             <p className="site-footer__about">
-              {business.aboutText}{" "}
+              {/* "day spa in Seminyak" links to the homepage (owner, 25 Oct). */}
+              {aboutBefore}
+              <Link prefetch={false} href="/">
+                {DAY_SPA}
+              </Link>
+              {aboutAfter}{" "}
               {/* AEO roadmap R14 (17 Oct). */}
               <Link prefetch={false} href="/about/" className="site-footer__about-link">
                 About Spa Bali Moon
