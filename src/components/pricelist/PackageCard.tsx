@@ -110,7 +110,7 @@ export default function PackageCard({
           {icon}
         </span>
         <h3 className="pkg-card__title">
-          {/* The code guests book by, as a tag with the letter large ("Package A";
+          {/* The code guests book by, with the letter large ("Package A";
               owner, 25 Oct: more prominent, so there is no confusion when booking). */}
           <span className="pkg-card__code">
             {code.slice(0, -1).trim()} <b>{code.slice(-1)}</b>

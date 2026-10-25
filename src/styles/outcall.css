@@ -2287,17 +2287,16 @@
   gap: 3px;
   margin: 0;
 }
-/* The booking code as a gold-edged tag, the letter in the heading type
-   (owner, 25 Oct: "a bit more prominent so no confusion for booking"). */
+/* The booking code with its letter large, in the heading type (owner, 25 Oct:
+   "a bit more prominent so no confusion for booking"; a tag round it was
+   "too much stuff"). */
 .pkg-card .pkg-card__title {
-  gap: 7px;
+  gap: 4px;
 }
 .pkg-card__code {
   display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
+  align-items: baseline;
   gap: 7px;
-  padding: 3px 12px 3px 13px;
   font-family: var(--text-font);
   font-size: 11.5px;
   font-weight: 700;
@@ -2305,13 +2304,10 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--theme-color1);
-  background-color: rgba(var(--theme-color1-rgb), 0.07);
-  border: 1px solid rgba(var(--theme-color1-rgb), 0.55);
-  border-radius: 999px;
 }
 .pkg-card__code b {
   font-family: var(--title-font);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0;
