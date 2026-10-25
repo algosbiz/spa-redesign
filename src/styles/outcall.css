@@ -2889,3 +2889,25 @@
     align-self: stretch;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 33. Page banner without a carousel (25 Oct, speed): the photo's slow */
+/*     zoom, which Swiper's active slide used to start, runs as a CSS   */
+/*     animation from the first paint.                                  */
+/* ------------------------------------------------------------------ */
+.banner-two__slider .slide-bg {
+  animation: banner-zoom 8s ease-out both;
+}
+@keyframes banner-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .banner-two__slider .slide-bg {
+    animation: none;
+  }
+}
