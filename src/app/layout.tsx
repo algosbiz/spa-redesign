@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { preload } from "react-dom";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import MobileActionBar from "@/components/layout/MobileActionBar";
 import Preloader from "@/components/layout/Preloader";
@@ -8,6 +7,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import HydrateLater from "@/components/ui/HydrateLater";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { business } from "@/data/business";
+import { fraunces, jakarta } from "./fonts";
 import "./globals.css";
 import "../styles/live.css";
 import "../styles/custom.css";
@@ -50,17 +50,12 @@ export const viewport: Viewport = {
  * the live 404 page has neither header nor footer.
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // The live site preloads the Latin subsets of its two families. Both are
-  // now the "core" part of those files, every character the site's text
-  // uses (21 Oct: 119 -> 73 KB; see the @font-face rules in live.css).
-  preload("/webfonts/literata-latin-opsz12-72-core.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
-  preload("/webfonts/mulish-latin-core.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 
   return (
     // `gold-b`: the owner's gold #B88C35 on every page (1 Oct). Remove the
     // class to go back to the live gold #A78627, which live.css still
     // defines, on every page (src/styles/gold.css).
-    <html lang="en" className="gold-b">
+    <html lang="en" className={`gold-b ${fraunces.variable} ${jakarta.variable}`}>
       <body>
         {children}
         <SiteChrome>

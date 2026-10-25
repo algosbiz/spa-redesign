@@ -57,7 +57,7 @@
   --color-ink: #1c1a1d;
 
   /* Text */
-  --color-body: #707070;
+  --color-body: #5b5853;
   --color-muted: #c4c4c4;
   --color-review: #ffc737;
 
@@ -74,10 +74,10 @@
   --color-dark-3: #343434;
   --color-dark-4: #212529;
 
-  /* Families — the live site's own self-hosted files, declared in
-     src/styles/live.css (public/webfonts). */
-  --font-display: "Literata", serif;
-  --font-sans: "Mulish", sans-serif;
+  /* Families — Fraunces and Plus Jakarta Sans, loaded by next/font
+     (src/app/fonts.ts) since 25 Oct. */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
 
   /**
    * Type scale — these are the values the live site actually RENDERS, read out

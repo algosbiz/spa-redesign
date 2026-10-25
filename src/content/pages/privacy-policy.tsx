@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
                     Information We Collect
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     We may collect personal details in the following ways:
                   </p>
@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
                     How We Use Your Information
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     Your information helps us:
                   </p>
@@ -289,7 +289,7 @@ export default function PrivacyPolicyPage() {
                     Sharing of Information
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     We do not sell your personal information. We may share limited data only with:
                   </p>
@@ -359,7 +359,7 @@ export default function PrivacyPolicyPage() {
                     Home Service Privacy
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     For home service treatments:
                   </p>
@@ -428,7 +428,7 @@ export default function PrivacyPolicyPage() {
                     Your Rights
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     You have the right to:
                   </p>
@@ -540,7 +540,7 @@ export default function PrivacyPolicyPage() {
                     Contact Us
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "25px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "25px" }}
                   >
                     If you have questions about this Privacy Policy or wish to exercise your rights, please contact us
                     via:
@@ -572,7 +572,7 @@ export default function PrivacyPolicyPage() {
                           </div>
                           <a
                             href={`mailto:${business.email}`}
-                            style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "#707070" }}
+                            style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "var(--text-color)" }}
                           >
                             {business.email}
                           </a>
@@ -607,7 +607,7 @@ export default function PrivacyPolicyPage() {
                             href="https://wa.me/6287863175144"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "#707070" }}
+                            style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "var(--text-color)" }}
                           >
                             +62 878-6317-5144
                           </a>
@@ -638,7 +638,7 @@ export default function PrivacyPolicyPage() {
                           >
                             Address
                           </div>
-                          <span style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "#707070" }}>
+                          <span style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "var(--text-color)" }}>
                             Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361
                           </span>
                         </div>
