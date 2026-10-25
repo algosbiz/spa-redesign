@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import { ArrowBox, PACKAGE_ICONS } from "@/components/home/icons";
 import ScrollRow from "@/components/home/ScrollRow";
@@ -17,6 +18,7 @@ import { whatsappChatUrl } from "@/lib/whatsapp";
  */
 export default function Packages() {
   const { packages, packageIntro } = home;
+  const { featured } = packages;
   const notes = packageNotes(pricelistPage.packageGroups);
   return (
     <div className="jsx-home homepage-pricing-services-join homepage-pricing-section">
@@ -37,6 +39,27 @@ export default function Packages() {
                 <ArrowBox />
               </Link>
             </div>
+          </div>
+          {/* The new package, tried here first (owner, 25 Oct; outcall.css section 32). */}
+          <div className="v2-packages__featured">
+            <PackageCard
+              code={featured.kicker}
+              name={featured.name}
+              href={featured.href}
+              text={featured.text}
+              icon={<img loading="lazy" decoding="async" src="/images/spa/Lymphatic.svg" alt="" />}
+              media={featured.images.map((image) => (
+                <img key={image.src} loading="lazy" decoding="async" src={image.src} alt={image.alt} />
+              ))}
+              price={featured.price}
+              unit="per person"
+              items={featured.items.map(([duration, service]) => ({ duration, service }))}
+              cta={{ href: whatsappChatUrl, external: true }}
+              saving={packageSaving(
+                featured.items.map(([duration, service]) => ({ duration, service })),
+                featured.price
+              )}
+            />
           </div>
           <ScrollRow className="row g-4 v2-packages__row" below="md" label="Spa packages">
             {packages.cards.map((card, i) => (

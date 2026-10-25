@@ -76,7 +76,13 @@ export default function PackageCard({
   cta,
   note,
   saving,
+  text,
+  media,
 }: {
+  /** A line about the package, under the name (the homepage's featured package). */
+  text?: string;
+  /** Photos: the card turns wide, the photos beside the details (under them on phones). */
+  media?: ReactNode;
   /** IDR less than booking the treatments one by one (packageSaving); none when null. */
   saving?: number | null;
   /** The staff's code: "Package B". */
@@ -103,8 +109,9 @@ export default function PackageCard({
       </span>
     </>
   );
-  return (
-    <article className="pkg-card">
+  const letter = /^(.*\S)\s+([A-Z])$/.exec(code);
+  const content = (
+    <>
       <div className="pkg-card__head">
         <span className="pkg-card__icon" aria-hidden="true">
           {icon}
@@ -113,7 +120,13 @@ export default function PackageCard({
           {/* The code guests book by, with the letter large ("Package A";
               owner, 25 Oct: more prominent, so there is no confusion when booking). */}
           <span className="pkg-card__code">
-            {code.slice(0, -1).trim()} <b>{code.slice(-1)}</b>
+            {letter ? (
+              <>
+                {letter[1]} <b>{letter[2]}</b>
+              </>
+            ) : (
+              code
+            )}
           </span>
           <span className="pkg-card__name">
             {href ? (
@@ -127,6 +140,7 @@ export default function PackageCard({
         </h3>
       </div>
       {note && <p className="pkg-card__note">{note}</p>}
+      {text && <p className="pkg-card__text">{text}</p>}
       {/* The treatments' total when booked one by one, struck through over the
           package price, as a sale shows it (preview, owner, 24 Oct). */}
       {saving ? (
@@ -161,6 +175,14 @@ export default function PackageCard({
           {button}
         </Link>
       )}
+    </>
+  );
+  return media ? (
+    <article className="pkg-card pkg-card--wide">
+      <div className="pkg-card__media">{media}</div>
+      <div className="pkg-card__body">{content}</div>
     </article>
+  ) : (
+    <article className="pkg-card">{content}</article>
   );
 }
