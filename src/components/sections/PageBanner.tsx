@@ -1,10 +1,5 @@
-"use client";
-
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import { useEffect, useRef, type ReactNode } from "react";
-import type { Swiper as SwiperInstance } from "swiper";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import type { ReactNode } from "react";
 import { LotusPaths25 } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
 import { glassShade } from "@/data/bannerGlass";
@@ -73,8 +68,9 @@ const S = "jsx-page-banner";
 
 /**
  * Full-width photo banner at the top of inner pages — the live
- * "banner-two-area". The photo is a CSS variable so phones get the `-sm`
- * file; both are preloaded with media queries, as live.
+ * "banner-two-area", rendered on the server with no script of its own. The
+ * photo is a CSS variable so phones get the `-sm` file; both are preloaded
+ * with media queries, as live.
  */
 export default function PageBanner({
   subTitle = "Rejuvenate You Today",
@@ -102,22 +98,13 @@ export default function PageBanner({
 }: PageBannerProps) {
   const small = mobilePhoto ?? image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
   const tall = !!mobilePhoto && mobileTall;
-  // The `-wide-sm` copy for 1x phones (it is loaded for the glass anyway), the full photo for sharper ones.
-  const tallSrcSet = tall && mobilePhoto !== image ? `${mobilePhoto} 828w, ${image} 1920w` : undefined;
+  // The `-wide-sm` copy for 1x phones (it is loaded for the glass anyway), a 1200px copy for most
+  // phones (25 Oct, speed: 26 KB against 70 KB on average), the full photo for the sharpest.
+  const mid = image.startsWith("/images/banners/") ? image.replace(/(\.[a-z0-9]+)$/i, "-1200$1") : undefined;
+  const tallSrcSet =
+    tall && mobilePhoto !== image ? [`${mobilePhoto} 828w`, mid && `${mid} 1200w`, `${image} 1920w`].filter(Boolean).join(", ") : undefined;
   const shade = mobilePhoto ? glassShade[mobilePhoto] : undefined;
 
-  // Swiper adds `swiper-backface-hidden` (translateZ(0) on the slide) straight
-  // to the DOM while it initialises, then React re-renders the class list it
-  // was told about and drops it. Live ends with the class last in the list;
-  // running Swiper's own check once more after that re-render does the same.
-  const swiperRef = useRef<SwiperInstance | null>(null);
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      const swiper = swiperRef.current;
-      if (swiper && !swiper.destroyed) swiper.updateSlides();
-    });
-    return () => cancelAnimationFrame(frame);
-  }, []);
 
   return (
     <>
@@ -138,98 +125,95 @@ export default function PageBanner({
         <div className={`${S} banner-two__shape`}>
           <img src={shapeImage} alt="" aria-hidden="true" fetchPriority="low" decoding="async" className={S} />
         </div>
-        <Swiper
-          modules={[Pagination]}
-          slidesPerView={1}
-          loop={false}
-          allowTouchMove={false}
-          pagination={{ clickable: false }}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          className="swiper  banner-two__slider"
-        >
-          <SwiperSlide className="swiper-slide">
-            <div
-              style={
-                {
-                  "--hero-lg": `url(${image})`,
-                  "--hero-sm": `url(${small})`,
-                  ...(imagePosition && { "--hero-pos": imagePosition }),
-                  ...(shade !== undefined && { "--glass-shade": shade }),
-                } as React.CSSProperties
-              }
-              className={`${S} slide-bg`}
-            />
-            {mobilePhoto && (
-              <div className={`${S} banner-two__photo`}>
-                <img
-                  src={mobilePhoto}
-                  {...(tallSrcSet && { srcSet: tallSrcSet, sizes: TALL_SIZES })}
-                  alt=""
-                  width={828}
-                  height={367}
-                  fetchPriority="high"
-                  decoding="async"
-                  className={S}
-                  {...(tall && imagePosition && { style: { objectPosition: imagePosition } })}
-                />
-              </div>
-            )}
-            <div className={`${S} container`}>
-              <div className={`${S}  banner-two__content`}>
-                {subTitle !== "" && (
-                  <p data-animation="fadeInUp" data-delay=".3s" className={`${S} sub-title`}>
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={S}>
-                      <g clipPath="url(#clip0_1_451)" className={S}>
-                        <LotusPaths25 fill="white" className={S} />
-                      </g>
-                    </svg>
-                    {subTitle}
-                  </p>
-                )}
-                <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
-                  <span className={S}>{titleSpan}</span> {title}
-                </h1>
-                {prices && (
-                  <div className={`${S} banner-prices`}>
-                    <ul className={`${S} banner-prices__list`}>
-                      {prices.tiles.map((tile) => (
-                        <li key={tile.length} className={`${S} banner-prices__item`}>
-                          <span className={`${S} banner-prices__length`}>
-                            {tile.length}
-                            {priceUnit ? <span className={`${S} banner-prices__unit`}> {priceUnit.toUpperCase()}</span> : null}
-                          </span>{" "}
-                          <span className={`${S} banner-prices__amount`}>
-                            {tile.was ? (
-                              <s className={`${S} banner-prices__was`}>
-                                <span className="sr-only">Normally </span>IDR {tile.was}
-                              </s>
-                            ) : null}
-                            <span className={`${S} banner-prices__cur`}>IDR</span> {tile.amount}
-                          </span>
+        {/* One photo, so no carousel (25 Oct, speed): the same three wrappers the live
+            Swiper rendered, without its script; the slow zoom of the photo is a CSS
+            animation now (outcall.css, section 33), which Swiper started by marking the
+            slide active once its code had loaded. */}
+        <div className="swiper banner-two__slider">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide">
+              <div
+                style={
+                  {
+                    "--hero-lg": `url(${image})`,
+                    "--hero-sm": `url(${small})`,
+                    ...(imagePosition && { "--hero-pos": imagePosition }),
+                    ...(shade !== undefined && { "--glass-shade": shade }),
+                  } as React.CSSProperties
+                }
+                className={`${S} slide-bg`}
+              />
+              {mobilePhoto && (
+                <div className={`${S} banner-two__photo`}>
+                  <img
+                    src={mobilePhoto}
+                    {...(tallSrcSet && { srcSet: tallSrcSet, sizes: TALL_SIZES })}
+                    alt=""
+                    width={828}
+                    height={367}
+                    fetchPriority="high"
+                    decoding="async"
+                    className={S}
+                    {...(tall && imagePosition && { style: { objectPosition: imagePosition } })}
+                  />
+                </div>
+              )}
+              <div className={`${S} container`}>
+                <div className={`${S}  banner-two__content`}>
+                  {subTitle !== "" && (
+                    <p data-animation="fadeInUp" data-delay=".3s" className={`${S} sub-title`}>
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={S}>
+                        <g clipPath="url(#clip0_1_451)" className={S}>
+                          <LotusPaths25 fill="white" className={S} />
+                        </g>
+                      </svg>
+                      {subTitle}
+                    </p>
+                  )}
+                  <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
+                    <span className={S}>{titleSpan}</span> {title}
+                  </h1>
+                  {prices && (
+                    <div className={`${S} banner-prices`}>
+                      <ul className={`${S} banner-prices__list`}>
+                        {prices.tiles.map((tile) => (
+                          <li key={tile.length} className={`${S} banner-prices__item`}>
+                            <span className={`${S} banner-prices__length`}>
+                              {tile.length}
+                              {priceUnit ? <span className={`${S} banner-prices__unit`}> {priceUnit.toUpperCase()}</span> : null}
+                            </span>{" "}
+                            <span className={`${S} banner-prices__amount`}>
+                              {tile.was ? (
+                                <s className={`${S} banner-prices__was`}>
+                                  <span className="sr-only">Normally </span>IDR {tile.was}
+                                </s>
+                              ) : null}
+                              <span className={`${S} banner-prices__cur`}>IDR</span> {tile.amount}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                      {/* The caption ("Per person", "Balinese, for two") is no longer shown: "/ pax" and "/ 2 pax" say it (owner, 21 Oct). */}
+                    </div>
+                  )}
+                  {/* "IDR" never ends a line without its amount. */}
+                  {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
+                  <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
+                  {chips && chips.length > 0 && (
+                    <ul className={`${S} banner-chips`}>
+                      {chips.map((chip) => (
+                        <li key={chip} className={`${S} banner-chips__item`}>
+                          {chip}
                         </li>
                       ))}
                     </ul>
-                    {/* The caption ("Per person", "Balinese, for two") is no longer shown: "/ pax" and "/ 2 pax" say it (owner, 21 Oct). */}
-                  </div>
-                )}
-                {/* "IDR" never ends a line without its amount. */}
-                {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
-                <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
-                {chips && chips.length > 0 && (
-                  <ul className={`${S} banner-chips`}>
-                    {chips.map((chip) => (
-                      <li key={chip} className={`${S} banner-chips__item`}>
-                        {chip}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {openingText && <p className={`${S} opening-times`}>{openingText}</p>}
+                  )}
+                  {openingText && <p className={`${S} opening-times`}>{openingText}</p>}
+                </div>
               </div>
             </div>
-          </SwiperSlide>
-        </Swiper>
-        <div className={`${S} banner-two__pagination`} />
+          </div>
+        </div>
       </section>
     </>
   );
