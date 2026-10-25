@@ -762,32 +762,6 @@
   font-family: var(--title-font);
 }
 
-/* Day Spa page: links to the treatment pages (SEO, 10 Oct). */
-.day-spa-links__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px 20px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.day-spa-links__list a {
-  display: block;
-  padding: 14px 20px;
-  border: 1px solid rgba(232, 227, 218, 0.9);
-  border-radius: 12px;
-  background-color: #fff;
-  color: var(--headings-color);
-  font-family: var(--title-font);
-  font-size: 17px;
-  line-height: 26px;
-  transition: color 0.3s, border-color 0.3s;
-}
-.day-spa-links__list a:is(:hover, :focus-visible) {
-  color: var(--theme-color1);
-  border-color: var(--theme-color1);
-}
-
 /* Header "Home Service": one link, gold on its own page (owner, 22 Oct: no dropdown). */
 .header__main .main-menu ul li.outcall-menu-item.is-active>a {
   color: var(--theme-color1) !important;

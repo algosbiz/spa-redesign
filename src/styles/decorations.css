@@ -160,17 +160,17 @@
    1800 and 1920px. Below 1200px the rules above still apply. */
 
 /* The new corner decorations. */
-:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links):has(> .shape1, > .shape2) {
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section):has(> .shape1, > .shape2) {
   position: relative;
   z-index: 1;
   overflow-x: clip;
 }
-:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) {
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section) > :is(.shape1, .shape2) {
   position: absolute;
   z-index: -1;
   pointer-events: none;
 }
-:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) img {
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section) > :is(.shape1, .shape2) img {
   display: block;
   height: auto;
 }
@@ -233,23 +233,6 @@
   width: 220px;
 }
 
-/* Day spa's treatment links: a fern low on the left, flowers high on the
-   right. */
-.day-spa-links > .shape1 {
-  left: 0;
-  bottom: 20px;
-}
-.day-spa-links > .shape1 img {
-  width: 200px;
-}
-.day-spa-links > .shape2 {
-  top: 30px;
-  right: 0;
-}
-.day-spa-links > .shape2 img {
-  width: 230px;
-}
-
 /* Closing banner: petals over its top corner, a spa bowl over its lower
    one, as Balinese massage has (which keeps its own). */
 .reserve-cta-section > .shape1 {
@@ -273,7 +256,7 @@
   display: none;
 }
 @media (max-width: 1199px) {
-  :is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) {
+  :is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section) > :is(.shape1, .shape2) {
     display: none;
   }
 }
@@ -403,15 +386,6 @@
     width: 120px !important;
   }
 
-  /* Day spa's treatment links: a smaller fern, up in the empty corner
-     beside the centred heading, clear of the links. */
-  .treatment-page .day-spa-links > .shape1 {
-    top: 0 !important;
-    bottom: auto !important;
-  }
-  .treatment-page .day-spa-links > .shape1 img {
-    width: 140px !important;
-  }
 }
 @media (min-width: 1400px) and (max-width: 1699px) {
   :root {

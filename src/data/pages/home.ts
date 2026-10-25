@@ -15,18 +15,22 @@ import { catalog, type CatalogItem } from "./home-catalog";
  */
 export const home = {
   seo: {
-    title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
+    // Owner, 25 Oct: the homepage is the page for "day spa in Seminyak", with
+    // the Day Spa page folded into it. "Home Service" stays out of the title:
+    // the home service page owns those searches (its title has it, and it
+    // regained them after 20 Oct); the description still offers it.
+    title: "Day Spa & Balinese Massage in Seminyak | Spa Bali Moon",
     description:
-      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 25 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
+      "Day spa in Seminyak since 2009: Balinese massage, facials and spa packages, or home service at your villa or hotel. 25 treatments from IDR 69.000.",
     // The spa's structured data (DaySpa) is built in src/lib/schema.ts and
     // shown on every page since the AEO roadmap (17 Oct).
   },
 
   hero: {
-    // The H1 reads "Seminyak Spa & Balinese Massage at Spa Bali Moon"; "at"
+    // The H1 reads "Day Spa in Seminyak at Spa Bali Moon" (25 Oct); "at"
     // opens the last line (the highlighted part is a line of its own), so it
     // never stands alone on a line (19 Oct).
-    title: "Seminyak Spa & Balinese Massage",
+    title: "Day Spa in Seminyak",
     highlightedTitle: "at Spa Bali Moon",
     text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, [facials](/seminyak/facial/), and beauty services at our Seminyak spa, with [home service](/outcall-home-service-massage/) also available for hotels and villas in nearby areas.",
     /*
@@ -232,6 +236,27 @@ export const home = {
         question: "9. What are your opening hours?",
         answer:
           "Spa Bali Moon is open daily from 9am to 11pm at Jl. Pangkung Sari No. 30, Petitenget, Seminyak. Home service at your villa or hotel and WhatsApp booking are available during the same hours, and walk-ins are welcome at the spa. To book ahead, message us on WhatsApp at +62 878-6317-5144.",
+      },
+      // From the Day Spa page, folded into the homepage (owner, 25 Oct).
+      {
+        question: "10. What does a day spa visit in Seminyak include?",
+        answer:
+          "A day spa visit usually includes one or more services such as massage, [facials](/seminyak/facial/), body scrubs, cream bath, reflexology, manicure or pedicure. At Spa Bali Moon in Seminyak, you choose the treatments and how long to stay, in a private room.",
+      },
+      {
+        question: "11. How many hours should I spend at a day spa?",
+        answer:
+          "Plan on 1 to 1.5 hours for a single treatment at Spa Bali Moon, or a few hours if you combine several. Spa packages combine two or three treatments in one visit.",
+      },
+      {
+        question: "12. Which spa treatment is best after a flight?",
+        answer:
+          "A relaxing full-body massage, such as a Balinese massage, is often a good place to begin after a flight, or a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) if your legs feel heavy. Depending on how you feel, you can follow it with a facial, body scrub, cream bath or foot treatment for a longer visit at Spa Bali Moon.",
+      },
+      {
+        question: "13. How much does a day spa package cost in Seminyak?",
+        answer:
+          "Spa packages at Spa Bali Moon in Seminyak start at IDR 375.000 per person. The Balinese massage packages, IDR 375.000 to IDR 545.000 per person, combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package on WhatsApp. Home service adds IDR 75.000 per therapist in the Seminyak area.",
       },
     ],
   },

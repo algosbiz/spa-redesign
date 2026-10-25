@@ -37,7 +37,6 @@ import thaiMassage from "./thai-massage";
 import waxingSalon from "./waxing-salon";
 import cuppingTherapy from "./cupping-therapy";
 import warmCandleMassage from "./warm-candle-massage";
-import daySpa from "./day-spa";
 
     /** Order = order of the "Treatments" menu on the old site (Day Spa is last; it was only in the footer). */
     export const treatments: Treatment[] = [
@@ -66,7 +65,6 @@ import daySpa from "./day-spa";
   waxingSalon,
   warmCandleMassage,
   cuppingTherapy,
-  daySpa,
     ];
 
     /**

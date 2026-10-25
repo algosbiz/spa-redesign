@@ -53,7 +53,9 @@ export const liveRedirects: OldUrlRedirect[] = [
   // Other old pages
   { from: "/massage-bali/", to: "/" },
   { from: "/massage-seminyak/", to: "/seminyak/" },
-  { from: "/day-spa-seminyak/", to: "/seminyak/day-spa/" },
+  // The day spa page was folded into the homepage (owner, 25 Oct: one page for "day spa in Seminyak").
+  { from: "/seminyak/day-spa/", to: "/" },
+  { from: "/day-spa-seminyak/", to: "/" },
   { from: "/villa-hotel-massage-seminyak/", to: "/villa-hotel-massage/" },
   { from: "/spa-packages/", to: "/seminyak/" },
   { from: "/pricing/", to: "/seminyak/" },
@@ -119,7 +121,7 @@ export const liveRedirects: OldUrlRedirect[] = [
   // More old page names
   { from: "/massage-petitenget/", to: "/contact/" },
   { from: "/spa-bali-massage-packages/", to: "/seminyak/" },
-  { from: "/day-spa-seminyak-6/", to: "/seminyak/day-spa/" },
+  { from: "/day-spa-seminyak-6/", to: "/" },
   { from: "/reservation-spa-bali-moon-massage/", to: "/reservation/" },
   { from: "/wellness-bali/", to: "/guide/" },
   // The old "Wellness Guide in Bali" page, removed on 8 October 2026 (owner):

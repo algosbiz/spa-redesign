@@ -90,11 +90,11 @@ export const footerHomeServices = {
   ] as NavItem[],
 };
 
-/** Footer column "Our Day Spa" (heading links to the Day Spa page, as on the old site). */
-export const footerDaySpaLink: NavItem = { label: "Our Day Spa", href: "/seminyak/day-spa/" };
-
-/** Pages listed in the day spa card: the Seminyak homepage, which was "Massage Seminyak" under Home Services. */
-export const footerDaySpaPages: NavItem[] = [{ label: "Seminyak Spa & Massage", href: "/" }];
+/**
+ * Pages listed in the day spa card: the homepage, the spa's page for "day spa
+ * in Seminyak" since the Day Spa page was folded into it (25 Oct).
+ */
+export const footerDaySpaPages: NavItem[] = [{ label: "Day Spa in Seminyak", href: "/" }];
 
 /** Links in the very bottom line of the footer. */
 export const legalLinks: NavItem[] = [
@@ -130,7 +130,7 @@ export const searchIndex: { title: string; href: string; keywords: string }[] = 
   { title: "Massage in Seminyak", href: "/massage-seminyak/", keywords: "massage seminyak outcall home service" },
   { title: "Massage in Kuta", href: "/massage-kuta/", keywords: "massage kuta outcall home service" },
   { title: "Hotel & Villa Massage", href: "/villa-hotel-massage/", keywords: "hotel villa massage outcall home service" },
-  { title: "Day Spa Seminyak", href: "/seminyak/day-spa/", keywords: "day spa facial cream bath seminyak treatment" },
+  { title: "Day Spa Seminyak", href: "/", keywords: "day spa facial cream bath seminyak treatment" },
   { title: "Home Service", href: "/outcall-home-service-massage/", keywords: "home service outcall massage whatsapp booking" },
   { title: "Privacy Policy", href: "/privacy-policy/", keywords: "privacy policy data personal" },
   { title: "Terms & Conditions", href: "/terms-and-conditions/", keywords: "terms conditions rules booking" },

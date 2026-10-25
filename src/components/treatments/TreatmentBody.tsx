@@ -12,7 +12,6 @@ import QuickFacts from "@/components/sections/QuickFacts";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
 import SessionOptions from "@/components/sections/SessionOptions";
-import TreatmentLinks from "@/components/sections/TreatmentLinks";
 import TreatmentPricing from "@/components/sections/TreatmentPricing";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
 import VisitUs from "@/components/sections/VisitUs";
@@ -40,7 +39,6 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   ReserveCta,
   ServiceSlider,
   SessionOptions,
-  TreatmentLinks,
   TreatmentPricing,
   TreatmentTestimonials,
   // Added by the page template (app/(site)/seminyak/[slug]/page.tsx), not saved in the tree.

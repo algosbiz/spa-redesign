@@ -139,10 +139,9 @@ export type PageSection =
 
 /**
  * Categories used for filters. These are the old site's own price-list tabs
- * (Massage · Beauty · For Couples). "day-spa" is only used by the Day Spa page,
- * which the old site never placed in a tab.
+ * (Massage · Beauty · For Couples).
  */
-export type TreatmentCategory = "massage" | "beauty" | "couple" | "day-spa";
+export type TreatmentCategory = "massage" | "beauty" | "couple";
 
 export type Treatment = {
   /** Last part of the URL: /seminyak/<slug>/  (never change this; it is an SEO URL) */
