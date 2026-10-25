@@ -121,7 +121,7 @@ export default function TermsPage() {
                     Maintaining Serenity
                   </h2>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "15px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "15px" }}
                   >
                     Spa Bali Moon is designed as a sanctuary of calm. To preserve this tranquil environment, we kindly
                     ask that you:
@@ -320,7 +320,7 @@ export default function TermsPage() {
                 </div>
                 <div style={{ borderTop: "1px solid rgba(95, 90, 84, 0.12)", paddingTop: "40px", textAlign: "center" }}>
                   <p
-                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#707070", marginBottom: "20px" }}
+                    style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "var(--text-color)", marginBottom: "20px" }}
                   >
                     {
                       "Should you require any further clarification regarding these Terms & Conditions, please reach out to us:"

@@ -33,223 +33,8 @@
  *   also match when the page sits inside <main> — the live page has no <main>.
  */
 
-/* Fonts — the live site's own self-hosted files, same unicode ranges. */
-@font-face {
-  font-family: Literata;
-  font-style: normal;
-  font-weight: 200 900;
-  font-display: swap;
-  src: url(/webfonts/or3hQ6P12-iJxAIgLYT-JrUXnTPmvks.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Literata;
-  font-style: normal;
-  font-weight: 200 900;
-  font-display: swap;
-  /* The live Latin file with its optical-size axis cut to 12–72 (6 Oct,
-     PageSpeed: 110 -> 89 KB). No Literata text on the site is below 14px,
-     and from 12 up the letters are the same (differences under 0.03px).
-     Since 21 Oct split in two (tools/fonts/split-latin.py): "core" has every
-     character the site's text uses (57 KB, preloaded in src/app/layout.tsx),
-     "more" the rest of the Latin range, fetched only by a page that needs
-     one of them. Mulish's Latin file below is split the same way. */
-  src: url(/webfonts/literata-latin-opsz12-72-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Literata;
-  font-style: normal;
-  font-weight: 200 900;
-  font-display: swap;
-  src: url(/webfonts/literata-latin-opsz12-72-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/1Ptwg83HX_SGhgqk2hAjQlW_mEuZ0FsSKeOfF5Q6DzVVwfak.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/1Ptwg83HX_SGhgqk2hAjQlW_mEuZ0FsSKeOfGZQ6DzVVwQ.woff2) format("woff2");
-  unicode-range: u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/webfonts/1Ptvg83HX_SGhgqk0QotYKNnBcif.woff2) format("woff2");
-  unicode-range: u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-core.woff2) format("woff2");
-  unicode-range: u+0000-00a0,u+00a9,u+00b0,u+00b7,u+00d7,u+2011,u+2013-2014,u+2018-2019,u+201c-201d,u+2022,u+2026,u+2060;
-}
-@font-face {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/webfonts/mulish-latin-more.woff2) format("woff2");
-  unicode-range: u+00a1-00a8,u+00aa-00af,u+00b1-00b6,u+00b8-00d6,u+00d8-00ff,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-2010,u+2012,u+2015-2017,u+201a-201b,u+201e-2021,u+2023-2025,u+2027-205f,u+2061-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
-}
-
+/* Fonts: Fraunces and Plus Jakarta Sans, loaded by next/font (src/app/fonts.ts)
+   since 25 Oct, in place of the live site's Literata and Mulish. */
 /* Font Awesome — the live site's own subsets (46 glyphs each, 3–6 KB). */
 @font-face {
   font-family: "Font Awesome 6 Brands";
@@ -1430,14 +1215,14 @@ iframe:where(.lh,.lh *) {
   --theme-color2-rgb: 28,26,29;
   --bg-theme-color1: var(--theme-color1);
   --bg-theme-color2: var(--theme-color2);
-  --text-color: #707070;
+  --text-color: #5b5853;
   --text-color2: #c4c4c4;
   --headings-color: #1c1a1d;
   --review-color: #ffc737;
   --link-color: var(--headings-color);
   --link-hover-color: var(--headings-color);
-  --title-font: "Literata",serif;
-  --text-font: "Mulish",serif;
+  --title-font: var(--font-fraunces), Georgia, serif;
+  --text-font: var(--font-jakarta), system-ui, sans-serif;
   --body-font-size: 16px;
   --body-line-height: 1.75;
   --body-font-weight: 400;
@@ -10877,7 +10662,7 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
 }
 .wa-prompt__title.jsx-wa-prompt:where(.lh,.lh *) {
   margin: 0 0 12px;
-  font-family: var(--title-font,"Literata"),serif;
+  font-family: var(--title-font);
   font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
@@ -10885,7 +10670,7 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
 }
 .wa-prompt__text.jsx-wa-prompt:where(.lh,.lh *) {
   margin: 0 0 26px;
-  font-family: var(--text-font,"Mulish"),sans-serif;
+  font-family: var(--text-font);
   font-size: 15px;
   line-height: 26px;
   color: var(--text-color,#6d6459);
@@ -10918,7 +10703,7 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
   -moz-border-radius: 30px;
   border-radius: 30px;
   background: var(--theme-color1,#a78627);
-  font-family: var(--text-font,"Mulish"),sans-serif;
+  font-family: var(--text-font);
   font-size: 16px;
   font-weight: 600;
   line-height: 1;
@@ -10944,7 +10729,7 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
   min-height: 44px;
   border: none;
   background: none;
-  font-family: var(--text-font,"Mulish"),sans-serif;
+  font-family: var(--text-font);
   font-size: 14px;
   font-weight: 600;
   color: #8b7d6b;

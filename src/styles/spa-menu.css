@@ -229,7 +229,7 @@
   margin-bottom: 56px;
 }
 .lh .v2-duration__caption {
-  color: #707070;
+  color: var(--text-color);
   font-family: var(--title-font);
   font-size: 18px;
   line-height: 28px;
@@ -373,7 +373,7 @@
   color: var(--text-color2);
 }
 .lh .v2-menu--durations .is-unavailable .v2-price__pax {
-  color: #707070;
+  color: var(--text-color);
   font-weight: 400;
 }
 /* Variants and extras under the description: the live price panel's dotted

@@ -200,7 +200,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                           style={{
                             margin: 0,
                             fontSize: "15px",
-                            color: "#707070",
+                            color: "var(--text-color)",
                             fontFamily: "var(--text-font)",
                             lineHeight: "1.75",
                           }}
