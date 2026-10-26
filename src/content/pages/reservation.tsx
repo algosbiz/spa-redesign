@@ -94,8 +94,6 @@ export default function ReservationPage() {
         titleSpan="Reserve Your Massage"
         title="at Spa Bali Moon"
         image="/images/banners/reservation.webp"
-        // Phones: the whole photo above the text, on its blurred copy (24 Oct: every hero).
-        mobilePhoto="/images/banners/reservation-wide-sm.webp"
         imagePosition="35% 50%"
       />
       <section className="book-treatment-section about-section section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130">
