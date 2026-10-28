@@ -91,7 +91,7 @@
   .about-section > .shape1 {
     display: none;
   }
-  .about-section > .shape2:not(:has(img[src$="about-right-shape.png"], img[src$="banner-three-shape2.png"])) {
+  .about-section > .shape2:not(:has(img[src$="about-right-shape.png"], img[src$="banner-three-shape2.png"], img[data-deco-orig$="about-right-shape.png"], img[data-deco-orig$="banner-three-shape2.png"])) {
     display: none;
   }
 }
@@ -519,7 +519,7 @@
       .about-section-two > .shape2,
       .pricing-section-three > .shape2,
       .testimonial-section-two > .shape2,
-      .about-section > .shape1:has(img[src$="about-left-shape.png"]),
+      .about-section > .shape1:has(img[src$="about-left-shape.png"], img[data-deco-orig$="about-left-shape.png"]),
       .faq-section > .shape1,
       .visit-us > .shape1,
       .service-section-two > .shape1,
@@ -544,9 +544,9 @@
   }
 }
 /* The prices' tray at the right is the widest image (2.2 times as wide as
-   its drawn height): on narrow laptops it is smaller, clear of the last
+   its drawn height): on laptops (to 1599px) it is smaller, clear of the last
    package's text. */
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   :root .treatment-page.treatment-page .pricing-section-three > .shape2 > img {
     width: calc(var(--deco-size) * var(--r, 1.2) * 0.75) !important;
   }
@@ -708,4 +708,48 @@
    treatment pages. */
 .page-wrapper:not(.treatment-page) :is(.quick-facts, .faq-section) > :is(.shape1, .shape2) {
   z-index: 4;
+}
+
+/* NO TWINS, NO GAP AT THE EDGE, NOTHING OVER A PHOTO (owner, 28 Oct).
+   - A decoration DecorationEdgeClamp finds a second time on a page is swapped for a
+     picture that page does not have, or left out (data-deco-hidden).
+   - The decorations that bobbed sideways (arryLeftRight) left a gap at the screen edge
+     at the inner end of their 20px; they bob up and down, like the left ones.
+   - The FAQ's bowl on the left lies over the photo that stands there from 1400px. */
+section > :is(.shape1, .shape2)[data-deco-hidden] {
+  display: none !important;
+}
+:is(.shape1, .shape2) > img.animation__arryLeftRight,
+:is(.shape1, .shape2) > div > img.animation__arryLeftRight {
+  animation-name: arryUpDown;
+}
+@media (min-width: 1400px) {
+  .faq-section > .shape1 {
+    display: none !important;
+  }
+}
+
+/* The intro's decoration on the left lies over the photo's corner on laptops (the gutter
+   is 38-100px, the decoration 150-190px): left out below 1700px, where it hangs in the
+   empty side (owner, 28 Oct: decorations are not to lie over photos). */
+@media (min-width: 1200px) and (max-width: 1699px) {
+  .page-wrapper .about-section-two > .shape1 {
+    display: none !important;
+  }
+}
+
+/* Where the cards' slider hangs its decorations does not depend on the picture (live's
+   rules read the file name, and a picture swapped in by DecorationEdgeClamp has another
+   one, which left them in the flow, 400px of gap). */
+.service-section-two > .shape1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.service-section-two > .shape2 {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: -1;
 }

@@ -788,6 +788,45 @@
     padding: 5px 12px;
     font-size: 12px;
   }
+  /* The four facts start their words on one line (owner, 28 Oct, "Booking" and "In your
+     villa" sat at other heights): the label stays on one line ("OPEN DAILY" broke in two
+     and pushed its hours down), and the number of Booking is words like the others', not a
+     button. The villa's button has 14px of air over it. */
+  .visit-us--columns .visit-us__tile dt {
+    white-space: nowrap;
+  }
+  .visit-us--columns .visit-us__pills {
+    display: flex;
+    margin-top: 14px;
+  }
+  /* Larger words (14px labels of 11px were small to read at a glance): 12px labels, 15px
+     values, the address a little wider (28 Oct). */
+  .visit-us--columns .visit-us__tile dt {
+    font-size: 12px;
+  }
+  .visit-us--columns .visit-us__tile dd {
+    font-size: 15px;
+  }
+  .visit-us--columns .visit-us__tile:first-child {
+    flex: 0 0 auto;
+  }
+  .visit-us--columns .visit-us__tile:first-child dd {
+    min-width: 200px;
+    max-width: 240px;
+  }
+  /* the home service fee takes two lines, to give the address room */
+  .visit-us--columns .visit-us__tile:last-child dd {
+    max-width: 230px;
+    white-space: normal;
+  }
+  .visit-us--columns .visit-us__phone {
+    color: var(--theme-color1, #b8892f);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .visit-us--columns .visit-us__phone:hover {
+    text-decoration: underline;
+  }
   .visit-us--columns .visit-us__actions {
     margin-top: 28px;
   }

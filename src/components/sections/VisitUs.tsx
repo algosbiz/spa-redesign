@@ -150,20 +150,30 @@ export default function VisitUs({
     {
       label: "Booking",
       icon: "chat",
-      // The columns look shows only the phone number button, not the word "WhatsApp" (owner, 21 Oct).
-      text: columns ? null : "WhatsApp",
-      links: [
-        {
-          href: whatsappChatUrl,
-          label: (
-            <>
-              <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
-            </>
-          ),
-          external: true,
-          plain: true,
-        },
-      ],
+      // The columns look: the number is the fact's words, a plain link like the other facts' (28 Oct,
+      // so the facts start on one line); the other looks keep the number as a small button under
+      // "WhatsApp".
+      text: columns ? (
+        <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__phone">
+          <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
+        </a>
+      ) : (
+        "WhatsApp"
+      ),
+      links: columns
+        ? undefined
+        : [
+            {
+              href: whatsappChatUrl,
+              label: (
+                <>
+                  <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
+                </>
+              ),
+              external: true,
+              plain: true,
+            },
+          ],
     },
     ...(homeService
       ? [
@@ -249,7 +259,8 @@ export default function VisitUs({
         </dl>
       )}
       <div className="visit-us__actions">
-        {/* The columns look has no "Book on WhatsApp" button: the phone number in the facts is the link (owner, 21 Oct). */}
+        {/* The columns look has no "Book on WhatsApp" button: the phone number in the facts is the link (owner, 21 Oct;
+            tried again 28 Oct, taken out again the same day). */}
         {columns ? null : (
           <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__btn">
             Book on WhatsApp
