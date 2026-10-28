@@ -5,7 +5,7 @@
  *
  * The rule: from the last thing you can see in one section (text, photo,
  * card, button) to the first thing in the next is --sp-gap — 200px on
- * desktop, 160px on tablets, 140px on phones — whatever the sections are.
+ * desktop, 160px on tablets, 120px on phones (140px until 28 Oct) — whatever the sections are.
  * Live spaced them with each section's own padding classes (pt-100 … pt-170,
  * inline padding, !important fixes per pair), which left gaps from 39 to
  * 420px. Where a torn paper edge sits between two sections (76px at a
@@ -41,7 +41,8 @@
 }
 @media (max-width: 767px) {
   :root {
-    --sp-gap: 140px;
+    /* 120px, 60px each side of a torn line (owner, 28 Oct; was 140px) */
+    --sp-gap: 120px;
   }
 }
 :root {
@@ -161,7 +162,7 @@
 
 /* 6b. Two paper bands meet: the first one's bottom edge and the next one's
        top edge both sit in the gap, with what is left split around them
-       (nothing on phones, where 140px is less than the two edges). */
+       (nothing on phones, where 120px is less than the two edges). */
 :root {
   --sp-x-double: max(0px, calc((var(--sp-gap) - var(--sp-edge-top) - var(--sp-edge-bottom)) / 2));
 }
@@ -221,6 +222,27 @@
      (measured again 22 Oct: it was 115 / 121 / 110px, which left the torn
      line under it 30-40px off centre) */
   --sp-in-bottom: 80px;
+}
+/* From 992px the treatment cards are the homepage's (24 Oct, treat-cards.css):
+   the row ends 16px under the tallest card, not 80px (measured 28 Oct at 992,
+   1024, 1440 and 1920px on Couple Spa: the torn line before the closing banner
+   sat 36px under the cards and 112px above the banner's card). Below 992px
+   the row still has its 80px (86px measured). */
+@media (min-width: 992px) {
+  :root:root body div[class*="-services"] > .service-section-two {
+    --sp-in-bottom: 16px;
+  }
+}
+/* Under 992px the treatment cards have the homepage's arrows and dots under
+   them, in the section's own flow: they end at its bottom edge, so no room
+   under them is empty (28 Oct: on a phone the torn line ran through them,
+   at 768px along their bottom edge). The gap is measured from them. This
+   also replaces the 80px, 64px and waxing 109px measured for the old
+   sliders. */
+@media (max-width: 991px) {
+  :root:root:root:root body .service-section-two {
+    --sp-in-bottom: 0px;
+  }
 }
 /* At 324px and less a card's text wraps once more: the row is 29px taller
    than the cards in view (every slider measured). The treatment pages'
@@ -287,6 +309,49 @@
     --sp-in-bottom: 41px;
   }
 }
+/* Treatment pages from 768px, measured 28 Oct on all 24: the FAQ box under
+   the photo has 90px of empty space (it was 112px under 1400px), so the next
+   section sat 22px too close. Balinese massage: 40px from 992px. From 1400px
+   the photo, which follows the page down and ends the section, is what the
+   gap is measured from (none empty): leave that as it was. */
+@media (min-width: 768px) and (max-width: 1399px) {
+  :root body .treatment-page .faq-section--paper:not(.balinese-massage-faq *),
+  :root body .location-faq-paper .faq-section {
+    --sp-in-bottom: 90px;
+  }
+}
+/* … and the treatment cards' slider on the Massage Kuta and Villa pages (no
+   -services wrapper): the same 16px from 992px. */
+@media (min-width: 992px) {
+  :root:root:root body .service-section-two:not(.section__decoration-bottom > *) {
+    --sp-in-bottom: 16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  :root:root body .balinese-massage-faq .faq-section--paper {
+    --sp-in-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  :root:root body .balinese-massage-faq .faq-section--paper {
+    --sp-in-bottom: 24px;
+  }
+}
+/* Phones, measured 28 Oct: the quick facts' first line sits 21px under
+   its padding, and the FAQ's last question ends 30px, not 48px, above its
+   section's bottom. */
+@media (max-width: 767px) {
+  :root body .quick-facts--faq {
+    --sp-in-top: 21px;
+  }
+  :root body :is(.treatment-page, .page-wrapper) .faq-section--paper:not(.balinese-massage-faq *, .homepage-faq-section *),
+  :root body .location-faq-paper .faq-section {
+    --sp-in-bottom: 30px;
+  }
+  :root:root body .balinese-massage-faq .faq-section--paper {
+    --sp-in-bottom: 24px;
+  }
+}
 /* The outcall page's FAQ without a photo: its paper panel shows from the
    section's top to its bottom (measured again 22 Oct, when the gaps either
    side became plain half gaps: the old values hid 47-90px of it). */
@@ -350,7 +415,8 @@
    their content). */
 :root:root:root:not(#sp#sp#sp) body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > section:not(.banner-two-area, .banner-five-area, .page-title),
 :root:root:root:not(#sp#sp#sp) body :is(.page-wrapper, .outcall-page, .balinese-massage-page) > :not(section) > section:not(.banner-two-area, .banner-five-area, .page-title) {
-  margin-top: 0 !important;
+  /* what the padding cannot take, as at the bottom (28 Oct) */
+  margin-top: min(0px, calc(var(--sp-pt) - var(--sp-in-top, 0px))) !important;
   padding-top: max(0px, calc(var(--sp-pt) - var(--sp-in-top, 0px))) !important;
   padding-bottom: max(0px, calc(var(--sp-pb) - var(--sp-in-bottom, 0px))) !important;
   margin-bottom: min(0px, calc(var(--sp-pb) - var(--sp-in-bottom, 0px))) !important;
@@ -368,4 +434,135 @@
 }
 :root:root:root:not(#sp#sp#sp) body main:has(> .page-wrapper > .section__decoration-bottom:last-child, > .page-wrapper > :last-child > .section__decoration-bottom:last-child, > .page-wrapper > :last-child > :last-child > .section__decoration-bottom:last-child) + footer.site-footer {
   padding-top: calc(var(--sp-half) - var(--sp-ink-bottom)) !important;
+}
+
+/* The Villa & Hotel page (28 Oct): the figures sit 14px lower under the intro than the
+   rule, and on phones the review band's end leaves the next section 9px too far. */
+@media (min-width: 1200px) {
+  :root body .p-villa-hotel-massage .funfact-section {
+    --sp-in-top: 14px;
+  }
+}
+@media (max-width: 767px) {
+  :root body .p-villa-hotel-massage .testimonial-section-two {
+    --sp-in-bottom: 9px;
+  }
+}
+
+/* LAST PASS (owner, 28 Oct: "fix everything that is not to the rule"). Measured with
+   tools/spacing/measure-gaps.mjs, which now shows every section (content-visibility off)
+   and needs MSYS_NO_PATHCONV=1 under Git Bash for a path like /seminyak/. Each value is
+   the amount a gap was over (or under) the rule. */
+
+/* About: the quick facts' first line is 29px too far under the banner's torn line on
+   tablets (right from 992px). The treatment pages' is 0-29px too far, by page (how the
+   lead text centres against the list): no one value fits them, left as it was. */
+@media (min-width: 768px) and (max-width: 991px) {
+  :root body .p-about .quick-facts--faq {
+    --sp-in-top: 29px;
+  }
+}
+@media (min-width: 1200px) {
+  :root body .treatment-page .pricing-section-three {
+    --sp-in-top: 12px;
+  }
+  :root body .p-about .about-section-two + .about-section {
+    --sp-in-top: 12px;
+  }
+  :root body :is(.p-massage-kuta, .p-villa-hotel-massage) .funfact-section {
+    --sp-in-top: 14px;
+  }
+}
+/* Reviews to the next section on phones, 9px over. */
+@media (max-width: 767px) {
+  :root body :is(.p-massage-kuta, .p-villa-hotel-massage, .p-outcall-home-service-massage) .testimonial-section-two {
+    --sp-in-bottom: 9px;
+  }
+}
+
+/* The price list: the video section's first line is 87px (from 992px), 118px (tablets)
+   and 147px (phones) under its padding; what its padding cannot take (38px, 87px) is
+   taken by its top margin (the padding rule, above). Under 768px the 21px between its price groups, and 18px
+   before the reviews. The reviews' end is 36px (64px under 992px) too far from the FAQ. */
+@media (min-width: 992px) {
+  :root body .p-pricelist .video-section {
+    --sp-in-top: 87px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 25px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px), (min-width: 1400px) {
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 36px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1023px) {
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  :root body .p-pricelist .video-section {
+    --sp-in-top: 118px;
+  }
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 799px) {
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 14px;
+  }
+}
+@media (max-width: 767px) {
+  :root body .p-pricelist .video-section {
+    --sp-in-top: 147px;
+  }
+  :root body .p-pricelist .testimonial-section-two {
+    --sp-in-bottom: 64px;
+  }
+  :root body .p-pricelist .pricing-section-five + .pricing-section-five {
+    --sp-in-top: 21px;
+  }
+  :root body .p-pricelist .pricing-section-five:has(+ .testimonial-section-two) {
+    --sp-in-bottom: 18px;
+  }
+}
+
+/* The home page. */
+@media (min-width: 1400px) {
+  :root body .p-home .step-section {
+    --sp-in-bottom: 17px;
+  }
+  :root body .p-home .about-section-three {
+    --sp-in-bottom: 16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399px), (min-width: 1600px) {
+  :root body .p-home .testimonial-section-two {
+    --sp-in-bottom: 40px;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+  :root body .p-home .testimonial-section-two {
+    --sp-in-bottom: 18px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  :root:root body .p-home .homepage-faq-section .faq-section {
+    --sp-in-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  :root:root body .p-home .homepage-faq-section .faq-section {
+    --sp-in-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  :root:root body .p-home .homepage-faq-section .faq-section {
+    --sp-in-bottom: 24px;
+  }
 }

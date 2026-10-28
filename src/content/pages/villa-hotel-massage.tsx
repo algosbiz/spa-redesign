@@ -96,7 +96,11 @@ export default function VillaHotelMassagePage() {
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/villa-hotel-massage-wide-sm.webp"
       />
+      {/* The intro and the figures are two sections on the same background: decorations only at
+          the top of the first (owner, 28 Oct); the leaves differ from section to section. */}
       <AboutIntro
+        leftShapeSrc="/images/shape/leaf/8a.png"
+        rightShapeSrc={null}
         removeBottomPadding
         subTitle="Your Way to Relax"
         title={<>What Is an In-Room Massage?</>}
@@ -118,6 +122,8 @@ export default function VillaHotelMassagePage() {
       />
       <TreatmentTestimonials />
       <AboutSplit
+        leftShapeSrc="/images/shape/leaf/13a.png"
+        rightShapeSrc="/images/shape/leaf/1a-v2.png"
         subTitle="Stay In"
         title={<>The Spa Comes to Your Room</>}
         badgeTopText="Arrives in"
@@ -138,6 +144,8 @@ export default function VillaHotelMassagePage() {
         image="/images/services/massagehotelvilla/massagehotelvilla-4.webp"
       />
       <AboutSplitAlt
+        leftShapeSrc="/images/shape/leaf/2a.png"
+        rightShapeSrc="/images/shape/leaf/3a.png"
         subTitle="Treatments for Your Stay "
         badgeTopText="Popular in-room"
         badgeBottomText="Massage, scrub & facial"
@@ -160,6 +168,8 @@ export default function VillaHotelMassagePage() {
         image="/images/services/massagehotelvilla/massagehotelvilla-5.webp"
       />
       <AboutSplit
+        leftShapeSrc="/images/shape/leaf/6a.png"
+        rightShapeSrc="/images/shape/leaf/11a.png"
         badgeTopText="Booking"
         badgeBottomText="Open daily 9am–11pm"
         // No small heading: without one the section showed the default "About".
@@ -182,6 +192,8 @@ export default function VillaHotelMassagePage() {
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
+          leftShapeSrc="/images/shape/banner-five-shape1.png"
+          rightShapeSrc="/images/shape/leaf/10a.png"
           largeTopPadding
           imageTitle="Relax in Your Room"
           subTitle="Frequently Asked Questions"
@@ -191,6 +203,8 @@ export default function VillaHotelMassagePage() {
         />
       </div>
       <ReserveCta
+        leftShapeSrc="/images/shape/banner-six-shape2.png"
+        rightShapeSrc="/images/shape/step-shape-left.png"
         standardSpacing
         title="Book an In-Villa Massage in Bali"
         text="Our therapists bring massage and selected spa treatments to your hotel or villa around Seminyak, with fresh linen, oils and everything the treatment needs."

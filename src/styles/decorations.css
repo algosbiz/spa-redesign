@@ -25,6 +25,14 @@
     display: none;
   }
 }
+/* … and its tray at the left corner is the only decoration left on tablets
+   and phones (under 992px every other section has none there; owner, 28
+   Oct): left out there too. */
+@media (max-width: 991px) {
+  .service-section-two > .shape1 {
+    display: none;
+  }
+}
 
 /* /reservation/: the spa tray in the bottom-left corner is 327px wide on live
    (same there) and covers the last list items at every width that shows it
@@ -178,7 +186,9 @@
 /* Quick facts: flowers under the opening paragraph, a leaf above the card. */
 .quick-facts > .shape1 {
   left: 0;
-  bottom: -30px;
+  /* Inside the section: below its edge the next section's torn paper edge
+     (on top, white) would wash the flowers out. */
+  bottom: 12px;
 }
 .quick-facts > .shape1 img {
   width: 220px;
@@ -401,4 +411,301 @@
   .faq-section > .shape2 img {
     width: 110px;
   }
+}
+
+/* Tablets (below 1200px), treatment pages: three more decorations run into
+   text there (found with the pixel check on all 24 pages at 1024px: the
+   reviews' frangipani into the heading, the related treatments' tray into
+   the cards' text, the prices' tray under the last package), and lie on a
+   torn edge: left out, as the other sections' are. */
+@media (max-width: 1199px) {
+  .treatment-page .testimonial-section-two > .shape1,
+  .treatment-page .service-section-two > .shape1,
+  .treatment-page .pricing-section-three > .shape2 {
+    display: none;
+  }
+}
+
+/* ONE SIZE, AND NOTHING UNDER A TORN EDGE (owner, 28 Oct: the decorations
+   on the treatment pages were of different sizes, the flowers under the
+   quick facts were washed out by the paper edge of the next section, and
+   the leaf of "Visit us" floated off the screen edge). Equal widths still
+   looked unequal, because the PNGs have transparent margins of different
+   sizes (a tray is 25% empty, the stones 50%). So the size is that of what
+   is drawn: every decoration's drawn part (alpha above 40) is as big as the
+   next one's, geometric mean of its width and height = --deco-size. --r
+   per image (its file width / that mean) is measured from the PNGs below;
+   regenerate it if an image is added. From 1200px, on treatment pages. The
+   flowers (FloralDecoration) scale as a whole, to the same size. */
+@media (min-width: 1200px) {
+  :root {
+    --deco-size: 135px;
+  }
+  :root .treatment-page.treatment-page section > :is(.shape1, .shape2) > img,
+  :root .treatment-page.treatment-page section > :is(.shape1, .shape2) > div > img:not([class*="floral"]) {
+    width: calc(var(--deco-size) * var(--r, 1.2)) !important;
+    max-width: none !important;
+    height: auto !important;
+  }
+  :root .treatment-page.treatment-page section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: calc(var(--deco-size) * 1.15);
+  }
+  :root .treatment-page .service-section-two > .shape1 {
+    left: calc((100vw - var(--deco-content, 1320px)) / 2 - var(--deco-size) * 0.82 + 8px) !important;
+  }
+}
+@media (min-width: 1700px) {
+  :root {
+    --deco-size: min(200px, calc(var(--deco-cap) / 1.2));
+  }
+  /* The flowers' drawn part is wider than the leaves': a little smaller,
+     clear of the paragraph beside them. */
+  :root .treatment-page.treatment-page section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: calc(var(--deco-size) * 0.95);
+  }
+  :root .treatment-page .service-section-two > .shape1 {
+    left: -20px !important;
+  }
+  /* Against the screen edge. The sideways bobbing is 10px each way, so at 0
+     the image is cut by 10px at most (-12px cut up to 22px of the leaves,
+     owner 28 Oct: "covered, ugly"). */
+  :root .treatment-page.treatment-page section > .shape1 {
+    left: 0 !important;
+  }
+  :root .treatment-page.treatment-page section > .shape2 {
+    right: 0 !important;
+  }
+}
+
+/* The closing banner's card is 1408px wide: its petals stay clear of it
+   (they touched the card at 1920px). */
+@media (min-width: 1700px) {
+  :root .treatment-page.treatment-page .reserve-cta-section > :is(.shape1, .shape2) > img,
+  :root .page-wrapper:not(.treatment-page).page-wrapper section.reserve-cta-section > :is(.shape1, .shape2) > img {
+    width: min(calc(var(--deco-size) * var(--r, 1.2)), max(100px, calc((100vw - 1408px) / 2 - 36px))) !important;
+  }
+}
+
+/* NOT ON A TORN EDGE (owner, 28 Oct: they "still touch"). A section's torn
+   paper edge is 76px at its top and 74px at its bottom, and the gap between
+   sections is measured from its torn line (spacing.css). Decorations that
+   sat within 76px of a section's top or bottom lay on that edge, or on the
+   gap. They keep clear of it (the bobbing is 10px each way): 92px from
+   1700px, 50px on laptops (the torn line is 26px in; more would put the
+   quick facts' flowers on the text beside them); a decoration that was
+   nearer to the top is anchored that far from the top, one that was
+   nearer to the bottom that far from the bottom.
+   Layout is untouched: they are absolutely placed. */
+@media (min-width: 1200px) {
+  :root {
+    --deco-edge: 50px;
+  }
+  :root .treatment-page.treatment-page :is(
+      .quick-facts > .shape2,
+      .about-section-two > .shape1,
+      .pricing-section-three:not(:has(> .container > .section-header__flex:first-child)) > .shape1,
+      .testimonial-section-two > .shape1,
+      .about-section > .shape2,
+      .faq-section > .shape2,
+      .visit-us > .shape2,
+      .service-section-two > .shape2,
+      .reserve-cta-section > .shape1
+    ) {
+    top: var(--deco-edge) !important;
+    bottom: auto !important;
+  }
+  :root .treatment-page.treatment-page :is(
+      .quick-facts > .shape1,
+      .about-section-two > .shape2,
+      .pricing-section-three > .shape2,
+      .testimonial-section-two > .shape2,
+      .about-section > .shape1:has(img[src$="about-left-shape.png"]),
+      .faq-section > .shape1,
+      .visit-us > .shape1,
+      .service-section-two > .shape1,
+      .reserve-cta-section > .shape2
+    ) {
+    bottom: var(--deco-edge) !important;
+    top: auto !important;
+  }
+  /* Anchored lower, the FAQ and quick-facts leaves lie within the width of
+     their section's columns. The FAQ's content column has the paper colour
+     as its background and sits at z-index 2 (its .outer-box), and covered
+     the leaf (owner, 28 Oct: "covered, ugly"), so they go above it; at that
+     height and width they are clear of the text. */
+  :root .treatment-page.treatment-page :is(.quick-facts, .faq-section) > :is(.shape1, .shape2) {
+    z-index: 4 !important;
+  }
+  /* The FAQ's heading sits beside the photo and a long one (4 pages) runs
+     to the leaf's column: the leaf there is 95px (105px on the
+     live site, 110px), between the section's torn edge and the heading. */
+  :root .treatment-page.treatment-page .faq-section > .shape2 > img {
+    width: 95px !important;
+  }
+}
+/* The prices' tray at the right is the widest image (2.2 times as wide as
+   its drawn height): on narrow laptops it is smaller, clear of the last
+   package's text. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  :root .treatment-page.treatment-page .pricing-section-three > .shape2 > img {
+    width: calc(var(--deco-size) * var(--r, 1.2) * 0.75) !important;
+  }
+}
+/* Laptops, About sections with the photo on the left: the flowers stay in
+   the empty corner beside the list (above), 50px from the bottom. */
+@media (min-width: 1200px) and (max-width: 1699px) {
+  :root .treatment-page.treatment-page .about-section:has(> .container > .row > .image-column:first-child) > .shape2 {
+    bottom: var(--deco-edge) !important;
+    top: auto !important;
+  }
+}
+/* From 1700px the prices' tray at the left sits under the section's edge
+   whatever its heading (laptops: the rule above puts it lower). */
+@media (min-width: 1700px) {
+  :root .treatment-page.treatment-page .pricing-section-three > .shape1 {
+    top: var(--deco-edge) !important;
+    bottom: auto !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  :root .treatment-page.treatment-page .pricing-section-three > .shape2 > img {
+    width: calc(var(--deco-size) * var(--r, 1.2) * 0.55) !important;
+  }
+}
+/* From 1700px the empty sides are wide enough for the full 104px. */
+@media (min-width: 1700px) {
+  :root {
+    --deco-edge: 104px;
+  }
+}
+
+/* Balinese massage has two decorations of its own (not .shape1/.shape2): the
+   spa bowl in the closing banner, lying on the section's bottom edge
+   (owner, 28 Oct), and the FAQ's spa bowl, under the FAQ column's paper
+   background. Same size and distance from the edge as the others. */
+@media (min-width: 1200px) {
+  .treatment-page .balinese-massage-cta-shape,
+  .treatment-page .balinese-massage-faq-shape {
+    bottom: var(--deco-edge);
+  }
+  .treatment-page .balinese-massage-faq-shape {
+    z-index: 4;
+  }
+  .treatment-page .balinese-massage-cta-shape img,
+  .treatment-page .balinese-massage-faq-shape img {
+    width: calc(var(--deco-size) * var(--r, 1.2));
+    height: auto;
+  }
+}
+
+/* The drawn size of each image (see above). */
+[src$="/leaf/10a.png"] { --r: 0.907; }
+[src$="/leaf/11a.png"] { --r: 1.025; }
+[src$="/leaf/12a.png"] { --r: 1.026; }
+[src$="/leaf/13a.png"] { --r: 0.986; }
+[src$="/leaf/1a-v2.png"] { --r: 1.034; }
+[src$="/leaf/2a.png"] { --r: 0.951; }
+[src$="/leaf/3a.png"] { --r: 0.976; }
+[src$="/leaf/4a.png"] { --r: 0.913; }
+[src$="/leaf/5a.png"] { --r: 0.984; }
+[src$="/leaf/6a.png"] { --r: 0.876; }
+[src$="/leaf/7a.png"] { --r: 0.993; }
+[src$="/leaf/8a.png"] { --r: 0.951; }
+[src$="/leaf/9a.png"] { --r: 1.054; }
+[src$="/about-left-shape.png"] { --r: 0.955; }
+[src$="/about-right-shape.png"] { --r: 0.806; }
+[src$="/about-two-left.png"] { --r: 1.379; }
+[src$="/banner-five-shape1.png"] { --r: 1.017; }
+[src$="/banner-six-shape.png"] { --r: 0.801; }
+[src$="/banner-six-shape2.png"] { --r: 1.626; }
+[src$="/banner-three-shape.png"] { --r: 1.379; }
+[src$="/banner-three-shape2.png"] { --r: 1.042; }
+[src$="/banner-two-shape.png"] { --r: 1.972; }
+[src$="/feature-six-shape.png"] { --r: 1.311; }
+[src$="/footer-shape-left.png"] { --r: 0.844; }
+[src$="/mirror-left-shape.png"] { --r: 0.955; }
+[src$="/package-four-shape-left.png"] { --r: 0.821; }
+[src$="/package-shape-right.png"] { --r: 1.791; }
+[src$="/pricing-three-shape-right.png"] { --r: 1.794; }
+[src$="/service-four-shape-right.png"] { --r: 1.432; }
+[src$="/service-shape-left.png"] { --r: 0.822; }
+[src$="/service-shape-right.png"] { --r: 1.505; }
+[src$="/step-shape-left.png"] { --r: 1.018; }
+[src$="/testimonial-two-shape-left.png"] { --r: 1.151; }
+[src$="/testimonial-two-shape-right.png"] { --r: 1.791; }
+[src$="/video-shape.png"] { --r: 0.972; }
+
+/* The leaf of "Visit us" is cut flat on its left side: turned over, its flat
+   edge lies against the screen edge (it was floating 40px off it). */
+.visit-us > .shape2 {
+  scale: -1 1;
+  right: 0;
+}
+
+/* MAIN PAGES (owner, 28 Oct: "the same rules as the treatment pages", all
+   pages with a .page-wrapper except the treatments). From 1200px every
+   corner decoration is as big as the next one's drawn part (--r, above),
+   and is moved off the torn edges by DecorationEdgeClamp (components/ui;
+   --deco-clamp, a translate). */
+.page-wrapper:not(.treatment-page) section > :is(.shape1, .shape2) {
+  translate: 0 var(--deco-clamp, 0px);
+}
+@media (min-width: 1200px) {
+  :root .page-wrapper:not(.treatment-page).page-wrapper section > :is(.shape1, .shape2) > img,
+  :root .page-wrapper:not(.treatment-page).page-wrapper section > :is(.shape1, .shape2) > div > img:not([class*="floral"]) {
+    width: calc(var(--deco-size) * var(--r, 1.2)) !important;
+    max-width: none !important;
+    height: auto !important;
+  }
+  :root .page-wrapper:not(.treatment-page).page-wrapper section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: calc(var(--deco-size) * 1.15);
+  }
+}
+@media (min-width: 1700px) {
+  :root .page-wrapper:not(.treatment-page).page-wrapper section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: calc(var(--deco-size) * 0.95);
+  }
+}
+
+/* Main pages, narrower than the treatment pages' room (found with the
+   pixel check on all 11 at 1024, 1280 and 1440px, 28 Oct): decorations that
+   run into text are left out, as on the treatment pages (tablets) or in the
+   places there was no room (laptops); the floral one is smaller. The faint
+   watermark drawings (the home About's plant and stones, the review
+   logo) lie behind text on purpose. */
+@media (max-width: 1199px) {
+  .page-wrapper:not(.treatment-page) :is(
+      .testimonial-section-two > .shape1,
+      .service-section > .shape2,
+      .home-service-info-area > :is(.shape1, .shape2),
+      .privacy-policy-section > :is(.shape1, .shape2),
+      .terms-conditions-section > :is(.shape1, .shape2)
+    ) {
+    display: none;
+  }
+}
+@media (max-width: 1399px) {
+  .page-wrapper:not(.treatment-page) .testimonial-section-two > .shape1 {
+    display: none;
+  }
+}
+@media (max-width: 1799px) {
+  .page-wrapper:not(.treatment-page) .video-section [class*="shape"] {
+    display: none;
+  }
+}
+@media (max-width: 1699px) {
+  .page-wrapper:not(.treatment-page) :is(.service-section > .shape2, .step-section > .shape2) {
+    display: none;
+  }
+  :root .page-wrapper:not(.treatment-page).page-wrapper section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: calc(var(--deco-size) * 0.8);
+  }
+}
+
+/* The quick facts' and FAQ's decorations on the main pages (About, Massage
+   Kuta, Villa & Hotel) sit above the columns' paper background, as on the
+   treatment pages. */
+.page-wrapper:not(.treatment-page) :is(.quick-facts, .faq-section) > :is(.shape1, .shape2) {
+  z-index: 4;
 }

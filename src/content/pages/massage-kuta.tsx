@@ -76,7 +76,11 @@ export default function MassageKutaPage() {
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/massage-kuta-wide-sm.webp"
       />
+      {/* The intro and the figures are two sections on the same background: decorations only at
+          the top of the first (owner, 28 Oct); the leaves differ from section to section. */}
       <AboutIntro
+        leftShapeSrc="/images/shape/leaf/6a.png"
+        rightShapeSrc={null}
         removeBottomPadding
         subTitle="A Moment to Reset"
         title={<>What a Massage in Kuta Helps With</>}
@@ -98,6 +102,8 @@ export default function MassageKutaPage() {
       />
       <TreatmentTestimonials />
       <AboutSplit
+        leftShapeSrc="/images/shape/leaf/8a.png"
+        rightShapeSrc="/images/shape/leaf/9a.png"
         subTitle="Treatment Options"
         title={<>Massage Treatments Available in Kuta</>}
         badgeTopText="In Kuta"
@@ -120,6 +126,8 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-4.webp"
       />
       <AboutSplitAlt
+        leftShapeSrc="/images/shape/leaf/12a.png"
+        rightShapeSrc="/images/shape/leaf/13a.png"
         subTitle="Complete Experience"
         badgeTopText="Add on"
         badgeBottomText="Facial, scrub or cream bath"
@@ -139,6 +147,8 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-5.webp"
       />
       <AboutSplit
+        leftShapeSrc="/images/shape/leaf/3a.png"
+        rightShapeSrc="/images/shape/leaf/11a.png"
         badgeTopText="Booking"
         badgeBottomText="Just pick a time"
         // No small heading: without one the section showed the default "About".
@@ -151,6 +161,8 @@ export default function MassageKutaPage() {
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
+          leftShapeSrc="/images/shape/banner-five-shape1.png"
+          rightShapeSrc="/images/shape/leaf/10a.png"
           largeTopPadding
           imageTitle="Unwind in Kuta"
           subTitle="Frequently Asked Questions"
@@ -160,6 +172,8 @@ export default function MassageKutaPage() {
         />
       </div>
       <ReserveCta
+        leftShapeSrc="/images/shape/banner-six-shape2.png"
+        rightShapeSrc="/images/shape/step-shape-left.png"
         standardSpacing
         title="Take Time to Feel Better in Kuta"
         text="When the pace catches up with you, a massage at your hotel or villa is a welcome pause: Balinese massage, sports massage after surfing, or a facial."

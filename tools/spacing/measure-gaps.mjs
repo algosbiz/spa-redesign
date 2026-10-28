@@ -2,7 +2,7 @@
  * Measures the visual gap between consecutive sections on every page and
  * checks it against the site-wide rule in src/styles/spacing.css: from the
  * last visible thing in one section (text, photo, card, button, icon) to the
- * first in the next is 200px from 992px up, 160px on tablets, 140px on
+ * first in the next is 200px from 992px up, 160px on tablets, 120px on
  * phones; after a top banner photo, half that from its torn line (26px
  * up). Torn edges and decorations (leaves, flowers, shapes) are not
  * content. Where one torn edge sits between two sections, its torn line
@@ -38,7 +38,7 @@ async function run(path, w) {
   const page = await browser.newPage();
   await page.setViewport({ width: w, height: 900, isMobile: w < 768, hasTouch: w < 768 });
   await page.goto(base + path, { waitUntil: "networkidle2", timeout: 180000 });
-  await page.addStyleTag({ content: "#preloader{display:none!important} *,*::before,*::after{animation:none!important;transition:none!important}" });
+  await page.addStyleTag({ content: "#preloader{display:none!important} *,*::before,*::after{animation:none!important;transition:none!important;content-visibility:visible!important}" });
   await page.evaluate(async () => {
     for (const img of document.querySelectorAll("img[loading=lazy]")) img.loading = "eager";
     // Scroll through the page first, as a visitor does: parts that fade in
@@ -184,7 +184,7 @@ await writeFile(new URL("tools/spacing/gaps.json", ROOT), JSON.stringify(out, nu
 await browser.close();
 
 // The report: gaps against the rule, per width.
-const G = (w) => (w >= 992 ? 200 : w >= 768 ? 160 : 140);
+const G = (w) => (w >= 992 ? 200 : w >= 768 ? 160 : 120);
 const short = (s) => s.replace(/^section\./, "").replace(/^footer\..*/, "footer").replace(/\.(pt|pb|mb)-\d+/g, "").replace(/section__decoration-(top|bottom)/g, "T").replace(/\.+/g, ".").slice(0, 40);
 for (const w of [...widths].sort((a, b) => b - a)) {
   let n = 0, ok = 0; const bad = {};

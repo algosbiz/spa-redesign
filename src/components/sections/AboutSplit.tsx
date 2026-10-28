@@ -73,17 +73,19 @@ export default function AboutSplit({
             <img loading="lazy" decoding="async" src={leftShape} alt="" aria-hidden="true" />
           </div>
         )}
-        <div
-          className={`shape2 wow slideInRight${rightIsLeaf ? " treatment-leaf-position--right" : ""}`}
-          data-wow-delay="400ms"
-          data-wow-duration="1500ms"
-        >
-          <div className={rightIsLeaf ? "treatment-leaf-shape--right" : undefined}>
-            {rightDecoration || (
-              <img loading="lazy" decoding="async" className="sway_Y__animation" src={rightShape} alt="" aria-hidden="true" />
-            )}
+        {null !== rightShapeSrc && (
+          <div
+            className={`shape2 wow slideInRight${rightIsLeaf ? " treatment-leaf-position--right" : ""}`}
+            data-wow-delay="400ms"
+            data-wow-duration="1500ms"
+          >
+            <div className={rightIsLeaf ? "treatment-leaf-shape--right" : undefined}>
+              {rightDecoration || (
+                <img loading="lazy" decoding="async" className="sway_Y__animation" src={rightShape} alt="" aria-hidden="true" />
+              )}
+            </div>
           </div>
-        </div>
+        )}
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-7 content-column">

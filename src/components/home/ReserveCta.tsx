@@ -5,7 +5,12 @@ import { home } from "@/data/pages/home";
 export default function HomeReserveCta() {
   return (
     <div className="jsx-home homepage-closing-section section__decoration-top section__decoration-bottom bg-sub">
-      <ReserveCta standardSpacing {...home.reserve} />
+      <ReserveCta
+        standardSpacing
+        {...home.reserve}
+        leftShapeSrc="/images/shape/banner-six-shape2.png"
+        rightShapeSrc="/images/shape/step-shape-left.png"
+      />
     </div>
   );
 }

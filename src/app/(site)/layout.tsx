@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { mobileMenuData } from "@/components/layout/mobileMenuData";
 import JsonLd from "@/components/seo/JsonLd";
+import DecorationEdgeClamp from "@/components/ui/DecorationEdgeClamp";
 import HydrateLater from "@/components/ui/HydrateLater";
 import { spaSchema } from "@/lib/schema";
 
@@ -20,6 +21,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <JsonLd data={spaSchema()} />
       <Header menu={await mobileMenuData()} />
       <main id="main-content">{children}</main>
+      {/* Keeps the main pages' corner decorations off the torn edges. */}
+      <DecorationEdgeClamp />
       {/* Wakes up after the page above it (see HydrateLater). */}
       <HydrateLater>
         <Footer />

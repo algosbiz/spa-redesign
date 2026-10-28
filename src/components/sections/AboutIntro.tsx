@@ -77,22 +77,26 @@ export default function AboutIntro({
         id="about"
         className={`about-section-two pt-130 paralax__animation${removeBottomPadding ? "" : " pb-100"}`}
       >
-        <div
-          className={`shape1 wow slideInLeft${leftIsLeaf ? " treatment-leaf-position--left" : ""}`}
-          data-wow-delay="200ms"
-          data-wow-duration="1500ms"
-        >
-          {leftIsFloral ? (
-            <span className="about-leaf-gold animation__arryUpDown" aria-hidden="true" />
-          ) : (
-            <img loading="lazy" decoding="async" className="animation__arryUpDown" src={leftShape} alt="" aria-hidden="true" />
-          )}
-        </div>
-        <div className={`shape2${rightIsLeaf ? " treatment-leaf-position--right" : ""}`}>
-          <div className={rightIsLeaf ? "treatment-leaf-shape--right" : undefined}>
-            <img loading="lazy" decoding="async" className="animation__floatBob" src={rightShape} alt="" aria-hidden="true" />
+        {null !== leftShapeSrc && (
+          <div
+            className={`shape1 wow slideInLeft${leftIsLeaf ? " treatment-leaf-position--left" : ""}`}
+            data-wow-delay="200ms"
+            data-wow-duration="1500ms"
+          >
+            {leftIsFloral ? (
+              <span className="about-leaf-gold animation__arryUpDown" aria-hidden="true" />
+            ) : (
+              <img loading="lazy" decoding="async" className="animation__arryUpDown" src={leftShape} alt="" aria-hidden="true" />
+            )}
           </div>
-        </div>
+        )}
+        {null !== rightShapeSrc && (
+          <div className={`shape2${rightIsLeaf ? " treatment-leaf-position--right" : ""}`}>
+            <div className={rightIsLeaf ? "treatment-leaf-shape--right" : undefined}>
+              <img loading="lazy" decoding="async" className="animation__floatBob" src={rightShape} alt="" aria-hidden="true" />
+            </div>
+          </div>
+        )}
         <div className="container">
           <div className="row g-4">
             <div className="col-xl-7 wow fadeInRight image-column" data-wow-delay="200ms" data-wow-duration="1500ms">

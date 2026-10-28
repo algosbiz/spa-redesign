@@ -905,6 +905,8 @@ export default function OutcallPage() {
             columns={2}
           />
           <ReserveCta
+            leftShapeSrc="/images/shape/banner-six-shape2.png"
+            rightShapeSrc="/images/shape/step-shape-left.png"
             bottomSpacing={0}
             title="Home Service Massage in Seminyak and Beyond"
             text="Professional treatments at your home, hotel, or villa for an extra IDR 75.000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen."
