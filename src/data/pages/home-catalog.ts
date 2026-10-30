@@ -199,7 +199,8 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Balinese Massage",
+    // What the package is, without times: the line under it gives the lengths (owner, 28 Oct: "1 Hour – Balinese Massage" here read as a different package).
+    desc: "Balinese massage and ear candling, side by side for two.",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 605.000", details: ["1 Hour Balinese Massage + 30 Mins Ear Candle"] },
     ],
@@ -211,7 +212,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Balinese Massage",
+    desc: "Balinese massage and a Bali Moon Facial, side by side for two.",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 675.000", details: ["1 Hour Balinese Massage + 1 Hour Bali Moon Facial"] },
     ],
@@ -223,7 +224,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Warm Candle",
+    desc: "Warm candle massage and ear candling, side by side for two.",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 810.000", details: ["1 Hour Warm Candle Massage + 30 Mins Ear Candle"] },
     ],
@@ -235,7 +236,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Warm Candle",
+    desc: "Warm candle massage and a Bali Moon Facial, side by side for two.",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 875.000", details: ["1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial"] },
     ],
