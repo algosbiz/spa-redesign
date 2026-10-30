@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GuidePost from "@/components/sections/GuidePost";
 import SoftHeader from "@/components/sections/SoftHeader";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import GuideAnswer from "@/components/sections/GuideAnswer";
 import { guideAnswers } from "@/data/guide/answers";
 import { guideHomeServiceLines } from "@/data/guide/homeServiceLines";
+import { faqFromHtml } from "@/lib/blog/faq";
 import { getGuideArticle, getPublishedPost, getPublishedPosts } from "@/lib/blog/posts";
 import { sanitizeHtml } from "@/lib/blog/sanitize";
 import { linkedText } from "@/lib/linkedText";
@@ -50,6 +52,7 @@ export default async function GuideArticlePage({ params }: Props) {
   // The header's reading time (SoftHeader; no dates shown, owner, 23 Oct).
   const words = (post.content_html || "").replace(/<[^>]*>/g, " ").split(/\s+/).filter(Boolean).length;
   const minutes = Math.max(1, Math.round(words / 200));
+  const contentHtml = sanitizeHtml(post.content_html);
 
   return (
     <div className={`page-wrapper lh p-guide-${post.slug}`}>
@@ -64,6 +67,8 @@ export default async function GuideArticlePage({ params }: Props) {
           updatedAt: post.updated_at,
         })}
       />
+      {/* The article's own "Frequently asked questions" section, when it has one. */}
+      <FaqJsonLd items={faqFromHtml(contentHtml)} />
       <SoftHeader
         title={post.title}
         kicker="Massage Guide"
@@ -76,7 +81,7 @@ export default async function GuideArticlePage({ params }: Props) {
         image={post.cover_image}
       />
       <GuidePost
-        post={{ ...post, content_html: sanitizeHtml(post.content_html) }}
+        post={{ ...post, content_html: contentHtml }}
         recentPosts={recentPosts}
         prevPost={prevPost}
         nextPost={nextPost}
