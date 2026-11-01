@@ -85,7 +85,7 @@ const tile = (length: string, id: string, option: string) => ({ length, amount: 
  * "length IDR amount · …" (owner, 22 Oct: every treatment banner shows its
  * prices), from the price list so they change with it. These pages keep the
  * price line in their quick facts: it says more (the scrub's seven scents,
- * all seven waxing prices). The day spa shows the lowest treatment and the
+ * all eleven waxing prices). The day spa shows the lowest treatment and the
  * lowest one-guest package (Balinese and Mani Pedi Package D, IDR 375.000 on 24 Oct).
  */
 const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
@@ -124,7 +124,7 @@ function propsOf(tree: TreeNode, type: string): TreeNode["props"] | undefined {
 
 /**
  * The quick facts' price line for the banner: the first fact that lists two
- * to four prices ("Per person: 1 hour IDR 159.000 · …"; waxing's seven stay
+ * to four prices ("Per person: 1 hour IDR 159.000 · …"; waxing's eleven stay
  * in the list). Its caption is the line's own ("Per person") or else the
  * fact's label ("Balinese, for two", "Price by hair length"); a note in
  * brackets after a name stays in the list ("Tea Tree Facial (oily or

@@ -2,7 +2,9 @@
 // Please do not rewrite texts or prices without checking migration/migration-audit.md first.
 //
 // Page: https://spabalimoon.com/seminyak/hair-braiding/
-// TODO PRICE-04: these prices are not on the Pricelist page (see migration-audit.md).
+// Prices since 1 Nov 2026 (owner): short 499.000, medium 659.000, long 899.000, also
+// on the price list (src/data/pricelist.ts) and every menu. The page body is
+// src/content/treatments/hair-braiding.json.
 
 import type { Treatment } from "../types";
 
@@ -57,28 +59,25 @@ const hairBraiding: Treatment = {
           cards: [
             {
               label: "Short Hair",
-              price: 279_000,
+              price: 499_000,
               points: ["Bob or shoulder-length hair", "Simple braid styles", "Quick styling sessions"],
               bookButton: true,
-              note: "TODO PRICE-04: these prices are not on the Pricelist page (see migration-audit.md).",
             },
             {
               label: "Medium Hair",
-              price: 379_000,
+              price: 659_000,
               points: [
                 "Most Dutch braid styles",
                 "Added braid definition",
                 "Everyday or holiday hairstyles",
               ],
               bookButton: true,
-              note: "TODO PRICE-04: these prices are not on the Pricelist page (see migration-audit.md).",
             },
             {
               label: "Long Hair",
-              price: 469_000,
+              price: 899_000,
               points: ["Longer braid designs", "Fuller braided looks", "Hair extensions if preferred"],
               bookButton: true,
-              note: "TODO PRICE-04: these prices are not on the Pricelist page (see migration-audit.md).",
             },
           ],
         },

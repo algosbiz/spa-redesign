@@ -183,15 +183,19 @@ export const pricelistPage = {
         },
         {
           name: "Cupping Therapy",
-          desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+          desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
           options: [
             {
-              time: "1 Hour",
-              price: "IDR 500.000"
+              time: "1 Hour Dry Cupping",
+              price: "IDR 499.000"
             },
             {
-              time: "2 Hours · with Balinese Massage",
-              price: "IDR 600.000"
+              time: "1 Hour Wet Cupping",
+              price: "IDR 649.000"
+            },
+            {
+              time: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping",
+              price: "IDR 599.000"
             }
           ],
           id: 30,
@@ -650,6 +654,27 @@ export const pricelistPage = {
           id: 10,
           image: "/images/treatments/cards/creambath-warm.webp"
         },
+        // Added 1 Nov (owner): braiding was priced only on its own page.
+        {
+          name: "Hair Braiding",
+          desc: "Braids for the beach, events or everyday wear, priced by hair length, with extensions on selected styles.",
+          options: [
+            {
+              time: "Short Hair",
+              price: "IDR 499.000"
+            },
+            {
+              time: "Medium Hair",
+              price: "IDR 659.000"
+            },
+            {
+              time: "Long Hair",
+              price: "IDR 899.000"
+            }
+          ],
+          id: 31,
+          image: "/images/beauty/hair-braiding/hairbraiding-3.webp"
+        },
         {
           name: "Ear Candle",
           desc: "A gentle traditional treatment designed to promote comfort and relaxation.",
@@ -705,35 +730,19 @@ export const pricelistPage = {
         {
           name: "Waxing",
           desc: "A hair removal treatment using hot wax to leave the skin smooth and clean.",
+          // New waxing menu, 1 Nov 2026 (owner).
           options: [
-            {
-              time: "Arms",
-              price: "IDR 159.000"
-            },
-            {
-              time: "Under Arms",
-              price: "IDR 99.000"
-            },
-            {
-              time: "Back · Start From",
-              price: "IDR 139.000"
-            },
-            {
-              time: "Full Back",
-              price: "IDR 299.000"
-            },
-            {
-              time: "Half Legs",
-              price: "IDR 149.000"
-            },
-            {
-              time: "Full Legs",
-              price: "IDR 299.000"
-            },
-            {
-              time: "Brazilian",
-              price: "IDR 350.000"
-            }
+            { time: "Under Arms", price: "IDR 159.000" },
+            { time: "Half Arms", price: "IDR 189.000" },
+            { time: "Full Arms", price: "IDR 229.000" },
+            { time: "Full Back", price: "IDR 419.000" },
+            { time: "Stomach (Strip)", price: "IDR 159.000" },
+            { time: "Half Legs", price: "IDR 249.000" },
+            { time: "Full Legs", price: "IDR 349.000" },
+            { time: "Bikini", price: "IDR 285.000" },
+            { time: "Brazilian", price: "IDR 375.000" },
+            { time: "Eyebrow", price: "IDR 99.000" },
+            { time: "Upper Lip", price: "IDR 99.000" }
           ],
           id: 29,
           image: "/images/listmenu/waxing.webp"

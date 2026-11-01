@@ -420,9 +420,9 @@ const MENU_NAME: Record<string, string> = {
   "Sunburn Treatment": "Aloe Vera Massage",
 };
 
-/** Cards with no spa-menu entry: their own link and starting price. */
+/** Cards with no spa-menu entry: their own link and starting price. Hair
+ *  Braiding has had a menu entry since 1 Nov (owner). */
 const NOT_IN_MENU: Record<string, { href: string; price: string }> = {
-  "Hair Braiding": { href: "/seminyak/hair-braiding/", price: "IDR 279.000" },
   "Nail Art": { href: "/seminyak/nail-spa/", price: "IDR 159.000" },
 };
 
@@ -453,7 +453,7 @@ export const treatmentSlides = SLIDES.map((slide) => {
     href: item?.href ?? NOT_IN_MENU[slide.name]?.href,
     image: item?.image ?? slide.image,
     price: fromPrice(item, slide.name),
-    /** The spa-menu entry behind the card (none for Hair Braiding and Nail Art). */
+    /** The spa-menu entry behind the card (none for Nail Art). */
     menuItem: item,
   };
 });
