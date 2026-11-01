@@ -125,16 +125,13 @@ function breadcrumb(crumbs: Crumb[]) {
 const amount = (price: number) => String(price);
 
 /**
- * "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two"; "2 Hours · with
- * Balinese Massage" -> "2 hours with Balinese Massage" (the cupping combo);
- * "Back · Start From" -> "Back".
+ * "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two"; "1 Hour Wet
+ * Cupping" -> "1 hour Wet Cupping"; "Back · Start From" -> "Back".
  */
 const offerLabel = (label: string) => {
   const forTwo = /2 pax/i.test(label);
-  const [first, ...rest] = label.split(/\s+[·–-]\s+/);
+  const [first] = label.split(/\s+[·–-]\s+/);
   const time = first.replace(/\bHours?\b|\bMinutes?\b/g, (w) => w.toLowerCase());
-  const withPart = rest.find((r) => /^with\b/i.test(r));
-  if (withPart) return `${time} ${withPart}`;
   return forTwo ? `${time}, for two` : time;
 };
 
@@ -164,14 +161,10 @@ const priceOfPack = (price: string) => Number(price.replace(/\D/g, ""));
 
 /**
  * Prices of the pages whose treatments have no row of their own in
- * src/data/pricelist.ts, as their quick facts state them.
+ * src/data/pricelist.ts, as their quick facts state them (hair braiding has
+ * had a row since 1 Nov).
  */
 const PAGE_OFFERS: Record<string, { name: string; price: number }[]> = {
-  "hair-braiding": [
-    { name: "Hair braiding, short hair", price: 279_000 },
-    { name: "Hair braiding, medium hair", price: 379_000 },
-    { name: "Hair braiding, long hair", price: 469_000 },
-  ],
   "nail-spa": [
     { name: "Manicure with colour", price: 159_000 },
     { name: "Pedicure with colour", price: 169_000 },

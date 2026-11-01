@@ -108,22 +108,26 @@
     homeDescription: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
   },
   {
-    // Added 24 Oct (owner): cupping, 1 hour only; the 2 hours add a 1-hour
-    // Balinese massage at the package scale (500.000 + 159.000 = 659.000, 9% off).
+    // Added 24 Oct (owner): cupping, 1 hour. 1 Nov (owner): dry 500.000 →
+    // 499.000, wet cupping added at 649.000, and the combo, which read as
+    // "2 hours with massage", now names both hours: 1 hour Balinese + 1 hour
+    // dry cupping, 600.000 → 599.000 (499.000 + 159.000 = 658.000 separately).
+    // No plain "1 Hour" label, so the menus list all three lines.
     id: "cupping-therapy",
     category: "massage",
     pageSlug: "cupping-therapy",
     image: { src: "/images/treatments/cards/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
     options: [
-      { label: "1 Hour", price: 500_000 },
-      { label: "2 Hours · with Balinese Massage", price: 600_000, homeLabel: "2 Hours with Balinese Massage" },
+      { label: "1 Hour Dry Cupping", price: 499_000 },
+      { label: "1 Hour Wet Cupping", price: 649_000 },
+      { label: "1 Hour Balinese Massage + 1 Hour Dry Cupping", price: 599_000 },
     ],
     pricelistName: "Cupping Therapy",
-    pricelistDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+    pricelistDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
     homeServiceName: "Cupping Therapy",
-    homeServiceDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+    homeServiceDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
     homeName: "Cupping Therapy",
-    homeDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame.",
+    homeDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry or wet cupping.",
   },
   {
     id: "deep-tissue-massage",
@@ -565,6 +569,26 @@
     homeDescription: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
   },
   {
+    // Added 1 Nov (owner): until then braiding was priced only on its own page
+    // (279.000 / 379.000 / 469.000); new prices, now on every menu, at the spa
+    // and as home service.
+    id: "hair-braiding",
+    category: "beauty",
+    pageSlug: "hair-braiding",
+    image: { src: "/images/beauty/hair-braiding/hairbraiding-3.webp", alt: "Hair Braiding", width: 630, height: 580 },
+    options: [
+      { label: "Short Hair", price: 499_000 },
+      { label: "Medium Hair", price: 659_000 },
+      { label: "Long Hair", price: 899_000 },
+    ],
+    pricelistName: "Hair Braiding",
+    pricelistDescription: "Braids for the beach, events or everyday wear, priced by hair length, with extensions on selected styles.",
+    homeServiceName: "Hair Braiding",
+    homeServiceDescription: "Braids for the beach, events or everyday wear, priced by hair length, at your villa or hotel.",
+    homeName: "Hair Braiding",
+    homeDescription: "Braids for the beach, events or everyday wear, priced by hair length.",
+  },
+  {
     id: "ear-candle",
     category: "beauty",
     pageSlug: "ear-candle",
@@ -621,22 +645,24 @@
     category: "beauty",
     pageSlug: "waxing-salon",
     image: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
+    // New waxing menu, 1 Nov 2026 (owner), in the owner's order: "Arms" became
+    // half and full arms, "Back (from 139.000)" was dropped, and stomach (strip),
+    // bikini, eyebrow and upper lip were added. The owner's round prices less
+    // 1k, to end in 9 like the rest of the menu (160 → 159, 100 → 99); bikini
+    // 285 and Brazilian 375 as given.
     options: [
-      { label: "Arms", price: 159_000 },
-      { label: "Under Arms", price: 99_000 },
-      {
-        label: "Back · Start From",
-        price: 139_000,
-        // The Home Service page writes "Back" with "Start from 139.000" as the price.
-        homeServiceLabel: "Back",
-        homeServicePricePrefix: "Start from",
-        homeLabel: "Back (starting from)",
-      },
-      { label: "Full Back", price: 299_000 },
-      { label: "Half Legs", price: 149_000 },
-      { label: "Full Legs", price: 299_000 },
-      // PRICE-07: the live site changed this on 2026-09-26 (269K → 350K on /seminyak/, the homepage, Home Service and Waxing pages).
-      { label: "Waxing Brazilian", price: 350_000 },
+      { label: "Under Arms", price: 159_000 },
+      { label: "Half Arms", price: 189_000 },
+      { label: "Full Arms", price: 229_000 },
+      { label: "Full Back", price: 419_000 },
+      { label: "Stomach (Strip)", price: 159_000 },
+      { label: "Half Legs", price: 249_000 },
+      { label: "Full Legs", price: 349_000 },
+      { label: "Bikini", price: 285_000 },
+      // PRICE-07: 269K → 350K on 2026-09-26; 375K since 1 Nov 2026.
+      { label: "Waxing Brazilian", price: 375_000 },
+      { label: "Eyebrow", price: 99_000 },
+      { label: "Upper Lip", price: 99_000 },
     ],
     pricelistName: "Waxing",
     pricelistDescription: "A hair removal treatment using hot wax to leave the skin smooth and clean.",

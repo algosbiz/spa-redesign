@@ -45,70 +45,47 @@ const waxingSalon: Treatment = {
       paragraphs: [
         "Every area of the body has different needs, which is why Spa Bali Moon provides various waxing options for both everyday grooming and special occasions. Each service is performed carefully to help you achieve smooth and well-maintained skin.",
       ],
+      // New waxing menu, 1 Nov 2026 (owner): eleven areas in five cards by body
+      // area, each starting from its lowest price, as on the page
+      // (src/content/treatments/waxing-salon.json).
       images: [
-        { src: "/images/beauty/waxing-salon/waxing-4.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/beauty/waxing-salon/waxing-5.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/beauty/waxing-salon/waxing-6.webp", alt: "image", width: 1050, height: 484 },
         { src: "/images/beauty/waxing-salon/waxing-7.webp", alt: "image", width: 1050, height: 484 },
         { src: "/images/beauty/waxing-salon/waxing-8.webp", alt: "image", width: 1050, height: 484 },
         { src: "/images/beauty/waxing-salon/waxing-9.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/beauty/waxing-salon/waxing-10.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/beauty/waxing-salon/waxing-5.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/beauty/waxing-salon/waxing-6.webp", alt: "image", width: 1050, height: 484 },
       ],
       groups: [
         {
           cards: [
             {
               label: "Arms",
-              price: priceOf("waxing", "Arms"),
-              points: ["Smooth arm hair removal", "Everyday grooming", "Professional waxing finish"],
-              bookButton: true,
-            },
-            {
-              label: "Under Arms",
               price: priceOf("waxing", "Under Arms"),
-              points: [
-                "Quick underarm grooming",
-                "Longer-lasting smoothness",
-                "Gentle technique for sensitive skin",
-              ],
+              points: ["Under arms", "Half arms", "Full arms"],
               bookButton: true,
             },
             {
-              label: "Back",
-              price: priceOf("waxing", "Back · Start From"),
-              points: ["Focused back waxing", "Neat grooming finish", "Suitable for women and men"],
-              bookButton: true,
-            },
-            {
-              label: "Full Back",
-              price: priceOf("waxing", "Full Back"),
-              points: ["Complete back waxing", "Larger body area care", "Smooth, clean result"],
-              bookButton: true,
-            },
-            {
-              label: "Half Legs",
+              label: "Legs",
               price: priceOf("waxing", "Half Legs"),
-              points: ["Lower or upper leg waxing", "Holiday-ready skin", "Ideal before beach days"],
+              points: ["Half legs", "Full legs", "Olive oil strip wax"],
               bookButton: true,
             },
             {
-              label: "Full Legs",
-              price: priceOf("waxing", "Full Legs"),
-              points: [
-                "Complete leg waxing",
-                "Longer-lasting smoothness",
-                "Professional strip wax application",
-              ],
+              label: "Back & Stomach",
+              price: priceOf("waxing", "Stomach (Strip)"),
+              points: ["Stomach (strip)", "Full back", "Suitable for women and men"],
               bookButton: true,
             },
             {
-              label: "Waxing Brazilian",
-              price: priceOf("waxing", "Waxing Brazilian"),
-              points: [
-                "Private treatment setting",
-                "Careful technique for sensitive areas",
-                "Comfort-focused service",
-              ],
+              label: "Bikini & Brazilian",
+              price: priceOf("waxing", "Bikini"),
+              points: ["Bikini", "Brazilian", "Private treatment setting"],
+              bookButton: true,
+            },
+            {
+              label: "Face",
+              price: priceOf("waxing", "Eyebrow"),
+              points: ["Eyebrow", "Upper lip"],
               bookButton: true,
             },
           ],

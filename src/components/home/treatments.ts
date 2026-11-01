@@ -14,16 +14,12 @@ export type Treatment = {
 };
 
 /**
- * The two treatments without a spa-menu entry, from their own pages
- * (/seminyak/hair-braiding/, /seminyak/nail-spa/): a photo — the live slider
- * reuses the Cream Bath and Manicure Pedicure ones — and the line from their
- * "Personalised Designs" highlight.
+ * The treatment without a spa-menu entry, from its own page
+ * (/seminyak/nail-spa/): a photo — the live slider reuses the Manicure
+ * Pedicure one — and the line from its "Personalised Designs" highlight.
+ * Hair Braiding was here too until it joined the menu (1 Nov).
  */
 const OWN_PAGE: Record<string, { image: string; desc: string }> = {
-  "Hair Braiding": {
-    image: "/images/beauty/hair-braiding/hairbraiding-3.webp",
-    desc: "Choose from classic, modern, or customised braid styles to match your look.",
-  },
   "Nail Art": {
     image: "/images/beauty/nail-spa/nailart-3.webp",
     desc: "Colours, patterns, and finishes selected to suit your own style.",
@@ -49,7 +45,7 @@ export const allTreatments: Treatment[] = treatmentSlides.map((slide) => {
     icon: slide.icon,
     desc: item?.desc ?? OWN_PAGE[slide.name]?.desc ?? "",
     price,
-    // Both treatments without a menu entry are beauty treatments.
+    // The treatment without a menu entry (Nail Art) is a beauty treatment.
     group: !item || item.category === "beauty" ? "beauty" : "massage",
   };
 });
