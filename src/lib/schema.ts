@@ -8,8 +8,9 @@
  *   priceListSchema()    every treatment and package with its prices, /seminyak/
  *   treatmentSchema()    Service + Offers in IDR + breadcrumb, treatment pages
  *   homeServiceSchema()  Service with the areas served, outcall, villa and Kuta pages
- *   articleSchema()      Article + breadcrumb, guide articles
- *   pageSchema()         where a plain page sits in the site (About, Contact)
+ *   blogIndexSchema()    Blog with its posts + breadcrumb, /guide/
+ *   articleSchema()      BlogPosting + breadcrumb, guide articles (FAQPage too, from the article's own FAQ section)
+ *   pageSchema()         where a plain page sits in the site (About, Contact, Reservation)
  *
  * Other blocks point at the spa by its @id instead of repeating it.
  */
@@ -73,15 +74,9 @@ export function spaSchema() {
     // The spa's profiles elsewhere. Facebook left out: the page is unused and
     // the owner wants no Facebook links (23 Oct).
     sameAs: [business.listings.google, business.listings.tripadvisor, business.social.instagram],
-    // The Google Business Profile's rating, as the owner sent it on 24 Oct 2026
-    // (4.3 from 196 Google reviews). Keep it equal to the profile, or remove it.
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.3,
-      reviewCount: 196,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    // No aggregateRating (removed 30 Oct 2026, after the Google rating dropped):
+    // Google shows no stars for a business's own rating, and a copied figure
+    // goes stale. The Google profile in sameAs carries the reviews.
     // Languages at reception (owner, 24 Oct: Japanese too).
     knowsLanguage: ["English", "Indonesian", "Japanese"],
     // What guests ask about (owner, 24 Oct: the spa has Wi-Fi and showers).
@@ -130,16 +125,13 @@ function breadcrumb(crumbs: Crumb[]) {
 const amount = (price: number) => String(price);
 
 /**
- * "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two"; "2 Hours · with
- * Balinese Massage" -> "2 hours with Balinese Massage" (the cupping combo);
- * "Back · Start From" -> "Back".
+ * "1 Hour · Balinese Massage · 2 Pax" -> "1 hour, for two"; "1 Hour Wet
+ * Cupping" -> "1 hour Wet Cupping"; "Back · Start From" -> "Back".
  */
 const offerLabel = (label: string) => {
   const forTwo = /2 pax/i.test(label);
-  const [first, ...rest] = label.split(/\s+[·–-]\s+/);
+  const [first] = label.split(/\s+[·–-]\s+/);
   const time = first.replace(/\bHours?\b|\bMinutes?\b/g, (w) => w.toLowerCase());
-  const withPart = rest.find((r) => /^with\b/i.test(r));
-  if (withPart) return `${time} ${withPart}`;
   return forTwo ? `${time}, for two` : time;
 };
 
@@ -169,14 +161,10 @@ const priceOfPack = (price: string) => Number(price.replace(/\D/g, ""));
 
 /**
  * Prices of the pages whose treatments have no row of their own in
- * src/data/pricelist.ts, as their quick facts state them.
+ * src/data/pricelist.ts, as their quick facts state them (hair braiding has
+ * had a row since 1 Nov).
  */
 const PAGE_OFFERS: Record<string, { name: string; price: number }[]> = {
-  "hair-braiding": [
-    { name: "Hair braiding, short hair", price: 279_000 },
-    { name: "Hair braiding, medium hair", price: 379_000 },
-    { name: "Hair braiding, long hair", price: 469_000 },
-  ],
   "nail-spa": [
     { name: "Manicure with colour", price: 159_000 },
     { name: "Pedicure with colour", price: 169_000 },
@@ -380,11 +368,25 @@ export function homeServiceSchema({
   };
 }
 
+/**
+ * The spa as a guide article's author and publisher: its @id plus the name,
+ * website and logo, so the article block reads complete on its own (Google's
+ * article guidelines ask for the author's name; a bare @id only points at the
+ * spa block elsewhere on the page).
+ */
+const spaByline = {
+  "@type": "DaySpa",
+  "@id": SPA_ID,
+  name: business.name,
+  url: business.url,
+  logo: absoluteUrl("/images/logo/sbm.webp"),
+};
+
 /** Who wrote a guide article: the spa for its own articles ("Admin" is the blog's default byline), else a person. */
 const authorOf = (author?: string | null) => {
   const byline = author?.trim();
   return !byline || byline === business.name || /^admin$/i.test(byline)
-    ? provider
+    ? spaByline
     : { "@type": "Person", name: byline };
 };
 
@@ -411,7 +413,7 @@ export function blogIndexSchema({
         description,
         url,
         inLanguage: "en",
-        publisher: provider,
+        publisher: spaByline,
         blogPost: posts.map((post) => ({
           "@type": "BlogPosting",
           "@id": `${absoluteUrl(`/guide/${post.slug}/`)}#article`,
@@ -442,7 +444,7 @@ export function blogIndexSchema({
   };
 }
 
-/** A guide article. */
+/** A guide article: a BlogPosting in the guide's Blog (the same node the /guide/ index lists). */
 export function articleSchema({
   slug,
   title,
@@ -466,18 +468,20 @@ export function articleSchema({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Article",
+        "@type": "BlogPosting",
         "@id": `${url}#article`,
         headline: title,
         ...(description ? { description } : {}),
         url,
         mainEntityOfPage: url,
+        inLanguage: "en",
+        isPartOf: { "@id": `${absoluteUrl("/guide/")}#blog` },
         ...(image ? { image: absoluteUrl(image) } : {}),
         ...(publishedAt ? { datePublished: publishedAt } : {}),
         ...(updatedAt || publishedAt ? { dateModified: updatedAt || publishedAt } : {}),
         // The articles are written by the spa; a person's name, when one is set in the admin, is shown as such.
         author: authorOf(author),
-        publisher: provider,
+        publisher: spaByline,
       },
       breadcrumb([
         { name: "Home", path: "/" },

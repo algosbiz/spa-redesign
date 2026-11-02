@@ -506,11 +506,12 @@ export default function OutcallPage() {
                   {
                     id: "massage-cupping",
                     name: "Cupping Therapy",
-                    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: 1 hour of cupping, or 2 hours with a 1-hour Balinese massage.",
+                    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
                     image: "/images/listmenu/cuppingtherapy.webp",
                     options: [
-                      { time: "1 Hour", price: "500.000" },
-                      { time: "2 Hours – with Balinese Massage", price: "600.000" },
+                      { time: "1 Hour Dry Cupping", price: "499.000" },
+                      { time: "1 Hour Wet Cupping", price: "649.000" },
+                      { time: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping", price: "599.000" },
                     ],
                   },
                   {
@@ -759,6 +760,18 @@ export default function OutcallPage() {
                       { time: "Hair Mask", price: "165.000" },
                     ],
                   },
+                  // Added 1 Nov (owner): braiding is a home service too.
+                  {
+                    id: "beauty-hair-braiding",
+                    name: "Hair Braiding",
+                    desc: "Braids for the beach, events or everyday wear, priced by hair length, at your villa or hotel.",
+                    image: "/images/beauty/hair-braiding/hairbraiding-3.webp",
+                    options: [
+                      { time: "Short Hair", price: "499.000" },
+                      { time: "Medium Hair", price: "659.000" },
+                      { time: "Long Hair", price: "899.000" },
+                    ],
+                  },
                   {
                     id: "beauty-ear-candle",
                     name: "Ear Candle",
@@ -798,14 +811,19 @@ export default function OutcallPage() {
                     name: "Waxing",
                     desc: "Removing unwanted hair using olive oil hot wax for smooth and well-cared-for skin.",
                     image: "/images/listmenu/waxing.webp",
+                    // New waxing menu, 1 Nov 2026 (owner).
                     options: [
-                      { time: "Arms", price: "159.000" },
-                      { time: "Under Arms", price: "99.000" },
-                      { time: "Back", price: "Start from 139.000" },
-                      { time: "Full Back", price: "299.000" },
-                      { time: "Half Legs", price: "149.000" },
-                      { time: "Full Legs", price: "299.000" },
-                      { time: "Brazilian", price: "350.000" },
+                      { time: "Under Arms", price: "159.000" },
+                      { time: "Half Arms", price: "189.000" },
+                      { time: "Full Arms", price: "229.000" },
+                      { time: "Full Back", price: "419.000" },
+                      { time: "Stomach (Strip)", price: "159.000" },
+                      { time: "Half Legs", price: "249.000" },
+                      { time: "Full Legs", price: "349.000" },
+                      { time: "Bikini", price: "285.000" },
+                      { time: "Brazilian", price: "375.000" },
+                      { time: "Eyebrow", price: "99.000" },
+                      { time: "Upper Lip", price: "99.000" },
                     ],
                   },
                 ],

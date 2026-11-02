@@ -199,7 +199,8 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Balinese Massage",
+    // What the package is, without times: the line under it gives the lengths (owner, 28 Oct: "1 Hour – Balinese Massage" here read as a different package).
+    desc: "Balinese massage and ear candling, side by side for two.",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 605.000", details: ["1 Hour Balinese Massage + 30 Mins Ear Candle"] },
     ],
@@ -211,7 +212,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Balinese Massage",
+    desc: "Balinese massage and a Bali Moon Facial, side by side for two.",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 675.000", details: ["1 Hour Balinese Massage + 1 Hour Bali Moon Facial"] },
     ],
@@ -223,7 +224,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Warm Candle",
+    desc: "Warm candle massage and ear candling, side by side for two.",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 810.000", details: ["1 Hour Warm Candle Massage + 30 Mins Ear Candle"] },
     ],
@@ -235,7 +236,7 @@ export const catalog: CatalogItem[] = [
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
     image: "/images/listmenu/couplemassagepackage.webp",
-    desc: "1 Hour – Warm Candle",
+    desc: "Warm candle massage and a Bali Moon Facial, side by side for two.",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 875.000", details: ["1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial"] },
     ],
@@ -274,10 +275,13 @@ export const catalog: CatalogItem[] = [
     category: "massage",
     href: "/seminyak/cupping-therapy/",
     image: "/images/listmenu/cuppingtherapy.webp",
-    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame.",
+    desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry or wet cupping.",
+    // 1 Nov (owner): dry and wet cupping, and the combo names both hours
+    // ("2 Hours with Balinese Massage" read as two hours of massage).
     options: [
-      { label: "1 Hour", price: "IDR 500.000" },
-      { label: "2 Hours with Balinese Massage", price: "IDR 600.000" },
+      { label: "1 Hour Dry Cupping", price: "IDR 499.000" },
+      { label: "1 Hour Wet Cupping", price: "IDR 649.000" },
+      { label: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping", price: "IDR 599.000" },
     ],
   },
   {
@@ -377,6 +381,20 @@ export const catalog: CatalogItem[] = [
       { label: "1 Hour", price: "IDR 539.000" },
       { label: "1.5 Hours", price: "IDR 799.000" },
       { label: "2 Hours", price: "IDR 999.000" },
+    ],
+  },
+  {
+    // Added 1 Nov (owner): braiding was priced only on its own page.
+    id: "hair-braiding",
+    name: "Hair Braiding",
+    category: "beauty",
+    href: "/seminyak/hair-braiding/",
+    image: "/images/beauty/hair-braiding/hairbraiding-3.webp",
+    desc: "Braids for the beach, events or everyday wear, priced by hair length.",
+    options: [
+      { label: "Short Hair", price: "IDR 499.000" },
+      { label: "Medium Hair", price: "IDR 659.000" },
+      { label: "Long Hair", price: "IDR 899.000" },
     ],
   },
   {
@@ -550,14 +568,19 @@ export const catalog: CatalogItem[] = [
     href: "/seminyak/waxing-salon/",
     image: "/images/listmenu/waxing.webp",
     desc: "A professional hair removal treatment using olive oil hot wax for smooth skin.",
+    // New waxing menu, 1 Nov 2026 (owner).
     options: [
-      { label: "Arms", price: "IDR 159.000" },
-      { label: "Under Arms", price: "IDR 99.000" },
-      { label: "Back (starting from)", price: "IDR 139.000" },
-      { label: "Full Back", price: "IDR 299.000" },
-      { label: "Half Legs", price: "IDR 149.000" },
-      { label: "Full Legs", price: "IDR 299.000" },
-      { label: "Brazilian", price: "IDR 350.000" },
+      { label: "Under Arms", price: "IDR 159.000" },
+      { label: "Half Arms", price: "IDR 189.000" },
+      { label: "Full Arms", price: "IDR 229.000" },
+      { label: "Full Back", price: "IDR 419.000" },
+      { label: "Stomach (Strip)", price: "IDR 159.000" },
+      { label: "Half Legs", price: "IDR 249.000" },
+      { label: "Full Legs", price: "IDR 349.000" },
+      { label: "Bikini", price: "IDR 285.000" },
+      { label: "Brazilian", price: "IDR 375.000" },
+      { label: "Eyebrow", price: "IDR 99.000" },
+      { label: "Upper Lip", price: "IDR 99.000" },
     ],
   },
 ];
