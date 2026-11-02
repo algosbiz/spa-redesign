@@ -73,14 +73,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/package-four-shape-left.png",
             "images": [
-<<<<<<< HEAD
               "/images/treatments/cupping-therapy/cuppingtherapy-4.webp",
-              "/images/treatments/cupping-therapy/cuppingtherapy-5.webp"
-=======
-              "/images/services/cuppingtherapy/cuppingtherapy-4.webp",
-              "/images/services/cuppingtherapy/cuppingtherapy-5.webp",
-              "/images/services/cuppingtherapy/cuppingtherapy-7.webp"
->>>>>>> work/main
+              "/images/treatments/cupping-therapy/cuppingtherapy-5.webp",
+              "/images/treatments/cupping-therapy/cuppingtherapy-6.webp"
             ],
             "subTitle": "",
             "title": "Session & Pricing",
