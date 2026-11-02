@@ -9,12 +9,12 @@
  * changed. A photo not listed (one uploaded in /admin/) gets the CSS default.
  */
 export const glassShade: Record<string, number> = {
-  "/images/banners/anti-cellulite-massage-wide-sm.webp": 0.62,
-  "/images/banners/balinese-massage-wide-sm.webp": 0.46,
-  "/images/banners/body-scrub-wide-sm.webp": 0.36,
+  "/images/banners/anti-cellulite-massage-wide-sm.webp": 0.57,
+  "/images/banners/balinese-massage-wide-sm.webp": 0.58,
+  "/images/banners/body-scrub-wide-sm.webp": 0.40,
   "/images/banners/coconut-oil-massage-wide-sm.webp": 0.36,
-  "/images/banners/contact-wide-sm.webp": 0.38,
-  "/images/banners/couple-spa-wide-sm.webp": 0.44,
+  "/images/banners/contact-wide-sm.webp": 0.51,
+  "/images/banners/couple-spa-wide-sm.webp": 0.45,
   "/images/banners/creambath-wide-sm.webp": 0.45,
   "/images/banners/deep-tissue-massage-wide-sm.webp": 0.42,
   "/images/banners/ear-candle-wide-sm.webp": 0.36,
@@ -30,7 +30,7 @@ export const glassShade: Record<string, number> = {
   "/images/banners/massage-kuta-wide-sm.webp": 0.52,
   "/images/banners/nail-spa-wide-sm.webp": 0.41,
   "/images/banners/pricelist-wide-sm.webp": 0.32,
-  "/images/banners/reservation-wide-sm.webp": 0.59,
+  "/images/banners/reservation-wide-sm.webp": 0.44,
   "/images/banners/shiatsu-massage-wide-sm.webp": 0.48,
   "/images/banners/sport-massage-wide-sm.webp": 0.41,
   "/images/banners/sunburn-massage-wide-sm.webp": 0.5,
@@ -38,5 +38,5 @@ export const glassShade: Record<string, number> = {
   "/images/banners/traditional-massage-wide-sm.webp": 0.59,
   "/images/banners/villa-hotel-massage-wide-sm.webp": 0.64,
   "/images/banners/waxing-salon-wide-sm.webp": 0.51,
-  "/images/services/dayspaseminyak/dayspa-1-wide-sm.webp": 0.59,
+  "/images/services/dayspaseminyak/dayspa-1-wide-sm.webp": 0.20,
 };
