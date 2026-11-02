@@ -17,7 +17,7 @@ export const newSpecial = {
     ["1 Hr", "Bali Moon Gold Facial"],
   ] as [string, string][],
   images: [
-    { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic drainage massage at Spa Bali Moon" },
-    { src: "/images/listmenu/balimoongoldfacial.webp", alt: "Bali Moon Gold Facial" },
+    { src: "/images/home/special-lymphatic.webp", alt: "Lymphatic drainage massage at Spa Bali Moon" },
+    { src: "/images/home/special-gold-facial.webp", alt: "Bali Moon Gold Facial" },
   ],
 };
