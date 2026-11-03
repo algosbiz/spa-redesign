@@ -1,0 +1,137 @@
+/**
+ * LANGUAGES AND DOMAINS — which languages the site has and which domain
+ * serves each one (migration/multi-language-plan-2026-11.md).
+ *
+ * The domain a visitor opens decides the language (src/proxy.ts): every page
+ * lives in src/app/[lang]/, and the proxy serves /about/ on spabalimoon.com
+ * from /en/about/, on spabalimoon.jp from /ja/about/. The language is never
+ * part of the visible URL, and the paths are the same on every domain.
+ *
+ * A language is live once it is in `activeLocales`: its pages are built, its
+ * domain answers, and the pages of the other languages point at it
+ * (hreflang). Until then its domain answers 404.
+ */
+// A relative import: next.config.ts reads this file too, outside the @/ alias.
+import { business } from "../data/business";
+
+export const locales = ["en", "ja", "ko", "zh", "hi"] as const;
+export type Locale = (typeof locales)[number];
+
+/** The language of spabalimoon.com, of every page that has no translation, and of x-default. */
+export const defaultLocale: Locale = "en";
+
+/** The live languages. Add one once its pages are translated (plan, phase 3). */
+export const activeLocales: readonly Locale[] = ["en"];
+
+/**
+ * Languages being translated, opened on localhost and Vercel previews only
+ * (/ja/about/), never on their domain, in a sitemap or in hreflang links:
+ * I18N_PREVIEW_LOCALES=ja,ko in .env.local or the preview's environment.
+ * Server-side only (the browser never needs it).
+ */
+const previewLocales: readonly Locale[] = (process.env.I18N_PREVIEW_LOCALES ?? "")
+  .split(",")
+  .map((value) => value.trim())
+  .filter((value): value is Locale => (locales as readonly string[]).includes(value));
+
+/** The languages whose pages are built: the live ones, plus any in preview. */
+export const servedLocales: readonly Locale[] = [...new Set([...activeLocales, ...previewLocales])];
+
+type LocaleSettings = {
+  /** The domain that serves the language, without a trailing slash. */
+  origin: string;
+  /** The <html lang> value. */
+  htmlLang: string;
+  /** The hreflang value other pages use to point at this language. */
+  hreflang: string;
+  /** og:locale */
+  ogLocale: string;
+  /** The language's own name, for the language switcher. */
+  nativeName: string;
+};
+
+// The plan's open decisions, to settle before each language goes live:
+// ko — spabalimoon.kr or spabalimoon.co.kr; hi — Hindi, or English for India
+// (en-IN) on spabalimoon.in.
+export const localeSettings: Record<Locale, LocaleSettings> = {
+  en: { origin: business.url, htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English" },
+  ja: { origin: "https://spabalimoon.jp", htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語" },
+  ko: { origin: "https://spabalimoon.kr", htmlLang: "ko", hreflang: "ko", ogLocale: "ko_KR", nativeName: "한국어" },
+  zh: { origin: "https://spabalimoon.cn", htmlLang: "zh-Hans", hreflang: "zh-Hans", ogLocale: "zh_CN", nativeName: "简体中文" },
+  hi: { origin: "https://spabalimoon.in", htmlLang: "hi", hreflang: "hi", ogLocale: "hi_IN", nativeName: "हिन्दी" },
+};
+
+export const isLocale = (value: string): value is Locale => (locales as readonly string[]).includes(value);
+export const isActiveLocale = (value: string): value is Locale => (activeLocales as readonly string[]).includes(value);
+export const isServedLocale = (value: string): value is Locale => (servedLocales as readonly string[]).includes(value);
+
+/**
+ * The language a production domain serves, with or without www. Null for any
+ * other host (localhost, Vercel previews, tunnels): those serve English, and
+ * a /ja/… path there opens the Japanese page directly.
+ */
+export function localeOfHost(host: string | null | undefined): Locale | null {
+  const name = host?.toLowerCase().replace(/:\d+$/, "").replace(/^www\./, "");
+  return locales.find((locale) => new URL(localeSettings[locale].origin).hostname === name) ?? null;
+}
+
+/**
+ * Where a page sits inside the app (src/app/[lang]/…), e.g. "/en/guide/" for
+ * /guide/ on spabalimoon.com. revalidatePath needs this one, not the visible
+ * path: Next keeps its cache under the rewritten address.
+ */
+export const routePath = (path: string, locale: Locale = defaultLocale) => `/${locale}${path}`;
+
+/**
+ * The visible path of a page from the app's path: drops the language
+ * prefix, which the server sees on statically built pages and the browser
+ * does not (and which a /ja/… address keeps on localhost and previews).
+ */
+export function sitePath(path: string): string {
+  const [, first, ...rest] = path.split("/");
+  return isLocale(first) ? `/${rest.join("/")}` : path;
+}
+
+/**
+ * The pages each language other than English has, by path. English has every
+ * page; another language lists only its translated ones (plan §3.4), and
+ * every page points (hreflang) only at the languages that have it.
+ */
+const translatedPaths: Partial<Record<Locale, readonly string[]>> = {
+  // The core pages first (plan, phase 3; draft translation 2 Nov 2026, to be
+  // checked by a native speaker before Japanese goes live).
+  ja: [
+    "/",
+    "/seminyak/",
+    "/about/",
+    "/contact/",
+    "/reservation/",
+    "/outcall-home-service-massage/",
+    "/villa-hotel-massage/",
+    "/seminyak/balinese-massage/",
+    "/seminyak/couple-spa/",
+    "/seminyak/body-scrub/",
+    "/seminyak/creambath/",
+    "/seminyak/hot-stone-massage/",
+    "/seminyak/foot-reflexology/",
+    "/seminyak/facial/",
+    "/seminyak/deep-tissue-massage/",
+    "/seminyak/warm-candle-massage/",
+    "/seminyak/traditional-massage/",
+  ],
+};
+
+/** The live languages that have the page at `path` ("/about/"), English first. */
+export function localesWithPage(path: string): Locale[] {
+  return activeLocales.filter((locale) => locale === defaultLocale || translatedPaths[locale]?.includes(path));
+}
+
+/**
+ * Whether a language's domain serves the page at `path`: English has every
+ * page, another language its translated ones. A guide article decides for
+ * itself: it is shown where the database has it in that language.
+ */
+export function servesPage(locale: Locale, path: string): boolean {
+  if (locale === defaultLocale || translatedPaths[locale]?.includes(path)) return true;
+  return /^\/guide\/[^/]+\/$/.test(path);
+}

@@ -6,8 +6,15 @@
  * edge copies of the URLs it changed. Both env vars are optional: without
  * them every call is a no-op that reports `skipped`.
  *
- * The API token needs one permission only: Zone -> Cache Purge -> Purge.
+ * Each language's domain is a zone of its own (src/i18n/config.ts):
+ * CLOUDFLARE_ZONE_ID for spabalimoon.com, CLOUDFLARE_ZONE_ID_JA, _KO, _ZH and
+ * _HI for the others. A URL is purged in its domain's zone; a domain whose
+ * zone is not set is skipped.
+ *
+ * The API token needs one permission only: Zone -> Cache Purge -> Purge, on
+ * every zone.
  */
+import { activeLocales, defaultLocale, localeOfHost, type Locale } from "@/i18n/config";
 
 const API_BASE = "https://api.cloudflare.com/client/v4";
 // Purge-by-URL takes at most 30 URLs per request below the Enterprise plan.
@@ -19,8 +26,12 @@ export type PurgeResult = { ok: boolean; skipped?: string; purged?: string[]; er
 
 const configured = () => Boolean(process.env.CLOUDFLARE_ZONE_ID && process.env.CLOUDFLARE_API_TOKEN);
 
-async function callPurgeApi(body: { files: string[] } | { purge_everything: true }) {
-  const res = await fetch(`${API_BASE}/zones/${process.env.CLOUDFLARE_ZONE_ID}/purge_cache`, {
+/** The zone of a language's domain, if set. */
+const zoneOf = (locale: Locale) =>
+  locale === defaultLocale ? process.env.CLOUDFLARE_ZONE_ID : process.env[`CLOUDFLARE_ZONE_ID_${locale.toUpperCase()}`];
+
+async function callPurgeApi(zone: string, body: { files: string[] } | { purge_everything: true }) {
+  const res = await fetch(`${API_BASE}/zones/${zone}/purge_cache`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,
@@ -41,11 +52,19 @@ export async function purgeUrls(urls: string[]): Promise<PurgeResult> {
   const files = [...new Set(urls.filter(Boolean))];
   if (!files.length) return { ok: true, skipped: "no urls" };
   if (!configured()) return { ok: true, skipped: "not configured" };
+  // By domain: each one's URLs go to its own zone.
+  const byZone = new Map<string, string[]>();
+  for (const url of files) {
+    const zone = zoneOf(localeOfHost(new URL(url).host) ?? defaultLocale);
+    if (zone) byZone.set(zone, [...(byZone.get(zone) ?? []), url]);
+  }
   try {
-    for (let i = 0; i < files.length; i += MAX_URLS_PER_REQUEST) {
-      await callPurgeApi({ files: files.slice(i, i + MAX_URLS_PER_REQUEST) });
+    for (const [zone, urls] of byZone) {
+      for (let i = 0; i < urls.length; i += MAX_URLS_PER_REQUEST) {
+        await callPurgeApi(zone, { files: urls.slice(i, i + MAX_URLS_PER_REQUEST) });
+      }
     }
-    return { ok: true, purged: files };
+    return { ok: true, purged: [...byZone.values()].flat() };
   } catch (e) {
     const message = e instanceof Error ? e.message : String(e);
     console.error("cloudflare: purge failed:", message, files);
@@ -56,12 +75,13 @@ export async function purgeUrls(urls: string[]): Promise<PurgeResult> {
 /**
  * Drop everything Cloudflare holds for the site, as the deploy Action does:
  * for a change that shows on every page (the blog menu in the header). Never
- * throws.
+ * throws. `locales`: the domains to drop, every live language's by default.
  */
-export async function purgeEverything(): Promise<PurgeResult> {
+export async function purgeEverything(locales: readonly Locale[] = activeLocales): Promise<PurgeResult> {
   if (!configured()) return { ok: true, skipped: "not configured" };
+  const zones = [...new Set(locales.map(zoneOf).filter((zone): zone is string => Boolean(zone)))];
   try {
-    await callPurgeApi({ purge_everything: true });
+    for (const zone of zones) await callPurgeApi(zone, { purge_everything: true });
     return { ok: true, purged: ["everything"] };
   } catch (e) {
     const message = e instanceof Error ? e.message : String(e);

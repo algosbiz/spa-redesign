@@ -4,6 +4,7 @@
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
+import { defaultLocale, locales, localeSettings } from "@/i18n/config";
 import { makeSlug } from "@/lib/blog/slug";
 import type { BlogSetup } from "@/lib/blog/setup";
 import type { Post, PostStatus } from "@/lib/blog/types";
@@ -28,7 +29,14 @@ type Fields = {
   seoDescription: string;
   status: PostStatus;
   showDate: boolean;
+  /** The article's language (src/i18n/config.ts). */
+  locale: string;
+  /** For a translation: the id of the English article it translates. */
+  translationOf: string;
 };
+
+/** An English article a translation can point at. */
+export type OriginalArticle = { id: string; title: string; slug: string };
 
 const fieldsOf = (post: Post | null): Fields => ({
   title: post?.title || "",
@@ -42,6 +50,8 @@ const fieldsOf = (post: Post | null): Fields => ({
   seoDescription: post?.seo_description || "",
   status: post?.status || "draft",
   showDate: post?.show_date !== false,
+  locale: post?.locale || defaultLocale,
+  translationOf: post?.translation_of || "",
 });
 
 /** A local draft as written by the autosave, read back defensively. */
@@ -59,6 +69,8 @@ const fieldsOfDraft = (saved: Record<string, unknown>): Fields => {
     seoDescription: s("seoDescription"),
     status: saved.status === "published" ? "published" : "draft",
     showDate: saved.showDate !== false,
+    locale: s("locale", defaultLocale),
+    translationOf: s("translationOf"),
   };
 };
 
@@ -67,8 +79,20 @@ const fieldsOfDraft = (saved: Record<string, unknown>): Fields => {
  * slug, rich-text body, excerpt, status, cover, category, tags, author, SEO.
  * Changes are autosaved in this browser and offered back after a crash or a
  * closed tab; leaving with unsaved changes asks first.
+ *
+ * Language: an article is English unless set otherwise; one in another
+ * language names the English article it translates (`originals`), whose slug
+ * it takes, so it sits at the same address on its language's domain.
  */
-export default function PostEditor({ initialPost, setup }: { initialPost: Post | null; setup: BlogSetup }) {
+export default function PostEditor({
+  initialPost,
+  setup,
+  originals = [],
+}: {
+  initialPost: Post | null;
+  setup: BlogSetup;
+  originals?: OriginalArticle[];
+}) {
   const router = useRouter();
   const isEdit = Boolean(initialPost?.id);
 
@@ -230,6 +254,8 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
       seo_title: fields.seoTitle,
       seo_description: fields.seoDescription,
       show_date: fields.showDate,
+      locale: fields.locale,
+      translation_of: fields.locale === defaultLocale ? null : fields.translationOf || null,
       status,
     };
     try {
@@ -379,6 +405,50 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
               Show date on the article
             </label>
             <p className="pe-hint">Off hides the date beside the category, and on this article&rsquo;s cards further down.</p>
+          </div>
+
+          <div className="pe-card">
+            <label className="pe-label" htmlFor="pe-locale">
+              Language
+            </label>
+            <select id="pe-locale" className="pe-input" value={fields.locale} onChange={(e) => set("locale", e.target.value)}>
+              {locales.map((locale) => (
+                <option key={locale} value={locale}>
+                  {localeSettings[locale].nativeName}
+                </option>
+              ))}
+            </select>
+            {fields.locale !== defaultLocale && (
+              <>
+                <label className="pe-label" htmlFor="pe-translation-of">
+                  Translation of
+                </label>
+                <select
+                  id="pe-translation-of"
+                  className="pe-input"
+                  value={fields.translationOf}
+                  onChange={(e) => {
+                    const original = originals.find((o) => o.id === e.target.value);
+                    setFields((f) => ({
+                      ...f,
+                      translationOf: e.target.value,
+                      slug: original && !slugTouched ? original.slug : f.slug,
+                    }));
+                  }}
+                >
+                  <option value="">— none —</option>
+                  {originals.map((original) => (
+                    <option key={original.id} value={original.id}>
+                      {original.title}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
+            <p className="pe-hint">
+              A translation keeps its English article&rsquo;s slug, so the two point at each other for search engines
+              and sit at the same address on each language&rsquo;s domain.
+            </p>
           </div>
 
           <div className="pe-card">

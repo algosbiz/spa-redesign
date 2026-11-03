@@ -1,5 +1,6 @@
 import ReviewText from "@/components/ui/ReviewText";
 import type { Testimonial } from "@/data/types";
+import { useI18n } from "@/i18n/client";
 
 /** One card of the review slider: quote mark, review, name and five stars. */
 export default function TestimonialCard({
@@ -11,7 +12,8 @@ export default function TestimonialCard({
   onExpandChange: (expanded: boolean) => void;
   onMeasure: () => void;
 }) {
-  return (
+  const { el } = useI18n();
+  return el(
     <div className="inner-box">
       <div className="icon">
         <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">

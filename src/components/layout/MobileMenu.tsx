@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import type { MobileMenuData, MobileMenuEntry } from "@/components/layout/mobileMenuData";
 import { mainNav } from "@/data/navigation";
+import { useI18n } from "@/i18n/client";
+import { useSitePath } from "@/i18n/useSitePath";
 
 type Panel = "treatments" | "blog";
 
@@ -64,7 +65,8 @@ export default function MobileMenu({
   onNavigate?: () => void;
   children?: ReactNode;
 }) {
-  const pathname = usePathname() || "/";
+  const { el } = useI18n();
+  const pathname = useSitePath() || "/";
   const [panel, setPanel] = useState<Panel | null>(null);
   const [opened, setOpened] = useState(open);
   const [wasOpen, setWasOpen] = useState(open);
@@ -162,7 +164,7 @@ export default function MobileMenu({
     </div>
   );
 
-  return (
+  return el(
     <>
       <div inert={panel !== null} className={`mnav__panel mnav__panel--main${panel ? " is-behind" : ""}`}>
         <nav aria-label="Main">

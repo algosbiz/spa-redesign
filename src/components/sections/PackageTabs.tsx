@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { useState, type CSSProperties } from "react";
 import type { PricedService } from "@/data/pages/pricelist";
+import { useI18n } from "@/i18n/client";
 import { displayPrice } from "@/lib/price";
 
 const DESC: CSSProperties = { marginTop: "2px", marginBottom: "0", fontSize: "14px", color: "#5f5a54" };
@@ -33,9 +34,10 @@ export default function PackageTabs({
   outcallPricing?: boolean;
   spreadDropdownArrow?: boolean;
 }) {
+  const { el } = useI18n();
   const [active, setActive] = useState(0);
   const spread = outcallPricing || spreadDropdownArrow;
-  return (
+  return el(
     <section
       className={`package-section section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130${
         outcallPricing ? " outcall-package-pricing" : ""
@@ -131,6 +133,7 @@ function ServiceRow({
   outcallPricing: boolean;
   spread: boolean;
 }) {
+  const { el } = useI18n();
   const [open, setOpen] = useState(false);
   const hasPanel = !!(item.benefits?.length || item.options?.length || item.children?.length);
   const priceClass = outcallPricing ? "outcall-package-price" : "package-item-price";
@@ -161,7 +164,7 @@ function ServiceRow({
     );
   }
 
-  return (
+  return el(
     <div className={`inner-box ${isLast ? "" : "mb-50"}`}>
       <div className="image">
         <img loading="lazy" decoding="async" src={item.image} alt={item.name} />

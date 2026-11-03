@@ -1,0 +1,112 @@
+/*
+ * Languages other than English (migration/multi-language-plan-2026-11.md §3.6).
+ *
+ * Fraunces and Plus Jakarta Sans have Latin letters only. Each language keeps
+ * them first, so prices, numbers and Latin names look as on spabalimoon.com,
+ * and adds the fonts its visitors' phones and computers already have for
+ * everything else: nothing extra to download, so the page weight stays as
+ * it is. The fonts follow <html lang> (src/i18n/config.ts).
+ *
+ * The theme reads --title-font / --text-font on `.lh` (live.css) and
+ * --font-display / --font-sans on :root (globals.css); both are set here.
+ */
+
+:root:lang(ja),
+:lang(ja) .lh {
+  --title-font: var(--font-fraunces), "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --text-font: var(--font-jakarta), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(ko),
+:lang(ko) .lh {
+  --title-font: var(--font-fraunces), AppleMyungjo, "Noto Serif KR", Batang, serif;
+  --text-font: var(--font-jakarta), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(zh-Hans),
+:lang(zh-Hans) .lh {
+  --title-font: var(--font-fraunces), "Songti SC", SimSun, "Noto Serif SC", serif;
+  --text-font: var(--font-jakarta), "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(hi),
+:lang(hi) .lh {
+  --title-font: var(--font-fraunces), "Noto Serif Devanagari", "Kohinoor Devanagari", "Nirmala UI", serif;
+  --text-font: var(--font-jakarta), "Kohinoor Devanagari", "Nirmala UI", "Noto Sans Devanagari", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+/* Line breaks: Korean breaks between words, as written; Japanese and Chinese
+   keep closing punctuation and small kana off the start of a line. */
+:lang(ko) {
+  word-break: keep-all;
+}
+
+:lang(ja),
+:lang(zh-Hans) {
+  line-break: strict;
+}
+
+/* Japanese headings break between phrases, not inside a word
+   ("マッ / サージ"): Chrome and Edge do it, others keep breaking anywhere. */
+:lang(ja) :is(h1, h2, h3, h4, h5, h6, .title) {
+  word-break: auto-phrase;
+}
+
+/* A page banner's title on phones: one katakana word ("バリニーズマッサージ")
+   is wider than the screen at the English size, so it would break inside. */
+@media (max-width: 767.98px) {
+  :is(:lang(ja), :lang(zh-Hans)) .banner-two__content .title {
+    font-size: 8.5vw;
+  }
+}
+
+/* The language switcher (src/components/layout/LanguageSwitcher.tsx): small
+   pills in the header and at the top of the phone menu's info card. Shown
+   only once a page exists in a second live language. */
+.lang-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.lang-switch a,
+.lang-switch__current {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid rgba(28, 26, 29, 0.15);
+  border-radius: 999px;
+  color: var(--theme-color2, #1c1a1d);
+  text-decoration: none;
+}
+
+.lang-switch a:is(:hover, :focus-visible) {
+  border-color: var(--theme-color1, #a78627);
+}
+
+.lang-switch__current {
+  border-color: var(--theme-color1, #a78627);
+  background: var(--theme-color1, #a78627);
+  color: #fff;
+}
+
+.header__main .menu-btns .lang-switch {
+  align-items: center;
+  margin-right: 12px;
+}
+
+.mnav .mnav__langs {
+  margin-bottom: 14px;
+}

@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { MenuIcon } from "@/components/layout/MenuIcons";
 import { lengthOf } from "@/lib/packageSaving";
 import { displayPrice, priceValue, withDots } from "@/lib/price";
+import type { I18n } from "@/i18n/server";
 
 const hours = (h: number) => `${h} ${h === 1 ? "hour" : "hours"}`;
 
@@ -35,23 +36,26 @@ type Group = { cardTitle: string; packages: { price: string; items: { duration: 
  * treatment (owner, 24 Oct: the repeats stay, so guests looking for a facial
  * or for Thai massage both find it, and the staff keep their codes; the line
  * says they are one package). Keyed "Balinese Massage|A". Packages are the
- * same when their price and treatments are.
+ * same when their price and treatments are. `t` (getI18n) writes the line in
+ * the page's language.
  */
-export function packageNotes(groups: Group[]): Map<string, string> {
+export function packageNotes(groups: Group[], t: I18n["t"]): Map<string, string> {
   const sign = (p: Group["packages"][number]) =>
     `${p.price}|${p.items.map((i) => `${i.duration.replace(",", ".")} ${i.service}`.toLowerCase()).sort().join("+")}`;
   const codes = new Map<string, string[]>();
   for (const g of groups)
     g.packages.forEach((p, i) => {
-      const code = `${g.cardTitle} Package ${String.fromCharCode(65 + i)}`;
+      const code = t("{name} Package {letter}", { name: t(g.cardTitle), letter: String.fromCharCode(65 + i) });
       codes.set(sign(p), [...(codes.get(sign(p)) ?? []), code]);
     });
   const notes = new Map<string, string>();
   for (const g of groups)
     g.packages.forEach((p, i) => {
-      const own = `${g.cardTitle} Package ${String.fromCharCode(65 + i)}`;
+      const own = t("{name} Package {letter}", { name: t(g.cardTitle), letter: String.fromCharCode(65 + i) });
       const others = (codes.get(sign(p)) ?? []).filter((c) => c !== own);
-      if (others.length) notes.set(`${g.cardTitle}|${String.fromCharCode(65 + i)}`, `Same as ${others.join(" and ")}`);
+      if (others.length) {
+        notes.set(`${g.cardTitle}|${String.fromCharCode(65 + i)}`, t("Same as {packages}", { packages: others.join(` ${t("and")} `) }));
+      }
     });
   return notes;
 }

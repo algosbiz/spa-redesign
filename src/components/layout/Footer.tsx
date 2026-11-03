@@ -2,12 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { business } from "@/data/business";
 import { footerDaySpaPages, footerHomeServices, legalLinks } from "@/data/navigation";
 import { sitemapPages } from "@/data/sitemap";
+import { useI18n } from "@/i18n/client";
+import { formatDay } from "@/i18n/format";
+import { useSitePath } from "@/i18n/useSitePath";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -26,8 +28,6 @@ const PAGE_UPDATED = new Map(
     .filter(([path]) => path !== "/guide" && !/^\/seminyak\/[^/]+$/.test(path))
 );
 
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 
 /** Instagram, drawn like the other line icons (Facebook left out, owner, 21 Oct). */
 const SOCIAL = [
@@ -59,7 +59,8 @@ const PHONE_LINKS: { label: string; href: string; icon: MenuIconName }[] = [
 ];
 
 function PhoneRow({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
-  return (
+  const { el } = useI18n();
+  return el(
     <li className="site-footer__row">
       <span className="site-footer__row-icon">{icon}</span>
       <span className="site-footer__row-label">{label}</span>
@@ -85,16 +86,17 @@ const DAY_SPA = "day spa in Seminyak";
 const [aboutBefore, aboutAfter = ""] = business.aboutText.split(DAY_SPA);
 
 export default function Footer() {
+  const { el, t, locale } = useI18n();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-  const updated = PAGE_UPDATED.get(pathOf(usePathname() || "/"));
+  const updated = PAGE_UPDATED.get(pathOf(useSitePath() || "/"));
 
   async function subscribe(e: FormEvent) {
     e.preventDefault();
     if (!email) {
       setStatus("error");
-      setMessage("Please enter your email address.");
+      setMessage(t("Please enter your email address."));
       return;
     }
     setStatus("loading");
@@ -108,15 +110,15 @@ export default function Footer() {
       const data = await res.json();
       if (res.ok && data.success) {
         setStatus("success");
-        setMessage(data.message || "Thanks for subscribing!");
+        setMessage(t(data.message || "Thanks for subscribing!"));
         setEmail("");
       } else {
         setStatus("error");
-        setMessage(data.message || "Subscription failed. Please try again.");
+        setMessage(t(data.message || "Subscription failed. Please try again."));
       }
     } catch {
       setStatus("error");
-      setMessage("Network error. Please check your connection.");
+      setMessage(t("Network error. Please check your connection."));
     }
     setTimeout(() => {
       setStatus("idle");
@@ -124,7 +126,7 @@ export default function Footer() {
     }, 5000);
   }
 
-  return (
+  return el(
     <footer className="site-footer lh">
       <div className="site-footer__art" aria-hidden="true">
         <img loading="lazy" decoding="async" src="/images/shape/footer-shape-left.png" alt="" className="site-footer__rose" />
@@ -287,7 +289,7 @@ export default function Footer() {
               <>
                 {" "}
                 <span className="site-footer__updated">
-                  <span className="site-footer__sep">·</span> Page updated <time dateTime={updated}>{formatDate(updated)}</time>
+                  <span className="site-footer__sep">·</span> Page updated <time dateTime={updated}>{formatDay(updated, locale, "UTC")}</time>
                 </span>
               </>
             ) : null}

@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import MenuIntro, { halves, menuItems } from "@/components/home/MenuIntro";
 import { displayPrice, durationLabel, durationOf, priceValue, startingOption } from "@/components/home/price";
 import { catalogCategories, type CatalogCategory, type CatalogItem, type CatalogOption } from "@/data/pages/home-catalog";
+import { useI18n, type ClientI18n } from "@/i18n/client";
 
 /** A row of the menu: a catalog card, or a price page's treatment with the
  *  treatments listed under it (Four Hand Warm Candle under Natural Warm
@@ -97,6 +98,7 @@ export default function MenuDurations({
   /** false: on the plain page colour, without the paper's torn edges (the outcall page alternates). */
   paper?: boolean;
 }) {
+  const { el } = useI18n();
   const tabs = useMemo(
     () =>
       (tabsProp ?? catalogTabs()).map((tab) => {
@@ -159,7 +161,7 @@ export default function MenuDurations({
     };
   }, [sticky, timed]);
 
-  return (
+  return el(
     <section
       className={`jsx-catalog package-section treatment-catalog${paper ? " section__decoration-top section__decoration-bottom bg-sub" : ""} ${spacing} v2-menu v2-menu--durations${
         sticky ? " v2-menu--sticky" : ""
@@ -240,8 +242,8 @@ function priceAt(item: MenuItem, minutes: number): Price {
 }
 
 /** The treatments listed under a row: their price for each duration (one
- *  shows at a time), or the price they start from. */
-function childNotes(item: MenuItem, durations: number[] | null): Note[] {
+ *  shows at a time), or the price they start from. `t` translates "from …". */
+function childNotes(item: MenuItem, durations: number[] | null, t: ClientI18n["t"]): Note[] {
   return (item.children ?? []).flatMap((child): Note[] => {
     if (durations && isTimed(child.options)) {
       return durations.flatMap((m) => {
@@ -250,7 +252,7 @@ function childNotes(item: MenuItem, durations: number[] | null): Note[] {
       });
     }
     const { amount, from } = fromPrice(child.options);
-    return [{ text: `${child.name} · ${from ? "from " : ""}${amount}`, minutes: null }];
+    return [{ text: `${child.name} · ${from ? t("from {price}", { price: amount }) : amount}`, minutes: null }];
   });
 }
 
@@ -265,6 +267,7 @@ function childNotes(item: MenuItem, durations: number[] | null): Note[] {
  * baseline from the last line, and the price lines up with the first.
  */
 function TitleLines({ name }: { name: string }) {
+  const { el } = useI18n();
   const dash = name.indexOf(" - ");
   let first: string;
   let second: string;
@@ -280,7 +283,7 @@ function TitleLines({ name }: { name: string }) {
     first = words.slice(0, best).join(" ");
     second = words.slice(best).join(" ");
   }
-  return (
+  return el(
     <>
       {first}
       {dash > 0 && <span className="v2-tdash"> -</span>} <br className="v2-tbr" />
@@ -304,9 +307,10 @@ const FOLD_AFTER = 3;
  * gold on the right (spa-menu.css). Notes without a price are just text.
  */
 function NoteText({ text }: { text: string }) {
+  const { el } = useI18n();
   const at = text.lastIndexOf(" · ");
   if (at < 0) return <span className="v2-note__label">{text}</span>;
-  return (
+  return el(
     <>
       <span className="v2-note__label">{text.slice(0, at)}</span>
       <span className="v2-note__price">{text.slice(at + 3)}</span>
@@ -325,6 +329,7 @@ function DurationRow({
   selected: number;
   plainTitle?: boolean;
 }) {
+  const { el, t } = useI18n();
   const all = [...item.options, ...(item.children ?? []).flatMap((c) => c.options)];
   const perCouple = all.length > 0 && all.every((o) => /2 pax/i.test(o.label));
   // In a timed tab, a row without durations (a cream bath among massages)
@@ -339,19 +344,21 @@ function DurationRow({
       ...item.options
         .filter((o) => durationOf(o.label) === null)
         .map((o) => ({ text: `${cleanLabel(o.label)} · ${displayPrice(o.price)}`, minutes: null })),
-      ...childNotes(item, durations),
+      ...childNotes(item, durations, t),
     ];
   } else {
     const options = item.options.length ? item.options : all;
     prices = [{ minutes: null, ...fromPrice(options) }];
     notes = [
       ...(options.length > 1
-        ? byPrice(options).map((g) => `${g.labels.join(", ")} · ${g.from ? "from " : ""}${displayPrice(g.price)}`)
+        ? byPrice(options).map(
+            (g) => `${g.labels.join(", ")} · ${g.from ? t("from {price}", { price: displayPrice(g.price) }) : displayPrice(g.price)}`,
+          )
         : // What a one-price treatment's price is for ("30 Minutes", a couple package's contents) is a
           // menu line with that price too (owner, 23 Oct: "update all with the dots"); benefits stay a list.
           options.flatMap((o) => (o.details?.length === 1 ? [`${o.details[0]} · ${displayPrice(o.price)}`] : (o.details ?? [])))
       ).map((text) => ({ text, minutes: null })),
-      ...(item.options.length ? childNotes(item, null) : []),
+      ...(item.options.length ? childNotes(item, null, t) : []),
     ];
   }
   const current = prices.find((p) => p.minutes === (timed ? selected : null)) ?? prices[0];
@@ -378,10 +385,10 @@ function DurationRow({
     <TitleLines name={item.name} />
   );
 
-  return (
+  return el(
     <article className={`treatment-catalog__item${current.amount === null ? " is-unavailable" : ""}`}>
       {item.href ? (
-        <Link prefetch={false} href={item.href} className="treatment-catalog__image" aria-label={`View ${item.name}`}>
+        <Link prefetch={false} href={item.href} className="treatment-catalog__image" aria-label={t("View {name}", { name: item.name })}>
           {photo}
         </Link>
       ) : (

@@ -1,6 +1,7 @@
+import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { isDatabaseConfigured } from "@/lib/blog/db";
 import { readPostInput } from "@/lib/blog/input";
-import { deletePost, ensureUniqueSlug, getPostById, isPostId, updatePost } from "@/lib/blog/posts";
+import { deletePost, ensureUniqueSlug, getPostById, getPostLanguages, isPostId, updatePost } from "@/lib/blog/posts";
 import { readBlogMenu, refreshGuidePages } from "@/lib/blog/refresh";
 import { denyUnlessAdmin } from "@/lib/blog/session";
 import { DATABASE_MISSING } from "@/lib/blog/setup";
@@ -8,6 +9,8 @@ import { DATABASE_MISSING } from "@/lib/blog/setup";
 type Context = { params: Promise<{ id: string }> };
 
 const notFound = () => Response.json({ error: "Article not found." }, { status: 404 });
+/** An article's language; the articles written before the column are English. */
+const localeOf = (post: { locale?: string }): Locale => (post.locale && isLocale(post.locale) ? post.locale : defaultLocale);
 const failed = (e: unknown, fallback: string) =>
   Response.json({ error: e instanceof Error ? e.message : fallback }, { status: 500 });
 
@@ -47,17 +50,21 @@ export async function PUT(request: Request, context: Context) {
     const existing = await getPostById(id);
     if (!existing) return notFound();
 
-    const slug = await ensureUniqueSlug(input.slug, id);
+    const locale = input.locale as Locale;
+    const slug = await ensureUniqueSlug(input.slug, locale, id);
     // Keep the first publish date; a draft has none.
     const publishedAt = input.status === "published" ? existing.published_at || new Date().toISOString() : null;
     // Only a draft staying a draft changes nothing public.
     const isPublic = input.status === "published" || existing.status === "published";
-    const menuBefore = isPublic ? await readBlogMenu() : null;
+    const menuBefore = isPublic ? await readBlogMenu(locale) : null;
     const post = await updatePost(id, { ...input, slug }, publishedAt);
     if (!post) return notFound();
 
+    // Moved to another language: its old address is dropped with the other languages'.
+    const before = localeOf(existing);
+    const languages = { ...(await getPostLanguages(post)), ...(before !== locale ? { [before]: existing.slug } : {}) };
     const cache = isPublic
-      ? await refreshGuidePages({ slug: post.slug, previousSlug: existing.slug, menuBefore })
+      ? await refreshGuidePages({ slug: post.slug, previousSlug: existing.slug, menuBefore, locale, languages })
       : null;
     return Response.json({ post, cache });
   } catch (e) {
@@ -74,10 +81,13 @@ export async function DELETE(_request: Request, context: Context) {
     // Read the slug before the row is gone: afterwards nothing says which URL to purge.
     const doomed = await getPostById(id);
     if (!doomed) return notFound();
-    const menuBefore = doomed.status === "published" ? await readBlogMenu() : null;
+    const locale = localeOf(doomed);
+    const menuBefore = doomed.status === "published" ? await readBlogMenu(locale) : null;
+    const languages = doomed.status === "published" ? await getPostLanguages(doomed) : {};
     await deletePost(id);
 
-    const cache = doomed.status === "published" ? await refreshGuidePages({ slug: doomed.slug, menuBefore }) : null;
+    const cache =
+      doomed.status === "published" ? await refreshGuidePages({ slug: doomed.slug, menuBefore, locale, languages }) : null;
     return Response.json({ ok: true, cache });
   } catch (e) {
     return failed(e, "Failed to delete.");

@@ -43,6 +43,20 @@ create index if not exists posts_status_published_idx
 create index if not exists posts_updated_idx
     on posts (updated_at desc);
 
+-- Languages (migration/multi-language-plan-2026-11.md, 2 Nov 2026): every
+-- article has a language, English for the ones written before; a translation
+-- names the article it translates and usually keeps its slug, so slugs are
+-- unique per language. The app also makes these changes on first use
+-- (src/lib/blog/posts.ts). Not in the live table.
+alter table posts add column if not exists locale text not null default 'en';
+
+alter table posts add column if not exists translation_of uuid references posts (id) on delete set null;
+
+alter table posts drop constraint if exists posts_slug_key;
+
+create unique index if not exists posts_locale_slug_idx
+    on posts (locale, slug);
+
 -- Treatment pages edited in /admin/treatments/ (owner, 12 Oct 2026). One row
 -- per page that differs from its built-in version (src/content/treatments/);
 -- no row = the built-in version. `body` is the page's element tree, `seo` the

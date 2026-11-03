@@ -1,5 +1,7 @@
 import { MenuIcon } from "@/components/layout/MenuIcons";
+import { bookingChats } from "@/data/booking";
 import { business } from "@/data/business";
+import { getLocale } from "@/i18n/server";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /**
@@ -14,16 +16,25 @@ import { whatsappChatUrl } from "@/lib/whatsapp";
  * Styles in
  * src/styles/custom.css; the floating button only hides while this bar is on
  * the page, so removing it from src/app/layout.tsx brings the floating
- * button back on phones.
+ * button back on phones. On a language whose guests use another chat app
+ * (src/data/booking.ts) the button opens that app instead.
  */
-export default function MobileActionBar() {
+export default async function MobileActionBar() {
+  const chat = bookingChats[await getLocale()];
   return (
     <div className="mobile-action-bar lh">
       <div className="mobile-action-bar__row">
-        <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="btn-two mobile-action-bar__btn">
-          <i className="fa-brands fa-whatsapp" aria-hidden="true" />
-          WhatsApp
-        </a>
+        {chat ? (
+          <a href={chat.url} target="_blank" rel="noopener noreferrer" className="btn-two mobile-action-bar__btn">
+            <MenuIcon name="chat" />
+            {chat.app}
+          </a>
+        ) : (
+          <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="btn-two mobile-action-bar__btn">
+            <i className="fa-brands fa-whatsapp" aria-hidden="true" />
+            WhatsApp
+          </a>
+        )}
         <span className="mobile-action-bar__hours">
           <span className="mobile-action-bar__hours-icon">
             <MenuIcon name="clock" />

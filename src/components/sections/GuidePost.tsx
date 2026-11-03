@@ -3,6 +3,8 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { useI18n } from "@/i18n/client";
+import { defaultLocale } from "@/i18n/config";
 
 // The database answers null for empty columns, so null is accepted throughout.
 export type GuidePostSummary = {
@@ -53,6 +55,7 @@ export default function GuidePost({
   nextPost?: GuidePostSummary | null;
   morePosts?: GuidePostSummary[];
 }) {
+  const { el, locale } = useI18n();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<GuidePostSummary[]>([]);
   const [searching, setSearching] = useState(false);
@@ -69,7 +72,9 @@ export default function GuidePost({
     }
     setSearching(true);
     try {
-      const res = await fetch(`/api/search-posts/?q=${encodeURIComponent(q.trim())}`);
+      // Another language searches its own articles (the domain says which; ?locale= on localhost).
+      const lang = locale === defaultLocale ? "" : `&locale=${locale}`;
+      const res = await fetch(`/api/search-posts/?q=${encodeURIComponent(q.trim())}${lang}`);
       const data = await res.json();
       setResults(data.posts || []);
       setOpen(true);
@@ -78,7 +83,7 @@ export default function GuidePost({
     } finally {
       setSearching(false);
     }
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
@@ -90,7 +95,7 @@ export default function GuidePost({
 
   const tags = Array.isArray(post.tags) ? post.tags : [];
 
-  return (
+  return el(
     <>
       <section className={`${S} blog-details pt-100 pb-100`}>
         <div className={`${S} container`}>

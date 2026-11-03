@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import PostEditor from "@/components/admin/PostEditor";
 import { isDatabaseConfigured } from "@/lib/blog/db";
-import { getPostById } from "@/lib/blog/posts";
+import { getPostById, listOriginalArticles } from "@/lib/blog/posts";
 import { isAdmin } from "@/lib/blog/session";
 import { blogSetup } from "@/lib/blog/setup";
 
@@ -24,7 +24,7 @@ export default async function EditPostPage({ params }: Props) {
   if (!post) notFound();
   return (
     <div className="adm-editor-page">
-      <PostEditor initialPost={post} setup={blogSetup()} />
+      <PostEditor initialPost={post} setup={blogSetup()} originals={await listOriginalArticles()} />
     </div>
   );
 }

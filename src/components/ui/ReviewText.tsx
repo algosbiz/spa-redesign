@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { useI18n } from "@/i18n/client";
 
 /** Review text, clamped by CSS, with the live "Read more / Read less" toggle. */
 export default function ReviewText({
@@ -12,6 +13,7 @@ export default function ReviewText({
   onExpandChange: (expanded: boolean) => void;
   onMeasure: () => void;
 }) {
+  const { el } = useI18n();
   const id = useId();
   const ref = useRef<HTMLParagraphElement>(null);
   const [expanded, setExpanded] = useState(false);
@@ -45,7 +47,7 @@ export default function ReviewText({
     onExpandChange(expanded);
   }, [expanded, onExpandChange]);
 
-  return (
+  return el(
     <>
       <p id={id} ref={ref} className={`text${expanded ? " is-expanded" : ""}`}>
         {text}
