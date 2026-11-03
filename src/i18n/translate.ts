@@ -159,8 +159,9 @@ export type Translator = {
 /** The translation of one text, keeping its surrounding spaces; English when there is none. */
 export function translateText(value: string, { locale, messages, onMissing, wordSpaces = true }: Translator): string {
   // A full stop or comma written on its own after a link ("<a>…</a>.") is the
-  // language's own in Japanese and Chinese.
+  // language's own: 。、， in Japanese and Chinese, the danda । in Hindi.
   if (!wordSpaces && /^\s*[.,]\s*$/.test(value)) return value.includes(".") ? "。" : locale === "zh" ? "，" : "、";
+  if (locale === "hi" && value.trim() === ".") return value.replace(".", "।");
   if (!isText(value)) return value;
   const core = value.trim();
   const translated = messages[core];

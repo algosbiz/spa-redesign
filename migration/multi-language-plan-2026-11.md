@@ -31,7 +31,8 @@ yang dibuka menentukan bahasa halaman.
 
 ## 2. Keputusan yang perlu diambil sebelum coding
 
-1. **India: Hindi atau English untuk India?** Wisatawan India umumnya mencari
+1. **India: Hindi atau English untuk India?** *(Diputuskan 3 November 2026:
+   Hindi.)* Wisatawan India umumnya mencari
    info perjalanan dalam bahasa Inggris. Cek dulu volume keyword Hindi vs
    Inggris di Ahrefs (negara IN). Kalau volume Hindi kecil, `.in` lebih
    berguna sebagai versi `en-IN`: English yang disesuaikan untuk tamu India
@@ -404,9 +405,25 @@ Sebelum bahasa Jepang dinyalakan:
   - Sunburn treatment tertulis IDR 250.000 di satu tempat dan "1 Hour Aloe
     Vera · IDR 195.000" di tempat lain.
 
+### Status Hindi (3 November 2026)
+
+- **Owner memutuskan India memakai bahasa Hindi** (keputusan 1 di bagian 2),
+  di spabalimoon.in.
+- **Draf AI untuk 35 halaman yang sama sudah lengkap**, berisi 3.781 teks.
+  - Bahasanya Hindi modern sehari-hari dan menyapa pembaca dengan आप.
+  - Istilah spa memakai serapan yang lazim di India (मसाज, स्पा, फेशियल,
+    होम सर्विस), dan मसाज diperlakukan sebagai kata feminin.
+  - Nama tempat: Seminyak → सेमिन्याक, Kuta → कुटा. Jam buka ditulis
+    "सुबह 9 बजे से रात 11 बजे तक". Angka tetap 0–9.
+- Hasil pengecekan di preview `/hi/`:
+  - 0 teks tersisa, tidak ada error, dan tidak ada link rusak.
+  - Struktur halaman sama dengan English.
+  - Aksara Devanagari tampil utuh di judul dan menu.
+- Titik "." yang berdiri sendiri setelah link menjadi danda "।".
+- Booking tetap lewat WhatsApp, yang memang dipakai luas di India.
+
 ### Yang belum dikerjakan
 
-- India: keputusan Hindi atau English untuk India, lalu terjemahannya.
 - Artikel guide per bahasa (lewat admin, butuh database).
 - Review penutur asli untuk Jepang, Korea, dan China.
 - Perampingan `ui.json` (poin 2 di atas) berlaku untuk semua bahasa.

@@ -52,9 +52,8 @@ type LocaleSettings = {
   wordSpaces: boolean;
 };
 
-// The plan's open decisions, to settle before each language goes live:
-// ko — spabalimoon.kr or spabalimoon.co.kr; hi — Hindi, or English for India
-// (en-IN) on spabalimoon.in.
+// Still open (plan, section 2): ko on spabalimoon.kr or spabalimoon.co.kr.
+// India is Hindi on spabalimoon.in (owner, 3 Nov 2026).
 export const localeSettings: Record<Locale, LocaleSettings> = {
   en: { origin: business.url, htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English", wordSpaces: true },
   ja: { origin: "https://spabalimoon.jp", htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語", wordSpaces: false },
@@ -144,13 +143,14 @@ const otherPages = [
  * The pages each language other than English has, by path. English has every
  * page; another language lists only its translated ones (plan §3.4), and
  * every page points (hreflang) only at the languages that have it. Draft
- * translations (ja: core pages 2 Nov 2026; ko, zh and the other pages 3 Nov
- * 2026), to be checked by a native speaker before each language goes live.
+ * translations (ja: core pages 2 Nov 2026; ko, zh, hi and the other pages 3
+ * Nov 2026), to be checked by a native speaker before each language goes live.
  */
 const translatedPaths: Partial<Record<Locale, readonly string[]>> = {
   ja: [...corePages, ...otherPages],
   ko: [...corePages, ...otherPages],
   zh: [...corePages, ...otherPages],
+  hi: [...corePages, ...otherPages],
 };
 
 /** The live languages that have the page at `path` ("/about/"), English first. */
