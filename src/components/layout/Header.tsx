@@ -180,7 +180,9 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
                           </li>
                         ))
                       ) : (
-                        <li className="jsx-header header-search__empty">No results for &ldquo;{query.trim()}&rdquo;</li>
+                        <li className="jsx-header header-search__empty">
+                          {t("No results for “{query}”", { query: query.trim() })}
+                        </li>
                       )}
                     </ul>
                   )}
