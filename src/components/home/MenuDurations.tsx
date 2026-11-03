@@ -265,9 +265,10 @@ function childNotes(item: MenuItem, durations: number[] | null, t: ClientI18n["t
  * name is one line from 768px; the text search engines read is unchanged.
  * A <br>, not two block spans: a name in blocks inside its link takes its
  * baseline from the last line, and the price lines up with the first.
+ * `name` arrives translated (the card's el()), so the halves are not looked
+ * up again: "Cupping Therapy" stays whole in every language.
  */
 function TitleLines({ name }: { name: string }) {
-  const { el } = useI18n();
   const dash = name.indexOf(" - ");
   let first: string;
   let second: string;
@@ -283,7 +284,7 @@ function TitleLines({ name }: { name: string }) {
     first = words.slice(0, best).join(" ");
     second = words.slice(best).join(" ");
   }
-  return el(
+  return (
     <>
       {first}
       {dash > 0 && <span className="v2-tdash"> -</span>} <br className="v2-tbr" />

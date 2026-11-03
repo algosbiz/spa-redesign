@@ -52,6 +52,10 @@
 :lang(ja),
 :lang(zh-Hans) {
   line-break: strict;
+  /* Service and place names stay in Latin letters (owner, 3 Nov 2026): a
+     little space between them and the characters around ("Seminyakの"),
+     where the browser supports it. Digits keep their usual spacing. */
+  text-autospace: ideograph-alpha;
 }
 
 /* Japanese headings break between phrases, not inside a word
@@ -60,7 +64,7 @@
   word-break: auto-phrase;
 }
 
-/* A page banner's title on phones: one katakana word ("バリニーズマッサージ")
+/* A page banner's title on phones: one long katakana word ("リラクゼーション")
    is wider than the screen at the English size, so it would break inside. */
 @media (max-width: 767.98px) {
   :is(:lang(ja), :lang(zh-Hans)) .banner-two__content .title {

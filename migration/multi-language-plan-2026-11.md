@@ -128,9 +128,12 @@ Selain itu:
 - **Pesan WhatsApp otomatis** (`src/lib/whatsapp.ts`) per bahasa, ditambah
   penanda bahasa (misalnya "(Website: JP)") agar staf tahu bahasa tamunya.
 - **Glosarium per bahasa:** "Spa Bali Moon" tidak diterjemahkan. Nama
-  treatment memakai bentuk lokal yang lazim (misalnya バリニーズマッサージ).
-  Alamat tetap huruf Latin. Harga tetap ditulis "IDR 159.000". Perkiraan
-  dalam JPY/KRW/CNY/INR bisa ditambahkan di fase belakangan.
+  layanan dan nama tempat juga tidak diterjemahkan, karena itu brand
+  (keputusan owner 3 November 2026): tetap huruf Latin seperti di English,
+  misalnya "SeminyakのBalinese Massage". Kata umum seperti pijat atau spa
+  tetap diterjemahkan. Alamat tetap huruf Latin. Harga tetap ditulis
+  "IDR 159.000". Perkiraan dalam JPY/KRW/CNY/INR bisa ditambahkan di fase
+  belakangan.
 - **Penanda terjemahan basi:** setiap terjemahan menyimpan hash teks English
   sumbernya. Perintah `npm run i18n:check` mendaftar terjemahan yang
   sumbernya sudah berubah. Ini penting karena teks dan harga situs ini sering
@@ -340,7 +343,7 @@ English dibuat persis seperti sebelumnya.
   dengan versi English. Judul Jepang dipenggal per frasa (`auto-phrase`), dan
   judul banner di ponsel dikecilkan supaya kata katakana panjang tidak
   terpotong.
-- Istilah utama: Seminyak → スミニャック, home service → 出張サービス/出張マッサージ,
+- Istilah utama: home service → 出張サービス/出張マッサージ,
   harga tetap "IDR …", jam buka 9:00〜23:00. Daftar lengkapnya ada di glosarium
   yang dipakai penerjemah.
 
@@ -361,9 +364,8 @@ Sebelum bahasa Jepang dinyalakan:
 ### Status Korea dan China (3 November 2026)
 
 - **Draf AI untuk 17 halaman inti yang sama sudah lengkap**, masing-masing 2.347
-  teks. Glosarium Korea memakai Seminyak → 스미냑, Kuta → 꾸따, home service →
-  출장 마사지/출장 서비스. Glosarium China (aksara sederhana) memakai Seminyak →
-  水明漾, Bali → 巴厘岛, home service → 上门按摩/上门服务.
+  teks. Glosarium Korea memakai home service → 출장 마사지/출장 서비스.
+  Glosarium China (aksara sederhana) memakai home service → 上门按摩/上门服务.
 - Hasil pengecekan di preview `/ko/` dan `/zh/`: 0 teks tersisa. Tombol durasi,
   total paket, menu harga, dan FAQ sama jumlahnya dengan versi English, dan
   `<html lang>` bernilai `ko` / `zh-Hans`.
@@ -410,14 +412,34 @@ Sebelum bahasa Jepang dinyalakan:
   - Bahasanya Hindi modern sehari-hari dan menyapa pembaca dengan आप.
   - Istilah spa memakai serapan yang lazim di India (मसाज, स्पा, फेशियल,
     होम सर्विस), dan मसाज diperlakukan sebagai kata feminin.
-  - Nama tempat: Seminyak → सेमिन्याक, Kuta → कुटा. Jam buka ditulis
-    "सुबह 9 बजे से रात 11 बजे तक". Angka tetap 0–9.
+  - Jam buka ditulis "सुबह 9 बजे से रात 11 बजे तक". Angka tetap 0–9.
 - Hasil pengecekan di preview `/hi/`:
   - 0 teks tersisa, tidak ada error, dan tidak ada link rusak.
   - Struktur halaman sama dengan English.
   - Aksara Devanagari tampil utuh di judul dan menu.
 - Titik "." yang berdiri sendiri setelah link menjadi danda "।".
 - Booking tetap lewat WhatsApp, yang memang dipakai luas di India.
+
+### Nama layanan dan tempat tetap huruf Latin (3 November 2026)
+
+- **Owner memutuskan nama layanan dan nama tempat tidak diterjemahkan**,
+  karena itu brand. Di keempat bahasa, "バリニーズマッサージ", "스미냑",
+  "水明漾", "सेमिन्याक" dan sejenisnya kini ditulis "Balinese Massage",
+  "Seminyak", dan seterusnya, persis seperti di English.
+- Yang tetap diterjemahkan: kata umum (pijat atau spa secara umum), teknik
+  yang sedang dijelaskan, bahan (aloe vera, minyak kelapa), dan bagian
+  tubuh.
+- Daftar ringkas di English ("a Thai, Balinese or hot stone massage") ditulis
+  dengan nama lengkap: "Thai Massage, Balinese Massage, Hot Stone Massage".
+- Partikel Korea mengikuti bunyi nama Latinnya ("Foot Reflexology는",
+  "Body Scrub은"). Di Jepang dan China, browser yang mendukung memberi jarak
+  kecil antara huruf Latin dan aksara di sekitarnya (`text-autospace` di
+  `src/styles/i18n.css`).
+- Catatan SEO: wisatawan Jepang, Korea, dan China sering mencari dengan
+  aksara mereka sendiri (misalnya "バリ島 スパ", "발리 마사지", "巴厘岛按摩").
+  Kalau trafik organik bahasa itu nanti lemah, nama lokal bisa ditambahkan
+  sekali di title atau meta description, tanpa mengganti nama Latin di
+  halaman.
 
 ### Yang belum dikerjakan
 

@@ -9,7 +9,10 @@ import { isLocale, linkFor } from "./config";
  * prices, photos and links are never copied. A language has one list of
  * translations, keyed by the English text itself (src/i18n/messages/<lang>.json):
  *
- *   { "Balinese Massage": "バリニーズマッサージ", "Book Now": "予約する" }
+ *   { "Balinese Massage in Seminyak": "SeminyakのBalinese Massage", "Book Now": "予約する" }
+ *
+ * The spa's service names and place names are brands and stay in Latin
+ * letters in every language (owner, 3 Nov 2026); generic words are translated.
  *
  * When a page is built in that language, every piece of text on its way to
  * the page (a data object, a component's props, the elements it returns) is
