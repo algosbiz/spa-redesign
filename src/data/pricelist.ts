@@ -26,7 +26,7 @@
     id: "aloe-vera-massage",
     category: "massage",
     pageSlug: "sunburn-massage",
-    image: { src: "/images/treatments/cards/aloeveramassage.webp", alt: "Aloe Vera Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/aloeveramassage.webp", alt: "Aloe Vera Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 250_000 },
     ],
@@ -40,7 +40,7 @@
   {
     id: "aromatherapy-massage",
     category: "massage",
-    image: { src: "/images/treatments/cards/aromatherapymassage.webp", alt: "Aromatherapy Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/aromatherapymassage.webp", alt: "Aromatherapy Massage", width: 630, height: 580 },
     // PRICE-06: the live site changed these on 2026-09-25 (1.5 Hours 239K → 339K, 2 Hours 339K → 439K).
     options: [
       { label: "1 Hour", price: 199_000 },
@@ -58,7 +58,7 @@
     id: "balinese-massage",
     category: "massage",
     pageSlug: "balinese-massage",
-    image: { src: "/images/treatments/cards/balinesemassage.webp", alt: "Balinese Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/balinesemassage.webp", alt: "Balinese Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 159_000 },
       { label: "1.5 Hours", price: 239_000 },
@@ -75,7 +75,7 @@
   {
     id: "back-massage",
     category: "massage",
-    image: { src: "/images/treatments/cards/backmassage.webp", alt: "Back Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/backmassage.webp", alt: "Back Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 90_000 },
       { label: "1 Hour", price: 199_000 },
@@ -93,7 +93,7 @@
     id: "cellulite-massage",
     category: "massage",
     pageSlug: "anti-cellulite-massage",
-    image: { src: "/images/treatments/cards/cellulitemassage-warm.webp", alt: "Cellulite Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/cellulitemassage.webp", alt: "Cellulite Massage", width: 630, height: 580 },
     // PRICE-06: the live site changed these on 2026-09-25 (1.5 Hours 450K → 520K, new 2 Hours 695K).
     options: [
       { label: "1 Hour", price: 350_000 },
@@ -116,7 +116,7 @@
     id: "cupping-therapy",
     category: "massage",
     pageSlug: "cupping-therapy",
-    image: { src: "/images/treatments/cards/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
+    image: { src: "/images/listmenu/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
     options: [
       { label: "1 Hour Dry Cupping", price: 499_000 },
       { label: "1 Hour Wet Cupping", price: 649_000 },
@@ -133,7 +133,7 @@
     id: "deep-tissue-massage",
     category: "massage",
     pageSlug: "deep-tissue-massage",
-    image: { src: "/images/treatments/cards/deeptissuemassage.webp", alt: "Deep Tissue Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/deeptissuemassage.webp", alt: "Deep Tissue Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 269_000 },
       { label: "1.5 Hours", price: 359_000 },
@@ -150,7 +150,7 @@
     id: "foot-reflexology",
     category: "massage",
     pageSlug: "foot-reflexology",
-    image: { src: "/images/treatments/cards/footreflexology.webp", alt: "Foot Reflexology", width: 630, height: 580 },
+    image: { src: "/images/listmenu/footreflexology.webp", alt: "Foot Reflexology", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 99_000 },
       { label: "1 Hour", price: 169_000 },
@@ -167,7 +167,7 @@
     id: "foot-massage",
     category: "massage",
     pageSlug: "foot-massage",
-    image: { src: "/images/treatments/cards/footmassage.webp", alt: "Foot Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/footmassage.webp", alt: "Foot Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 159_000 },
       { label: "1.5 Hours", price: 239_000 },
@@ -183,7 +183,7 @@
   {
     id: "four-hand-massage",
     category: "massage",
-    image: { src: "/images/treatments/cards/fourhandmassage.webp", alt: "Four Hand Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/fourhandmassage.webp", alt: "Four Hand Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 339_000 },
       { label: "1.5 Hours", price: 499_000 },
@@ -199,7 +199,7 @@
   {
     id: "herbal-massage",
     category: "massage",
-    image: { src: "/images/treatments/cards/herbalmassage.webp", alt: "Herbal Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/herbalmassage.webp", alt: "Herbal Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 199_000 },
       { label: "2 Hours", price: 399_000 },
@@ -215,7 +215,7 @@
     id: "hot-stone-massage",
     category: "massage",
     pageSlug: "hot-stone-massage",
-    image: { src: "/images/treatments/cards/hotstonemassage.webp", alt: "Hot Stone Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/hotstonemassage.webp", alt: "Hot Stone Massage", width: 630, height: 580 },
     // PRICE-06: the live site changed these on 2026-09-25 (1.5 Hours 370K → 380K, 2 Hours 439K → 495K).
     options: [
       { label: "1 Hour", price: 250_000 },
@@ -233,7 +233,7 @@
     id: "head-massage",
     category: "massage",
     pageSlug: "head-massage",
-    image: { src: "/images/treatments/cards/headmassage.webp", alt: "Head Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/headmassage.webp", alt: "Head Massage", width: 630, height: 580 },
     options: [
       // Added 24 Oct (owner): the 30-minute head massage from the packages, on every menu.
       { label: "30 Minutes", price: 90_000 },
@@ -252,7 +252,7 @@
     id: "lymphatic-massage",
     category: "massage",
     pageSlug: "lymphatic-drainage-massage",
-    image: { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/lymphaticmassage.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 300_000 },
       { label: "1.5 Hours", price: 440_000 },
@@ -270,7 +270,7 @@
     category: "massage",
     pageSlug: "warm-candle-massage",
     image: {
-      src: "/images/treatments/cards/organicwarmcandle.webp",
+      src: "/images/listmenu/organicwarmcandle.webp",
       alt: "Natural Warm Candle Massage",
       width: 630,
       height: 580,
@@ -306,7 +306,7 @@
   {
     id: "four-hand-warm-candle",
     category: "massage",
-    image: { src: "/images/treatments/cards/organicwarmcandle.webp", alt: "Four Hand Warm Candle Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/organicwarmcandle.webp", alt: "Four Hand Warm Candle Massage", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Four Hand Warm Candle",
@@ -339,7 +339,7 @@
     id: "shiatsu-massage",
     category: "massage",
     pageSlug: "shiatsu-massage",
-    image: { src: "/images/treatments/cards/shiatsumassage-warm.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/shiatsumassage.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 119_000 },
       { label: "1 Hour", price: 219_000 },
@@ -356,7 +356,7 @@
     id: "sport-massage",
     category: "massage",
     pageSlug: "sport-massage",
-    image: { src: "/images/treatments/cards/sportmassage.webp", alt: "Sports Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/sportmassage.webp", alt: "Sports Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 269_000 },
       { label: "1.5 Hours", price: 359_000 },
@@ -373,7 +373,7 @@
     id: "traditional-massage",
     category: "massage",
     pageSlug: "traditional-massage",
-    image: { src: "/images/treatments/cards/traditionalmassage.webp", alt: "Traditional Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/traditionalmassage.webp", alt: "Traditional Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 90_000 },
       { label: "1 Hour", price: 169_000 },
@@ -391,7 +391,7 @@
     id: "thai-massage",
     category: "massage",
     pageSlug: "thai-massage",
-    image: { src: "/images/treatments/cards/thaimassage-warm.webp", alt: "Thai Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/thaimassage.webp", alt: "Thai Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 133_000 },
       { label: "1 Hour", price: 259_000 },
@@ -409,7 +409,7 @@
     category: "massage",
     pageSlug: "coconut-oil-massage",
     image: {
-      src: "/images/treatments/cards/coconutoilmassage-warm.webp",
+      src: "/images/listmenu/coconutoilmassage.webp",
       alt: "Virgin Cold-Press Coconut Oil Massage",
       width: 630,
       height: 580,
@@ -430,7 +430,7 @@
     id: "bali-moon-tea-tree-facial",
     category: "beauty",
     pageSlug: "facial",
-    image: { src: "/images/beauty/cards/balimoonteatreefacial.webp", alt: "Bali Moon Tea Tree Facial", width: 630, height: 580 },
+    image: { src: "/images/listmenu/balimoonteatreefacial.webp", alt: "Bali Moon Tea Tree Facial", width: 630, height: 580 },
     options: [
       { label: "Price", price: 196_000, homeLabel: "Facial Treatment" },
     ],
@@ -463,7 +463,7 @@
     id: "bali-moon-gold-facial",
     category: "beauty",
     pageSlug: "facial",
-    image: { src: "/images/beauty/cards/balimoongoldfacial.webp", alt: "Bali Moon Gold Facial", width: 630, height: 580 },
+    image: { src: "/images/listmenu/balimoongoldfacial.webp", alt: "Bali Moon Gold Facial", width: 630, height: 580 },
     options: [
       { label: "Price", price: 269_000, homeLabel: "Facial Treatment" },
     ],
@@ -496,7 +496,7 @@
     id: "body-scrub",
     category: "beauty",
     pageSlug: "body-scrub",
-    image: { src: "/images/treatments/cards/bodyscrub.webp", alt: "Body Scrub", width: 630, height: 580 },
+    image: { src: "/images/listmenu/bodyscrub.webp", alt: "Body Scrub", width: 630, height: 580 },
     options: [
       { label: "Body Massage & Scrub · Start From", price: 169_000 },
       { label: "Chocolate", price: 169_000 },
@@ -518,7 +518,7 @@
   {
     id: "foot-scrub",
     category: "beauty",
-    image: { src: "/images/beauty/cards/footscrub.webp", alt: "Foot Scrub", width: 630, height: 580 },
+    image: { src: "/images/listmenu/footscrub.webp", alt: "Foot Scrub", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 100_000 },
     ],
@@ -532,7 +532,7 @@
   {
     id: "biokos-facial",
     category: "beauty",
-    image: { src: "/images/beauty/cards/biokosfacial.webp", alt: "Biokos Facial", width: 630, height: 580 },
+    image: { src: "/images/listmenu/biokosfacial.webp", alt: "Biokos Facial", width: 630, height: 580 },
     options: [
       { label: "Biokos", price: 179_000 },
       { label: "Mustika Ratu", price: 169_000 },
@@ -552,7 +552,7 @@
     id: "cream-bath",
     category: "beauty",
     pageSlug: "creambath",
-    image: { src: "/images/treatments/cards/creambath-warm.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
+    image: { src: "/images/listmenu/creambath.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
     options: [
       { label: "Ginseng", price: 165_000 },
       { label: "Avocado", price: 165_000 },
@@ -592,7 +592,7 @@
     id: "ear-candle",
     category: "beauty",
     pageSlug: "ear-candle",
-    image: { src: "/images/beauty/cards/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
+    image: { src: "/images/listmenu/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 159_000 },
     ],
@@ -606,7 +606,7 @@
   {
     id: "eyelash",
     category: "beauty",
-    image: { src: "/images/beauty/cards/eyelash.webp", alt: "Eyelash", width: 630, height: 580 },
+    image: { src: "/images/listmenu/eyelash.webp", alt: "Eyelash", width: 630, height: 580 },
     options: [
       { label: "Normal Eyelash", price: 299_000 },
       { label: "Volume", price: 359_000 },
@@ -622,7 +622,7 @@
     id: "manicure-pedicure",
     category: "beauty",
     pageSlug: "manicure-pedicure",
-    image: { src: "/images/treatments/cards/manicurepedicure-warm.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
+    image: { src: "/images/listmenu/manicurepedicure.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
     options: [
       { label: "Manicure & Pedicure", price: 238_000 },
       { label: "Manicure", price: 99_000 },
@@ -644,7 +644,7 @@
     id: "waxing",
     category: "beauty",
     pageSlug: "waxing-salon",
-    image: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
+    image: { src: "/images/listmenu/waxing.webp", alt: "Waxing", width: 630, height: 580 },
     // New waxing menu, 1 Nov 2026 (owner), in the owner's order: "Arms" became
     // half and full arms, "Back (from 139.000)" was dropped, and stomach (strip),
     // bikini, eyebrow and upper lip were added. The owner's round prices less

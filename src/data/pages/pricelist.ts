@@ -179,7 +179,7 @@ export const pricelistPage = {
             }
           ],
           id: 12,
-          image: "/images/treatments/cards/cellulitemassage-warm.webp"
+          image: "/images/listmenu/cellulitemassage.webp"
         },
         {
           name: "Cupping Therapy",
@@ -359,7 +359,7 @@ export const pricelistPage = {
             }
           ],
           id: 21,
-          image: "/images/treatments/cards/lymphaticmassage-warm.webp"
+          image: "/images/listmenu/lymphaticmassage.webp"
         },
         {
           name: "Natural Warm Candle Massage",
@@ -419,7 +419,7 @@ export const pricelistPage = {
             }
           ],
           id: 24,
-          image: "/images/treatments/cards/shiatsumassage-warm.webp"
+          image: "/images/listmenu/shiatsumassage.webp"
         },
         {
           name: "Sports Massage",
@@ -479,7 +479,7 @@ export const pricelistPage = {
             }
           ],
           id: 27,
-          image: "/images/treatments/cards/thaimassage-warm.webp"
+          image: "/images/listmenu/thaimassage.webp"
         },
         {
           name: "Virgin Cold-Press Coconut Oil Massage",
@@ -499,7 +499,7 @@ export const pricelistPage = {
             }
           ],
           id: 28,
-          image: "/images/treatments/cards/coconutoilmassage-warm.webp"
+          image: "/images/listmenu/coconutoilmassage.webp"
         }
       ]
     },
@@ -652,7 +652,7 @@ export const pricelistPage = {
             }
           ],
           id: 10,
-          image: "/images/treatments/cards/creambath-warm.webp"
+          image: "/images/listmenu/creambath.webp"
         },
         // Added 1 Nov (owner): braiding was priced only on its own page.
         {
@@ -725,7 +725,7 @@ export const pricelistPage = {
             }
           ],
           id: 22,
-          image: "/images/treatments/cards/manicurepedicure-warm.webp"
+          image: "/images/listmenu/manicurepedicure.webp"
         },
         {
           name: "Waxing",
