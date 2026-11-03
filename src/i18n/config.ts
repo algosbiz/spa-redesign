@@ -48,17 +48,19 @@ type LocaleSettings = {
   ogLocale: string;
   /** The language's own name, for the language switcher. */
   nativeName: string;
+  /** Whether the language puts spaces between words (Japanese and Chinese do not). */
+  wordSpaces: boolean;
 };
 
 // The plan's open decisions, to settle before each language goes live:
 // ko — spabalimoon.kr or spabalimoon.co.kr; hi — Hindi, or English for India
 // (en-IN) on spabalimoon.in.
 export const localeSettings: Record<Locale, LocaleSettings> = {
-  en: { origin: business.url, htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English" },
-  ja: { origin: "https://spabalimoon.jp", htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語" },
-  ko: { origin: "https://spabalimoon.kr", htmlLang: "ko", hreflang: "ko", ogLocale: "ko_KR", nativeName: "한국어" },
-  zh: { origin: "https://spabalimoon.cn", htmlLang: "zh-Hans", hreflang: "zh-Hans", ogLocale: "zh_CN", nativeName: "简体中文" },
-  hi: { origin: "https://spabalimoon.in", htmlLang: "hi", hreflang: "hi", ogLocale: "hi_IN", nativeName: "हिन्दी" },
+  en: { origin: business.url, htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English", wordSpaces: true },
+  ja: { origin: "https://spabalimoon.jp", htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語", wordSpaces: false },
+  ko: { origin: "https://spabalimoon.kr", htmlLang: "ko", hreflang: "ko", ogLocale: "ko_KR", nativeName: "한국어", wordSpaces: true },
+  zh: { origin: "https://spabalimoon.cn", htmlLang: "zh-Hans", hreflang: "zh-Hans", ogLocale: "zh_CN", nativeName: "简体中文", wordSpaces: false },
+  hi: { origin: "https://spabalimoon.in", htmlLang: "hi", hreflang: "hi", ogLocale: "hi_IN", nativeName: "हिन्दी", wordSpaces: true },
 };
 
 export const isLocale = (value: string): value is Locale => (locales as readonly string[]).includes(value);
@@ -92,33 +94,38 @@ export function sitePath(path: string): string {
   return isLocale(first) ? `/${rest.join("/")}` : path;
 }
 
+/** The core pages, translated first (plan, phase 3). */
+const corePages = [
+  "/",
+  "/seminyak/",
+  "/about/",
+  "/contact/",
+  "/reservation/",
+  "/outcall-home-service-massage/",
+  "/villa-hotel-massage/",
+  "/seminyak/balinese-massage/",
+  "/seminyak/couple-spa/",
+  "/seminyak/body-scrub/",
+  "/seminyak/creambath/",
+  "/seminyak/hot-stone-massage/",
+  "/seminyak/foot-reflexology/",
+  "/seminyak/facial/",
+  "/seminyak/deep-tissue-massage/",
+  "/seminyak/warm-candle-massage/",
+  "/seminyak/traditional-massage/",
+] as const;
+
 /**
  * The pages each language other than English has, by path. English has every
  * page; another language lists only its translated ones (plan §3.4), and
- * every page points (hreflang) only at the languages that have it.
+ * every page points (hreflang) only at the languages that have it. Draft
+ * translations (ja 2 Nov 2026, ko and zh 3 Nov 2026), to be checked by a
+ * native speaker before each language goes live.
  */
 const translatedPaths: Partial<Record<Locale, readonly string[]>> = {
-  // The core pages first (plan, phase 3; draft translation 2 Nov 2026, to be
-  // checked by a native speaker before Japanese goes live).
-  ja: [
-    "/",
-    "/seminyak/",
-    "/about/",
-    "/contact/",
-    "/reservation/",
-    "/outcall-home-service-massage/",
-    "/villa-hotel-massage/",
-    "/seminyak/balinese-massage/",
-    "/seminyak/couple-spa/",
-    "/seminyak/body-scrub/",
-    "/seminyak/creambath/",
-    "/seminyak/hot-stone-massage/",
-    "/seminyak/foot-reflexology/",
-    "/seminyak/facial/",
-    "/seminyak/deep-tissue-massage/",
-    "/seminyak/warm-candle-massage/",
-    "/seminyak/traditional-massage/",
-  ],
+  ja: corePages,
+  ko: corePages,
+  zh: corePages,
 };
 
 /** The live languages that have the page at `path` ("/about/"), English first. */

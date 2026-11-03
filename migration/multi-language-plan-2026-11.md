@@ -360,9 +360,31 @@ Sebelum bahasa Jepang dinyalakan:
 4. Dari konten English: paket yang sama tertulis IDR 375.000 di satu tempat dan
    IDR 379.000 di tempat lain (temuan penerjemah). Perlu dicek owner.
 
+### Status Korea dan China (3 November 2026)
+
+- **Draf AI untuk 17 halaman inti yang sama sudah lengkap**, masing-masing 2.347
+  teks. Glosarium Korea memakai Seminyak → 스미냑, Kuta → 꾸따, home service →
+  출장 마사지/출장 서비스. Glosarium China (aksara sederhana) memakai Seminyak →
+  水明漾, Bali → 巴厘岛, home service → 上门按摩/上门服务.
+- Hasil pengecekan di preview `/ko/` dan `/zh/`: 0 teks tersisa. Tombol durasi,
+  total paket, menu harga, dan FAQ sama jumlahnya dengan versi English, dan
+  `<html lang>` bernilai `ko` / `zh-Hans`.
+- Perbaikan yang muncul saat pengecekan, berlaku untuk semua bahasa:
+  - Potongan kalimat berhuruf kecil yang diakhiri titik ("also available for
+    hotels and villas in nearby areas.") tadinya dianggap kode dan tidak
+    diterjemahkan.
+  - Di Jepang dan China, spasi English di sekitar link kini dibuang
+    (`wordSpaces` di `src/i18n/config.ts`).
+- Untuk China, tombol booking masih mengarah ke WhatsApp, yang diblokir di China
+  daratan. Perlu akun WeChat dan tampilan QR.
+- Dari konten English (temuan penerjemah): halaman About menampilkan angka besar
+  "23" treatment, padahal teksnya menyebut 25.
+
 ### Yang belum dikerjakan
 
-- Isi terjemahan Korea, China, dan India; sisa halaman Jepang; review penutur asli.
+- India: keputusan Hindi atau English untuk India, lalu terjemahannya.
+- Sisa halaman Jepang, Korea, dan China, serta review penutur asli untuk ketiganya.
+- Perampingan `ui.json` (poin 2 di atas) berlaku untuk semua bahasa.
 - Keputusan di bagian 2: Hindi atau `en-IN`, `.kr` atau `.co.kr`, kanal chat,
   dan pendaftaran domain.
 - Tampilan QR WeChat untuk China (menunggu akun).

@@ -123,18 +123,25 @@ export const isSkippedKey = (key: string) =>
   SKIP_KEYS.has(key) || key.startsWith("@") || key.startsWith("data-") || key.startsWith("aria-hidden") ||
   SKIP_KEY_ENDINGS.some((ending) => key.endsWith(ending));
 
+/** A word of a class list or path: "p-about", "image/webp", "image.webp", or as short as "lh" (a lone "/" separates words). */
+const isCodeWord = (word: string) => word !== "/" && (/[-_:/]|\.(?=[a-z0-9])/.test(word) || word.length <= 3);
+
 /** Whether a string is words for people to read, not a path, address, class list or code. */
 export function isText(value: string): boolean {
   const s = value.trim();
   if (!/\p{L}/u.test(s)) return false;
   // "/seminyak/", "#faq", "https://…" (but "/ pax" is words after a slash)
   if (/^(?:\/(?!\s)|#|\.\/|https?:|mailto:|tel:|data:|wa\.me)/.test(s)) return false;
-  // "page-wrapper lh p-about", "balinese-massage", "image/webp" (but "1.5 hours" is words)
-  if (/^[a-z0-9_\-:./ ]+$/.test(s) && /[-_:]|\/(?!\s)|(?<!\d)\.|\.(?!\d)/.test(s)) return false;
+  // "page-wrapper lh p-about", "pt-130 pb-130", "balinese-massage", "image/webp":
+  // every word is code. One plain word makes it text ("1.5 hours", "full-body
+  // massage", "also available for hotels and villas in nearby areas.").
+  if (/^[a-z0-9_\-:./ ]+$/.test(s) && /[-_:/.]/.test(s) && s.split(/\s+/).every(isCodeWord)) return false;
   // "IDR 159.000", "IDR 159K", "IDR 159.000〜": prices are the same in every language.
   if (!/\p{L}/u.test(s.replace(/\b(?:IDR|Rp)\b|(?<=\d)K\b/g, ""))) return false;
   // info@spabalimoon.com
   if (/^\S+@\S+\.\S+$/.test(s)) return false;
+  // "2026-10-17", "2026-10-17T02:00:00Z": a date for code (<time dateTime>), not for reading.
+  if (/^\d{4}-\d{2}-\d{2}(?:T[\d:.]+(?:Z|[+-]\d{2}:?\d{2})?)?$/.test(s)) return false;
   return true;
 }
 
@@ -144,10 +151,12 @@ export type Translator = {
   messages: Messages;
   /** Called with each English text that has no translation. */
   onMissing?: OnMissing;
+  /** False for a language without spaces between words: see translateText. */
+  wordSpaces?: boolean;
 };
 
 /** The translation of one text, keeping its surrounding spaces; English when there is none. */
-export function translateText(value: string, { messages, onMissing }: Translator): string {
+export function translateText(value: string, { messages, onMissing, wordSpaces = true }: Translator): string {
   if (!isText(value)) return value;
   const core = value.trim();
   const translated = messages[core];
@@ -157,7 +166,11 @@ export function translateText(value: string, { messages, onMissing }: Translator
   }
   if (core === value) return translated;
   const start = value.indexOf(core);
-  return value.slice(0, start) + translated + value.slice(start + core.length);
+  // The English spaces around a piece of a sentence ("with " before a link)
+  // stay, but not in Japanese or Chinese, unless the translation starts or
+  // ends with Latin letters or digits there.
+  const keep = (space: string, edge: string | undefined) => (wordSpaces || /[A-Za-z0-9]/.test(edge ?? "") ? space : "");
+  return keep(value.slice(0, start), translated[0]) + translated + keep(value.slice(start + core.length), translated.at(-1));
 }
 
 /** One text with {name} placeholders: the template is translated, then filled. */

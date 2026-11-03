@@ -1,7 +1,7 @@
 import { appendFileSync } from "node:fs";
 import { lang } from "next/root-params";
 import { cache, createElement, Fragment, isValidElement, type ReactElement, type ReactNode } from "react";
-import { defaultLocale, isServedLocale, type Locale } from "./config";
+import { defaultLocale, isServedLocale, localeSettings, type Locale } from "./config";
 import {
   cloneWith,
   format,
@@ -117,6 +117,7 @@ export const getI18n = cache(async (): Promise<I18n> => {
   const translator: Translator = {
     locale,
     messages,
+    wordSpaces: localeSettings[locale].wordSpaces,
     onMissing: missingRecorder(locale, new Set(Object.values(messages)), "content"),
   };
   return {

@@ -55,7 +55,12 @@ export function useI18n(): ClientI18n {
     if (locale === defaultLocale) return english;
     // While the server renders the page, untranslated text is reported (src/i18n/server.ts).
     const report = (globalThis as { __i18nMissing?: (locale: Locale, text: string) => void }).__i18nMissing;
-    const translator: Translator = { locale, messages, onMissing: report && ((text) => report(locale, text)) };
+    const translator: Translator = {
+      locale,
+      messages,
+      wordSpaces: localeSettings[locale].wordSpaces,
+      onMissing: report && ((text) => report(locale, text)),
+    };
     return {
       locale,
       htmlLang: localeSettings[locale].htmlLang,
