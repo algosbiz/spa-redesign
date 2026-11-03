@@ -9,13 +9,14 @@
  * As on the live site, only the guide articles have a share picture
  * (og:image / twitter:image, URL only), and no page has article dates.
  *
- * `locale` (default English) picks the domain of the canonical and the
- * Open Graph language. A page that exists in more than one live language
- * also gets an hreflang link to each of them, plus x-default (English).
+ * `locale` (default English) picks the language folder of the canonical
+ * (/ja/about/) and the Open Graph language. A page that exists in more than
+ * one live language also gets an hreflang link to each of them, plus
+ * x-default (English).
  */
 import type { Metadata } from "next";
 import { business } from "@/data/business";
-import { defaultLocale, localeSettings, localesWithPage, type Locale } from "@/i18n/config";
+import { defaultLocale, localePath, localeSettings, localesWithPage, type Locale } from "@/i18n/config";
 
 type SeoInput = {
   title: string;
@@ -28,15 +29,18 @@ type SeoInput = {
   shareImage?: string;
   /** false = hide from Google (only for internal pages) */
   index?: boolean;
-  /** The page's language; its domain is the canonical one. */
+  /** The page's language; its folder is in the canonical (/ja/about/). */
   locale?: Locale;
   /** The page's path in each language, when it differs by language (guide articles). */
   languagePaths?: Partial<Record<Locale, string>>;
 };
 
-/** The full address of a path on the domain of `locale` (English: spabalimoon.com). */
+/**
+ * The full address of a page of `locale`: https://spabalimoon.com/about/,
+ * …/ja/about/. A file (an image) belongs to no language: leave `locale` out.
+ */
 export function absoluteUrl(path: string, locale: Locale = defaultLocale): string {
-  return new URL(path, localeSettings[locale].origin).toString();
+  return new URL(localePath(path, locale), business.url).toString();
 }
 
 /**
@@ -67,7 +71,7 @@ export function languageAlternates(
  */
 export function siteMetadata(locale: Locale = defaultLocale): Metadata {
   return {
-    metadataBase: new URL(localeSettings[locale].origin),
+    metadataBase: new URL(business.url),
     title: "Spa Bali Moon - Outcall & Home Service Massage",
     description:
       "Our traditional Bali massage is available for outcall massage to your stay. Visit our spa or call for home service. Feel the signature warmth of Bali Moon.",
@@ -92,7 +96,7 @@ export function buildMetadata({
   languagePaths,
 }: SeoInput): Metadata {
   const url = absoluteUrl(path, locale);
-  const image = shareImage ? absoluteUrl(shareImage, locale) : undefined;
+  const image = shareImage ? absoluteUrl(shareImage) : undefined;
   const languages = languageAlternates(path, languagePaths);
 
   return {

@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useI18n } from "@/i18n/client";
-import { defaultLocale } from "@/i18n/config";
+import { defaultLocale, localePath } from "@/i18n/config";
 
 // The database answers null for empty columns, so null is accepted throughout.
 export type GuidePostSummary = {
@@ -56,6 +56,8 @@ export default function GuidePost({
   morePosts?: GuidePostSummary[];
 }) {
   const { el, locale } = useI18n();
+  // The language's own articles, in its folder (/ja/guide/…/).
+  const articleHref = (slug: string) => localePath(`/guide/${slug}/`, locale);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<GuidePostSummary[]>([]);
   const [searching, setSearching] = useState(false);
@@ -72,7 +74,7 @@ export default function GuidePost({
     }
     setSearching(true);
     try {
-      // Another language searches its own articles (the domain says which; ?locale= on localhost).
+      // Another language searches its own articles.
       const lang = locale === defaultLocale ? "" : `&locale=${locale}`;
       const res = await fetch(`/api/search-posts/?q=${encodeURIComponent(q.trim())}${lang}`);
       const data = await res.json();
@@ -181,7 +183,7 @@ export default function GuidePost({
                         <ul className={`${S} sidebar-search-results__list`}>
                           {results.map((r) => (
                             <li key={r.id} className={S}>
-                              <Link href={`/guide/${r.slug}/`} onClick={() => setOpen(false)}>
+                              <Link href={articleHref(r.slug)} onClick={() => setOpen(false)}>
                                 <div className={`${S} sidebar-search-results__item`}>
                                   {r.cover_image && (
                                     <img loading="lazy" decoding="async" src={r.cover_image} alt={r.title} className={S} />
@@ -213,7 +215,7 @@ export default function GuidePost({
                               <i className={`${S} fas fa-user-circle`} />
                               {p.author || "Admin"}
                             </span>
-                            <Link href={`/guide/${p.slug}/`}>{p.title}</Link>
+                            <Link href={articleHref(p.slug)}>{p.title}</Link>
                           </h3>
                         </div>
                       </li>
@@ -237,7 +239,7 @@ export default function GuidePost({
               {(prevPost || nextPost) && (
                 <nav aria-label="Other articles" className={`${S} post-nav`}>
                   {prevPost && (
-                    <Link href={`/guide/${prevPost.slug}/`} className="post-nav__link post-nav__link--prev">
+                    <Link href={articleHref(prevPost.slug)} className="post-nav__link post-nav__link--prev">
                       <span className={`${S} post-nav__thumb`}>
                         <img loading="lazy" decoding="async" src={prevPost.cover_image || FALLBACK_IMAGE} alt="" className={S} />
                       </span>
@@ -248,7 +250,7 @@ export default function GuidePost({
                     </Link>
                   )}
                   {nextPost && (
-                    <Link href={`/guide/${nextPost.slug}/`} className="post-nav__link post-nav__link--next">
+                    <Link href={articleHref(nextPost.slug)} className="post-nav__link post-nav__link--next">
                       <span className={`${S} post-nav__text`}>
                         <span className={`${S} post-nav__label`}>Next guide →</span>
                         <span className={`${S} post-nav__title`}>{nextPost.title}</span>
@@ -266,7 +268,7 @@ export default function GuidePost({
                   <h3 className={`${S} post-more__title`}>More Massage Guides</h3>
                   <div className={`${S} post-more__grid`}>
                     {morePosts.map((p) => (
-                      <Link key={p.id} href={`/guide/${p.slug}/`} className="post-more__card">
+                      <Link key={p.id} href={articleHref(p.slug)} className="post-more__card">
                         <span className={`${S} post-more__image`}>
                           <img loading="lazy" decoding="async" src={p.cover_image || FALLBACK_IMAGE} alt={p.title} className={S} />
                         </span>

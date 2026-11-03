@@ -1,5 +1,5 @@
 import { sitemapPages } from "@/data/sitemap";
-import { defaultLocale, isActiveLocale, localeOfHost, localesWithPage, type Locale } from "@/i18n/config";
+import { activeLocales, localesWithPage } from "@/i18n/config";
 import { getSitemapPosts } from "@/lib/blog/posts";
 import { absoluteUrl, languageAlternates } from "@/lib/seo";
 
@@ -7,10 +7,10 @@ import { absoluteUrl, languageAlternates } from "@/lib/seo";
  * /sitemap.xml — the live sitemap: the site's pages (src/data/sitemap.ts),
  * then every published guide article from the blog database, newest first.
  *
- * One per domain (src/i18n/config.ts): spabalimoon.com lists the English
- * pages, another language's domain only the pages translated into it. A page
- * that exists in more than one language lists them all (xhtml:link), as its
- * hreflang tags do; a guide article, each language's version of it.
+ * Every live language is in it (src/i18n/config.ts): each page once per
+ * language that has it (/about/, /ja/about/…), and each language's articles.
+ * A page that exists in more than one language lists them all (xhtml:link),
+ * as its hreflang tags do; a guide article, each language's version of it.
  *
  * Rendered per request and cached by the CDN for an hour, as the live
  * sitemap is (its getServerSideProps sends the same Cache-Control). A cached
@@ -48,30 +48,30 @@ const urlEntry = ({ loc, lastmod, image, alternates }: Entry) => {
   );
 };
 
-export async function GET(request: Request) {
-  const locale: Locale = localeOfHost(request.headers.get("host")) ?? defaultLocale;
-  if (!isActiveLocale(locale)) return new Response("Not Found", { status: 404 });
-
+export async function GET() {
   const entries: Entry[] = [];
   for (const page of sitemapPages) {
     const path = new URL(page.loc).pathname;
-    if (!localesWithPage(path).includes(locale)) continue;
-    entries.push({
-      loc: absoluteUrl(path, locale),
-      lastmod: page.lastmod,
-      image: page.image ? absoluteUrl(new URL(page.image).pathname, locale) : null,
-      alternates: languageAlternates(path),
-    });
+    for (const locale of localesWithPage(path)) {
+      entries.push({
+        loc: absoluteUrl(path, locale),
+        lastmod: page.lastmod,
+        image: page.image ? absoluteUrl(new URL(page.image).pathname) : null,
+        alternates: languageAlternates(path),
+      });
+    }
   }
 
-  for (const post of await getSitemapPosts(locale)) {
-    const paths = Object.fromEntries(Object.entries(post.languages).map(([other, slug]) => [other, `/guide/${slug}/`]));
-    entries.push({
-      loc: absoluteUrl(`/guide/${post.slug}/`, locale),
-      lastmod: post.lastmod,
-      image: post.image ? absoluteUrl(post.image, locale) : null,
-      alternates: languageAlternates(`/guide/${post.slug}/`, paths),
-    });
+  for (const locale of activeLocales) {
+    for (const post of await getSitemapPosts(locale)) {
+      const paths = Object.fromEntries(Object.entries(post.languages).map(([other, slug]) => [other, `/guide/${slug}/`]));
+      entries.push({
+        loc: absoluteUrl(`/guide/${post.slug}/`, locale),
+        lastmod: post.lastmod,
+        image: post.image ? absoluteUrl(post.image) : null,
+        alternates: languageAlternates(`/guide/${post.slug}/`, paths),
+      });
+    }
   }
 
   const xhtml = entries.some((entry) => entry.alternates)

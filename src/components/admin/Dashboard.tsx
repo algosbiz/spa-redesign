@@ -2,17 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { defaultLocale, isLocale, localeSettings } from "@/i18n/config";
+import { defaultLocale, isLocale, localePath, localeSettings } from "@/i18n/config";
 import type { BlogSetup } from "@/lib/blog/setup";
 import type { PostRow } from "@/lib/blog/types";
 import AdminNotice from "./AdminNotice";
 import AdminShell from "./AdminShell";
 
-/** Where an article is published: spabalimoon.com for English, its language's domain otherwise. */
+/** Where an article is published: /guide/…/ for English, in its language's folder otherwise (/ja/guide/…/). */
 const articleUrl = (p: PostRow) =>
-  p.locale && p.locale !== defaultLocale && isLocale(p.locale)
-    ? `${localeSettings[p.locale].origin}/guide/${p.slug}/`
-    : `/guide/${p.slug}/`;
+  localePath(`/guide/${p.slug}/`, p.locale && isLocale(p.locale) ? p.locale : undefined);
 
 const fmt = (d: string | null) =>
   d ? new Date(d).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }) : "—";

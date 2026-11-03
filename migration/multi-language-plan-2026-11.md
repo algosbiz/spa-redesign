@@ -1,58 +1,53 @@
-# Plan: multi bahasa dan multi domain (November 2026)
+# Plan: multi bahasa (November 2026)
 
 Status: disusun 2 November 2026 dari `main` di commit `c189bd7`. Kode Fase 1–5
-dikerjakan hari yang sama di branch `i18n/foundation` (lihat bagian 7). Yang
-tersisa adalah keputusan owner, domain, dan isi terjemahan.
+dikerjakan di branch `i18n/foundation` (lihat bagian 7). Pada 3 November 2026
+owner memutuskan semua bahasa tetap di **satu domain, spabalimoon.com, dengan
+folder per bahasa**, bukan domain per negara seperti rencana awal. Yang
+tersisa adalah keputusan owner dan review terjemahan.
 
-Tujuan: spabalimoon.com tersedia dalam bahasa Jepang, Korea, China, dan bahasa
-untuk pasar India, masing-masing di domain negaranya sendiri. Situs English
-yang sekarang **tidak boleh berubah**: URL, title, canonical, dan redirect
-tetap persis seperti sekarang.
+Tujuan: spabalimoon.com tersedia dalam bahasa Jepang, Korea, China, dan Hindi
+(pasar India), masing-masing di folder sendiri: `/ja/`, `/ko/`, `/zh/`, `/hi/`.
+Situs English yang sekarang **tidak boleh berubah**: URL, title, canonical,
+dan redirect tetap persis seperti sekarang.
 
 ## 1. Ringkasan
 
-Satu codebase Next.js dan satu project Vercel melayani lima domain. Domain
-yang dibuka menentukan bahasa halaman.
+Satu codebase Next.js dan satu project Vercel melayani satu domain. Folder
+pertama di alamat menentukan bahasa halaman; English tidak punya folder.
 
-| Bahasa | Kode (hreflang) | Domain usulan | Mesin pencari utama | Kanal chat untuk booking |
+| Bahasa | Kode (hreflang) | Contoh alamat | Mesin pencari utama | Kanal chat untuk booking |
 |---|---|---|---|---|
-| English | `en` + `x-default` | spabalimoon.com (tetap) | Google | WhatsApp |
-| Jepang | `ja` | spabalimoon.jp | Google (Yahoo! Japan memakai hasil Google) | LINE, WhatsApp |
-| Korea | `ko` | spabalimoon.kr atau .co.kr | Naver, Google | KakaoTalk, WhatsApp |
-| China (aksara sederhana) | `zh-Hans` | spabalimoon.cn | Baidu (Google diblokir di China daratan) | WeChat (WhatsApp diblokir di China daratan) |
-| India | `hi` atau `en-IN` (lihat keputusan 1) | spabalimoon.in | Google | WhatsApp |
+| English | `en` + `x-default` | spabalimoon.com/about/ (tetap) | Google | WhatsApp |
+| Jepang | `ja` | spabalimoon.com/ja/about/ | Google (Yahoo! Japan memakai hasil Google) | LINE, WhatsApp |
+| Korea | `ko` | spabalimoon.com/ko/about/ | Naver, Google | KakaoTalk, WhatsApp |
+| China (aksara sederhana) | `zh-Hans` | spabalimoon.com/zh/about/ | Baidu (Google diblokir di China daratan) | WeChat (WhatsApp diblokir di China daratan) |
+| India | `hi` (keputusan 1) | spabalimoon.com/hi/about/ | Google | WhatsApp |
 
-- Path URL sama di semua domain, slug tetap bahasa Inggris:
-  `spabalimoon.jp/seminyak/balinese-massage/`. Dengan begitu peta hreflang
-  antar-domain cukup "path yang sama di domain lain".
-- Per 2 November 2026, kedelapan nama domain kandidat (`.jp`, `.co.jp`, `.kr`,
-  `.co.kr`, `.cn`, `.com.cn`, `.in`, `.co.in`) belum ada di DNS. Kemungkinan
-  besar belum terdaftar, tapi tetap harus dicek di registrar.
+- Slug tetap bahasa Inggris, hanya diawali kode bahasa:
+  `spabalimoon.com/ja/seminyak/balinese-massage/`. Dengan begitu peta
+  hreflang cukup "path yang sama dengan awalan bahasa lain".
+- Satu domain berarti semua bahasa mewarisi otoritas spabalimoon.com di
+  Google, tidak ada domain negara yang perlu didaftarkan, dan cukup satu
+  property Search Console. Rencana awal (spabalimoon.jp, .kr, .cn, .in)
+  dibatalkan 3 November 2026.
 
 ## 2. Keputusan yang perlu diambil sebelum coding
 
 1. **India: Hindi atau English untuk India?** *(Diputuskan 3 November 2026:
    Hindi.)* Wisatawan India umumnya mencari
    info perjalanan dalam bahasa Inggris. Cek dulu volume keyword Hindi vs
-   Inggris di Ahrefs (negara IN). Kalau volume Hindi kecil, `.in` lebih
-   berguna sebagai versi `en-IN`: English yang disesuaikan untuk tamu India
+   Inggris di Ahrefs (negara IN). Kalau volume Hindi kecil, versi India lebih
+   berguna sebagai `en-IN`: English yang disesuaikan untuk tamu India
    (perkiraan harga INR, testimoni tamu India, paket honeymoon). Konten itu
-   harus cukup berbeda dari .com supaya tidak dianggap duplikat.
+   harus cukup berbeda dari halaman English supaya tidak dianggap duplikat.
 2. **China: aksara sederhana (`zh-Hans`)** untuk wisatawan China daratan.
    Aksara tradisional (Taiwan, Hong Kong) tidak termasuk plan ini.
-3. **Syarat domain negara:**
-   - `.jp` dan `.kr`/`.co.kr` mewajibkan alamat lokal di negara itu. Pakai
-     layanan *local presence* atau *trustee* dari registrar.
-   - `.cn` mewajibkan verifikasi identitas pendaftar (*real-name
-     verification*). Situs **tidak bisa di-host di China daratan** tanpa izin
-     ICP, dan izin itu mensyaratkan badan usaha China. Dari server luar
-     (Vercel/Cloudflare) situs tetap bisa dibuka di China, tapi bisa lambat
-     dan Baidu cenderung kurang mengunggulkannya. Untuk pasar China, kanal
-     utamanya tetap WeChat dan Xiaohongshu. Situs berperan sebagai pendukung.
-   - `.in` terbuka untuk siapa saja.
-   - Kalau salah satu domain tidak bisa didapat, bahasa itu bisa jalan dulu
-     di subdomain (misalnya `ja.spabalimoon.com`). Arsitekturnya sama, yang
-     berubah hanya satu baris di peta domain.
+3. **Syarat domain negara.** *(Tidak berlaku lagi sejak 3 November 2026:
+   semua bahasa di spabalimoon.com.)* Untuk China tetap berlaku: situs **tidak
+   bisa di-host di China daratan** tanpa izin ICP. Dari server luar
+   (Vercel/Cloudflare) situs tetap bisa dibuka di China, tapi bisa lambat, dan
+   kanal utamanya tetap WeChat dan Xiaohongshu.
 4. **Kanal chat per negara.** Apakah owner mau membuka akun LINE Official
    Account, KakaoTalk Channel, dan WeChat? Siapa yang membalas chat dalam
    bahasa itu? Minimal untuk China harus ada WeChat. Kalau owner belum siap
@@ -63,7 +58,7 @@ yang dibuka menentukan bahasa halaman.
    Perlu anggaran untuk reviewer.
 6. **Urutan peluncuran.** Rekomendasi: Jepang → Korea → China → India.
    Jepang dijadikan pilot karena pasarnya bergantung pada Google (alur
-   Search Console sama dengan .com), wisatawannya sangat memilih situs
+   Search Console sama dengan English), wisatawannya sangat memilih situs
    berbahasa Jepang, dan kanal chatnya jelas (LINE). China ditaruh setelah
    arsitektur terbukti karena infrastruktur dan kanalnya paling rumit.
 
@@ -82,8 +77,8 @@ src/app/
 │   └── (site)/...          semua halaman yang sekarang di src/app/(site)/
 ├── admin/layout.tsx        jadi root layout sendiri (admin tidak multi bahasa)
 ├── api/...                 tetap
-├── sitemap.xml/route.ts    membaca host → sitemap domain itu
-└── robots.txt/route.ts     menggantikan file statis src/app/robots.txt
+├── sitemap.xml/route.ts    satu sitemap: semua bahasa aktif + xhtml:link alternate
+└── robots.txt              tetap file statis
 ```
 
 - `generateStaticParams` di `[lang]/layout.tsx` hanya mengembalikan bahasa
@@ -94,30 +89,26 @@ src/app/
   jadi `lang` tidak perlu dioper ke tiap komponen. Ada 35 client component
   yang tidak bisa memakai fungsi ini. Teksnya dikirim lewat props dari
   komponen server di atasnya.
-- `src/proxy.ts` mendapat tugas baru: memetakan host ke bahasa lalu
-  me-*rewrite* secara internal. Permintaan `spabalimoon.jp/seminyak/x/`
-  dilayani dari `/ja/seminyak/x/`, sedangkan `spabalimoon.com/...` dari
-  `/en/...`. Prefix bahasa tidak pernah terlihat di URL. Peta redirect dari
-  admin (R2) tetap dicek lebih dulu. Kalau seseorang membuka `/ja/...`
-  langsung di domain produksi, dia di-redirect 301 ke domain yang benar.
-- Di development dan preview Vercel (satu host), prefix boleh dipakai
-  langsung: `localhost:3009/ja/`. Halaman preview diberi noindex.
-- `next.config.ts`: aturan `www` → apex dipakai untuk semua domain, tidak
-  hanya .com. Redirect URL lama WordPress (`liveRedirects`) tetap khusus .com.
+- `src/proxy.ts` membaca folder pertama di alamat. Alamat tanpa folder bahasa
+  dilayani dari `/en/...` lewat *rewrite* internal, jadi URL English tidak
+  berubah, dan `/en/...` di-redirect 301 ke alamat tanpa awalan. `/ja/...`
+  dilayani apa adanya kalau bahasa itu aktif (atau sedang preview) dan
+  halamannya sudah diterjemahkan; selain itu 404. Peta redirect dari admin
+  (R2) hanya dicek untuk alamat English.
+- Bahasa yang sedang diterjemahkan bisa dibuka di localhost dan preview Vercel
+  lewat `I18N_PREVIEW_LOCALES` (`localhost:3009/ja/`), tidak di produksi.
+- `next.config.ts`: aturan `www` → apex dan redirect URL lama WordPress
+  (`liveRedirects`) tetap seperti sekarang.
 - `trailingSlash: true` dipertahankan.
 
-### 3.2 Domain dan URL
+### 3.2 URL
 
-`business.url` dan string `spabalimoon.com` muncul sekitar 100 kali di
-`src/`, ditambah URL lengkap di `src/data/sitemap.ts`. Semua diganti dengan
-helper:
-
-- `src/i18n/config.ts`: daftar bahasa, bahasa default, origin per bahasa
-  (`en: "https://spabalimoon.com"`, `ja: "https://spabalimoon.jp"`, ...),
-  kode hreflang, dan kode `og:locale` (`ja_JP`, `ko_KR`, `zh_CN`, `hi_IN`).
-- `absoluteUrl(path, lang)` di `src/lib/seo.ts`.
-- Entri `src/data/sitemap.ts` disimpan sebagai path. Origin ditambahkan
-  sesuai domain.
+- `src/i18n/config.ts`: daftar bahasa, bahasa default, kode hreflang, kode
+  `og:locale` (`ja_JP`, `ko_KR`, `zh_CN`, `hi_IN`), dan `localePath(path,
+  lang)` yang menambahkan awalan bahasa (`/about/` → `/ja/about/`).
+- `absoluteUrl(path, lang)` di `src/lib/seo.ts` memakai `business.url` untuk
+  semua bahasa. File (gambar) tidak punya bahasa, jadi alamatnya sama di
+  semua halaman.
 
 ### 3.3 Teks dan konten: lima lapisan
 
@@ -133,7 +124,7 @@ Selain itu:
 
 - **Schema JSON-LD** (`src/lib/schema.ts`): ditambah `inLanguage`, deskripsi
   dan FAQ per bahasa. `@id` spa tetap `https://spabalimoon.com/#spa` di
-  semua domain supaya Google melihat satu bisnis yang sama.
+  semua bahasa supaya Google melihat satu bisnis yang sama.
 - **Pesan WhatsApp otomatis** (`src/lib/whatsapp.ts`) per bahasa, ditambah
   penanda bahasa (misalnya "(Website: JP)") agar staf tahu bahasa tamunya.
 - **Glosarium per bahasa:** "Spa Bali Moon" tidak diterjemahkan. Nama
@@ -147,30 +138,30 @@ Selain itu:
 
 ### 3.4 Halaman yang belum diterjemahkan
 
-Halaman yang belum diterjemahkan tidak tersedia di domain bahasa itu (404).
-Halaman itu tidak masuk sitemap atau hreflang domain tersebut, dan link
-menunya mengarah ke versi English di .com. Konten English tidak boleh tampil
-di domain .jp, .kr, .cn, atau .in karena menjadi duplikat dan membingungkan
-tamu.
+Halaman yang belum diterjemahkan tidak tersedia di folder bahasa itu (404).
+Halaman itu tidak masuk sitemap atau hreflang bahasa tersebut, dan link
+menunya mengarah ke versi English (alamat tanpa awalan). Konten English tidak
+boleh tampil di bawah `/ja/`, `/ko/`, `/zh/`, atau `/hi/` karena menjadi
+duplikat dan membingungkan tamu.
 
-### 3.5 SEO per domain
+### 3.5 SEO per bahasa
 
 - **hreflang dua arah** di setiap halaman lewat `alternates.languages` di
   `buildMetadata`, hanya untuk bahasa yang halamannya ada. `en` dan
-  `x-default` mengarah ke .com.
-- **Canonical** setiap halaman mengarah ke dirinya sendiri di domainnya.
-- **sitemap.xml per host**: route-nya sudah dinamis, tinggal ditambah
-  filter host dan `xhtml:link` alternate.
-- **robots.txt** dijadikan route handler, dengan baris `Sitemap:` sesuai
-  host.
+  `x-default` mengarah ke halaman English.
+- **Canonical** setiap halaman mengarah ke dirinya sendiri, dengan awalan
+  bahasanya (`https://spabalimoon.com/ja/about/`).
+- **Satu sitemap.xml** berisi semua bahasa aktif, dengan `xhtml:link`
+  alternate. **robots.txt** tetap file statis yang sama.
 - **Title dan meta description** ditulis untuk keyword lokal, bukan
   terjemahan harfiah. Riset keyword per negara lewat Ahrefs (JP, KR, IN).
   Untuk China dipakai data Baidu.
-- **Daftarkan domain** ke Google Search Console (4 domain baru), Naver
-  Search Advisor (.kr), Baidu Ziyuan (.cn), dan Bing Webmaster Tools.
-- Domain baru mulai dengan otoritas nol. Trafik organik baru terasa beberapa
-  bulan setelah peluncuran dan perlu backlink lokal (blog wisata, Naver Blog,
-  Xiaohongshu, direktori wisata).
+- **Search Console** cukup property spabalimoon.com yang sudah ada; laporan
+  per bahasa difilter per folder. Daftarkan juga spabalimoon.com ke Naver
+  Search Advisor (Korea), Baidu Ziyuan (China), dan Bing Webmaster Tools.
+- Folder bahasa mewarisi otoritas spabalimoon.com, jadi biasanya lebih cepat
+  terindeks daripada domain baru. Backlink lokal (blog wisata, Naver Blog,
+  Xiaohongshu, direktori wisata) tetap membantu.
 
 ### 3.6 Font dan tipografi
 
@@ -202,15 +193,11 @@ tamu.
 
 ### 3.8 Infrastruktur
 
-- **Vercel:** tambahkan 4 domain baru (+ `www`) ke project yang sama. Satu
-  build melayani semuanya.
-- **Cloudflare:** satu zone per domain, DNS proxied, SSL Full (strict),
-  Bulk Redirect `www` → apex per domain. `.github/workflows/purge-cloudflare.yml`
-  diubah agar me-*purge* semua zone (secret zone ID baru per domain).
-- **Admin** hanya di `spabalimoon.com/admin/`. Di domain lain `/admin/`
-  menghasilkan 404.
+- **Vercel dan Cloudflare:** tidak ada domain atau zone baru. Satu build
+  melayani semua bahasa, dan purge Cloudflare tetap satu zone.
+- **Admin** hanya di `/admin/` dan tidak multi bahasa.
 - **Gambar** tetap dari `/images/` dan `images.spabalimoon.com`, dipakai
-  bersama oleh semua domain.
+  bersama oleh semua bahasa.
 
 ## 4. Fase kerja
 
@@ -218,19 +205,18 @@ Perkiraan waktu di bawah hanya untuk kerja teknis dan masih kasar. Waktu
 review penerjemah tidak termasuk.
 
 **Fase 0: Persiapan (owner, berjalan paralel, 1–2 minggu)**
-Ambil keputusan di bagian 2, daftarkan domain (local presence .jp/.kr dan
-verifikasi .cn butuh waktu), buka akun LINE/Kakao/WeChat, cari reviewer
+Ambil keputusan di bagian 2, buka akun LINE/Kakao/WeChat, cari reviewer
 penutur asli, dan riset keyword per negara.
 
 **Fase 1: Fondasi i18n, English tetap identik (4–6 hari)**
-Buat `src/i18n/config.ts`, pindahkan rute ke `[lang]`, tambahkan host →
-bahasa di proxy, helper URL, hreflang di `buildMetadata`, sitemap dan robots
-per host, serta font per bahasa. Pemilih bahasa di header dipindah ke Fase 3:
+Buat `src/i18n/config.ts`, pindahkan rute ke `[lang]`, tambahkan awalan
+bahasa di proxy, helper URL, hreflang di `buildMetadata`, sitemap dengan
+alternate, serta font per bahasa. Pemilih bahasa di header dipindah ke Fase 3:
 selama situs hanya berbahasa Inggris, pemilih itu tidak punya isi dan tidak
 bisa diuji.
 *Syarat lolos:* `tools/compare-pages.mjs` terhadap produksi menunjukkan
-42/42 status dan title sama, canonical .com tidak berubah, serta build,
-typecheck, dan lint bersih. Fase ini bisa di-deploy sebelum ada domain baru.
+42/42 status dan title sama, canonical English tidak berubah, serta build,
+typecheck, dan lint bersih. Fase ini bisa di-deploy sebelum bahasa lain aktif.
 
 **Fase 2: Ekstraksi teks (4–6 hari)**
 Pindahkan teks dari komponen, `src/content/pages/`, dan `src/data/` ke
@@ -241,8 +227,8 @@ Buat skrip terjemahan pohon JSON treatment dan `npm run i18n:check`.
 **Fase 3: Pilot bahasa pertama (rekomendasi: Jepang, sekitar 1 minggu + review)**
 Kerjakan halaman inti dulu: beranda, price list, 8–10 treatment terlaris,
 contact, reservation, outcall, dan villa. Setelah itu sisa treatment dan
-halaman lain. Tambahkan pemilih bahasa di header, aktifkan domain, daftarkan
-ke Search Console, kirim sitemap.
+halaman lain. Tambahkan pemilih bahasa di header, aktifkan bahasanya, lalu
+kirim ulang sitemap di Search Console.
 
 **Fase 4: Korea, China, India (masing-masing 3–5 hari + review)**
 Polanya sama dengan Fase 3. China ditambah WeChat dan pendaftaran ke Baidu.
@@ -255,17 +241,16 @@ Artikel diterjemahkan selektif per pasar berdasarkan keyword, tidak semuanya.
 
 **Fase 6: SEO lokal berkelanjutan**
 Artikel khusus tiap pasar, backlink lokal, Naver Blog, Xiaohongshu, dan
-pemantauan Search Console per domain.
+pemantauan Search Console per folder bahasa.
 
 ## 5. Risiko
 
 | Risiko | Mitigasi |
 |---|---|
-| SEO English yang sudah dibangun rusak (URL dan title sekarang identik dengan live) | English diuji di setiap fase dengan `tools/compare-pages.mjs`. Fondasi di-deploy dulu tanpa domain baru. |
+| SEO English yang sudah dibangun rusak (URL dan title sekarang identik dengan live) | English diuji di setiap fase dengan `tools/compare-pages.mjs`. Fondasi di-deploy dulu sebelum bahasa lain aktif. |
 | Terjemahan mesin tanpa review terasa murahan bagi tamu Jepang atau Korea | Review penutur asli minimal untuk halaman inti dan glosarium. |
 | Terjemahan basi: harga atau teks berubah di English tapi tidak di bahasa lain | Harga dari satu sumber data, plus `npm run i18n:check` berbasis hash. |
 | China: tanpa ICP, akses bisa lambat, WhatsApp diblokir | WeChat sebagai kanal utama, ekspektasi trafik organik rendah. |
-| Domain baru mulai dari otoritas nol (subfolder di .com akan mewarisi otoritas .com) | Backlink lokal per pasar. Kalau hasilnya lambat, bahasa bisa dipindah ke subfolder dengan mengganti peta origin. |
 | PageSpeed turun karena font CJK | Pakai font sistem. Webfont hanya untuk judul, setelah diukur. |
 | Admin makin rumit (posts dan page_content per bahasa) | Dikerjakan terakhir (Fase 5), setelah halaman statis stabil. |
 
@@ -299,21 +284,33 @@ English dibuat persis seperti sebelumnya.
   `page_content` tidak perlu per bahasa.
 - **Artikel guide adalah satu-satunya konten yang ditulis per bahasa.** Editor
   admin punya pilihan Language dan Translation of. Terjemahan memakai slug
-  artikel English-nya, jadi alamatnya sama di domain bahasanya dan hreflang
-  saling menunjuk.
+  artikel English-nya, jadi alamatnya sama dengan awalan bahasanya
+  (`/ja/guide/…/`) dan hreflang saling menunjuk.
+- **Satu domain dengan folder per bahasa** (keputusan owner 3 November 2026,
+  menggantikan domain per negara). Kode dan terjemahan dari 2–3 November
+  dipakai apa adanya; yang berubah hanya cara alamat dipetakan:
+  - `/about/` tetap English; `/ja/about/` dan seterusnya untuk bahasa lain.
+  - Link di halaman bahasa lain ke halaman yang sudah diterjemahkan otomatis
+    diberi awalan (`/about/` → `/ja/about/`, `linkFor` di
+    `src/i18n/config.ts`). Link ke halaman yang belum diterjemahkan tetap ke
+    versi English.
+  - Pemilih bahasa menunjuk halaman yang sama di folder bahasa lain.
+  - Satu sitemap untuk semua bahasa, robots.txt kembali file statis, purge
+    Cloudflare kembali satu zone, dan aturan domain lain di `next.config.ts`
+    dihapus.
 
 ### Daftar perubahan
 
 | Area | Perubahan |
 |---|---|
 | Rute | Semua halaman di `src/app/[lang]/`. Admin punya root layout sendiri. Alamat yang tidak cocok dengan rute apa pun dijawab `src/app/global-not-found.tsx`. |
-| Domain → bahasa | `src/proxy.ts`. Halaman yang belum diterjemahkan dijawab 404 di domain bahasanya. Di localhost/preview, `/ja/…` membuka bahasa itu langsung (`I18N_PREVIEW_LOCALES`). |
+| Alamat → bahasa | `src/proxy.ts`: folder pertama di alamat (`/ja/…`); tanpa folder berarti English. Halaman yang belum diterjemahkan dijawab 404. Bahasa yang belum aktif bisa dibuka di localhost/preview lewat `I18N_PREVIEW_LOCALES`. |
 | Penerjemah | `src/i18n/server.ts` (`getI18n`, `render`) dan `src/i18n/client.tsx` (`useI18n`, `el`). Setiap halaman dan layout `(site)` lewat `render()`, setiap komponen client yang punya teks lewat `el()`. |
-| SEO | `pageMetadata` (title/description diterjemahkan, canonical di domain bahasa, `og:locale`), hreflang dua arah, sitemap dan robots per domain. |
+| SEO | `pageMetadata` (title/description diterjemahkan, canonical dengan awalan bahasa, `og:locale`), hreflang dua arah, satu sitemap untuk semua bahasa. |
 | Tampilan | Font sistem per bahasa dan aturan pemenggalan baris (`src/styles/i18n.css`), tanggal per bahasa (`src/i18n/format.ts`), pemilih bahasa di header (hanya muncul kalau halaman ada di ≥ 2 bahasa aktif). |
 | Booking | `src/data/booking.ts`: LINE/KakaoTalk/WeChat per bahasa, WhatsApp selama belum diisi. Pesan WhatsApp otomatis diterjemahkan dan diberi kode bahasa (`[JA]`). |
 | Blog | Kolom `locale` dan `translation_of` dibuat otomatis saat pertama dipakai. Semua query per bahasa, plus pencarian, menu blog, dan sitemap. |
-| Cache | Purge Cloudflare per zone domain (`CLOUDFLARE_ZONE_ID_JA` dst., juga di workflow deploy). `revalidatePath` memakai alamat `/[lang]/…`. |
+| Cache | Purge Cloudflare tetap satu zone. `revalidatePath` memakai alamat `/[lang]/…`. |
 | Alat | `npm run i18n:missing -- ja` mengumpulkan teks yang belum diterjemahkan; `npm run i18n:status` menampilkan jumlahnya. |
 
 ### Langkah menyalakan satu bahasa (contoh: Jepang)
@@ -327,8 +324,8 @@ English dibuat persis seperti sebelumnya.
    langkah 2 sampai tidak ada yang tersisa.
 4. Daftarkan path halaman yang sudah diterjemahkan di `translatedPaths`
    (`src/i18n/config.ts`), lalu tambahkan `"ja"` ke `activeLocales`.
-5. Pasang domain di Vercel dan Cloudflare, isi `CLOUDFLARE_ZONE_ID_JA`, dan
-   isi akun LINE di `src/data/booking.ts` kalau sudah ada.
+5. Isi akun LINE di `src/data/booking.ts` kalau sudah ada, deploy, lalu
+   kirim ulang sitemap di Search Console.
 
 ### Status bahasa Jepang (2 November 2026)
 
@@ -395,8 +392,8 @@ Sebelum bahasa Jepang dinyalakan:
 - Bahasa yang belum punya artikel tidak menampilkan menu Blog (desktop dan
   mobile).
 - Link di dalam konten ke halaman yang belum tersedia dalam bahasa itu (artikel
-  guide, `/guide/`) diarahkan ke versi English di spabalimoon.com (`linkFor`
-  di `src/i18n/config.ts`), supaya tidak ada yang 404.
+  guide, `/guide/`) diarahkan ke versi English (`linkFor` di
+  `src/i18n/config.ts`), supaya tidak ada yang 404.
 - Titik atau koma yang berdiri sendiri setelah link diganti 。 / 、 / ，
   untuk Jepang dan China.
 - Dari konten English (temuan penerjemah, perlu dicek owner):
@@ -408,7 +405,7 @@ Sebelum bahasa Jepang dinyalakan:
 ### Status Hindi (3 November 2026)
 
 - **Owner memutuskan India memakai bahasa Hindi** (keputusan 1 di bagian 2),
-  di spabalimoon.in.
+  di `/hi/`.
 - **Draf AI untuk 35 halaman yang sama sudah lengkap**, berisi 3.781 teks.
   - Bahasanya Hindi modern sehari-hari dan menyapa pembaca dengan आप.
   - Istilah spa memakai serapan yang lazim di India (मसाज, स्पा, फेशियल,
@@ -425,10 +422,11 @@ Sebelum bahasa Jepang dinyalakan:
 ### Yang belum dikerjakan
 
 - Artikel guide per bahasa (lewat admin, butuh database).
-- Review penutur asli untuk Jepang, Korea, dan China.
+- Review penutur asli untuk Jepang, Korea, China, dan Hindi.
 - Perampingan `ui.json` (poin 2 di atas) berlaku untuk semua bahasa.
-- Keputusan di bagian 2: Hindi atau `en-IN`, `.kr` atau `.co.kr`, kanal chat,
-  dan pendaftaran domain.
+- Keputusan di bagian 2: kanal chat per negara.
+- Data terstruktur (JSON-LD) di halaman bahasa lain masih memakai alamat
+  English (`url`, breadcrumb). Canonical dan hreflang sudah benar.
 - Tampilan QR WeChat untuk China (menunggu akun).
 - Pengecekan tampilan per bahasa (teks panjang Hindi, judul CJK) setelah
   terjemahan ada.

@@ -13,7 +13,7 @@ import { LotusPaths } from "@/components/ui/Lotus";
 import { business } from "@/data/business";
 import { searchIndex } from "@/data/navigation";
 import { useI18n } from "@/i18n/client";
-import { defaultLocale } from "@/i18n/config";
+import { defaultLocale, linkFor } from "@/i18n/config";
 import { useSitePath } from "@/i18n/useSitePath";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -152,7 +152,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
                     onSubmit={(e) => {
                       e.preventDefault();
                       if (results.length > 0) {
-                        router.push(results[0].href);
+                        router.push(linkFor(results[0].href, locale));
                         closeSearch();
                       }
                     }}

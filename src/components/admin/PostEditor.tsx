@@ -82,7 +82,8 @@ const fieldsOfDraft = (saved: Record<string, unknown>): Fields => {
  *
  * Language: an article is English unless set otherwise; one in another
  * language names the English article it translates (`originals`), whose slug
- * it takes, so it sits at the same address on its language's domain.
+ * it takes, so it sits at the same address in its language's folder
+ * (/ja/guide/…/).
  */
 export default function PostEditor({
   initialPost,
@@ -447,7 +448,7 @@ export default function PostEditor({
             )}
             <p className="pe-hint">
               A translation keeps its English article&rsquo;s slug, so the two point at each other for search engines
-              and sit at the same address on each language&rsquo;s domain.
+              and sit at the same address in each language&rsquo;s folder (/guide/&hellip;/, /ja/guide/&hellip;/).
             </p>
           </div>
 

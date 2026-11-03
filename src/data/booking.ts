@@ -3,9 +3,9 @@ import type { Locale } from "@/i18n/config";
 /**
  * BOOKING CHAT PER LANGUAGE (migration/multi-language-plan-2026-11.md §3.7) —
  * the chat app the floating button and the phones' bottom bar open on each
- * language's domain. Guests from Japan mostly use LINE, from Korea
+ * language's pages. Guests from Japan mostly use LINE, from Korea
  * KakaoTalk, from mainland China WeChat (WhatsApp is blocked there); India
- * uses WhatsApp, as spabalimoon.com does.
+ * uses WhatsApp, as the English pages do.
  *
  * `null` = WhatsApp, until the owner opens the account and someone can
  * answer in that language. Then fill in the account's chat link, e.g.

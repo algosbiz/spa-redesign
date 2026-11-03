@@ -21,9 +21,10 @@ export const readBlogMenu = (locale: Locale = defaultLocale) => getBlogMenu(loca
  * before the write): when the save changed the menu (a title, a new or removed
  * article…), every page is rebuilt and Cloudflare's whole cache is dropped.
  *
- * `locale` is the article's language: its domain's copies are the ones
- * dropped. `languages` (getPostLanguages) gives the article's slug in its
- * other languages, whose pages link to it (hreflang) and are dropped too.
+ * `locale` is the article's language: its folder's copies (/ja/guide/…/)
+ * are the ones dropped. `languages` (getPostLanguages) gives the article's
+ * slug in its other languages, whose pages link to it (hreflang) and are
+ * dropped too.
  *
  * In a route handler Next applies revalidatePath just after the response is
  * sent, so a request in those few milliseconds can still get the old page.
@@ -60,19 +61,14 @@ export async function refreshGuidePages({
     console.error("revalidate failed:", e instanceof Error ? e.message : e);
   }
 
-  const others = (Object.entries(languages) as [Locale, string][]).filter(([other]) => other !== locale);
-  const otherUrls = others.map(([other, otherSlug]) => absoluteUrl(`/guide/${otherSlug}/`, other));
-  if (menuChanged) {
-    const purged = await purgeEverything([locale]);
-    return otherUrls.length ? purgeUrls(otherUrls).then((more) => (more.ok ? purged : more)) : purged;
-  }
+  if (menuChanged) return purgeEverything();
 
   const slugs = [...new Set([slug, previousSlug].filter((s): s is string => Boolean(s)))];
+  const others = (Object.entries(languages) as [Locale, string][]).filter(([other]) => other !== locale);
   return purgeUrls([
     absoluteUrl("/guide/", locale),
     ...slugs.map((s) => absoluteUrl(`/guide/${s}/`, locale)),
-    absoluteUrl("/sitemap.xml", locale),
-    ...otherUrls,
-    ...others.map(([other]) => absoluteUrl("/sitemap.xml", other)),
+    absoluteUrl("/sitemap.xml"),
+    ...others.map(([other, otherSlug]) => absoluteUrl(`/guide/${otherSlug}/`, other)),
   ]);
 }

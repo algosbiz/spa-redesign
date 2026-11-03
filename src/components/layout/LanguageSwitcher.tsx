@@ -1,14 +1,16 @@
 "use client";
 
 import { useI18n } from "@/i18n/client";
-import { localeSettings, localesWithPage } from "@/i18n/config";
+import { localePath, localeSettings, localesWithPage } from "@/i18n/config";
 import { useSitePath } from "@/i18n/useSitePath";
 
 /**
- * The languages this page is in, each a link to the same page on its own
- * domain (src/i18n/config.ts); the current one is marked. Nothing while the
- * page exists in one language only, as every page does until a second
- * language goes live. Styles: src/styles/i18n.css.
+ * The languages this page is in, each a link to the same page in its own
+ * folder (/about/, /ja/about/: src/i18n/config.ts); the current one is
+ * marked. Nothing while the page exists in one language only, as every page
+ * does until a second language goes live. Styles: src/styles/i18n.css.
+ * Its links are not passed through el(), which would point the English one
+ * at the page's own language.
  */
 export default function LanguageSwitcher({ className = "" }: { className?: string }) {
   const { t, locale } = useI18n();
@@ -19,7 +21,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
   return (
     <ul className={`lang-switch ${className}`} aria-label={t("Language")}>
       {pageLocales.map((other) => {
-        const { origin, htmlLang, hreflang, nativeName } = localeSettings[other];
+        const { htmlLang, hreflang, nativeName } = localeSettings[other];
         return (
           <li key={other}>
             {other === locale ? (
@@ -27,7 +29,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
                 {nativeName}
               </span>
             ) : (
-              <a href={origin + path} hrefLang={hreflang} lang={htmlLang}>
+              <a href={localePath(path, other)} hrefLang={hreflang} lang={htmlLang}>
                 {nativeName}
               </a>
             )}

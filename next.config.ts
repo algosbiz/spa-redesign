@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 import { business } from "./src/data/business";
 import { liveRedirects } from "./src/data/redirects";
-import { defaultLocale, locales, localeSettings } from "./src/i18n/config";
 
 // Requests on www.spabalimoon.com. Vercel's domain setting used to send www to
 // spabalimoon.com itself (308), before this app saw the request, so an old URL
@@ -9,15 +8,6 @@ import { defaultLocale, locales, localeSettings } from "./src/i18n/config";
 // redirect chain. With www attached to the project without a redirect, the rules
 // below send every www URL straight to its final address on spabalimoon.com.
 const onWww = [{ type: "host" as const, value: "www.spabalimoon.com" }];
-
-// The other languages' domains (src/i18n/config.ts). Their www goes to the
-// domain itself, and spabalimoon.com's old addresses do not apply to them.
-const otherOrigins = locales.filter((locale) => locale !== defaultLocale).map((locale) => localeSettings[locale].origin);
-const hostOf = (origin: string) => new URL(origin).hostname;
-const escapeHost = (host: string) => host.replace(/\./g, "\\.");
-const onOtherDomain = [
-  { type: "host" as const, value: `(?:www\\.)?(?:${otherOrigins.map((o) => escapeHost(hostOf(o))).join("|")})` },
-];
 
 const nextConfig: NextConfig = {
   // The site's root layout is inside src/app/[lang]/, so an address that
@@ -75,18 +65,9 @@ const nextConfig: NextConfig = {
         destination: `${business.url}/:path`,
         statusCode: 301 as const,
       },
-      // The same for the other languages' domains: www → the domain itself.
-      ...otherOrigins.map((origin) => ({
-        source: "/:path(.*)",
-        has: [{ type: "host" as const, value: `www.${hostOf(origin)}` }],
-        destination: `${origin}/:path`,
-        statusCode: 301 as const,
-      })),
-      // Old URL on spabalimoon.com → new URL (and on localhost and previews,
-      // which serve English); not on the other languages' domains.
+      // Old URL on spabalimoon.com → new URL.
       ...liveRedirects.map((redirect) => ({
         source: redirect.from,
-        missing: onOtherDomain,
         destination: redirect.to,
         statusCode: 301 as const,
       })),

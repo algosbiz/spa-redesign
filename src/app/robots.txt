@@ -1,14 +1,4 @@
-import { defaultLocale, localeOfHost } from "@/i18n/config";
-import { absoluteUrl } from "@/lib/seo";
-
-/**
- * /robots.txt — the same rules on every domain (src/i18n/config.ts), each
- * pointing at its own sitemap. Until 2 Nov 2026 a static file; the text is
- * unchanged.
- */
-export const dynamic = "force-dynamic";
-
-const RULES = `# Spa Bali Moon — robots.txt
+# Spa Bali Moon — robots.txt
 # Carried over from the live WordPress/Yoast rules and adapted to the
 # Next.js site: the wp-* paths no longer exist, the query-string rules do
 # the same job here, and the private areas are now /admin and /api
@@ -41,14 +31,5 @@ Disallow: /*?s=
 Disallow: /*?utm_source
 Disallow: /*?utm_medium
 Disallow: /*?utm_campaign
-`;
 
-export function GET(request: Request) {
-  const locale = localeOfHost(request.headers.get("host")) ?? defaultLocale;
-  return new Response(`${RULES}\nSitemap: ${absoluteUrl("/sitemap.xml", locale)}\n`, {
-    headers: {
-      "Content-Type": "text/plain",
-      "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
-    },
-  });
-}
+Sitemap: https://spabalimoon.com/sitemap.xml

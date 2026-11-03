@@ -1,5 +1,5 @@
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
-import { defaultLocale, isActiveLocale, isServedLocale, localeOfHost, localeSettings, servesPage } from "@/i18n/config";
+import { defaultLocale, isLocale, isServedLocale, servesPage } from "@/i18n/config";
 import { fetchPublishedMap, type RedirectMap } from "@/lib/redirects/map";
 
 /**
@@ -13,15 +13,12 @@ import { fetchPublishedMap, type RedirectMap } from "@/lib/redirects/map";
  *    earlier, by next.config.ts and Cloudflare. Both are for spabalimoon.com's
  *    old addresses, so they apply to the English site only.
  *
- * 2. The language (src/i18n/config.ts): the domain decides it, and the page
- *    is served from src/app/[lang]/ — /about/ on spabalimoon.com from
- *    /en/about/ — without the prefix ever showing in the address bar. On a
- *    production domain an address that does carry a live language's prefix
- *    (/en/about/, /ja/about/) is sent to that language's own domain without
- *    it. Elsewhere (localhost, Vercel previews) the prefix opens that
- *    language's page as it is, which is how a language is checked before
- *    its domain exists (I18N_PREVIEW_LOCALES, src/i18n/config.ts); /en/…
- *    goes to the address without the prefix.
+ * 2. The language (src/i18n/config.ts): the first folder of the address. An
+ *    address without one is English, served from src/app/[lang]/ as /en/…
+ *    without the prefix ever showing in the address bar; /en/… itself goes
+ *    to the address without it. /ja/about/ is the Japanese page as it is,
+ *    once Japanese is served (live, or in preview: I18N_PREVIEW_LOCALES) and
+ *    has that page; otherwise it is a 404.
  */
 
 const REFRESH_MS = 30_000;
@@ -52,36 +49,31 @@ async function redirectMap(event: NextFetchEvent): Promise<RedirectMap> {
 
 export async function proxy(request: NextRequest, event: NextFetchEvent) {
   const { pathname, search } = request.nextUrl;
-  const hostLocale = localeOfHost(request.headers.get("host"));
-
-  // An address with a language's prefix: as it is on localhost and previews
-  // (a language in preview included), else to the language's own domain.
   const prefix = pathname.split("/")[1];
-  if (!hostLocale && prefix !== defaultLocale && isServedLocale(prefix)) return NextResponse.next();
-  if (isActiveLocale(prefix)) {
-    const rest = pathname.slice(prefix.length + 1) || "/";
-    const origin = hostLocale ? localeSettings[prefix].origin : request.nextUrl.origin;
-    return NextResponse.redirect(new URL(rest + search, origin), 301);
-  }
-
-  const locale = hostLocale ?? defaultLocale;
-  if (locale === defaultLocale) {
-    const hit = (await redirectMap(event))[pathname];
-    if (hit) {
-      const [destination, status] = hit;
-      const target = new URL(destination, request.nextUrl.origin);
-      // Like next.config redirects: the visitor's ?query goes along (utm tags…).
-      if (!target.search && search) target.search = search;
-      return NextResponse.redirect(target, status === 302 ? 302 : 301);
-    }
-  }
-
   const page = request.nextUrl.clone();
-  // A page not translated into the domain's language is not there (plan
-  // §3.4), nor any page of a language not yet live: its address matches
-  // nothing, so it gets the 404 page.
-  const served = isServedLocale(locale) && servesPage(locale, pathname);
-  page.pathname = served ? `/${locale}${pathname}` : `/${defaultLocale}/_untranslated${pathname}`;
+
+  if (isLocale(prefix)) {
+    const rest = pathname.slice(prefix.length + 1) || "/";
+    // English has no prefix.
+    if (prefix === defaultLocale) return NextResponse.redirect(new URL(rest + search, request.nextUrl.origin), 301);
+    if (isServedLocale(prefix) && servesPage(prefix, rest)) return NextResponse.next();
+    // A page not translated into the language is not there (plan §3.4), nor
+    // any page of a language not served: its address matches nothing, so it
+    // gets the 404 page.
+    page.pathname = `/${defaultLocale}/_untranslated${rest}`;
+    return NextResponse.rewrite(page);
+  }
+
+  const hit = (await redirectMap(event))[pathname];
+  if (hit) {
+    const [destination, status] = hit;
+    const target = new URL(destination, request.nextUrl.origin);
+    // Like next.config redirects: the visitor's ?query goes along (utm tags…).
+    if (!target.search && search) target.search = search;
+    return NextResponse.redirect(target, status === 302 ? 302 : 301);
+  }
+
+  page.pathname = `/${defaultLocale}${pathname}`;
   return NextResponse.rewrite(page);
 }
 

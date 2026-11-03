@@ -1,4 +1,4 @@
-import { defaultLocale, isServedLocale, localeOfHost } from "@/i18n/config";
+import { defaultLocale, isServedLocale } from "@/i18n/config";
 import { getMenuPosts, searchPublishedPosts } from "@/lib/blog/posts";
 
 /**
@@ -7,13 +7,13 @@ import { getMenuPosts, searchPublishedPosts } from "@/lib/blog/posts";
  *   ?q=…     up to 10 posts whose title or excerpt contains the query
  *            (case-insensitive, at least 2 characters)
  *   anything else: an empty list
- * Among the articles of the domain's language (src/i18n/config.ts), or of
- * ?locale=… on localhost and previews.
+ * Among the English articles, or those of ?locale=… (ja, ko…: the language
+ * of the page asking, src/i18n/config.ts).
  */
 export async function GET(request: Request) {
   const params = new URL(request.url).searchParams;
   const asked = params.get("locale") ?? "";
-  const locale = localeOfHost(request.headers.get("host")) ?? (isServedLocale(asked) ? asked : defaultLocale);
+  const locale = isServedLocale(asked) ? asked : defaultLocale;
   if (params.get("menu") === "1") {
     try {
       return Response.json({ posts: await getMenuPosts(locale) });
