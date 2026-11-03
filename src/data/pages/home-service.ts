@@ -176,7 +176,7 @@ export const homeServicePage = {
     coupleMassageGroup: {
       name: "Couple Massage",
       description: "Designed for two to relax together while easing the body and sharing a calm moment.",
-      image: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage", width: 630, height: 580 },
+      image: { src: "/images/listmenu/couplemassage.webp", alt: "Couple Massage", width: 630, height: 580 },
       itemIds: [
         "couple-balinese-massage",
         "couple-traditional-massage",

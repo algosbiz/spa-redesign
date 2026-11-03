@@ -157,7 +157,7 @@ export const catalog: CatalogItem[] = [
     name: "Cellulite Massage",
     category: "massage",
     href: "/seminyak/anti-cellulite-massage/",
-    image: "/images/treatments/cards/cellulitemassage-warm.webp",
+    image: "/images/listmenu/cellulitemassage.webp",
     desc: "A firm, targeted full-body massage that leaves the skin feeling smooth.",
     options: [
       { label: "1 Hour", price: "IDR 350.000" },
@@ -184,7 +184,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplebalinesemassage.webp",
+    image: "/images/listmenu/couplemassage.webp",
     desc: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 319.000" },
@@ -389,7 +389,7 @@ export const catalog: CatalogItem[] = [
     name: "Hair Braiding",
     category: "beauty",
     href: "/seminyak/hair-braiding/",
-    image: "/images/beauty/hair-braiding/hairbraiding-3.webp",
+    image: "/images/listmenu/hairbraiding.webp",
     desc: "Braids for the beach, events or everyday wear, priced by hair length.",
     options: [
       { label: "Short Hair", price: "IDR 499.000" },
@@ -402,7 +402,7 @@ export const catalog: CatalogItem[] = [
     name: "Hair Cream Bath",
     category: "beauty",
     href: "/seminyak/creambath/",
-    image: "/images/treatments/cards/creambath-warm.webp",
+    image: "/images/listmenu/creambath.webp",
     desc: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
     options: [
       { label: "Ginseng", price: "IDR 165.000" },
@@ -457,7 +457,7 @@ export const catalog: CatalogItem[] = [
     name: "Lymphatic Massage",
     category: "massage",
     href: "/seminyak/lymphatic-drainage-massage/",
-    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
+    image: "/images/listmenu/lymphaticmassage.webp",
     desc: "A gentle full-body massage with light, rhythmic strokes that leaves the body feeling lighter.",
     options: [
       { label: "1 Hour", price: "IDR 300.000" },
@@ -470,7 +470,7 @@ export const catalog: CatalogItem[] = [
     name: "Manicure Pedicure",
     category: "beauty",
     href: "/seminyak/manicure-pedicure/",
-    image: "/images/treatments/cards/manicurepedicure-warm.webp",
+    image: "/images/listmenu/manicurepedicure.webp",
     desc: "A complete hand and foot treatment finished neatly with polish.",
     options: [
       { label: "Manicure & Pedicure", price: "IDR 238.000" },
@@ -501,7 +501,7 @@ export const catalog: CatalogItem[] = [
     name: "Shiatsu Massage",
     category: "massage",
     href: "/seminyak/shiatsu-massage/",
-    image: "/images/treatments/cards/shiatsumassage-warm.webp",
+    image: "/images/listmenu/shiatsumassage.webp",
     desc: "An oil-free full-body massage using Japanese pressure-point techniques to ease tension.",
     options: [
       { label: "30 Minutes", price: "IDR 119.000" },
@@ -526,7 +526,7 @@ export const catalog: CatalogItem[] = [
     name: "Thai Massage",
     category: "massage",
     href: "/seminyak/thai-massage/",
-    image: "/images/treatments/cards/thaimassage-warm.webp",
+    image: "/images/listmenu/thaimassage.webp",
     desc: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
     options: [
       { label: "30 Minutes", price: "IDR 133.000" },
@@ -553,7 +553,7 @@ export const catalog: CatalogItem[] = [
     name: "Virgin Cold-Press Coconut Oil Massage",
     category: "massage",
     href: "/seminyak/coconut-oil-massage/",
-    image: "/images/treatments/cards/coconutoilmassage-warm.webp",
+    image: "/images/listmenu/coconutoilmassage.webp",
     desc: "A nourishing full-body massage using pure coconut oil to promote deep relaxation.",
     options: [
       { label: "1 Hour", price: "IDR 300.000" },
