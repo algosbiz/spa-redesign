@@ -75,20 +75,23 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
           Reservation
         </Link>
       </li>
-      <li className={`jsx-nav blog-menu-item${inBlog ? " is-active" : ""}`}>
-        <Link prefetch={false} href="/guide/">
-          Blog <i className="jsx-nav fa-solid fa-angle-down" />
-        </Link>
-        <ul className="jsx-nav sub-menu blog-dropdown-menu">
-          {posts.map((post) => (
-            <li key={post.href} className="jsx-nav">
-              <Link prefetch={false} href={post.href}>
-                {post.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </li>
+      {/* A language without articles of its own yet has no Blog (src/lib/blog/posts.ts). */}
+      {posts.length > 0 && (
+        <li className={`jsx-nav blog-menu-item${inBlog ? " is-active" : ""}`}>
+          <Link prefetch={false} href="/guide/">
+            Blog <i className="jsx-nav fa-solid fa-angle-down" />
+          </Link>
+          <ul className="jsx-nav sub-menu blog-dropdown-menu">
+            {posts.map((post) => (
+              <li key={post.href} className="jsx-nav">
+                <Link prefetch={false} href={post.href}>
+                  {post.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+      )}
       <li className="jsx-nav">
         <Link prefetch={false} href="/contact/">
           Contact

@@ -380,10 +380,35 @@ Sebelum bahasa Jepang dinyalakan:
 - Dari konten English (temuan penerjemah): halaman About menampilkan angka besar
   "23" treatment, padahal teksnya menyebut 25.
 
+### Status semua halaman (3 November 2026)
+
+- **Jepang, Korea, dan China kini punya draf untuk 35 dari 36 halaman**: 17
+  halaman inti ditambah 18 halaman sisa, yaitu 15 treatment, Massage Kuta,
+  Privacy Policy, dan Terms & Conditions. Setiap bahasa berisi 3.778 teks unik.
+  `/guide/` dan artikelnya belum diterjemahkan. Artikel ditulis per bahasa
+  lewat admin, dan sebelum ada artikel, halaman `/guide/` akan kosong.
+- Hasil pengecekan di preview, untuk ketiga bahasa:
+  - 0 teks tersisa di 35 halaman.
+  - Struktur halaman sama dengan English, kecuali menu Blog.
+  - Tidak ada link relatif ke halaman yang tidak tersedia dalam bahasa itu.
+- Bahasa yang belum punya artikel tidak menampilkan menu Blog (desktop dan
+  mobile).
+- Link di dalam konten ke halaman yang belum tersedia dalam bahasa itu (artikel
+  guide, `/guide/`) diarahkan ke versi English di spabalimoon.com (`linkFor`
+  di `src/i18n/config.ts`), supaya tidak ada yang 404.
+- Titik atau koma yang berdiri sendiri setelah link diganti 。 / 、 / ，
+  untuk Jepang dan China.
+- Dari konten English (temuan penerjemah, perlu dicek owner):
+  - Rentang harga paket Thai tertulis IDR 425.000–570.000 di satu tempat dan
+    IDR 445.000–609.000 di tempat lain.
+  - Sunburn treatment tertulis IDR 250.000 di satu tempat dan "1 Hour Aloe
+    Vera · IDR 195.000" di tempat lain.
+
 ### Yang belum dikerjakan
 
 - India: keputusan Hindi atau English untuk India, lalu terjemahannya.
-- Sisa halaman Jepang, Korea, dan China, serta review penutur asli untuk ketiganya.
+- Artikel guide per bahasa (lewat admin, butuh database).
+- Review penutur asli untuk Jepang, Korea, dan China.
 - Perampingan `ui.json` (poin 2 di atas) berlaku untuk semua bahasa.
 - Keputusan di bagian 2: Hindi atau `en-IN`, `.kr` atau `.co.kr`, kanal chat,
   dan pendaftaran domain.

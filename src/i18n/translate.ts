@@ -1,5 +1,6 @@
 import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import { translateWhatsAppUrl } from "@/lib/whatsapp";
+import { isLocale, linkFor } from "./config";
 
 /**
  * TRANSLATION MEMORY — how the site's text reaches another language.
@@ -156,7 +157,10 @@ export type Translator = {
 };
 
 /** The translation of one text, keeping its surrounding spaces; English when there is none. */
-export function translateText(value: string, { messages, onMissing, wordSpaces = true }: Translator): string {
+export function translateText(value: string, { locale, messages, onMissing, wordSpaces = true }: Translator): string {
+  // A full stop or comma written on its own after a link ("<a>…</a>.") is the
+  // language's own in Japanese and Chinese.
+  if (!wordSpaces && /^\s*[.,]\s*$/.test(value)) return value.includes(".") ? "。" : locale === "zh" ? "，" : "、";
   if (!isText(value)) return value;
   const core = value.trim();
   const translated = messages[core];
@@ -200,7 +204,9 @@ export function translateValue<T>(value: T, translator: Translator): T {
  */
 export function translateEntry(key: string, value: unknown, translator: Translator): unknown {
   if (key === "href" && typeof value === "string") {
-    return translateWhatsAppUrl(value, (text, values) => (values ? translateTemplate(text, values, translator) : translateText(text, translator)), translator.locale);
+    // A page the language does not have yet is linked in English (linkFor).
+    const href = isLocale(translator.locale) ? linkFor(value, translator.locale) : value;
+    return translateWhatsAppUrl(href, (text, values) => (values ? translateTemplate(text, values, translator) : translateText(text, translator)), translator.locale);
   }
   return isSkippedKey(key) || isKeptInData(value) ? value : translateValue(value, translator);
 }

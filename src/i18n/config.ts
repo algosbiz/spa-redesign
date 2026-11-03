@@ -116,16 +116,41 @@ const corePages = [
 ] as const;
 
 /**
+ * Every other page but /guide/, whose list of articles stays empty until a
+ * language has articles of its own (written in /admin/).
+ */
+const otherPages = [
+  "/seminyak/anti-cellulite-massage/",
+  "/seminyak/coconut-oil-massage/",
+  "/seminyak/cupping-therapy/",
+  "/seminyak/ear-candle/",
+  "/seminyak/foot-massage/",
+  "/seminyak/hair-braiding/",
+  "/seminyak/head-massage/",
+  "/seminyak/lymphatic-drainage-massage/",
+  "/seminyak/manicure-pedicure/",
+  "/seminyak/nail-spa/",
+  "/seminyak/shiatsu-massage/",
+  "/seminyak/sport-massage/",
+  "/seminyak/sunburn-massage/",
+  "/seminyak/thai-massage/",
+  "/seminyak/waxing-salon/",
+  "/massage-kuta/",
+  "/privacy-policy/",
+  "/terms-and-conditions/",
+] as const;
+
+/**
  * The pages each language other than English has, by path. English has every
  * page; another language lists only its translated ones (plan §3.4), and
  * every page points (hreflang) only at the languages that have it. Draft
- * translations (ja 2 Nov 2026, ko and zh 3 Nov 2026), to be checked by a
- * native speaker before each language goes live.
+ * translations (ja: core pages 2 Nov 2026; ko, zh and the other pages 3 Nov
+ * 2026), to be checked by a native speaker before each language goes live.
  */
 const translatedPaths: Partial<Record<Locale, readonly string[]>> = {
-  ja: corePages,
-  ko: corePages,
-  zh: corePages,
+  ja: [...corePages, ...otherPages],
+  ko: [...corePages, ...otherPages],
+  zh: [...corePages, ...otherPages],
 };
 
 /** The live languages that have the page at `path` ("/about/"), English first. */
@@ -141,4 +166,17 @@ export function localesWithPage(path: string): Locale[] {
 export function servesPage(locale: Locale, path: string): boolean {
   if (locale === defaultLocale || translatedPaths[locale]?.includes(path)) return true;
   return /^\/guide\/[^/]+\/$/.test(path);
+}
+
+/**
+ * Where a link to `href` goes on a page in `locale`: as written when the
+ * language has that page, else to the English page on spabalimoon.com (a
+ * guide article, /guide/, a page not translated yet), so no link lands on a
+ * 404. A guide article counts as translated once its path is listed above.
+ */
+export function linkFor(href: string, locale: Locale): string {
+  if (locale === defaultLocale || !href.startsWith("/") || href.startsWith("//")) return href;
+  const path = href.split(/[?#]/)[0];
+  if (translatedPaths[locale]?.includes(path)) return href;
+  return localeSettings[defaultLocale].origin + href;
 }

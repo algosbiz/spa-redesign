@@ -169,7 +169,8 @@ export default function MobileMenu({
       <div inert={panel !== null} className={`mnav__panel mnav__panel--main${panel ? " is-behind" : ""}`}>
         <nav aria-label="Main">
           <ul className="mnav__list">
-            {mainNav.map((it, i) => {
+            {/* A language without articles of its own yet has no Blog (src/lib/blog/posts.ts). */}
+            {mainNav.filter((it) => it.dropdown !== "blog" || data.posts.length > 0).map((it, i) => {
               const inner = (
                 <>
                   <span className="mnav__icon">
@@ -234,12 +235,13 @@ export default function MobileMenu({
         )),
         { label: "See the full price list", href: "/seminyak/" },
       )}
-      {subPanel(
-        "blog",
-        "Blog",
-        <ul className="mnav__entries">{rows(data.posts, "blog")}</ul>,
-        { label: "All articles", href: "/guide/" },
-      )}
+      {data.posts.length > 0 &&
+        subPanel(
+          "blog",
+          "Blog",
+          <ul className="mnav__entries">{rows(data.posts, "blog")}</ul>,
+          { label: "All articles", href: "/guide/" },
+        )}
     </>
   );
 }
