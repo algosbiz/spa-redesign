@@ -329,7 +329,7 @@
             "image": "/images/services/creambath/creambath-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Cream Bath Seminyak: FAQs",
+            "title": "About Cream Bath in Seminyak",
             "items": [
               {
                 "question": "How is a cream bath different from a hair mask?",
@@ -403,7 +403,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Hair, Skin and Body Treatments",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Cream Bath",
+            "text": "Book one of these with a cream bath and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

@@ -49,8 +49,8 @@ export const home = {
   },
 
   steps: {
-    subTitle: "Book via WhatsApp",
-    title: "Book a Spa or Massage in Seminyak in 3 Steps",
+    subTitle: "How to Book",
+    title: "Book a Massage in Seminyak in Three Steps",
     items: [
       {
         title: "Choose a Treatment",
@@ -103,8 +103,8 @@ export const home = {
   },
 
   packages: {
-    subTitle: "Spa Packages",
-    title: "Day Spa and Massage in Seminyak",
+    subTitle: "Day Spa & Massage",
+    title: "Spa Packages in Seminyak",
     text: "Our newest package pairs a lymphatic massage with the Gold Facial; the others pair a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial. Prices are per person.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
@@ -158,8 +158,8 @@ export const home = {
   },
 
   services: {
-    subTitle: "Why It Matters",
-    title: "What Makes Spa Bali Moon Different",
+    subTitle: "Why Guests Return",
+    title: "What Makes Spa\u00a0Bali\u00a0Moon Different",
     items: [
       {
         title: "Experienced Therapists",

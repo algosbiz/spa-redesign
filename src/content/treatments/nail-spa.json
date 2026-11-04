@@ -247,7 +247,7 @@
             "image": "/images/services/nailart/nailart-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Gel Nails & Nail Art Seminyak: FAQs",
+            "title": "About Gel Nails & Nail Art in Seminyak",
             "items": [
               {
                 "question": "Is gel nail art better than regular nail polish?",
@@ -305,7 +305,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Book More Than Gel Nails",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with Gel Nails",
+            "text": "Book one of these with gel nails and nail art and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/manicure-pedicure/",
@@ -328,7 +330,7 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/nailart/nailart-11.webp",
-            "title": "Gel Nails and Nail Art in Seminyak",
+            "title": "Gel Nails at Our Seminyak Spa or Your Villa",
             "text": "Personalised nail designs created with professional care and long-lasting gel products, for a beach holiday, a dinner, a wedding, or simply because.",
             "closingText": "Leave with polished nails that feel as beautiful as they look."
           }

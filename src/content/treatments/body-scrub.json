@@ -330,7 +330,7 @@
             "image": "/images/services/bodyscrub/bodyscrub-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Body Scrub Seminyak: FAQs",
+            "title": "About Body Scrubs in Seminyak",
             "items": [
               {
                 "question": "What happens during a body scrub?",
@@ -400,7 +400,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Skin and Body Treatments",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Body Scrub",
+            "text": "Book one of these with a body scrub and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

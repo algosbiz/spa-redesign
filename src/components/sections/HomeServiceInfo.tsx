@@ -103,7 +103,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
               gap: "10px",
             }}
           >
-            {brandMark}Treat Yourself to a Balinese Spa Experience Right Where You Are
+            {brandMark}The Spa Comes to You
           </div>
           <h2
             className="title"

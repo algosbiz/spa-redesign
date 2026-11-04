@@ -254,7 +254,7 @@
             "image": "/images/services/sportsmassage/sportsmassage-9.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Sports Massage Seminyak: FAQs",
+            "title": "About Sports Massage in Seminyak",
             "items": [
               {
                 "question": "Is a sports massage only for professional athletes?",
@@ -312,7 +312,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Take Your Recovery Further",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Sports Massage",
+            "text": "Book one of these with a sports massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

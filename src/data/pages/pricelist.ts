@@ -62,7 +62,7 @@ export const pricelistPage = {
   menu: {
     // One heading instead of two in a row (owner, 24 Oct: "seems a bit awkward"):
     // the centred "Choose Your Treatment" and "Our Treatments" beside the photo.
-    contentSubTitle: "Start With What You Need",
+    contentSubTitle: "Our Treatments",
     contentTitle: "Choose Your Treatment",
     contentText: "Massage and muscle care, facials, body scrubs and beauty treatments, all in one place in Seminyak. Choose a familiar treatment or try something new during your Bali stay, and ask our team on WhatsApp if you would like help choosing.",
     firstStat: ["In Seminyak", "Since 2009"] as [string, string],
@@ -73,9 +73,9 @@ export const pricelistPage = {
 
   priceList: {
     subTitle: "Price List",
-    title: "How Much Does a Massage Cost in Seminyak?",
+    title: "Massage & Spa Prices in Seminyak",
     // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
-    text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist in the Seminyak area.",
+    text: "Every treatment price at Spa Bali Moon, per person in Indonesian rupiah. At your villa or hotel, home service adds IDR 75.000 per therapist in the Seminyak area.",
     note: "Home service available — extra IDR 75.000 per therapist in the Seminyak area.",
     tabs: [
     {
@@ -897,7 +897,7 @@ export const pricelistPage = {
   },
 
   packagesIntro: {
-    subTitle: "All Spa Packages",
+    subTitle: "Two Treatments, One Visit",
     title: "Spa Packages in Seminyak",
     text: "Our packages combine a massage with a facial, cream bath, body scrub or nail care in one visit. Prices are per person; couple packages are for two. Selected packages can also be booked as home service.",
     note: "Browse the packages below to find a combination that fits your plans."
@@ -1495,7 +1495,7 @@ export const pricelistPage = {
 
   faq: {
     subTitle: "Frequently Asked Questions",
-    title: "Massage Prices in Seminyak: FAQs",
+    title: "About Massage Prices in Seminyak",
     imageTitle: "Book Your Massage in Seminyak",
     image: "/images/pricelist/pricelist-4.webp",
     items: [

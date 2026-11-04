@@ -251,7 +251,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
                 "rightShapeSrc": "/images/shape/about-right-shape.png",
                 "subTitle": "",
-                "title": "Popular with Travellers and Office Workers",
+                "title": "Relaxing and Muscle-Focused in One",
                 "text": "Balinese massage combines relaxation with muscle-focused work in one treatment, so it suits travellers, office workers and active guests alike. Why guests choose it:",
                 "featuresLeft": [
                   "Eases muscle tension",
@@ -379,7 +379,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-13.webp",
                 "imageTitle": "",
                 "subTitle": "Frequently Asked Questions",
-                "title": "Balinese Massage Seminyak: FAQs",
+                "title": "About Balinese Massage in Seminyak",
                 "items": [
                   {
                     "question": "What is a Balinese massage?",
@@ -448,7 +448,9 @@
             {
               "type": "ServiceSlider",
               "props": {
+                "subTitle": "Good Together",
                 "title": "Treatments to Pair with a Balinese Massage",
+                "text": "Book one of these with a Balinese massage and enjoy both in one visit.",
                 "leftShapeSrc": "/images/shape/service-shape-left.png",
                 "rightShapeSrc": "/images/shape/service-shape-right.png",
                 "embedded": true,

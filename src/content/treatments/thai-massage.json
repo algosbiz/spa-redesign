@@ -299,7 +299,7 @@
             "image": "/images/services/thaimassage/thaimassage-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Thai Massage Seminyak: FAQs",
+            "title": "About Thai Massage in Seminyak",
             "items": [
               {
                 "question": "What is traditional Thai massage?",
@@ -369,7 +369,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Book More Than a Thai Massage",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Thai Massage",
+            "text": "Book one of these with a Thai massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",
@@ -392,7 +394,7 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/thaimassage/thaimassage-12.webp",
-            "title": "Ease Stiffness with a Traditional Thai Massage at Spa Bali Moon",
+            "title": "Ease Stiffness with a Thai Massage",
             "text": "Traditional Thai massage combines rhythmic pressure with assisted stretching to ease stiffness and bring movement back, welcome after long flights or active days. At our spa, or at your villa.",
             "closingText": "Reserve your Thai massage and move through Bali feeling lighter."
           }
