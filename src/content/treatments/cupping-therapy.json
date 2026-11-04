@@ -188,7 +188,7 @@
             "image": "/images/treatments/cupping-therapy/cuppingtherapy-8.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Cupping Therapy Seminyak: FAQs",
+            "title": "About Cupping Therapy in Seminyak",
             "items": [
               {
                 "question": "What is cupping therapy?",
@@ -246,7 +246,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with Cupping Therapy",
+            "text": "Book one of these with cupping therapy and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

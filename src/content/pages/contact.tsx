@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="page-wrapper lh p-contact">
       <PageBanner
-        subTitle="Ready When You Are"
+        subTitle="Contact Us"
         titleSpan="Book Your Spa"
         title="Experience in Seminyak"
         // Under the H1 (copy rewrite, 15 Oct).

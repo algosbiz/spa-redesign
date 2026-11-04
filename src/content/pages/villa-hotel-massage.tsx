@@ -102,7 +102,7 @@ export default function VillaHotelMassagePage() {
         leftShapeSrc="/images/shape/leaf/8a.png"
         rightShapeSrc={null}
         removeBottomPadding
-        subTitle="Your Way to Relax"
+        subTitle="How It Works"
         title={<>What Is an In-Room Massage?</>}
         text="An in-room massage is a spa treatment at your hotel, villa or private accommodation. Our therapist comes to you with fresh linen, oils and everything the treatment needs, so you don't travel across Seminyak for an appointment."
         feature1Title="No Travel Required"
@@ -124,7 +124,7 @@ export default function VillaHotelMassagePage() {
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/13a.png"
         rightShapeSrc="/images/shape/leaf/1a-v2.png"
-        subTitle="Stay In"
+        subTitle="No Travel Needed"
         title={<>The Spa Comes to Your Room</>}
         badgeTopText="Arrives in"
         badgeBottomText="Usually 30–60 min"
@@ -149,7 +149,7 @@ export default function VillaHotelMassagePage() {
         subTitle="Treatments for Your Stay "
         badgeTopText="Popular in-room"
         badgeBottomText="Massage, scrub & facial"
-        title={<>Treatments That Work Well in Your Hotel or Villa</>}
+        title={<>What to Book at Your Hotel or Villa</>}
         text="The right treatment depends on how you want to feel after your session. A Balinese Massage offers a traditional full-body experience, Sports Massage can help ease tired muscles after physical activity, while body scrubs, facials, cream baths, and beauty treatments allow you to create a more complete in-room spa experience."
         featuresLeft={[
           "Balinese Massage for traditional full-body relaxation",
@@ -197,7 +197,7 @@ export default function VillaHotelMassagePage() {
           largeTopPadding
           imageTitle="Relax in Your Room"
           subTitle="Frequently Asked Questions"
-          title={<>In-Villa Massage Seminyak: FAQs</>}
+          title={<>About In-Villa Massage in Seminyak</>}
           items={FAQ}
           image="/images/services/massagehotelvilla/massagehotelvilla-7.webp"
         />

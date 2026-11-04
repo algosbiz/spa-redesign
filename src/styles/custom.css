@@ -635,7 +635,7 @@
     font-size: 19px;
   }
 }
-/* FAQ headings as written ("Massage Prices in Seminyak: FAQs"), not with
+/* FAQ headings as written ("About Massage Prices in Seminyak"), not with
    the theme's capital on every word ("… In Seminyak", owner, 22 Oct). */
 .faq-section .section-header .title {
   text-transform: none;

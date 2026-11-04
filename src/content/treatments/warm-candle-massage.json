@@ -244,7 +244,7 @@
             "image": "/images/services/warmcandlemassage/warmcandlemassage-14.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Warm Candle Massage Seminyak: FAQs",
+            "title": "About Warm Candle Massage in Seminyak",
             "items": [
               {
                 "question": "What is a warm candle massage?",
@@ -306,7 +306,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with a Warm Candle Massage",
+            "text": "Book one of these with a warm candle massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

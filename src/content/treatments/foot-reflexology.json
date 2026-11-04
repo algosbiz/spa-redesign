@@ -242,7 +242,7 @@
             "image": "/images/services/footreflexology/footreflexology-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Foot Reflexology Seminyak: FAQs",
+            "title": "About Foot Reflexology in Seminyak",
             "items": [
               {
                 "question": "Is foot reflexology the same as a foot massage?",
@@ -292,7 +292,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with Foot Reflexology",
+            "text": "Book one of these with foot reflexology and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/lymphatic-drainage-massage/",

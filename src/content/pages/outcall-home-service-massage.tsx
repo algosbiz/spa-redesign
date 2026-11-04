@@ -147,7 +147,7 @@ export default function OutcallPage() {
       <div className="outcall-page">
         {/* S01 · Hero */}
         <PageBanner
-          subTitle="Home service from our Seminyak spa"
+          subTitle="Home Service From Our Seminyak Spa"
           titleSpan="Outcall & Home Service Massage"
           title="in Seminyak, Bali"
           text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring fresh linen, oils and everything your treatment needs. Home service fee: IDR 75.000 per therapist in the Seminyak area. Open daily, 9am to 11pm."
@@ -181,7 +181,7 @@ export default function OutcallPage() {
         {/* S03 · Outcall Balinese Massage from Our Seminyak Spa */}
         <div className="outcall-intro-panel">
         <AboutIntro
-          subTitle="Spa Bali Moon in Seminyak, Bali"
+          subTitle="Balinese Massage at Home"
           title={<>Outcall Balinese Massage from Our Seminyak Spa</>}
           text="Get an authentic Balinese massage without leaving your villa. Our therapists come from our Seminyak spa with everything needed for a quiet, well-prepared session that fits around your day in Bali. Choose a single treatment or a package, and we'll tailor the pressure and focus to you."
           feature1Title="Easy Booking via WhatsApp"
@@ -917,7 +917,7 @@ export default function OutcallPage() {
         <div className="outcall-closing-panel pb-100">
           <FaqSection
             subTitle="Frequently Asked Questions"
-            title={<>Outcall &amp; Home Service Massage FAQs</>}
+            title={<>About Outcall &amp; Home Service Massage</>}
             items={FAQ}
             showImage={false}
             columns={2}

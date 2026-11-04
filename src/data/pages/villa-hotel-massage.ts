@@ -20,7 +20,7 @@ export const villaHotelPage: LandingPage = {
   sections: [
     {
       type: "intro",
-      eyebrow: "Your Way to Relax",
+      eyebrow: "How It Works",
       heading: "What Is an In-Room Massage?",
       paragraphs: [
         "An in-room massage brings the spa experience directly to your hotel, villa, or private accommodation. Instead of travelling across Seminyak for an appointment, our experienced therapists come to you with professional massage and spa treatments, helping you relax and enjoy your treatment in a space where you already feel comfortable.",
@@ -62,7 +62,7 @@ export const villaHotelPage: LandingPage = {
     { type: "testimonials" },
     {
       type: "list",
-      eyebrow: "Stay In",
+      eyebrow: "No Travel Needed",
       heading: "The Spa Comes to Your Room",
       paragraphs: [
         "A massage at your accommodation gives you more time to relax and less time spent travelling between appointments. It is a convenient choice after a long flight, a full day exploring Bali, or simply when you would rather enjoy professional spa care in the privacy of your own space.",
@@ -82,7 +82,7 @@ export const villaHotelPage: LandingPage = {
     {
       type: "list",
       eyebrow: "Treatments for Your Stay",
-      heading: "Treatments That Work Well in Your Hotel or Villa",
+      heading: "What to Book at Your Hotel or Villa",
       paragraphs: [
         "The right treatment depends on how you want to feel after your session. A Balinese Massage offers a traditional full-body experience, Sport Massage can help ease tired muscles after physical activity, while body scrubs, facials, cream baths, and beauty treatments allow you to create a more complete in-room spa experience.",
       ],

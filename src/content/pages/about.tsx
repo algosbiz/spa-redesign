@@ -111,7 +111,7 @@ export default function AboutPage() {
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/3a.png"
         rightShapeSrc={null}
-        subTitle="Our Therapists"
+        subTitle="Who Treats You"
         title={<>Our Therapists</>}
         badgeTopText="In Seminyak"
         badgeBottomText="Since 2009"
@@ -182,7 +182,7 @@ export default function AboutPage() {
           largeTopPadding
           imageTitle=""
           subTitle="Frequently Asked Questions"
-          title={<>About Spa Bali Moon: FAQs</>}
+          title={<>Before You Visit Our Seminyak Spa</>}
           items={FAQ}
           image="/images/services/dayspaseminyak/dayspa-7.webp"
         />

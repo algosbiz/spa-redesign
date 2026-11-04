@@ -401,7 +401,7 @@
             "image": "/images/services/couplemassage/couplemassage-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Couples Massage Bali Seminyak: FAQs",
+            "title": "About Couples Massage in Seminyak",
             "items": [
               {
                 "question": "How much is a couples massage in Seminyak?",
@@ -467,7 +467,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "More Spa Treatments",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Couples Massage",
+            "text": "Book one of these with a couples massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

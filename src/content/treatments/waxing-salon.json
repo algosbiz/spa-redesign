@@ -267,7 +267,7 @@
             "image": "/images/services/waxing/waxing-14.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Waxing Seminyak: FAQs",
+            "title": "About Waxing in Seminyak",
             "items": [
               {
                 "question": "How long do waxing results last?",
@@ -329,7 +329,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Book More Than Waxing",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with Waxing",
+            "text": "Book one of these with waxing and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/manicure-pedicure/",
@@ -352,7 +354,7 @@
           "props": {
             "standardSpacing": true,
             "backgroundImage": "/images/services/waxing/waxing-15.webp",
-            "title": "Waxing at Spa Bali Moon, Seminyak",
+            "title": "Waxing at Our Seminyak Spa or Your Villa",
             "text": "Careful technique, quality products, and personal service keep your skin smooth and refreshed, for a beach holiday, a special occasion, or your regular routine. At our spa, or at your villa or hotel.",
             "closingText": "Book your wax at our spa or at your villa."
           }

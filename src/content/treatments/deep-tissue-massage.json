@@ -243,7 +243,7 @@
             "image": "/images/services/deeptissuemassage/deeptissuemassage-9.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Deep Tissue Massage Seminyak: FAQs",
+            "title": "About Deep Tissue Massage in Seminyak",
             "items": [
               {
                 "question": "Does a deep tissue massage hurt?",
@@ -309,7 +309,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with a Deep Tissue Massage",
+            "text": "Book one of these with a deep tissue massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

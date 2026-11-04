@@ -182,7 +182,7 @@ export function HomeServicePrices() {
             Book on WhatsApp
           </Button>
           {/* The second action is a row button, not a second pill, so the two stand apart (owner, 22 Oct). */}
-          <RowButton href="#price-list" icon="book" label="See the full price list" note="Every outcall treatment and duration" />
+          <RowButton href="#price-list" icon="book" label="See the Full Price List" note="Every outcall treatment and duration" />
         </div>
       </div>
     </section>
@@ -438,7 +438,7 @@ export function HomeVsSpa() {
         {/* The fee and travel time by area moved up into S06 (owner, 22 Oct). */}
         <div className="oc-actions">
           <Button href={whatsappChatUrl} filled whatsapp>
-            Book home service
+            Book Home Service
           </Button>
           {/* Directions to the spa rather than the day spa page, which is not finished yet (owner, 22 Oct). */}
           <RowButton

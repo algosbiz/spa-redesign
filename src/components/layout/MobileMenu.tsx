@@ -230,13 +230,13 @@ export default function MobileMenu({
             <ul className="mnav__entries">{rows(g.items, "treatments")}</ul>
           </section>
         )),
-        { label: "See the full price list", href: "/seminyak/" },
+        { label: "See the Full Price List", href: "/seminyak/" },
       )}
       {subPanel(
         "blog",
         "Blog",
         <ul className="mnav__entries">{rows(data.posts, "blog")}</ul>,
-        { label: "All articles", href: "/guide/" },
+        { label: "All Articles", href: "/guide/" },
       )}
     </>
   );

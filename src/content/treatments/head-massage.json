@@ -78,7 +78,7 @@
               "/images/services/headmassage/headmassage-12.webp"
             ],
             "subTitle": "",
-            "title": "Our Duration Options",
+            "title": "Head Massage Sessions & Prices",
             "text": "Our head massage comes in 30 minutes, 1 hour, 1.5 hours or 2 hours, adjusted to the pressure you like and the areas that need extra attention. The 30-minute head massage is also part of one of our packages, with a 1.5-hour hot stone massage and a 30-minute body scrub.",
             "packages": [
               {
@@ -253,7 +253,7 @@
             "image": "/images/services/headmassage/headmassage-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Head Massage Seminyak: FAQs",
+            "title": "About Head Massage in Seminyak",
             "items": [
               {
                 "question": "Can a head massage help with stress?",
@@ -315,7 +315,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Relax From Head to Toe",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Head Massage",
+            "text": "Book one of these with a head massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

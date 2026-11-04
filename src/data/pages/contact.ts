@@ -11,7 +11,7 @@ export const contactPage = {
     description: "Contact our professional and well-trained therapists at Spa Bali Moon in Seminyak for quality spa treatments and home massage services.",
   },
   hero: {
-    eyebrow: "Ready When You Are",
+    eyebrow: "Contact Us",
     title: "Book Your Spa Experience in Seminyak",
     image: { src: "/images/gallery/contact/contact-1.webp", alt: "", width: 1920, height: 850 },
     buttonLabel: "Contact Us",
@@ -42,7 +42,7 @@ export const contactPage = {
       { label: "Phone / WhatsApp", placeholder: "+62 …" },
       { label: "Message *", placeholder: "Tell us what you need and when you would like to come in." },
     ],
-    submitLabel: "Send message",
+    submitLabel: "Send Message",
     resetLabel: "Reset",
   },
   findUs: {

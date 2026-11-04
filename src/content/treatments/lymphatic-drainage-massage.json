@@ -104,7 +104,7 @@
               "/images/services/lymphaticmassage/lymphaticmassage-6.webp"
             ],
             "subTitle": "",
-            "title": "Lymphatic Drainage Massage Session Options",
+            "title": "Lymphatic Drainage Massage Sessions & Prices",
             "text": "Every session uses the same gentle technique. Longer sessions give your therapist more time to work through different areas of the body. Choose the length that suits how you feel.",
             "packages": [
               {
@@ -276,7 +276,7 @@
             "image": "/images/services/lymphaticmassage/lymphaticmassage-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Lymphatic Drainage Massage Seminyak: FAQs",
+            "title": "About Lymphatic Drainage Massage in Seminyak",
             "items": [
               {
                 "question": "How much does a lymphatic drainage massage cost in Seminyak?",
@@ -358,7 +358,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with Lymphatic Massage",
+            "text": "Book one of these with a lymphatic drainage massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

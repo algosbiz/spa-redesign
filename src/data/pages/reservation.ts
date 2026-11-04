@@ -17,7 +17,7 @@ export const reservationPage = {
   text: "We value your time and aim to make the reservation process as smooth as possible. Simply click the button below to book your appointment, and our team will take care of the arrangements to ensure everything is ready for your scheduled time.",
   options: [
     {
-      title: "Home Service Massage (Hotel & Villa)",
+      title: "Home Service at Your Hotel or Villa",
       text: "Treat yourself to a relaxing spa experience at your home, hotel, or villa",
       items: [
         {
@@ -39,7 +39,7 @@ export const reservationPage = {
       ],
     },
     {
-      title: "Day Spa Bookings (Seminyak Location)",
+      title: "At Our Day Spa in Seminyak",
       text: "Visit our spa in Seminyak to enjoy a peaceful and comfortable space",
       items: [
         { title: "Open Daily", text: "From 9:00 AM to 11:00 PM—walk-ins welcome or book ahead." },
