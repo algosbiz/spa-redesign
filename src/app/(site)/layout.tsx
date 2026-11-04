@@ -21,8 +21,14 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <JsonLd data={spaSchema()} />
       <Header menu={await mobileMenuData()} />
       <main id="main-content">{children}</main>
-      {/* Keeps the main pages' corner decorations off the torn edges. */}
-      <DecorationEdgeClamp />
+      {/* Keeps the main pages' corner decorations off the torn edges and swaps a
+          decoration a page shows twice. It starts only once the sections that
+          wake up late (HydrateLater) are awake, as ScrollReveal does: React
+          would otherwise find the pictures it changed on them as a mismatch
+          (six hydration errors on the homepage, 4 Nov). */}
+      <HydrateLater>
+        <DecorationEdgeClamp />
+      </HydrateLater>
       {/* Wakes up after the page above it (see HydrateLater). */}
       <HydrateLater>
         <Footer />
