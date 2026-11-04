@@ -1558,25 +1558,204 @@
   }
 }
 
-/* "Visit us", look="columns" (the owner's pick, 19 Oct; VisitUs.tsx): no
-   photo, the paper panel with the heading and the answer centred, then the
-   four facts in columns between gold hairlines, each under its gold line
-   icon in a white circle with small grey capitals; two columns on tablets,
-   one on phones (icon beside the label there). */
-.visit-us--columns .visit-us__split {
+/* "Visit us", look="card" (every treatment page, the homepage and About,
+   4 Nov; VisitUs.tsx). Owner: the columns look was "a bit jumbly", and "the
+   phone number should be a button". The paper card, heading and answer
+   centred; three facts in even columns between gold hairlines, each centred
+   under its gold icon in a white circle; then two buttons of one size: the
+   WhatsApp number, filled gold, and "Full Price List", outlined. On phones
+   the facts are rows (icon beside the words, as in the mobile menu) and the
+   buttons full width, the number first. */
+.visit-us--card .visit-us__split {
   display: block;
+  width: min(1040px, calc(100% - 64px));
   min-height: 0;
 }
-.visit-us--columns .visit-us__split-body {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 84px 56px 76px;
+.visit-us--card .visit-us__split-body {
+  max-width: none;
+  padding: 64px clamp(28px, 5vw, 72px) 56px;
   text-align: center;
 }
-.visit-us--columns .visit-us__lead {
-  max-width: 720px;
-  margin: 0 auto;
+.visit-us--card .visit-us__split-body .title {
+  margin-bottom: 16px;
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.2;
 }
+.visit-us--card .visit-us__split-body .visit-us__lead {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.visit-us__facts {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  margin: 40px 0 0;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.25);
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.25);
+}
+.visit-us__fact {
+  padding: 30px 24px 28px;
+}
+.visit-us__fact + .visit-us__fact {
+  border-left: 1px solid rgba(var(--theme-color1-rgb), 0.25);
+}
+.visit-us__fact dt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8f8a83;
+}
+.visit-us__fact-icon {
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 10px 24px -16px rgba(28, 26, 29, 0.4);
+  color: var(--theme-color1);
+}
+.visit-us__fact dd {
+  max-width: 260px;
+  margin: 0 auto;
+  font-family: var(--title-font);
+  font-size: 16px;
+  line-height: 1.55;
+  text-wrap: balance;
+  color: var(--headings-color);
+}
+/* bold gold, no underline, as every link in body text (owner, 22 Oct) */
+.visit-us__fact .visit-us__fact-link {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--theme-color1);
+  text-decoration: none;
+}
+.visit-us__fact .visit-us__fact-link:is(:hover, :focus-visible) {
+  color: #9a7428;
+}
+.visit-us--card .visit-us__split-body .visit-us__actions {
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+}
+.visit-us__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 230px;
+  min-height: 54px;
+  padding: 0 30px;
+  border: 1px solid var(--theme-color1);
+  border-radius: 999px;
+  background-color: var(--theme-color1);
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+.visit-us__cta i {
+  font-size: 20px;
+}
+.visit-us__cta:is(:hover, :focus-visible) {
+  border-color: #9a7428;
+  background-color: #9a7428;
+  color: #fff;
+}
+.visit-us__cta.visit-us__cta--outline {
+  background-color: transparent;
+  color: var(--theme-color1);
+}
+.visit-us__cta.visit-us__cta--outline:is(:hover, :focus-visible) {
+  border-color: var(--theme-color1);
+  background-color: var(--theme-color1);
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .visit-us--card .visit-us__split {
+    width: calc(100% - 32px);
+  }
+  .visit-us__fact {
+    padding: 26px 14px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .visit-us--card .visit-us__split {
+    width: calc(100% - 24px);
+  }
+  .visit-us--card .visit-us__split-body {
+    padding: 44px 20px 40px;
+  }
+  .visit-us--card .visit-us__split-body .visit-us__lead {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .visit-us__facts {
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 28px;
+    text-align: left;
+  }
+  .visit-us__fact {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 14px;
+    padding: 18px 2px;
+  }
+  .visit-us__fact + .visit-us__fact {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
+    border-left: 0;
+  }
+  .visit-us__fact dt {
+    display: contents;
+    font-size: 11px;
+  }
+  .visit-us__fact-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  .visit-us__fact dt > span {
+    grid-column: 2;
+    align-self: end;
+  }
+  .visit-us__fact dd {
+    grid-column: 2;
+    max-width: none;
+    margin: 4px 0 0;
+    font-size: 15px;
+  }
+  .visit-us--card .visit-us__split-body .visit-us__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .visit-us__cta {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
 .visit-us__tiles {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1662,10 +1841,6 @@
   background-color: var(--theme-color1);
   color: #fff;
 }
-.visit-us--columns .visit-us__actions {
-  justify-content: center;
-  margin-top: 40px;
-}
 /* "Full price list" beside "Book on WhatsApp": the same button, outlined. */
 .visit-us__btn.visit-us__btn--outline {
   background-color: transparent;
@@ -1689,19 +1864,7 @@
     border-top: 1px solid rgba(var(--theme-color1-rgb), 0.28);
   }
 }
-@media (max-width: 991px) {
-  .visit-us--columns .visit-us__split-body {
-    padding: 64px 32px 60px;
-  }
-}
 @media (max-width: 767px) {
-  .visit-us--columns .visit-us__split-body {
-    padding: 48px 18px 44px;
-  }
-  .visit-us--columns .visit-us__lead {
-    font-size: 15px;
-    line-height: 1.65;
-  }
   .visit-us__tiles {
     grid-template-columns: minmax(0, 1fr);
     margin-top: 32px;
@@ -1726,10 +1889,6 @@
   }
   .visit-us__tile dd {
     padding-left: 50px;
-  }
-  .visit-us--columns .visit-us__split-body .visit-us__actions {
-    align-items: center;
-    margin-top: 32px;
   }
 }
 
