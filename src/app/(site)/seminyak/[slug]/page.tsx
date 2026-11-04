@@ -109,7 +109,7 @@ const BANNER_PRICES: Record<string, PriceTiles["tiles"]> = {
  * by AI"; tried on the Balinese page, then given to all): the session
  * prices in the banner (PageBanner `prices`), the other quick facts as a
  * short list that opens like an FAQ beside the opening sentence (QuickFacts
- * look="faq") and "Visit us" in columns without the photo (look="columns").
+ * look="faq") and "Visit us" as a card without the photo (look="card", 4 Nov).
  */
 
 /** The props of the first element of a type in the tree. */
@@ -213,7 +213,7 @@ export default async function TreatmentPage({ params }: Props) {
   );
   const visited = insertBefore(decorated, ["ServiceSlider"], {
     type: "VisitUs",
-    props: { treatment: names.heading, inline: names.inline, look: "columns" },
+    props: { treatment: names.heading, inline: names.inline, look: "card" },
   });
   // One sentence that links to the outcall page, at the end of the quick facts block, inside its
   // section, so it adds no gap of its own between two sections (20 Oct dev brief, Task 6; the

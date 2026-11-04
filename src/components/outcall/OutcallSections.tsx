@@ -156,6 +156,13 @@ export function HomeServicePrices() {
                         <span className="oc-villa__punct">)</span>
                       </>
                     ) : null}
+                    {/* Phones (owner, 4 Nov: the bold totals and gold tags looked busy): one quiet line
+                        under the name; the columns it repeats stay in the table for screen readers. */}
+                    <span className="oc-villa__meta" aria-hidden="true">
+                      {r.length}
+                      {r.therapists > 1 ? ` · ${r.therapists} therapists` : ""} · {idr(r.price).replace(" ", " ")} +{" "}
+                      {idr(r.homeFee).replace(" ", " ")}&nbsp;fee
+                    </span>
                   </th>
                   <td className="oc-villa__price" data-label="Treatment price">
                     {idr(r.price)}
@@ -164,7 +171,10 @@ export function HomeServicePrices() {
                     {idr(r.homeFee)}
                   </td>
                   <td data-label="Total at your villa" className="oc-table__total">
-                    <strong>{idr(r.total)}</strong>
+                    {/* The spa menu's price style: a small gold "IDR" and the amount, not bold. */}
+                    <strong className="oc-villa__total">
+                      <span className="oc-villa__cur">IDR</span> {idr(r.total).replace(/^IDR /, "")}
+                    </strong>
                   </td>
                 </tr>
               ))}

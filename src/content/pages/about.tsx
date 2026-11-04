@@ -173,7 +173,7 @@ export default function AboutPage() {
         treatment="a treatment"
         title="Find Us in Seminyak"
         photo="/images/banners/contact.webp"
-        look="columns"
+        look="card"
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
