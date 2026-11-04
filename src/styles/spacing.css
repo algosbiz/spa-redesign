@@ -480,14 +480,17 @@
   }
 }
 
-/* The price list: the video section's first line is 87px (from 992px), 118px (tablets)
-   and 147px (phones) under its padding; what its padding cannot take (38px, 87px) is
-   taken by its top margin (the padding rule, above). Under 768px the 21px between its price groups, and 18px
-   before the reviews. The reviews' end is 36px (64px under 992px) too far from the FAQ. */
-@media (min-width: 992px) {
-  :root body .p-pricelist .video-section {
-    --sp-in-top: 87px;
-  }
+/* The price list. Its home service sentence (a band of its own between the
+   banner and the first section, 20 Oct dev brief) is spaced like a section:
+   half a gap under the banner's torn line, as after any top banner (6), and
+   half a gap above the next heading, as between two plain white sections
+   (1b). Until 4 Nov the video section was pulled up over it instead
+   (--sp-in-top 87px, 118px on tablets, 147px on phones), so its heading
+   covered the sentence on phones and tablets. Under 768px the 21px between
+   its price groups, and 18px before the reviews. The reviews' end is 36px
+   (64px under 992px) too far from the FAQ. */
+:root body .p-pricelist > .home-service-line {
+  padding-top: calc(var(--sp-half) - var(--sp-ink-bottom));
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   :root body .p-pricelist .testimonial-section-two {
@@ -505,9 +508,6 @@
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  :root body .p-pricelist .video-section {
-    --sp-in-top: 118px;
-  }
   :root body .p-pricelist .testimonial-section-two {
     --sp-in-bottom: 64px;
   }
@@ -518,9 +518,6 @@
   }
 }
 @media (max-width: 767px) {
-  :root body .p-pricelist .video-section {
-    --sp-in-top: 147px;
-  }
   :root body .p-pricelist .testimonial-section-two {
     --sp-in-bottom: 64px;
   }

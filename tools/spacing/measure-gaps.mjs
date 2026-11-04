@@ -114,7 +114,10 @@ async function run(path, w) {
     }
 
     const root = document.querySelector("main") || document.body;
-    const blocks = [...root.querySelectorAll("section")].filter((s) => !s.parentElement.closest("main section") && s.checkVisibility());
+    // The price list's home service sentence is a band of its own between two
+    // sections (not a <section>): measured as one, or the gap rule cannot see
+    // what sits in that gap (4 Nov: the next heading had been pulled over it).
+    const blocks = [...root.querySelectorAll("section, .home-service-line:not(.home-service-line--inline)")].filter((s) => !s.parentElement.closest("main section") && s.checkVisibility());
     const footer = document.querySelector("footer");
     if (footer) blocks.push(footer);
     const rows = blocks.map((b) => {
