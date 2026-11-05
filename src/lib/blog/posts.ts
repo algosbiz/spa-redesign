@@ -34,14 +34,16 @@ let localeReady: Promise<unknown> | null = null;
 /**
  * The language columns (db/schema.sql), added on first use so no setup step
  * is needed after deploying: one look at the table, and the changes only
- * when the columns are missing. Slugs become unique per language, so a
- * translation can keep its article's slug.
+ * when they are not all there. Slugs become unique per language, so a
+ * translation can keep its article's slug. The look is for the last change,
+ * the per-language index: each change can run again, so changes cut short
+ * are finished on the next use.
  */
 function ensureLocaleColumns() {
   localeReady ??= (async () => {
     const sql = getSql();
     const found = await sql`
-      SELECT 1 FROM information_schema.columns WHERE table_name = 'posts' AND column_name = 'translation_of'`;
+      SELECT 1 FROM pg_indexes WHERE tablename = 'posts' AND indexname = 'posts_locale_slug_idx'`;
     if (found.length) return;
     await sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS locale text NOT NULL DEFAULT 'en'`;
     await sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS translation_of uuid REFERENCES posts (id) ON DELETE SET NULL`;
