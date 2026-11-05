@@ -56,10 +56,14 @@ function ensureLocaleColumns() {
   return localeReady;
 }
 
-/** The database's query function, once the language columns exist. */
-async function db() {
-  await ensureLocaleColumns();
-  return getSql();
+/**
+ * A query, dbQuery`SELECT …`, once the language columns exist. A plain
+ * function rather than `(await db())\`…\``: the build's minifier drops those
+ * brackets and calls the promise instead (the staging build failed on it,
+ * 5 Nov 2026).
+ */
+function dbQuery(strings: TemplateStringsArray, ...values: unknown[]): Promise<Row[]> {
+  return ensureLocaleColumns().then(() => getSql()(strings, ...values));
 }
 
 /** Dates come back from Postgres as Date objects; the pages expect the live API's strings. */
@@ -89,7 +93,7 @@ const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, sh
 /** Every published article in a language, newest first (the /guide/ list). */
 export const getPublishedPosts = cache(async (locale: Locale = defaultLocale): Promise<PostSummary[]> => {
   if (!isDatabaseConfigured()) return seedPublished(locale).map(toSummary);
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT id, slug, title, excerpt, cover_image, category, author, show_date, published_at
     FROM posts WHERE status = 'published' AND locale = ${locale} ORDER BY published_at DESC`;
   return rows.map((r) => withTimestamps(r) as PostSummary);
@@ -98,7 +102,7 @@ export const getPublishedPosts = cache(async (locale: Locale = defaultLocale): P
 /** One published article in a language by slug, or null. */
 export const getPublishedPost = cache(async (slug: string, locale: Locale = defaultLocale): Promise<Post | null> => {
   if (!isDatabaseConfigured()) return seedPublished(locale).find((p) => p.slug === slug) ?? null;
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT * FROM posts WHERE slug = ${slug} AND locale = ${locale} AND status = 'published' LIMIT 1`;
   return rows[0] ? (withTimestamps(rows[0]) as Post) : null;
 });
@@ -122,7 +126,7 @@ export async function getSitemapPosts(
     }));
   }
   const rows = (
-    await (await db())`
+    await dbQuery`
       SELECT id, slug, locale, translation_of, updated_at, published_at, cover_image
       FROM posts WHERE status = 'published' ORDER BY published_at DESC`
   ).map((r) => withTimestamps(r) as Post);
@@ -141,7 +145,7 @@ export async function getSitemapPosts(
 export async function getPostLanguages(post: Post): Promise<LanguageSlugs> {
   if (!isDatabaseConfigured()) return {};
   const group = post.translation_of || post.id;
-  const rows = (await (await db())`
+  const rows = (await dbQuery`
     SELECT id, slug, locale, translation_of FROM posts
     WHERE status = 'published' AND (id = ${group} OR translation_of = ${group})`) as Post[];
   return languageGroups(rows).get(group) ?? {};
@@ -162,7 +166,7 @@ function languageGroups(rows: Pick<Post, "id" | "slug" | "locale" | "translation
 /** The blog menu list: the 12 newest articles in a language (live /api/search-posts/?menu=1). */
 export async function getMenuPosts(locale: Locale = defaultLocale): Promise<Pick<Post, "id" | "slug" | "title">[]> {
   if (!isDatabaseConfigured()) return seedPublished(locale).slice(0, 12).map(({ id, slug, title }) => ({ id, slug, title }));
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT id, slug, title FROM posts WHERE status = 'published' AND locale = ${locale}
     ORDER BY published_at DESC LIMIT 12`;
   return rows as Pick<Post, "id" | "slug" | "title">[];
@@ -182,7 +186,7 @@ export async function getBlogMenu(locale: Locale = defaultLocale): Promise<BlogM
       .slice(0, 12)
       .map(({ slug, title, cover_image }) => ({ slug, title, cover_image }));
   }
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT slug, title, cover_image FROM posts
     WHERE status = 'published' AND locale = ${locale} AND NOT (slug = ANY(${blogMenuHidden}))
     ORDER BY published_at DESC LIMIT 12`;
@@ -191,7 +195,7 @@ export async function getBlogMenu(locale: Locale = defaultLocale): Promise<BlogM
 
 type SearchHit =Pick<Post, "id" | "slug" | "title" | "excerpt" | "cover_image" | "author" | "published_at">;
 
-/** Published articles in a language whose title or excerpt contains `query` (case-insensitive), at most 10. */
+/** Published articles in a language whose title or excerpt contains `dbQuery` (case-insensitive), at most 10. */
 export async function searchPublishedPosts(query: string, locale: Locale = defaultLocale): Promise<SearchHit[]> {
   if (!isDatabaseConfigured()) {
     const q = query.toLowerCase();
@@ -210,7 +214,7 @@ export async function searchPublishedPosts(query: string, locale: Locale = defau
   }
   // % and _ typed by the visitor are matched literally, not as wildcards.
   const pattern = `%${query.replace(/[\\%_]/g, "\\$&")}%`;
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT id, slug, title, excerpt, cover_image, author, published_at
     FROM posts
     WHERE status = 'published' AND locale = ${locale} AND (title ILIKE ${pattern} OR excerpt ILIKE ${pattern})
@@ -252,7 +256,7 @@ export const isPostId = (id: string) => UUID.test(id);
 
 /** Every article, drafts and every language included, last edited first. */
 export async function listPostRows(): Promise<PostRow[]> {
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT id, slug, title, status, category, published_at, updated_at, locale, translation_of
     FROM posts ORDER BY updated_at DESC`;
   return rows.map((r) => withTimestamps(r) as PostRow);
@@ -260,7 +264,7 @@ export async function listPostRows(): Promise<PostRow[]> {
 
 /** The English articles, drafts included, last edited first: what a translation can translate (the editor). */
 export async function listOriginalArticles(): Promise<{ id: string; title: string; slug: string }[]> {
-  const rows = await (await db())`
+  const rows = await dbQuery`
     SELECT id, title, slug FROM posts WHERE locale = ${defaultLocale} ORDER BY updated_at DESC`;
   return rows as { id: string; title: string; slug: string }[];
 }
@@ -268,25 +272,24 @@ export async function listOriginalArticles(): Promise<{ id: string; title: strin
 /** One article by id, drafts included, or null. */
 export async function getPostById(id: string): Promise<Post | null> {
   if (!isPostId(id)) return null;
-  const rows = await (await db())`SELECT * FROM posts WHERE id = ${id} LIMIT 1`;
+  const rows = await dbQuery`SELECT * FROM posts WHERE id = ${id} LIMIT 1`;
   return rows[0] ? (withTimestamps(rows[0]) as Post) : null;
 }
 
 /** `base`, or `base-1`, `base-2`… if another article in the same language already has it. */
 export async function ensureUniqueSlug(base: string, locale: string, excludeId?: string): Promise<string> {
-  const sql = await db();
   for (let i = 0; ; i++) {
     const slug = i === 0 ? base : `${base}-${i}`;
     const rows = excludeId
-      ? await sql`SELECT 1 FROM posts WHERE slug = ${slug} AND locale = ${locale} AND id <> ${excludeId} LIMIT 1`
-      : await sql`SELECT 1 FROM posts WHERE slug = ${slug} AND locale = ${locale} LIMIT 1`;
+      ? await dbQuery`SELECT 1 FROM posts WHERE slug = ${slug} AND locale = ${locale} AND id <> ${excludeId} LIMIT 1`
+      : await dbQuery`SELECT 1 FROM posts WHERE slug = ${slug} AND locale = ${locale} LIMIT 1`;
     if (!rows.length) return slug;
   }
 }
 
 /** Insert a new article and return it. */
 export async function insertPost(input: PostInput, publishedAt: string | null): Promise<Post> {
-  const rows = await (await db())`
+  const rows = await dbQuery`
     INSERT INTO posts (title, slug, excerpt, cover_image, content_html, category, tags, author, status,
                        seo_title, seo_description, show_date, published_at, locale, translation_of)
     VALUES (${input.title}, ${input.slug}, ${input.excerpt}, ${input.cover_image}, ${input.content_html},
@@ -299,7 +302,7 @@ export async function insertPost(input: PostInput, publishedAt: string | null): 
 
 /** Overwrite an article and return it, or null if it no longer exists. */
 export async function updatePost(id: string, input: PostInput, publishedAt: string | null): Promise<Post | null> {
-  const rows = await (await db())`
+  const rows = await dbQuery`
     UPDATE posts SET
       title = ${input.title}, slug = ${input.slug}, excerpt = ${input.excerpt},
       cover_image = ${input.cover_image}, content_html = ${input.content_html},
@@ -314,5 +317,5 @@ export async function updatePost(id: string, input: PostInput, publishedAt: stri
 
 /** Delete an article for good. */
 export async function deletePost(id: string): Promise<void> {
-  await (await db())`DELETE FROM posts WHERE id = ${id}`;
+  await dbQuery`DELETE FROM posts WHERE id = ${id}`;
 }
