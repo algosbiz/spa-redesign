@@ -76,7 +76,7 @@
               "/images/services/earcandle/earcandle-4.webp"
             ],
             "subTitle": "",
-            "title": "One Relaxing Ear Candle Session",
+            "title": "Ear Candle Session & Price",
             "text": "Ear candle comes as one 30-minute session. It suits first-timers and is easy to add to a massage or another treatment.",
             "packages": [
               {
@@ -168,7 +168,7 @@
         },
         "image": "/images/services/earcandle/earcandle-6.webp",
         "subTitle": "",
-        "title": "Areas Included During an Ear Candle Session",
+        "title": "What an Ear Candle Session Covers",
         "text": "The session covers the outer ear and the areas around it:",
         "featuresLeft": [
           "Outer ear area",
@@ -222,7 +222,7 @@
             "image": "/images/services/earcandle/earcandle-8.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Ear Candle Seminyak: FAQs",
+            "title": "About Ear Candle Treatments in Seminyak",
             "items": [
               {
                 "question": "What is an ear candle treatment?",
@@ -284,7 +284,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with an Ear Candle",
+            "text": "Book one of these with an ear candle treatment and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/couple-spa/",

@@ -130,13 +130,13 @@ export default function ReservationPage() {
           </div>
           <div className="row g-4">
             <Option
-              title="Home Service Massage (Hotel & Villa)"
+              title="Home Service at Your Hotel or Villa"
               tagline="A therapist comes to your villa, hotel or home"
               items={HOME_SERVICE}
               animation="fadeInLeft"
             />
             <Option
-              title="Day Spa Bookings (Seminyak Location)"
+              title="At Our Day Spa in Seminyak"
               tagline="Jl. Pangkung Sari No. 30, Petitenget, Seminyak"
               items={DAY_SPA}
               animation="fadeInRight"

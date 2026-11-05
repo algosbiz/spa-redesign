@@ -156,6 +156,13 @@ export function HomeServicePrices() {
                         <span className="oc-villa__punct">)</span>
                       </>
                     ) : null}
+                    {/* Phones (owner, 4 Nov: the bold totals and gold tags looked busy): one quiet line
+                        under the name; the columns it repeats stay in the table for screen readers. */}
+                    <span className="oc-villa__meta" aria-hidden="true">
+                      {r.length}
+                      {r.therapists > 1 ? ` · ${r.therapists} therapists` : ""} · {idr(r.price).replace(" ", " ")} +{" "}
+                      {idr(r.homeFee).replace(" ", " ")}&nbsp;fee
+                    </span>
                   </th>
                   <td className="oc-villa__price" data-label="Treatment price">
                     {idr(r.price)}
@@ -164,7 +171,10 @@ export function HomeServicePrices() {
                     {idr(r.homeFee)}
                   </td>
                   <td data-label="Total at your villa" className="oc-table__total">
-                    <strong>{idr(r.total)}</strong>
+                    {/* The spa menu's price style: a small gold "IDR" and the amount, not bold. */}
+                    <strong className="oc-villa__total">
+                      <span className="oc-villa__cur">IDR</span> {idr(r.total).replace(/^IDR /, "")}
+                    </strong>
                   </td>
                 </tr>
               ))}
@@ -182,7 +192,7 @@ export function HomeServicePrices() {
             Book on WhatsApp
           </Button>
           {/* The second action is a row button, not a second pill, so the two stand apart (owner, 22 Oct). */}
-          <RowButton href="#price-list" icon="book" label="See the full price list" note="Every outcall treatment and duration" />
+          <RowButton href="#price-list" icon="book" label="See the Full Price List" note="Every outcall treatment and duration" />
         </div>
       </div>
     </section>
@@ -438,7 +448,7 @@ export function HomeVsSpa() {
         {/* The fee and travel time by area moved up into S06 (owner, 22 Oct). */}
         <div className="oc-actions">
           <Button href={whatsappChatUrl} filled whatsapp>
-            Book home service
+            Book Home Service
           </Button>
           {/* Directions to the spa rather than the day spa page, which is not finished yet (owner, 22 Oct). */}
           <RowButton

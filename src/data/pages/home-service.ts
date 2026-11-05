@@ -28,7 +28,7 @@ export const homeServicePage = {
     openingTimes: "OPENING TIMES: Open Daily: 9:00 - 23:00",
   },
   intro: {
-    eyebrow: "Spa Bali Moon in Seminyak, Bali",
+    eyebrow: "Balinese Massage at Home",
     heading: "Home Service Balinese Massage",
     paragraphs: [
       "Find an authentic Balinese massage without the hassle. Let the stress of the week ease away as you enjoy a quiet, well-prepared session that fits naturally into your day.",
@@ -176,7 +176,7 @@ export const homeServicePage = {
     coupleMassageGroup: {
       name: "Couple Massage",
       description: "Designed for two to relax together while easing the body and sharing a calm moment.",
-      image: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage", width: 630, height: 580 },
+      image: { src: "/images/listmenu/couplemassage.webp", alt: "Couple Massage", width: 630, height: 580 },
       itemIds: [
         "couple-balinese-massage",
         "couple-traditional-massage",
@@ -213,7 +213,7 @@ export const homeServicePage = {
     },
   },
   info: {
-    eyebrow: "Treat Yourself to a Balinese Spa Experience Right Where You Are",
+    eyebrow: "The Spa Comes to You",
     heading: "Home Service Massage",
     items: [
       {

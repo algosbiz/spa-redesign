@@ -21,7 +21,7 @@ export type Treatment = {
  */
 const OWN_PAGE: Record<string, { image: string; desc: string }> = {
   "Nail Art": {
-    image: "/images/beauty/nail-spa/nailart-3.webp",
+    image: "/images/listmenu/nailart.webp",
     desc: "Colours, patterns, and finishes selected to suit your own style.",
   },
 };

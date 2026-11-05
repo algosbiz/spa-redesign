@@ -28,6 +28,7 @@ export default function ServiceSlider({
       {" You Glow"}
     </>
   ),
+  text,
   paperBackground = false,
   related = DEFAULT_CARDS,
   embedded = false,
@@ -36,6 +37,8 @@ export default function ServiceSlider({
 }: {
   subTitle?: string;
   title?: ReactNode;
+  /** One line under the heading: on a treatment page, that these pair with it (owner, 4 Nov). */
+  text?: string;
   paperBackground?: boolean;
   /** Treatment page addresses ("/seminyak/body-scrub/"): the cards, in this order. */
   related?: string[];
@@ -84,6 +87,7 @@ export default function ServiceSlider({
           <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             {title}
           </h2>
+          {text ? <p className="treat-cards__intro">{text}</p> : null}
         </div>
         <ScrollRow className="treat-cards__row" below="lg" nudge label="Other treatments">
           {cards.map((t) => (

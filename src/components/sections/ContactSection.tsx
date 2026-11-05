@@ -176,7 +176,7 @@ export default function ContactSection({
                 <input name="form_botcheck" type="hidden" value={form.form_botcheck} onChange={onChange} className="jsx-contact" />
                 <div className="jsx-contact cf-actions">
                   <button type="submit" className="jsx-contact btn-one">
-                    <span className="jsx-contact btn-title">Send message</span>
+                    <span className="jsx-contact btn-title">Send Message</span>
                   </button>
                   <button type="reset" className="jsx-contact cf-reset">
                     Reset

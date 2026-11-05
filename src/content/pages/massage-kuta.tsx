@@ -82,7 +82,7 @@ export default function MassageKutaPage() {
         leftShapeSrc="/images/shape/leaf/6a.png"
         rightShapeSrc={null}
         removeBottomPadding
-        subTitle="A Moment to Reset"
+        subTitle="After Beach Days and Surfing"
         title={<>What a Massage in Kuta Helps With</>}
         text="Kuta is known for long beach days, surfing, sightseeing, and a lively holiday atmosphere, but all that activity can leave the body feeling stiff, heavy, or overtired. A professional massage offers a chance to slow down, release built-up tension, and feel more comfortable again."
         feature1Title="Restore a Lighter Feeling"
@@ -128,10 +128,10 @@ export default function MassageKutaPage() {
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/12a.png"
         rightShapeSrc="/images/shape/leaf/13a.png"
-        subTitle="Complete Experience"
+        subTitle="More Than Massage"
         badgeTopText="Add on"
         badgeBottomText="Facial, scrub or cream bath"
-        title={<>Spa Treatments Beyond Massage in Kuta</>}
+        title={<>Facials, Scrubs &amp; Beauty Treatments in Kuta</>}
         text="A relaxing spa experience can include more than massage. Add a Bali Moon Facial, Body Scrub, Cream Bath, Manicure, Pedicure, or other beauty treatments to create a more complete session."
         featuresLeft={[
           "Bali Moon Facial with Tea Tree or Gold Mask options",
@@ -166,7 +166,7 @@ export default function MassageKutaPage() {
           largeTopPadding
           imageTitle="Unwind in Kuta"
           subTitle="Frequently Asked Questions"
-          title={<>Massage Kuta: FAQs</>}
+          title={<>About Massage in Kuta</>}
           items={FAQ}
           image="/images/services/massagekuta/massagekuta-7.webp"
         />

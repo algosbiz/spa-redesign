@@ -159,6 +159,25 @@
   color: var(--headings-color);
   white-space: nowrap;
 }
+/* S02 totals in the spa menu's price style (owner, 4 Nov: the bold totals
+   "seem a bit off"): gold, regular weight, the currency small beside the
+   amount; the names in the menu's weight too (600). */
+.oc-table--villa .oc-villa__total {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--theme-color1);
+}
+.oc-villa__cur {
+  font-size: 0.7em;
+  letter-spacing: 0.08em;
+}
+.oc-table--villa tbody th {
+  font-weight: 600;
+}
+/* The phones' one line under the name (15). */
+.oc-villa__meta {
+  display: none;
+}
 .oc-table--prices td {
   white-space: nowrap;
 }
@@ -701,136 +720,7 @@
   text-decoration: none;
 }
 
-/* ------------------------------------------------------------------ */
-/* 11. "Visit us" on the treatment pages, compact (owner, 21 Oct)       */
-/*                                                                      */
-/* From 992px (laptops and up; phones and tablets keep the original     */
-/* layout): the card is narrower, the heading and text smaller, and the */
-/* four facts sit in one row, each gold icon beside its words. The      */
-/* small link buttons stay under the fact they belong to: "Get          */
-/* directions" under the address, "Villa & hotel massage" and "Home    */
-/* service in Bali" under the villa fee; the phone number is a plain    */
-/* gold link.                                                           */
-/* ------------------------------------------------------------------ */
-@media (min-width: 992px) {
-  .visit-us--columns .visit-us__split {
-    max-width: 1040px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .visit-us--columns .visit-us__split-body {
-    max-width: none;
-    padding: 44px 40px 40px;
-  }
-  .visit-us--columns .visit-us__split-body .title {
-    margin-bottom: 14px;
-    font-size: clamp(30px, 3.4vw, 40px);
-    line-height: 1.25;
-  }
-  .visit-us--columns .visit-us__lead {
-    max-width: 620px;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .visit-us--columns .visit-us__tiles {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 22px;
-    margin-top: 28px;
-    border: 0;
-  }
-  /* Each fact: its gold icon on the left, the small grey label over the words, as on phones. */
-  .visit-us--columns .visit-us__tile,
-  .visit-us--columns .visit-us__tile + .visit-us__tile {
-    display: grid;
-    grid-template-columns: 38px auto;
-    column-gap: 12px;
-    align-content: start;
-    align-items: start;
-    padding: 0;
-    border: 0;
-    text-align: left;
-  }
-  .visit-us--columns .visit-us__tile dt {
-    display: contents;
-    font-size: 11px;
-    line-height: 1.4;
-    letter-spacing: 0.16em;
-    color: #8f8a83;
-  }
-  .visit-us--columns .visit-us__tile-icon {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    flex: none;
-    width: 38px;
-    height: 38px;
-    padding: 10px;
-  }
-  .visit-us--columns .visit-us__tile dd {
-    grid-column: 2;
-    margin: 4px 0 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.45;
-    white-space: nowrap;
-  }
-  .visit-us--columns .visit-us__tile:first-child dd {
-    max-width: 260px;
-    white-space: normal;
-  }
-  .visit-us--columns .visit-us__pills {
-    gap: 6px;
-    margin-top: 10px;
-  }
-  .visit-us--columns .visit-us__tile .visit-us__pill {
-    min-height: 30px;
-    padding: 5px 12px;
-    font-size: 12px;
-  }
-  /* The four facts start their words on one line (owner, 28 Oct, "Booking" and "In your
-     villa" sat at other heights): the label stays on one line ("OPEN DAILY" broke in two
-     and pushed its hours down), and the number of Booking is words like the others', not a
-     button. The villa's button has 14px of air over it. */
-  .visit-us--columns .visit-us__tile dt {
-    white-space: nowrap;
-  }
-  .visit-us--columns .visit-us__pills {
-    display: flex;
-    margin-top: 14px;
-  }
-  /* Larger words (14px labels of 11px were small to read at a glance): 12px labels, 15px
-     values, the address a little wider (28 Oct). */
-  .visit-us--columns .visit-us__tile dt {
-    font-size: 12px;
-  }
-  .visit-us--columns .visit-us__tile dd {
-    font-size: 15px;
-  }
-  .visit-us--columns .visit-us__tile:first-child {
-    flex: 0 0 auto;
-  }
-  .visit-us--columns .visit-us__tile:first-child dd {
-    min-width: 200px;
-    max-width: 240px;
-  }
-  /* the home service fee takes two lines, to give the address room */
-  .visit-us--columns .visit-us__tile:last-child dd {
-    max-width: 230px;
-    white-space: normal;
-  }
-  .visit-us--columns .visit-us__phone {
-    color: var(--theme-color1, #b8892f);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .visit-us--columns .visit-us__phone:hover {
-    text-decoration: underline;
-  }
-  .visit-us--columns .visit-us__actions {
-    margin-top: 28px;
-  }
-}
+/* 11. "Visit us" compact: removed 4 Nov with look="columns"; the card look is in custom.css. */
 
 /* ------------------------------------------------------------------ */
 /* 12. Words on the FAQ photo no longer run off it (owner, 21 Oct)      */
@@ -1106,15 +996,18 @@
   .oc-table--villa thead th:nth-child(3) {
     display: none;
   }
+  /* Since 4 Nov (owner: "modernize a bit"): the name and its total on one
+     line, then one quiet grey line, "60 min · IDR 159.000 + IDR 75.000 fee"
+     (.oc-villa__meta). The price and fee cells stay for screen readers only,
+     and the gold length tags are gone. */
   .oc-table--villa tbody tr {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr) auto;
-    grid-template-areas:
-      "name name total"
-      "price fee fee";
-    column-gap: 5px;
-    row-gap: 6px;
-    padding: 15px 18px;
+    position: relative;
+    display: block;
+    padding: 16px 18px;
+  }
+  /* The total sits on the name's line; the grey line under them runs the full width. */
+  .oc-table--villa .oc-villa__name {
+    padding-right: 124px;
   }
   .oc-table--villa th,
   .oc-table--villa td {
@@ -1127,68 +1020,53 @@
   }
   .oc-villa__name {
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     line-height: 1.35;
   }
-  .oc-villa__punct {
+  .oc-villa__punct,
+  .oc-villa__tag {
     display: none;
   }
-  .oc-villa__tag {
-    display: inline-block;
-    margin: 6px 4px 0 0;
-    padding: 2px 9px;
-    border-radius: 999px;
-    background-color: rgba(var(--theme-color1-rgb), 0.1);
+  .oc-villa__meta {
+    display: block;
+    margin-top: 5px;
     font-family: var(--text-font);
-    font-size: 10.5px;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--theme-color1);
-  }
-  .oc-table--villa .oc-villa__price {
-    grid-area: price;
-  }
-  .oc-table--villa .oc-villa__fee {
-    grid-area: fee;
-  }
-  .oc-table--villa .oc-villa__price,
-  .oc-table--villa .oc-villa__fee {
     font-size: 13px;
+    font-weight: 400;
     line-height: 1.5;
     color: #8f8a83;
+  }
+  /* The price and fee cells: read by screen readers, not shown (the line above says them). */
+  .oc-table--villa .oc-villa__price,
+  .oc-table--villa .oc-villa__fee {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
     white-space: nowrap;
   }
-  .oc-table--villa .oc-villa__fee::before,
-  .oc-table--villa .oc-villa__fee::after {
-    font: inherit;
-    letter-spacing: 0;
-    text-transform: none;
-    color: inherit;
-  }
-  .oc-table--villa .oc-villa__fee::before {
-    content: "+ ";
-  }
-  .oc-table--villa .oc-villa__fee::after {
-    content: " home service fee";
-  }
   .oc-table--villa .oc-table__total {
-    grid-area: total;
-    justify-self: end;
-    align-self: start;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+  }
+  .oc-table--villa .oc-villa__total {
+    font-size: 19px;
   }
 }
-/* The narrowest phones: "IDR 339.000 + IDR 150.000 home service fee" still on one line. */
+/* The narrowest phones: a little less padding and type, so name and total share the line. */
 @media (max-width: 359px) {
   .oc-table--villa tbody tr {
     padding-right: 14px;
     padding-left: 14px;
   }
-  .oc-table--villa .oc-villa__price,
-  .oc-table--villa .oc-villa__fee {
+  .oc-villa__meta {
     font-size: 12px;
+  }
+  .oc-table--villa .oc-table__total {
+    right: 14px;
   }
 }
 
@@ -1430,114 +1308,7 @@
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* 20. "Visit us" on phones: one compact card (owner, 22 Oct: "needs    */
-/*     some mobile love"). The four facts in a white card between gold  */
-/*     hairlines, as the mobile menu's rows: the icon on the left, the  */
-/*     small grey label over the words, the buttons smaller.            */
-/* ------------------------------------------------------------------ */
-@media (max-width: 767px) {
-  .visit-us--columns .visit-us__tiles {
-    margin-top: 26px;
-    overflow: hidden;
-    border: 1px solid rgba(var(--theme-color1-rgb), 0.28);
-    border-radius: 18px;
-    background-color: #fff;
-    box-shadow: 0 18px 40px -30px rgba(28, 26, 29, 0.35);
-  }
-  .visit-us--columns .visit-us__tile,
-  .visit-us--columns .visit-us__tile + .visit-us__tile {
-    display: grid;
-    grid-template-columns: 36px minmax(0, 1fr);
-    column-gap: 14px;
-    align-items: start;
-    padding: 15px 16px;
-  }
-  .visit-us--columns .visit-us__tile + .visit-us__tile {
-    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.18);
-  }
-  .visit-us--columns .visit-us__tile dt {
-    display: contents;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-  }
-  .visit-us--columns .visit-us__tile-icon {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    width: 36px;
-    height: 36px;
-    padding: 9px;
-    background-color: var(--theme-color-gray);
-    box-shadow: none;
-  }
-  .visit-us--columns .visit-us__tile dd {
-    grid-column: 2;
-    margin: 3px 0 0;
-    padding: 0;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  .visit-us--columns .visit-us__pills {
-    gap: 6px;
-    margin-top: 8px;
-  }
-  .visit-us--columns .visit-us__tile .visit-us__pill {
-    min-height: 32px;
-    padding: 6px 13px;
-    font-size: 12.5px;
-  }
-  .visit-us--columns .visit-us__split-body .visit-us__actions {
-    margin-top: 24px;
-  }
-}
-
-/* The two links as tappable rows, not buttons (owner, 22 Oct: "so many
-   buttons are so close to each other"): the phone number and "Home service
-   in Bali" in gold, the whole fact a link, with the mobile menu's arrow on
-   the right. "Full price list" is the section's one button. */
-@media (max-width: 767px) {
-  .visit-us--columns .visit-us__tile:has(.visit-us__pill) {
-    position: relative;
-    padding-right: 44px;
-    transition: background-color 0.25s;
-  }
-  .visit-us--columns .visit-us__tile:has(.visit-us__pill:is(:hover, :focus-visible, :active)) {
-    background-color: var(--theme-color-gray);
-  }
-  .visit-us--columns .visit-us__tile:has(.visit-us__pill)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 22px;
-    width: 8px;
-    height: 8px;
-    border-top: 1.5px solid var(--theme-color1);
-    border-right: 1.5px solid var(--theme-color1);
-    transform: translateY(-50%) rotate(45deg);
-    pointer-events: none;
-  }
-  .visit-us--columns .visit-us__pills {
-    margin-top: 2px;
-  }
-  .visit-us--columns .visit-us__tile .visit-us__pill,
-  .visit-us--columns .visit-us__tile .visit-us__pill:is(:hover, :focus-visible) {
-    min-height: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    font-size: 14px;
-    color: var(--theme-color1);
-  }
-  /* The whole fact is the link. */
-  .visit-us--columns .visit-us__tile .visit-us__pill::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-  .visit-us--columns .visit-us__pill > span[aria-hidden="true"] {
-    display: none;
-  }
-}
+/* 20. "Visit us" on phones: removed 4 Nov with look="columns"; the card look is in custom.css. */
 
 /* ------------------------------------------------------------------ */
 /* 21. Contact page details on phones: the "Visit us" card (owner,      */

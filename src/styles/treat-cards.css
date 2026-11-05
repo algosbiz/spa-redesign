@@ -5,6 +5,11 @@
    `:is(.home-v2, .treat-cards)` keeps the homepage rules' weight, so the
    homepage's own rules after them still win as before.
    ------------------------------------------------------------------------ */
+/* The line under a treatment page's "Treatments to Pair with …" heading (4 Nov). */
+.treat-cards .section-header .treat-cards__intro {
+  max-width: 560px;
+  margin: 14px auto 0;
+}
 :is(.home-v2, .treat-cards) .v2-treat {
   display: flex;
   flex-direction: column;

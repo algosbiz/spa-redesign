@@ -53,7 +53,7 @@ export default async function HomePage() {
             }
           />
         }
-        menu={<MenuDurations subTitle="Price List" title="Full Spa Menu: Massage, Facials & Body Treatments" sticky />}
+        menu={<MenuDurations subTitle="Our Full Spa Menu" title="Massage, Facials & Body Treatments" sticky />}
         faq={<Faq arrow="line" />}
       />
     </>

@@ -244,7 +244,7 @@
             "image": "/images/services/footmassage/footmassage-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Foot Massage Seminyak: FAQs",
+            "title": "About Foot Massage in Seminyak",
             "items": [
               {
                 "question": "Is a foot massage the same as reflexology?",
@@ -310,7 +310,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with a Foot Massage",
+            "text": "Book one of these with a foot massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/manicure-pedicure/",

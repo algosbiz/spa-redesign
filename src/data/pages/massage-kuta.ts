@@ -21,7 +21,7 @@ export const kutaPage: LandingPage = {
   sections: [
     {
       type: "intro",
-      eyebrow: "A Moment to Reset",
+      eyebrow: "After Beach Days and Surfing",
       heading: "What a Massage in Kuta Helps With",
       paragraphs: [
         "Kuta is known for long beach days, surfing, sightseeing, and a lively holiday atmosphere, but all that activity can leave the body feeling stiff, heavy, or overtired. A professional massage offers a chance to slow down, release built-up tension, and feel more comfortable again.",
@@ -71,7 +71,7 @@ export const kutaPage: LandingPage = {
     },
     {
       type: "list",
-      eyebrow: "Complete Experience",
+      eyebrow: "More Than Massage",
       heading: "More Than a Full-Body Treatment",
       paragraphs: [
         "A relaxing spa experience can include more than massage. Add a Bali Moon Facial, Body Scrub, Cream Bath, Manicure, Pedicure, or other beauty treatments to create a more complete session.",

@@ -252,7 +252,7 @@
             "image": "/images/services/hairbraiding/hairbraiding-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Hair Braiding Seminyak: FAQs",
+            "title": "About Hair Braiding in Seminyak",
             "items": [
               {
                 "question": "Is hair braiding suitable for all hair types?",
@@ -318,7 +318,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Complete Your Bali Look",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with Hair Braiding",
+            "text": "Book one of these with hair braiding and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/creambath/",

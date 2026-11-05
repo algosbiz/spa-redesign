@@ -154,7 +154,7 @@
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/coconutoilmassage/coconutoilmassage-7.webp",
         "subTitle": "",
-        "title": "More Than Just Massage Oil",
+        "title": "What Guests Like About Coconut Oil",
         "text": "Virgin coconut oil has long been used in tropical traditions for its moisture and smooth texture. What guests like about it:",
         "featuresLeft": [
           "Helps soften dry skin",
@@ -243,7 +243,7 @@
             "image": "/images/services/coconutoilmassage/coconutoilmassage-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Coconut Oil Massage Seminyak: FAQs",
+            "title": "About Coconut Oil Massage in Seminyak",
             "items": [
               {
                 "question": "How is virgin cold-pressed coconut oil different from regular massage oil?",
@@ -301,7 +301,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with a Coconut Oil Massage",
+            "text": "Book one of these with a coconut oil massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

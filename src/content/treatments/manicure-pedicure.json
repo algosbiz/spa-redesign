@@ -289,7 +289,7 @@
         },
         "image": "/images/services/manicurepedicure/manicurepedicure-9.webp",
         "subTitle": "",
-        "title": "Professional Care from Nails to Skin",
+        "title": "What a Manicure & Pedicure Includes",
         "text": "Depending on the service you choose, your manicure and pedicure may include:",
         "featuresLeft": [
           "Nail trimming and shaping",
@@ -345,7 +345,7 @@
             "image": "/images/services/manicurepedicure/manicurepedicure-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Manicure & Pedicure Seminyak: FAQs",
+            "title": "About Manicure & Pedicure in Seminyak",
             "items": [
               {
                 "question": "What is included in a manicure and pedicure?",
@@ -395,7 +395,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
-            "title": "Complete Your Care Beyond Nails",
+            "subTitle": "Good Together",
+            "title": "Treatments to Pair with a Manicure & Pedicure",
+            "text": "Book one of these with a manicure and pedicure and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

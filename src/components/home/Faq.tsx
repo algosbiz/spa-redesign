@@ -50,7 +50,7 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
                     <LotusIcon className="icon" scope={S} />
                     {faq.subTitle}
                   </p>
-                  <h2 className={`${S} title`}>Seminyak Spa &amp; Massage: FAQs</h2>
+                  <h2 className={`${S} title`}>About Our Day Spa in Seminyak</h2>
                 </div>
                 <div className="v2-faq__list">
                   {faq.items.map((item, i) => {

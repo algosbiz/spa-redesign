@@ -254,7 +254,10 @@ export const SECTIONS: Record<string, SectionSchema> = {
   },
   ServiceSlider: {
     label: "Other treatments",
-    fields: [{ key: "title", label: "Heading", kind: "text" }],
+    fields: [
+      ...heading("Good Together"),
+      { key: "text", label: "Line under the heading", kind: "text", hint: "Says that these treatments pair with this one." },
+    ],
     note: "The four treatment cards in this slider are chosen for each page in the code.",
   },
   ReserveCta: {

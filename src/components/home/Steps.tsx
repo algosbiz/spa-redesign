@@ -120,7 +120,7 @@ export default function Steps() {
             Seminyak, Canggu and across Bali, from IDR 75.000 per therapist.
           </p>
           <Link prefetch={false} href="/outcall-home-service-massage/" className="btn-two step-outcall-band__button">
-            Outcall &amp; home service massage
+            Outcall &amp; Home Service Massage
           </Link>
         </div>
       </div>

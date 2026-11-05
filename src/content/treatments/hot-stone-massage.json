@@ -158,7 +158,7 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Hot Stone Massage Duration Options",
+                  "title": "Hot Stone Massage Sessions & Prices",
                   "text": "Every session is a full-body massage; longer sessions leave more time for the areas that hold the most tension.",
                   "icon": "/images/spa/HotStone.svg"
                 }
@@ -299,7 +299,7 @@
             "image": "/images/services/hotstonemassage/hotstonemassage-11.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Hot Stone Massage Seminyak: FAQs",
+            "title": "About Hot Stone Massage in Seminyak",
             "items": [
               {
                 "question": "What is a hot stone massage?",
@@ -357,7 +357,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with Hot Stone Massage",
+            "text": "Book one of these with a hot stone massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

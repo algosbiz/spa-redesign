@@ -49,8 +49,8 @@ export const home = {
   },
 
   steps: {
-    subTitle: "Book via WhatsApp",
-    title: "Book a Spa or Massage in Seminyak in 3 Steps",
+    subTitle: "How to Book",
+    title: "Book a Massage in Seminyak in Three Steps",
     items: [
       {
         title: "Choose a Treatment",
@@ -103,8 +103,8 @@ export const home = {
   },
 
   packages: {
-    subTitle: "Spa Packages",
-    title: "Day Spa and Massage in Seminyak",
+    subTitle: "Day Spa & Massage",
+    title: "Spa Packages in Seminyak",
     text: "Our newest package pairs a lymphatic massage with the Gold Facial; the others pair a 1-hour Balinese massage with a manicure and pedicure, cream bath or facial. Prices are per person.",
     cta: { label: "Explore Packages", href: "/seminyak/" },
     /** The four cards, each [duration, treatment] per line. Prices in IDR. */
@@ -158,8 +158,8 @@ export const home = {
   },
 
   services: {
-    subTitle: "Why It Matters",
-    title: "What Makes Spa Bali Moon Different",
+    subTitle: "Why Guests Return",
+    title: "What Makes Spa\u00a0Bali\u00a0Moon Different",
     items: [
       {
         title: "Experienced Therapists",
@@ -294,17 +294,17 @@ const SLIDES = [
   },
   {
     name: "Couple Massage",
-    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
+    image: "/images/listmenu/couplemassage.webp",
     icon: "/images/spa/Couple.svg",
   },
   {
     name: "Lymphatic Massage",
-    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
+    image: "/images/listmenu/lymphaticmassage.webp",
     icon: "/images/spa/Lymphatic.svg",
   },
   {
     name: "Manicure Pedicure",
-    image: "/images/treatments/cards/manicurepedicure-warm.webp",
+    image: "/images/listmenu/manicurepedicure.webp",
     icon: "/images/spa/Manicure.svg",
   },
   {
@@ -314,7 +314,7 @@ const SLIDES = [
   },
   {
     name: "Cream Bath",
-    image: "/images/treatments/cards/creambath-warm.webp",
+    image: "/images/listmenu/creambath.webp",
     icon: "/images/spa/CreamBath.svg",
   },
   {
@@ -359,12 +359,12 @@ const SLIDES = [
   },
   {
     name: "Cellulite Massage",
-    image: "/images/treatments/cards/cellulitemassage-warm.webp",
+    image: "/images/listmenu/cellulitemassage.webp",
     icon: "/images/spa/cellulite.svg",
   },
   {
     name: "Thai Massage",
-    image: "/images/treatments/cards/thaimassage-warm.webp",
+    image: "/images/listmenu/thaimassage.webp",
     icon: "/images/spa/thai.svg",
   },
   {
@@ -374,7 +374,7 @@ const SLIDES = [
   },
   {
     name: "Nail Art",
-    image: "/images/treatments/cards/manicurepedicure-warm.webp",
+    image: "/images/listmenu/nailart.webp",
     icon: "/images/spa/NailArt.svg",
   },
   {
@@ -384,28 +384,28 @@ const SLIDES = [
   },
   {
     name: "Coconut Oil Massage",
-    image: "/images/treatments/cards/coconutoilmassage-warm.webp",
+    image: "/images/listmenu/coconutoilmassage.webp",
     icon: "/images/spa/CoconutOil.svg",
   },
   // The two pages added on 24 Oct (owner).
   {
     name: "Warm Candle Massage",
-    image: "/images/treatments/cards/organicwarmcandle.webp",
+    image: "/images/listmenu/organicwarmcandle.webp",
     icon: "/images/spa/Balinese.svg",
   },
   {
     name: "Cupping Therapy",
-    image: "/images/treatments/cards/cuppingtherapy.webp",
+    image: "/images/listmenu/cuppingtherapy.webp",
     icon: "/images/spa/DeepTissue.svg",
   },
   {
     name: "Hair Braiding",
-    image: "/images/treatments/cards/creambath-warm.webp",
+    image: "/images/listmenu/creambath.webp",
     icon: "/images/spa/HairBraiding.svg",
   },
   {
     name: "Shiatsu Massage",
-    image: "/images/treatments/cards/shiatsumassage-warm.webp",
+    image: "/images/listmenu/shiatsumassage.webp",
     icon: "/images/spa/Shiatsu.svg",
   },
 ];

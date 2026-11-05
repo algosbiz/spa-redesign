@@ -242,7 +242,7 @@
             "image": "/images/services/cellulitemassage/cellulitemassage-9.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "Cellulite Massage Seminyak: FAQs",
+            "title": "About Cellulite Massage in Seminyak",
             "items": [
               {
                 "question": "Which areas does a cellulite massage treat?",
@@ -308,7 +308,9 @@
           "props": {
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "subTitle": "Good Together",
             "title": "Treatments to Pair with Cellulite Massage",
+            "text": "Book one of these with a cellulite massage and enjoy both in one visit.",
             "embedded": true,
             "related": [
               "/seminyak/facial/",

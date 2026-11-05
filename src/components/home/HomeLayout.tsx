@@ -59,7 +59,7 @@ export default function HomeLayout({
         <VisitUs
           treatment="a treatment"
           title="Visit Our Day Spa in Seminyak"
-          look="columns"
+          look="card"
           note="The spa has showers and Wi-Fi for guests."
         />
       </HydrateLater>

@@ -52,7 +52,7 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
  * A frangipani and a leaf hang over the card's corners, as on the theme's
  * other sections (owner, 17 Oct).
  *
- * `look="columns"` (all treatment pages; owner, 19 Oct: the plain rows said
+ * `look="columns"` (all treatment pages until 4 Nov; owner, 19 Oct: the plain rows said
  * too much, white tiles looked templated, and a card over the photo hid the
  * therapist; of three tries the owner kept this): no photo, a paper-coloured
  * panel with the heading and the answer centred, then the four facts in
@@ -63,6 +63,15 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
  *
  * `look="photo"` (About page, 19 Oct): the same facts and buttons, two by
  * two, beside the split look's photo, so the therapist stays in view.
+ *
+ * `look="card"` (every treatment page, the homepage and About since 4 Nov;
+ * owner: the columns look "a bit jumbly", and "the phone number should be a
+ * button"): the paper card with the heading and the answer centred, three
+ * facts in even columns between gold hairlines (address, hours, the villa fee
+ * with its home service link), then two buttons: the WhatsApp number itself,
+ * filled gold, and "Full Price List". On phones the facts are rows and the
+ * buttons full width. It replaced `look="columns"`, whose layers of fixes
+ * (21–28 Oct) made the facts start at different heights.
  */
 export default async function VisitUs({
   treatment,
@@ -86,8 +95,8 @@ export default async function VisitUs({
   variant?: "split" | "light";
   /** The split look's photo; the About page, which shows the default one higher up, passes another. */
   photo?: string;
-  /** How the facts are set: label and value rows, columns without the photo, or those facts beside it (see above). */
-  look?: "rows" | "columns" | "photo";
+  /** How the facts are set: label and value rows, the card without the photo, or the facts beside the photo (see above). */
+  look?: "rows" | "card" | "photo";
   /** Corner decorations (components/ui/SectionShapes.tsx); `null` leaves a side empty. */
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
@@ -135,9 +144,9 @@ export default async function VisitUs({
       ),
     },
   ];
-  const columns = look === "columns";
-  const tiles = columns || look === "photo";
-  // The columns and photo looks: each fact under its icon, its links as small buttons
+  const card = look === "card";
+  const tiles = look === "photo";
+  // The photo look: each fact under its icon, its links as small buttons
   // (owner, 19 Oct: buttons, not underlined links), the price list beside
   // "Book on WhatsApp".
   const facts: { label: string; icon: MenuIconName; text: ReactNode; links?: FactLink[] }[] = [
@@ -145,37 +154,25 @@ export default async function VisitUs({
       label: "Address",
       icon: "pin",
       text: business.address.full,
-      // The columns look (every treatment page) leaves "Get directions" out (owner, 21 Oct).
-      links: columns ? undefined : [{ href: business.mapsUrl, label: "Get directions", external: true }],
+      links: [{ href: business.mapsUrl, label: "Get directions", external: true }],
     },
     { label: "Open daily", icon: "clock", text: "9am–11pm" },
     {
       label: "Booking",
       icon: "chat",
-      // The columns look: the number is the fact's words, a plain link like the other facts' (28 Oct,
-      // so the facts start on one line); the other looks keep the number as a small button under
-      // "WhatsApp".
-      text: columns ? (
-        <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__phone">
-          <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
-        </a>
-      ) : (
-        "WhatsApp"
-      ),
-      links: columns
-        ? undefined
-        : [
-            {
-              href: whatsappChatUrl,
-              label: (
-                <>
-                  <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
-                </>
-              ),
-              external: true,
-              plain: true,
-            },
-          ],
+      text: "WhatsApp",
+      links: [
+        {
+          href: whatsappChatUrl,
+          label: (
+            <>
+              <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
+            </>
+          ),
+          external: true,
+          plain: true,
+        },
+      ],
     },
     ...(homeService
       ? [
@@ -184,10 +181,25 @@ export default async function VisitUs({
             icon: "home" as const,
             text: `+${fee} per therapist (Seminyak area)`,
             links: [
-              // The columns look keeps only the home service link ("Villa & hotel massage" left out, owner, 21 Oct).
-              ...(columns ? [] : [{ href: "/villa-hotel-massage/", label: "Villa & hotel massage" }]),
+              { href: "/villa-hotel-massage/", label: "Villa & hotel massage" },
               { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
             ],
+          },
+        ]
+      : []),
+  ];
+  // The card look: three facts (the booking number is the card's button), the
+  // villa fee with one gold link under it.
+  const cardFacts: { label: string; icon: MenuIconName; text: ReactNode; link?: { href: string; label: string } }[] = [
+    { label: "Address", icon: "pin", text: business.address.full },
+    { label: "Open daily", icon: "clock", text: "9am–11pm" },
+    ...(homeService
+      ? [
+          {
+            label: "At your villa",
+            icon: "home" as const,
+            text: `+${fee} per therapist in the Seminyak area`,
+            link: { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
           },
         ]
       : []),
@@ -200,16 +212,33 @@ export default async function VisitUs({
       <p className="visit-us__lead">
         You can book {inline} at Spa Bali Moon, {business.address.short}, open daily from 9am to 11pm
         {homeService ? (
-          <>
-            , or have it at your villa or hotel for an extra {fee} per therapist in the Seminyak area. Treatment prices are the same at the
-            spa and at your villa.
-          </>
+          // "The same at the spa and at your villa", then a fee, read as a contradiction (4 Nov).
+          <>, or have it at your villa or hotel for the same treatment price plus {fee} per therapist in the Seminyak area.</>
         ) : (
           "."
         )}
         {note && <> {note}</>}
       </p>
-      {tiles ? (
+      {card ? (
+        <dl className="visit-us__facts">
+          {cardFacts.map((fact) => (
+            <div key={fact.label} className="visit-us__fact">
+              <dt>
+                <MenuIcon name={fact.icon} className="visit-us__fact-icon" />
+                <span>{fact.label}</span>
+              </dt>
+              <dd>
+                {fact.text}
+                {fact.link ? (
+                  <Link prefetch={false} href={fact.link.href} className="visit-us__fact-link">
+                    {fact.link.label} <span aria-hidden="true">→</span>
+                  </Link>
+                ) : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      ) : tiles ? (
         <dl className="visit-us__tiles">
           {facts.map((fact) => (
             <div key={fact.label} className="visit-us__tile">
@@ -261,14 +290,29 @@ export default async function VisitUs({
         </dl>
       )}
       <div className="visit-us__actions">
-        {/* The columns look has no "Book on WhatsApp" button: the phone number in the facts is the link (owner, 21 Oct;
-            tried again 28 Oct, taken out again the same day). */}
-        {columns ? null : (
+        {/* The card look: the number itself is the button (owner, 4 Nov; a separate "Book on WhatsApp"
+            button was taken out of the columns look on 21 and 28 Oct). */}
+        {card ? (
+          <a
+            href={whatsappChatUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="visit-us__cta"
+            aria-label={`Book on WhatsApp: ${business.phoneDisplay}`}
+          >
+            <i className="fa-brands fa-whatsapp" aria-hidden="true" />
+            {business.phoneDisplay}
+          </a>
+        ) : (
           <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__btn">
             Book on WhatsApp
           </a>
         )}
-        {tiles ? (
+        {card ? (
+          <Link prefetch={false} href="/seminyak/" className="visit-us__cta visit-us__cta--outline">
+            Full Price List
+          </Link>
+        ) : tiles ? (
           <Link prefetch={false} href="/seminyak/" className="visit-us__btn visit-us__btn--outline">
             Full price list
           </Link>
@@ -296,7 +340,7 @@ export default async function VisitUs({
     <section className={`visit-us visit-us--split${look === "rows" ? "" : ` visit-us--${look}`}`}>
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="visit-us__split">
-        {columns ? null : (
+        {card ? null : (
           <div className="visit-us__split-photo">
             <img
               loading="lazy"
