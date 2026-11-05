@@ -20,14 +20,16 @@ const Flag = ({ locale }: { locale: Locale }) => (
  * second language goes live; a language in preview (I18N_PREVIEW_LOCALES)
  * shows here, on localhost and previews.
  *
- * Two places (Header.tsx): the header from 1200px (`look="bar"`, flag,
- * code and arrow), and below that the phone menu's top row, left of the
- * logo (`look="square"`, the flag in a square like the close button).
+ * Two places (Header.tsx), the button the flag alone: the header from
+ * 1200px (`look="circle"`, a cream circle like the search button; the
+ * header has no room for a code and an arrow beside "Book an Appointment"),
+ * and below that the phone menu's top row, left of the logo
+ * (`look="square"`, a white square like the close button).
  * Escape, a click outside or focus leaving it closes the list. Its links are
  * not passed through el(), which would point the English one at the page's
  * own language. Styles: src/styles/i18n.css.
  */
-export default function LanguageSwitcher({ look, id }: { look: "bar" | "square"; id: string }) {
+export default function LanguageSwitcher({ look, id }: { look: "circle" | "square"; id: string }) {
   const { t, locale, languages } = useI18n();
   const path = useSitePath() || "/";
   const [open, setOpen] = useState(false);
@@ -74,16 +76,6 @@ export default function LanguageSwitcher({ look, id }: { look: "bar" | "square";
         onClick={() => setOpen((v) => !v)}
       >
         <Flag locale={locale} />
-        {look === "bar" && (
-          <>
-            <span className="lang-menu__code" aria-hidden="true">
-              {locale.toUpperCase()}
-            </span>
-            <svg className="lang-menu__arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-              <path d="M2 3.5l3 3 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </>
-        )}
       </button>
       <ul id={id} className="lang-menu__list">
         {pageLocales.map((other) => {

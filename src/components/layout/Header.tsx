@@ -137,7 +137,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
               </nav>
             </div>
             <div className="jsx-header menu-btns">
-              <LanguageSwitcher look="bar" id="lang-menu-header" />
+              <LanguageSwitcher look="circle" id="lang-menu-header" />
               <div ref={searchRef} className="jsx-header header-search d-none d-lg-block">
                 <button
                   onClick={() => setSearchOpen((v) => !v)}

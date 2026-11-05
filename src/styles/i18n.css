@@ -74,18 +74,29 @@
 
 /* The language switcher (src/components/layout/LanguageSwitcher.tsx): a
    button with the page's flag that opens a white card of flags and names.
-   In the header from 1200px a cream pill like the search button (flag, code,
-   arrow); below that, in the phone menu's top row, a white square like the
-   close button. Shown only once a page exists in a second language. */
+   In the header from 1200px a cream circle like the search button; below
+   that, in the phone menu's top row, a white square like the close button.
+   Shown only once a page exists in a second language. */
 .lang-menu {
   position: relative;
 }
-.lang-menu--bar {
+.lang-menu--circle {
   display: none;
+  flex: none;
 }
 @media (min-width: 1200px) {
-  .lang-menu--bar {
+  .lang-menu--circle {
     display: block;
+  }
+  /* The menu's labels stay on one line ("Home Service", "Treatments ⌄"),
+     and while the switcher takes its place beside the search, the menu's
+     gaps are a little narrower so "Book an Appointment" still fits from
+     1400px (mobile-nav.css sets them without it). */
+  .lh.header-area .main-menu > nav > ul > li > a {
+    white-space: nowrap;
+  }
+  .lh.header-area .header__main:has(.lang-menu--circle) .main-menu > nav > ul {
+    gap: clamp(14px, calc((100vw - 1160px) / 14), 30px);
   }
 }
 .lang-menu--square {
@@ -113,29 +124,17 @@
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
-.lang-menu--bar .lang-menu__button {
-  gap: 8px;
+.lang-menu--circle .lang-menu__button {
+  width: 44px;
   height: 44px;
-  padding: 0 14px 0 12px;
+  padding: 0;
   border: 0;
-  border-radius: 999px;
+  border-radius: 50%;
   background-color: var(--theme-color-gray, #f5f2ec);
-  font-family: var(--text-font);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1;
 }
-.lang-menu--bar .lang-menu__button:is(:hover, :focus-visible),
-.lang-menu--bar.is-open .lang-menu__button {
+.lang-menu--circle .lang-menu__button:is(:hover, :focus-visible),
+.lang-menu--circle.is-open .lang-menu__button {
   background-color: rgba(var(--theme-color1-rgb), 0.16);
-}
-.lang-menu__arrow {
-  color: var(--theme-color1);
-  transition: transform 0.25s ease;
-}
-.lang-menu.is-open .lang-menu__arrow {
-  transform: rotate(180deg);
 }
 .lang-menu--square .lang-menu__button {
   width: 40px;
@@ -167,7 +166,7 @@
   transform: translateY(-4px);
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
 }
-.lang-menu--bar .lang-menu__list {
+.lang-menu--circle .lang-menu__list {
   right: 0;
 }
 .lang-menu--square .lang-menu__list {
@@ -181,8 +180,7 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .lang-menu__list,
-  .lang-menu.is-open .lang-menu__list,
-  .lang-menu__arrow {
+  .lang-menu.is-open .lang-menu__list {
     transition: none;
   }
 }
