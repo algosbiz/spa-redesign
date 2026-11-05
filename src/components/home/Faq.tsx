@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { home } from "@/data/pages/home";
+import { useI18n } from "@/i18n/client";
 import { linkedText } from "@/lib/linkedText";
 
 const S = "jsx-faq";
@@ -23,10 +24,11 @@ function splitNumber(question: string): [string | null, string] {
  * `arrow="line"` swaps the circle for a plain thin chevron (the homepage).
  */
 export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" }) {
+  const { el } = useI18n();
   const { faq } = home;
   const [open, setOpen] = useState<number | null>(0);
 
-  return (
+  return el(
     <div className="jsx-home homepage-faq-section v2-faq">
       <section className={`${S} faq-section pt-100`}>
         <div className={`${S} outer-box`}>

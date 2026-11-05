@@ -8,6 +8,7 @@ import { home } from "@/data/pages/home";
 import { pricelistPage } from "@/data/pages/pricelist";
 import { packageSaving } from "@/lib/packageSaving";
 import { whatsappChatUrl } from "@/lib/whatsapp";
+import { getI18n } from "@/i18n/server";
 
 /**
  * Homepage v2 packages — the live pricing-section-five cards with the
@@ -16,9 +17,10 @@ import { whatsappChatUrl } from "@/lib/whatsapp";
  * sits under the cards. Two cards a row until 1200px (live: 3 + 1), and below
  * 768px they scroll sideways.
  */
-export default function Packages() {
+export default async function Packages() {
   const { packages, packageIntro } = home;
-  const notes = packageNotes(pricelistPage.packageGroups);
+  const { t } = await getI18n();
+  const notes = packageNotes(pricelistPage.packageGroups, t);
   return (
     <div className="jsx-home homepage-pricing-services-join homepage-pricing-section">
       <section className="pricing-section-five section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130 v2-packages">

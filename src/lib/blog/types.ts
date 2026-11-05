@@ -23,6 +23,13 @@ export type Post = {
   published_at: string | null;
   created_at: string | null;
   updated_at: string | null;
+  /**
+   * The article's language (src/i18n/config.ts), "en" for every article
+   * written before the other languages; missing on the seed articles.
+   */
+  locale?: string;
+  /** For a translation: the id of the article it translates. */
+  translation_of?: string | null;
 };
 
 /** What the article list, the sidebar and the previous/next links need. */
@@ -32,7 +39,10 @@ export type PostSummary = Pick<
 >;
 
 /** One row of the admin dashboard. */
-export type PostRow = Pick<Post, "id" | "slug" | "title" | "status" | "category" | "published_at" | "updated_at">;
+export type PostRow = Pick<
+  Post,
+  "id" | "slug" | "title" | "status" | "category" | "published_at" | "updated_at" | "locale" | "translation_of"
+>;
 
 /** What the admin editor sends when it saves. */
 export type PostInput = {
@@ -48,4 +58,6 @@ export type PostInput = {
   seo_title: string | null;
   seo_description: string | null;
   show_date: boolean;
+  locale: string;
+  translation_of: string | null;
 };

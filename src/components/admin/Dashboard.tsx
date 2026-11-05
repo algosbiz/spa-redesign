@@ -2,10 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { defaultLocale, isLocale, localePath, localeSettings } from "@/i18n/config";
 import type { BlogSetup } from "@/lib/blog/setup";
 import type { PostRow } from "@/lib/blog/types";
 import AdminNotice from "./AdminNotice";
 import AdminShell from "./AdminShell";
+
+/** Where an article is published: /guide/…/ for English, in its language's folder otherwise (/jp/guide/…/). */
+const articleUrl = (p: PostRow) =>
+  localePath(`/guide/${p.slug}/`, p.locale && isLocale(p.locale) ? p.locale : undefined);
 
 const fmt = (d: string | null) =>
   d ? new Date(d).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }) : "—";
@@ -155,7 +160,12 @@ export default function Dashboard({
                       <Link href={`/admin/edit/${p.id}/`} className="adm-title-link">
                         {p.title}
                       </Link>
-                      <div className="adm-slug">/guide/{p.slug}/</div>
+                      <div className="adm-slug">
+                        {p.locale && p.locale !== defaultLocale && isLocale(p.locale)
+                          ? `${localeSettings[p.locale].nativeName} · `
+                          : null}
+                        /guide/{p.slug}/
+                      </div>
                     </td>
                     <td data-label="Status">
                       <span className={`adm-badge adm-badge-${p.status}`}>
@@ -173,7 +183,7 @@ export default function Dashboard({
                       <div className="adm-actions">
                       {p.status === "published" && (
                         <a
-                          href={`/guide/${p.slug}/`}
+                          href={articleUrl(p)}
                           target="_blank"
                           rel="noreferrer"
                           className="adm-act"

@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ReviewText from "@/components/ui/ReviewText";
 import { treatmentPageReviews } from "@/data/testimonials";
 import type { Testimonial } from "@/data/types";
+import { useI18n } from "@/i18n/client";
 
 /** Gold quote mark above each review. */
 const Quote = () => (
@@ -42,6 +43,7 @@ export default function TreatmentTestimonials({
   /** `null` hides the right-hand leaf. */
   rightShapeSrc?: string | null;
 }) {
+  const { el } = useI18n();
   const swiperRef = useRef<SwiperInstance | null>(null);
   const live = () => {
     const s = swiperRef.current;
@@ -55,7 +57,7 @@ export default function TreatmentTestimonials({
     s.updateAutoHeight(320);
   }, []);
 
-  return (
+  return el(
     <section
       className={`testimonial-section-two${paperDecoration ? " section__decoration-top section__decoration-bottom bg-sub" : ""} pt-170 pb-170`}
     >

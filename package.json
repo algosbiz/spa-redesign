@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "eslint",
     "blog:setup": "node --env-file=.env.local tools/blog/setup-neon.mjs",
-    "cloudflare:redirects": "node --experimental-strip-types --no-warnings tools/cloudflare/make-bulk-redirects.mjs"
+    "cloudflare:redirects": "node --experimental-strip-types --no-warnings tools/cloudflare/make-bulk-redirects.mjs",
+    "i18n:missing": "node tools/i18n/missing.mjs",
+    "i18n:status": "node tools/i18n/missing.mjs status"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import SectionShapes from "@/components/ui/SectionShapes";
 import { business } from "@/data/business";
+import { getI18n } from "@/i18n/server";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /** "IDR 75.000": the price, with a space that never breaks after "IDR". */
@@ -72,7 +73,7 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
  * buttons full width. It replaced `look="columns"`, whose layers of fixes
  * (21–28 Oct) made the facts start at different heights.
  */
-export default function VisitUs({
+export default async function VisitUs({
   treatment,
   inline = treatment,
   title,
@@ -100,6 +101,7 @@ export default function VisitUs({
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
 }) {
+  const { t } = await getI18n();
   const rows: { label: string; body: ReactNode }[] = [
     {
       label: "Address",
@@ -206,7 +208,7 @@ export default function VisitUs({
   const content = (
     <>
       <p className="visit-us__kicker">Visit Spa Bali Moon</p>
-      <h2 className="title">{title ?? `Book ${treatment} in Seminyak`}</h2>
+      <h2 className="title">{title ?? t("Book {name} in Seminyak", { name: treatment })}</h2>
       <p className="visit-us__lead">
         You can book {inline} at Spa Bali Moon, {business.address.short}, open daily from 9am to 11pm
         {homeService ? (

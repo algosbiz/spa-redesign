@@ -6,6 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "@/components/sections/TestimonialCard";
 import { testimonials } from "@/data/testimonials";
+import { useI18n } from "@/i18n/client";
 
 /**
  * The live review slider: Swiper with loop, autoHeight, 5s autoplay and
@@ -14,6 +15,7 @@ import { testimonials } from "@/data/testimonials";
  * when the section comes near the screen.
  */
 export default function TestimonialsSlider() {
+  const { el } = useI18n();
   const swiperRef = useRef<SwiperInstance | null>(null);
   const live = () => {
     const s = swiperRef.current;
@@ -27,7 +29,7 @@ export default function TestimonialsSlider() {
     s.updateAutoHeight(320);
   }, []);
 
-  return (
+  return el(
     <Swiper
       modules={[Pagination, Autoplay]}
       slidesPerView={1}

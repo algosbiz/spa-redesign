@@ -5,6 +5,7 @@ import type { PackageGroup } from "@/data/pages/pricelist";
 import { packageSaving } from "@/lib/packageSaving";
 import { linkedText } from "@/lib/linkedText";
 import { priceValue, withDots } from "@/lib/price";
+import { getI18n, type I18n } from "@/i18n/server";
 
 const COUNT = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
 
@@ -13,16 +14,21 @@ const COUNT = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eig
  * over the heading, and "Four packages from IDR 399.000 to IDR 549.000 per
  * person, each …" opening its text, the answer first (owner, 22 Oct).
  */
-function priceWords(group: PackageGroup) {
+function priceWords(group: PackageGroup, t: I18n["t"]) {
   const prices = group.packages.map((pack) => priceValue(pack.price));
   const low = `IDR ${withDots(Math.min(...prices))}`;
   const high = `IDR ${withDots(Math.max(...prices))}`;
-  const unit = group.twoPax ? "for two" : "per person";
-  const count = COUNT[prices.length] ?? String(prices.length);
-  return {
-    kicker: `From ${low} ${unit}`,
-    answer: `${count} packages from ${low} to ${high} ${unit}, each ${group.includes}.`,
-  };
+  // {count} is the number in words, {number} in digits, for a translation to choose.
+  const values = { count: COUNT[prices.length] ?? String(prices.length), number: prices.length, low, high, includes: group.includes };
+  return group.twoPax
+    ? {
+        kicker: t("From {low} for two", values),
+        answer: t("{count} packages from {low} to {high} for two, each {includes}.", values),
+      }
+    : {
+        kicker: t("From {low} per person", values),
+        answer: t("{count} packages from {low} to {high} per person, each {includes}.", values),
+      };
 }
 
 /** The treatment page each group's cards link to (AEO roadmap R25, 17 Oct). */
@@ -42,7 +48,7 @@ const PAGE_OF_CARD: Record<string, string> = {
  * is a "pricing-section-five" band; the first gets the torn top edge and the
  * last the torn bottom edge, so together they read as one paper band.
  */
-export default function PackageGroups({
+export default async function PackageGroups({
   groups,
   icons,
   featured,
@@ -53,7 +59,8 @@ export default function PackageGroups({
   featured?: ReactNode;
 }) {
   const sorted = [...groups].sort((a, b) => a.title.localeCompare(b.title));
-  const notes = packageNotes(groups);
+  const { t } = await getI18n();
+  const notes = packageNotes(groups, t);
   return (
     <>
       {sorted.map((group, s) => {
@@ -62,7 +69,7 @@ export default function PackageGroups({
         const edges = `${first ? "section__decoration-top" : ""} ${last ? "section__decoration-bottom" : ""}`.trim();
         const icon = icons[group.cardTitle];
         const page = PAGE_OF_CARD[group.cardTitle];
-        const words = priceWords(group);
+        const words = priceWords(group, t);
         return (
           <section
             key={s}

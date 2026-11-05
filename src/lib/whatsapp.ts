@@ -24,27 +24,66 @@ type WhatsAppOptions = {
   source?: string;
 };
 
+// The message's sentences, as templates: the translation memory
+// (src/i18n/translate.ts) translates them, with the treatment's name, on the
+// other languages' pages (translateWhatsAppUrl below).
+const GREETING = "Hi Spa Bali Moon,";
+const BOOK = "I'd like to book {name}.";
+const BOOK_ANY = "I'd like to make a booking.";
+const FROM = "(Website: {source})";
+
+const fill = (template: string, values: Record<string, string>) =>
+  template.replace(/\{(\w+)\}/g, (match, name: string) => values[name] ?? match);
+
 /**
  * The one message format used by the whole site.
  * TODO FLOW-01: the old site opened WhatsApp without a message; a pre-filled
  * message was requested in the redesign brief. Adjust the wording here if needed.
  */
 export function whatsappMessage({ treatment, packageName, source }: WhatsAppOptions = {}): string {
-  const lines = ["Hi Spa Bali Moon,"];
+  const lines = [GREETING];
 
   if (treatment) {
-    lines.push(`I'd like to book ${treatment}.`);
+    lines.push(fill(BOOK, { name: treatment }));
   } else if (packageName) {
-    lines.push(`I'd like to book ${packageName}.`);
+    lines.push(fill(BOOK, { name: packageName }));
   } else {
-    lines.push("I'd like to make a booking.");
+    lines.push(BOOK_ANY);
   }
 
   if (source) {
-    lines.push("", `(Website: ${source})`);
+    lines.push("", fill(FROM, { source }));
   }
 
   return lines.join("\n");
+}
+
+/**
+ * A wa.me link from a page in another language, with its message translated
+ * line by line, and the language's code on a last line ("[JA]") so the team
+ * knows which language the guest reads. A link without a message is kept.
+ */
+export function translateWhatsAppUrl(
+  url: string,
+  t: (text: string, values?: Record<string, string>) => string,
+  locale: string,
+): string {
+  const match = /^(https:\/\/wa\.me\/\d+)\?text=(.*)$/.exec(url);
+  if (!match) return url;
+  const book = /^I'd like to book (.+)\.$/;
+  const from = /^\(Website: (.+)\)$/;
+  const lines = decodeURIComponent(match[2])
+    .split("\n")
+    .map((line) => {
+      if (!line) return line;
+      const booked = book.exec(line);
+      if (booked) return t(BOOK, { name: t(booked[1]) });
+      const page = from.exec(line);
+      if (page) return t(FROM, { source: t(page[1]) });
+      return t(line);
+    });
+  lines.push(`[${locale.toUpperCase()}]`);
+  return `${match[1]}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
 /** Full wa.me link with the message already filled in. */
