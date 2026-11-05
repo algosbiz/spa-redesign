@@ -14,7 +14,7 @@ const Flag = ({ locale }: { locale: Locale }) => (
 /**
  * The language switcher: a button with the page's flag that opens the
  * languages this page is in, each with its flag and its own name, a link to
- * the same page in that language's folder (/about/, /ja/about/:
+ * the same page in that language's folder (/about/, /jp/about/:
  * src/i18n/config.ts); the current one is ticked. Nothing while the page
  * exists in one language only, as every page does in production until a
  * second language goes live; a language in preview (I18N_PREVIEW_LOCALES)

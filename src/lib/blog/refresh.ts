@@ -21,7 +21,7 @@ export const readBlogMenu = (locale: Locale = defaultLocale) => getBlogMenu(loca
  * before the write): when the save changed the menu (a title, a new or removed
  * article…), every page is rebuilt and Cloudflare's whole cache is dropped.
  *
- * `locale` is the article's language: its folder's copies (/ja/guide/…/)
+ * `locale` is the article's language: its folder's copies (/jp/guide/…/)
  * are the ones dropped. `languages` (getPostLanguages) gives the article's
  * slug in its other languages, whose pages link to it (hreflang) and are
  * dropped too.

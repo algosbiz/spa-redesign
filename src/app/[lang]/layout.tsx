@@ -7,8 +7,8 @@ import { siteMetadata } from "@/lib/seo";
 
 /**
  * The site's root layout, one per language (src/i18n/config.ts). Every page
- * is served from here, /about/ from /en/about/ (src/proxy.ts) and /ja/about/
- * as it is, so the language is known while the page is built statically. A
+ * is served from here, /about/ from /en/about/ and /jp/about/ from /ja/about/
+ * (src/proxy.ts), so the language is known while the page is built statically. A
  * language that is neither live nor in preview answers 404.
  */
 export function generateStaticParams() {

@@ -7,7 +7,7 @@ folder per bahasa**, bukan domain per negara seperti rencana awal. Yang
 tersisa adalah keputusan owner dan review terjemahan.
 
 Tujuan: spabalimoon.com tersedia dalam bahasa Jepang, Korea, China, dan Hindi
-(pasar India), masing-masing di folder sendiri: `/ja/`, `/ko/`, `/zh/`, `/hi/`.
+(pasar India), masing-masing di folder sendiri: `/jp/`, `/kr/`, `/cn/`, `/in/`.
 Situs English yang sekarang **tidak boleh berubah**: URL, title, canonical,
 dan redirect tetap persis seperti sekarang.
 
@@ -19,14 +19,20 @@ pertama di alamat menentukan bahasa halaman; English tidak punya folder.
 | Bahasa | Kode (hreflang) | Contoh alamat | Mesin pencari utama | Kanal chat untuk booking |
 |---|---|---|---|---|
 | English | `en` + `x-default` | spabalimoon.com/about/ (tetap) | Google | WhatsApp |
-| Jepang | `ja` | spabalimoon.com/ja/about/ | Google (Yahoo! Japan memakai hasil Google) | LINE, WhatsApp |
-| Korea | `ko` | spabalimoon.com/ko/about/ | Naver, Google | KakaoTalk, WhatsApp |
-| China (aksara sederhana) | `zh-Hans` | spabalimoon.com/zh/about/ | Baidu (Google diblokir di China daratan) | WeChat (WhatsApp diblokir di China daratan) |
-| India | `hi` (keputusan 1) | spabalimoon.com/hi/about/ | Google | WhatsApp |
+| Jepang | `ja` | spabalimoon.com/jp/about/ | Google (Yahoo! Japan memakai hasil Google) | LINE, WhatsApp |
+| Korea | `ko` | spabalimoon.com/kr/about/ | Naver, Google | KakaoTalk, WhatsApp |
+| China (aksara sederhana) | `zh-Hans` | spabalimoon.com/cn/about/ | Baidu (Google diblokir di China daratan) | WeChat (WhatsApp diblokir di China daratan) |
+| India | `hi` (keputusan 1) | spabalimoon.com/in/about/ | Google | WhatsApp |
 
-- Slug tetap bahasa Inggris, hanya diawali kode bahasa:
-  `spabalimoon.com/ja/seminyak/balinese-massage/`. Dengan begitu peta
+- Slug tetap bahasa Inggris, hanya diawali folder bahasa:
+  `spabalimoon.com/jp/seminyak/balinese-massage/`. Dengan begitu peta
   hreflang cukup "path yang sama dengan awalan bahasa lain".
+- **Nama folder memakai kode negara** (`jp`, `kr`, `cn`, `in`; keputusan
+  owner 5 November 2026), karena lebih dikenali pengunjung daripada kode
+  bahasa (`/hi/` terbaca seperti sapaan). Kode bahasa (`ja`, `ko`, `zh`,
+  `hi`) tetap dipakai di dalam aplikasi dan untuk mesin pencari: `hreflang`,
+  `<html lang>`, file terjemahan, kolom bahasa artikel, dan
+  `I18N_PREVIEW_LOCALES`. Alamat `/ja/…` dialihkan 301 ke `/jp/…`.
 - Satu domain berarti semua bahasa mewarisi otoritas spabalimoon.com di
   Google, tidak ada domain negara yang perlu didaftarkan, dan cukup satu
   property Search Console. Rencana awal (spabalimoon.jp, .kr, .cn, .in)
@@ -91,12 +97,13 @@ src/app/
   komponen server di atasnya.
 - `src/proxy.ts` membaca folder pertama di alamat. Alamat tanpa folder bahasa
   dilayani dari `/en/...` lewat *rewrite* internal, jadi URL English tidak
-  berubah, dan `/en/...` di-redirect 301 ke alamat tanpa awalan. `/ja/...`
-  dilayani apa adanya kalau bahasa itu aktif (atau sedang preview) dan
-  halamannya sudah diterjemahkan; selain itu 404. Peta redirect dari admin
+  berubah, dan `/jp/...` dilayani dari `/ja/...` kalau bahasa itu aktif
+  (atau sedang preview) dan halamannya sudah diterjemahkan; selain itu 404.
+  Jalur internal (`/en/...`, `/ja/...`) di-redirect 301 ke alamat yang
+  terlihat. Peta redirect dari admin
   (R2) hanya dicek untuk alamat English.
 - Bahasa yang sedang diterjemahkan bisa dibuka di localhost dan preview Vercel
-  lewat `I18N_PREVIEW_LOCALES` (`localhost:3009/ja/`), tidak di produksi.
+  lewat `I18N_PREVIEW_LOCALES=ja` (`localhost:3009/jp/`), tidak di produksi.
 - `next.config.ts`: aturan `www` → apex dan redirect URL lama WordPress
   (`liveRedirects`) tetap seperti sekarang.
 - `trailingSlash: true` dipertahankan.
@@ -105,7 +112,7 @@ src/app/
 
 - `src/i18n/config.ts`: daftar bahasa, bahasa default, kode hreflang, kode
   `og:locale` (`ja_JP`, `ko_KR`, `zh_CN`, `hi_IN`), dan `localePath(path,
-  lang)` yang menambahkan awalan bahasa (`/about/` → `/ja/about/`).
+  lang)` yang menambahkan folder bahasa (`/about/` → `/jp/about/`).
 - `absoluteUrl(path, lang)` di `src/lib/seo.ts` memakai `business.url` untuk
   semua bahasa. File (gambar) tidak punya bahasa, jadi alamatnya sama di
   semua halaman.
@@ -144,7 +151,7 @@ Selain itu:
 Halaman yang belum diterjemahkan tidak tersedia di folder bahasa itu (404).
 Halaman itu tidak masuk sitemap atau hreflang bahasa tersebut, dan link
 menunya mengarah ke versi English (alamat tanpa awalan). Konten English tidak
-boleh tampil di bawah `/ja/`, `/ko/`, `/zh/`, atau `/hi/` karena menjadi
+boleh tampil di bawah `/jp/`, `/kr/`, `/cn/`, atau `/in/` karena menjadi
 duplikat dan membingungkan tamu.
 
 ### 3.5 SEO per bahasa
@@ -153,7 +160,7 @@ duplikat dan membingungkan tamu.
   `buildMetadata`, hanya untuk bahasa yang halamannya ada. `en` dan
   `x-default` mengarah ke halaman English.
 - **Canonical** setiap halaman mengarah ke dirinya sendiri, dengan awalan
-  bahasanya (`https://spabalimoon.com/ja/about/`).
+  bahasanya (`https://spabalimoon.com/jp/about/`).
 - **Satu sitemap.xml** berisi semua bahasa aktif, dengan `xhtml:link`
   alternate. **robots.txt** tetap file statis yang sama.
 - **Title dan meta description** ditulis untuk keyword lokal, bukan
@@ -288,13 +295,13 @@ English dibuat persis seperti sebelumnya.
 - **Artikel guide adalah satu-satunya konten yang ditulis per bahasa.** Editor
   admin punya pilihan Language dan Translation of. Terjemahan memakai slug
   artikel English-nya, jadi alamatnya sama dengan awalan bahasanya
-  (`/ja/guide/…/`) dan hreflang saling menunjuk.
+  (`/jp/guide/…/`) dan hreflang saling menunjuk.
 - **Satu domain dengan folder per bahasa** (keputusan owner 3 November 2026,
   menggantikan domain per negara). Kode dan terjemahan dari 2–3 November
   dipakai apa adanya; yang berubah hanya cara alamat dipetakan:
-  - `/about/` tetap English; `/ja/about/` dan seterusnya untuk bahasa lain.
+  - `/about/` tetap English; `/jp/about/` dan seterusnya untuk bahasa lain.
   - Link di halaman bahasa lain ke halaman yang sudah diterjemahkan otomatis
-    diberi awalan (`/about/` → `/ja/about/`, `linkFor` di
+    diberi awalan (`/about/` → `/jp/about/`, `linkFor` di
     `src/i18n/config.ts`). Link ke halaman yang belum diterjemahkan tetap ke
     versi English.
   - Pemilih bahasa menunjuk halaman yang sama di folder bahasa lain.
@@ -307,7 +314,7 @@ English dibuat persis seperti sebelumnya.
 | Area | Perubahan |
 |---|---|
 | Rute | Semua halaman di `src/app/[lang]/`. Admin punya root layout sendiri. Alamat yang tidak cocok dengan rute apa pun dijawab `src/app/global-not-found.tsx`. |
-| Alamat → bahasa | `src/proxy.ts`: folder pertama di alamat (`/ja/…`); tanpa folder berarti English. Halaman yang belum diterjemahkan dijawab 404. Bahasa yang belum aktif bisa dibuka di localhost/preview lewat `I18N_PREVIEW_LOCALES`. |
+| Alamat → bahasa | `src/proxy.ts`: folder pertama di alamat (`/jp/…`, dilayani dari rute `/ja/…`); tanpa folder berarti English. Halaman yang belum diterjemahkan dijawab 404. Bahasa yang belum aktif bisa dibuka di localhost/preview lewat `I18N_PREVIEW_LOCALES`. |
 | Penerjemah | `src/i18n/server.ts` (`getI18n`, `render`) dan `src/i18n/client.tsx` (`useI18n`, `el`). Setiap halaman dan layout `(site)` lewat `render()`, setiap komponen client yang punya teks lewat `el()`. |
 | SEO | `pageMetadata` (title/description diterjemahkan, canonical dengan awalan bahasa, `og:locale`), hreflang dua arah, satu sitemap untuk semua bahasa. |
 | Tampilan | Font sistem per bahasa dan aturan pemenggalan baris (`src/styles/i18n.css`), tanggal per bahasa (`src/i18n/format.ts`), pemilih bahasa berupa dropdown bendera (di navbar mulai 1200px, di baris atas menu ponsel di bawahnya; bendera di `public/images/flags/`, English memakai bendera UK). Di production hanya muncul kalau halaman ada di ≥ 2 bahasa aktif; di localhost dan preview, bahasa yang sedang preview ikut tampil. |
@@ -323,7 +330,7 @@ English dibuat persis seperti sebelumnya.
 2. Jalankan `npm run i18n:missing -- ja`. Semua teks yang belum diterjemahkan
    masuk ke `src/i18n/messages/ja/*.json` dengan nilai kosong.
 3. Isi terjemahannya (draf AI, lalu dicek penutur asli). Buka
-   `http://localhost:3009/ja/…` untuk mengecek tampilannya, lalu ulangi
+   `http://localhost:3009/jp/…` untuk mengecek tampilannya, lalu ulangi
    langkah 2 sampai tidak ada yang tersisa.
 4. Daftarkan path halaman yang sudah diterjemahkan di `translatedPaths`
    (`src/i18n/config.ts`), lalu tambahkan `"ja"` ke `activeLocales`.
@@ -338,7 +345,7 @@ English dibuat persis seperti sebelumnya.
   Reflexology, Facial, Deep Tissue, Warm Candle, Traditional). Header, menu,
   dan footer ikut diterjemahkan. Ke-17 halaman ini sudah terdaftar di
   `translatedPaths.ja`.
-- Hasil pengecekan di preview `/ja/`: `npm run i18n:missing` menemukan 0 teks
+- Hasil pengecekan di preview `/jp/`: `npm run i18n:missing` menemukan 0 teks
   yang tersisa. Tombol durasi, total paket, dan item menu harga sama jumlahnya
   dengan versi English. Judul Jepang dipenggal per frasa (`auto-phrase`), dan
   judul banner di ponsel dikecilkan supaya kata katakana panjang tidak
@@ -366,7 +373,7 @@ Sebelum bahasa Jepang dinyalakan:
 - **Draf AI untuk 17 halaman inti yang sama sudah lengkap**, masing-masing 2.347
   teks. Glosarium Korea memakai home service → 출장 마사지/출장 서비스.
   Glosarium China (aksara sederhana) memakai home service → 上门按摩/上门服务.
-- Hasil pengecekan di preview `/ko/` dan `/zh/`: 0 teks tersisa. Tombol durasi,
+- Hasil pengecekan di preview `/kr/` dan `/cn/`: 0 teks tersisa. Tombol durasi,
   total paket, menu harga, dan FAQ sama jumlahnya dengan versi English, dan
   `<html lang>` bernilai `ko` / `zh-Hans`.
 - Perbaikan yang muncul saat pengecekan, berlaku untuk semua bahasa:
@@ -407,13 +414,13 @@ Sebelum bahasa Jepang dinyalakan:
 ### Status Hindi (3 November 2026)
 
 - **Owner memutuskan India memakai bahasa Hindi** (keputusan 1 di bagian 2),
-  di `/hi/`.
+  di `/in/`.
 - **Draf AI untuk 35 halaman yang sama sudah lengkap**, berisi 3.781 teks.
   - Bahasanya Hindi modern sehari-hari dan menyapa pembaca dengan आप.
   - Istilah spa memakai serapan yang lazim di India (मसाज, स्पा, फेशियल,
     होम सर्विस), dan मसाज diperlakukan sebagai kata feminin.
   - Jam buka ditulis "सुबह 9 बजे से रात 11 बजे तक". Angka tetap 0–9.
-- Hasil pengecekan di preview `/hi/`:
+- Hasil pengecekan di preview `/in/`:
   - 0 teks tersisa, tidak ada error, dan tidak ada link rusak.
   - Struktur halaman sama dengan English.
   - Aksara Devanagari tampil utuh di judul dan menu.

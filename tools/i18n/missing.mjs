@@ -7,10 +7,10 @@
 //      I18N_MISSING_FILE=.i18n-missing.jsonl
 // 2. npm run dev
 // 3. npm run i18n:missing -- ja          (or: -- ja http://localhost:3009)
-//    Opens every page of the sitemap as /ja/…; the server writes each English
-//    text without a translation to .i18n-missing.jsonl, and this script adds
-//    them to the files. Run it again after translating: nothing is added once
-//    every page is translated.
+//    Opens every page of the sitemap as /ja/… (which redirects to /jp/…);
+//    the server writes each English text without a translation to
+//    .i18n-missing.jsonl, and this script adds them to the files. Run it
+//    again after translating: nothing is added once every page is translated.
 //    Only some pages: list their paths after the address,
 //      npm run i18n:missing -- ja http://localhost:3009 / /seminyak/ /contact/
 //

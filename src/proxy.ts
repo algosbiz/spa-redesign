@@ -1,5 +1,5 @@
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
-import { defaultLocale, isLocale, isServedLocale, servesPage } from "@/i18n/config";
+import { defaultLocale, isLocale, isServedLocale, localeOfFolder, localePath, servesPage } from "@/i18n/config";
 import { fetchPublishedMap, type RedirectMap } from "@/lib/redirects/map";
 
 /**
@@ -13,12 +13,13 @@ import { fetchPublishedMap, type RedirectMap } from "@/lib/redirects/map";
  *    earlier, by next.config.ts and Cloudflare. Both are for spabalimoon.com's
  *    old addresses, so they apply to the English site only.
  *
- * 2. The language (src/i18n/config.ts): the first folder of the address. An
- *    address without one is English, served from src/app/[lang]/ as /en/…
- *    without the prefix ever showing in the address bar; /en/… itself goes
- *    to the address without it. /ja/about/ is the Japanese page as it is,
- *    once Japanese is served (live, or in preview: I18N_PREVIEW_LOCALES) and
- *    has that page; otherwise it is a 404.
+ * 2. The language (src/i18n/config.ts): the first folder of the address, the
+ *    country code of the language's visitors. An address without one is
+ *    English, served from src/app/[lang]/ as /en/…, and /jp/about/ is served
+ *    from /ja/about/, once Japanese is served (live, or in preview:
+ *    I18N_PREVIEW_LOCALES) and has that page; otherwise it is a 404. The
+ *    app's own paths (/en/…, /ja/…) never show: they go to the visible
+ *    address.
  */
 
 const REFRESH_MS = 30_000;
@@ -52,15 +53,17 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
   const prefix = pathname.split("/")[1];
   const page = request.nextUrl.clone();
 
-  if (isLocale(prefix)) {
-    const rest = pathname.slice(prefix.length + 1) || "/";
-    // English has no prefix.
-    if (prefix === defaultLocale) return NextResponse.redirect(new URL(rest + search, request.nextUrl.origin), 301);
-    if (isServedLocale(prefix) && servesPage(prefix, rest)) return NextResponse.next();
+  const rest = pathname.slice(prefix.length + 1) || "/";
+  // The app's path of a page (/en/about/, /ja/about/): to its visible address.
+  if (isLocale(prefix)) return NextResponse.redirect(new URL(localePath(rest, prefix) + search, request.nextUrl.origin), 301);
+
+  const locale = localeOfFolder(prefix);
+  if (locale) {
     // A page not translated into the language is not there (plan §3.4), nor
     // any page of a language not served: its address matches nothing, so it
     // gets the 404 page.
-    page.pathname = `/${defaultLocale}/_untranslated${rest}`;
+    const served = isServedLocale(locale) && servesPage(locale, rest);
+    page.pathname = served ? `/${locale}${rest}` : `/${defaultLocale}/_untranslated${rest}`;
     return NextResponse.rewrite(page);
   }
 

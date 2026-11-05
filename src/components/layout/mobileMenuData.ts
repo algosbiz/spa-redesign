@@ -18,7 +18,7 @@ export type MobileMenuData = { treatments: MobileMenuGroup[]; posts: MobileMenuE
  *    homepage slider's photo and starting price ("From IDR 159.000").
  *  - Blog: the blog menu from the database (titles as set in /admin/), with
  *    the cover photos, in the page's language and linked in its folder
- *    (/ja/guide/…/). The desktop Blog dropdown lists the same entries.
+ *    (/jp/guide/…/). The desktop Blog dropdown lists the same entries.
  */
 export async function mobileMenuData(): Promise<MobileMenuData> {
   const locale = await getLocale();

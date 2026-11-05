@@ -4,7 +4,7 @@ import { getI18n } from "./server";
 
 /**
  * buildMetadata (src/lib/seo.ts) in the page's language: its folder in the
- * canonical and og:url (/ja/…), og:locale, and the title and description
+ * canonical and og:url (/jp/…), og:locale, and the title and description
  * translated.
  * The pages use it as their generateMetadata:
  *

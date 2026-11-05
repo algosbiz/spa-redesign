@@ -16,7 +16,7 @@ import type { Post, PostInput, PostRow, PostSummary } from "./types";
  * language's pages list only its own articles. A translation is an article
  * of its own: `translation_of` names the article it translates, and it
  * usually keeps that article's slug, so its address is the same path in its
- * language's folder (/ja/guide/…/). The seed articles are English.
+ * language's folder (/jp/guide/…/). The seed articles are English.
  */
 
 type Row = Record<string, unknown>;

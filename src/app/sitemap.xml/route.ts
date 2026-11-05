@@ -8,7 +8,7 @@ import { absoluteUrl, languageAlternates } from "@/lib/seo";
  * then every published guide article from the blog database, newest first.
  *
  * Every live language is in it (src/i18n/config.ts): each page once per
- * language that has it (/about/, /ja/about/…), and each language's articles.
+ * language that has it (/about/, /jp/about/…), and each language's articles.
  * A page that exists in more than one language lists them all (xhtml:link),
  * as its hreflang tags do; a guide article, each language's version of it.
  *

@@ -8,7 +8,7 @@ import type { PostRow } from "@/lib/blog/types";
 import AdminNotice from "./AdminNotice";
 import AdminShell from "./AdminShell";
 
-/** Where an article is published: /guide/…/ for English, in its language's folder otherwise (/ja/guide/…/). */
+/** Where an article is published: /guide/…/ for English, in its language's folder otherwise (/jp/guide/…/). */
 const articleUrl = (p: PostRow) =>
   localePath(`/guide/${p.slug}/`, p.locale && isLocale(p.locale) ? p.locale : undefined);
 

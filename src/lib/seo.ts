@@ -10,7 +10,7 @@
  * (og:image / twitter:image, URL only), and no page has article dates.
  *
  * `locale` (default English) picks the language folder of the canonical
- * (/ja/about/) and the Open Graph language. A page that exists in more than
+ * (/jp/about/) and the Open Graph language. A page that exists in more than
  * one live language also gets an hreflang link to each of them, plus
  * x-default (English).
  */
@@ -29,7 +29,7 @@ type SeoInput = {
   shareImage?: string;
   /** false = hide from Google (only for internal pages) */
   index?: boolean;
-  /** The page's language; its folder is in the canonical (/ja/about/). */
+  /** The page's language; its folder is in the canonical (/jp/about/). */
   locale?: Locale;
   /** The page's path in each language, when it differs by language (guide articles). */
   languagePaths?: Partial<Record<Locale, string>>;
@@ -37,7 +37,7 @@ type SeoInput = {
 
 /**
  * The full address of a page of `locale`: https://spabalimoon.com/about/,
- * …/ja/about/. A file (an image) belongs to no language: leave `locale` out.
+ * …/jp/about/. A file (an image) belongs to no language: leave `locale` out.
  */
 export function absoluteUrl(path: string, locale: Locale = defaultLocale): string {
   return new URL(localePath(path, locale), business.url).toString();

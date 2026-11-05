@@ -56,7 +56,7 @@ export default function GuidePost({
   morePosts?: GuidePostSummary[];
 }) {
   const { el, locale } = useI18n();
-  // The language's own articles, in its folder (/ja/guide/…/).
+  // The language's own articles, in its folder (/jp/guide/…/).
   const articleHref = (slug: string) => localePath(`/guide/${slug}/`, locale);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<GuidePostSummary[]>([]);
