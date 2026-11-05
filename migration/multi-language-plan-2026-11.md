@@ -316,7 +316,7 @@ English dibuat persis seperti sebelumnya.
 | Rute | Semua halaman di `src/app/[lang]/`. Admin punya root layout sendiri. Alamat yang tidak cocok dengan rute apa pun dijawab `src/app/global-not-found.tsx`. |
 | Alamat → bahasa | `src/proxy.ts`: folder pertama di alamat (`/jp/…`, dilayani dari rute `/ja/…`); tanpa folder berarti English. Halaman yang belum diterjemahkan dijawab 404. Bahasa yang belum aktif bisa dibuka di localhost/preview lewat `I18N_PREVIEW_LOCALES`. |
 | Penerjemah | `src/i18n/server.ts` (`getI18n`, `render`) dan `src/i18n/client.tsx` (`useI18n`, `el`). Setiap halaman dan layout `(site)` lewat `render()`, setiap komponen client yang punya teks lewat `el()`. |
-| SEO | `pageMetadata` (title/description diterjemahkan, canonical dengan awalan bahasa, `og:locale`), hreflang dua arah, satu sitemap untuk semua bahasa. |
+| SEO | `pageMetadata` (title/description diterjemahkan, canonical dengan awalan bahasa, `og:locale`), hreflang dua arah dan `og:locale:alternate`, satu sitemap untuk semua bahasa, JSON-LD dengan alamat dan `inLanguage` bahasa halaman (`src/components/seo/JsonLd.tsx`), dan `noindex` untuk bahasa yang masih preview. |
 | Tampilan | Font sistem per bahasa dan aturan pemenggalan baris (`src/styles/i18n.css`), tanggal per bahasa (`src/i18n/format.ts`), pemilih bahasa berupa dropdown bendera (di navbar mulai 1200px, di baris atas menu ponsel di bawahnya; bendera di `public/images/flags/`, English memakai bendera UK). Di production hanya muncul kalau halaman ada di ≥ 2 bahasa aktif; di localhost dan preview, bahasa yang sedang preview ikut tampil. |
 | Booking | `src/data/booking.ts`: LINE/KakaoTalk/WeChat per bahasa, WhatsApp selama belum diisi. Pesan WhatsApp otomatis diterjemahkan dan diberi kode bahasa (`[JA]`). |
 | Blog | Kolom `locale` dan `translation_of` dibuat otomatis saat pertama dipakai. Semua query per bahasa, plus pencarian, menu blog, dan sitemap. |
@@ -454,8 +454,8 @@ Sebelum bahasa Jepang dinyalakan:
 - Review penutur asli untuk Jepang, Korea, China, dan Hindi.
 - Perampingan `ui.json` (poin 2 di atas) berlaku untuk semua bahasa.
 - Keputusan di bagian 2: kanal chat per negara.
-- Data terstruktur (JSON-LD) di halaman bahasa lain masih memakai alamat
-  English (`url`, breadcrumb). Canonical dan hreflang sudah benar.
+- Data terstruktur artikel guide per bahasa (`articleSchema`) masih memakai
+  alamat English. Halaman lain sudah memakai folder bahasanya.
 - Tampilan QR WeChat untuk China (menunggu akun).
 - Pengecekan tampilan per bahasa (teks panjang Hindi, judul CJK) setelah
   terjemahan ada.

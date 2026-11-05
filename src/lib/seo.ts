@@ -12,11 +12,12 @@
  * `locale` (default English) picks the language folder of the canonical
  * (/jp/about/) and the Open Graph language. A page that exists in more than
  * one live language also gets an hreflang link to each of them, plus
- * x-default (English).
+ * x-default (English), and their og:locale:alternate. A page of a language
+ * in preview is noindex.
  */
 import type { Metadata } from "next";
 import { business } from "@/data/business";
-import { defaultLocale, localePath, localeSettings, localesWithPage, type Locale } from "@/i18n/config";
+import { defaultLocale, isActiveLocale, localePath, localeSettings, localesWithPage, type Locale } from "@/i18n/config";
 
 type SeoInput = {
   title: string;
@@ -98,6 +99,12 @@ export function buildMetadata({
   const url = absoluteUrl(path, locale);
   const image = shareImage ? absoluteUrl(shareImage) : undefined;
   const languages = languageAlternates(path, languagePaths);
+  // The page's other languages for Open Graph too (og:locale:alternate), as for hreflang.
+  const others = (languagePaths ? (Object.keys(languagePaths) as Locale[]) : localesWithPage(path)).filter(
+    (other) => other !== locale,
+  );
+  // A language in preview (I18N_PREVIEW_LOCALES) is never indexed, wherever it is opened.
+  const indexed = index && isActiveLocale(locale);
 
   return {
     // `absolute` = use exactly this title (the old site's titles are already complete).
@@ -105,7 +112,7 @@ export function buildMetadata({
     description,
     alternates: { canonical: url, ...(languages ? { languages } : {}) },
     // The old website's robots value, written as a string to keep its order.
-    robots: index ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" : "noindex, nofollow",
+    robots: indexed ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" : "noindex, nofollow",
     openGraph: {
       type,
       url,
@@ -113,6 +120,7 @@ export function buildMetadata({
       description,
       siteName: business.name,
       locale: localeSettings[locale].ogLocale,
+      ...(languages ? { alternateLocale: others.map((other) => localeSettings[other].ogLocale) } : {}),
       ...(image ? { images: image } : {}),
     },
     twitter: {
