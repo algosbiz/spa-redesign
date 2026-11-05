@@ -310,7 +310,7 @@ English dibuat persis seperti sebelumnya.
 | Alamat → bahasa | `src/proxy.ts`: folder pertama di alamat (`/ja/…`); tanpa folder berarti English. Halaman yang belum diterjemahkan dijawab 404. Bahasa yang belum aktif bisa dibuka di localhost/preview lewat `I18N_PREVIEW_LOCALES`. |
 | Penerjemah | `src/i18n/server.ts` (`getI18n`, `render`) dan `src/i18n/client.tsx` (`useI18n`, `el`). Setiap halaman dan layout `(site)` lewat `render()`, setiap komponen client yang punya teks lewat `el()`. |
 | SEO | `pageMetadata` (title/description diterjemahkan, canonical dengan awalan bahasa, `og:locale`), hreflang dua arah, satu sitemap untuk semua bahasa. |
-| Tampilan | Font sistem per bahasa dan aturan pemenggalan baris (`src/styles/i18n.css`), tanggal per bahasa (`src/i18n/format.ts`), pemilih bahasa di header (hanya muncul kalau halaman ada di ≥ 2 bahasa aktif). |
+| Tampilan | Font sistem per bahasa dan aturan pemenggalan baris (`src/styles/i18n.css`), tanggal per bahasa (`src/i18n/format.ts`), pemilih bahasa berupa dropdown bendera (di navbar mulai 1200px, di baris atas menu ponsel di bawahnya; bendera di `public/images/flags/`, English memakai bendera UK). Di production hanya muncul kalau halaman ada di ≥ 2 bahasa aktif; di localhost dan preview, bahasa yang sedang preview ikut tampil. |
 | Booking | `src/data/booking.ts`: LINE/KakaoTalk/WeChat per bahasa, WhatsApp selama belum diisi. Pesan WhatsApp otomatis diterjemahkan dan diberi kode bahasa (`[JA]`). |
 | Blog | Kolom `locale` dan `translation_of` dibuat otomatis saat pertama dipakai. Semua query per bahasa, plus pencarian, menu blog, dan sitemap. |
 | Cache | Purge Cloudflare tetap satu zone. `revalidatePath` memakai alamat `/[lang]/…`. |

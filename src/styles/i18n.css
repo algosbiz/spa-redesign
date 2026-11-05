@@ -72,45 +72,146 @@
   }
 }
 
-/* The language switcher (src/components/layout/LanguageSwitcher.tsx): small
-   pills in the header and at the top of the phone menu's info card. Shown
-   only once a page exists in a second live language. */
-.lang-switch {
+/* The language switcher (src/components/layout/LanguageSwitcher.tsx): a
+   button with the page's flag that opens a white card of flags and names.
+   In the header from 1200px a cream pill like the search button (flag, code,
+   arrow); below that, in the phone menu's top row, a white square like the
+   close button. Shown only once a page exists in a second language. */
+.lang-menu {
+  position: relative;
+}
+.lang-menu--bar {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .lang-menu--bar {
+    display: block;
+  }
+}
+.lang-menu--square {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.lang-menu__flag {
+  display: block;
+  flex: none;
+  width: 21px;
+  height: 14px;
+  border-radius: 3px;
+  object-fit: cover;
+  /* A thin edge, so a white flag (Japan) does not melt into a white card. */
+  box-shadow: 0 0 0 1px rgba(28, 26, 29, 0.12);
+}
+
+.lang-menu__button {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 13px;
+  color: var(--headings-color, #1c1a1d);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.lang-menu--bar .lang-menu__button {
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--theme-color-gray, #f5f2ec);
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   line-height: 1;
 }
-
-.lang-switch a,
-.lang-switch__current {
-  display: inline-block;
-  padding: 7px 10px;
-  border: 1px solid rgba(28, 26, 29, 0.15);
-  border-radius: 999px;
-  color: var(--theme-color2, #1c1a1d);
-  text-decoration: none;
+.lang-menu--bar .lang-menu__button:is(:hover, :focus-visible),
+.lang-menu--bar.is-open .lang-menu__button {
+  background-color: rgba(var(--theme-color1-rgb), 0.16);
+}
+.lang-menu__arrow {
+  color: var(--theme-color1);
+  transition: transform 0.25s ease;
+}
+.lang-menu.is-open .lang-menu__arrow {
+  transform: rotate(180deg);
+}
+.lang-menu--square .lang-menu__button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--theme-color-white, #fff);
+  border: 1px solid rgba(95, 90, 84, 0.14);
+  border-radius: 12px;
+}
+.lang-menu--square .lang-menu__button:is(:hover, :focus-visible),
+.lang-menu--square.is-open .lang-menu__button {
+  border-color: var(--theme-color1);
 }
 
-.lang-switch a:is(:hover, :focus-visible) {
-  border-color: var(--theme-color1, #a78627);
+.lang-menu__list {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 30;
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background-color: var(--theme-color-white, #fff);
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(28, 26, 29, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+.lang-menu--bar .lang-menu__list {
+  right: 0;
+}
+.lang-menu--square .lang-menu__list {
+  left: 0;
+}
+.lang-menu.is-open .lang-menu__list {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang-menu__list,
+  .lang-menu.is-open .lang-menu__list,
+  .lang-menu__arrow {
+    transition: none;
+  }
 }
 
-.lang-switch__current {
-  border-color: var(--theme-color1, #a78627);
-  background: var(--theme-color1, #a78627);
-  color: #fff;
-}
-
-.header__main .menu-btns .lang-switch {
+.lang-menu__item {
+  display: flex;
   align-items: center;
-  margin-right: 12px;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--headings-color, #1c1a1d);
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
 }
-
-.mnav .mnav__langs {
-  margin-bottom: 14px;
+.lang-menu__item:is(:hover, :focus-visible) {
+  background-color: var(--theme-color-gray, #f5f2ec);
+  color: var(--headings-color, #1c1a1d);
+}
+.lang-menu__item[aria-current] {
+  font-weight: 700;
+}
+.lang-menu__name {
+  flex: 1;
+}
+.lang-menu__tick {
+  flex: none;
+  color: var(--theme-color1);
 }

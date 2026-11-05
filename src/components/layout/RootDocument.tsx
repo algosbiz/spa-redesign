@@ -7,7 +7,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import HydrateLater from "@/components/ui/HydrateLater";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { I18nProvider } from "@/i18n/client";
-import { defaultLocale, localeSettings, type Locale } from "@/i18n/config";
+import { defaultLocale, localeSettings, servedLocales, type Locale } from "@/i18n/config";
 import { getI18n, getUiMessages } from "@/i18n/server";
 import "@/app/globals.css";
 import "@/styles/live.css";
@@ -30,7 +30,8 @@ import "@/styles/i18n.css";
  * src/app/admin/layout.tsx, and src/app/global-not-found.tsx for addresses
  * that match no page. The header, <main> and footer live in
  * [lang]/(site)/layout.tsx — the live 404 page has neither header nor footer.
- * I18nProvider gives Client Components the page's language and translations.
+ * I18nProvider gives Client Components the page's language, its translations
+ * and the languages the site serves (the language switcher's list).
  */
 export default async function RootDocument({
   locale = defaultLocale,
@@ -46,7 +47,7 @@ export default async function RootDocument({
     // defines, on every page (src/styles/gold.css).
     <html lang={localeSettings[locale].htmlLang} className={`gold-b ${fraunces.variable} ${jakarta.variable}`}>
       <body>
-        <I18nProvider locale={locale} messages={await getUiMessages(locale)}>
+        <I18nProvider locale={locale} messages={await getUiMessages(locale)} languages={servedLocales}>
           {children}
           {await render(
             <SiteChrome>

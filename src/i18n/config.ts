@@ -44,17 +44,22 @@ type LocaleSettings = {
   ogLocale: string;
   /** The language's own name, for the language switcher. */
   nativeName: string;
+  /**
+   * The flag the language switcher shows beside it (public/images/flags/):
+   * a language is not a country, so English shows the UK's.
+   */
+  flag: "gb" | "jp" | "kr" | "cn" | "in";
   /** Whether the language puts spaces between words (Japanese and Chinese do not). */
   wordSpaces: boolean;
 };
 
 // India is Hindi (owner, 3 Nov 2026).
 export const localeSettings: Record<Locale, LocaleSettings> = {
-  en: { htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English", wordSpaces: true },
-  ja: { htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語", wordSpaces: false },
-  ko: { htmlLang: "ko", hreflang: "ko", ogLocale: "ko_KR", nativeName: "한국어", wordSpaces: true },
-  zh: { htmlLang: "zh-Hans", hreflang: "zh-Hans", ogLocale: "zh_CN", nativeName: "简体中文", wordSpaces: false },
-  hi: { htmlLang: "hi", hreflang: "hi", ogLocale: "hi_IN", nativeName: "हिन्दी", wordSpaces: true },
+  en: { htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English", flag: "gb", wordSpaces: true },
+  ja: { htmlLang: "ja", hreflang: "ja", ogLocale: "ja_JP", nativeName: "日本語", flag: "jp", wordSpaces: false },
+  ko: { htmlLang: "ko", hreflang: "ko", ogLocale: "ko_KR", nativeName: "한국어", flag: "kr", wordSpaces: true },
+  zh: { htmlLang: "zh-Hans", hreflang: "zh-Hans", ogLocale: "zh_CN", nativeName: "简体中文", flag: "cn", wordSpaces: false },
+  hi: { htmlLang: "hi", hreflang: "hi", ogLocale: "hi_IN", nativeName: "हिन्दी", flag: "in", wordSpaces: true },
 };
 
 export const isLocale = (value: string): value is Locale => (locales as readonly string[]).includes(value);
@@ -143,9 +148,13 @@ const translatedPaths: Partial<Record<Locale, readonly string[]>> = {
   hi: [...corePages, ...otherPages],
 };
 
-/** The live languages that have the page at `path` ("/about/"), English first. */
-export function localesWithPage(path: string): Locale[] {
-  return activeLocales.filter((locale) => locale === defaultLocale || translatedPaths[locale]?.includes(path));
+/**
+ * The live languages that have the page at `path` ("/about/"), English
+ * first; or, with `among`, those of these languages (the language switcher
+ * passes the served ones, so a language in preview shows there too).
+ */
+export function localesWithPage(path: string, among: readonly Locale[] = activeLocales): Locale[] {
+  return among.filter((locale) => locale === defaultLocale || translatedPaths[locale]?.includes(path));
 }
 
 /**

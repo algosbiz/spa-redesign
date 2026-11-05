@@ -137,7 +137,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
               </nav>
             </div>
             <div className="jsx-header menu-btns">
-              <LanguageSwitcher className="d-none d-lg-flex" />
+              <LanguageSwitcher look="bar" id="lang-menu-header" />
               <div ref={searchRef} className="jsx-header header-search d-none d-lg-block">
                 <button
                   onClick={() => setSearchOpen((v) => !v)}
@@ -277,6 +277,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
         } lh`}
       >
         <div className="jsx-header offcanvas-header mnav__top">
+          <LanguageSwitcher look="square" id="lang-menu-mnav" />
           <Link prefetch={false} href="/" onClick={closeSidebar} className="logo offcanvas-logo mnav__logo">
             {/* eslint-disable-next-line @next/next/no-img-element -- the live site's plain <img> */}
             <img src="/images/logo/SMBtitle.svg" alt={business.name} width="444" height="80" className="jsx-header" />
@@ -299,7 +300,6 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
           <HydrateLater>
             <MobileMenu data={menu} open={sidebar === "open"} onNavigate={closeSidebar}>
               <div className="mnav__card mnav__anim" style={{ "--i": 7 } as CSSProperties}>
-                <LanguageSwitcher className="mnav__langs" />
                 <ul className="mnav__info">
                   <li>
                     <i className="fa-light fa-clock" aria-hidden="true" />
