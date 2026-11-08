@@ -2721,3 +2721,102 @@
     animation: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 34. Comparison table on a treatment page (CompareTable, lymphatic    */
+/*     page, 8 Nov): section 6's comparison card with three treatment   */
+/*     columns, the page's own one tinted. Phones: each row stacks,     */
+/*     every value under its treatment's name, so nothing scrolls.      */
+/* ------------------------------------------------------------------ */
+.compare-section {
+  position: relative;
+}
+.compare-section > .shape1 {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+}
+.compare-section > .shape1 img {
+  width: 150px;
+}
+@media (max-width: 1199px) {
+  .compare-section > .shape1 {
+    display: none;
+  }
+}
+.compare-table__wrap {
+  max-width: 1040px;
+  margin-bottom: 0;
+}
+.compare-table.oc-table--compare {
+  min-width: 0;
+}
+.compare-table.oc-table--compare thead td {
+  border-bottom: 2px solid var(--theme-color1);
+}
+.compare-table.oc-table--compare thead a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.5);
+}
+.compare-table.oc-table--compare tbody th {
+  width: 19%;
+  white-space: normal;
+}
+.compare-table.oc-table--compare tbody td {
+  width: 27%;
+}
+.compare-table__name {
+  display: none;
+}
+@media (max-width: 767px) {
+  .compare-table.oc-table--compare thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .compare-table.oc-table--compare,
+  .compare-table.oc-table--compare tbody,
+  .compare-table.oc-table--compare tr,
+  .compare-table.oc-table--compare tbody th,
+  .compare-table.oc-table--compare tbody td {
+    display: block;
+    width: auto;
+  }
+  .compare-table.oc-table--compare tr {
+    padding: 18px 20px;
+    border-bottom: 1px solid #ece7de;
+  }
+  .compare-table.oc-table--compare tr:last-child {
+    border-bottom: 0;
+  }
+  .compare-table.oc-table--compare tbody th,
+  .compare-table.oc-table--compare tbody td,
+  .compare-table.oc-table--compare tbody td:nth-child(2) {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  .compare-table.oc-table--compare tbody th {
+    margin-bottom: 8px;
+  }
+  /* The treatment's name beside its value, so a row stays short. */
+  .compare-table.oc-table--compare tbody td {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    column-gap: 14px;
+    align-items: baseline;
+  }
+  .compare-table.oc-table--compare tbody td + td {
+    margin-top: 8px;
+  }
+  .compare-table__name {
+    display: block;
+    font-family: var(--title-font);
+    font-size: 15px;
+    line-height: 1.35;
+    color: var(--headings-color);
+  }
+}

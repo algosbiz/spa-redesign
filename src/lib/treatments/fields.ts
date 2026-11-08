@@ -130,7 +130,8 @@ export const SECTIONS: Record<string, SectionSchema> = {
       {
         ...paragraph,
         label: "Opening paragraph",
-        hint: "Answer first: the spa, Seminyak, the price and the options. To add a link, write [the words](/seminyak/).",
+        // Owner, 8 Nov: "Spa Bali Moon in Seminyak" in every first sentence read as spammy.
+        hint: "Answer first: what the treatment is, then the price and the options. The page title already says Seminyak, so the first sentence needs neither the spa's name nor the place. To add a link, write [the words](/seminyak/).",
       },
       {
         key: "items",
@@ -251,6 +252,29 @@ export const SECTIONS: Record<string, SectionSchema> = {
         ],
       },
     ],
+  },
+  CompareTable: {
+    label: "Comparison table",
+    fields: [
+      ...heading(),
+      { ...paragraph, label: "Sentence under the heading" },
+      {
+        key: "rows",
+        label: "Rows",
+        kind: "items",
+        itemLabel: "Row",
+        fields: [
+          { key: "label", label: "Row name", kind: "text", placeholder: "Pressure" },
+          {
+            key: "values",
+            label: "One line per treatment",
+            kind: "list",
+            hint: "In the order of the columns, left to right.",
+          },
+        ],
+      },
+    ],
+    note: "The treatments in the columns and their links are set for each page in the code.",
   },
   ServiceSlider: {
     label: "Other treatments",

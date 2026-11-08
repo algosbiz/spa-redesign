@@ -13,8 +13,10 @@ const lymphaticDrainageMassage: Treatment = {
   shortDescription: "A gentle full-body massage that supports drainage and healthy circulation.",
   cardImage: { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
   seo: {
-    title: "Lymphatic Drainage Massage Seminyak & Bali - Spa Bali Moon",
-    description: "Lymphatic drainage massage in Seminyak, Bali: a gentle, slow-stroke massage by trained therapists. Book in-spa or at your villa or hotel.",
+    title: "Lymphatic Drainage Massage in Seminyak, Bali | Spa Bali Moon",
+    // 8 Nov: facts only (technique, lengths, from-price, where), no superlatives (WRITING-GUIDE.md).
+    description:
+      "Slow, very light manual lymphatic drainage (MLD) for heavy or puffy legs after a flight. 1, 1.5 or 2 hours from IDR 300.000, at our Seminyak spa or your villa.",
   },
   hero: {
     eyebrow: "Restore Your Flow",

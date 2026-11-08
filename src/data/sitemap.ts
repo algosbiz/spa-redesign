@@ -35,7 +35,7 @@ export const sitemapPages: SitemapEntry[] = [
   { loc: "https://spabalimoon.com/seminyak/hair-braiding/", lastmod: "2026-11-01T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/hair-braiding.webp" },
   { loc: "https://spabalimoon.com/seminyak/head-massage/", lastmod: "2026-10-24T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/head-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/hot-stone-massage/", lastmod: "2026-10-24T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/hot-stone-massage.webp" },
-  { loc: "https://spabalimoon.com/seminyak/lymphatic-drainage-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/lymphatic-drainage-massage.webp" },
+  { loc: "https://spabalimoon.com/seminyak/lymphatic-drainage-massage/", lastmod: "2026-11-08T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/lymphatic-drainage-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/manicure-pedicure/", lastmod: "2026-10-24T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/manicure-pedicure.webp" },
   { loc: "https://spabalimoon.com/seminyak/nail-spa/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/nail-spa.webp" },
   { loc: "https://spabalimoon.com/seminyak/shiatsu-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/shiatsu-massage.webp" },
