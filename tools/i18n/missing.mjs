@@ -14,6 +14,12 @@
 //    Only some pages: list their paths after the address,
 //      npm run i18n:missing -- ja http://localhost:3009 / /seminyak/ /contact/
 //
+// npm run i18n:missing -- merge   no crawl: adds what is already in
+//    .i18n-missing.jsonl, for every language. The GitHub check
+//    (.github/workflows/i18n.yml) uses it after a build that had
+//    I18N_PREVIEW_LOCALES=ja,ko,zh,hi and I18N_MISSING_FILE set: the build
+//    renders every page in every language, so it writes the file itself.
+//
 // npm run i18n:status   how many texts each language has, and how many are still empty.
 
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -41,9 +47,68 @@ if (command === "status" || !command) {
   process.exit(0);
 }
 
+/**
+ * Adds each missing text in the file to the messages file it belongs to,
+ * with an empty value. A text Client Components need (ui) that content.json
+ * already translates is copied over.
+ */
+function merge(locales) {
+  if (!existsSync(missingFile)) {
+    console.log("Nothing missing (or the server was not started with I18N_MISSING_FILE).");
+    return;
+  }
+  const entries = readFileSync(missingFile, "utf8")
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => JSON.parse(line));
+  for (const locale of locales) {
+    const files = { ui: read(locale, "ui"), content: read(locale, "content") };
+    let added = 0;
+    // Text a component put together from translated pieces is not added: those
+    // with English words left in are listed, as a sign that the component builds
+    // a sentence the translation memory cannot reach (it needs a template, t()).
+    // Names are not English words: the texts the language keeps as written and
+    // the Latin-letter runs inside its translations (Balinese Massage, IDR…)
+    // are taken out before looking.
+    const names = new Set(["IDR", "WhatsApp", "VISA", "Visa", "Mastercard"]);
+    for (const [en, tr] of Object.entries({ ...files.content, ...files.ui })) {
+      if (tr === en) names.add(en);
+      else for (const m of tr.matchAll(/[A-Za-z][A-Za-z0-9&.'’\- ]*[A-Za-z0-9]/g)) names.add(m[0].trim());
+    }
+    const byLength = [...names].filter(Boolean).sort((a, b) => b.length - a.length);
+    const englishLeft = (text) => /[A-Za-z]{2,}/.test(byLength.reduce((t, n) => (t.includes(n) ? t.split(n).join(" ") : t), text));
+    const review = new Set();
+    for (const entry of entries) {
+      if (entry.locale !== locale) continue;
+      if (entry.mixed) {
+        if (englishLeft(entry.text)) review.add(entry.text);
+        continue;
+      }
+      const target = files[entry.file] ? entry.file : "content";
+      if (entry.text in files[target]) continue;
+      const known = files.content[entry.text] || files.ui[entry.text] || "";
+      files[target][entry.text] = known;
+      if (!known) added++;
+    }
+    write(locale, "ui", files.ui);
+    write(locale, "content", files.content);
+    console.log(`${locale}: ${added} new texts to translate in src/i18n/messages/${locale}/ (empty values).`);
+    if (review.size) {
+      console.log(`\n${review.size} put-together texts still have English words (check for brand or place names, else a template is needed):`);
+      for (const text of review) console.log(`  ${text.length > 110 ? text.slice(0, 110) + "…" : text}`);
+    }
+  }
+  rmSync(missingFile, { force: true });
+}
+
+if (command === "merge") {
+  merge(LOCALES);
+  process.exit(0);
+}
+
 const locale = command;
 if (!LOCALES.includes(locale)) {
-  console.error(`usage: npm run i18n:missing -- <${LOCALES.join("|")}> [base URL]`);
+  console.error(`usage: npm run i18n:missing -- <${LOCALES.join("|")}|merge> [base URL]`);
   process.exit(1);
 }
 
@@ -60,40 +125,4 @@ for (const path of paths) {
   }
 }
 console.log(`${paths.length} pages opened in ${locale}${failed ? `, ${failed} failed` : ""}.`);
-
-if (!existsSync(missingFile)) {
-  console.log("Nothing missing (or the server was not started with I18N_MISSING_FILE).");
-  process.exit(0);
-}
-
-// Merge: each missing text into the file it belongs to. A text Client
-// Components need (ui) that content.json already translates is copied over.
-const files = { ui: read(locale, "ui"), content: read(locale, "content") };
-let added = 0;
-// Text a component put together from translated pieces is not added: those
-// with English words left in are listed, as a sign that the component builds
-// a sentence the translation memory cannot reach (it needs a template, t()).
-const review = new Set();
-for (const line of readFileSync(missingFile, "utf8").split("\n").filter(Boolean)) {
-  const entry = JSON.parse(line);
-  if (entry.locale !== locale) continue;
-  if (entry.mixed) {
-    if (/[A-Za-z]{3,}/.test(entry.text.replace(/\b(IDR|WhatsApp|Spa Bali Moon|Bali Moon|VISA|Visa|Mastercard)\b/g, ""))) {
-      review.add(entry.text);
-    }
-    continue;
-  }
-  const target = files[entry.file] ? entry.file : "content";
-  if (entry.text in files[target]) continue;
-  const known = files.content[entry.text] || files.ui[entry.text] || "";
-  files[target][entry.text] = known;
-  if (!known) added++;
-}
-write(locale, "ui", files.ui);
-write(locale, "content", files.content);
-rmSync(missingFile, { force: true });
-console.log(`${added} new texts to translate in src/i18n/messages/${locale}/ (empty values).`);
-if (review.size) {
-  console.log(`\n${review.size} put-together texts still have English words (check for brand or place names, else a template is needed):`);
-  for (const text of review) console.log(`  ${text.length > 110 ? text.slice(0, 110) + "…" : text}`);
-}
+merge([locale]);
