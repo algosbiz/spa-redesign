@@ -206,8 +206,10 @@ export default async function TreatmentPage({ params }: Props) {
   const content = await getTreatmentContent(slug);
   if (!content) notFound();
   const names = NAMES[slug] ?? { heading: content.name, inline: content.name };
-  // The quick facts end with the date the page last changed; "Visit us"
-  // (AEO roadmap, 17 Oct) sits before the related treatments.
+  // "Visit us" (AEO roadmap, 17 Oct) sits before the related treatments.
+  // The quick facts no longer end with "Last updated …" (owner, 8 Nov: Google
+  // showed the date in front of the description, which "does not look that
+  // cool"); the sitemap still gives each page's date to search engines.
   // The banner shows the session prices when the quick facts list them;
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
@@ -230,7 +232,7 @@ export default async function TreatmentPage({ params }: Props) {
         }),
       }),
       "QuickFacts",
-      { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
+      { look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
   );
   const visited = insertBefore(decorated, ["ServiceSlider"], {
