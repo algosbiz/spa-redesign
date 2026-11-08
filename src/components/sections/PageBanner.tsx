@@ -112,6 +112,11 @@ export default function PageBanner({
   const tallSrcSet =
     tall && mobilePhoto !== image ? [`${mobilePhoto} 828w`, mid && `${mid} 1200w`, `${image} 1920w`].filter(Boolean).join(", ") : undefined;
   const shade = mobilePhoto ? glassShade[mobilePhoto] : undefined;
+  // A katakana word of 7 letters or more ("ホームサービス", "プライバシーポリシー")
+  // is wider than a phone at the heading's size and would break inside, so that
+  // heading is set smaller on phones (i18n.css); other headings keep the size
+  // English has. The props arrive translated (src/i18n/server.ts).
+  const longWord = Math.max(0, ...(`${titleSpan} ${title}`.match(/[ァ-ヺー]+/g) ?? []).map((w) => w.length)) >= 7;
 
 
   return (
@@ -178,7 +183,7 @@ export default function PageBanner({
                       {subTitle}
                     </p>
                   )}
-                  <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
+                  <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title${longWord ? " title--long-word" : ""}`}>
                     <span className={S}>{titleSpan}</span> {title}
                     {englishName && <LocalName englishName={englishName} />}
                   </h1>

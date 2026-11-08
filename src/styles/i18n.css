@@ -64,10 +64,14 @@
   word-break: auto-phrase;
 }
 
-/* A page banner's title on phones: one long katakana word ("リラクゼーション")
-   is wider than the screen at the English size, so it would break inside. */
+/* A page banner's title on phones: one long katakana word ("ホームサービス",
+   "プライバシーポリシー") is wider than the screen at the English size, so it
+   would break inside. Only those titles are set smaller (PageBanner adds
+   title--long-word); the rest keep the size English has (owner, 8 Nov: every
+   Japanese and Chinese title had been 8.5vw, so "Balinese Massage" looked
+   smaller than on the English page). */
 @media (max-width: 767.98px) {
-  :is(:lang(ja), :lang(zh-Hans)) .banner-two__content .title {
+  :lang(ja) .banner-two__content .title.title--long-word {
     font-size: 8.5vw;
   }
 }
