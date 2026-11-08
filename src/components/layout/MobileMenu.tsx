@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import type { MobileMenuData, MobileMenuEntry } from "@/components/layout/mobileMenuData";
+import LocalName from "@/components/ui/LocalName";
 import { mainNav } from "@/data/navigation";
 import { useI18n } from "@/i18n/client";
 import { useSitePath } from "@/i18n/useSitePath";
@@ -123,6 +124,7 @@ export default function MobileMenu({
             </span>
             <span className="mnav__entry-text">
               <span className="mnav__entry-name">{entry.label}</span>
+              {kind === "treatments" && <LocalName englishName={entry.label} />}
               {entry.note && <span className="mnav__entry-note">{entry.note}</span>}
             </span>
             <span className="mnav__entry-arrow">
