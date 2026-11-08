@@ -14,8 +14,8 @@ const hairBraiding: Treatment = {
   category: "beauty",
   cardImage: { src: "/images/beauty/hair-braiding/hairbraiding-3.webp", alt: "Hair Braiding", width: 630, height: 580 },
   seo: {
-    title: "Hair Braiding Bali - Braids in Seminyak - Spa Bali Moon",
-    description: "Hair braiding in Seminyak, Bali: braids for the beach, events or everyday wear. Quick to book via WhatsApp at Spa Bali Moon.",
+    title: "Hair Braiding & Bali Braids in Seminyak | Spa Bali Moon",
+    description: "Braids for the beach, a wedding or the rest of your trip, with extensions on some styles. From IDR 499.000 in Seminyak, at our spa or your villa.",
   },
   hero: {
     eyebrow: "Creative Hairstyles",

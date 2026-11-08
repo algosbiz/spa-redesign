@@ -13,8 +13,8 @@ const manicurePedicure: Treatment = {
   shortDescription: "A complete hand and foot treatment finished neatly with polish.",
   cardImage: { src: "/images/treatments/cards/manicurepedicure-warm.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
   seo: {
-    title: "Manicure & Pedicure in Seminyak - Spa Bali Moon",
-    description: "Manicure and pedicure in Seminyak, Bali: shaping, polish and nourishing care for hands and feet. Book at Spa Bali Moon.",
+    title: "Manicure & Pedicure in Seminyak, Bali | Spa Bali Moon",
+    description: "Nail shaping, cuticle care and polish or gel. Manicure IDR 99.000, pedicure IDR 139.000, both IDR 238.000, at our Seminyak spa or your villa.",
   },
   hero: {
     eyebrow: "Polish and Pamper",

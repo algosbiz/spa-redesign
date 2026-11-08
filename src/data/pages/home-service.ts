@@ -15,8 +15,8 @@ export const homeServicePage = {
   path: "/outcall-home-service-massage/",
   seo: {
     // 20 Oct dev brief, Task 1 (61 and 154 characters). The title is used as it is (lib/seo.ts: title.absolute), so the brand appears once.
-    title: "Outcall & Home Service Massage Seminyak, Bali | Spa Bali Moon",
-    description: "Outcall and home massage from our Seminyak spa since 2009. Balinese, deep tissue & couples massage at your villa, hotel or home in Bali. Book on WhatsApp.",
+    title: "Outcall & Home Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Massage at your villa, hotel or home in Seminyak, Canggu or Kuta. Balinese, deep tissue and couples massage at spa prices, plus a travel fee per therapist.",
   },
   hero: {
     eyebrow: "Outcall Spa Service",

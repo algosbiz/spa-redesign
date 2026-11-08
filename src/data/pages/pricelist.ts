@@ -40,9 +40,9 @@ export type PackageGroup = {
 export const pricelistPage = {
   path: "/seminyak/",
   seo: {
-    title: "Massage Seminyak - Prices & Spa Packages - Spa Bali Moon",
+    title: "Massage Prices in Seminyak: Full Spa Menu | Spa Bali Moon",
     description:
-      "Massage in Seminyak with prices: Balinese, Thai, shiatsu, facials and couples packages. In-spa or home service. Book via WhatsApp.",
+      "Every price at our Seminyak spa: Balinese massage from IDR 159.000, 30-minute massages from IDR 90.000, couples from IDR 319.000, and spa packages.",
   },
 
   banner: {

@@ -15,8 +15,8 @@ import type { TextPage } from "../types";
 export const privacyPolicyPage: TextPage = {
   path: "/privacy-policy/",
   seo: {
-    title: "Spa Bali Moon Privacy Policy",
-    description: "Read Spa Bali Moon’s privacy policy detailing data protection, guest confidentiality, and secure handling of personal information.",
+    title: "Privacy Policy | Spa Bali Moon",
+    description: "How Spa Bali Moon collects, uses and protects your personal information when you book a treatment or contact us.",
   },
   title: "Privacy Policy",
   blocks: [

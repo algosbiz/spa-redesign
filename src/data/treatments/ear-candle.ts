@@ -13,8 +13,8 @@ const earCandle: Treatment = {
   shortDescription: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
   cardImage: { src: "/images/beauty/cards/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
   seo: {
-    title: "Ear Candle Treatment in Seminyak, Bali - Spa Bali Moon",
-    description: "Ear candle treatment in Seminyak, Bali: a warm, relaxing ear candling session. Book at Spa Bali Moon.",
+    title: "Ear Candle Treatment in Seminyak, Bali | Spa Bali Moon",
+    description: "A warm, quiet 30 minutes: a hollow candle at the outer ear and a light massage of the ears, temples and neck. IDR 159.000 in Seminyak.",
   },
   hero: {
     eyebrow: "Gentle Ear Care",

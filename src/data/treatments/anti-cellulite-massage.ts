@@ -13,8 +13,8 @@ const antiCelluliteMassage: Treatment = {
   shortDescription: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
   cardImage: { src: "/images/treatments/cards/cellulitemassage-warm.webp", alt: "Cellulite Massage", width: 630, height: 580 },
   seo: {
-    title: "Anti-Cellulite Massage in Seminyak, Bali - Spa Bali Moon",
-    description: "Cellulite massage in Seminyak, Bali: a firming massage to boost circulation and smooth skin texture. Book at Spa Bali Moon.",
+    title: "Cellulite Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "A firm, targeted massage on thighs, hips and abdomen that can smooth the look of skin over regular sessions. From IDR 350.000 for 1 hour in Seminyak.",
   },
   hero: {
     eyebrow: "Body Contouring",

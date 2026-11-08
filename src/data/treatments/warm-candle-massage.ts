@@ -16,9 +16,9 @@ const warmCandleMassage: Treatment = {
   shortDescription: "Lukewarm wax from a natural shea butter candle, dripped onto your skin and massaged in.",
   cardImage: { src: "/images/treatments/cards/organicwarmcandle.webp", alt: "Natural Warm Candle Massage", width: 630, height: 580 },
   seo: {
-    title: "Warm Candle Massage in Seminyak - Spa Bali Moon",
+    title: "Warm Candle Massage in Seminyak, Bali | Spa Bali Moon",
     description:
-      "Warm candle massage in Seminyak, Bali: lukewarm wax from a natural shea butter candle, dripped onto your skin and massaged in. From IDR 269.000 at Spa Bali Moon.",
+      "A natural shea butter candle, its warm wax dripped onto your skin and massaged in as a rich oil. Warm candle massage in Seminyak from IDR 269.000.",
   },
   hero: {
     eyebrow: "Natural Shea Butter",
