@@ -177,6 +177,11 @@ function clampToEdges(page: HTMLElement) {
   });
 }
 
+/**
+ * Mounted in a HydrateLater after <main> ((site)/layout.tsx): it changes the
+ * pictures, flips and positions React rendered, so it runs only once React
+ * has woken every section, and never on HTML React has yet to check.
+ */
 export default function DecorationEdgeClamp() {
   const pathname = useSitePath();
 
