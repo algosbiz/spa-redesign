@@ -30,7 +30,8 @@ export default async function NotFound() {
                   <h3 className="error-page__sub-title">Page not found!</h3>
                 </div>
                 <p className="error-page__text">
-                  Sorry we can&apos;t find that page! The page you are looking <br /> for was never existed.
+                  {/* "for was never existed." until 8 Nov (a grammar mistake copied from live). */}
+                  Sorry we can&apos;t find that page! The page you are looking <br /> for doesn&apos;t exist.
                 </p>
                 <form className="error-page__form">
                   <div className="error-page__form-input">
