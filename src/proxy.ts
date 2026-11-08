@@ -61,9 +61,11 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
   if (locale) {
     // A page not translated into the language is not there (plan §3.4), nor
     // any page of a language not served: its address matches nothing, so it
-    // gets the 404 page.
+    // gets the 404 page, in the language when the language is served (8 Nov:
+    // /jp/guide/ showed the English 404 under <html lang="en">).
     const served = isServedLocale(locale) && servesPage(locale, rest);
-    page.pathname = served ? `/${locale}${rest}` : `/${defaultLocale}/_untranslated${rest}`;
+    const notFoundLocale = isServedLocale(locale) ? locale : defaultLocale;
+    page.pathname = served ? `/${locale}${rest}` : `/${notFoundLocale}/_untranslated${rest}`;
     return NextResponse.rewrite(page);
   }
 
