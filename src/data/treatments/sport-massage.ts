@@ -13,8 +13,8 @@ const sportMassage: Treatment = {
   shortDescription: "A targeted full-body massage to ease soreness, reduce stiffness, and support recovery.",
   cardImage: { src: "/images/treatments/cards/sportmassage.webp", alt: "Sports Massage", width: 630, height: 580 },
   seo: {
-    title: "Sports Massage in Seminyak & Bali - Spa Bali Moon",
-    description: "Sports massage in Seminyak, Bali for athletes and active guests: recovery, mobility and tension relief. Book in-spa or at your villa.",
+    title: "Sports Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Firmer, focused work on the muscles you've used most, after surfing, running or a long hike. Sports massage in Seminyak from IDR 269.000 for 1 hour.",
   },
   hero: {
     eyebrow: "Active Recovery",

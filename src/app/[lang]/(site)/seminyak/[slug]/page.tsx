@@ -7,6 +7,7 @@ import { homeServiceLines } from "@/data/homeServiceLines";
 import { priceOf } from "@/data/pricelist";
 import { treatments } from "@/data/treatments";
 import { pageMetadata } from "@/i18n/metadata";
+import { readsInLanguage } from "@/i18n/localNames";
 import { getI18n } from "@/i18n/server";
 import { withDots } from "@/lib/price";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
@@ -151,6 +152,19 @@ function bannerPrices(tree: TreeNode): { label: string; prices: PriceTiles } | u
   return undefined;
 }
 
+/** The banner heading's texts as written (its first words, the rest), each translated on its own. */
+function bannerHeading(tree: TreeNode): string[] | undefined {
+  if (tree.type === "PageBanner") {
+    const parts = [tree.props?.titleSpan, tree.props?.title].filter((part): part is string => typeof part === "string" && part !== "");
+    return parts.length ? parts : undefined;
+  }
+  for (const child of tree.children ?? []) {
+    const found = typeof child === "string" ? undefined : bannerHeading(child);
+    if (found) return found;
+  }
+  return undefined;
+}
+
 /** The banner photo, for the Service data. */
 function bannerImage(tree: TreeNode): string | undefined {
   if (tree.type === "PageBanner" && typeof tree.props?.image === "string") return tree.props.image;
@@ -187,22 +201,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TreatmentPage({ params }: Props) {
-  const { render } = await getI18n();
+  const { render, t, locale } = await getI18n();
   const { slug } = await params;
   const content = await getTreatmentContent(slug);
   if (!content) notFound();
   const names = NAMES[slug] ?? { heading: content.name, inline: content.name };
-  // The quick facts end with the date the page last changed; "Visit us"
-  // (AEO roadmap, 17 Oct) sits before the related treatments.
+  // "Visit us" (AEO roadmap, 17 Oct) sits before the related treatments.
+  // The quick facts no longer end with "Last updated …" (owner, 8 Nov: Google
+  // showed the date in front of the description, which "does not look that
+  // cool"); the sitemap still gives each page's date to search engines.
   // The banner shows the session prices when the quick facts list them;
   // the quick facts then leave that fact (and the opening's price sentence) out.
   const banner = bannerPrices(content.tree);
   const prices = banner?.prices ?? (BANNER_PRICES[slug] && { tiles: BANNER_PRICES[slug] });
   const image = bannerImage(content.tree);
+  // On the other language sites, a heading made only of names ("Balinese
+  // Massage (Bali Seminyak)") gets the treatment's local name under it
+  // (src/i18n/localNames.ts); one that already reads in the language does not.
+  const heading = bannerHeading(content.tree);
+  const localHeading = heading !== undefined && !readsInLanguage(heading.map((part) => t(part)).join(" "), locale);
   const decorated = Object.entries(SHAPES).reduce(
-    (t, [type, props]) => withProps(t, type, props),
+    (tree, [type, props]) => withProps(tree, type, props),
     withProps(
       withProps(content.tree, "PageBanner", {
+        ...(localHeading && { englishName: content.name }),
         ...(prices && {
           prices,
           // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
@@ -210,7 +232,7 @@ export default async function TreatmentPage({ params }: Props) {
         }),
       }),
       "QuickFacts",
-      { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
+      { look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
   );
   const visited = insertBefore(decorated, ["ServiceSlider"], {

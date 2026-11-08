@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
+import LocalName from "@/components/ui/LocalName";
 
 type Props = {
   name: string;
@@ -14,9 +15,11 @@ type Props = {
 
 /** A treatment card: photo, gold icon badge, name, starting price, one line, "Learn More". */
 export default function TreatmentCard({ name, href, image, icon, desc, price, heading = true }: Props) {
+  // The local name (other languages) goes under the English one, in the link too.
   const link = (
     <Link prefetch={false} href={href}>
       {name}
+      <LocalName englishName={name} />
     </Link>
   );
   return (

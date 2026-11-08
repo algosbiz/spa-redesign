@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import MenuIntro, { halves, menuItems } from "@/components/home/MenuIntro";
 import { displayPrice, durationLabel, durationOf, priceValue, startingOption } from "@/components/home/price";
+import LocalName from "@/components/ui/LocalName";
 import { catalogCategories, type CatalogCategory, type CatalogItem, type CatalogOption } from "@/data/pages/home-catalog";
 import { useI18n, type ClientI18n } from "@/i18n/client";
 
@@ -378,12 +379,17 @@ function DurationRow({
     </div>
   );
   const photo = <img loading="lazy" decoding="async" src={item.image} alt={item.name} />;
+  // The local name (other languages) goes under the English one, in the link too.
   const name = item.href ? (
     <Link prefetch={false} href={item.href}>
       <TitleLines name={item.name} />
+      <LocalName englishName={item.name} />
     </Link>
   ) : (
-    <TitleLines name={item.name} />
+    <>
+      <TitleLines name={item.name} />
+      <LocalName englishName={item.name} />
+    </>
   );
 
   return el(

@@ -14,8 +14,8 @@ const facial: Treatment = {
   seo: {
     // Owner, 25 Oct: only some of the facial products are organic, so the title
     // names the two facials instead, and the description opens with the price.
-    title: "Facial Seminyak: Tea Tree & Gold Facials - Spa Bali Moon",
-    description: "Facials in Seminyak from IDR 196.000: the Bali Moon Tea Tree or Gold Facial, with steam, clay scrub, argan oil massage and a mask. At our spa or your villa.",
+    title: "Facials in Seminyak, Bali: Tea Tree & Gold | Spa Bali Moon",
+    description: "A 1-hour facial with steam, red clay scrub, argan oil massage and a mask for your skin: Tea Tree IDR 196.000 or Gold IDR 269.000, in Seminyak.",
   },
   hero: {
     eyebrow: "Skin Rejuvenation",

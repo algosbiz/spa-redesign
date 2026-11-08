@@ -43,6 +43,8 @@ const SKIP_KEYS = new Set([
   "class",
   "id",
   "key",
+  // A treatment's English name for looking up its local name (LocalName).
+  "englishName",
   "slug",
   "pageSlug",
   "href",

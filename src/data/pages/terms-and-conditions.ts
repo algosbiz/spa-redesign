@@ -14,8 +14,8 @@ import type { TextPage } from "../types";
 export const termsPage: TextPage = {
   path: "/terms-and-conditions/",
   seo: {
-    title: "Spa Bali Moon Terms and Conditions",
-    description: "Review Spa Bali Moon’s terms and conditions outlining policies, services, and guest responsibilities for a seamless experience.",
+    title: "Terms & Conditions | Spa Bali Moon",
+    description: "Booking, cancellation and payment terms for treatments at Spa Bali Moon, at our Seminyak spa or at your villa or hotel.",
   },
   title: "Terms & Conditions",
   blocks: [

@@ -4,9 +4,9 @@ import { pageMetadata } from "@/i18n/metadata";
 import { getI18n } from "@/i18n/server";
 
 export const generateMetadata = (): Promise<Metadata> => pageMetadata({
-  title: "About Spa Bali Moon - Seminyak Day Spa Since 2009",
+  title: "About Spa Bali Moon | Day Spa in Seminyak Since 2009",
   description:
-    "Spa Bali Moon has offered Balinese massage and spa treatments in Seminyak since 2009: our therapists, the products we use, hygiene, and how to find us.",
+    "A day spa in Seminyak since 2009. Meet our therapists, see the products we use and how we keep every room clean, and find us on Jl. Pangkung Sari.",
   path: "/about/",
 });
 

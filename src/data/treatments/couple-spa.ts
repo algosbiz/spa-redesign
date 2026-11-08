@@ -14,8 +14,8 @@ const coupleSpa: Treatment = {
   shortDescription: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
   cardImage: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
   seo: {
-    title: "Couples Massage Bali - Couple Spa Seminyak - Spa Bali Moon",
-    description: "Couples massage in Seminyak, Bali: side by side in a private room, from IDR 319.000 for two, plus couple spa packages. At our spa or your villa.",
+    title: "Couples Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Side by side in a private room, each with your own therapist. Couples massage in Seminyak from IDR 319.000 for two, plus couple spa packages.",
   },
   hero: {
     eyebrow: "Together in Relaxation",

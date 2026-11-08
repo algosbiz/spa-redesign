@@ -17,9 +17,9 @@ const cuppingTherapy: Treatment = {
   shortDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry or wet cupping.",
   cardImage: { src: "/images/treatments/cards/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
   seo: {
-    title: "Dry & Wet Cupping Therapy in Seminyak - Spa Bali Moon",
+    title: "Dry & Wet Cupping in Seminyak, Bali | Spa Bali Moon",
     description:
-      "Dry or wet cupping in Seminyak, Bali, with solid cups and a hand pump, no flame. Dry cupping IDR 499.000, wet IDR 649.000 for 1 hour. Book at Spa Bali Moon.",
+      "Gentle suction with solid cups and a hand pump, no flame. Dry cupping IDR 499.000, wet IDR 649.000 for 1 hour, at our Seminyak spa or your villa.",
   },
   hero: {
     eyebrow: "Traditional Technique",

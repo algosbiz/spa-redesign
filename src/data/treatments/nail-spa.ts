@@ -12,8 +12,8 @@ const nailSpa: Treatment = {
   category: "beauty",
   cardImage: { src: "/images/beauty/nail-spa/nailart-3.webp", alt: "Nail Art", width: 630, height: 580 },
   seo: {
-    title: "Gel Nails & Nail Art Seminyak - Spa Bali Moon",
-    description: "Gel nails and nail art in Seminyak, Bali: gel polish, colours and custom designs. Book at Spa Bali Moon.",
+    title: "Gel Nails & Nail Art in Seminyak | Spa Bali Moon",
+    description: "Gel nails and nail art, from one colour to your own design. Gel from IDR 219.000 in Seminyak, lasting two to three weeks. Bring a photo of the look.",
   },
   hero: {
     eyebrow: "Creative Design",

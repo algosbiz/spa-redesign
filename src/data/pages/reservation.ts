@@ -8,8 +8,8 @@
 export const reservationPage = {
   path: "/reservation/",
   seo: {
-    title: "Reserve your massage treatment at Spa Bali Moon",
-    description: "If you want to have quality massage treatments around Seminyak, our therapists are always available and ready to give you the best services.",
+    title: "Book a Massage in Seminyak | Spa Bali Moon",
+    description: "Book a massage or spa treatment on WhatsApp: tell us the treatment, the time and how many guests, at our Seminyak spa or your villa. Open 9am–11pm.",
   },
   eyebrow: "Your Spa Experience is One Click Away",
   // TODO SEO-02: the old page had no H1. This heading is shown as the H1 once approved.

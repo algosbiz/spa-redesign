@@ -9,8 +9,8 @@ import type { LandingPage } from "../types";
 export const villaHotelPage: LandingPage = {
   path: "/villa-hotel-massage/",
   seo: {
-    title: "In-Villa & Hotel Massage in Seminyak - Spa Bali Moon",
-    description: "In-room massage for guests at hotels and villas in Seminyak: a therapist usually arrives within 30 to 60 minutes. Spa prices plus IDR 75.000 per therapist.",
+    title: "In-Villa & Hotel Massage in Seminyak | Spa Bali Moon",
+    description: "Staying at a Seminyak hotel or villa? A therapist usually arrives within 30–60 minutes with oils and fresh linen. Spa prices plus IDR 75.000 per therapist.",
   },
   hero: {
     eyebrow: "In-Room Spa Service",

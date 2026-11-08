@@ -10,8 +10,8 @@ export const kutaPage: LandingPage = {
   path: "/massage-kuta/",
   seo: {
     // Copy rewrite, 15 Oct: the spa is in Seminyak; in Kuta it comes to you.
-    title: "Massage Kuta - Outcall to Your Hotel or Villa - Spa Bali Moon",
-    description: "Massage in Kuta, Bali: our traditional Balinese therapists come to your hotel or villa, or visit our spa in Seminyak. Book via WhatsApp.",
+    title: "Massage in Kuta at Your Hotel or Villa | Spa Bali Moon",
+    description: "A therapist from our Seminyak spa comes to your Kuta hotel or villa with oils and linen. Balinese massage from IDR 159.000, plus IDR 150.000 travel.",
   },
   hero: {
     eyebrow: "After a Day in the Sun",
