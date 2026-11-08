@@ -130,7 +130,8 @@ export const SECTIONS: Record<string, SectionSchema> = {
       {
         ...paragraph,
         label: "Opening paragraph",
-        hint: "Answer first: the spa, Seminyak, the price and the options. To add a link, write [the words](/seminyak/).",
+        // Owner, 8 Nov: "Spa Bali Moon in Seminyak" in every first sentence read as spammy.
+        hint: "Answer first: what the treatment is, then the price and the options. The page title already says Seminyak, so the first sentence needs neither the spa's name nor the place. To add a link, write [the words](/seminyak/).",
       },
       {
         key: "items",
