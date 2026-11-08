@@ -213,3 +213,49 @@
   flex: none;
   color: var(--theme-color1);
 }
+
+/*
+ * A treatment's local name under its English name (src/components/ui/LocalName.tsx;
+ * owner, 8 Nov 2026): the English name stays the title, this line explains it
+ * in the language's own script. Smaller, lighter and in the text font, so the
+ * title still reads as one name; the colour follows the title's.
+ */
+.local-name {
+  display: block;
+  margin-top: 0.3em;
+  font-family: var(--text-font, var(--font-sans));
+  font-size: max(13.5px, 0.62em);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.8;
+}
+/* Page title: a little smaller again under the large heading. The banners style
+   every span in their title (inline, per page: .balinese-massage-banner …), so
+   this needs the element names to win. */
+.banner-two__content h1.title > span.local-name,
+h1 > span.local-name {
+  display: block;
+  font-family: var(--text-font, var(--font-sans));
+  font-style: normal;
+  font-size: 0.42em;
+  margin-top: 0.45em;
+  opacity: 0.85;
+}
+/* Phone menu: one more line under the name, before its price note. */
+.mnav .local-name {
+  margin-top: 1px;
+  font-size: 12px;
+}
+/* Outcall list: the name, its local name and the line about it read as one row. */
+.oc-treat .local-name {
+  display: inline;
+  margin: 0 0 0 0.4em;
+  font-size: 0.85em;
+}
+/* Villa prices table: under the name, before the length tag. */
+.oc-villa__name + .local-name {
+  font-size: 0.8em;
+  margin-top: 0.15em;
+}

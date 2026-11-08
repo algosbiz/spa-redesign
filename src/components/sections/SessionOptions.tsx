@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import type { ReactNode } from "react";
+import LocalName from "@/components/ui/LocalName";
 import { displayPrice } from "@/lib/price";
 
 type Session = { duration: string; price: string; details?: string[]; icon?: string };
@@ -95,6 +96,7 @@ export default function SessionOptions({
               {e.title ? (
                 <h3 data-wow-duration="1500ms" className="jsx-treatment-layout session-option-group__title wow fadeInUp">
                   {e.title}
+                  <LocalName englishName={e.title} />
                 </h3>
               ) : null}
               <div className="jsx-treatment-layout row g-4 align-items-stretch justify-content-center">

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import type { ReactNode } from "react";
+import LocalName from "@/components/ui/LocalName";
 import { LotusPaths25 } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
 import { glassShade } from "@/data/bannerGlass";
@@ -12,6 +13,12 @@ export type PageBannerProps = {
   /** First words of the heading, set apart in a span. */
   titleSpan?: string;
   title?: string;
+  /**
+   * The treatment's English name, for its local name under the heading on
+   * the other language sites (LocalName). The treatment pages pass it only
+   * when the translated heading has none of the language's letters.
+   */
+  englishName?: string;
   text?: string;
   openingText?: string;
   image: string;
@@ -76,6 +83,7 @@ export default function PageBanner({
   subTitle = "Rejuvenate You Today",
   titleSpan = "Indulge in",
   title = "Pure Tranquility",
+  englishName,
   text = "",
   openingText = "",
   image,
@@ -172,6 +180,7 @@ export default function PageBanner({
                   )}
                   <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
                     <span className={S}>{titleSpan}</span> {title}
+                    {englishName && <LocalName englishName={englishName} />}
                   </h1>
                   {prices && (
                     <div className={`${S} banner-prices`}>

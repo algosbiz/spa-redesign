@@ -19,6 +19,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
+import LocalName from "@/components/ui/LocalName";
 import RowButton from "@/components/ui/RowButton";
 import { homeServiceReviews } from "@/data/testimonials";
 import { business } from "@/data/business";
@@ -949,6 +950,7 @@ function TreatmentItem({ href, name, children }: { href: string; name: string; c
     <span className="oc-treat">
       <Link prefetch={false} href={href} className="oc-treat__name">
         {name}
+        <LocalName englishName={name} />
       </Link>
       <span className="oc-treat__dash">{" — "}</span>
       <span className="oc-treat__text">{children}</span>

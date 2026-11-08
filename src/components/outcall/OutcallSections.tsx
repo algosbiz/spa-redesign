@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
+import LocalName from "@/components/ui/LocalName";
 import { LotusIcon } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
@@ -146,6 +147,7 @@ export function HomeServicePrices() {
                   {/* The comma and brackets are hidden on phones, where the length and therapists are tags. */}
                   <th scope="row">
                     <span className="oc-villa__name">{r.name}</span>
+                    <LocalName englishName={r.name} />
                     <span className="oc-villa__punct">, </span>
                     <span className="oc-villa__tag">{r.length}</span>
                     {r.therapists > 1 ? (
