@@ -352,14 +352,14 @@
         "image": "/images/services/lymphaticmassage/lymphaticmassage-9.webp",
         "imageAlt": "Therapist using a wooden massage tool",
         "title": "Wood Therapy",
-        "text": "Wood therapy is massage with smooth, hand-held wooden tools, and your therapist can add it to a lymphatic session. The tools are used alongside the hands for some of the strokes. If you would like it included, or want to know whether it suits you, ask when you book on WhatsApp.",
+        "text": "Wood therapy uses smooth wooden tools: two rollers, one with ridged wheels and one with square beads, a multi-point massager, a wooden cup and a curved paddle. Your therapist adds it to the session when it suits you, working mostly with the rollers at a quicker pace than the hand strokes. It costs nothing extra, and the tools come to your villa or hotel too.",
         "featuresLeft": [
-          "Smooth, hand-held wooden tools",
-          "Used alongside the hands"
+          "Two wooden rollers, at a quicker pace",
+          "A multi-point massager, a cup and a paddle"
         ],
         "featuresRight": [
-          "Added to a lymphatic session",
-          "Ask about it when you book"
+          "No extra cost",
+          "Brought to your villa or hotel too"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
@@ -463,6 +463,10 @@
               {
                 "question": "Can I combine it with other treatments?",
                 "answer": "Yes. The Lymphatic & Gold Facial pairs 1 hour of each for IDR 525.000 per person (IDR 569.000 booked separately), and many guests add foot reflexology or a body scrub to the same visit."
+              },
+              {
+                "question": "Does wood therapy cost extra?",
+                "answer": "No. It is part of the lymphatic massage price, and your therapist brings the wooden tools to your villa or hotel too."
               },
               {
                 "question": "Can I have lymphatic drainage on my face?",
