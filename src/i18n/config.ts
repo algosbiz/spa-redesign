@@ -22,8 +22,13 @@ export type Locale = (typeof locales)[number];
 /** The language without a prefix, of every page that has no translation, and of x-default. */
 export const defaultLocale: Locale = "en";
 
-/** The live languages. Add one once its pages are translated (plan, phase 3). */
-export const activeLocales: readonly Locale[] = ["en"];
+/**
+ * The live languages. Add one once its pages are translated (plan, phase 3).
+ * Japanese, Korean, Chinese and Hindi went live on 8 Nov 2026 (owner), after
+ * the review in migration/i18n-review-2026-11-08.md; a native speaker's read
+ * of each is still to come.
+ */
+export const activeLocales: readonly Locale[] = ["en", "ja", "ko", "zh", "hi"];
 
 /**
  * Languages being translated, opened where I18N_PREVIEW_LOCALES lists them
