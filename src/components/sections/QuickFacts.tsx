@@ -1,5 +1,8 @@
 import { Fragment, type ReactNode } from "react";
 import SectionShapes from "@/components/ui/SectionShapes";
+import type { Locale } from "@/i18n/config";
+import { formatDay } from "@/i18n/format";
+import { getLocale } from "@/i18n/server";
 
 /**
  * `figure` and `detail`: the fact as the "glance" look sets it, a large
@@ -7,9 +10,8 @@ import SectionShapes from "@/components/ui/SectionShapes";
  */
 export type QuickFact = { label: string; value: string; figure?: string; detail?: string };
 
-/** "15 October 2026", British date order, as the footer prints dates (Bali time). */
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Makassar" });
+/** "15 October 2026", British date order, as the footer prints dates (Bali time); in the page language elsewhere. */
+const formatDate = (iso: string, locale: Locale) => formatDay(iso, locale, "Asia/Makassar");
 
 /**
  * "1 hour IDR 300.000 · 1.5 hours IDR 440.000 · …": a line breaks between the
@@ -80,7 +82,7 @@ function SplitLead({ text, skipPrices }: { text: string; skipPrices: boolean }) 
  * time, the first open. Native <details>, so it works without script and
  * every answer stays in the HTML for search engines and AI answers.
  */
-function FaqList({ items, updated, skip }: { items: QuickFact[]; updated?: string; skip?: string }) {
+function FaqList({ items, updated, skip, locale }: { items: QuickFact[]; updated?: string; skip?: string; locale: Locale }) {
   const rows = items.filter((item) => item.label !== skip);
   return (
     <div className="quick-facts__faq">
@@ -102,7 +104,7 @@ function FaqList({ items, updated, skip }: { items: QuickFact[]; updated?: strin
       ))}
       {updated ? (
         <p className="quick-facts__updated">
-          Last updated <time dateTime={updated}>{formatDate(updated)}</time>
+          Last updated <time dateTime={updated}>{formatDate(updated, locale)}</time>
         </p>
       ) : null}
     </div>
@@ -169,7 +171,7 @@ function Glance({ items }: { items: QuickFact[] }) {
  * booking) as a short list that search and AI answers can lift as it is.
  * No heading of its own, so the page's headings stay as they were.
  */
-export default function QuickFacts({
+export default async function QuickFacts({
   text,
   items = [],
   updated,
@@ -194,6 +196,7 @@ export default function QuickFacts({
   children?: ReactNode;
 }) {
   const paper = look === "faq" || look === "glance";
+  const locale = await getLocale();
   return (
     // The faq and glance looks sit on the paper colour with the theme's torn
     // edges, as the price and FAQ sections do (option B, owner, 19 Oct).
@@ -213,7 +216,7 @@ export default function QuickFacts({
             <p className="quick-facts__lead">{typeof text === "string" ? text.replace(/IDR /g, "IDR ") : text}</p>
           ) : null}
           {items.length > 0 && look === "faq" ? (
-            <FaqList items={items} updated={updated} skip={bannerPriceLabel} />
+            <FaqList items={items} updated={updated} skip={bannerPriceLabel} locale={locale} />
           ) : null}
           {items.length > 0 && look === "glance" ? <Glance items={items} /> : null}
           {items.length > 0 && look === "rows" && (
@@ -231,7 +234,7 @@ export default function QuickFacts({
               </dl>
               {updated ? (
                 <p className="quick-facts__updated">
-                  Last updated <time dateTime={updated}>{formatDate(updated)}</time>
+                  Last updated <time dateTime={updated}>{formatDate(updated, locale)}</time>
                 </p>
               ) : null}
             </div>

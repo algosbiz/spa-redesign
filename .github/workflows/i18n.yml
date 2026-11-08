@@ -1,0 +1,110 @@
+name: Translations
+
+# Every pull request into main or staging: builds the site in every language
+# and lists the English texts that have no translation yet (a new heading, a
+# renamed button, a new alt text or page title). Translations are keyed by the
+# exact English text, so any change to English makes a new text.
+#
+# With the ANTHROPIC_API_KEY secret set, it then translates them with Claude
+# into Japanese, Korean, Chinese and Hindi (tools/i18n/translate.mjs, keeping
+# names, places and prices in Latin letters) and commits them to the pull
+# request, to be read before merging. The check fails while any text is left
+# without a translation; the list is in the run's summary.
+#
+# Needs one repository secret (Settings -> Secrets and variables -> Actions):
+#   ANTHROPIC_API_KEY   a Claude API key (console.anthropic.com)
+# Without it, the check still lists what is missing, but translates nothing.
+# The build needs no other secret: without DATABASE_URL the site uses its
+# built-in pages and articles.
+
+on:
+  pull_request:
+    branches: [main, staging]
+    paths:
+      - "src/**"
+      - "tools/i18n/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/i18n.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: i18n-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  translations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      # The pull request's own branch (not GitHub's merge preview), so the
+      # translations can be committed to it.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Builds every page in every language (the languages in preview, as on
+      # staging); each English text with no translation is written to the file.
+      - name: Build the site in every language
+        run: npx next build
+        env:
+          I18N_PREVIEW_LOCALES: ja,ko,zh,hi
+          I18N_MISSING_FILE: .i18n-missing.jsonl
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: List the texts with no translation
+        run: node tools/i18n/missing.mjs merge
+
+      - name: Translate them with Claude
+        if: env.ANTHROPIC_API_KEY != ''
+        continue-on-error: true
+        run: node tools/i18n/translate.mjs
+
+      # Lists what is still without a translation (also in the run's summary);
+      # the last step fails the check on it, after the commit.
+      - name: Check every text has a translation
+        id: check
+        continue-on-error: true
+        run: node tools/i18n/translate.mjs --check
+
+      # Only the filled-in translations: texts still empty are not committed.
+      - name: Commit the translations to the pull request
+        if: >-
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          node -e '
+            const fs = require("fs");
+            for (const lang of ["ja", "ko", "zh", "hi"]) for (const file of ["ui", "content"]) {
+              const path = `src/i18n/messages/${lang}/${file}.json`;
+              const messages = JSON.parse(fs.readFileSync(path, "utf8"));
+              const kept = Object.fromEntries(Object.entries(messages).filter(([, v]) => v));
+              fs.writeFileSync(path, JSON.stringify(kept, null, 2) + "\n");
+            }'
+          if git diff --quiet -- src/i18n/messages; then
+            echo "No new translations."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/i18n/messages
+          git commit -m "Translations for the new texts (automatic: please read before merging)"
+          git push
+
+      - name: Fail if any text has no translation
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "Some texts have no translation yet: see the step 'Check every text has a translation' or the run's summary."
+          exit 1

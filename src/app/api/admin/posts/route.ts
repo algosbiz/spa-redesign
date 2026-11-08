@@ -1,6 +1,7 @@
+import type { Locale } from "@/i18n/config";
 import { isDatabaseConfigured } from "@/lib/blog/db";
 import { readPostInput } from "@/lib/blog/input";
-import { ensureUniqueSlug, insertPost, listPostRows } from "@/lib/blog/posts";
+import { ensureUniqueSlug, getPostLanguages, insertPost, listPostRows } from "@/lib/blog/posts";
 import { readBlogMenu, refreshGuidePages } from "@/lib/blog/refresh";
 import { denyUnlessAdmin } from "@/lib/blog/session";
 import { DATABASE_MISSING } from "@/lib/blog/setup";
@@ -32,14 +33,19 @@ export async function POST(request: Request) {
   const { input } = parsed;
 
   try {
-    const slug = await ensureUniqueSlug(input.slug);
-    const menuBefore = input.status === "published" ? await readBlogMenu() : null;
+    const locale = input.locale as Locale;
+    const slug = await ensureUniqueSlug(input.slug, locale);
+    const menuBefore = input.status === "published" ? await readBlogMenu(locale) : null;
     const post = await insertPost(
       { ...input, slug },
       input.status === "published" ? new Date().toISOString() : null
     );
     // A draft is not on the public site, so no cached page can be stale.
-    const cache = input.status === "published" ? await refreshGuidePages({ slug: post.slug, menuBefore }) : null;
+    // A published translation also changes its other languages' pages (hreflang).
+    const cache =
+      input.status === "published"
+        ? await refreshGuidePages({ slug: post.slug, menuBefore, locale, languages: await getPostLanguages(post) })
+        : null;
     return Response.json({ post, cache }, { status: 201 });
   } catch (e) {
     return failed(e, "Failed to save.");

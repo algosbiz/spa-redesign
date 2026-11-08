@@ -5,6 +5,7 @@ import { useState, type ReactNode } from "react";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { linkedText } from "@/lib/linkedText";
 import SectionShapes from "@/components/ui/SectionShapes";
+import { useI18n } from "@/i18n/client";
 
 export type FaqItem = { question: string; answer: string };
 
@@ -50,6 +51,7 @@ export default function FaqSection({
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
 }) {
+  const { el } = useI18n();
   const twoColumns = columns === 2;
   const half = Math.ceil(items.length / 2);
   const className =
@@ -58,7 +60,7 @@ export default function FaqSection({
     (paperDecoration ? " faq-section--paper section__decoration-top section__decoration-bottom bg-sub pt-130 pb-100" : "") +
     (removeTopPadding || paperDecoration ? "" : largeTopPadding ? " pt-130" : " pt-100");
 
-  return (
+  return el(
     <section className={`${S} ${className}`}>
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className={`${S} outer-box`}>
@@ -126,9 +128,10 @@ export default function FaqSection({
  * heading text: the number is drawn by CSS from `data-num` (src/styles/custom.css).
  */
 function QuestionText({ text }: { text: string }) {
+  const { el } = useI18n();
   const m = /^(\d+\.)\s+(.*)$/.exec(text);
   if (!m) return <>{text}</>;
-  return (
+  return el(
     <>
       <span className="faq-q-num" data-num={m[1]} aria-hidden="true" />
       {m[2]}
@@ -137,8 +140,9 @@ function QuestionText({ text }: { text: string }) {
 }
 
 function Accordion({ items, defaultOpen }: { items: FaqItem[]; defaultOpen: number | null }) {
+  const { el } = useI18n();
   const [open, setOpen] = useState<number | null>(defaultOpen);
-  return (
+  return el(
     <div className="accordion" id="accordionExample">
       {items.map((item, i) => {
         const isOpen = open === i;

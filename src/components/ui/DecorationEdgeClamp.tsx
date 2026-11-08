@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useSitePath } from "@/i18n/useSitePath";
 
 /**
  * How far from a section's top or bottom a decoration keeps: the torn paper
@@ -183,7 +183,7 @@ function clampToEdges(page: HTMLElement) {
  * has woken every section, and never on HTML React has yet to check.
  */
 export default function DecorationEdgeClamp() {
-  const pathname = usePathname();
+  const pathname = useSitePath();
 
   useEffect(() => {
     const page = document.querySelector<HTMLElement>("main .page-wrapper");

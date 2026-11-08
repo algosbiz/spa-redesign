@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { business } from "@/data/business";
+import { useI18n } from "@/i18n/client";
 
 export type ContactItem = { icon: string; title: string; href?: string; text: string };
 
@@ -73,6 +74,7 @@ export default function ContactSection({
   infoText: string;
   contactItems: ContactItem[];
 }) {
+  const { el } = useI18n();
   const [form, setForm] = useState<FormData>(EMPTY);
   const [prompt, setPrompt] = useState(false);
   const message = whatsappMessage(form).trim();
@@ -83,7 +85,7 @@ export default function ContactSection({
     setForm((f) => ({ ...f, [name]: value }));
   };
 
-  return (
+  return el(
     <>
       <link rel="preconnect" href="https://challenges.cloudflare.com" />
       <link rel="dns-prefetch" href="https://challenges.cloudflare.com" />
@@ -241,6 +243,7 @@ export default function ContactSection({
 
 /** "We reply on WhatsApp" dialog: focus trapped, Escape closes, page scroll locked. */
 function WhatsAppPrompt({ open, onClose, href }: { open: boolean; onClose: () => void; href: string }) {
+  const { el } = useI18n();
   const cardRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLAnchorElement>(null);
   const returnTo = useRef<Element | null>(null);
@@ -278,7 +281,7 @@ function WhatsAppPrompt({ open, onClose, href }: { open: boolean; onClose: () =>
   }, [open, onClose]);
 
   if (!open) return null;
-  return (
+  return el(
     <div role="presentation" onClick={onClose} className="jsx-wa-prompt wa-prompt">
       <div
         role="dialog"

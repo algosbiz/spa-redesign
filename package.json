@@ -9,7 +9,10 @@
     "start": "next start",
     "lint": "eslint",
     "blog:setup": "node --env-file=.env.local tools/blog/setup-neon.mjs",
-    "cloudflare:redirects": "node --experimental-strip-types --no-warnings tools/cloudflare/make-bulk-redirects.mjs"
+    "cloudflare:redirects": "node --experimental-strip-types --no-warnings tools/cloudflare/make-bulk-redirects.mjs",
+    "i18n:missing": "node tools/i18n/missing.mjs",
+    "i18n:status": "node tools/i18n/missing.mjs status",
+    "i18n:translate": "node tools/i18n/translate.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
@@ -33,6 +36,7 @@
     "swiper": "^11.2.10"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

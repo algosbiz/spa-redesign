@@ -10,6 +10,12 @@ import { liveRedirects } from "./src/data/redirects";
 const onWww = [{ type: "host" as const, value: "www.spabalimoon.com" }];
 
 const nextConfig: NextConfig = {
+  // The site's root layout is inside src/app/[lang]/, so an address that
+  // matches no page gets its 404 from src/app/global-not-found.tsx.
+  experimental: {
+    globalNotFound: true,
+  },
+
   // Every URL ends with "/" — exactly like the old website (SEO: keep URLs identical).
   // Visiting /contact redirects to /contact/.
   trailingSlash: true,

@@ -1,6 +1,7 @@
 "use client";
 
 import { Children, useCallback, useEffect, useRef, useState, type PointerEvent, type ReactNode } from "react";
+import { useI18n } from "@/i18n/client";
 
 type Props = {
   /** Classes of the scrolling row itself (its layout lives in home-v2.css). */
@@ -45,6 +46,7 @@ const START: Position = { active: 0, first: 0, atStart: true, atEnd: false, scro
  */
 export default function ScrollRow({ className, below, indicator = "dots", nudge = false, label, children }: Props) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const { t } = useI18n();
   const count = Children.count(children);
   const [pos, setPos] = useState<Position>(START);
   const drag = useRef<{ x: number; left: number; moved: boolean; id: number } | null>(null);
@@ -205,7 +207,7 @@ export default function ScrollRow({ className, below, indicator = "dots", nudge 
         <button
           type="button"
           className="v2-scroll-nav__arrow"
-          aria-label="Previous"
+          aria-label={t("Previous")}
           disabled={pos.atStart}
           onClick={() => go(pos.first - pos.visible)}
         >
@@ -233,7 +235,7 @@ export default function ScrollRow({ className, below, indicator = "dots", nudge 
                 key={i}
                 type="button"
                 className="v2-scroll-nav__dot"
-                aria-label={`Show card ${i + 1} of ${count}`}
+                aria-label={t("Show card {number} of {count}", { number: i + 1, count })}
                 aria-current={i === pos.active ? "true" : undefined}
                 onClick={() => go(i)}
               />
@@ -243,7 +245,7 @@ export default function ScrollRow({ className, below, indicator = "dots", nudge 
         <button
           type="button"
           className="v2-scroll-nav__arrow"
-          aria-label="Next"
+          aria-label={t("Next")}
           disabled={pos.atEnd}
           onClick={() => go(pos.first + pos.visible)}
         >

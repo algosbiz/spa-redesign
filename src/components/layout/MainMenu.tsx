@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import type { MobileMenuEntry } from "@/components/layout/mobileMenuData";
 import { treatmentMenu, treatmentMenuColumns } from "@/data/navigation";
+import { useI18n } from "@/i18n/client";
+import { useSitePath } from "@/i18n/useSitePath";
 
 const strip = (path: string) => path.replace(/\/$/, "") || "/";
 
@@ -16,12 +17,13 @@ const strip = (path: string) => path.replace(/\/$/, "") || "/";
  * the links are in the HTML from the start.
  */
 export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
-  const current = strip(usePathname() || "/");
+  const { el } = useI18n();
+  const current = strip(useSitePath() || "/");
   const isCurrent = (href: string) => current === strip(href);
   const inTreatments = treatmentMenu.some((t) => isCurrent(t.href));
   const inBlog = current === "/guide" || current.startsWith("/guide/");
 
-  return (
+  return el(
     <ul className="jsx-nav">
       <li className="jsx-nav">
         <Link prefetch={false} href="/">
@@ -73,20 +75,23 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
           Reservation
         </Link>
       </li>
-      <li className={`jsx-nav blog-menu-item${inBlog ? " is-active" : ""}`}>
-        <Link prefetch={false} href="/guide/">
-          Blog <i className="jsx-nav fa-solid fa-angle-down" />
-        </Link>
-        <ul className="jsx-nav sub-menu blog-dropdown-menu">
-          {posts.map((post) => (
-            <li key={post.href} className="jsx-nav">
-              <Link prefetch={false} href={post.href}>
-                {post.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </li>
+      {/* A language without articles of its own yet has no Blog (src/lib/blog/posts.ts). */}
+      {posts.length > 0 && (
+        <li className={`jsx-nav blog-menu-item${inBlog ? " is-active" : ""}`}>
+          <Link prefetch={false} href="/guide/">
+            Blog <i className="jsx-nav fa-solid fa-angle-down" />
+          </Link>
+          <ul className="jsx-nav sub-menu blog-dropdown-menu">
+            {posts.map((post) => (
+              <li key={post.href} className="jsx-nav">
+                <Link prefetch={false} href={post.href}>
+                  {post.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+      )}
       <li className="jsx-nav">
         <Link prefetch={false} href="/contact/">
           Contact

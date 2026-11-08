@@ -27,3 +27,6 @@ yarn-error.log*
 # misc
 .DS_Store
 Thumbs.db
+
+# translation tool output (tools/i18n/missing.mjs)
+.i18n-missing.jsonl

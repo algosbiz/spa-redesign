@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves this as a plain <img> */
 import { useEffect, useState } from "react";
+import { useI18n } from "@/i18n/client";
 
 /**
  * The live site's loading screen: the lotus logo over four panels, shown on
@@ -11,6 +12,7 @@ import { useEffect, useState } from "react";
  * slow phone does not sit on "Loading..." until the JavaScript has run.
  */
 export default function Preloader() {
+  const { el } = useI18n();
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function Preloader() {
   }, []);
 
   if (!visible) return null;
-  return (
+  return el(
     <div id="preloader" className="lh">
       <div className="animation-preloader">
         <div className="preloader-mark">

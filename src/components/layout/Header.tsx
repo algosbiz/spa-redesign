@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import MainMenu from "@/components/layout/MainMenu";
 import { MenuIcon } from "@/components/layout/MenuIcons";
 import MobileMenu from "@/components/layout/MobileMenu";
@@ -11,6 +12,9 @@ import HydrateLater from "@/components/ui/HydrateLater";
 import { LotusPaths } from "@/components/ui/Lotus";
 import { business } from "@/data/business";
 import { searchIndex } from "@/data/navigation";
+import { useI18n } from "@/i18n/client";
+import { defaultLocale, linkFor } from "@/i18n/config";
+import { useSitePath } from "@/i18n/useSitePath";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 type Sidebar = "closed" | "open" | "closing";
@@ -28,6 +32,7 @@ type Sidebar = "closed" | "open" | "closing";
  * menu's Treatments and Blog panels and the desktop Blog dropdown.
  */
 export default function Header({ menu }: { menu: MobileMenuData }) {
+  const { el, t, locale } = useI18n();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -38,11 +43,19 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
+  const pathname = useSitePath();
   const [lastPath, setLastPath] = useState(pathname);
 
+  // Another language searches its own titles, and the English ones as keywords.
+  const index = useMemo(
+    () =>
+      locale === defaultLocale
+        ? searchIndex
+        : searchIndex.map((e) => ({ ...e, title: t(e.title), keywords: `${e.keywords} ${e.title.toLowerCase()}` })),
+    [locale, t],
+  );
   const q = query.trim().toLowerCase();
-  const results = q ? searchIndex.filter((e) => e.title.toLowerCase().includes(q) || e.keywords.includes(q)) : [];
+  const results = q ? index.filter((e) => e.title.toLowerCase().includes(q) || e.keywords.includes(q)) : [];
 
   const closeSearch = () => {
     setSearchOpen(false);
@@ -109,7 +122,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
     };
   }, [searchOpen]);
 
-  return (
+  return el(
     <>
       <header className={`jsx-header header-area header-three-area ${scrolled ? "menu-fixed" : ""} lh`}>
         <div className="jsx-header header-one__wrp">
@@ -124,6 +137,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
               </nav>
             </div>
             <div className="jsx-header menu-btns">
+              <LanguageSwitcher look="circle" id="lang-menu-header" />
               <div ref={searchRef} className="jsx-header header-search d-none d-lg-block">
                 <button
                   onClick={() => setSearchOpen((v) => !v)}
@@ -138,7 +152,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
                     onSubmit={(e) => {
                       e.preventDefault();
                       if (results.length > 0) {
-                        router.push(results[0].href);
+                        router.push(linkFor(results[0].href, locale));
                         closeSearch();
                       }
                     }}
@@ -166,7 +180,9 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
                           </li>
                         ))
                       ) : (
-                        <li className="jsx-header header-search__empty">No results for &ldquo;{query.trim()}&rdquo;</li>
+                        <li className="jsx-header header-search__empty">
+                          {t("No results for “{query}”", { query: query.trim() })}
+                        </li>
                       )}
                     </ul>
                   )}
@@ -261,6 +277,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
         } lh`}
       >
         <div className="jsx-header offcanvas-header mnav__top">
+          <LanguageSwitcher look="square" id="lang-menu-mnav" />
           <Link prefetch={false} href="/" onClick={closeSidebar} className="logo offcanvas-logo mnav__logo">
             {/* eslint-disable-next-line @next/next/no-img-element -- the live site's plain <img> */}
             <img src="/images/logo/SMBtitle.svg" alt={business.name} width="444" height="80" className="jsx-header" />

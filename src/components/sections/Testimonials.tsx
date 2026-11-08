@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import TestimonialCard from "@/components/sections/TestimonialCard";
 import { testimonials } from "@/data/testimonials";
+import { useI18n } from "@/i18n/client";
 import { useNearViewport } from "@/lib/useNearViewport";
 
 const noop = () => {};
@@ -14,7 +15,8 @@ const noop = () => {};
  * every review in the HTML, the first one in view.
  */
 function StaticSlider() {
-  return (
+  const { el } = useI18n();
+  return el(
     <div className="swiper testimonial-slider-two wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
       <div className="swiper-wrapper">
         {testimonials.map((t, i) => (
@@ -40,10 +42,11 @@ const TestimonialsSlider = dynamic(() => import("@/components/sections/Testimoni
  * slider (TestimonialsSlider) before the reader scrolls to it.
  */
 export default function Testimonials() {
+  const { el } = useI18n();
   const box = useRef<HTMLDivElement>(null);
   const near = useNearViewport(box);
 
-  return (
+  return el(
     <section className="testimonial-section-two pt-130 pb-130">
       <div className="shape1">
         <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/testimonial-two-shape-left.png" alt="image" />

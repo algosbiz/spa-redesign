@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { home } from "@/data/pages/home";
 import { catalog, catalogCategories, type CatalogCategory, type CatalogItem } from "@/data/pages/home-catalog";
+import { useI18n } from "@/i18n/client";
 import "@/styles/spa-menu.css";
 
 /** The spa-menu entries of one tab, A–Z, as the live catalog lists them. */
@@ -44,8 +45,9 @@ export default function MenuIntro<T extends string = CatalogCategory>({
   intro?: ReactNode;
   tabs?: { id: T; label: string }[];
 }) {
+  const { el } = useI18n();
   const { catalog: text } = home;
-  return (
+  return el(
     <>
       <div className="jsx-catalog section-header mb-60 center">
         <div className="jsx-catalog sub-title look-h4">{subTitle ?? text.subTitle}</div>

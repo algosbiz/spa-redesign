@@ -1,0 +1,215 @@
+/*
+ * Languages other than English (migration/multi-language-plan-2026-11.md §3.6).
+ *
+ * Fraunces and Plus Jakarta Sans have Latin letters only. Each language keeps
+ * them first, so prices, numbers and Latin names look as on spabalimoon.com,
+ * and adds the fonts its visitors' phones and computers already have for
+ * everything else: nothing extra to download, so the page weight stays as
+ * it is. The fonts follow <html lang> (src/i18n/config.ts).
+ *
+ * The theme reads --title-font / --text-font on `.lh` (live.css) and
+ * --font-display / --font-sans on :root (globals.css); both are set here.
+ */
+
+:root:lang(ja),
+:lang(ja) .lh {
+  --title-font: var(--font-fraunces), "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --text-font: var(--font-jakarta), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(ko),
+:lang(ko) .lh {
+  --title-font: var(--font-fraunces), AppleMyungjo, "Noto Serif KR", Batang, serif;
+  --text-font: var(--font-jakarta), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(zh-Hans),
+:lang(zh-Hans) .lh {
+  --title-font: var(--font-fraunces), "Songti SC", SimSun, "Noto Serif SC", serif;
+  --text-font: var(--font-jakarta), "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+:root:lang(hi),
+:lang(hi) .lh {
+  --title-font: var(--font-fraunces), "Noto Serif Devanagari", "Kohinoor Devanagari", "Nirmala UI", serif;
+  --text-font: var(--font-jakarta), "Kohinoor Devanagari", "Nirmala UI", "Noto Sans Devanagari", sans-serif;
+  --font-display: var(--title-font);
+  --font-sans: var(--text-font);
+}
+
+/* Line breaks: Korean breaks between words, as written; Japanese and Chinese
+   keep closing punctuation and small kana off the start of a line. */
+:lang(ko) {
+  word-break: keep-all;
+}
+
+:lang(ja),
+:lang(zh-Hans) {
+  line-break: strict;
+  /* Service and place names stay in Latin letters (owner, 3 Nov 2026): a
+     little space between them and the characters around ("Seminyakの"),
+     where the browser supports it. Digits keep their usual spacing. */
+  text-autospace: ideograph-alpha;
+}
+
+/* Japanese headings break between phrases, not inside a word
+   ("マッ / サージ"): Chrome and Edge do it, others keep breaking anywhere. */
+:lang(ja) :is(h1, h2, h3, h4, h5, h6, .title) {
+  word-break: auto-phrase;
+}
+
+/* A page banner's title on phones: one long katakana word ("リラクゼーション")
+   is wider than the screen at the English size, so it would break inside. */
+@media (max-width: 767.98px) {
+  :is(:lang(ja), :lang(zh-Hans)) .banner-two__content .title {
+    font-size: 8.5vw;
+  }
+}
+
+/* The language switcher (src/components/layout/LanguageSwitcher.tsx): a
+   button with the page's flag that opens a white card of flags and names.
+   In the header from 1200px a cream circle like the search button; below
+   that, in the phone menu's top row, a white square like the close button.
+   Shown only once a page exists in a second language. */
+.lang-menu {
+  position: relative;
+}
+.lang-menu--circle {
+  display: none;
+  flex: none;
+}
+@media (min-width: 1200px) {
+  .lang-menu--circle {
+    display: block;
+  }
+  /* The menu's labels stay on one line ("Home Service", "Treatments ⌄"),
+     and while the switcher takes its place beside the search, the menu's
+     gaps are a little narrower so "Book an Appointment" still fits from
+     1400px (mobile-nav.css sets them without it). */
+  .lh.header-area .main-menu > nav > ul > li > a {
+    white-space: nowrap;
+  }
+  .lh.header-area .header__main:has(.lang-menu--circle) .main-menu > nav > ul {
+    gap: clamp(14px, calc((100vw - 1160px) / 14), 30px);
+  }
+}
+.lang-menu--square {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.lang-menu__flag {
+  display: block;
+  flex: none;
+  width: 21px;
+  height: 14px;
+  border-radius: 3px;
+  object-fit: cover;
+  /* A thin edge, so a white flag (Japan) does not melt into a white card. */
+  box-shadow: 0 0 0 1px rgba(28, 26, 29, 0.12);
+}
+
+.lang-menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--headings-color, #1c1a1d);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.lang-menu--circle .lang-menu__button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--theme-color-gray, #f5f2ec);
+}
+.lang-menu--circle .lang-menu__button:is(:hover, :focus-visible),
+.lang-menu--circle.is-open .lang-menu__button {
+  background-color: rgba(var(--theme-color1-rgb), 0.16);
+}
+.lang-menu--square .lang-menu__button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--theme-color-white, #fff);
+  border: 1px solid rgba(95, 90, 84, 0.14);
+  border-radius: 12px;
+}
+.lang-menu--square .lang-menu__button:is(:hover, :focus-visible),
+.lang-menu--square.is-open .lang-menu__button {
+  border-color: var(--theme-color1);
+}
+
+.lang-menu__list {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 30;
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background-color: var(--theme-color-white, #fff);
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(28, 26, 29, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+.lang-menu--circle .lang-menu__list {
+  right: 0;
+}
+.lang-menu--square .lang-menu__list {
+  left: 0;
+}
+.lang-menu.is-open .lang-menu__list {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang-menu__list,
+  .lang-menu.is-open .lang-menu__list {
+    transition: none;
+  }
+}
+
+.lang-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--headings-color, #1c1a1d);
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+.lang-menu__item:is(:hover, :focus-visible) {
+  background-color: var(--theme-color-gray, #f5f2ec);
+  color: var(--headings-color, #1c1a1d);
+}
+.lang-menu__item[aria-current] {
+  font-weight: 700;
+}
+.lang-menu__name {
+  flex: 1;
+}
+.lang-menu__tick {
+  flex: none;
+  color: var(--theme-color1);
+}
