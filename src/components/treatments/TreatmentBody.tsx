@@ -3,6 +3,7 @@ import { createElement, Fragment, type ComponentType, type ReactNode } from "rea
 import AboutIntro from "@/components/sections/AboutIntro";
 import AboutSplit from "@/components/sections/AboutSplit";
 import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
+import CompareTable from "@/components/sections/CompareTable";
 import FaqSection from "@/components/sections/FaqSection";
 import FeaturedPackage from "@/components/pricelist/FeaturedPackage";
 import Funfacts from "@/components/sections/Funfacts";
@@ -25,6 +26,8 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   AboutIntro,
   AboutSplit,
   AboutSplitAlt,
+  // Treatments side by side (lymphatic page, 8 Nov).
+  CompareTable,
   DecorationMotion,
   FaqSection,
   // The new special (lymphatic and facial pages, 25 Oct).

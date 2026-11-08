@@ -253,6 +253,29 @@ export const SECTIONS: Record<string, SectionSchema> = {
       },
     ],
   },
+  CompareTable: {
+    label: "Comparison table",
+    fields: [
+      ...heading(),
+      { ...paragraph, label: "Sentence under the heading" },
+      {
+        key: "rows",
+        label: "Rows",
+        kind: "items",
+        itemLabel: "Row",
+        fields: [
+          { key: "label", label: "Row name", kind: "text", placeholder: "Pressure" },
+          {
+            key: "values",
+            label: "One line per treatment",
+            kind: "list",
+            hint: "In the order of the columns, left to right.",
+          },
+        ],
+      },
+    ],
+    note: "The treatments in the columns and their links are set for each page in the code.",
+  },
   ServiceSlider: {
     label: "Other treatments",
     fields: [

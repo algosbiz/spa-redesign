@@ -24,11 +24,11 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Lymphatic drainage massage is a slow, very light massage that follows the body's lymph pathways. It's our most booked treatment, and our therapists all specialise in manual lymphatic drainage (MLD). Sessions are 1, 1.5 or 2 hours, at our spa or at your villa or hotel, and it's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
+        "text": "Lymphatic drainage massage is a slow, very light massage that follows the body's lymph pathways. Here in Seminyak we give it as manual lymphatic drainage (MLD), in sessions of 1, 1.5 or 2 hours from IDR 300.000, at our spa or at your villa or hotel. It's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
         "items": [
           {
             "label": "Treatment",
-            "value": "Gentle full-body manual lymphatic drainage (MLD), with wooden tools when needed"
+            "value": "Manual lymphatic drainage (MLD) for the whole body, with very light pressure"
           },
           {
             "label": "Length and price",
@@ -60,13 +60,13 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/lymphaticmassage/lymphaticmassage-2.webp",
         "secondaryImage": "/images/services/lymphaticmassage/lymphaticmassage-3.webp",
-        "subTitle": "Our most booked treatment",
-        "title": "Lymphatic Drainage Massage by MLD Specialists",
+        "subTitle": "",
+        "title": "Manual Lymphatic Drainage (MLD)",
         "text": {
           "$jsx": {
             "type": "Fragment",
             "children": [
-              "It's the treatment our guests book most, so it's also the one our therapists give most often, and all of them specialise in manual lymphatic drainage (MLD). Expect slow, very light, rhythmic strokes that move the skin toward the lymph nodes, with wooden tools brought in when needed. For the basics, what the lymphatic system does and what this massage can and can't do, read our",
+              "Every session is manual lymphatic drainage (MLD): slow, very light, rhythmic strokes by hand that move the skin toward the lymph nodes. The pressure stays light because lymph vessels sit just under the skin. For background on the lymphatic system and what the massage can and can't do, see our",
               " ",
               {
                 "type": "Link",
@@ -78,14 +78,14 @@
                   "guide to lymphatic drainage massage"
                 ]
               },
-              ". The rest of this page is about how we do it here."
+              "."
             ]
           }
         },
-        "feature1Title": "Very Light Pressure",
-        "feature1Text": "Slow, rhythmic hand strokes that follow the lymph pathways.",
-        "feature2Title": "Wood Therapy",
-        "feature2Text": "Smooth wooden tools, brought in when needed."
+        "feature1Title": "By Hand",
+        "feature1Text": "Each movement repeated slowly, in a steady rhythm.",
+        "feature2Title": "Full Body",
+        "feature2Text": "From the neck and collarbone down to the ankles."
       }
     },
     {
@@ -103,9 +103,9 @@
               "/images/services/lymphaticmassage/lymphaticmassage-5.webp",
               "/images/services/lymphaticmassage/lymphaticmassage-6.webp"
             ],
-            "subTitle": "Choose your time",
-            "title": "Lymphatic Drainage Massage Sessions & Prices",
-            "text": "Every session uses the same slow MLD technique; the length decides how much time your therapist has. One hour suits a first session or mild heaviness after a flight. With 1.5 or 2 hours, your therapist has more time across the whole body, with extra time for the legs and ankles.",
+            "subTitle": "",
+            "title": "Session Lengths and Prices",
+            "text": "Sessions are 1 hour (IDR 300.000), 1.5 hours (IDR 440.000) or 2 hours (IDR 580.000) per person, all with the same technique. One hour suits a first session or mild heaviness after a flight; with 1.5 or 2 hours your therapist has more time across the whole body, with extra time for the legs and ankles.",
             "packages": [
               {
                 "price": "IDR 300.000",
@@ -157,15 +157,15 @@
             "items": [
               {
                 "title": "MLD",
-                "text": "Specialist Therapists"
-              },
-              {
-                "title": "Most Booked",
-                "text": "Treatment"
+                "text": "Technique"
               },
               {
                 "title": "Light",
                 "text": "Pressure"
+              },
+              {
+                "title": "1 to 2 Hours",
+                "text": "Sessions"
               },
               {
                 "title": "Outcall",
@@ -184,25 +184,186 @@
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "subTitle": "",
         "image": "/images/services/massagehotelvilla/massagehotelvilla-6.webp",
         "imageAlt": "Therapist massaging a guest's leg",
-        "subTitle": "Heavy legs, hot days",
-        "title": "Why Guests Book a Lymphatic Massage in Seminyak",
-        "text": "It's often booked after a long flight, on hot, humid days when legs feel heavy, or after a few active days of surfing, walking and sightseeing. Many guests find their legs and ankles feel lighter afterwards, though the effect is temporary; others simply want a quiet massage with no firm pressure. Guests book it for:",
+        "title": "After a Flight, a Hike or a Hot Day",
+        "text": "Guests often book a lymphatic massage when their legs and ankles feel heavy or puffy: after a long flight, a hike or a day of walking, or a few hot, humid days. Many find their legs feel lighter afterwards, though the effect is temporary.",
         "featuresLeft": [
           "Puffy ankles after a long flight",
           "Heavy legs after hours of sitting",
           "Legs that feel puffy in the heat"
         ],
         "featuresRight": [
-          "Tired legs after surfing or a day of walking",
+          "Tired legs after a hike, a surf or a long walk",
           "Recovery after cosmetic surgery, with your surgeon's go-ahead",
-          "A gentle massage with no firm pressure"
+          "A quiet massage with no firm pressure"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
         "badgeTopText": "Pressure",
         "badgeBottomText": "Gentle & rhythmic",
+        "treatmentLayout": true
+      }
+    },
+    {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Lymphatic, Deep Tissue or Cellulite Massage?",
+        "text": {
+          "$jsx": {
+            "type": "Fragment",
+            "children": [
+              "Lymphatic massage uses very light pressure over the whole body, while a",
+              " ",
+              {
+                "type": "Link",
+                "props": {
+                  "prefetch": false,
+                  "href": "/seminyak/deep-tissue-massage/"
+                },
+                "children": [
+                  "deep tissue massage"
+                ]
+              },
+              " works firmly into tight muscles and a ",
+              {
+                "type": "Link",
+                "props": {
+                  "prefetch": false,
+                  "href": "/seminyak/anti-cellulite-massage/"
+                },
+                "children": [
+                  "cellulite massage"
+                ]
+              },
+              " works firmly on the thighs, hips, buttocks and abdomen."
+            ]
+          }
+        },
+        "caption": "Lymphatic, deep tissue and cellulite massage compared",
+        "columns": [
+          {
+            "name": "Lymphatic Massage",
+            "short": "Lymphatic"
+          },
+          {
+            "name": "Deep Tissue Massage",
+            "short": "Deep tissue",
+            "href": "/seminyak/deep-tissue-massage/"
+          },
+          {
+            "name": "Cellulite Massage",
+            "short": "Cellulite",
+            "href": "/seminyak/anti-cellulite-massage/"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Pressure",
+            "values": [
+              "Very light",
+              "Firm and slow",
+              "Firm and targeted"
+            ]
+          },
+          {
+            "label": "What it works on",
+            "values": [
+              "The lymph pathways just under the skin, from the neck to the ankles",
+              "Deeper layers of tight muscle in the shoulders, neck, back, legs and arms",
+              "The areas where cellulite shows: thighs, hips, buttocks and abdomen"
+            ]
+          },
+          {
+            "label": "How it feels",
+            "values": [
+              "Slow and rhythmic, with no kneading",
+              "Intense, but within your comfort",
+              "Firm and invigorating; the skin feels warm and smooth"
+            ]
+          },
+          {
+            "label": "Good for",
+            "values": [
+              "Legs and ankles that feel heavy or puffy after a flight or a hot day",
+              "Muscles that feel stiff from exercise, surfing or long hours sitting",
+              "A temporary improvement in the look of the skin, building over regular sessions"
+            ]
+          },
+          {
+            "label": "Session lengths",
+            "values": [
+              "1, 1.5 or 2 hours",
+              "1, 1.5 or 2 hours",
+              "1, 1.5 or 2 hours"
+            ]
+          },
+          {
+            "label": "Price for 1 hour",
+            "values": [
+              "IDR 300.000",
+              "IDR 269.000",
+              "IDR 350.000"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "AboutSplitAlt",
+      "props": {
+        "leftShapeSrc": "/images/shape/step-shape-left.png",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "rightDecoration": {
+          "$jsx": {
+            "type": "FloralDecoration",
+            "props": {
+              "clustered": true
+            }
+          }
+        },
+        "subTitle": "",
+        "showBadge": false,
+        "image": "/images/services/lymphaticmassage/lymphaticmassage-8.webp",
+        "title": "How a Lymphatic Massage Session Runs",
+        "text": "A session starts with a short chat about how you feel, any health conditions and the areas you'd like focused on; then your therapist works from the neck and collarbone down to the ankles, always stroking toward the nearest lymph nodes. A longer session adds time, not pressure. You stay covered with a towel or spa wear, and only the area being massaged is uncovered.",
+        "featuresLeft": [
+          "A short chat about how you feel",
+          "Neck and collarbone",
+          "Underarms and abdomen"
+        ],
+        "featuresRight": [
+          "Lower back",
+          "Upper legs, then calves and ankles",
+          "A slow, relaxing finish"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true
+      }
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/banner-three-shape2.png",
+        "subTitle": "",
+        "image": "/images/services/lymphaticmassage/lymphaticmassage-9.webp",
+        "imageAlt": "Therapist using a wooden massage tool",
+        "title": "Wood Therapy",
+        "text": "Wood therapy is massage with smooth, hand-held wooden tools, and your therapist can add it to a lymphatic session. The tools are used alongside the hands for some of the strokes. If you would like it included, or want to know whether it suits you, ask when you book on WhatsApp.",
+        "featuresLeft": [
+          "Smooth, hand-held wooden tools",
+          "Used alongside the hands"
+        ],
+        "featuresRight": [
+          "Added to a lymphatic session",
+          "Ask about it when you book"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "showBadge": false,
         "treatmentLayout": true
       }
     },
@@ -219,11 +380,11 @@
             }
           }
         },
+        "subTitle": "",
         "showBadge": false,
         "image": "/images/services/lymphaticmassage/lymphaticmassage-7.webp",
-        "subTitle": "Check with a doctor first",
-        "title": "When Not to Book a Lymphatic Drainage Massage",
-        "text": "Lymphatic drainage massage is gentle, but it isn't right for everyone. If any of these apply to you, check with your doctor before booking, and only book once they've said it's fine. If you're not sure, ask us on WhatsApp first. It is a relaxation treatment, not a medical one.",
+        "title": "Before You Book",
+        "text": "Lymphatic drainage massage is gentle, but check with your doctor before booking if any of these apply to you, and book once they've said it's fine. If you're not sure, ask us on WhatsApp first. It is a relaxation treatment, not a medical one.",
         "featuresLeft": [
           "A fever, an infection or feeling unwell",
           "A painful, red or swollen leg (a possible blood clot)",
@@ -242,77 +403,19 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/banner-three-shape2.png",
-        "image": "/images/services/lymphaticmassage/lymphaticmassage-8.webp",
-        "imageAlt": "Therapist's hands on a guest's abdomen during a lymphatic massage",
-        "subTitle": "From the first chat to the last stroke",
-        "title": "Your Lymphatic Massage, Step by Step",
-        "text": "Every session follows the same order. It starts with a short chat about how you feel, any health conditions and the areas you would like focused on, and we give you a clean towel or spa wear. Your therapist then applies a little oil and begins at the neck and collarbone, working down the body one area at a time, with every stroke moving toward the nearest lymph nodes. The hand strokes stay very light, because lymph vessels sit just under the skin; a longer session adds time, not pressure. The usual order is:",
-        "featuresLeft": [
-          "A short chat about how you feel",
-          "Neck and collarbone",
-          "Underarms and abdomen"
-        ],
-        "featuresRight": [
-          "Lower back",
-          "Upper legs, then calves and ankles",
-          "A slow, relaxing finish"
-        ],
-        "buttonText": "Book Now",
-        "buttonLink": "https://wa.me/6287863175144",
-        "showBadge": false,
-        "treatmentLayout": true
-      }
-    },
-    {
-      "type": "AboutSplitAlt",
-      "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
-        "rightDecoration": {
-          "$jsx": {
-            "type": "FloralDecoration",
-            "props": {
-              "clustered": true
-            }
-          }
-        },
-        "showBadge": false,
-        "image": "/images/services/lymphaticmassage/lymphaticmassage-9.webp",
-        "subTitle": "Brought in when needed",
-        "title": "Wood Therapy with Your Lymphatic Massage",
-        "text": "Alongside the light hand strokes of manual lymphatic drainage, our therapists bring in wood therapy when needed. Wood therapy uses smooth, hand-held wooden tools, shaped to follow the curves of the body, in place of the hands for some strokes. If you have questions about it, or would like to know whether it suits you, ask us when you book on WhatsApp.",
-        "featuresLeft": [
-          "Smooth, hand-held wooden tools",
-          "Shaped to follow the body"
-        ],
-        "featuresRight": [
-          "Used alongside the hands",
-          "Ask us about it when you book"
-        ],
-        "buttonText": "Book Now",
-        "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
-      }
-    },
-    {
-      "type": "AboutSplit",
-      "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "subTitle": "",
         "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
         "imageAlt": "Therapist giving a massage beside a villa pool",
-        "subTitle": "Come to us, or we come to you",
         "title": "At Our Seminyak Spa or in Your Villa",
-        "text": "Come to our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or have the same massage at your villa, hotel or home. A therapist comes from our Seminyak spa with fresh linen, oils and everything the massage needs, and in the Seminyak area usually arrives within 30 to 60 minutes. The treatment price stays the same; home service adds a fee per therapist:",
+        "text": "You can have the same massage at our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa, hotel or home. For home service, a therapist brings fresh linen, oils and everything the massage needs, and usually arrives within 30 to 60 minutes when you stay nearby. The treatment price stays the same, plus a fee per therapist:",
         "featuresLeft": [
           "Seminyak, Petitenget and Kerobokan: IDR 75.000",
-          "Canggu, North Kuta and Kuta: IDR 150.000",
-          "Further out: confirmed on WhatsApp"
+          "Canggu, North Kuta and Kuta: IDR 150.000"
         ],
         "featuresRight": [
-          "Fresh linen and oils brought to you",
-          "Female or male therapist on request",
-          "Book on WhatsApp, 9am–11pm"
+          "Further out: confirmed on WhatsApp",
+          "Fresh linen and oils brought to you"
         ],
         "buttonText": "See Home Service",
         "buttonLink": "/outcall-home-service-massage/",
@@ -335,71 +438,43 @@
             "image": "/images/services/lymphaticmassage/lymphaticmassage-10.webp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Lymphatic Drainage Massage in Seminyak",
+            "title": "Questions About Lymphatic Drainage Massage",
             "items": [
               {
-                "question": "How much does a lymphatic drainage massage cost in Seminyak?",
-                "answer": "At our Seminyak spa, a lymphatic drainage massage costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours, per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. Booking is by WhatsApp at +62 878-6317-5144, 9am to 11pm."
+                "question": "How do I book a lymphatic massage?",
+                "answer": "Message us on WhatsApp at +62 878-6317-5144, between 9am and 11pm, with the day, the time, the session length and whether you'd like it at the spa or at your villa or hotel. We reply to confirm your time."
               },
               {
-                "question": "How long is a lymphatic massage, and which length should I choose?",
-                "answer": "Sessions are 1, 1.5 or 2 hours. One hour (IDR 300.000) suits a first session or mild heaviness after travel. With 1.5 hours (IDR 440.000) or 2 hours (IDR 580.000), your therapist has more time across the whole body, with extra time for the legs and ankles. Every session uses the same gentle technique."
+                "question": "Can I book a lymphatic massage for today?",
+                "answer": "Often, yes, depending on availability: message us with the time you'd like and we'll confirm the next free slot. For a set time, or for two or more guests, book earlier in the day."
               },
               {
-                "question": "Where can I get a lymphatic drainage massage in Seminyak?",
-                "answer": "Spa Bali Moon offers lymphatic drainage massage at our spa on Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area. Book by WhatsApp at +62 878-6317-5144; we are open daily from 9am to 11pm."
+                "question": "Can two of us book at the same time?",
+                "answer": "Yes. Tell us how many guests and which treatments when you book, and we'll confirm a time when enough therapists are free, at the spa or at your villa or hotel."
               },
               {
-                "question": "Do your therapists specialise in lymphatic drainage?",
-                "answer": "Yes. Our therapists all specialise in manual lymphatic drainage (MLD), the slow, very light technique used in every session, and lymphatic drainage massage is our most booked treatment. When needed, they also bring in wooden tools (wood therapy)."
+                "question": "Can I ask for a female or male therapist?",
+                "answer": "Yes. Tell us your preference when you book and we'll arrange a female or male therapist, at the spa or at your villa or hotel."
               },
               {
-                "question": "Do you use wood therapy in a lymphatic massage?",
-                "answer": "Yes, when needed. Alongside the light hand strokes, our therapists bring in wood therapy: smooth, hand-held wooden tools used for some of the strokes. Ask us about it when you book on WhatsApp at +62 878-6317-5144."
+                "question": "Can I have a lymphatic massage after liposuction or other surgery?",
+                "answer": "Yes, once your surgeon has cleared you for it. Tell us the procedure and its date when you book; your therapist uses only very light strokes and keeps away from incisions."
               },
               {
-                "question": "Should I book a lymphatic or a deep tissue massage?",
-                "answer": "It depends on how your body feels. A [deep tissue massage](/seminyak/deep-tissue-massage/) uses firm pressure on tight muscles, from IDR 269.000 for 1 hour. Lymphatic drainage massage uses very light, rhythmic strokes along the lymph pathways and suits legs and ankles that feel heavy or puffy, from IDR 300.000 for 1 hour. If you are unsure, tell us how you feel when you book and we can help you choose."
-              },
-              {
-                "question": "Can I have a lymphatic drainage massage after liposuction or other surgery?",
-                "answer": "Yes, once your surgeon has cleared you for it. Spa Bali Moon offers lymphatic drainage massage for recovery after cosmetic surgery such as liposuction or a tummy tuck, at our Seminyak spa or at your villa or hotel. Tell us the procedure and its date when you book on WhatsApp at +62 878-6317-5144; your therapist uses only very light strokes and keeps away from incisions."
-              },
-              {
-                "question": "Can I have a lymphatic drainage massage at my villa or hotel?",
-                "answer": "Yes. A Spa Bali Moon therapist comes from our Seminyak spa to your villa, hotel or home with fresh linen, oils and everything a lymphatic drainage massage needs. It costs the same as at the spa, plus a home service fee of IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. Book on WhatsApp at +62 878-6317-5144, 9am to 11pm."
-              },
-              {
-                "question": "Can I book a lymphatic drainage massage for today?",
-                "answer": "Often, yes, depending on availability. Message us on WhatsApp at +62 878-6317-5144 between 9am and 11pm with the time you'd like. At our Seminyak spa we confirm the next free time; at a villa or hotel in the Seminyak area a therapist usually arrives within 30 to 60 minutes. For a set time, or for two or more guests, book earlier in the day."
-              },
-              {
-                "question": "Can two of us book a lymphatic massage at the same time?",
-                "answer": "Yes. Tell us how many guests and which treatments when you book on WhatsApp, and we will confirm a time when enough therapists are free, at our spa or at your villa or hotel. For two or more guests, book earlier in the day."
-              },
-              {
-                "question": "What should I wear for a lymphatic massage?",
-                "answer": "We give you a clean towel or spa wear before your session. Only the area being massaged is uncovered, so you stay covered and comfortable throughout. A little massage oil is used."
-              },
-              {
-                "question": "Is there anything to do before or after a lymphatic massage?",
-                "answer": "Before: tell us about any health condition, recent surgery or pregnancy when you book, and again in the short chat before your session. After: drink water and rest; some people feel tired, thirsty or slightly light-headed after a lymphatic massage."
-              },
-              {
-                "question": "Can I combine a lymphatic massage with other treatments?",
-                "answer": "Yes. Our Lymphatic & Gold Facial special pairs a 1-hour lymphatic massage with the 1-hour Bali Moon Gold Facial for IDR 525.000 per person (IDR 569.000 booked separately). Many guests also add foot reflexology or a body treatment to the same visit. Tell us which treatments you would like when you book on WhatsApp at +62 878-6317-5144."
+                "question": "Can I combine it with other treatments?",
+                "answer": "Yes. The Lymphatic & Gold Facial pairs 1 hour of each for IDR 525.000 per person (IDR 569.000 booked separately), and many guests add foot reflexology or a body scrub to the same visit."
               },
               {
                 "question": "Can I have lymphatic drainage on my face?",
-                "answer": "Yes, as part of the 1-hour [Bali Moon Facial](/seminyak/facial/), which includes an argan oil lymphatic facial massage. Our lymphatic drainage massage itself works on the body, from the neck and collarbone down."
+                "answer": "Yes, as part of the 1-hour [Bali Moon Facial](/seminyak/facial/), which includes an argan oil lymphatic facial massage. The lymphatic massage on this page works on the body, from the neck down."
               },
               {
-                "question": "Can I ask for a female or male therapist for my lymphatic drainage massage?",
-                "answer": "Yes. Tell us your preference when you book your lymphatic drainage massage on WhatsApp and we'll arrange a female or male therapist, at our Seminyak spa or at your villa or hotel."
+                "question": "What should I do after a lymphatic massage?",
+                "answer": "Drink water and rest. Some people feel tired, thirsty or slightly light-headed afterwards."
               },
               {
                 "question": "What if I need to cancel or change my booking?",
-                "answer": "You can cancel or reschedule up to 12 hours before your appointment at no charge. A cancellation within 12 hours is charged 50%, and a no-show the full treatment price or the deposit. See our [terms and conditions](/terms-and-conditions/)."
+                "answer": "You can cancel or reschedule up to 12 hours before your appointment at no charge. Within 12 hours a 50% fee applies, and a no-show is charged the full treatment price or the deposit ([terms and conditions](/terms-and-conditions/))."
               }
             ]
           }
@@ -443,7 +518,7 @@
             "standardSpacing": true,
             "backgroundImage": "/images/services/lymphaticmassage/lymphaticmassage-11.webp",
             "title": "Feel Lighter After a Long Flight",
-            "text": "Book a lymphatic drainage massage in Seminyak, at our spa or at your villa or hotel.",
+            "text": "Book a lymphatic drainage massage at our spa or at your villa or hotel.",
             "closingText": "Message us on WhatsApp between 9am and 11pm."
           }
         }

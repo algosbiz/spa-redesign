@@ -14,9 +14,9 @@ const lymphaticDrainageMassage: Treatment = {
   cardImage: { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
   seo: {
     title: "Lymphatic Drainage Massage Seminyak & Bali - Spa Bali Moon",
-    // 8 Nov: the page's own angle (most booked, MLD specialists, wood therapy), not a definition the guide gives.
+    // 8 Nov: facts only (technique, lengths, from-price, where), no superlatives (WRITING-GUIDE.md).
     description:
-      "Lymphatic drainage massage in Seminyak, Bali: our most booked treatment, by MLD specialist therapists, with wood therapy when needed. At our spa or your villa.",
+      "Lymphatic drainage massage in Seminyak, Bali: manual lymphatic drainage (MLD) in sessions of 1, 1.5 or 2 hours, from IDR 300.000, at our spa or at your villa.",
   },
   hero: {
     eyebrow: "Restore Your Flow",
