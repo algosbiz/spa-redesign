@@ -7,8 +7,8 @@
 export const contactPage = {
   path: "/contact/",
   seo: {
-    title: "Contact Us - Rejuvenating Massage at Spa Bali Moon",
-    description: "Contact our professional and well-trained therapists at Spa Bali Moon in Seminyak for quality spa treatments and home massage services.",
+    title: "Contact Spa Bali Moon | Day Spa in Seminyak, Bali",
+    description: "Message us on WhatsApp to book at our Seminyak spa or your villa, open daily 9am–11pm. Find us at Jl. Pangkung Sari No. 30, Seminyak.",
   },
   hero: {
     eyebrow: "Contact Us",

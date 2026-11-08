@@ -13,8 +13,8 @@ const footReflexology: Treatment = {
   shortDescription: "A focused lower-body massage applying pressure to reflex points on the feet.",
   cardImage: { src: "/images/treatments/cards/footreflexology.webp", alt: "Foot Reflexology", width: 630, height: 580 },
   seo: {
-    title: "Foot Reflexology in Seminyak, Bali - Spa Bali Moon",
-    description: "Foot reflexology in Seminyak, Bali: traditional techniques for tired feet. Book at Spa Bali Moon or at your villa.",
+    title: "Foot Reflexology in Seminyak, Bali | Spa Bali Moon",
+    description: "Thumb and finger pressure on the reflex points of your feet, in a set sequence. From IDR 99.000 for 30 minutes in Seminyak, at our spa or your villa.",
   },
   hero: {
     eyebrow: "Natural Balance",

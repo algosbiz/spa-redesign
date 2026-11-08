@@ -13,8 +13,8 @@ const shiatsuMassage: Treatment = {
   shortDescription: "An oil-free full-body massage using Japanese pressure-point techniques to ease tension.",
   cardImage: { src: "/images/treatments/cards/shiatsumassage-warm.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
   seo: {
-    title: "Shiatsu Japanese Massage in Seminyak - Spa Bali Moon",
-    description: "Shiatsu massage in Seminyak, Bali: a Japanese massage using gentle stretches and focused pressure. Book at Spa Bali Moon.",
+    title: "Shiatsu Japanese Massage in Seminyak | Spa Bali Moon",
+    description: "Japanese finger, thumb and palm pressure with gentle stretches and no oil. Shiatsu in Seminyak from IDR 119.000 for 30 minutes, at our spa or villa.",
   },
   hero: {
     eyebrow: "Japanese Wellness",

@@ -13,8 +13,8 @@ const deepTissueMassage: Treatment = {
   shortDescription: "A focused full-body massage using deeper pressure to release knots and improve mobility.",
   cardImage: { src: "/images/treatments/cards/deeptissuemassage.webp", alt: "Deep Tissue Massage", width: 630, height: 580 },
   seo: {
-    title: "Deep Tissue Massage Seminyak & Bali - Spa Bali Moon",
-    description: "Deep tissue massage in Seminyak, Bali to ease muscle tension. Choose your session length and book at Spa Bali Moon.",
+    title: "Deep Tissue Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Slow, firm pressure into tight muscles, adjusted to what feels right for you. Deep tissue massage in Seminyak from IDR 269.000 for 1 hour.",
   },
   hero: {
     eyebrow: "Muscle Recovery",

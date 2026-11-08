@@ -13,8 +13,8 @@ const footMassage: Treatment = {
   shortDescription: "A focused massage on the soles, heels, and ankles to ease stiffness and restore comfort.",
   cardImage: { src: "/images/treatments/cards/footmassage.webp", alt: "Foot Massage", width: 630, height: 580 },
   seo: {
-    title: "Foot Massage in Seminyak, Bali - Spa Bali Moon",
-    description: "Soothe tired feet with gentle strokes, reflexology-inspired techniques, and warm oils at Spa Bali Moon Seminyak.",
+    title: "Foot Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Soles, heels, ankles and calves, with a little reflexology. Foot massage in Seminyak from IDR 159.000 for 1 hour, at our spa or your villa.",
   },
   hero: {
     eyebrow: "Light Steps Ahead",

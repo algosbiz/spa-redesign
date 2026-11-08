@@ -13,8 +13,8 @@ const waxingSalon: Treatment = {
   shortDescription: "A professional hair removal treatment using olive oil hot wax for smooth skin.",
   cardImage: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
   seo: {
-    title: "Waxing Seminyak - Brazilian & Full Body Wax - Spa Bali Moon",
-    description: "Waxing in Seminyak, Bali: arms, legs, back and Brazilian, in a relaxing spa setting. Book at Spa Bali Moon.",
+    title: "Waxing in Seminyak: Brazilian & Full Body | Spa Bali Moon",
+    description: "Olive oil strip wax and gentle strawberry hard wax, in a private room for women and men. Eyebrows from IDR 99.000, Brazilian IDR 375.000, in Seminyak.",
   },
   hero: {
     eyebrow: "Smooth Finish",

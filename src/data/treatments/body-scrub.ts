@@ -13,8 +13,8 @@ const bodyScrub: Treatment = {
   shortDescription: "A gentle exfoliation treatment to refresh the skin and leave it smooth and clean.",
   cardImage: { src: "/images/treatments/cards/bodyscrub.webp", alt: "Body Scrub", width: 630, height: 580 },
   seo: {
-    title: "Body Scrub Seminyak - Exfoliating Scrub - Spa Bali Moon",
-    description: "Body scrub in Seminyak, Bali: natural scrub treatments to exfoliate and soften skin, with massage packages. Book at Spa Bali Moon.",
+    title: "Body Scrub in Seminyak, Bali: Balinese Lulur | Spa Bali Moon",
+    description: "A natural Balinese lulur scrub in seven scents that leaves skin soft after sun and salt water. IDR 169.000 in Seminyak, at our spa or your villa.",
   },
   hero: {
     eyebrow: "Skin Renewal",

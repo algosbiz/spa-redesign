@@ -13,8 +13,8 @@ const sunburnMassage: Treatment = {
   shortDescription: "A cooling full-body massage that soothes the skin and supports gentle recovery.",
   cardImage: { src: "/images/treatments/cards/aloeveramassage.webp", alt: "Sunburn Treatment", width: 630, height: 580 },
   seo: {
-    title: "Sunburn Treatment Bali - Aloe Vera Massage - Spa Bali Moon",
-    description: "Sunburn treatment in Seminyak, Bali: a gentle cold aloe vera massage to soothe sun-exposed skin. Book at Spa Bali Moon.",
+    title: "Aloe Vera Sunburn Massage in Seminyak | Spa Bali Moon",
+    description: "Cool aloe vera and light, gentle strokes for skin that feels hot, dry or tight after the beach. A 1-hour sunburn treatment in Seminyak, IDR 250.000.",
   },
   hero: {
     eyebrow: "After Sun Care",

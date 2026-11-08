@@ -14,8 +14,8 @@ const traditionalMassage: Treatment = {
   shortDescription: "A firmer full-body massage using deeper pressure to release muscle tension.",
   cardImage: { src: "/images/treatments/cards/traditionalmassage.webp", alt: "Traditional Massage", width: 630, height: 580 },
   seo: {
-    title: "Traditional Massage in Seminyak - Firm Pressure - Spa Bali Moon",
-    description: "Traditional massage in Seminyak: a firm, full-body massage with warm oil to release tension. Book at Spa Bali Moon or at your villa.",
+    title: "Traditional Massage in Seminyak, Bali | Spa Bali Moon",
+    description: "Firm kneading and focused pressure to work out muscle tension. Traditional massage in Seminyak from IDR 90.000 for 30 minutes, at our spa or villa.",
   },
   hero: {
     eyebrow: "Firm Body Care",
