@@ -14,7 +14,9 @@ const lymphaticDrainageMassage: Treatment = {
   cardImage: { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
   seo: {
     title: "Lymphatic Drainage Massage Seminyak & Bali - Spa Bali Moon",
-    description: "Lymphatic drainage massage in Seminyak, Bali: a gentle, slow-stroke massage by trained therapists. Book in-spa or at your villa or hotel.",
+    // 8 Nov: the page's own angle (most booked, MLD specialists, wood therapy), not a definition the guide gives.
+    description:
+      "Lymphatic drainage massage in Seminyak, Bali: our most booked treatment, by MLD specialist therapists, with wood therapy when needed. At our spa or your villa.",
   },
   hero: {
     eyebrow: "Restore Your Flow",
