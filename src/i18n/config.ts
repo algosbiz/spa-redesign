@@ -44,6 +44,13 @@ const previewLocales: readonly Locale[] = (process.env.I18N_PREVIEW_LOCALES ?? "
 /** The languages whose pages are built: the live ones, plus any in preview. */
 export const servedLocales: readonly Locale[] = [...new Set([...activeLocales, ...previewLocales])];
 
+/**
+ * The request header in which the proxy tells the 404 for an unknown address
+ * under a language's folder (/jp/…) which language it is (src/proxy.ts,
+ * src/app/global-not-found.tsx).
+ */
+export const LOCALE_HEADER = "x-spa-locale";
+
 type LocaleSettings = {
   /** The language's folder in the address (jp for /jp/about/); none for English. */
   folder: string;

@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves this as a plain <img> */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getI18n } from "@/i18n/server";
+import type { Locale } from "@/i18n/config";
+import { getI18n, i18nFor } from "@/i18n/server";
 
 // The live 404's robots value. Next also adds its own `noindex` tag for 404s;
 // together they still read "noindex, nofollow".
@@ -14,10 +15,11 @@ export const metadata: Metadata = {
  * WhatsApp button and preloader from the root layout). As on live, the search
  * form has no handler and the magnifier icon's font is not loaded. Shown for a
  * missing article or treatment; an address that matches no page at all gets
- * the same page from src/app/global-not-found.tsx.
+ * the same page from src/app/global-not-found.tsx, which passes the language
+ * of the address (/jp/…) as `locale`.
  */
-export default async function NotFound() {
-  const { render } = await getI18n();
+export default async function NotFound({ locale }: { locale?: Locale } = {}) {
+  const { render } = locale ? await i18nFor(locale) : await getI18n();
   return render(
     <div className="page-wrapper lh p-404" id="top">
       <section className="">

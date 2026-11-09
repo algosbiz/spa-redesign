@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { learnMoreLabel } from "@/components/sections/learnMoreLabel";
 import { business } from "@/data/business";
+import { getI18n } from "@/i18n/server";
 
 /*
  * The button and photo badge of the text & photo sections (AboutSplit,
@@ -13,9 +14,17 @@ import { business } from "@/data/business";
  * photo without its notch. Styles: custom.css ("Text & photo sections").
  */
 
-/** The section's button: its label, then a gold circle with WhatsApp's icon (a WhatsApp link) or an arrow. */
-export function SplitButton({ text, link }: { text?: ReactNode; link: string }) {
+/**
+ * The section's button: its label, then a gold circle with WhatsApp's icon (a
+ * WhatsApp link) or an arrow. A WhatsApp button's screen-reader name is "Book
+ * Now on WhatsApp" as one translated phrase: `text` arrives already
+ * translated, so "{label} on WhatsApp" is translated as a template around it
+ * (it read "지금 예약하기 on WhatsApp" before; language review #8).
+ */
+export async function SplitButton({ text, link }: { text?: ReactNode; link: string }) {
   const whatsapp = /wa\.me\//.test(link);
+  const { t } = await getI18n();
+  const label = typeof text === "string" ? text : t("Book Now");
   const inner = (
     <>
       <span className="pill-btn__label">{text ?? learnMoreLabel(link)}</span>
@@ -32,7 +41,7 @@ export function SplitButton({ text, link }: { text?: ReactNode; link: string }) 
           target="_blank"
           rel="noopener noreferrer"
           className="pill-btn"
-          aria-label={whatsapp ? `${typeof text === "string" ? text : "Book"} on WhatsApp` : undefined}
+          aria-label={whatsapp ? t("{label} on WhatsApp", { label }) : undefined}
         >
           {inner}
         </a>

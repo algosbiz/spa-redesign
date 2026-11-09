@@ -1,5 +1,5 @@
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
-import { defaultLocale, isLocale, isServedLocale, localeOfFolder, localePath, servesPage } from "@/i18n/config";
+import { defaultLocale, isLocale, isServedLocale, LOCALE_HEADER, localeOfFolder, localePath, servesPage } from "@/i18n/config";
 import { fetchPublishedMap, type RedirectMap } from "@/lib/redirects/map";
 
 /**
@@ -64,7 +64,11 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
     // gets the 404 page.
     const served = isServedLocale(locale) && servesPage(locale, rest);
     page.pathname = served ? `/${locale}${rest}` : `/${defaultLocale}/_untranslated${rest}`;
-    return NextResponse.rewrite(page);
+    if (served || !isServedLocale(locale)) return NextResponse.rewrite(page);
+    // The 404 for it is then in the language (src/app/global-not-found.tsx).
+    const headers = new Headers(request.headers);
+    headers.set(LOCALE_HEADER, locale);
+    return NextResponse.rewrite(page, { request: { headers } });
   }
 
   const hit = (await redirectMap(event))[pathname];
