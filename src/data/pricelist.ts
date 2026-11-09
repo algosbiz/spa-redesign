@@ -657,13 +657,15 @@
       { label: "Under Arms", price: 159_000 },
       { label: "Half Arms", price: 189_000 },
       { label: "Full Arms", price: 229_000 },
-      { label: "Full Back", price: 419_000 },
+      { label: "Full Back", price: 519_000 },
       { label: "Stomach (Strip)", price: 159_000 },
       { label: "Half Legs", price: 249_000 },
-      { label: "Full Legs", price: 349_000 },
-      { label: "Bikini", price: 285_000 },
-      // PRICE-07: 269K → 350K on 2026-09-26; 375K since 1 Nov 2026.
-      { label: "Waxing Brazilian", price: 375_000 },
+      { label: "Full Legs", price: 599_000 },
+      { label: "Bikini", price: 299_000 },
+      // PRICE-07: 269K → 350K on 2026-09-26; 375K since 1 Nov 2026; 379K since 9 Nov.
+      // 9 Nov 2026 (owner): full back 419K → 519K, full legs 349K → 599K,
+      // bikini 285K → 299K, Brazilian 375K → 379K.
+      { label: "Waxing Brazilian", price: 379_000 },
       { label: "Eyebrow", price: 99_000 },
       { label: "Upper Lip", price: 99_000 },
     ],
