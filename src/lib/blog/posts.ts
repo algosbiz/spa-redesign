@@ -1,4 +1,5 @@
 import { cache } from "react";
+import draftPosts from "@/data/guide/draft-posts.json";
 import seedPosts from "@/data/guide/seed-posts.json";
 import { blogMenuHidden } from "@/data/navigation";
 import { activeLocales, defaultLocale, isLocale, type Locale } from "@/i18n/config";
@@ -28,6 +29,20 @@ const newestFirst = (a: Pick<Post, "published_at">, b: Pick<Post, "published_at"
 
 const seedPublished = (locale: Locale = defaultLocale) =>
   locale === defaultLocale ? seed.filter((p) => p.status === "published").sort(newestFirst) : [];
+
+/**
+ * New articles under review, shown on preview deployments only (owner, 9 Nov
+ * 2026: "push to the staging link only"). On Vercel previews (VERCEL_ENV
+ * "preview": the staging branch and pull-request previews, behind Vercel's
+ * login and not indexed), the English articles in
+ * src/data/guide/draft-posts.json are listed and served as if published, so
+ * the owner can read them and check the photos there. The live site
+ * ("production") and local development never show them, and nothing is
+ * written to the database. Once approved, they are created in /admin/ and the
+ * file goes back to [].
+ */
+const previewDrafts = (locale: Locale): Post[] =>
+  process.env.VERCEL_ENV === "preview" && locale === defaultLocale ? (draftPosts as Post[]) : [];
 
 let localeReady: Promise<unknown> | null = null;
 
@@ -92,15 +107,18 @@ const toSummary = ({ id, slug, title, excerpt, cover_image, category, author, sh
 
 /** Every published article in a language, newest first (the /guide/ list). */
 export const getPublishedPosts = cache(async (locale: Locale = defaultLocale): Promise<PostSummary[]> => {
-  if (!isDatabaseConfigured()) return seedPublished(locale).map(toSummary);
+  const drafts = previewDrafts(locale).map(toSummary);
+  if (!isDatabaseConfigured()) return [...drafts, ...seedPublished(locale).map(toSummary)];
   const rows = await dbQuery`
     SELECT id, slug, title, excerpt, cover_image, category, author, show_date, published_at
     FROM posts WHERE status = 'published' AND locale = ${locale} ORDER BY published_at DESC`;
-  return rows.map((r) => withTimestamps(r) as PostSummary);
+  return [...drafts, ...rows.map((r) => withTimestamps(r) as PostSummary)];
 });
 
 /** One published article in a language by slug, or null. */
 export const getPublishedPost = cache(async (slug: string, locale: Locale = defaultLocale): Promise<Post | null> => {
+  const draft = previewDrafts(locale).find((p) => p.slug === slug);
+  if (draft) return draft;
   if (!isDatabaseConfigured()) return seedPublished(locale).find((p) => p.slug === slug) ?? null;
   const rows = await dbQuery`
     SELECT * FROM posts WHERE slug = ${slug} AND locale = ${locale} AND status = 'published' LIMIT 1`;
