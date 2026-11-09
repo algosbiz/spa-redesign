@@ -112,15 +112,18 @@
     // 499.000, wet cupping added at 649.000, and the combo, which read as
     // "2 hours with massage", now names both hours: 1 hour Balinese + 1 hour
     // dry cupping, 600.000 → 599.000 (499.000 + 159.000 = 658.000 separately).
+    // 9 Nov (owner): the cupping itself is 30 minutes, not 1 hour; prices
+    // unchanged (30 Min Dry 499.000, 30 Min Wet 649.000, 1 Hour Balinese +
+    // 30 Min Dry 599.000).
     // No plain "1 Hour" label, so the menus list all three lines.
     id: "cupping-therapy",
     category: "massage",
     pageSlug: "cupping-therapy",
     image: { src: "/images/listmenu/cuppingtherapy.webp", alt: "Cupping Therapy", width: 630, height: 580 },
     options: [
-      { label: "1 Hour Dry Cupping", price: 499_000 },
-      { label: "1 Hour Wet Cupping", price: 649_000 },
-      { label: "1 Hour Balinese Massage + 1 Hour Dry Cupping", price: 599_000 },
+      { label: "30 Min Dry Cupping", price: 499_000 },
+      { label: "30 Min Wet Cupping", price: 649_000 },
+      { label: "1 Hour Balinese Massage + 30 Min Dry Cupping", price: 599_000 },
     ],
     pricelistName: "Cupping Therapy",
     pricelistDescription: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
@@ -763,6 +766,13 @@
         price: 719_000,
         homeServiceLabel: "1.5 Hours – Deep Tissue Massage · 2 pax",
         homeLabel: "1.5 Hours · 2 pax",
+      },
+      {
+        // 9 Nov (owner): 2 hours for two, as the single 2-hour deep tissue (518.000).
+        label: "2 Hours · Deep Tissue Massage · 2 Pax",
+        price: 1_039_000,
+        homeServiceLabel: "2 Hours – Deep Tissue Massage · 2 pax",
+        homeLabel: "2 Hours · 2 pax",
       },
     ],
     pricelistName: "Couple Deep Tissue Massage",

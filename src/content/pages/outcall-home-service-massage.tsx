@@ -478,6 +478,7 @@ export default function OutcallPage() {
                         options: [
                           { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
                           { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
+                          { time: "2 Hours – Deep Tissue Massage · 2 pax", price: "1.039.000" },
                         ],
                       },
                       {
@@ -510,9 +511,9 @@ export default function OutcallPage() {
                     desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
                     image: "/images/listmenu/cuppingtherapy.webp",
                     options: [
-                      { time: "1 Hour Dry Cupping", price: "499.000" },
-                      { time: "1 Hour Wet Cupping", price: "649.000" },
-                      { time: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping", price: "599.000" },
+                      { time: "30 Min Dry Cupping", price: "499.000" },
+                      { time: "30 Min Wet Cupping", price: "649.000" },
+                      { time: "1 Hour Balinese Massage + 30\u00a0Min\u00a0Dry\u00a0Cupping", price: "599.000" },
                     ],
                   },
                   {
@@ -851,6 +852,7 @@ export default function OutcallPage() {
                     options: [
                       { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
+                      { time: "2 Hours – Deep Tissue Massage · 2 pax", price: "1.039.000" },
                     ],
                   },
                   {

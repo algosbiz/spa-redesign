@@ -2,7 +2,8 @@
 // pump, no flame; at the spa and as home service. Prices since 1 Nov (owner):
 // 1 hour dry cupping IDR 499.000, 1 hour wet cupping IDR 649.000 (tiny pricks
 // with a sterile, single-use lancet, then the same pump cups), and 1 hour
-// Balinese + 1 hour dry cupping IDR 599.000 (658.000 separately). The page body is
+// Balinese + 1 hour dry cupping IDR 599.000 (658.000 separately). 9 Nov (owner):
+// the cupping is 30 minutes, not 1 hour; prices unchanged. The page body is
 // src/content/treatments/cupping-therapy.json; the photos in
 // /images/services/cuppingtherapy/ are placeholders from other massage pages.
 //
@@ -19,7 +20,7 @@ const cuppingTherapy: Treatment = {
   seo: {
     title: "Dry & Wet Cupping in Seminyak, Bali | Spa Bali Moon",
     description:
-      "Gentle suction with solid cups and a hand pump, no flame. Dry cupping IDR 499.000, wet IDR 649.000 for 1 hour, at our Seminyak spa or your villa.",
+      "Gentle suction with solid cups and a hand pump, no flame. 30 minutes of dry cupping IDR 499.000 or wet IDR 649.000, at our Seminyak spa or your villa.",
   },
   hero: {
     eyebrow: "Traditional Technique",

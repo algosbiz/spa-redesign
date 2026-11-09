@@ -176,6 +176,7 @@ export const catalog: CatalogItem[] = [
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },
       { label: "1.5 Hours · 2 pax", price: "IDR 719.000" },
+      { label: "2 Hours · 2 pax", price: "IDR 1.039.000" },
     ],
   },
   {
@@ -279,9 +280,9 @@ export const catalog: CatalogItem[] = [
     // 1 Nov (owner): dry and wet cupping, and the combo names both hours
     // ("2 Hours with Balinese Massage" read as two hours of massage).
     options: [
-      { label: "1 Hour Dry Cupping", price: "IDR 499.000" },
-      { label: "1 Hour Wet Cupping", price: "IDR 649.000" },
-      { label: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping", price: "IDR 599.000" },
+      { label: "30 Min Dry Cupping", price: "IDR 499.000" },
+      { label: "30 Min Wet Cupping", price: "IDR 649.000" },
+      { label: "1 Hour Balinese Massage + 30\u00a0Min\u00a0Dry\u00a0Cupping", price: "IDR 599.000" },
     ],
   },
   {

@@ -186,15 +186,15 @@ export const pricelistPage = {
           desc: "Solid cups and a hand pump create gentle suction on your back and shoulders, with no flame: dry cupping, wet cupping, or dry cupping with a 1-hour Balinese massage.",
           options: [
             {
-              time: "1 Hour Dry Cupping",
+              time: "30 Min Dry Cupping",
               price: "IDR 499.000"
             },
             {
-              time: "1 Hour Wet Cupping",
+              time: "30 Min Wet Cupping",
               price: "IDR 649.000"
             },
             {
-              time: "1 Hour Balinese Massage + 1\u00a0Hour\u00a0Dry\u00a0Cupping",
+              time: "1 Hour Balinese Massage + 30\u00a0Min\u00a0Dry\u00a0Cupping",
               price: "IDR 599.000"
             }
           ],
@@ -803,6 +803,10 @@ export const pricelistPage = {
             {
               time: "1.5 Hours · Deep Tissue Massage · 2 Pax",
               price: "IDR 719.000"
+            },
+            {
+              time: "2 Hours · Deep Tissue Massage · 2 Pax",
+              price: "IDR 1.039.000"
             }
           ],
           id: "couple-3",
