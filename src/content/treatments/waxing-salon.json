@@ -33,7 +33,7 @@
           },
           {
             "label": "Prices",
-            "value": "Under arms IDR 159.000 · Half arms IDR 189.000 · Full arms IDR 229.000 · Full back IDR 419.000 · Stomach (strip) IDR 159.000 · Half legs IDR 249.000 · Full legs IDR 349.000 · Bikini IDR 285.000 · Brazilian IDR 375.000 · Eyebrow IDR 99.000 · Upper lip IDR 99.000"
+            "value": "Under arms IDR 159.000 · Half arms IDR 189.000 · Full arms IDR 229.000 · Full back IDR 519.000 · Stomach (strip) IDR 159.000 · Half legs IDR 249.000 · Full legs IDR 599.000 · Bikini IDR 299.000 · Brazilian IDR 379.000 · Eyebrow IDR 99.000 · Upper lip IDR 99.000"
           },
           {
             "label": "For",
@@ -85,7 +85,7 @@
             ],
             "subTitle": "",
             "title": "Our Waxing Options",
-            "text": "Prices are per area, from IDR 99.000 for an eyebrow or upper lip wax to IDR 419.000 for a full back. An appointment takes around an hour, depending on the areas you choose.",
+            "text": "Prices are per area, from IDR 99.000 for an eyebrow or upper lip wax to IDR 599.000 for full legs. An appointment takes around an hour, depending on the areas you choose.",
             "packages": [
               {
                 "price": "From IDR 159.000",
@@ -101,7 +101,7 @@
                 "name": "Legs",
                 "treatments": [
                   "Half legs · IDR 249.000",
-                  "Full legs · IDR 349.000",
+                  "Full legs · IDR 599.000",
                   "Olive oil strip wax"
                 ]
               },
@@ -110,16 +110,16 @@
                 "name": "Back & Stomach",
                 "treatments": [
                   "Stomach (strip) · IDR 159.000",
-                  "Full back · IDR 419.000",
+                  "Full back · IDR 519.000",
                   "Suitable for women and men"
                 ]
               },
               {
-                "price": "From IDR 285.000",
+                "price": "From IDR 299.000",
                 "name": "Bikini & Brazilian",
                 "treatments": [
-                  "Bikini · IDR 285.000",
-                  "Brazilian · IDR 375.000",
+                  "Bikini · IDR 299.000",
+                  "Brazilian · IDR 379.000",
                   "Private treatment setting"
                 ]
               },
@@ -283,7 +283,7 @@
               },
               {
                 "question": "Do you offer Brazilian waxing?",
-                "answer": "Yes. Brazilian waxing at Spa Bali Moon in Seminyak costs IDR 375.000 and is done in a private treatment setting with careful techniques to maintain comfort and discretion. For delicate areas we use Mancine Strawberry Hard Wax, and your therapist checks your comfort throughout."
+                "answer": "Yes. Brazilian waxing at Spa Bali Moon in Seminyak costs IDR 379.000 and is done in a private treatment setting with careful techniques to maintain comfort and discretion. For delicate areas we use Mancine Strawberry Hard Wax, and your therapist checks your comfort throughout."
               },
               {
                 "question": "What should I avoid after waxing?",
@@ -291,15 +291,15 @@
               },
               {
                 "question": "Is waxing suitable for men?",
-                "answer": "Yes. Spa Bali Moon in Seminyak provides waxing options for men, such as the back and full back, with techniques adjusted for comfort and skin sensitivity. Full back waxing is IDR 419.000 and stomach (strip) waxing IDR 159.000. Treatments take place in a private setting at our spa, or at your villa or hotel."
+                "answer": "Yes. Spa Bali Moon in Seminyak provides waxing options for men, such as the back and full back, with techniques adjusted for comfort and skin sensitivity. Full back waxing is IDR 519.000 and stomach (strip) waxing IDR 159.000. Treatments take place in a private setting at our spa, or at your villa or hotel."
               },
               {
                 "question": "How much does waxing cost in Seminyak?",
-                "answer": "Waxing at Spa Bali Moon in Seminyak costs IDR 99.000 for eyebrows or upper lip, IDR 159.000 for under arms or a stomach strip, IDR 189.000 for half arms, IDR 229.000 for full arms, IDR 249.000 for half legs, IDR 285.000 for a bikini wax, IDR 349.000 for full legs, IDR 375.000 for a Brazilian and IDR 419.000 for a full back. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+                "answer": "Waxing at Spa Bali Moon in Seminyak costs IDR 99.000 for eyebrows or upper lip, IDR 159.000 for under arms or a stomach strip, IDR 189.000 for half arms, IDR 229.000 for full arms, IDR 249.000 for half legs, IDR 299.000 for a bikini wax, IDR 379.000 for a Brazilian, IDR 519.000 for a full back and IDR 599.000 for full legs. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
               },
               {
                 "question": "How long does a waxing appointment take?",
-                "answer": "A waxing appointment at Spa Bali Moon in Seminyak takes around an hour, depending on the areas you choose. Prices start at IDR 99.000 for eyebrows or upper lip, and a Brazilian wax is IDR 375.000."
+                "answer": "A waxing appointment at Spa Bali Moon in Seminyak takes around an hour, depending on the areas you choose. Prices start at IDR 99.000 for eyebrows or upper lip, and a Brazilian wax is IDR 379.000."
               },
               {
                 "question": "Can I have waxing done at my villa or hotel?",

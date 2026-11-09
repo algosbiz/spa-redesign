@@ -14,7 +14,7 @@ const waxingSalon: Treatment = {
   cardImage: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
   seo: {
     title: "Waxing in Seminyak: Brazilian & Full Body | Spa Bali Moon",
-    description: "Olive oil strip wax and gentle strawberry hard wax, in a private room for women and men. Eyebrows from IDR 99.000, Brazilian IDR 375.000, in Seminyak.",
+    description: "Olive oil strip wax and gentle strawberry hard wax, in a private room for women and men. Eyebrows from IDR 99.000, Brazilian IDR 379.000, in Seminyak.",
   },
   hero: {
     eyebrow: "Smooth Finish",
