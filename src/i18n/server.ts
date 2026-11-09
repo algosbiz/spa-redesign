@@ -109,8 +109,14 @@ const english: I18n = {
   render: async (node) => node,
 };
 
-export const getI18n = cache(async (): Promise<I18n> => {
-  const locale = await getLocale();
+export const getI18n = cache(async (): Promise<I18n> => i18nFor(await getLocale()));
+
+/**
+ * The translations of a given language, for a page that knows its language
+ * some other way than the [lang] segment: the 404 for an address that matches
+ * no page (src/app/global-not-found.tsx), told by the proxy.
+ */
+export const i18nFor = cache(async (locale: Locale): Promise<I18n> => {
   if (locale === defaultLocale) return english;
   const files = await loadMessages(locale);
   const messages: Messages = { ...files.content, ...files.ui };
