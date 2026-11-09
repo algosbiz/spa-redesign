@@ -2,9 +2,9 @@ import Link from "next/link";
 import { answerParts } from "@/data/guide/answers";
 
 /**
- * The short answer above a guide article's text (src/data/guide/answers.ts,
- * AEO roadmap, 17 Oct): two sentences that name Spa Bali Moon, with the
- * price and links to the treatment page.
+ * The short answer above a guide article's text (src/data/guide/answers.ts):
+ * a plain definition of what the article explains, without prices or the
+ * spa's name (owner, 9 Nov 2026: the guides inform, they don't sell).
  *
  * The look, picked from three options (17 Oct), is a magazine's standfirst:
  * no box, "THE SHORT ANSWER" in small gold capitals, the answer in larger

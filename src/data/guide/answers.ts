@@ -1,34 +1,31 @@
 /**
- * GUIDE ARTICLES: the short answer shown above each article's text.
+ * GUIDE ARTICLES: the short answer shown above an article's text.
  *
- * AEO roadmap (R32, R59, R69, 17 Oct 2026): every guide article opens with
- * two sentences that name Spa Bali Moon, give the price and link to the
- * treatment page, so an AI answer quoting the article also finds the spa.
- * The texts are the drafts in migration/copy-rewrite-2026-10.md. They live
- * here, not in the article body in the database, so no article needs to be
- * edited in /admin/ for them; an article without an entry shows no box
- * (IV Drip, the back massage techniques, and any new article until a line is
- * added here). The slimming cream is the cellulite massage's, not the
- * lymphatic one's (owner, 23 Oct).
+ * The guides are informational: they answer what people search for
+ * worldwide ("what is Thai massage", "facial massage"), not where to book
+ * (owner, 9 Nov 2026). So the short answer is a plain definition, as a
+ * reference book would give it: no prices, no brand, no place. The article
+ * links to its treatment page further down, with "[treatment] in Seminyak".
  *
- * Write a link as [words](/address/). Prices: keep them equal to the price list.
+ * Only the "what is" guides have one. The comparison, jet lag, back massage
+ * and IV drip guides open with a paragraph that already answers the
+ * question, so a box there would only repeat it.
+ *
+ * (October's version named Spa Bali Moon and gave the price in every box,
+ * for AI answers; retired with that approach, WRITING-GUIDE.md.) Write a
+ * link as [words](/address/).
  */
 export const guideAnswers: Record<string, string> = {
-  "jet-lag-recovery-best-treatments-after-a-long-flight":
-    "At Spa Bali Moon in Seminyak, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) is often chosen after a long flight, from IDR 300.000 per person for one hour. For a full-body massage, a one-hour [Balinese massage](/seminyak/balinese-massage/) is IDR 159.000.",
   "what-is-balinese-massage":
-    "At Spa Bali Moon in Seminyak, a [Balinese massage](/seminyak/balinese-massage/) is IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person, at our spa or at your villa or hotel. It is the treatment we recommend most often for first-time guests.",
+    "Balinese massage is a full-body oil massage from Bali that combines long gliding strokes, kneading, skin rolling, acupressure and gentle stretches. It grew out of the island's traditional healing, with Indian, Chinese and Javanese influences, and the pressure can be light or firm.",
   "what-is-thai-massage":
-    "At Spa Bali Moon in Seminyak, [Thai massage](/seminyak/thai-massage/) is IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person. It is oil-free, so wear comfortable clothing you can move in.",
+    "Thai massage, or nuad Thai, is a traditional massage from Thailand given without oil, in loose clothing. The therapist presses along the body with palms, thumbs and elbows and moves you through assisted, yoga-like stretches. UNESCO listed it as intangible cultural heritage in 2019.",
   "facial-massage-for-relaxation":
-    "At Spa Bali Moon in Seminyak, every [Bali Moon Facial](/seminyak/facial/) includes an argan oil lymphatic facial massage. The Tea Tree Facial is IDR 196.000 and the Gold Facial IDR 269.000 per person.",
+    "A facial massage is a few minutes of gentle strokes, kneading and pressure on the face, jaw and neck, by hand or with a tool such as a gua sha stone. It relaxes the jaw and forehead and brings blood to the skin for a while, but there is no good evidence that it lifts the face or removes wrinkles.",
   "what-is-a-slimming-massage":
-    "At Spa Bali Moon in Seminyak, the closest treatment is the [cellulite massage](/seminyak/anti-cellulite-massage/), a firm massage with slimming cream on the thighs, hips, buttocks and abdomen from IDR 350.000 per person for one hour. For a gentler option, [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) starts at IDR 300.000.",
-  // The guide promised help with the budget but gave no prices (blog review, 23 Oct).
-  "balinese-vs-thai-massage":
-    "At Spa Bali Moon in Seminyak, a [Balinese massage](/seminyak/balinese-massage/) is IDR 159.000 for 1 hour (up to IDR 330.000 for 2 hours) and a [Thai massage](/seminyak/thai-massage/) IDR 133.000 for 30 minutes or IDR 259.000 for 1 hour, per person. A couple Balinese massage is IDR 319.000 for two for 1 hour.",
+    "A slimming massage is a firm massage on the thighs, hips, buttocks and abdomen, often with a slimming cream. It can make skin look smoother and legs feel less puffy for a while, but it does not remove fat or cellulite, and it is not a weight-loss treatment.",
   "lymphatic-drainage-massage-all-you-need-to-know":
-    "At Spa Bali Moon in Seminyak, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) is a slow, very light massage from IDR 300.000 per person for one hour, at our spa or at your villa or hotel. It is a relaxation treatment, not a medical one.",
+    "Lymphatic drainage massage is a slow, very light massage that moves the skin in the direction lymph flows, towards the lymph nodes. Many people find that puffy legs and ankles feel lighter for a while afterwards. It is a relaxing treatment, not a medical one.",
 };
 
 /** "Text [words](/address/) text" -> text and links, in order. */

@@ -61,6 +61,25 @@ People read this as spam (owner, 8 Nov 2026), and it no longer helps in AI searc
 | At Our Seminyak Spa or in Your Villa | At Our Seminyak Spa or in Your Villa |
 | About Lymphatic Drainage Massage in Seminyak (FAQ) | Questions About Lymphatic Drainage Massage |
 
+## Guide articles (/guide/)
+
+The guides are informational, not sales pages (owner, 9 Nov 2026). They answer what people search for worldwide, such as "what is Thai massage", "facial massage" or "back massage techniques", while the treatment pages answer "where to book in Seminyak".
+
+- **Headings match the reader's question,** in the words people search: "Thai massage benefits", "How to give a back massage", "Balinese vs Swedish and Thai massage". Unlike the treatment pages, a guide's headings carry no place name.
+- **Real knowledge, not filler:**
+  - where the treatment comes from;
+  - each named technique;
+  - what happens in a session, step by step;
+  - what the research does and doesn't show, naming the source (CDC, NHS, NCCIH);
+  - who should be careful.
+
+  Avoid sentences that could describe any massage ("may help promote overall wellbeing").
+- **Keep prices, opening hours and the phone number out of the body.** They change, and the treatment pages carry them. A length is fine ("30 minutes, 1 hour or 1.5 hours").
+- **Name the brand once, if at all,** in the closing paragraph or an FAQ answer ("our therapists", "at our spa").
+- **Link to the treatment page once or twice,** in the closing paragraph and in a relevant FAQ answer, with "[treatment] in Seminyak" as the link words, and to related guides where they help. The owner likes these links.
+- **The short answer** above a "what is" guide (`src/data/guide/answers.ts`) is a plain definition, with no prices, brand or link.
+- **FAQs** follow rule 5 above. The questions come from Search Console and from what people search ("Is Thai massage painful?", "Does slimming massage work?").
+
 ## Checklist for a new or rewritten page
 
 - [ ] The title and H1 carry the treatment and Seminyak, once. Until the 18 Nov 2026 rankings check, existing titles and H1s stay as they are.
