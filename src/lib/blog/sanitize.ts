@@ -27,7 +27,8 @@ function leavesTheSite(href?: string): boolean {
  *
  * Outbound links are unwrapped: the anchor becomes a plain <span> and its
  * words stay, so a sentence never loses text, it just stops leading off the
- * site. Internal links (to the treatment pages) are kept.
+ * site. Internal links (to the treatment pages) are kept as plain links:
+ * same tab, no target or rel.
  *
  * Every table is wrapped in <div class="post-table">, which scrolls sideways
  * on a phone instead of widening the page (custom.css).
@@ -60,8 +61,16 @@ export function sanitizeHtml(html: string | null | undefined): string {
       col: dropStyle,
       a: (tagName, attribs) => {
         if (leavesTheSite(attribs.href)) return { tagName: "span", attribs: {} };
-        // Spread the existing attributes first: replacing them would drop href.
-        return { tagName: "a", attribs: { ...attribs, rel: "noopener noreferrer" } };
+        // An internal link is a plain, followed link that opens in the same
+        // tab. The editor writes target="_blank" rel="noopener noreferrer
+        // nofollow" on every link (Tiptap's default); on our own pages a new
+        // tab only gets in the way, "noreferrer" makes the visit look direct
+        // in analytics, and "nofollow" would waste the link (owner, 9 Nov).
+        // Copy the attributes first: replacing them would drop href.
+        const kept = { ...attribs };
+        delete kept.target;
+        delete kept.rel;
+        return { tagName: "a", attribs: kept };
       },
     },
   }));
