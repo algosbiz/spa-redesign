@@ -25,7 +25,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Our cupping therapy uses solid cups and a small hand pump to create gentle suction on your back and shoulders, with no flame. Choose 1 hour of dry cupping (IDR 499.000) or wet cupping (IDR 649.000) per person, or 1 hour of Balinese massage plus 1 hour of dry cupping (IDR 599.000), at our spa or at your villa or hotel. Cupping can leave round marks that fade within a few days.",
+        "text": "Our cupping therapy uses solid cups and a small hand pump to create gentle suction on your back and shoulders, with no flame. Choose 30 minutes of dry cupping (IDR 499.000) or wet cupping (IDR 649.000) per person, or 1 hour of Balinese massage plus 30 minutes of dry cupping (IDR 599.000), at our spa or at your villa or hotel. Cupping can leave round marks that fade within a few days.",
         "items": [
           {
             "label": "Treatment",
@@ -33,7 +33,7 @@
           },
           {
             "label": "Length and price",
-            "value": "Per person: 1 hour dry cupping IDR 499.000 · 1 hour wet cupping IDR 649.000 · 1 hour Balinese + 1 hour dry cupping IDR 599.000 (was IDR 658.000)"
+            "value": "Per person: 30 min dry cupping IDR 499.000 · 30 min wet cupping IDR 649.000 · 1 hour Balinese + 30 min dry cupping IDR 599.000 (was IDR 658.000)"
           },
           {
             "label": "Where",
@@ -79,11 +79,11 @@
             ],
             "subTitle": "",
             "title": "Session & Pricing",
-            "text": "Dry and wet cupping are 1 hour each. To add a massage, pair 1 hour of Balinese massage with 1 hour of dry cupping for IDR 599.000, less than the IDR 658.000 they cost separately.",
+            "text": "Dry and wet cupping are 30 minutes each. To add a massage, pair 1 hour of Balinese massage with 30 minutes of dry cupping for IDR 599.000, less than the IDR 658.000 they cost separately.",
             "packages": [
               {
                 "price": "IDR 499.000",
-                "name": "1 Hour Dry Cupping",
+                "name": "30 Min Dry Cupping",
                 "treatments": [
                   "Cupping on your back and shoulders",
                   "Solid cups and a hand pump",
@@ -92,7 +92,7 @@
               },
               {
                 "price": "IDR 649.000",
-                "name": "1 Hour Wet Cupping",
+                "name": "30 Min Wet Cupping",
                 "treatments": [
                   "Tiny pricks with a sterile, single-use lancet",
                   "The same pump cups draw a little blood",
@@ -102,10 +102,10 @@
               {
                 "price": "IDR 599.000",
                 "was": "IDR 658.000",
-                "name": "1 Hour Balinese + 1 Hour Dry Cupping",
+                "name": "1 Hour Balinese + 30 Min Dry Cupping",
                 "treatments": [
                   "1 hour of Balinese massage",
-                  "1 hour of dry cupping",
+                  "30 minutes of dry cupping",
                   "Less than booking both separately"
                 ]
               }
@@ -196,7 +196,7 @@
               },
               {
                 "question": "What is the difference between dry and wet cupping?",
-                "answer": "Dry cupping uses suction only, and nothing breaks the skin. For wet cupping, your therapist makes a few tiny pricks in the skin with a sterile, single-use lancet, then the same hand-pump cups draw out a little blood. At Spa Bali Moon in Seminyak, 1 hour of dry cupping costs IDR 499.000 and 1 hour of wet cupping IDR 649.000 per person."
+                "answer": "Dry cupping uses suction only, and nothing breaks the skin. For wet cupping, your therapist makes a few tiny pricks in the skin with a sterile, single-use lancet, then the same hand-pump cups draw out a little blood. Here, 30 minutes of dry cupping costs IDR 499.000 and 30 minutes of wet cupping IDR 649.000 per person."
               },
               {
                 "question": "Does cupping hurt?",
@@ -212,11 +212,11 @@
               },
               {
                 "question": "Can I combine cupping with a massage?",
-                "answer": "Yes. Book 1 hour of Balinese massage with 1 hour of dry cupping for IDR 599.000 per person, less than the IDR 658.000 the two cost when booked separately."
+                "answer": "Yes. Book 1 hour of Balinese massage with 30 minutes of dry cupping for IDR 599.000 per person, less than the IDR 658.000 the two cost when booked separately."
               },
               {
                 "question": "How much does cupping cost in Seminyak?",
-                "answer": "Cupping therapy at Spa Bali Moon in Seminyak costs IDR 499.000 for 1 hour of dry cupping or IDR 649.000 for 1 hour of wet cupping per person, or IDR 599.000 for 1 hour of Balinese massage plus 1 hour of dry cupping. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
+                "answer": "Cupping therapy at Spa Bali Moon in Seminyak costs IDR 499.000 for 30 minutes of dry cupping or IDR 649.000 for 30 minutes of wet cupping per person, or IDR 599.000 for 1 hour of Balinese massage plus 30 minutes of dry cupping. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
               },
               {
                 "question": "Can I have cupping at my villa or hotel?",
