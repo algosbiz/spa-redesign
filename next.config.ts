@@ -14,6 +14,15 @@ const nextConfig: NextConfig = {
   // matches no page gets its 404 from src/app/global-not-found.tsx.
   experimental: {
     globalNotFound: true,
+    // The stylesheets go inside each page instead of six separate files the
+    // browser must fetch before it can draw anything (PageSpeed, 10 Nov:
+    // "render-blocking requests", ~1 s on a phone). Measured on a local
+    // production build with Lighthouse's phone throttling (median of 5):
+    // homepage 2.0 s -> 1.3 s and the lymphatic page 2.4 s -> 1.3 s until the
+    // main content shows; each page is ~57 KB heavier, as the styles are no
+    // longer cached between pages. Experimental in Next 16: remove this line
+    // to go back to <link> stylesheets.
+    inlineCss: true,
   },
 
   // Every URL ends with "/" — exactly like the old website (SEO: keep URLs identical).
