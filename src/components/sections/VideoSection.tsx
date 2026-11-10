@@ -65,7 +65,7 @@ export default function VideoSection(p: VideoSectionProps) {
   return (
     <section className="video-section pt-130 pb-130">
       <div className="shape">
-        <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/video-shape.png" alt="image" />
+        <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/video-shape.png" alt="" />
       </div>
       <div className="container">
         {/* The centred heading over the block is optional (the price list

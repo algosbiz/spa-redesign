@@ -98,7 +98,7 @@ export default function ReservationPage() {
       />
       <section className="book-treatment-section about-section section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130">
         <div className="shape1 wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <img loading="lazy" decoding="async" src="/images/shape/service-shape-left.png" alt="shape" />
+          <img loading="lazy" decoding="async" src="/images/shape/service-shape-left.png" alt="" />
         </div>
         <div className="shape2 wow slideInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
           <img
@@ -106,7 +106,7 @@ export default function ReservationPage() {
             decoding="async"
             className="sway_Y__animation"
             src="/images/shape/service-shape-right.png"
-            alt="shape"
+            alt=""
           />
         </div>
         <div className="container">

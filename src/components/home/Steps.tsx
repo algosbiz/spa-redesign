@@ -88,7 +88,7 @@ export default function Steps() {
         </div>
         <div className="outer-box">
           <div className="step-line">
-            <img loading="lazy" decoding="async" src="/images/shape/step-line.png" alt="image" />
+            <img loading="lazy" decoding="async" src="/images/shape/step-line.png" alt="" />
           </div>
           <div className="row g-5">
             {steps.items.map((step, i) => (

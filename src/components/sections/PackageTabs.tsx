@@ -44,10 +44,10 @@ export default function PackageTabs({
       }${spread ? " package-spread-toggles" : ""}`}
     >
       <div className="shape1 wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-        <img loading="lazy" decoding="async" className="sway_Y__animationY" src="/images/shape/banner-five-shape1.png" alt="image" />
+        <img loading="lazy" decoding="async" className="sway_Y__animationY" src="/images/shape/banner-five-shape1.png" alt="" />
       </div>
       <div className="shape2">
-        <img loading="lazy" decoding="async" className="sway__animation" src="/images/shape/package-shape-right.png" alt="image" />
+        <img loading="lazy" decoding="async" className="sway__animation" src="/images/shape/package-shape-right.png" alt="" />
       </div>
       <div className="container">
         <div className="section-header mb-60 center">
