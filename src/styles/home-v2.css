@@ -480,7 +480,7 @@
     letter-spacing: 0.18em;
     text-align: left;
     text-transform: uppercase;
-    color: var(--theme-color1);
+    color: var(--gold-text, #8a6a24);
     background: none;
     transform: none;
   }
