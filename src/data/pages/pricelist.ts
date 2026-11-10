@@ -1502,6 +1502,7 @@ export const pricelistPage = {
     title: "About Massage Prices in Seminyak",
     imageTitle: "Book Your Massage in Seminyak",
     image: "/images/pricelist/pricelist-4.webp",
+    imageAlt: "Therapist massaging a guest's forehead during a facial massage",
     items: [
     {
       question: "1. How much is a massage in Bali?",

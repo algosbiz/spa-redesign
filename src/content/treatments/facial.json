@@ -60,7 +60,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/balimoonfacial/balimoonfacial-2.webp",
+        "primaryAlt": "Therapist brushing a gold mask onto a guest's face",
         "secondaryImage": "/images/services/balimoonfacial/balimoonfacial-3.webp",
+        "secondaryAlt": "Gold facial mask being brushed onto the face",
         "subTitle": "",
         "title": "What Is the Bali Moon Facial?",
         "text": "The Bali Moon Facial is our signature 1-hour facial. A gentle cleanse, steam, exfoliation, an argan oil lymphatic facial massage and a mask chosen for your skin (Tea Tree or Gold) leave it refreshed and hydrated.",
@@ -85,6 +87,12 @@
               "/images/services/balimoonfacial/balimoonfacial-5.webp",
               "/images/services/balimoonfacial/balimoonfacial-6.webp",
               "/images/services/balimoonfacial/balimoonfacial-7.webp"
+            ],
+            "imageAlts": [
+              "Hands massaging a guest's cheeks during a facial",
+              "Facial steamer misting a guest's face",
+              "Facial massage along the cheekbones",
+              "Therapist's hands cradling a guest's face during a facial massage"
             ],
             "subTitle": "",
             "title": "Facial Packages in Seminyak",
@@ -211,6 +219,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/balimoonfacial/balimoonfacial-8.webp",
+        "imageAlt": "Therapist applying a gold mask during a facial",
         "subTitle": "",
         "title": "What a Facial Helps With",
         "text": "Guests book a facial to clear surface impurities, add moisture and freshen up dull skin. Common reasons:",
@@ -245,6 +254,7 @@
           }
         },
         "image": "/images/services/balimoonfacial/balimoonfacial-9.webp",
+        "imageAlt": "Therapist cleansing a guest's face with cotton pads",
         "subTitle": "",
         "title": "Choose Your Mask: Tea Tree or Gold",
         "text": "The right mask depends on how your skin feels on the day. Your therapist can help you choose:",
@@ -269,6 +279,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/balimoonfacial/balimoonfacial-10.webp",
+        "imageAlt": "Gold facial mask lifted from a wooden bowl with a brush",
         "subTitle": "",
         "title": "What to Expect During Your Facial",
         "text": "Your facial follows six steps that cleanse, exfoliate, nourish and refresh your skin:",
@@ -300,6 +311,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/balimoonfacial/balimoonfacial-11.webp",
+            "imageAlt": "Guest relaxing in a clay face mask as the therapist massages her temples",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Facials in Seminyak",

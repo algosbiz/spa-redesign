@@ -33,7 +33,7 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                 <div className="jsx-about image">
                   <img loading="lazy" decoding="async" src="/images/home/homepage-3.webp" alt="Spa massage treatment" className="jsx-about image1" />
                 </div>
-                <img loading="lazy" decoding="async" src="/images/home/homepage-4.webp" alt="Spa treatment room" className="jsx-about image2" />
+                <img loading="lazy" decoding="async" src="/images/home/homepage-4.webp" alt="Black massage stones with frangipani flowers on a folded towel" className="jsx-about image2" />
                 <div className="info">
                   {/* The lotus in a turning ring of words (owner, 23 Oct: "much cooler,
                       should have an effect"), without the white card. */}

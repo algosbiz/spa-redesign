@@ -110,7 +110,9 @@ export default function VillaHotelMassagePage() {
         feature2Title="Experienced Therapists"
         feature2Text="Skilled therapists bring professional massage and spa directly to your accommodation."
         primaryImage="/images/services/massagehotelvilla/massagehotelvilla-2.webp"
+        primaryAlt="Therapist giving a massage by a villa pool"
         secondaryImage="/images/services/massagehotelvilla/massagehotelvilla-3.webp"
+        secondaryAlt="Back massage on a villa terrace"
       />
       <Funfacts
         items={[
@@ -142,6 +144,7 @@ export default function VillaHotelMassagePage() {
         buttonText="Book Now"
         buttonLink="https://wa.me/6287863175144"
         image="/images/services/massagehotelvilla/massagehotelvilla-4.webp"
+        imageAlt="Therapist massaging a guest in a tropical villa garden"
       />
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/2a.png"
@@ -166,6 +169,7 @@ export default function VillaHotelMassagePage() {
         buttonText="Book Now"
         buttonLink="https://wa.me/6287863175144"
         image="/images/services/massagehotelvilla/massagehotelvilla-5.webp"
+        imageAlt="Hands on a guest's back beside a swimming pool"
       />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/6a.png"
@@ -189,6 +193,7 @@ export default function VillaHotelMassagePage() {
         featuresLeft={["Quick WhatsApp booking", "Flexible appointment times", "Same-day reservations"]}
         featuresRight={["Transparent pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagehotelvilla/massagehotelvilla-6.webp"
+        imageAlt="Therapist massaging a guest's leg outdoors"
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
@@ -200,6 +205,7 @@ export default function VillaHotelMassagePage() {
           title={<>About In-Villa Massage in Seminyak</>}
           items={FAQ}
           image="/images/services/massagehotelvilla/massagehotelvilla-7.webp"
+          imageAlt="Therapist massaging a guest's forearm in a garden"
         />
       </div>
       <ReserveCta

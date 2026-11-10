@@ -55,7 +55,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/hotstonemassage/hotstonemassage-2.webp",
+        "primaryAlt": "Therapist placing warm stones on a guest's back",
         "secondaryImage": "/images/services/hotstonemassage/hotstonemassage-3.webp",
+        "secondaryAlt": "Smooth black basalt stones resting on a guest's back",
         "subTitle": "",
         "title": "What Is Hot Stone Massage?",
         "text": "A hot stone massage is a full-body massage with smooth, heated basalt stones. The warmth softens the muscles before deeper work, so tension releases without strong pressure. Guests choose it when they want warmth rather than a firm massage.",
@@ -80,6 +82,12 @@
               "/images/services/hotstonemassage/hotstonemassage-5.webp",
               "/images/services/hotstonemassage/hotstonemassage-6.webp",
               "/images/services/hotstonemassage/hotstonemassage-7.webp"
+            ],
+            "imageAlts": [
+              "Warm stone gliding over an oiled back",
+              "Row of hot stones along a guest's spine",
+              "Therapist pressing two hot stones into a guest's upper back",
+              "Warm basalt stones lined up along the back"
             ],
             "subTitle": "",
             "title": "Hot Stone Massage Packages in Seminyak",
@@ -208,6 +216,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/hotstonemassage/hotstonemassage-8.webp",
+        "imageAlt": "Therapist massaging with hot stones on a guest's back",
         "subTitle": "",
         "title": "Hot Stone Massage Benefits",
         "text": "The warmth of the stones prepares your muscles for massage and makes it easier to relax, especially after travel or an active day. Key benefits:",
@@ -242,6 +251,7 @@
           }
         },
         "image": "/images/services/hotstonemassage/hotstonemassage-9.webp",
+        "imageAlt": "Stack of black massage stones with frangipani flowers",
         "subTitle": "",
         "title": "Where the Stones Are Placed",
         "text": "Warm stones can be placed on different parts of the body depending on where you want to focus the treatment. Larger stones are generally used on broader areas, while smaller stones allow for more focused warmth. Common areas for warm stone placement are:",
@@ -266,6 +276,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/hotstonemassage/hotstonemassage-10.webp",
+        "imageAlt": "Therapist using hot stones on a guest's legs and feet",
         "subTitle": "",
         "title": "What Happens During a Hot Stone Massage",
         "text": "A hot stone massage follows a gradual process that combines heated stones with traditional massage techniques. The treatment starts by preparing the body for the warmth, followed by a combination of stone and hand massage. Throughout the session, we pay attention to your comfort and adjust the treatment as needed. The session generally follows these steps:",
@@ -297,6 +308,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/hotstonemassage/hotstonemassage-11.webp",
+            "imageAlt": "Hands moving warm stones over a guest's back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Hot Stone Massage in Seminyak",

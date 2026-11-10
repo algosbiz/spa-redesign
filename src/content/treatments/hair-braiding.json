@@ -59,7 +59,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/hairbraiding/hairbraiding-2.webp",
+        "primaryAlt": "Therapist braiding purple extensions into a girl's hair",
         "secondaryImage": "/images/services/hairbraiding/hairbraiding-3.webp",
+        "secondaryAlt": "Two braids with purple extensions",
         "subTitle": "",
         "title": "What Is Hair Braiding at Spa Bali Moon?",
         "text": "Hair braiding keeps your hair neat and tangle-free in Bali's heat and humidity, from beach clubs and sightseeing to special events. We braid short, medium and long hair, and adapt each style to your hair and the look you want.",
@@ -83,6 +85,11 @@
               "/images/services/hairbraiding/hairbraiding-4.webp",
               "/images/services/hairbraiding/hairbraiding-5.webp",
               "/images/services/hairbraiding/hairbraiding-6.webp"
+            ],
+            "imageAlts": [
+              "Rows of cornrow braids",
+              "Blue braid extensions being woven in",
+              "Many thin braids with pink extensions"
             ],
             "subTitle": "",
             "title": "Choose the Style That Fits Your Hair",
@@ -160,6 +167,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/hairbraiding/hairbraiding-7.webp",
+        "imageAlt": "Therapist finishing pink and blue braids",
         "subTitle": "",
         "title": "Easy, Stylish Hair for Your Bali Holiday",
         "text": "Braids keep your hair manageable in Bali's warm, humid climate and save styling time on holiday. Guests choose them for:",
@@ -193,6 +201,7 @@
           }
         },
         "image": "/images/services/hairbraiding/hairbraiding-8.webp",
+        "imageAlt": "Two Dutch braids in brown hair",
         "subTitle": "",
         "title": "Explore Our Most Popular Hair Braiding Styles",
         "text": "From simple braids for everyday wear to more detailed styles for holidays and special occasions, each style can be adapted to suit your hair, outfit and plans. Our most popular styles:",
@@ -219,6 +228,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/hairbraiding/hairbraiding-9.webp",
+        "imageAlt": "Therapist braiding a blue extension into a girl's hair",
         "subTitle": "",
         "title": "Every Braid Starts with the Right Plan",
         "text": "Before braiding begins, we discuss your preferred hairstyle, braid size, hair length, and whether you'd like to include extensions. Each section of hair is carefully prepared before braiding to create an even, comfortable finish. Once complete, we'll also share simple aftercare tips to help your hairstyle stay neat for longer. The process covers:",
@@ -250,6 +260,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/hairbraiding/hairbraiding-10.webp",
+            "imageAlt": "Hands plaiting a braid in long dark hair",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Hair Braiding in Seminyak",

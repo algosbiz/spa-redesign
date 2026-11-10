@@ -13,7 +13,7 @@ export type AboutSplitProps = {
   buttonText?: ReactNode;
   buttonLink?: string;
   image?: string;
-  /** What the photo shows (default "Spa treatment"). */
+  /** What the photo shows (alt text). */
   imageAlt?: string;
   treatmentLayout?: boolean;
   leftShapeSrc?: string | null;
@@ -47,7 +47,7 @@ export default function AboutSplit({
   buttonText,
   buttonLink = "/seminyak",
   image = "/images/about/about-image.png",
-  imageAlt = "Spa treatment",
+  imageAlt = "",
   treatmentLayout = false,
   leftShapeSrc,
   rightShapeSrc,

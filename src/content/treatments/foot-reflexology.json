@@ -51,7 +51,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/footreflexology/footreflexology-2.webp",
+        "primaryAlt": "Therapist giving a foot reflexology session",
         "secondaryImage": "/images/services/footreflexology/footreflexology-3.webp",
+        "secondaryAlt": "Wooden reflexology stick pressing a point on the sole",
         "subTitle": "",
         "title": "What Is Foot Reflexology and How Does It Work?",
         "text": "Foot reflexology is a traditional treatment that applies controlled pressure to reflex points on the feet, which reflexology holds are linked to other parts of the body. It is relaxing, and it eases tired feet after travel, long walks or a busy day.",
@@ -75,6 +77,11 @@
               "/images/services/footreflexology/footreflexology-4.webp",
               "/images/services/footreflexology/footreflexology-5.webp",
               "/images/services/footreflexology/footreflexology-6.webp"
+            ],
+            "imageAlts": [
+              "Therapist pressing a reflexology point with a wooden stick",
+              "Thumbs working the ball of the foot during reflexology",
+              "Reflexology stick on the heel of a foot"
             ],
             "subTitle": "",
             "title": "Choose the Session That Fits You",
@@ -152,6 +159,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/footreflexology/footreflexology-7.webp",
+        "imageAlt": "Therapist holding a guest's foot during reflexology",
         "subTitle": "",
         "title": "A Simple Way to Refresh Tired Feet",
         "text": "After a day of walking or travelling, your feet can feel tired and heavy. Guests often book reflexology for:",
@@ -186,6 +194,7 @@
           }
         },
         "image": "/images/services/footreflexology/footreflexology-8.webp",
+        "imageAlt": "Wooden stick and thumb working the arch of the foot",
         "subTitle": "",
         "title": "Reflex Points on the Feet",
         "text": "Rather than applying the same pressure everywhere, your therapist works through different zones of the feet, following traditional reflexology. A session can include:",
@@ -210,6 +219,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footreflexology/footreflexology-9.webp",
+        "imageAlt": "Therapist working the sole of a guest's foot",
         "subTitle": "",
         "title": "What a Reflexology Session Is Like",
         "text": "A foot reflexology session follows a gentle, structured approach that combines warm-up movements with focused pressure on selected reflex points. The therapist adjusts the technique throughout the treatment to keep the pressure comfortable while maintaining a steady rhythm. The session typically involves:",
@@ -240,6 +250,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/footreflexology/footreflexology-10.webp",
+            "imageAlt": "Reflexology on the arch of the foot by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Foot Reflexology in Seminyak",

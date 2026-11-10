@@ -90,7 +90,9 @@ export default function MassageKutaPage() {
         feature2Title="Gentle Finish"
         feature2Text="Slow, flowing movements and carefully adjusted pressure help the body relax."
         primaryImage="/images/services/massagekuta/massagekuta-2.webp"
+        primaryAlt="Therapist giving a poolside massage at a villa in Kuta"
         secondaryImage="/images/services/massagekuta/massagekuta-3.webp"
+        secondaryAlt="Back massage beside a pool"
       />
       <Funfacts
         items={[
@@ -124,6 +126,7 @@ export default function MassageKutaPage() {
         buttonText="Book Now"
         buttonLink="https://wa.me/6287863175144"
         image="/images/services/massagekuta/massagekuta-4.webp"
+        imageAlt="Thumbs pressing the sole of a foot during an outdoor massage"
       />
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/12a.png"
@@ -145,6 +148,7 @@ export default function MassageKutaPage() {
         buttonText="Book Now"
         buttonLink="https://wa.me/6287863175144"
         image="/images/services/massagekuta/massagekuta-5.webp"
+        imageAlt="Therapist stretching a guest's arm in a garden setting"
       />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/3a.png"
@@ -158,6 +162,7 @@ export default function MassageKutaPage() {
         featuresLeft={["Same-day appointments", "Flexible timing", "Quick WhatsApp booking"]}
         featuresRight={["Clear, honest pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagekuta/massagekuta-6.webp"
+        imageAlt="Leg massage on a massage bed by a pool"
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
@@ -169,6 +174,7 @@ export default function MassageKutaPage() {
           title={<>About Massage in Kuta</>}
           items={FAQ}
           image="/images/services/massagekuta/massagekuta-7.webp"
+          imageAlt="Hands working into a guest's shoulder beside a pool"
         />
       </div>
       <ReserveCta

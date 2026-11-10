@@ -56,7 +56,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/manicurepedicure/manicurepedicure-2.webp",
+        "primaryAlt": "Nail therapist giving a manicure at a nail table",
         "secondaryImage": "/images/services/manicurepedicure/manicurepedicure-3.webp",
+        "secondaryAlt": "Cuticles being pushed back during a manicure",
         "subTitle": "",
         "title": "What Is a Manicure and Pedicure?",
         "text": "A manicure and pedicure is nail care for your hands and feet: trimming, shaping, cuticle care and moisturising, finished with polish or gel if you like. A manicure or a pedicure takes about 30 minutes; both together take about an hour.",
@@ -81,6 +83,12 @@
               "/images/services/manicurepedicure/manicurepedicure-5.webp",
               "/images/services/manicurepedicure/manicurepedicure-6.webp",
               "/images/services/manicurepedicure/manicurepedicure-7.webp"
+            ],
+            "imageAlts": [
+              "Nail being filed into shape",
+              "Cuticle pusher working on a fingernail",
+              "Pedicure: cuticles being tidied on the toes",
+              "Foot file smoothing a guest's heel"
             ],
             "subTitle": "",
             "title": "Manicure & Pedicure Packages in Seminyak",
@@ -255,6 +263,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/manicurepedicure/manicurepedicure-8.webp",
+        "imageAlt": "Nail therapist filing a guest's nails",
         "subTitle": "",
         "title": "Why Regular Nail Care Matters",
         "text": "Regular nail care keeps nails tidy and the skin around them soft. It helps with:",
@@ -288,6 +297,7 @@
           }
         },
         "image": "/images/services/manicurepedicure/manicurepedicure-9.webp",
+        "imageAlt": "Clean, buffed fingernails after a manicure",
         "subTitle": "",
         "title": "What a Manicure & Pedicure Includes",
         "text": "Depending on the service you choose, your manicure and pedicure may include:",
@@ -312,6 +322,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/manicurepedicure/manicurepedicure-10.webp",
+        "imageAlt": "Foot file smoothing the sole during a pedicure",
         "subTitle": "",
         "title": "What to Expect at Your Appointment",
         "text": "Your appointment starts with a look at your nails and ends with the finish you chose. It usually covers:",
@@ -343,6 +354,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/manicurepedicure/manicurepedicure-11.webp",
+            "imageAlt": "Manicure table with tools and lotion",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Manicure & Pedicure in Seminyak",

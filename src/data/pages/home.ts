@@ -186,6 +186,7 @@ export const home = {
 
   faq: {
     image: "/images/homepage/homepage-2.webp",
+    imageAlt: "Wooden cup tool pressed against a guest's thigh",
     imageTitle: "Book Your Massage in Seminyak Today",
     subTitle: "Frequently Asked Questions",
     title: "Everything You Need to Know",
