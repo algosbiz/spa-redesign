@@ -103,7 +103,7 @@
             "images": [
               "/images/services/lymphaticmassage/lymphaticmassage-4.webp",
               "/images/services/lymphaticmassage/lymphaticmassage-5.webp",
-              "/images/services/lymphaticmassage/lymphaticmassage-6.webp"
+              "/images/services/lymphaticmassage/lymphatic-massage-lower-back.webp"
             ],
             "imageAlts": [
               "Gentle lymphatic massage strokes across the abdomen",
@@ -192,8 +192,8 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "subTitle": "",
-        "image": "/images/services/massagehotelvilla/massagehotelvilla-6.webp",
-        "imageAlt": "Therapist massaging a guest's leg",
+        "image": "/images/services/lymphaticmassage/lymphatic-wood-roller.webp",
+        "imageAlt": "Therapist rolling a wooden massage roller over a guest's thigh",
         "title": "After a Flight, a Hike or a Hot Day",
         "text": "Guests often book a lymphatic massage when their legs and ankles feel heavy or puffy: after a long flight, a hike or a day of walking, or a few hot, humid days. Many find their legs feel lighter afterwards, though the effect is temporary.",
         "featuresLeft": [
@@ -357,8 +357,8 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "subTitle": "",
-        "image": "/images/services/lymphaticmassage/lymphaticmassage-9.webp",
-        "imageAlt": "Therapist using a wooden massage tool",
+        "image": "/images/services/lymphaticmassage/lymphatic-wood-therapy-tools.webp",
+        "imageAlt": "The five wooden tools used in wood therapy on a massage bed: two rollers, a multi-point massager, a cup and a curved paddle",
         "title": "Wood Therapy",
         "text": "Wood therapy uses smooth wooden tools: two rollers, one with ridged wheels and one with square beads, a multi-point massager, a wooden cup and a curved paddle. Your therapist mixes it in with the hand strokes, working mostly with the rollers at a quicker pace, and many guests enjoy the change of rhythm. It costs nothing extra, and the tools come to your villa or hotel too.",
         "featuresLeft": [
