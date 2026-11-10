@@ -73,7 +73,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
           zIndex: -1,
         }}
       >
-        <img loading="lazy" decoding="async" src="/images/shape/about-left-shape.png" alt="shape" />
+        <img loading="lazy" decoding="async" src="/images/shape/about-left-shape.png" alt="" />
       </div>
       <div
         className="shape2"
@@ -89,7 +89,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
           decoding="async"
           className="sway_Y__animation"
           src="/images/shape/about-right-shape.png"
-          alt="shape"
+          alt=""
         />
       </div>
       <div className="container">

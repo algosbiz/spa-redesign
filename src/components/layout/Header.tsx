@@ -129,7 +129,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
           <div className="jsx-header header__main">
             <Link prefetch={false} href="/" className="logo">
               {/* eslint-disable-next-line @next/next/no-img-element -- the live site's plain <img> */}
-              <img src="/images/logo/SMBtitle.svg" alt="logo" width="444" height="80" className="jsx-header" />
+              <img src="/images/logo/SMBtitle.svg" alt="Spa Bali Moon" width="444" height="80" className="jsx-header" />
             </Link>
             <div className="jsx-header main-menu">
               <nav className="jsx-header">

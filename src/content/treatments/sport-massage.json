@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/sportsmassage/sportsmassage-2.webp",
+        "primaryAlt": "Therapist giving a sports massage on a guest's back",
         "secondaryImage": "/images/services/sportsmassage/sportsmassage-3.webp",
+        "secondaryAlt": "Both hands working firmly into the back muscles",
         "subTitle": "",
         "title": "What Is Sports Massage?",
         "text": {
@@ -94,6 +96,10 @@
             "images": [
               "/images/services/sportsmassage/sportsmassage-4.webp",
               "/images/services/sportsmassage/sportsmassage-5.webp"
+            ],
+            "imageAlts": [
+              "Hands kneading a guest's shoulder",
+              "Therapist massaging a guest's lower back"
             ],
             "subTitle": "",
             "title": "Our Session Options",
@@ -162,6 +168,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/sportsmassage/sportsmassage-6.webp",
+        "imageAlt": "Firm strokes along a guest's back during a sports massage",
         "subTitle": "",
         "title": "Who Sports Massage Suits",
         "text": "A sports massage suits anyone with a physically active routine, especially:",
@@ -196,6 +203,7 @@
           }
         },
         "image": "/images/services/sportsmassage/sportsmassage-7.webp",
+        "imageAlt": "Therapist's forearm working along a guest's back",
         "subTitle": "",
         "title": "Where Your Therapist Focuses",
         "text": "Your therapist focuses on the muscles your sport or activity uses most, commonly:",
@@ -221,6 +229,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/sportsmassage/sportsmassage-8.webp",
+        "imageAlt": "Therapist giving a sports massage to a male guest",
         "subTitle": "",
         "title": "What Happens During Your Sports Massage",
         "text": "The session begins with a short consultation to understand your activity level and areas needing attention. Our therapist combines techniques such as kneading, compression, stretching, and controlled pressure to ease muscle tightness while adjusting the intensity to your comfort and goals. The session generally follows these steps:",
@@ -252,6 +261,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/sportsmassage/sportsmassage-9.webp",
+            "imageAlt": "Thumbs working a knot near the shoulder blade",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Sports Massage in Seminyak",

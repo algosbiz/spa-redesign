@@ -56,7 +56,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/waxing/waxing-2.webp",
+        "primaryAlt": "Therapist applying wax to a guest's forearm",
         "secondaryImage": "/images/services/waxing/waxing-3.webp",
+        "secondaryAlt": "Warm wax spread along a forearm with a wooden spatula",
         "subTitle": "",
         "title": "What Is Professional Waxing?",
         "text": "Waxing removes hair from the root, so skin stays smooth for longer than after shaving. We use olive oil strip wax for larger areas such as arms, legs and back, and Mancine Strawberry Hard Wax for delicate areas such as a Brazilian.",
@@ -82,6 +84,13 @@
               "/images/services/waxing/waxing-16.webp",
               "/images/services/waxing/waxing-5.webp",
               "/images/services/waxing/waxing-6.webp"
+            ],
+            "imageAlts": [
+              "Back waxing with a cloth strip",
+              "Wax spread on the back of a guest's leg",
+              "Wax strip removed from a guest's upper lip",
+              "Warm wax spread along an arm with a spatula",
+              "Leg waxing with a wooden spatula"
             ],
             "subTitle": "",
             "title": "Our Waxing Options",
@@ -176,6 +185,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/waxing/waxing-11.webp",
+        "imageAlt": "Wax strip pressed onto a guest's leg",
         "subTitle": "",
         "title": "Smooth Skin for Your Bali Holiday",
         "text": "Waxing keeps skin smooth for weeks, which suits a beach holiday. Guests choose it for these reasons:",
@@ -210,6 +220,7 @@
           }
         },
         "image": "/images/services/waxing/waxing-12.webp",
+        "imageAlt": "Warm honey-coloured wax dripping from a spatula",
         "subTitle": "",
         "title": "Areas We Wax",
         "text": "We wax small and large areas and choose the wax for each one:",
@@ -234,6 +245,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/waxing/waxing-13.webp",
+        "imageAlt": "Wax shaping a guest's eyebrow",
         "subTitle": "",
         "title": "How Waxing Works",
         "text": "Waxing follows a simple process, adjusted to the area and your skin's comfort. Your therapist prepares the skin, applies the right wax and finishes with simple aftercare advice. The process typically involves:",
@@ -265,6 +277,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/waxing/waxing-14.webp",
+            "imageAlt": "Wax being spread along a leg before a strip is applied",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Waxing in Seminyak",

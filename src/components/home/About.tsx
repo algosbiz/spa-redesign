@@ -24,7 +24,7 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
     <div className="jsx-home homepage-about-paper-section section__decoration-top section__decoration-bottom bg-sub">
       <section id="about" className="jsx-about about-section-three pt-130 pb-130 paralax__animation">
         <div className="jsx-about shape">
-          <img loading="lazy" decoding="async" src="/images/shape/about-three-shape.png" alt="image" className="jsx-about animation__floatBob" />
+          <img loading="lazy" decoding="async" src="/images/shape/about-three-shape.png" alt="" className="jsx-about animation__floatBob" />
         </div>
         <div className="jsx-about container">
           <div className="jsx-about row g-0 align-items-center">
@@ -33,7 +33,7 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                 <div className="jsx-about image">
                   <img loading="lazy" decoding="async" src="/images/home/homepage-3.webp" alt="Spa massage treatment" className="jsx-about image1" />
                 </div>
-                <img loading="lazy" decoding="async" src="/images/home/homepage-4.webp" alt="Spa treatment room" className="jsx-about image2" />
+                <img loading="lazy" decoding="async" src="/images/home/homepage-4.webp" alt="Black massage stones with frangipani flowers on a folded towel" className="jsx-about image2" />
                 <div className="info">
                   {/* The lotus in a turning ring of words (owner, 23 Oct: "much cooler,
                       should have an effect"), without the white card. */}
@@ -68,10 +68,10 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                   <span aria-hidden="true" className="jsx-about about-leaf-gold animation__arryUpDown" />
                 </div>
                 <div className="jsx-about shape-two">
-                  <img loading="lazy" decoding="async" data-depth="0.03" src="/images/about/shape2.png" alt="image" className="jsx-about" />
+                  <img loading="lazy" decoding="async" data-depth="0.03" src="/images/about/shape2.png" alt="" className="jsx-about" />
                 </div>
                 <div className="jsx-about shape-three">
-                  <img loading="lazy" decoding="async" src="/images/about/shape3.png" alt="image" className="jsx-about animation__arryLeftRight" />
+                  <img loading="lazy" decoding="async" src="/images/about/shape3.png" alt="" className="jsx-about animation__arryLeftRight" />
                 </div>
               </div>
             </div>

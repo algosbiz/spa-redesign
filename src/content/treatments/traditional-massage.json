@@ -51,7 +51,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/traditionalmassage/traditionalmassage-2.webp",
+        "primaryAlt": "Therapist giving a traditional massage on a guest's back",
         "secondaryImage": "/images/services/traditionalmassage/traditionalmassage-3.webp",
+        "secondaryAlt": "Firm hands pressing into the upper back",
         "subTitle": "",
         "title": "What Is Traditional Massage?",
         "text": "Traditional massage is a firm, full-body massage with warm oil that uses kneading and focused pressure to release muscle tension. It works more directly on stiff or overworked areas than a lighter relaxation massage such as Balinese massage.",
@@ -76,6 +78,12 @@
               "/images/services/traditionalmassage/traditionalmassage-4.webp",
               "/images/services/traditionalmassage/traditionalmassage-5.webp",
               "/images/services/traditionalmassage/traditionalmassage-6.webp"
+            ],
+            "imageAlts": [
+              "Forearm stroke along a guest's back",
+              "Therapist massaging the back of a guest's leg",
+              "Hands kneading a guest's upper back",
+              "Palms pressing down either side of the spine"
             ],
             "subTitle": "",
             "title": "Our Session Options",
@@ -162,6 +170,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-7.webp",
+        "imageAlt": "Therapist giving a firm traditional massage on a guest's back",
         "subTitle": "",
         "title": "Firm, Hands-On Pressure for Tight Muscles",
         "text": "Traditional massage suits guests who like firm pressure. Guests often choose it for these reasons:",
@@ -195,6 +204,7 @@
           }
         },
         "image": "/images/services/traditionalmassage/traditionalmassage-8.webp",
+        "imageAlt": "Hands kneading the muscles of the upper back",
         "subTitle": "",
         "title": "Areas We Focus On",
         "text": "Tell your therapist where you feel it most and they will spend extra time there. Common areas of focus are:",
@@ -219,6 +229,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-9.webp",
+        "imageAlt": "Therapist working along a guest's back with firm pressure",
         "subTitle": "",
         "title": "Inside a Traditional Massage Session",
         "text": "Our therapists move gradually from one area to another, checking your comfort and adapting the treatment as the session progresses. The approach may involve:",
@@ -250,6 +261,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/traditionalmassage/traditionalmassage-10.webp",
+            "imageAlt": "Hands pressing into a guest's shoulder by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Traditional Massage in Seminyak",

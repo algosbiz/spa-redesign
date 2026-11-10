@@ -123,7 +123,7 @@ export default function TreatmentTestimonials({
                   <div className="info">
                     <div className="look-h4">{t.name}</div>
                     <span>Customer review</span>
-                    <div className="star" aria-label="5 out of 5 stars">
+                    <div className="star" role="img" aria-label="5 out of 5 stars">
                       {[0, 1, 2, 3, 4].map((s) => (
                         <i key={s} className="fa-solid fa-star" aria-hidden="true" />
                       ))}

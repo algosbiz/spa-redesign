@@ -56,7 +56,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/bodyscrub/bodyscrub-2.webp",
+        "primaryAlt": "Therapist applying a pink body scrub to a guest's back",
         "secondaryImage": "/images/services/bodyscrub/bodyscrub-3.webp",
+        "secondaryAlt": "Hands spreading a pink body scrub across a guest's back",
         "subTitle": "",
         "title": "What Is a Body Scrub?",
         "text": "A body scrub is an exfoliating treatment that removes dead skin cells and everyday buildup, leaving skin smoother. In Bali, sun, salt water, humidity and time outdoors can leave skin dry or dull. Our therapists use natural scrubs inspired by traditional Balinese lulur to refresh it gently.",
@@ -81,6 +83,12 @@
               "/images/services/bodyscrub/bodyscrub-5.webp",
               "/images/services/bodyscrub/bodyscrub-6.webp",
               "/images/services/bodyscrub/bodyscrub-7.webp"
+            ],
+            "imageAlts": [
+              "Coffee body scrub being rubbed into a guest's leg",
+              "Green body scrub spread in swirls across a guest's back",
+              "White body scrub being worked into a guest's arm",
+              "Therapist applying a pink scrub to the back of a guest's leg"
             ],
             "subTitle": "",
             "title": "Body Scrub Packages in Seminyak",
@@ -217,6 +225,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/bodyscrub/bodyscrub-8.webp",
+        "imageAlt": "Therapist spreading a green scrub over a guest's legs",
         "subTitle": "",
         "title": "Body Scrub Benefits",
         "text": "A regular body scrub refreshes the skin and leaves it smoother. What it does:",
@@ -250,6 +259,7 @@
           }
         },
         "image": "/images/services/bodyscrub/bodyscrub-3.webp",
+        "imageAlt": "Hands spreading a pink body scrub across a guest's back",
         "subTitle": "",
         "title": "When to Book a Body Scrub",
         "text": "A body scrub is a good idea:",
@@ -273,6 +283,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-10.webp",
+        "imageAlt": "Therapist scrubbing a guest's back as she lies face down",
         "subTitle": "",
         "title": "What Happens During Your Body Scrub",
         "text": "You choose your scrub, then your therapist works it over your whole body with gentle circular movements, giving extra time to rough areas such as elbows, knees and feet. The scrub is then rinsed off, leaving your skin smoother and cleaner.",
@@ -297,6 +308,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-9.webp",
+        "imageAlt": "Pink body scrub being worked into a guest's arm",
         "subTitle": "",
         "title": "Choose Your Natural Scrub",
         "text": "Every scrub exfoliates just as gently; they differ in scent and in what they bring to your skin.",
@@ -328,6 +340,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/bodyscrub/bodyscrub-11.webp",
+            "imageAlt": "Therapist scattering a grainy scrub over a guest's back from a coconut bowl",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Body Scrubs in Seminyak",

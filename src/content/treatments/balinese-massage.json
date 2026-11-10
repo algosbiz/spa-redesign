@@ -60,7 +60,9 @@
           "type": "AboutIntro",
           "props": {
             "primaryImage": "/images/services/balinesemassage/balinesemassage-2.webp",
+            "primaryAlt": "Therapist giving a Balinese massage on a guest's upper back",
             "secondaryImage": "/images/services/balinesemassage/balinesemassage-3.webp",
+            "secondaryAlt": "Therapist's hands pressing along a guest's oiled back",
             "leftShapeSrc": "/images/shape/about-two-left.png",
             "rightShapeSrc": "/images/shape/about-two-right.png",
             "subTitle": "",
@@ -105,6 +107,12 @@
                   "/images/services/balinesemassage/balinesemassage-5.webp",
                   "/images/services/balinesemassage/balinesemassage-6.webp",
                   "/images/services/balinesemassage/balinesemassage-7.webp"
+                ],
+                "imageAlts": [
+                  "Guest lying face down during a Balinese back massage",
+                  "Long gliding strokes with both palms on an oiled back",
+                  "Therapist's palms sweeping across a guest's back",
+                  "Hands working in long strokes down a guest's back"
                 ],
                 "subTitle": "",
                 "title": "Balinese Massage Packages in Seminyak",
@@ -249,6 +257,7 @@
               "type": "AboutSplit",
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
+                "imageAlt": "Therapist massaging a guest's shoulders and upper back",
                 "rightShapeSrc": "/images/shape/about-right-shape.png",
                 "subTitle": "",
                 "title": "Relaxing and Muscle-Focused in One",
@@ -282,6 +291,7 @@
               "type": "AboutSplitAlt",
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-9.webp",
+                "imageAlt": "Massage oil being poured into a therapist's palm",
                 "leftShapeSrc": "/images/shape/step-shape-left.png",
                 "rightShapeSrc": "/images/shape/banner-six-shape2.png",
                 "rightDecoration": {
@@ -323,6 +333,7 @@
               "type": "AboutSplit",
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-10.webp",
+                "imageAlt": "Therapist massaging the backs of a guest's legs",
                 "leftShapeSrc": "/images/shape/leaf/4a.png",
                 "rightShapeSrc": "/images/shape/banner-three-shape2.png",
                 "subTitle": "",
@@ -377,6 +388,7 @@
                 "removeTopPadding": true,
                 "paperDecoration": true,
                 "image": "/images/services/balinesemassage/balinesemassage-13.webp",
+                "imageAlt": "Thumbs pressing either side of the spine",
                 "imageTitle": "",
                 "subTitle": "Frequently Asked Questions",
                 "title": "About Balinese Massage in Seminyak",
