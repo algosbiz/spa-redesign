@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/coconutoilmassage/coconutoilmassage-2.webp",
+        "primaryAlt": "Therapist giving a coconut oil massage on a guest's back",
         "secondaryImage": "/images/services/coconutoilmassage/coconutoilmassage-3.webp",
+        "secondaryAlt": "Therapist warming coconut oil between her hands above a guest's back",
         "subTitle": "",
         "title": "What Is a Virgin Coconut Oil Massage?",
         "text": "A virgin coconut oil massage is a relaxing full-body massage with cold-pressed coconut oil, which keeps your skin soft while your muscles relax. The oil is pressed from fresh coconuts without high heat, so it keeps its natural qualities; it glides smoothly and suits most skin types.",
@@ -76,6 +78,11 @@
               "/images/services/coconutoilmassage/coconutoilmassage-4.webp",
               "/images/services/coconutoilmassage/coconutoilmassage-5.webp",
               "/images/services/coconutoilmassage/coconutoilmassage-6.webp"
+            ],
+            "imageAlts": [
+              "Hands gliding coconut oil up a guest's calf",
+              "Therapist kneading an oiled thigh",
+              "Long strokes with coconut oil along a guest's leg"
             ],
             "subTitle": "",
             "title": "Session Duration & Pricing",
@@ -153,6 +160,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/coconutoilmassage/coconutoilmassage-7.webp",
+        "imageAlt": "Therapist massaging coconut oil into a guest's legs",
         "subTitle": "",
         "title": "What Guests Like About Coconut Oil",
         "text": "Virgin coconut oil has long been used in tropical traditions for its moisture and smooth texture. What guests like about it:",
@@ -187,6 +195,7 @@
           }
         },
         "image": "/images/services/coconutoilmassage/coconutoilmassage-8.webp",
+        "imageAlt": "Bowl of coconut oil and a frangipani beside a guest's oiled arm",
         "subTitle": "",
         "title": "Who It Suits",
         "text": "A good fit for:",
@@ -210,6 +219,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/coconutoilmassage/coconutoilmassage-9.webp",
+        "imageAlt": "Therapist massaging a guest's shoulders with coconut oil",
         "subTitle": "",
         "title": "Why Virgin Coconut Oil Works So Well for Massage",
         "text": "Its smooth texture lets your therapist work in long, unbroken strokes, and it leaves your skin soft and moisturised. What that means during your massage:",
@@ -241,6 +251,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/coconutoilmassage/coconutoilmassage-10.webp",
+            "imageAlt": "Both hands gliding over a guest's oiled back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Coconut Oil Massage in Seminyak",

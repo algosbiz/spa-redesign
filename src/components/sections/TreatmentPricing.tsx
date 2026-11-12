@@ -13,6 +13,8 @@ export type TreatmentPricingProps = {
   packages?: { price: string; was?: string; suffix?: string; name: string; treatments: string[]; image?: string }[];
   leftShapeSrc?: string;
   images?: string[];
+  /** What each of `images` shows, in the same order (alt text). Without one, the photo is skipped by screen readers. */
+  imageAlts?: string[];
   topContent?: ReactNode;
   children?: ReactNode;
 };
@@ -43,6 +45,28 @@ const DEFAULT_PACKAGES: NonNullable<TreatmentPricingProps["packages"]> = [
     treatments: ["1. Relaxing Spa", "2. Oil Massage", "3. Cupping Massage", "4. Hand & Feet"],
   },
 ];
+
+/**
+ * A price card's photo (1050x484) with its 700px copy for phones, where it
+ * shows about 390px wide (PageSpeed, 10 Nov: the full file wasted ~100 KB on
+ * every treatment page). Every photo in /images/services/ and
+ * /images/treatments/ used here has its "-sm" copy beside it
+ * (tools/images/price-card-sm.mjs makes them).
+ */
+const CARD_SIZES = "(max-width: 575px) calc(100vw - 24px), (max-width: 991px) 700px, 880px";
+function CardPhoto({ src, alt }: { src: string; alt: string }) {
+  const responsive = /^\/images\/(services|treatments)\/.+\.webp$/.test(src);
+  return (
+    <img
+      loading="lazy"
+      decoding="async"
+      src={src}
+      {...(responsive && { srcSet: `${src.replace(/\.webp$/, "-sm.webp")} 700w, ${src} 1050w`, sizes: CARD_SIZES })}
+      alt={alt}
+    />
+  );
+}
+
 export default function TreatmentPricing({
   subTitle = "Best Price",
   title = <>Our Flexible Price</>,
@@ -50,6 +74,7 @@ export default function TreatmentPricing({
   packages = DEFAULT_PACKAGES,
   leftShapeSrc = "/images/shape/leaf/4a.png",
   images = [],
+  imageAlts = [],
   topContent,
   children,
 }: TreatmentPricingProps) {
@@ -61,7 +86,7 @@ export default function TreatmentPricing({
           {leftIsFloral ? (
             <span className="about-leaf-gold animation__arryUpDown" aria-hidden="true" />
           ) : (
-            <img loading="lazy" decoding="async" className="animation__arryUpDown" src={leftShapeSrc} alt="image" />
+            <img loading="lazy" decoding="async" className="animation__arryUpDown" src={leftShapeSrc} alt="" />
           )}
         </div>
         <div className="shape2">
@@ -70,7 +95,7 @@ export default function TreatmentPricing({
             decoding="async"
             className="animation__arryLeftRight"
             src="/images/shape/pricing-three-shape-right.png"
-            alt="image"
+            alt=""
           />
         </div>
         <div className="container">
@@ -102,14 +127,14 @@ export default function TreatmentPricing({
                   {!isOdd && (
                     <div className="col-lg-8 col-xl-9 image-column">
                       <div className="image-box">
-                        <img loading="lazy" decoding="async" src={image} alt="image" />
+                        <CardPhoto src={image} alt={imageAlts[a] ?? ""} />
                       </div>
                     </div>
                   )}
                   <div className={`col-lg-4 col-xl-3 pricing-block ${isOdd ? "order-2 order-lg-1" : ""}`}>
                     <div className="inner-box">
                       <div className="shape">
-                        <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="image" />
+                        <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="" />
                       </div>
                       {e.was ? (
                         <p className="package-was">
@@ -146,7 +171,7 @@ export default function TreatmentPricing({
                   {isOdd && (
                     <div className="col-lg-8 col-xl-9 image-column order-1 order-lg-2">
                       <div className="image-box">
-                        <img loading="lazy" decoding="async" src={image} alt="image" />
+                        <CardPhoto src={image} alt={imageAlts[a] ?? ""} />
                       </div>
                     </div>
                   )}

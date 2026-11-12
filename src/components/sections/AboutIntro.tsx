@@ -34,7 +34,7 @@ export type AboutIntroProps = {
   feature2Text?: ReactNode;
   primaryImage?: string;
   secondaryImage?: string;
-  /** What the photos show, for screen readers and search (default: "Spa treatment" / "Spa treatment detail"). */
+  /** What the photos show, for screen readers and search (no default: a photo without one is skipped by screen readers). */
   primaryAlt?: string;
   secondaryAlt?: string;
   showBrandCard?: boolean;
@@ -59,8 +59,8 @@ export default function AboutIntro({
   feature2Text = "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas.",
   primaryImage = "/images/about/about-two-image.png",
   secondaryImage = "/images/about/about-two-image2.png",
-  primaryAlt = "Spa treatment",
-  secondaryAlt = "Spa treatment detail",
+  primaryAlt = "",
+  secondaryAlt = "",
   showBrandCard = false,
   removeBottomPadding = false,
   leftShapeSrc,

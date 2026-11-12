@@ -40,6 +40,11 @@
 :root.gold-b .lh {
   --theme-color1: #b88c35;
   --theme-color1-rgb: 184, 140, 53;
+  /* The gold for small text: #b88c35 on white is 3.1:1, under the 4.5:1 that
+     text below ~19px bold needs (PageSpeed accessibility, 10 Nov). This
+     deeper gold is 5.0:1 on white and 4.5:1 on the cream. Large gold text,
+     prices and buttons keep --theme-color1. */
+  --gold-text: #8a6a24;
 }
 
 /* 2. Inline SVG icons with the old gold as an attribute (package and

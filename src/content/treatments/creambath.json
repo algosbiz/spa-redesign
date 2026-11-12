@@ -56,7 +56,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/creambath/creambath-2.webp",
+        "primaryAlt": "Therapist working cream into a guest's scalp during a creambath",
         "secondaryImage": "/images/services/creambath/creambath-3.webp",
+        "secondaryAlt": "Hair cream being smoothed through long dark hair",
         "subTitle": "",
         "title": "What Is a Cream Bath?",
         "text": "A cream bath is a popular Indonesian hair and scalp treatment that combines nourishing hair cream with a gentle scalp massage. Unlike a regular hair mask, it cares for the scalp as well as the hair, leaving it softer and better conditioned. It's a relaxing way to care for your hair after sun, swimming or frequent styling.",
@@ -81,6 +83,12 @@
               "/images/services/creambath/creambath-5.webp",
               "/images/services/creambath/creambath-11.webp",
               "/images/services/creambath/creambath-12.webp"
+            ],
+            "imageAlts": [
+              "Fingertips massaging cream into the scalp",
+              "Therapist combing cream through a guest's hair with her fingers",
+              "Creambath cream being worked through a guest's hair",
+              "Woman with long dark hair walking on a Bali beach"
             ],
             "subTitle": "",
             "title": "Cream Bath Packages in Seminyak",
@@ -238,6 +246,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/creambath/creambath-8.webp",
+        "imageAlt": "Hands massaging cream along the parting of a guest's hair",
         "subTitle": "",
         "title": "Choose Your Cream Bath Formula",
         "text": "Each cream uses different ingredients. Depending on your hair, you may prefer:",
@@ -272,6 +281,7 @@
           }
         },
         "image": "/images/services/creambath/creambath-9.webp",
+        "imageAlt": "Therapist massaging a guest's scalp during a creambath",
         "subTitle": "",
         "title": "How a Cream Bath Cares for Your Hair",
         "text": "A cream bath helps hair that sun, salt water, swimming or styling has dried out. Benefits may include:",
@@ -296,6 +306,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/creambath/creambath-10.webp",
+        "imageAlt": "Therapist rinsing the cream out of a guest's hair",
         "subTitle": "",
         "title": "Inside a Cream Bath Session",
         "text": "Your therapist checks your hair and scalp and helps you choose a cream, then applies it from roots to ends. A slow scalp massage works it in and eases tension, and a rinse and finish leave your hair soft and easy to manage.",
@@ -327,6 +338,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/creambath/creambath-11.webp",
+            "imageAlt": "Creambath cream being worked through a guest's hair",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Cream Bath in Seminyak",

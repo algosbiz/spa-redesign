@@ -55,7 +55,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/thaimassage/thaimassage-2.webp",
+        "primaryAlt": "Therapist lifting a guest's leg into a Thai massage stretch",
         "secondaryImage": "/images/services/thaimassage/thaimassage-3.webp",
+        "secondaryAlt": "Assisted leg stretch in loose clothing",
         "subTitle": "",
         "title": "What Is Thai Massage?",
         "text": "Thai massage is a traditional oil-free massage that combines rhythmic pressure with assisted stretching to ease stiffness and help you move more freely. Instead of long strokes with oil, your therapist works with pressure points and guided stretches while you stay in comfortable clothes.",
@@ -80,6 +82,12 @@
               "/images/services/thaimassage/thaimassage-5.webp",
               "/images/services/thaimassage/thaimassage-6.webp",
               "/images/services/thaimassage/thaimassage-7.webp"
+            ],
+            "imageAlts": [
+              "Thai massage back bend, the therapist holding the guest's arms",
+              "Seated twist with the therapist supporting the guest's arm",
+              "Therapist guiding a seated guest into a forward stretch",
+              "Therapist bending a guest's knee towards the chest"
             ],
             "subTitle": "",
             "title": "Thai Massage Packages in Seminyak",
@@ -209,6 +217,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/thaimassage/thaimassage-8.webp",
+        "imageAlt": "Seated Thai massage twist",
         "subTitle": "",
         "title": "Stretching and Pressure, No Oil",
         "text": "Thai massage is a more active treatment than a relaxation massage. Guests often choose it for reasons such as:",
@@ -243,6 +252,7 @@
           }
         },
         "image": "/images/services/thaimassage/thaimassage-9.webp",
+        "imageAlt": "Therapist stretching a guest's hip and leg",
         "subTitle": "",
         "title": "A Full-Body Treatment",
         "text": "A Thai massage covers the whole body, and your therapist can spend more time on the areas that need it. Common focus areas are:",
@@ -266,6 +276,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/thaimassage/thaimassage-10.webp",
+        "imageAlt": "Seated stretch with the guest's arms behind her head",
         "subTitle": "",
         "title": "How Thai Massage Works",
         "text": "Your therapist works through the body at a steady pace, adjusting pressure and stretches to what feels comfortable. A session may include:",
@@ -297,6 +308,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/thaimassage/thaimassage-11.webp",
+            "imageAlt": "Thai massage leg stretch by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Thai Massage in Seminyak",

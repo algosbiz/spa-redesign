@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/footmassage/footmassage-2.webp",
+        "primaryAlt": "Therapist giving a foot massage",
         "secondaryImage": "/images/services/footmassage/footmassage-3.webp",
+        "secondaryAlt": "Thumbs pressing into the sole of a foot",
         "subTitle": "",
         "title": "What Is a Foot Massage?",
         "text": "A foot massage works the muscles and soft tissues of the feet and lower legs with warm oil and some pressure techniques borrowed from reflexology. It eases the tension that builds up from walking, standing and travelling, which makes it a popular choice after a long day exploring Bali.",
@@ -76,6 +78,11 @@
               "/images/services/footmassage/footmassage-4.webp",
               "/images/services/footmassage/footmassage-5.webp",
               "/images/services/footmassage/footmassage-6.webp"
+            ],
+            "imageAlts": [
+              "Therapist massaging a guest's foot and ankle",
+              "Hands kneading the heel and arch of a foot",
+              "Foot massage on the arch, the guest's legs under a towel"
             ],
             "subTitle": "",
             "title": "Choose the Right Duration",
@@ -153,6 +160,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/footmassage/footmassage-7.webp",
+        "imageAlt": "Therapist massaging a guest's lower leg and foot",
         "subTitle": "",
         "title": "When a Foot Massage Helps Most",
         "text": "A foot massage is most welcome after a long day of walking, standing or travelling. Guests often book one for:",
@@ -187,6 +195,7 @@
           }
         },
         "image": "/images/services/footmassage/footmassage-8.webp",
+        "imageAlt": "Oil being poured into a therapist's hand for a foot massage",
         "subTitle": "",
         "title": "Areas We Focus On",
         "text": "The massage covers the parts of the feet and lower legs that tire most during the day:",
@@ -211,6 +220,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footmassage/footmassage-9.webp",
+        "imageAlt": "Therapist working on both of a guest's feet",
         "subTitle": "",
         "title": "How Our Foot Massage Is Performed",
         "text": "Our foot massage uses a combination of gentle techniques to work through tension in the feet and lower legs. Warm natural oils help create smooth, comfortable movements, while focused pressure is applied to areas that may feel particularly tired after walking or standing. The treatment can be tailored to your comfort, with techniques such as:",
@@ -242,6 +252,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/footmassage/footmassage-10.webp",
+            "imageAlt": "Foot massage by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Foot Massage in Seminyak",

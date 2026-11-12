@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/earcandle/earcandle-2.webp",
+        "primaryAlt": "Therapist holding an ear candle at a guest's ear",
         "secondaryImage": "/images/services/earcandle/earcandle-3.webp",
+        "secondaryAlt": "Lit ear candle resting at a guest's outer ear",
         "subTitle": "",
         "title": "What Is an Ear Candle Treatment?",
         "text": "An ear candle treatment, also called ear candling, is a traditional relaxation treatment. A hollow candle is held at the outer ear, and its gentle warmth is calming. It comes with light massage around the ears, temples, jaw and neck, and guests often choose it after a long flight or a busy day of travelling.",
@@ -74,6 +76,9 @@
             "leftShapeSrc": "/images/shape/package-four-shape-left.png",
             "images": [
               "/images/services/earcandle/earcandle-4.webp"
+            ],
+            "imageAlts": [
+              "Guest lying on her side during an ear candle treatment"
             ],
             "subTitle": "",
             "title": "Ear Candle Session & Price",
@@ -133,6 +138,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/earcandle/earcandle-5.webp",
+        "imageAlt": "Therapist steadying an ear candle as the guest rests",
         "subTitle": "",
         "title": "When Guests Choose an Ear Candle",
         "text": "Guests usually book an ear candle to unwind after travelling, or to add a short, quiet treatment to a massage. Common reasons:",
@@ -167,6 +173,7 @@
           }
         },
         "image": "/images/services/earcandle/earcandle-6.webp",
+        "imageAlt": "Close-up of a lit hollow ear candle at the ear",
         "subTitle": "",
         "title": "What an Ear Candle Session Covers",
         "text": "The session covers the outer ear and the areas around it:",
@@ -190,6 +197,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/earcandle/earcandle-7.webp",
+        "imageAlt": "Therapist massaging a guest's face after ear candling",
         "subTitle": "",
         "title": "How an Ear Candle Session Works",
         "text": "First, your therapist makes sure you are comfortable, then places the hollow candle at the outer ear and lights the far end. They watch the flame for the whole session, and the treatment includes light massage around the ears, temples, jaw and neck. The steps:",
@@ -220,6 +228,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/earcandle/earcandle-8.webp",
+            "imageAlt": "Ear candle burning gently while a guest relaxes",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Ear Candle Treatments in Seminyak",

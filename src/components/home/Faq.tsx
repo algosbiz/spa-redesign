@@ -35,7 +35,7 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
           <div className={`${S} row g-4`}>
             <div className={`${S} col-xxl-6 image-column`}>
               <div className={`${S} inner-column gsap__parallax`}>
-                <img loading="lazy" decoding="async" src={faq.image} alt="Spa facial treatment" className={S} />
+                <img loading="lazy" decoding="async" src={faq.image} alt={faq.imageAlt} className={S} />
                 {/* A centred caption under a gold lotus, as on the other FAQ photos (owner, 22 Oct). */}
                 <h2 className={`${S} title`}>
                   <LotusIcon className="faq-photo__lotus" width={28} height={29} />

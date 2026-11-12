@@ -13,6 +13,8 @@ export type AboutSplitAltProps = {
   buttonText?: ReactNode;
   buttonLink?: string;
   image?: string;
+  /** What the photo shows (alt text). */
+  imageAlt?: string;
   badgeTopText?: string | null;
   badgeBottomText?: ReactNode;
   /** false: no badge on the photo (a decorative one removed in the copy rewrite, 15 Oct). */
@@ -46,6 +48,7 @@ export default function AboutSplitAlt({
   buttonText,
   buttonLink = "/seminyak",
   image = "/images/about/about-image.png",
+  imageAlt = "",
   badgeTopText,
   badgeBottomText = "Experience",
   showBadge = true,
@@ -108,7 +111,7 @@ export default function AboutSplitAlt({
               >
                 {/* No notch for the badge: it floats on the photo as a card (splitModern.tsx). */}
                 <div className="image-box image-box--plain">
-                  <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
+                  <img loading="lazy" decoding="async" src={image} alt={imageAlt} />
                 </div>
                 {showBadge && <SplitBadge top={badgeTopText} bottom={badgeBottomText} />}
               </div>

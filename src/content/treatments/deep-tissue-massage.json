@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/deeptissuemassage/deeptissuemassage-2.webp",
+        "primaryAlt": "Therapist leaning in with her forearm during a deep tissue massage",
         "secondaryImage": "/images/services/deeptissuemassage/deeptissuemassage-3.webp",
+        "secondaryAlt": "Forearm pressing slowly into a guest's upper back",
         "subTitle": "",
         "title": "What Is Deep Tissue Massage?",
         "text": "Deep tissue massage uses slow, firm pressure to work into the deeper layers of muscle. Unlike a gentler relaxing massage, it is meant for areas that feel stiff from exercise, repetitive movement, posture or long hours sitting. The controlled pressure eases tension and leaves you feeling looser.",
@@ -76,6 +78,11 @@
               "/images/services/deeptissuemassage/deeptissuemassage-4.webp",
               "/images/services/deeptissuemassage/deeptissuemassage-5.webp",
               "/images/services/deeptissuemassage/deeptissuemassage-11.webp"
+            ],
+            "imageAlts": [
+              "Knuckles working into a tight spot on a guest's back",
+              "Therapist's forearm gliding along a guest's back",
+              "Long, slow forearm stroke along the back"
             ],
             "subTitle": "",
             "title": "Choose Your Duration",
@@ -153,6 +160,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/deeptissuemassage/deeptissuemassage-6.webp",
+        "imageAlt": "Therapist applying firm pressure to a guest's lower back",
         "subTitle": "",
         "title": "When Deep Tissue Massage Helps",
         "text": "Guests choose a deep tissue massage when a regular massage doesn't reach the tension that keeps coming back. It's popular with active travellers and office workers. Main reasons to book one:",
@@ -187,6 +195,7 @@
           }
         },
         "image": "/images/services/deeptissuemassage/deeptissuemassage-7.webp",
+        "imageAlt": "Thumbs pressing deep either side of the lower spine",
         "subTitle": "",
         "title": "Areas We Focus On",
         "text": "We usually focus on areas strained by posture, repetitive movement or exercise, such as:",
@@ -211,6 +220,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/deeptissuemassage/deeptissuemassage-8.webp",
+        "imageAlt": "Therapist using her elbow on a guest's shoulder blade",
         "subTitle": "",
         "title": "How Deep Tissue Massage Works",
         "text": "Your therapist combines several hands-on techniques on areas of tension and stiffness, choosing the technique and pressure for each area. Common techniques include:",
@@ -241,6 +251,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/deeptissuemassage/deeptissuemassage-9.webp",
+            "imageAlt": "Thumbs working deep into the muscles of the upper back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Deep Tissue Massage in Seminyak",

@@ -49,10 +49,10 @@ export default function Testimonials() {
   return el(
     <section className="testimonial-section-two pt-130 pb-130">
       <div className="shape1">
-        <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/testimonial-two-shape-left.png" alt="image" />
+        <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/testimonial-two-shape-left.png" alt="" />
       </div>
       <div className="shape2">
-        <img loading="lazy" decoding="async" className="animation__arryLeftRight" src="/images/shape/testimonial-two-shape-right.png" alt="image" />
+        <img loading="lazy" decoding="async" className="animation__arryLeftRight" src="/images/shape/testimonial-two-shape-right.png" alt="" />
       </div>
       <div className="shape3">
         {/* The file's own size, so PageSpeed sees a sized image; live.css

@@ -56,7 +56,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/nailart/nailart-2.webp",
+        "primaryAlt": "Nail therapist painting a guest's nails",
         "secondaryImage": "/images/services/nailart/nailart-3.webp",
+        "secondaryAlt": "Fine brush adding nail art",
         "subTitle": "",
         "title": "What Is Gel Nail Art?",
         "text": "Gel nail art is a design painted on your nails with gel polish, cured under UV or LED light so it lasts longer than regular polish, typically two to three weeks. Bring a photo of the look you want and our nail artists will adapt it to your nails, colours and occasion.",
@@ -80,6 +82,11 @@
               "/images/services/nailart/nailart-4.webp",
               "/images/services/manicurepedicure/manicurepedicure-6.webp",
               "/images/services/nailart/nailart-6.webp"
+            ],
+            "imageAlts": [
+              "Nail art being painted with a fine brush",
+              "Pedicure: cuticles being tidied on the toes",
+              "Floral nail art being painted on a fingernail"
             ],
             "subTitle": "",
             "title": "Choose the Finish You Prefer",
@@ -157,6 +164,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/nailart/nailart-7.webp",
+        "imageAlt": "Hands with glossy red nail polish",
         "subTitle": "",
         "title": "Colour That Stays Neat for Longer",
         "text": "Gel nail art adds colour and personality to your nails and keeps them neat for longer, from simple everyday designs to more creative looks for holidays or special events. People often choose gel nails for reasons such as:",
@@ -191,6 +199,7 @@
           }
         },
         "image": "/images/services/nailart/nailart-8.webp",
+        "imageAlt": "Nail therapist showing a guest a chart of polish colours",
         "subTitle": "",
         "title": "Find a Nail Art Style That Suits You",
         "text": "Your nail design can be simple, elegant, playful, or more detailed depending on the look you have in mind. We can work from your inspiration and adapt the design to suit your natural nails, preferred colours, and occasion. Some popular styles are:",
@@ -214,6 +223,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/nailart/nailart-9.webp",
+        "imageAlt": "Lilac nail polish with white tips",
         "subTitle": "",
         "title": "How Gel Nail Art Is Applied",
         "text": "Your nails are prepared first, then the colour and design are added and each layer is cured for a smooth, polished finish. The process typically involves:",
@@ -245,6 +255,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/nailart/nailart-10.webp",
+            "imageAlt": "Nail art being added with a fine tool",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Gel Nails & Nail Art in Seminyak",
