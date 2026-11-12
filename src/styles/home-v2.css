@@ -40,11 +40,11 @@
   padding-bottom: 160px;
   background: var(--theme-color-gray);
 }
-/* The couples-massage photo (owner, 8 Oct): bare wall on the left, the
-   four people in the right two thirds. From 1200px it fills the right of
-   the hero at full height, the crop at 65% across so the right-hand
-   therapist's face stays whole; on wide screens all four faces clear the
-   cream fade, on laptops (1440px and down) the man's sits in it. The fade
+/* The couples-massage photo (owner, 3 Nov: 1920x1050): bare wall on the
+   left, the four people in the right two thirds. From 1200px it fills the
+   right 62% of the hero at full height, the crop at 66% across, so the man
+   and the woman client stay whole on laptops (the right-hand therapist is
+   cut at the edge there); wide screens get all four faces below. The fade
    stops at 28% (the text never reaches past 19% of the photo) and starts
    2px left of the photo, so the photo's anti-aliased left edge never shows
    as a line. */
@@ -54,7 +54,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 58%;
+    width: 62%;
     z-index: -1;
   }
 }
@@ -63,7 +63,35 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 65% 50%;
+  object-position: 66% 50%;
+}
+/* On wide screens (1700px and up) the photo is shown a little smaller than the
+   hero is tall, from the right (its right 63%: both therapists' faces and the
+   two clients), so the man's face clears the text. Above it the wall colour
+   continues and the photo fades into it (owner, 3 Nov: all four faces). On
+   laptops the hero is relatively taller, so this would leave a big empty wall
+   above the photo; they keep the full-height crop above. */
+@media (min-width: 1700px) {
+  .home-v2 .v2-hero .v2-hero__photo {
+    width: 56%;
+    overflow: hidden;
+  }
+  .home-v2 .v2-hero .v2-hero__photo::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 4px;
+    background: linear-gradient(90deg, #5e4a33 0%, #5c472f 55%, #4a381f 100%);
+  }
+  .home-v2 .v2-hero .v2-hero__photo img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    aspect-ratio: 1.15;
+    object-position: 100% 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 16%);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 16%);
+  }
 }
 .home-v2 .v2-hero .v2-hero__photo::after {
   content: "";
@@ -312,7 +340,7 @@
     position: absolute;
     inset: 0;
     display: block;
-    background: url(/images/home/homepage-banner-1200.webp) center / 100% 100% no-repeat;
+    background: url(/images/home/homepage-banner-v2-1200.webp) center / 100% 100% no-repeat;
     filter: blur(22px) saturate(1.1) brightness(1.08);
     transform: scale(1.12);
   }

@@ -39,12 +39,12 @@ export default function Hero() {
           other banners' glass look (24 Oct; home-v2.css). */}
       <div className="v2-hero__glass" aria-hidden="true" />
       <div className="v2-hero__photo">
-        {/* The owner's banner photo, 8 Oct: two Spa Bali Moon therapists giving
+        {/* The owner's banner photo, 3 Nov: two Spa Bali Moon therapists giving
             a couple back massages, bare wall on the left (owner's file
-            Homepage New Test bigger.jpg, 1920x850, WebP q80). */}
+            homepage-1.webp, 1920x1050, WebP q80). */}
         <img
-          src="/images/home/homepage-banner.webp"
-          srcSet="/images/home/homepage-banner-1200.webp 1200w, /images/home/homepage-banner.webp 1920w"
+          src="/images/home/homepage-banner-v2.webp"
+          srcSet="/images/home/homepage-banner-v2-1200.webp 1200w, /images/home/homepage-banner-v2.webp 1920w"
           sizes={PHOTO_SIZES}
           alt="A couple enjoying side-by-side back massages at Spa Bali Moon"
           fetchPriority="high"
