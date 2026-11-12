@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/treatments/cupping-therapy/cuppingtherapy-2.webp",
+        "primaryAlt": "Therapist placing cups along a guest's back",
         "secondaryImage": "/images/treatments/cupping-therapy/cuppingtherapy-3.webp",
+        "secondaryAlt": "Therapist setting clear cups on a guest's upper back",
         "subTitle": "",
         "title": "What Is Cupping Therapy?",
         "text": "Cupping is a traditional technique in which cups are placed on the skin to create suction. At Spa Bali Moon your therapist places solid cups on your back and shoulders and draws the air out with a small hand pump, so there is no flame or heat. The suction lifts the skin and the muscle beneath it, a deep, pulling feeling that many guests find relaxing. For wet cupping, your therapist makes a few tiny pricks in the skin with a sterile, single-use lancet, then the same cups draw out a little blood.",
@@ -76,6 +78,11 @@
               "/images/treatments/cupping-therapy/cuppingtherapy-4.webp",
               "/images/treatments/cupping-therapy/cuppingtherapy-5.webp",
               "/images/treatments/cupping-therapy/cuppingtherapy-6.webp"
+            ],
+            "imageAlts": [
+              "Guest lying face down with cups along her back",
+              "Clear cups in a row on a guest's back",
+              "Therapist placing cups along a guest's spine"
             ],
             "subTitle": "",
             "title": "Session & Pricing",
@@ -154,6 +161,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/treatments/cupping-therapy/cuppingtherapy-7.webp",
+        "imageAlt": "Hands lifting a cup from a guest's back",
         "subTitle": "",
         "title": "What to Expect",
         "text": "Cupping feels quite different from a massage. What to expect during and after your session:",
@@ -186,6 +194,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/treatments/cupping-therapy/cuppingtherapy-8.webp",
+            "imageAlt": "Therapist placing cups on a guest's shoulders",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Cupping Therapy in Seminyak",

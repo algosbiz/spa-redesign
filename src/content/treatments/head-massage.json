@@ -51,7 +51,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/headmassage/headmassage-2.webp",
+        "primaryAlt": "Therapist giving a head massage as the guest lies on her back",
         "secondaryImage": "/images/services/headmassage/headmassage-3.webp",
+        "secondaryAlt": "Fingertips massaging a guest's temples",
         "subTitle": "",
         "title": "What Is a Head Massage?",
         "text": "A head massage is a wellness treatment that focuses on the scalp, temples, neck, and upper shoulders using slow, rhythmic massage techniques. While commonly chosen for relaxation, it also helps ease muscle tightness around the head and neck caused by prolonged sitting, screen time, travelling, or everyday stress.",
@@ -76,6 +78,12 @@
               "/images/services/headmassage/headmassage-5.webp",
               "/images/services/headmassage/headmassage-6.webp",
               "/images/services/headmassage/headmassage-12.webp"
+            ],
+            "imageAlts": [
+              "Therapist cradling a guest's head during a head massage",
+              "Therapist massaging a guest's scalp as she lies on her back",
+              "Fingertips massaging a guest's forehead and temples",
+              "Relaxed woman with her eyes closed, face turned to the sun"
             ],
             "subTitle": "",
             "title": "Head Massage Sessions & Prices",
@@ -162,6 +170,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/headmassage/headmassage-7.webp",
+        "imageAlt": "Therapist massaging the back of a guest's neck",
         "subTitle": "",
         "title": "How a Head Massage Helps",
         "text": "A head massage is a good choice after a demanding day, a long flight or hours at a screen. Guests book it for:",
@@ -196,6 +205,7 @@
           }
         },
         "image": "/images/services/headmassage/headmassage-8.webp",
+        "imageAlt": "Thumbs pressing gently between a guest's eyebrows",
         "subTitle": "",
         "title": "Areas We Focus On",
         "text": "A head massage covers more than the scalp. The therapist also works on nearby areas that can become tense during long workdays, travel, or daily activities. Depending on your needs, particular attention may be given to:",
@@ -220,6 +230,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/headmassage/headmassage-9.webp",
+        "imageAlt": "Therapist holding a guest's head during a head massage",
         "subTitle": "",
         "title": "What to Expect During a Head Massage Session",
         "text": "A head massage follows a gentle progression from the scalp to the surrounding areas, with the pressure adjusted throughout to keep you comfortable. A typical session:",
@@ -251,6 +262,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/headmassage/headmassage-10.webp",
+            "imageAlt": "Fingers working through a guest's hair to massage the scalp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Head Massage in Seminyak",

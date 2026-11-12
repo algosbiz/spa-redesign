@@ -26,6 +26,7 @@ export default function FaqSection({
   items,
   showImage = true,
   image = "/images/faq/faq-image.jpg",
+  imageAlt = "",
   columns = 1,
   largeTopPadding = false,
   removeTopPadding = false,
@@ -40,6 +41,8 @@ export default function FaqSection({
   items: FaqItem[];
   showImage?: boolean;
   image?: string;
+  /** What the photo shows (alt text). */
+  imageAlt?: string;
   columns?: 1 | 2;
   largeTopPadding?: boolean;
   removeTopPadding?: boolean;
@@ -68,7 +71,7 @@ export default function FaqSection({
           {showImage && (
             <div className={`${S} col-xxl-6 image-column`}>
               <div className={`${S} inner-column gsap__parallax`}>
-                <img loading="lazy" decoding="async" src={image} alt="Spa facial treatment" className={S} />
+                <img loading="lazy" decoding="async" src={image} alt={imageAlt} className={S} />
                 {/* Empty words on the photo are left out (treatment pages, 15 Oct).
                     The words are a centred caption under a gold lotus (owner, 22 Oct). */}
                 {imageTitle === "" ? null : imageTitleAsHeading ? (

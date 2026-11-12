@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         style={{ backgroundColor: "#fcfaf6", position: "relative", overflow: "hidden", zIndex: 1 }}
       >
         <div className="shape1" style={{ position: "absolute", left: 0, top: "10%", zIndex: -1 }}>
-          <img loading="lazy" decoding="async" src="/images/shape/about-left-shape.png" alt="shape" />
+          <img loading="lazy" decoding="async" src="/images/shape/about-left-shape.png" alt="" />
         </div>
         <div className="shape2" style={{ position: "absolute", right: 0, bottom: "15%", zIndex: -1 }}>
           <img
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
             decoding="async"
             className="sway_Y__animation"
             src="/images/shape/about-right-shape.png"
-            alt="shape"
+            alt=""
           />
         </div>
         <div className="container">

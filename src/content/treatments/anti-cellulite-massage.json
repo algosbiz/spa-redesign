@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/cellulitemassage/cellulitemassage-2.webp",
+        "primaryAlt": "Therapist working a wooden roller over a guest's thigh during a cellulite massage",
         "secondaryImage": "/images/services/cellulitemassage/cellulitemassage-3.webp",
+        "secondaryAlt": "Therapist pressing a wooden cup tool against a guest's thigh",
         "subTitle": "",
         "title": "What Is Cellulite Massage?",
         "text": "Cellulite massage is a firm, targeted body massage that can temporarily improve the look of uneven skin texture associated with cellulite. Your therapist works on the areas where cellulite often shows, such as the thighs, hips, buttocks and abdomen, and adjusts the intensity to your comfort.",
@@ -76,6 +78,11 @@
               "/images/services/cellulitemassage/cellulitemassage-4.webp",
               "/images/services/cellulitemassage/cellulitemassage-5.webp",
               "/images/services/cellulitemassage/cellulitemassage-11.webp"
+            ],
+            "imageAlts": [
+              "Wooden cup tool gliding over an oiled thigh",
+              "Wooden roller on the back of a guest's leg",
+              "Therapist's hand sweeping up an oiled leg"
             ],
             "subTitle": "",
             "title": "Treatment Duration & Pricing",
@@ -153,6 +160,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/cellulitemassage/cellulitemassage-6.webp",
+        "imageAlt": "Therapist massaging the backs of a guest's legs",
         "subTitle": "",
         "title": "What Causes Cellulite",
         "text": "Cellulite develops when fat deposits beneath the skin push against connective tissue, creating the uneven or dimpled appearance many people notice on the thighs, hips, or buttocks. Common factors linked to it:",
@@ -186,6 +194,7 @@
           }
         },
         "image": "/images/services/cellulitemassage/cellulitemassage-7.webp",
+        "imageAlt": "Wooden massage tools for a cellulite massage laid out on a table",
         "subTitle": "",
         "title": "What Cellulite Massage Can Do",
         "text": "Cellulite massage uses focused pressure and rhythmic movements on the areas where cellulite usually shows. Why guests choose it:",
@@ -210,6 +219,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/cellulitemassage/cellulitemassage-8.webp",
+        "imageAlt": "Therapist kneading a guest's calf and thigh",
         "subTitle": "",
         "title": "How the Treatment Works",
         "text": "Your therapist works on the areas you choose, at an intensity that stays comfortable. Each session includes:",
@@ -240,6 +250,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/cellulitemassage/cellulitemassage-9.webp",
+            "imageAlt": "Hands massaging a guest's upper back by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Cellulite Massage in Seminyak",

@@ -51,7 +51,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/shiatsumassage/shiatsumassage-2.webp",
+        "primaryAlt": "Therapist giving a shiatsu massage through the guest's clothes",
         "secondaryImage": "/images/services/shiatsumassage/shiatsumassage-3.webp",
+        "secondaryAlt": "Palms pressing down on the back during shiatsu",
         "subTitle": "",
         "title": "What Is Shiatsu Massage?",
         "text": "Shiatsu is a traditional Japanese massage that uses finger, thumb and palm pressure on specific points across the body, with gentle stretching and no oil. Instead of long oil strokes, your therapist works point by point to ease muscle tension and stiffness.",
@@ -75,6 +77,11 @@
               "/images/services/shiatsumassage/shiatsumassage-4.webp",
               "/images/services/shiatsumassage/shiatsumassage-5.webp",
               "/images/services/shiatsumassage/shiatsumassage-6.webp"
+            ],
+            "imageAlts": [
+              "Shiatsu pressure on the lower back of a clothed guest",
+              "Therapist pressing a seated guest's shoulders",
+              "Hands pressing points on the upper back during shiatsu"
             ],
             "subTitle": "",
             "title": "Shiatsu Massage Sessions & Prices",
@@ -152,6 +159,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/shiatsumassage/shiatsumassage-7.webp",
+        "imageAlt": "Therapist kneeling to give shiatsu pressure on a guest's back",
         "subTitle": "",
         "title": "Pressure Instead of Oil Strokes",
         "text": "Guests often choose shiatsu when they want focused pressure without oil, for reasons such as:",
@@ -186,6 +194,7 @@
           }
         },
         "image": "/images/services/shiatsumassage/shiatsumassage-8.webp",
+        "imageAlt": "Thumbs pressing points on a guest's shoulder blade",
         "subTitle": "",
         "title": "Areas We Focus On",
         "text": "Your therapist can focus on where you feel tension or tiredness, giving particular attention to areas such as:",
@@ -210,6 +219,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/shiatsumassage/shiatsumassage-9.webp",
+        "imageAlt": "Therapist working on a seated guest's shoulders",
         "subTitle": "",
         "title": "How Our Shiatsu Massage Works",
         "text": "Your therapist works through the body at a steady pace and adjusts the pressure to keep it comfortable. A session may include techniques such as:",
@@ -241,6 +251,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/shiatsumassage/shiatsumassage-10.webp",
+            "imageAlt": "Hands pressing the top of a guest's shoulder",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Shiatsu Massage in Seminyak",

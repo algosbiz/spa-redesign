@@ -106,7 +106,9 @@ export default function AboutPage() {
         feature2Title="In-Spa & Home Service"
         feature2Text="The same treatments and prices at our spa or at your villa, plus a home service fee."
         primaryImage="/images/services/dayspaseminyak/dayspa-2.webp"
+        primaryAlt="Therapist giving a back massage at our day spa in Seminyak"
         secondaryImage="/images/services/dayspaseminyak/dayspa-3.webp"
+        secondaryAlt="Therapist massaging the back of a guest's legs on a batik sheet"
       />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/3a.png"
@@ -129,6 +131,7 @@ export default function AboutPage() {
         buttonText="Book Now"
         buttonLink={whatsappChatUrl}
         image="/images/services/dayspaseminyak/dayspa-4.webp"
+        imageAlt="Hands massaging a guest's shoulders and upper back"
       />
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/13a.png"
@@ -153,6 +156,7 @@ export default function AboutPage() {
         buttonText="View Treatments"
         buttonLink="/seminyak/"
         image="/images/services/dayspaseminyak/dayspa-5.webp"
+        imageAlt="Therapist massaging a guest's arm"
       />
       <AboutSplit
         leftShapeSrc={null}
@@ -167,6 +171,7 @@ export default function AboutPage() {
         buttonText="Book Now"
         buttonLink={whatsappChatUrl}
         image="/images/services/dayspaseminyak/dayspa-6.webp"
+        imageAlt="Hands massaging a guest's shoulder as she relaxes"
       />
       <VisitUs
         rightShapeSrc={null}
@@ -185,6 +190,7 @@ export default function AboutPage() {
           title={<>Before You Visit Our Seminyak Spa</>}
           items={FAQ}
           image="/images/services/dayspaseminyak/dayspa-7.webp"
+          imageAlt="Close-up of a leg massage with oil"
         />
       </div>
       <ReserveCta

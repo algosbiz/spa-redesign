@@ -59,7 +59,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/lymphaticmassage/lymphaticmassage-2.webp",
+        "primaryAlt": "Therapist giving a lymphatic drainage massage on a guest's abdomen",
         "secondaryImage": "/images/services/lymphaticmassage/lymphaticmassage-3.webp",
+        "secondaryAlt": "Light, flat-handed strokes on a guest's abdomen",
         "subTitle": "",
         "title": "Manual Lymphatic Drainage and Wood Therapy",
         "text": {
@@ -101,7 +103,12 @@
             "images": [
               "/images/services/lymphaticmassage/lymphaticmassage-4.webp",
               "/images/services/lymphaticmassage/lymphaticmassage-5.webp",
-              "/images/services/lymphaticmassage/lymphaticmassage-6.webp"
+              "/images/services/lymphaticmassage/lymphatic-massage-lower-back.webp"
+            ],
+            "imageAlts": [
+              "Gentle lymphatic massage strokes across the abdomen",
+              "Hands sweeping lightly over a guest's stomach",
+              "Therapist's hands on a guest's lower back during a lymphatic massage"
             ],
             "subTitle": "",
             "title": "Session Lengths and Prices",
@@ -185,8 +192,8 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "subTitle": "",
-        "image": "/images/services/massagehotelvilla/massagehotelvilla-6.webp",
-        "imageAlt": "Therapist massaging a guest's leg",
+        "image": "/images/services/lymphaticmassage/lymphatic-wood-roller.webp",
+        "imageAlt": "Therapist rolling a wooden massage roller over a guest's thigh",
         "title": "After a Flight, a Hike or a Hot Day",
         "text": "Guests often book a lymphatic massage when their legs and ankles feel heavy or puffy: after a long flight, a hike or a day of walking, or a few hot, humid days. Many find their legs feel lighter afterwards, though the effect is temporary.",
         "featuresLeft": [
@@ -327,6 +334,7 @@
         "subTitle": "",
         "showBadge": false,
         "image": "/images/services/lymphaticmassage/lymphaticmassage-8.webp",
+        "imageAlt": "Light strokes along the waist during a lymphatic massage",
         "title": "How a Lymphatic Massage Session Runs",
         "text": "A session starts with a short chat about how you feel, any health conditions and the areas you'd like focused on; then your therapist works from the neck and collarbone down to the ankles, always stroking toward the nearest lymph nodes and mixing in the wooden rollers. A longer session adds time, not pressure. You stay covered with a towel or spa wear, and only the area being massaged is uncovered.",
         "featuresLeft": [
@@ -349,8 +357,8 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "subTitle": "",
-        "image": "/images/services/lymphaticmassage/lymphaticmassage-9.webp",
-        "imageAlt": "Therapist using a wooden massage tool",
+        "image": "/images/services/lymphaticmassage/lymphatic-wood-therapy-tools.webp",
+        "imageAlt": "The five wooden tools used in wood therapy on a massage bed: two rollers, a multi-point massager, a cup and a curved paddle",
         "title": "Wood Therapy",
         "text": "Wood therapy uses smooth wooden tools: two rollers, one with ridged wheels and one with square beads, a multi-point massager, a wooden cup and a curved paddle. Your therapist mixes it in with the hand strokes, working mostly with the rollers at a quicker pace, and many guests enjoy the change of rhythm. It costs nothing extra, and the tools come to your villa or hotel too.",
         "featuresLeft": [
@@ -383,6 +391,7 @@
         "subTitle": "",
         "showBadge": false,
         "image": "/images/services/lymphaticmassage/lymphaticmassage-7.webp",
+        "imageAlt": "Therapist massaging a guest's abdomen with light pressure",
         "title": "Before You Book",
         "text": "Lymphatic massage is gentle and suits most guests. If any of these apply to you, check with your doctor first and let us know when you book. Not sure? Message us on WhatsApp and we'll help.",
         "featuresLeft": [
@@ -436,6 +445,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/lymphaticmassage/lymphaticmassage-10.webp",
+            "imageAlt": "Palms resting lightly on a guest's lower back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Questions About Lymphatic Drainage Massage",

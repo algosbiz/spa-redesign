@@ -52,7 +52,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/warmcandlemassage/warmcandlemassage-2.webp",
+        "primaryAlt": "Warm candle oil being poured onto a guest's back",
         "secondaryImage": "/images/services/warmcandlemassage/warmcandlemassage-12.webp",
+        "secondaryAlt": "Therapist massaging melted candle oil into a guest's back",
         "subTitle": "",
         "title": "What Is a Warm Candle Massage?",
         "text": "A warm candle massage uses a massage candle instead of bottled oil. Ours are 100% natural: shea butter with coconut or soy wax, scented with aromas such as frangipani. The candle stays lit during your massage, and as its top melts your therapist drips the lukewarm wax onto your skin, where it turns into a rich oil and is massaged in with long, flowing strokes.",
@@ -76,6 +78,11 @@
               "/images/services/warmcandlemassage/warmcandlemassage-4.webp",
               "/images/services/warmcandlemassage/warmcandlemassage-5.webp",
               "/images/services/warmcandlemassage/warmcandlemassage-6.webp"
+            ],
+            "imageAlts": [
+              "Candle oil massaged into a guest's calf",
+              "Hands gliding over an oiled back",
+              "Long strokes over an oiled leg"
             ],
             "subTitle": "",
             "title": "Session Duration & Pricing",
@@ -153,6 +160,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/warmcandlemassage/warmcandlemassage-7.webp",
+        "imageAlt": "Hands sweeping over a guest's oiled back by candlelight",
         "subTitle": "",
         "title": "How a Warm Candle Massage Works",
         "text": "The candle is lit when your massage begins and stays lit while you relax. Your therapist drips the melted wax onto your skin and works it in. What to expect:",
@@ -187,6 +195,7 @@
           }
         },
         "image": "/images/services/warmcandlemassage/warmcandlemassage-13.webp",
+        "imageAlt": "Therapist massaging a guest's shoulders with candle oil",
         "subTitle": "",
         "title": "For Two, or With Four Hands",
         "text": "The warm candle massage also comes for couples, side by side in a private room, and as a four hand massage with two therapists at once:",
@@ -211,6 +220,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/warmcandlemassage/warmcandlemassage-15.webp",
+        "imageAlt": "Therapist giving a warm candle massage on a guest's upper back",
         "subTitle": "",
         "title": "What's in Our Massage Candles",
         "text": "Every candle is made from natural ingredients, chosen for how they feel on the skin. What goes into it:",
@@ -242,6 +252,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/warmcandlemassage/warmcandlemassage-14.webp",
+            "imageAlt": "Long strokes down a guest's oiled back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Warm Candle Massage in Seminyak",

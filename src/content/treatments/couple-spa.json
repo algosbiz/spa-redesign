@@ -67,7 +67,9 @@
         "leftShapeSrc": "/images/shape/about-two-left.png",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/couplemassage/couplemassage-2-warm.webp",
+        "primaryAlt": "Two therapists giving a couple massage side by side",
         "secondaryImage": "/images/services/couplemassage/couplemassage-3-warm.webp",
+        "secondaryAlt": "Couple massage, with a therapist working on each guest's back",
         "subTitle": "",
         "title": "What Is a Couples Massage?",
         "text": "A couples massage is two guests massaged side by side, each by their own therapist. It's popular with couples, but friends and family book it too, and each of you chooses your own pressure.",
@@ -92,6 +94,12 @@
               "/images/services/couplemassage/couplemassage-5-warm.webp",
               "/images/services/couplemassage/couplemassage-6-warm.webp",
               "/images/services/couplemassage/couplemassage-7-warm.webp"
+            ],
+            "imageAlts": [
+              "Couple lying side by side while two therapists massage their backs",
+              "Two therapists massaging a couple's backs at the same time",
+              "Two guests receiving back massages on neighbouring beds",
+              "Therapists giving a side-by-side couple massage"
             ],
             "subTitle": "",
             "title": "Couples Massage Packages in Seminyak",
@@ -319,6 +327,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
+        "imageAlt": "Two therapists massaging a couple's shoulders",
         "subTitle": "",
         "title": "Massage for Two, Side by Side",
         "text": "A couples massage is a relaxing way to spend time together in Bali, for a special occasion or a break in your holiday. Why guests book one:",
@@ -353,6 +362,7 @@
           }
         },
         "image": "/images/services/couplemassage/couplemassage-9.webp",
+        "imageAlt": "Candle, frangipani flowers and a folded towel with a gold lotus",
         "subTitle": "",
         "title": "A Couples Massage Isn't Just for Couples",
         "text": "Any two people who want to relax side by side can book one, whatever their relationship. It suits:",
@@ -377,6 +387,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/couplemassage/couplemassage-10-warm.webp",
+        "imageAlt": "Couple massage room with two therapists at work",
         "subTitle": "",
         "title": "What to Expect During Your Couples Massage",
         "text": "You each have a short consultation first, then two therapists work side by side, each at the pressure their guest prefers. What's included:",
@@ -408,6 +419,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/couplemassage/couplemassage-11.webp",
+            "imageAlt": "Therapist's hands stroking an oiled back during a couple massage",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Couples Massage in Seminyak",
