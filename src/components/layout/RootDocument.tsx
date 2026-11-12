@@ -22,6 +22,7 @@ import "@/styles/decorations.css";
 import "@/styles/outcall.css";
 import "@/styles/treat-cards.css";
 import "@/styles/i18n.css";
+import "@/styles/term.css";
 
 /**
  * The <html> document every page shares: styles, fonts, the WhatsApp button,

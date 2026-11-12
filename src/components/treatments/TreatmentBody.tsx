@@ -15,6 +15,7 @@ import ServiceSlider from "@/components/sections/ServiceSlider";
 import SessionOptions from "@/components/sections/SessionOptions";
 import TreatmentPricing from "@/components/sections/TreatmentPricing";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
+import Term from "@/components/ui/Term";
 import VisitUs from "@/components/sections/VisitUs";
 import DecorationMotion from "@/components/ui/DecorationMotion";
 import FloralDecoration from "@/components/ui/FloralDecoration";
@@ -42,6 +43,8 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   ReserveCta,
   ServiceSlider,
   SessionOptions,
+  // A "What is …?" definition card after a paragraph (lymphatic page pilot, 10 Nov).
+  Term,
   TreatmentPricing,
   TreatmentTestimonials,
   // Added by the page template (app/(site)/seminyak/[slug]/page.tsx), not saved in the tree.
