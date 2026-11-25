@@ -2771,6 +2771,13 @@
 .compare-table.oc-table--compare tbody td {
   width: 27%;
 }
+/* Four treatments compared (couples page): equal columns. */
+@media (min-width: 768px) {
+  .compare-table.oc-table--compare tbody td:nth-child(2):nth-last-child(4),
+  .compare-table.oc-table--compare tbody td:nth-child(2):nth-last-child(4) ~ td {
+    width: 20.25%;
+  }
+}
 .compare-table__name {
   display: none;
 }
