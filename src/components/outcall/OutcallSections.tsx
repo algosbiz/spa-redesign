@@ -478,6 +478,18 @@ function CardIcon({ name }: { name: MenuIconName }) {
   );
 }
 
+/** Couple massages at a villa in the Seminyak area, for two, with both therapists' fee added (owner, 25 Nov). */
+const COUPLE_LENGTHS = ["1 Hour", "1.5 Hours", "2 Hours"];
+const COUPLE_MASSAGES = [
+  { label: "Balinese, for two", id: "couple-balinese-massage", style: "Balinese" },
+  { label: "Traditional, for two", id: "couple-traditional-massage", style: "Traditional" },
+  { label: "Deep tissue, for two", id: "couple-deep-tissue-massage", style: "Deep Tissue" },
+  { label: "Warm candle, for two", id: "couple-warm-candle-massage", style: "Warm Candle" },
+].map(({ label, id, style }) => ({
+  label,
+  values: COUPLE_LENGTHS.map((length) => idr(priceOf(id, `${length} · ${style} Massage · 2 Pax`) + fee * 2)),
+}));
+
 export function GroupMassage() {
   const couple = idr(priceOf("couple-balinese-massage", "1 Hour · Balinese Massage · 2 Pax"));
   const fourHand = idr(priceOf("four-hand-massage", "1 Hour"));
@@ -514,6 +526,38 @@ export function GroupMassage() {
             <p className="oc-card__title">Mix your treatments</p>
             <p>One guest has a massage while another has a manicure pedicure or a cream bath.</p>
           </div>
+        </div>
+        <h3 className="oc-couple-prices__title">Couples Massage Prices at Your Villa</h3>
+        <p className="oc-couple-prices__text">
+          Totals for two guests and two therapists in Seminyak, Petitenget and Kerobokan, fee included. Extra in
+          Canggu, North Kuta and Kuta: {idr((outerFee - fee) * 2)}.
+        </p>
+        <div className="oc-table-wrap oc-table-wrap--scroll compare-table__wrap">
+          <table className="oc-table oc-table--compare compare-table">
+            <caption className="oc-sr-only">Couples massage totals at a villa, for two guests, fee included</caption>
+            <thead>
+              <tr>
+                <td />
+                {COUPLE_LENGTHS.map((length) => (
+                  <th scope="col" key={length}>
+                    {length}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {COUPLE_MASSAGES.map((row) => (
+                <tr key={row.label}>
+                  <th scope="row">{row.label}</th>
+                  {row.values.map((value, i) => (
+                    <td key={COUPLE_LENGTHS[i]}>
+                      <span className="compare-table__name">{COUPLE_LENGTHS[i]}</span> {value}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

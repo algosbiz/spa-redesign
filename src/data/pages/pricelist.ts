@@ -1506,7 +1506,7 @@ export const pricelistPage = {
     items: [
     {
       question: "1. How much is a massage in Bali?",
-      answer: "At Spa Bali Moon in Seminyak, a massage starts at IDR 90.000 per person for 30 minutes. A 1-hour Balinese massage is IDR 159.000, and most 1-hour massages are IDR 159.000 to IDR 350.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area."
+      answer: "At Spa Bali Moon in Seminyak, a massage starts at IDR 90.000 per person for 30 minutes. A 1-hour Balinese massage is IDR 159.000, and most 1-hour massages are IDR 159.000 to IDR 350.000 per person. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. All prices include tax, with nothing else to pay."
     },
     {
       question: "2. How do I choose the right treatment?",

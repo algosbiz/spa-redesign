@@ -33,7 +33,7 @@
           },
           {
             "label": "Price",
-            "value": "IDR 250.000 per person"
+            "value": "IDR 250.000 per person · at your villa or hotel IDR 325.000 in the Seminyak area, IDR 400.000 in Canggu, North Kuta and Kuta"
           },
           {
             "label": "Where",
@@ -164,6 +164,53 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Is Your Skin Ready for a Sunburn Treatment?",
+        "text": "The treatment is for mild sunburn only. Your therapist looks at your skin before starting.",
+        "caption": "When a sunburn treatment is suitable",
+        "columns": [
+          {
+            "name": "What to Do",
+            "short": "What to do"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Skin that feels hot, dry or tight",
+            "values": [
+              "The treatment suits mild sunburn"
+            ]
+          },
+          {
+            "label": "Tender skin",
+            "values": [
+              "Tell your therapist where it is sore; if a light touch hurts, wait until it settles"
+            ]
+          },
+          {
+            "label": "Skin that is peeling",
+            "values": [
+              "Message us first so we can check the treatment suits you"
+            ]
+          },
+          {
+            "label": "Blisters, open skin or severe burns",
+            "values": [
+              "Not suitable; see a doctor"
+            ]
+          },
+          {
+            "label": "Sunburn with fever, chills or dizziness",
+            "values": [
+              "Not suitable; see a doctor"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -273,7 +320,7 @@
               },
               {
                 "question": "How much does a sunburn treatment cost in Seminyak?",
-                "answer": "The sunburn treatment at Spa Bali Moon in Seminyak costs IDR 250.000 per person for 1 hour. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. You can pay by Visa, Mastercard or cash, and book on WhatsApp at +62 878-6317-5144, between 9am and 11pm daily."
+                "answer": "The sunburn treatment is IDR 250.000 per person for 1 hour at our spa. At your villa or hotel it comes to IDR 325.000 in Seminyak, Petitenget and Kerobokan, or IDR 400.000 in Canggu, North Kuta and Kuta. All prices include tax, with nothing else to pay."
               },
               {
                 "question": "Can I get the sunburn treatment if my skin is blistered?",

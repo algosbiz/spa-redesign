@@ -512,6 +512,60 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Couples Massage Prices at Your Villa or Hotel",
+        "text": "Totals for two guests and two therapists in Seminyak, Petitenget and Kerobokan, with the home service fee already added. In Canggu, North Kuta and Kuta, add IDR 150.000 to any total. The four packages come to IDR 755.000 to IDR 1.025.000 in the Seminyak area. Totals include tax, with no extra charges.",
+        "caption": "Couples massage totals at a villa or hotel, for two guests, fee included",
+        "columns": [
+          {
+            "name": "1 Hour"
+          },
+          {
+            "name": "1.5 Hours"
+          },
+          {
+            "name": "2 Hours"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Balinese, for two",
+            "values": [
+              "IDR 469.000",
+              "IDR 629.000",
+              "IDR 809.000"
+            ]
+          },
+          {
+            "label": "Traditional, for two",
+            "values": [
+              "IDR 489.000",
+              "IDR 669.000",
+              "IDR 829.000"
+            ]
+          },
+          {
+            "label": "Deep tissue, for two",
+            "values": [
+              "IDR 689.000",
+              "IDR 869.000",
+              "IDR 1.189.000"
+            ]
+          },
+          {
+            "label": "Warm candle, for two",
+            "values": [
+              "IDR 689.000",
+              "IDR 949.000",
+              "IDR 1.149.000"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "div",
       "props": {
         "className": "jsx-couple-spa couple-massage-faq"
@@ -554,7 +608,7 @@
               },
               {
                 "question": "Can we have a couples massage at our villa or hotel?",
-                "answer": "Yes. For a couples massage at your villa or hotel, Spa Bali Moon sends two therapists to your accommodation so you can relax side by side. In the Seminyak area, a home service fee of IDR 75.000 per therapist applies, so IDR 150.000 for two, on top of the treatment price. Your therapists bring fresh linen, oils and everything the massage needs."
+                "answer": "Yes. Two therapists come to you and massage you side by side, with fresh linen, oils and everything the massage needs. A 1-hour couple Balinese massage is IDR 469.000 for two in Seminyak, Petitenget and Kerobokan, or IDR 619.000 in Canggu, North Kuta and Kuta, with the home service fee included."
               },
               {
                 "question": "What is included in a couples spa package?",

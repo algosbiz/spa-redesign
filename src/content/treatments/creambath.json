@@ -32,6 +32,10 @@
             "value": "Hair and scalp treatment: nourishing cream, scalp massage, rinse and finish"
           },
           {
+            "label": "Length",
+            "value": "30 to 60 minutes"
+          },
+          {
             "label": "Price per person",
             "value": "IDR 165.000 (Ginseng, Avocado, Aloe Vera, NR, Hair Mask) · IDR 195.000 (L'Oreal)"
           },
@@ -324,6 +328,46 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Cream Bath Prices at the Spa and Your Villa",
+        "text": "The total per person, with the home service fee already added for a villa or hotel. Totals include tax, with no extra charges.",
+        "caption": "Cream bath prices at the spa and at a villa or hotel",
+        "columns": [
+          {
+            "name": "At Our Spa"
+          },
+          {
+            "name": "Seminyak, Petitenget, Kerobokan",
+            "short": "Seminyak area"
+          },
+          {
+            "name": "Canggu, North Kuta, Kuta",
+            "short": "Canggu, Kuta"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Ginseng, Avocado, Aloe Vera, NR or Hair Mask",
+            "values": [
+              "IDR 165.000",
+              "IDR 240.000",
+              "IDR 315.000"
+            ]
+          },
+          {
+            "label": "L'Oreal",
+            "values": [
+              "IDR 195.000",
+              "IDR 270.000",
+              "IDR 345.000"
+            ]
+          }
+        ]
       }
     },
     {

@@ -217,12 +217,12 @@
       "type": "CompareTable",
       "props": {
         "leftShapeSrc": "/images/shape/feature-six-shape.png",
-        "title": "Lymphatic, Deep Tissue or Cellulite Massage?",
+        "title": "Lymphatic, Balinese, Deep Tissue or Cellulite?",
         "text": {
           "$jsx": {
             "type": "Fragment",
             "children": [
-              "Lymphatic massage uses very light pressure over the whole body, while a",
+              "Lymphatic massage uses very light pressure over the whole body. Balinese is the choice for a relaxing massage with more pressure, while a",
               " ",
               {
                 "type": "Link",
@@ -249,11 +249,16 @@
             ]
           }
         },
-        "caption": "Lymphatic, deep tissue and cellulite massage compared",
+        "caption": "Lymphatic, Balinese, deep tissue and cellulite massage compared",
         "columns": [
           {
             "name": "Lymphatic Massage",
             "short": "Lymphatic"
+          },
+          {
+            "name": "Balinese Massage",
+            "short": "Balinese",
+            "href": "/seminyak/balinese-massage/"
           },
           {
             "name": "Deep Tissue Massage",
@@ -271,6 +276,7 @@
             "label": "Pressure",
             "values": [
               "Light",
+              "Gentle to medium",
               "Firm and slow",
               "Firm and targeted"
             ]
@@ -279,6 +285,7 @@
             "label": "What it works on",
             "values": [
               "The lymph pathways just under the skin, from the neck to the ankles",
+              "General tension across the whole body",
               "Deeper layers of tight muscle in the shoulders, neck, back, legs and arms",
               "The areas where cellulite shows: thighs, hips, buttocks and abdomen"
             ]
@@ -287,6 +294,7 @@
             "label": "How it feels",
             "values": [
               "Slow and rhythmic, with no kneading",
+              "Steady, flowing strokes with gentle stretching",
               "Intense, but within your comfort",
               "Firm and invigorating; the skin feels warm and smooth"
             ]
@@ -295,6 +303,7 @@
             "label": "Good for",
             "values": [
               "Legs and ankles that feel heavy or puffy after a flight or a hot day",
+              "A relaxing massage when you feel tense rather than puffy",
               "Muscles that feel stiff from exercise, surfing or long hours sitting",
               "A temporary improvement in the look of the skin, building over regular sessions"
             ]
@@ -304,6 +313,7 @@
             "values": [
               "1, 1.5 or 2 hours",
               "1, 1.5 or 2 hours",
+              "1, 1.5 or 2 hours",
               "1, 1.5 or 2 hours"
             ]
           },
@@ -311,6 +321,7 @@
             "label": "Price for 1 hour",
             "values": [
               "IDR 300.000",
+              "IDR 159.000",
               "IDR 269.000",
               "IDR 350.000"
             ]
@@ -441,6 +452,55 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Lymphatic Drainage with Another Treatment",
+        "text": "Each of these adds one more treatment to a 1-hour lymphatic drainage massage, in the same visit to the spa.",
+        "caption": "Lymphatic drainage massage combined with another treatment, per person",
+        "columns": [
+          {
+            "name": "What It Adds",
+            "short": "Adds"
+          },
+          {
+            "name": "Price per Person",
+            "short": "Price"
+          }
+        ],
+        "rows": [
+          {
+            "label": "With a Gold Facial (package)",
+            "values": [
+              "A 1-hour facial with an argan oil lymphatic facial massage, for dull or dry skin",
+              "IDR 525.000"
+            ]
+          },
+          {
+            "label": "With a Tea Tree Facial",
+            "values": [
+              "A 1-hour facial with an argan oil lymphatic facial massage, for oily or blemish-prone skin",
+              "IDR 496.000"
+            ]
+          },
+          {
+            "label": "With foot reflexology",
+            "values": [
+              "30 minutes of thumb and finger pressure on the feet",
+              "IDR 399.000"
+            ]
+          },
+          {
+            "label": "With a body scrub",
+            "values": [
+              "An exfoliating scrub in a scent you choose",
+              "IDR 469.000"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -499,6 +559,54 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Lymphatic Massage Prices at the Spa and Your Villa",
+        "text": "The total per person, with the home service fee already added for a villa or hotel. Two guests treated at the same time need two therapists, so the fee applies to each. Totals include tax, with no extra charges.",
+        "caption": "Lymphatic drainage massage prices at the spa and at a villa or hotel",
+        "columns": [
+          {
+            "name": "At Our Spa"
+          },
+          {
+            "name": "Seminyak, Petitenget, Kerobokan",
+            "short": "Seminyak area"
+          },
+          {
+            "name": "Canggu, North Kuta, Kuta",
+            "short": "Canggu, Kuta"
+          }
+        ],
+        "rows": [
+          {
+            "label": "1 hour",
+            "values": [
+              "IDR 300.000",
+              "IDR 375.000",
+              "IDR 450.000"
+            ]
+          },
+          {
+            "label": "1.5 hours",
+            "values": [
+              "IDR 440.000",
+              "IDR 515.000",
+              "IDR 590.000"
+            ]
+          },
+          {
+            "label": "2 hours",
+            "values": [
+              "IDR 580.000",
+              "IDR 655.000",
+              "IDR 730.000"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -547,19 +655,19 @@
             "items": [
               {
                 "question": "How much does a lymphatic drainage massage cost in Seminyak?",
-                "answer": "A lymphatic drainage massage costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours, per person. At your villa or hotel, add IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta."
+                "answer": "A lymphatic drainage massage costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours, per person. At your villa or hotel, add IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta. All prices include tax, with nothing else to pay."
               },
               {
                 "question": "Can a lymphatic massage help with swollen legs after travelling?",
                 "answer": "It can leave them feeling lighter and more comfortable. Long flights, road trips and long periods of sitting can cause temporary fluid retention, and lymphatic drainage massage is often chosen for that. If your legs are painful, red or swollen on one side only, see a doctor first."
               },
               {
-                "question": "Is a lymphatic massage the same as a deep tissue massage?",
-                "answer": "No. Deep tissue massage uses firm pressure on deeper muscle layers. A lymphatic drainage massage uses light, rhythmic strokes that follow the lymph pathways just under the skin."
+                "question": "What does a lymphatic drainage massage feel like?",
+                "answer": "Slow, light and repetitive, more like the skin being gently stretched than muscles being kneaded. If you are used to a firm massage, it will feel much softer. It shouldn't hurt, and you can rest quietly through the whole session."
               },
               {
-                "question": "What do I wear during a lymphatic drainage massage?",
-                "answer": "You stay covered with a towel or spa wear, and only the area being massaged is uncovered."
+                "question": "Should I book a lymphatic or a Balinese massage first?",
+                "answer": "If you feel puffy or heavy after a flight, start with lymphatic drainage. If your shoulders and back feel tight, choose Balinese. Staying a few days? Book the lymphatic massage soon after you land and a firmer one later in your trip."
               },
               {
                 "question": "Can I book a lymphatic massage for today?",
@@ -574,8 +682,8 @@
                 "answer": "Only once your surgeon has cleared you for it. Tell us the procedure and its date when you book, and we will check with you that the session is right for you."
               },
               {
-                "question": "Can I combine it with other treatments?",
-                "answer": "Yes. The Lymphatic & Gold Facial pairs 1 hour of each for IDR 525.000 per person (IDR 569.000 booked separately), and many guests add foot reflexology or a body scrub to the same visit."
+                "question": "Can two of us have a lymphatic massage at the same time?",
+                "answer": "Yes, subject to availability. Each of you has your own therapist, so tell us it's for two when you book, at the spa or at your villa or hotel. The price is per person."
               },
               {
                 "question": "Can I have lymphatic drainage on my face?",
