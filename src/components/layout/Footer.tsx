@@ -6,28 +6,10 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { business } from "@/data/business";
 import { footerDaySpaPages, footerHomeServices, legalLinks } from "@/data/navigation";
-import { sitemapPages } from "@/data/sitemap";
 import { useI18n } from "@/i18n/client";
-import { formatDay } from "@/i18n/format";
-import { useSitePath } from "@/i18n/useSitePath";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 type Status = "idle" | "loading" | "success" | "error";
-
-const pathOf = (url: string) => new URL(url, business.url).pathname.replace(/(.)\/$/, "$1");
-
-/**
- * "Page updated October 15, 2026" after the copyright (copy rewrite, 15 Oct:
- * a date on every page), from the sitemap's date for the page. Treatment
- * pages show theirs in the quick facts and guide articles under the title,
- * so they are left out here, as is /guide/, a list of dated articles.
- */
-const PAGE_UPDATED = new Map(
-  sitemapPages
-    .map((p) => [pathOf(p.loc), p.lastmod] as const)
-    .filter(([path]) => path !== "/guide" && !/^\/seminyak\/[^/]+$/.test(path))
-);
-
 
 /** Instagram, drawn like the other line icons (Facebook left out, owner, 21 Oct). */
 const SOCIAL = [
@@ -86,11 +68,10 @@ const DAY_SPA = "day spa in Seminyak";
 const [aboutBefore, aboutAfter = ""] = business.aboutText.split(DAY_SPA);
 
 export default function Footer() {
-  const { el, t, locale } = useI18n();
+  const { el, t } = useI18n();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-  const updated = PAGE_UPDATED.get(pathOf(useSitePath() || "/"));
 
   async function subscribe(e: FormEvent) {
     e.preventDefault();
@@ -285,14 +266,7 @@ export default function Footer() {
             <Link prefetch={false} href="/">
               {business.name}
             </Link>
-            {updated ? (
-              <>
-                {" "}
-                <span className="site-footer__updated">
-                  <span className="site-footer__sep">·</span> Page updated <time dateTime={updated}>{formatDay(updated, locale, "UTC")}</time>
-                </span>
-              </>
-            ) : null}
+            {/* No "Page updated" date (owner, 25 Nov): Google showed it before the description. */}
           </p>
           <ul className="site-footer__legal">
             {legalLinks.map((l) => (
