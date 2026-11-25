@@ -3,6 +3,7 @@ import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
 import AboutSplit from "@/components/sections/AboutSplit";
+import CompareTable from "@/components/sections/CompareTable";
 import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
@@ -170,6 +171,26 @@ export default function VillaHotelMassagePage() {
         buttonLink="https://wa.me/6287863175144"
         image="/images/services/massagehotelvilla/massagehotelvilla-5.webp"
         imageAlt="Hands on a guest's back beside a swimming pool"
+      />
+      {/* The price chart, fee included (owner, 25 Nov: couples need one too; AI answers quote totals). */}
+      <CompareTable
+        leftShapeSrc="/images/shape/feature-six-shape.png"
+        title="What a Massage Costs in Your Room"
+        text="Totals in Seminyak, Petitenget and Kerobokan, with the home service fee already added. Couple prices are for two guests and two therapists; the others are per person. In Canggu, North Kuta and Kuta, add IDR 75.000 per therapist."
+        caption="Massage totals at a villa or hotel in the Seminyak area, fee included"
+        columns={[{ name: "1 Hour" }, { name: "1.5 Hours" }, { name: "2 Hours" }]}
+        rows={[
+          { label: "Balinese Massage", values: ["IDR 234.000", "IDR 314.000", "IDR 405.000"] },
+          { label: "Traditional Massage", values: ["IDR 244.000", "IDR 334.000", "IDR 414.000"] },
+          { label: "Deep Tissue Massage", values: ["IDR 344.000", "IDR 434.000", "IDR 593.000"] },
+          { label: "Sports Massage", values: ["IDR 344.000", "IDR 434.000", "Not offered"] },
+          { label: "Thai Massage", values: ["IDR 334.000", "IDR 454.000", "Not offered"] },
+          { label: "Lymphatic Massage", values: ["IDR 375.000", "IDR 515.000", "IDR 655.000"] },
+          { label: "Couple Balinese, for two", values: ["IDR 469.000", "IDR 629.000", "IDR 809.000"] },
+          { label: "Couple traditional, for two", values: ["IDR 489.000", "IDR 669.000", "IDR 829.000"] },
+          { label: "Couple deep tissue, for two", values: ["IDR 689.000", "IDR 869.000", "IDR 1.189.000"] },
+          { label: "Couple warm candle, for two", values: ["IDR 689.000", "IDR 949.000", "IDR 1.149.000"] },
+        ]}
       />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/6a.png"

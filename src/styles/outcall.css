@@ -2832,3 +2832,14 @@
     color: var(--headings-color);
   }
 }
+
+/* Couples price chart under the group cards (outcall page). */
+.oc-couple-prices__title {
+  margin: 56px 0 10px;
+  text-align: center;
+}
+.oc-couple-prices__text {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  text-align: center;
+}

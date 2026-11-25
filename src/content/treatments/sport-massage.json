@@ -102,8 +102,8 @@
               "Therapist massaging a guest's lower back"
             ],
             "subTitle": "",
-            "title": "Our Session Options",
-            "text": "Choose 1 hour for one or two problem areas after a workout, or 1.5 hours for full-body recovery across several muscle groups.",
+            "title": "Sports Massage Prices",
+            "text": "A sports massage is IDR 269.000 for 1 hour or IDR 359.000 for 1.5 hours per person. Choose 1 hour for one or two problem areas after a workout, or 1.5 hours for full-body recovery across several muscle groups.",
             "packages": [
               {
                 "price": "IDR 269.000",
@@ -190,6 +190,69 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Sports Massage by Activity",
+        "text": "The areas your therapist can spend the most time on, and a session length to start from. They check with you first.",
+        "caption": "Sports massage areas and session lengths by activity",
+        "columns": [
+          {
+            "name": "Areas Often Worked",
+            "short": "Areas"
+          },
+          {
+            "name": "Session to Choose",
+            "short": "Session"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Surfing",
+            "values": [
+              "Shoulders, upper back, arms and lower back",
+              "1.5 hours"
+            ]
+          },
+          {
+            "label": "Running",
+            "values": [
+              "Calves, thighs, hips and feet",
+              "1 hour"
+            ]
+          },
+          {
+            "label": "Gym or strength training",
+            "values": [
+              "The muscles you trained, often shoulders, back and legs",
+              "1 or 1.5 hours"
+            ]
+          },
+          {
+            "label": "Cycling",
+            "values": [
+              "Thighs, glutes and lower back",
+              "1 or 1.5 hours"
+            ]
+          },
+          {
+            "label": "Hiking or a long walk",
+            "values": [
+              "Calves, thighs and feet",
+              "1 hour"
+            ]
+          },
+          {
+            "label": "Several active days in a row",
+            "values": [
+              "The whole body, with extra time on tight areas",
+              "1.5 hours"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -247,6 +310,46 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Sports Massage Prices at the Spa and Your Villa",
+        "text": "The total per person, with the home service fee already added for a villa or hotel.",
+        "caption": "Sports massage prices at the spa and at a villa or hotel",
+        "columns": [
+          {
+            "name": "At Our Spa"
+          },
+          {
+            "name": "Seminyak, Petitenget, Kerobokan",
+            "short": "Seminyak area"
+          },
+          {
+            "name": "Canggu, North Kuta, Kuta",
+            "short": "Canggu, Kuta"
+          }
+        ],
+        "rows": [
+          {
+            "label": "1 hour",
+            "values": [
+              "IDR 269.000",
+              "IDR 344.000",
+              "IDR 419.000"
+            ]
+          },
+          {
+            "label": "1.5 hours",
+            "values": [
+              "IDR 359.000",
+              "IDR 434.000",
+              "IDR 509.000"
+            ]
+          }
+        ]
       }
     },
     {
