@@ -176,7 +176,7 @@ export default function VillaHotelMassagePage() {
       <CompareTable
         leftShapeSrc="/images/shape/feature-six-shape.png"
         title="What a Massage Costs in Your Room"
-        text="Totals in Seminyak, Petitenget and Kerobokan, with the home service fee already added. Couple prices are for two guests and two therapists; the others are per person. In Canggu, North Kuta and Kuta, add IDR 75.000 per therapist."
+        text="Totals in Seminyak, Petitenget and Kerobokan, with the home service fee already added. Couple prices are for two guests and two therapists; the others are per person. In Canggu, North Kuta and Kuta, add IDR 75.000 per therapist. Totals include tax, with no extra charges."
         caption="Massage totals at a villa or hotel in the Seminyak area, fee included"
         columns={[{ name: "1 Hour" }, { name: "1.5 Hours" }, { name: "2 Hours" }]}
         rows={[
