@@ -24,11 +24,11 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Lymphatic drainage massage is a slow, very light massage that follows the body's lymph pathways. Here in Seminyak we give it as manual lymphatic drainage (MLD), in sessions of 1, 1.5 or 2 hours from IDR 300.000, at our spa or at your villa or hotel. It's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
+        "text": "Lymphatic drainage massage is a slow, very light massage that follows the body's lymph pathways. Here in Seminyak, sessions are 1, 1.5 or 2 hours from IDR 300.000, at our spa or at your villa or hotel. It's often chosen after a long flight, when legs or ankles feel heavy or puffy.",
         "items": [
           {
             "label": "Treatment",
-            "value": "Manual lymphatic drainage (MLD) for the whole body, with very light pressure"
+            "value": "Slow lymphatic massage for the whole body, with very light pressure"
           },
           {
             "label": "Length and price",
@@ -63,12 +63,12 @@
         "secondaryImage": "/images/services/lymphaticmassage/lymphaticmassage-3.webp",
         "secondaryAlt": "Light, flat-handed strokes on a guest's abdomen",
         "subTitle": "",
-        "title": "Manual Lymphatic Drainage (MLD)",
+        "title": "What Is Lymphatic Drainage Massage?",
         "text": {
           "$jsx": {
             "type": "Fragment",
             "children": [
-              "Every session is manual lymphatic drainage (MLD): slow, very light, rhythmic strokes by hand that move the skin toward the lymph nodes. Our therapists are certified massage therapists, trained in MLD by experienced trainers. The pressure stays light because lymph vessels sit just under the skin. For background on the lymphatic system and what the massage can and can't do, see our",
+              "Lymphatic drainage massage, also called manual lymphatic drainage (MLD), uses slow, very light, rhythmic strokes by hand that move the skin toward the lymph nodes. Our therapists are certified massage therapists, trained in this technique by experienced trainers. The pressure stays light because lymph vessels sit just under the skin. For background on the lymphatic system and what the massage can and can't do, see our",
               " ",
               {
                 "type": "Link",
@@ -163,7 +163,7 @@
           "props": {
             "items": [
               {
-                "title": "MLD",
+                "title": "Gentle",
                 "text": "Technique"
               },
               {
