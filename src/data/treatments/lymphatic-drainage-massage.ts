@@ -16,7 +16,7 @@ const lymphaticDrainageMassage: Treatment = {
     title: "Lymphatic Drainage Massage in Seminyak, Bali | Spa Bali Moon",
     // 8 Nov: facts only (technique, lengths, from-price, where), no superlatives (WRITING-GUIDE.md).
     description:
-      "Manual lymphatic drainage (MLD) mixed with wood therapy, for heavy or puffy legs after a flight. 1, 1.5 or 2 hours from IDR 300.000, at our spa or your villa.",
+      "Lymphatic drainage massage (MLD) with light, slow strokes for heavy or puffy legs after a flight. 1, 1.5 or 2 hours from IDR 300.000, at our spa or your villa.",
   },
   hero: {
     eyebrow: "Restore Your Flow",
