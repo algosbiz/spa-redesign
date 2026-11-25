@@ -102,7 +102,7 @@
               "Therapists giving a side-by-side couple massage"
             ],
             "subTitle": "",
-            "title": "Couples Massage Packages in Seminyak",
+            "title": "Couple Spa Packages in Seminyak",
             "text": "Our four couples packages pair a 1-hour Balinese or warm candle massage with an ear candle or a Bali Moon Facial. Prices are for two guests together.",
             "packages": [
               {
@@ -277,8 +277,8 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Couples Massage Sessions",
-                  "text": "Share a relaxing treatment side by side with a massage style that suits both of you. Each option is available for two guests, with different techniques and session lengths to match how you want to relax.",
+                  "title": "Couples Massage Prices for Two",
+                  "text": "A couples massage starts at IDR 319.000 for two guests for 1 hour. Choose from four massage styles, each for 1, 1.5 or 2 hours; every price below is for both of you together.",
                   "icon": "/images/spa/Couple.svg"
                 }
               }
@@ -329,8 +329,8 @@
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
         "imageAlt": "Two therapists massaging a couple's shoulders",
         "subTitle": "",
-        "title": "Massage for Two, Side by Side",
-        "text": "A couples massage is a relaxing way to spend time together in Bali, for a special occasion or a break in your holiday. Why guests book one:",
+        "title": "For a Honeymoon, an Anniversary or a Day Off",
+        "text": "A couples massage gives you 1 to 2 hours together in a private room. Guests book one for a honeymoon, a birthday or the afternoon before a dinner out, and it works just as well after a day of beaches and walking.",
         "featuresLeft": [
           "Popular for honeymoon trips",
           "A favourite anniversary activity",
@@ -346,6 +346,80 @@
         "treatmentLayout": true,
         "badgeTopText": "Popular for",
         "badgeBottomText": "Honeymoons & anniversaries"
+      }
+    },
+    {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Which Couples Massage Suits You Both?",
+        "text": "Balinese is the gentlest of the four and the easiest to share. Traditional and deep tissue are firmer, and warm candle uses warm oil and smooth strokes. You each choose your own pressure.",
+        "caption": "The four couples massages compared",
+        "columns": [
+          {
+            "name": "Balinese",
+            "href": "/seminyak/balinese-massage/"
+          },
+          {
+            "name": "Traditional",
+            "href": "/seminyak/traditional-massage/"
+          },
+          {
+            "name": "Deep Tissue",
+            "href": "/seminyak/deep-tissue-massage/"
+          },
+          {
+            "name": "Warm Candle",
+            "href": "/seminyak/warm-candle-massage/"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Pressure",
+            "values": [
+              "Gentle to medium",
+              "Firm, with flowing movements",
+              "Firm and targeted",
+              "Smooth and relaxing"
+            ]
+          },
+          {
+            "label": "Good for",
+            "values": [
+              "A first massage together",
+              "Everyday body tension",
+              "Specific tight areas",
+              "A slow, comforting session"
+            ]
+          },
+          {
+            "label": "1 hour, for two",
+            "values": [
+              "IDR 319.000",
+              "IDR 339.000",
+              "IDR 539.000",
+              "IDR 539.000"
+            ]
+          },
+          {
+            "label": "1.5 hours, for two",
+            "values": [
+              "IDR 479.000",
+              "IDR 519.000",
+              "IDR 719.000",
+              "IDR 799.000"
+            ]
+          },
+          {
+            "label": "2 hours, for two",
+            "values": [
+              "IDR 659.000",
+              "IDR 679.000",
+              "IDR 1.039.000",
+              "IDR 999.000"
+            ]
+          }
+        ]
       }
     },
     {
@@ -389,8 +463,8 @@
         "image": "/images/services/couplemassage/couplemassage-10-warm.webp",
         "imageAlt": "Couple massage room with two therapists at work",
         "subTitle": "",
-        "title": "What to Expect During Your Couples Massage",
-        "text": "You each have a short consultation first, then two therapists work side by side, each at the pressure their guest prefers. What's included:",
+        "title": "How a Couples Massage Runs",
+        "text": "You start with a short chat each, about your pressure and any areas to focus on. Then two therapists work at the same time on neighbouring beds in one private room, each at the pressure their guest asked for, so you start and finish together.",
         "featuresLeft": [
           "Brief consultation before treatment",
           "Individual pressure preferences",
@@ -405,6 +479,36 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "AboutSplitAlt",
+      "props": {
+        "leftShapeSrc": "/images/shape/step-shape-left.png",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "rightDecoration": {
+          "$jsx": {
+            "type": "FloralDecoration",
+            "props": {
+              "clustered": true
+            }
+          }
+        },
+        "subTitle": "",
+        "showBadge": false,
+        "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
+        "imageAlt": "Therapist giving a massage beside a villa pool",
+        "title": "At Our Seminyak Spa or in Your Villa",
+        "text": "You can have the same massage in a private room at our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa or hotel. For home service, two therapists come to you with fresh linen and oils, for the treatment price plus a fee for the two therapists:",
+        "featuresLeft": [
+          "Seminyak, Petitenget and Kerobokan: IDR 150.000 for two"
+        ],
+        "featuresRight": [
+          "Canggu, North Kuta and Kuta: IDR 300.000 for two"
+        ],
+        "buttonText": "See Home Service",
+        "buttonLink": "/outcall-home-service-massage/",
+        "treatmentLayout": true
       }
     },
     {
@@ -446,11 +550,7 @@
               },
               {
                 "question": "Is a couples massage good for a honeymoon?",
-                "answer": "Yes. A couples massage is one of Spa Bali Moon's most popular treatments for honeymoons, anniversaries, birthdays and other special occasions. You can enjoy it side by side in a private room at our Seminyak spa or at your villa or hotel."
-              },
-              {
-                "question": "Which treatments can we have as a couple?",
-                "answer": "Spa Bali Moon's couple massages are Balinese, traditional, deep tissue and warm candle massage, each for two guests side by side. The best choice depends on the pressure you both prefer and how you want to feel afterwards: Balinese is gentle to medium, traditional and deep tissue are firmer, and warm candle uses warm oil and smooth strokes."
+                "answer": "Yes. Many honeymooners book one, in a private room at our spa or side by side at their villa or hotel. Tell us the date and the occasion when you book on WhatsApp."
               },
               {
                 "question": "Can we have a couples massage at our villa or hotel?",
@@ -463,10 +563,6 @@
               {
                 "question": "Can we book a couples massage over Christmas and New Year?",
                 "answer": "Yes. Spa Bali Moon is open daily from 9am to 11pm, and holiday weeks are busy in Seminyak, so message us on WhatsApp at +62 878-6317-5144 a few days ahead. You can relax side by side in a private room at our spa or at your villa (IDR 150.000 for two therapists in the Seminyak area)."
-              },
-              {
-                "question": "How long does a couples massage take?",
-                "answer": "A couple Balinese massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 319.000 for two), 1.5 hours (IDR 479.000) or 2 hours (IDR 659.000). Couple packages, which add an ear candle or a facial, start at IDR 605.000 for two."
               },
               {
                 "question": "Can we each ask for a female or male therapist for our couples massage?",
