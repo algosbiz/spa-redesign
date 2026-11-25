@@ -111,8 +111,8 @@
               "Therapist's hands on a guest's lower back during a lymphatic massage"
             ],
             "subTitle": "",
-            "title": "Session Lengths and Prices",
-            "text": "Sessions are 1 hour (IDR 300.000), 1.5 hours (IDR 440.000) or 2 hours (IDR 580.000) per person, all with the same technique. One hour suits a first session or mild heaviness after a flight; with 1.5 or 2 hours your therapist has more time across the whole body, with extra time for the legs and ankles.",
+            "title": "Lymphatic Drainage Massage Prices",
+            "text": "A lymphatic drainage massage is 1 hour (IDR 300.000), 1.5 hours (IDR 440.000) or 2 hours (IDR 580.000) per person, all with the same technique. One hour suits a first session or mild heaviness after a flight; with 1.5 or 2 hours your therapist has more time across the whole body, with extra time for the legs and ankles.",
             "packages": [
               {
                 "price": "IDR 300.000",
@@ -195,7 +195,7 @@
         "image": "/images/services/lymphaticmassage/lymphatic-wood-roller.webp",
         "imageAlt": "Therapist rolling a wooden massage roller over a guest's thigh",
         "title": "After a Flight, a Hike or a Hot Day",
-        "text": "Guests often book a lymphatic massage when their legs and ankles feel heavy or puffy: after a long flight, a hike or a day of walking, or a few hot, humid days. Many find their legs feel lighter afterwards, though the effect is temporary.",
+        "text": "Guests often book a lymphatic drainage massage when their legs and ankles feel heavy or puffy: after a long flight, a hike or a day of walking, or a few hot, humid days. Many find their legs feel lighter afterwards, though the effect is temporary.",
         "featuresLeft": [
           "Puffy ankles after a long flight",
           "Heavy legs after hours of sitting",
@@ -335,7 +335,7 @@
         "showBadge": false,
         "image": "/images/services/lymphaticmassage/lymphaticmassage-8.webp",
         "imageAlt": "Light strokes along the waist during a lymphatic massage",
-        "title": "How a Lymphatic Massage Session Runs",
+        "title": "How a Lymphatic Drainage Massage Runs",
         "text": "A session starts with a short chat about how you feel, any health conditions and the areas you'd like focused on; then your therapist works from the neck and collarbone down to the ankles, always stroking toward the nearest lymph nodes and mixing in the wooden rollers. A longer session adds time, not pressure. You stay covered with a towel or spa wear, and only the area being massaged is uncovered.",
         "featuresLeft": [
           "A short chat about how you feel",
@@ -393,7 +393,7 @@
         "image": "/images/services/lymphaticmassage/lymphaticmassage-7.webp",
         "imageAlt": "Therapist massaging a guest's abdomen with light pressure",
         "title": "Before You Book",
-        "text": "Lymphatic massage is gentle and suits most guests. If any of these apply to you, check with your doctor first and let us know when you book. Not sure? Message us on WhatsApp and we'll help.",
+        "text": "Lymphatic drainage massage is gentle and suits most guests. If any of these apply to you, check with your doctor first and let us know when you book. Not sure? Message us on WhatsApp and we'll help.",
         "featuresLeft": [
           "Feeling unwell or running a fever",
           "A sore or swollen leg",
@@ -451,16 +451,24 @@
             "title": "Questions About Lymphatic Drainage Massage",
             "items": [
               {
+                "question": "How much does a lymphatic drainage massage cost in Seminyak?",
+                "answer": "A lymphatic drainage massage costs IDR 300.000 for 1 hour, IDR 440.000 for 1.5 hours and IDR 580.000 for 2 hours, per person, with wood therapy included. At your villa or hotel, add IDR 75.000 per therapist in Seminyak, Petitenget and Kerobokan, or IDR 150.000 in Canggu, North Kuta and Kuta."
+              },
+              {
+                "question": "Can a lymphatic massage help with swollen legs after travelling?",
+                "answer": "It can leave them feeling lighter and more comfortable. Long flights, road trips and long periods of sitting can cause temporary fluid retention, and lymphatic drainage massage is often chosen for that. If your legs are painful, red or swollen on one side only, see a doctor first."
+              },
+              {
+                "question": "Is a lymphatic massage the same as a deep tissue massage?",
+                "answer": "No. Deep tissue massage uses firm pressure on deeper muscle layers. A lymphatic drainage massage uses light, rhythmic hand strokes along the lymph pathways just under the skin, mixed with wooden rollers."
+              },
+              {
                 "question": "How do I book a lymphatic massage?",
                 "answer": "Message us on WhatsApp at +62 878-6317-5144, between 9am and 11pm, with the day, the time, the session length and whether you'd like it at the spa or at your villa or hotel. We reply to confirm your time."
               },
               {
                 "question": "Can I book a lymphatic massage for today?",
                 "answer": "Often, yes, depending on availability: message us with the time you'd like and we'll confirm the next free slot. For a set time, or for two or more guests, book earlier in the day."
-              },
-              {
-                "question": "Can two of us book at the same time?",
-                "answer": "Yes. Tell us how many guests and which treatments when you book, and we'll confirm a time when enough therapists are free, at the spa or at your villa or hotel."
               },
               {
                 "question": "Can I ask for a female or male therapist?",
@@ -475,20 +483,12 @@
                 "answer": "Yes. The Lymphatic & Gold Facial pairs 1 hour of each for IDR 525.000 per person (IDR 569.000 booked separately), and many guests add foot reflexology or a body scrub to the same visit."
               },
               {
-                "question": "Does wood therapy cost extra?",
-                "answer": "No. It is part of the lymphatic massage price, and your therapist brings the wooden tools to your villa or hotel too."
-              },
-              {
                 "question": "Can I have lymphatic drainage on my face?",
                 "answer": "Yes, as part of the 1-hour [Bali Moon Facial](/seminyak/facial/), which includes an argan oil lymphatic facial massage. The lymphatic massage on this page works on the body, from the neck down."
               },
               {
                 "question": "What should I do after a lymphatic massage?",
                 "answer": "Drink water and rest. Some people feel tired, thirsty or slightly light-headed afterwards."
-              },
-              {
-                "question": "What if I need to cancel or change my booking?",
-                "answer": "You can cancel or reschedule up to 12 hours before your appointment at no charge. Within 12 hours a 50% fee applies, and a no-show is charged the full treatment price or the deposit ([terms and conditions](/terms-and-conditions/))."
               }
             ]
           }
