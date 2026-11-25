@@ -85,8 +85,8 @@
               "Long, slow forearm stroke along the back"
             ],
             "subTitle": "",
-            "title": "Choose Your Duration",
-            "text": "The right session length depends on your treatment goals and the number of areas requiring attention. Shorter sessions work well for focused areas, while longer sessions allow more time for detailed muscle work.",
+            "title": "Deep Tissue Massage Prices",
+            "text": "A deep tissue massage is 1 hour (IDR 269.000), 1.5 hours (IDR 359.000) or 2 hours (IDR 518.000) per person. One hour suits the neck, shoulders or back; with 1.5 or 2 hours your therapist has time for several tight areas or the whole body.",
             "packages": [
               {
                 "price": "IDR 269.000",
@@ -182,6 +182,79 @@
       }
     },
     {
+      "type": "CompareTable",
+      "props": {
+        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "title": "Deep Tissue, Sports, Traditional or Balinese?",
+        "text": "Choose deep tissue for tightness that keeps coming back, and sports massage for muscles worked hard by a sport or activity. Traditional is a firm full-body massage at a lower price, and Balinese is the gentler choice for relaxing.",
+        "caption": "Deep tissue, sports, traditional and Balinese massage compared",
+        "columns": [
+          {
+            "name": "Deep Tissue"
+          },
+          {
+            "name": "Sports",
+            "href": "/seminyak/sport-massage/"
+          },
+          {
+            "name": "Traditional",
+            "href": "/seminyak/traditional-massage/"
+          },
+          {
+            "name": "Balinese",
+            "href": "/seminyak/balinese-massage/"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Pressure",
+            "values": [
+              "Firm and slow",
+              "Firm, where you need it",
+              "Firm, with kneading",
+              "Gentle to medium"
+            ]
+          },
+          {
+            "label": "Good for",
+            "values": [
+              "Tightness that keeps coming back",
+              "Muscles tired from a sport or activity",
+              "General muscle relief",
+              "A relaxing first massage"
+            ]
+          },
+          {
+            "label": "Price for 1 hour",
+            "values": [
+              "IDR 269.000",
+              "IDR 269.000",
+              "IDR 169.000",
+              "IDR 159.000"
+            ]
+          },
+          {
+            "label": "Price for 1.5 hours",
+            "values": [
+              "IDR 359.000",
+              "IDR 359.000",
+              "IDR 259.000",
+              "IDR 239.000"
+            ]
+          },
+          {
+            "label": "Price for 2 hours",
+            "values": [
+              "IDR 518.000",
+              "Not offered",
+              "IDR 339.000",
+              "IDR 330.000"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.png",
@@ -240,6 +313,62 @@
       }
     },
     {
+      "type": "AboutSplitAlt",
+      "props": {
+        "leftShapeSrc": "/images/shape/step-shape-left.png",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "rightDecoration": {
+          "$jsx": {
+            "type": "FloralDecoration",
+            "props": {
+              "clustered": true
+            }
+          }
+        },
+        "subTitle": "",
+        "showBadge": false,
+        "image": "/images/services/massagehotelvilla/massagehotelvilla-8.webp",
+        "imageAlt": "Guest in a straw hat resting at the edge of a pool beside a tray of fruit",
+        "title": "After a Deep Tissue Massage",
+        "text": "Drink water, rest and skip hard exercise for the rest of the day. The areas your therapist worked on can feel a little tender afterwards; if pain is strong or doesn't settle, see a doctor. A few things that help:",
+        "featuresLeft": [
+          "Drink water through the day",
+          "Rest if you feel tired"
+        ],
+        "featuresRight": [
+          "Stretch gently",
+          "Leave a hard workout for tomorrow"
+        ],
+        "buttonText": "Book Now",
+        "buttonLink": "https://wa.me/6287863175144",
+        "treatmentLayout": true
+      }
+    },
+    {
+      "type": "AboutSplit",
+      "props": {
+        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "subTitle": "",
+        "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
+        "imageAlt": "Therapist giving a massage beside a villa pool",
+        "title": "At Our Seminyak Spa or in Your Villa",
+        "text": "You can have the same massage at our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa, hotel or home. For home service, a therapist brings fresh linen, oils and everything the massage needs, and usually arrives within 30 to 60 minutes when you stay nearby. The treatment price stays the same, plus a fee per therapist:",
+        "featuresLeft": [
+          "Seminyak, Petitenget and Kerobokan: IDR 75.000",
+          "Canggu, North Kuta and Kuta: IDR 150.000"
+        ],
+        "featuresRight": [
+          "Further out: confirmed on WhatsApp",
+          "Fresh linen and oils brought to you"
+        ],
+        "buttonText": "See Home Service",
+        "buttonLink": "/outcall-home-service-massage/",
+        "badgeTopText": "At your villa",
+        "badgeBottomText": "Same treatment price",
+        "treatmentLayout": true
+      }
+    },
+    {
       "type": "div",
       "props": {
         "className": "jsx-deep-tissue-massage deep-tissue-massage-faq"
@@ -261,6 +390,18 @@
                 "answer": "A deep tissue massage may feel intense, especially when working on tight muscles, but it should remain within your comfort level. At Spa Bali Moon, the massage uses slow, firm pressure, and our therapists adjust it throughout the session based on your feedback. Tell your therapist straight away if any pressure feels too strong. If you'd rather have light pressure, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) uses slow, gentle strokes instead."
               },
               {
+                "question": "How much does a deep tissue massage cost in Seminyak?",
+                "answer": "A deep tissue massage costs IDR 269.000 for 1 hour, IDR 359.000 for 1.5 hours and IDR 518.000 for 2 hours, per person. Home service adds IDR 75.000 per therapist in the Seminyak area. For two people, a [couples deep tissue massage](/seminyak/couple-spa/) costs IDR 539.000 for 1 hour, IDR 719.000 for 1.5 hours or IDR 1.039.000 for 2 hours."
+              },
+              {
+                "question": "Which is better, deep tissue or Balinese massage?",
+                "answer": "It depends on what you want. Deep tissue uses firm, slow pressure on tight areas, and [Balinese massage](/seminyak/balinese-massage/) is gentler, for relaxing the whole body. For a first massage, Balinese is the easier start."
+              },
+              {
+                "question": "Is deep tissue the same as sports massage?",
+                "answer": "No. Both can be firm and cost the same for 1 or 1.5 hours, but a [sports massage](/seminyak/sport-massage/) adds kneading and stretching for muscles you use in a sport, while deep tissue works slowly on tightness that has built up over time."
+              },
+              {
                 "question": "What's the difference between Swedish and deep tissue massage?",
                 "answer": "Swedish massage uses lighter to moderate pressure and gentle, flowing movements to promote relaxation. Deep tissue massage uses firmer, slower pressure to target deeper muscle tension and tight areas."
               },
@@ -273,28 +414,8 @@
                 "answer": "As often as your muscles need it: some guests at Spa Bali Moon book a deep tissue massage after surfing or exercise, others make it a regular part of their routine. For a first session, 1 hour suits focused work on the neck, shoulders or back."
               },
               {
-                "question": "Can I have a deep tissue massage at my villa or hotel?",
-                "answer": "Yes. Spa Bali Moon offers deep tissue massage as home service at your villa, hotel or home, for an extra IDR 75.000 per therapist in the Seminyak area. Your therapist brings fresh linen, oils and everything the massage needs."
-              },
-              {
-                "question": "What should I do after a deep tissue massage?",
-                "answer": "Drink plenty of water, rest, and avoid strenuous exercise for the rest of the day after your deep tissue massage. Gentle stretching can also help your muscles recover. If you book Spa Bali Moon's home service, the massage comes to your villa or hotel, so you can rest straight away without travelling back."
-              },
-              {
                 "question": "Is a deep tissue massage good for sciatica?",
                 "answer": "It may ease the muscle tension that often comes with sciatica, but it is not a treatment for sciatica itself, so see a healthcare professional if your symptoms are severe or persistent. At Spa Bali Moon, mention your symptoms before the session so your therapist can adjust the pressure."
-              },
-              {
-                "question": "What are the benefits of a deep tissue massage?",
-                "answer": "A deep tissue massage eases muscle tension and stiffness, especially after exercise, and leaves you feeling looser and more relaxed. At Spa Bali Moon, it typically focuses on the shoulders, neck, lower back, legs and arms."
-              },
-              {
-                "question": "How much does a deep tissue massage cost in Seminyak?",
-                "answer": "IDR 269.000 for 1 hour, IDR 359.000 for 1.5 hours and IDR 518.000 for 2 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist in the Seminyak area. For two people, a couple deep tissue massage costs IDR 539.000 for 1 hour or IDR 719.000 for 1.5 hours."
-              },
-              {
-                "question": "How long does a deep tissue massage take?",
-                "answer": "A deep tissue massage at Spa Bali Moon in Seminyak takes 1 hour (IDR 269.000), 1.5 hours (IDR 359.000) or 2 hours (IDR 518.000) per person."
               },
               {
                 "question": "Can I book a deep tissue massage for today?",
