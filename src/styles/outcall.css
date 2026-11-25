@@ -2358,7 +2358,7 @@
 
 /* Links inside the treatment pages' intro and split texts, and the villa page's
    booking text, in the site's link style (bold gold) like the rest. */
-:is(.about-section-two, .about-section) .text a:not([class]),
+:is(.about-section-two, .about-section, .home-v2 .about-section-three) .text a:not([class]),
 .p-villa-hotel-massage :is(p, li) a:not([class]) {
   display: inline;
   font-family: inherit;
@@ -2366,7 +2366,7 @@
   color: var(--gold-text, #8a6a24);
   text-decoration: none;
 }
-:is(.about-section-two, .about-section) .text a:not([class]):is(:hover, :focus-visible),
+:is(.about-section-two, .about-section, .home-v2 .about-section-three) .text a:not([class]):is(:hover, :focus-visible),
 .p-villa-hotel-massage :is(p, li) a:not([class]):is(:hover, :focus-visible) {
   color: #6e5419;
 }

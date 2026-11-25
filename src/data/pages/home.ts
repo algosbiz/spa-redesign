@@ -71,7 +71,7 @@ export const home = {
     subTitle: "Beyond Relaxation",
     title: "A Seminyak Day Spa Since 2009",
     // Copy rewrite, 15 Oct.
-    text: "After a long flight, a day of surfing or too long in the sun, your body needs time to recover. Spa Bali Moon offers massage, facials and body care to ease tight muscles and refresh tired skin, and we'll help you pick the treatment that suits how you feel.",
+    text: "After a long flight, a day of surfing or too long in the sun, your body needs time to recover. Spa Bali Moon offers massage, facials and body care to ease tight muscles and refresh tired skin, and we'll help you pick the treatment that suits how you feel. If your legs feel heavy after flying, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) is a gentle choice.",
     /** Shown in two lists of three. */
     features: [
       "In Seminyak since 2009",
