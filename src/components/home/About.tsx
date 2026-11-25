@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
+import { linkedText } from "@/lib/linkedText";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { home } from "@/data/pages/home";
 
@@ -86,7 +87,7 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                     {about.title}
                   </h2>
                   <p data-wow-delay="400ms" data-wow-duration="1500ms" className="jsx-about text wow fadeInUp">
-                    {about.text}
+                    {linkedText(about.text)}
                   </p>
                 </div>
                 <div data-wow-delay="200ms" data-wow-duration="1500ms" className="jsx-about list mt-25 wow fadeInDown">

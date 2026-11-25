@@ -36,7 +36,7 @@ const FAQ = [
   {
     question: "Can I book more than just a massage?",
     answer:
-      "Yes. Selected spa treatments can also be arranged in your room, including facials, body scrubs, reflexology, cream baths, manicures and pedicures. They cost the same as at our Seminyak spa, plus IDR 75.000 per therapist in Seminyak. Tell us on WhatsApp which treatments you would like, and we will confirm what can be done at your villa or hotel.",
+      "Yes. Selected spa treatments can also be arranged in your room, including facials, body scrubs, reflexology, cream baths, manicures and pedicures. They cost the same as at our Seminyak spa, plus IDR 75.000 per therapist in Seminyak. Tell us on WhatsApp which treatments you would like, and we will confirm what can be done at your villa or hotel. A [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) can come to your villa or hotel too.",
   },
   {
     question: "Is there an additional fee for home service?",
