@@ -13,7 +13,7 @@ const thaiMassage: Treatment = {
   shortDescription: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
   cardImage: { src: "/images/treatments/cards/thaimassage-warm.webp", alt: "Thai Massage", width: 630, height: 580 },
   seo: {
-    title: "Thai Massage in Seminyak, Bali | Spa Bali Moon",
+    title: "Thai Massage in Seminyak & Bali | Spa Bali Moon",
     description: "Assisted stretching and firm pressure, with no oil. Thai massage in Seminyak from IDR 133.000 for 30 minutes, good after a long flight.",
   },
   hero: {
