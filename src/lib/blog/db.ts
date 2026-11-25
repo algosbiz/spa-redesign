@@ -12,12 +12,46 @@ export function isDatabaseConfigured(): boolean {
   return Boolean(process.env.DATABASE_URL);
 }
 
+/** Waits between tries, in ms: three tries in all. */
+const RETRY_WAITS = [1000, 3000];
+
+/** The database was not reached (a timeout, a dropped connection); an error Postgres answered with has no sourceError. */
+const notReached = (e: unknown) => Boolean((e as { sourceError?: unknown } | null)?.sourceError);
+
+/**
+ * While the site is being built, a read that could not reach the database is
+ * tried again: one connection timeout failed the production deploy of 25 Nov
+ * 2026. Reads only (SELECT), so nothing is ever written twice, and only during
+ * the build, so a visit never waits for the retries.
+ */
+function withBuildRetries(sql: NeonQueryFunction<false, false>): NeonQueryFunction<false, false> {
+  if (process.env.NEXT_PHASE !== "phase-production-build") return sql;
+  return new Proxy(sql, {
+    apply(target, thisArg, args) {
+      const run = () => Reflect.apply(target, thisArg, args);
+      const strings: unknown = args[0];
+      if (!Array.isArray(strings) || !/^\s*SELECT\b/i.test(String(strings[0]))) return run();
+      return (async () => {
+        for (let attempt = 0; ; attempt++) {
+          try {
+            return await run();
+          } catch (e) {
+            if (attempt >= RETRY_WAITS.length || !notReached(e)) throw e;
+            console.warn(`Database not reached, trying again (${attempt + 2} of ${RETRY_WAITS.length + 1})`);
+            await new Promise((resolve) => setTimeout(resolve, RETRY_WAITS[attempt]));
+          }
+        }
+      })();
+    },
+  });
+}
+
 let client: NeonQueryFunction<false, false> | null = null;
 
 /** The tagged-template query function: sql`SELECT … WHERE id = ${id}` (values are sent as parameters). */
 export function getSql(): NeonQueryFunction<false, false> {
   if (!isDatabaseConfigured()) throw new Error("The blog database is not configured: set DATABASE_URL.");
-  client ??= neon(process.env.DATABASE_URL!);
+  client ??= withBuildRetries(neon(process.env.DATABASE_URL!));
   return client;
 }
 
