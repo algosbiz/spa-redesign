@@ -102,12 +102,12 @@
             "leftShapeSrc": "/images/shape/package-four-shape-left.png",
             "images": [
               "/images/services/lymphaticmassage/lymphaticmassage-4.webp",
-              "/images/services/lymphaticmassage/lymphaticmassage-5.webp",
+              "/images/services/lymphaticmassage/lymphaticmassage-5-v2.webp",
               "/images/services/lymphaticmassage/lymphatic-massage-lower-back.webp"
             ],
             "imageAlts": [
               "Gentle lymphatic massage strokes across the abdomen",
-              "Hands sweeping lightly over a guest's stomach",
+              "Therapist gliding a wooden tool along a guest's jawline",
               "Therapist's hands on a guest's lower back during a lymphatic massage"
             ],
             "subTitle": "",
@@ -455,8 +455,8 @@
         },
         "subTitle": "",
         "showBadge": false,
-        "image": "/images/services/lymphaticmassage/lymphaticmassage-7.webp",
-        "imageAlt": "Therapist massaging a guest's abdomen with light pressure",
+        "image": "/images/services/lymphaticmassage/lymphaticmassage-7-v2.webp",
+        "imageAlt": "Therapist gliding a wooden tool over a guest's leg",
         "title": "Before You Book",
         "text": "Lymphatic drainage massage is gentle and suits most guests. If any of these apply to you, check with your doctor first and let us know when you book. Not sure? Message us on WhatsApp and we'll help.",
         "featuresLeft": [
