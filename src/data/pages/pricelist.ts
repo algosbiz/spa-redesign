@@ -50,7 +50,7 @@ export const pricelistPage = {
     titleSpan: "Massage in Seminyak:",
     title: "Prices, Treatments & Packages",
     // The quick answer under the H1 (copy rewrite, 15 Oct).
-    text: "Massage at Spa Bali Moon in Seminyak starts at IDR 90.000 for 30 minutes. A one-hour Balinese massage is IDR 159.000 per person, and a couple's massage starts at IDR 319.000 for two. Open daily 9am–11pm at Jl. Pangkung Sari No. 30. Home service adds IDR 75.000 per therapist in the Seminyak area.",
+    text: "Massage at Spa Bali Moon in Seminyak starts at IDR 90.000 for 30 minutes. A one-hour Balinese massage is IDR 159.000 per person, and a couple's massage starts at IDR 319.000 for two. Open daily 9am–11pm at Jl. Pangkung Sari No. 30. Home service adds IDR 75.000 per therapist in the Seminyak area. All prices include tax.",
     buttonText: "Book Now",
     image: "/images/banners/pricelist.webp",
     imagePosition: "70% 50%",
@@ -75,7 +75,7 @@ export const pricelistPage = {
     subTitle: "Price List",
     title: "Massage & Spa Prices in Seminyak",
     // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
-    text: "Every treatment price at Spa Bali Moon, per person in Indonesian rupiah. At your villa or hotel, home service adds IDR 75.000 per therapist in the Seminyak area.",
+    text: "Every treatment price at Spa Bali Moon, per person in Indonesian rupiah, tax included. At your villa or hotel, home service adds IDR 75.000 per therapist in the Seminyak area.",
     note: "Home service available — extra IDR 75.000 per therapist in the Seminyak area.",
     tabs: [
     {

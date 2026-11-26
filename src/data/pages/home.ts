@@ -43,7 +43,7 @@ export const home = {
      * 5144" left the facts (owner: the homepage said too much there): the
      * WhatsApp button shows that number.
      */
-    prices: ["Treatments from IDR 69.000 per person", "Home service in Seminyak: add IDR 75.000 per therapist"],
+    prices: ["Treatments from IDR 69.000 per person, tax included", "Home service in Seminyak: add IDR 75.000 per therapist"],
     visit: [
       { icon: "pin", text: "Jl. Pangkung Sari No. 30, Seminyak" },
       { icon: "clock", text: "Open daily 9am–11pm" },

@@ -1323,7 +1323,7 @@
   color: #e8d3a2;
 }
 .banner-prices__caption {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.88);
@@ -2620,4 +2620,13 @@
   .intro-inset {
     display: none;
   }
+}
+
+/* "Prices include tax" under the banner price strip (owner, 26 Nov). */
+.banner-prices__note {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
 }

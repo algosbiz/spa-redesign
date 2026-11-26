@@ -71,7 +71,7 @@ export default function MassageKutaPage() {
         titleSpan="Massage in Kuta, Bali:"
         // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
         title="Outcall to Your Hotel or Villa"
-        text="In Kuta, a Spa Bali Moon therapist comes to your hotel, villa or home from our spa in Seminyak, usually a 30 to 50-minute drive. Treatments cost the same as in the spa, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
+        text="In Kuta, a Spa Bali Moon therapist comes to your hotel, villa or home from our spa in Seminyak, usually a 30 to 50-minute drive. Treatments cost the same as in the spa, tax included, plus IDR 150.000 per therapist in Kuta, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
         image="/images/banners/massage-kuta.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/massage-kuta-wide-sm.webp"

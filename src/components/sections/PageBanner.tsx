@@ -210,6 +210,8 @@ export default function PageBanner({
                       {/* The caption ("Per person", "Balinese, for two") is no longer shown: "/ pax" and "/ 2 pax" say it (owner, 21 Oct). */}
                     </div>
                   )}
+                  {/* Tax included (owner, 26 Nov: our advantage over spas that add 21% tax and service). */}
+                  {prices && <p className={`${S} banner-prices__note`}>Prices include tax</p>}
                   {/* "IDR" never ends a line without its amount. */}
                   {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
                   <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
