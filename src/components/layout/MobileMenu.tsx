@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { isUploaded } from "@/lib/uploads";
 import Link from "next/link";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
@@ -119,7 +120,7 @@ export default function MobileMenu({
             <span className="mnav__thumb">
               {/* A cover uploaded in /admin/ lives on another host (R2), which the optimiser does not allow. */}
               {opened && entry.image && (
-                <Image src={entry.image} alt="" fill sizes="72px" unoptimized={!entry.image.startsWith("/")} />
+                <Image src={entry.image} alt="" fill sizes="72px" unoptimized={!entry.image.startsWith("/") && !isUploaded(entry.image)} />
               )}
             </span>
             <span className="mnav__entry-text">

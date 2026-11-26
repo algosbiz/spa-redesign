@@ -88,7 +88,7 @@ export default function PageBanner({
   openingText = "",
   image,
   imagePosition,
-  shapeImage = "/images/shape/banner-two-shape.png",
+  shapeImage = "/images/shape/banner-two-shape.webp",
   actions = (
     <RowButton
       href={whatsappChatUrl}
@@ -136,7 +136,7 @@ export default function PageBanner({
         }`}
       >
         <div className={`${S} banner-two__shape`}>
-          <img src={shapeImage} alt="" aria-hidden="true" fetchPriority="low" decoding="async" className={S} />
+          <img loading="lazy" decoding="async" src={shapeImage} alt="" aria-hidden="true" className={S} />
         </div>
         {/* One photo, so no carousel (25 Oct, speed): the same three wrappers the live
             Swiper rendered, without its script; the slow zoom of the photo is a CSS

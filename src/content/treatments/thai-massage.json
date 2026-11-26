@@ -52,7 +52,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/thaimassage/thaimassage-2.webp",
         "primaryAlt": "Therapist lifting a guest's leg into a Thai massage stretch",
@@ -76,7 +76,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/thaimassage/thaimassage-4.webp",
               "/images/services/thaimassage/thaimassage-5.webp",
@@ -215,7 +215,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/thaimassage/thaimassage-8.webp",
         "imageAlt": "Seated Thai massage twist",
         "subTitle": "",
@@ -241,8 +241,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -379,8 +379,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Thai Massage",
             "text": "Book one of these with a Thai massage and enjoy both in one visit.",

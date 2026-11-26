@@ -8,8 +8,8 @@ export default function HomeReserveCta() {
       <ReserveCta
         standardSpacing
         {...home.reserve}
-        leftShapeSrc="/images/shape/banner-six-shape2.png"
-        rightShapeSrc="/images/shape/step-shape-left.png"
+        leftShapeSrc="/images/shape/banner-six-shape2.webp"
+        rightShapeSrc="/images/shape/step-shape-left.webp"
       />
     </div>
   );

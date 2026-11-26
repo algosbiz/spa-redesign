@@ -40,7 +40,7 @@ export const getLocale = cache(async (): Promise<Locale> => {
 type MessageFiles = { ui: Messages; content: Messages };
 
 // One pair of files per language: ui.json for the text Client Components show
-// (sent to the browser with the page), content.json for the rest (server only).
+// (the browser fetches it: src/i18n/client.tsx), content.json for the rest (server only).
 const loaders: Record<Exclude<Locale, "en">, () => Promise<MessageFiles>> = {
   ja: async () => ({ ui: (await import("./messages/ja/ui.json")).default, content: (await import("./messages/ja/content.json")).default }),
   ko: async () => ({ ui: (await import("./messages/ko/ui.json")).default, content: (await import("./messages/ko/content.json")).default }),
@@ -51,11 +51,6 @@ const loaders: Record<Exclude<Locale, "en">, () => Promise<MessageFiles>> = {
 const loadMessages = cache(async (locale: Locale): Promise<MessageFiles> =>
   locale === "en" ? { ui: {}, content: {} } : loaders[locale](),
 );
-
-/** The translations Client Components get (I18nProvider in RootDocument). */
-export async function getUiMessages(locale: Locale): Promise<Messages> {
-  return (await loadMessages(locale)).ui;
-}
 
 /**
  * Untranslated text, written to I18N_MISSING_FILE (one JSON line each) when

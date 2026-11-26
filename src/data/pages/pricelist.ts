@@ -1487,14 +1487,14 @@ export const pricelistPage = {
 
   /** Icon on every card of a package group, keyed by `cardTitle`. */
   packageIcons: {
-    "Balinese Massage": "/images/icon/icon-spa/Balinese.png",
-    "Thai Massage": "/images/icon/icon-spa/Thai Massage.png",
-    "Cream Bath": "/images/icon/icon-spa/Cream Bath.png",
-    "Body Scrub": "/images/icon/icon-spa/Body Scrub.png",
-    "Hot Stone": "/images/icon/icon-spa/Hot Stone.png",
-    "Bali Moon Facial": "/images/icon/icon-spa/Biokos Facial.png",
-    "Mani Pedi": "/images/icon/icon-spa/menipedi.png",
-    "Couple Massage": "/images/icon/icon-spa/Couple Massage.png"
+    "Balinese Massage": "/images/icon/icon-spa/Balinese.webp",
+    "Thai Massage": "/images/icon/icon-spa/Thai Massage.webp",
+    "Cream Bath": "/images/icon/icon-spa/Cream Bath.webp",
+    "Body Scrub": "/images/icon/icon-spa/Body Scrub.webp",
+    "Hot Stone": "/images/icon/icon-spa/Hot Stone.webp",
+    "Bali Moon Facial": "/images/icon/icon-spa/Biokos Facial.webp",
+    "Mani Pedi": "/images/icon/icon-spa/menipedi.webp",
+    "Couple Massage": "/images/icon/icon-spa/Couple Massage.webp"
   } as Record<string, string>,
 
   faq: {

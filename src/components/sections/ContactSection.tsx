@@ -87,13 +87,11 @@ export default function ContactSection({
 
   return el(
     <>
-      <link rel="preconnect" href="https://challenges.cloudflare.com" />
-      <link rel="dns-prefetch" href="https://challenges.cloudflare.com" />
       <section className="contact-details contact-details--rail pt-100 pb-100">
         <div className="jsx-contact container cf-tail">
           <div className="jsx-contact cf-rail">
             <aside className="jsx-contact cf-rail__info">
-              <img src="/images/logo/sbm.webp" alt="" aria-hidden="true" className="jsx-contact cf-rail__mark" />
+              <img loading="lazy" decoding="async" src="/images/logo/sbm.webp" alt="" aria-hidden="true" className="jsx-contact cf-rail__mark" />
               <span className="jsx-contact cf-rail__eyebrow">{infoSubTitle}</span>
               <h2 className="jsx-contact cf-rail__title">{infoTitle}</h2>
               <p className="jsx-contact cf-rail__text">{infoText}</p>

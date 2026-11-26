@@ -365,6 +365,13 @@
     visibility: hidden;
   }
 }
+/* With reduced motion the rule above does not run to its end, and React now
+   comes at the first touch or scroll (25 Nov, tools/speed/): not shown at all. */
+@media (prefers-reduced-motion: reduce) {
+  #preloader {
+    display: none;
+  }
+}
 
 /* Heading look on another tag (owner, 5 Oct: heading order). Text that was a
    heading only for its look is now a <div>, and on /reservation/ some

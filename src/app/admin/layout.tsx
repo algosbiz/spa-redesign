@@ -22,7 +22,7 @@ export const viewport: Viewport = {
  */
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <RootDocument>
+    <RootDocument admin>
       <div className="adm-root" data-lenis-prevent="">
         {children}
       </div>

@@ -62,8 +62,8 @@ export default function AboutPage() {
         mobilePhoto="/images/services/dayspaseminyak/dayspa-1-wide-sm.webp"
       />
       <QuickFacts
-        leftShapeSrc="/images/shape/feature-six-shape.png"
-        rightShapeSrc="/images/shape/service-shape-right.png"
+        leftShapeSrc="/images/shape/feature-six-shape.webp"
+        rightShapeSrc="/images/shape/service-shape-right.webp"
         text={`For ${years} years, Spa Bali Moon has offered traditional Balinese massage and spa care in Seminyak. Guests visit our day spa or book the same treatments at their villa, hotel or home, at the same prices plus a home service fee.`}
         look="faq"
         items={[
@@ -95,7 +95,7 @@ export default function AboutPage() {
           Clean & Hygienic and Visit Us): decorations only at the top of the first and the bottom
           of the last (owner, 28 Oct). */}
       <AboutIntro
-        leftShapeSrc="/images/shape/leaf/8a.png"
+        leftShapeSrc="/images/shape/leaf/8a.webp"
         rightShapeSrc={null}
         removeBottomPadding
         subTitle="Our Story"
@@ -111,7 +111,7 @@ export default function AboutPage() {
         secondaryAlt="Therapist massaging the back of a guest's legs on a batik sheet"
       />
       <AboutSplit
-        leftShapeSrc="/images/shape/leaf/3a.png"
+        leftShapeSrc="/images/shape/leaf/3a.webp"
         rightShapeSrc={null}
         subTitle="Who Treats You"
         title={<>Our Therapists</>}
@@ -134,8 +134,8 @@ export default function AboutPage() {
         imageAlt="Hands massaging a guest's shoulders and upper back"
       />
       <AboutSplitAlt
-        leftShapeSrc="/images/shape/leaf/13a.png"
-        rightShapeSrc="/images/shape/leaf/1a-v2.png"
+        leftShapeSrc="/images/shape/leaf/13a.webp"
+        rightShapeSrc="/images/shape/leaf/1a-v2.webp"
         subTitle="What We Use"
         badgeTopText="Products"
         badgeBottomText="Natural oils & spa brands"
@@ -160,7 +160,7 @@ export default function AboutPage() {
       />
       <AboutSplit
         leftShapeSrc={null}
-        rightShapeSrc="/images/shape/leaf/6a.png"
+        rightShapeSrc="/images/shape/leaf/6a.webp"
         subTitle="Clean & Hygienic"
         badgeTopText="Hygiene"
         badgeBottomText="Clean towels for every guest"
@@ -182,8 +182,8 @@ export default function AboutPage() {
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
-          leftShapeSrc="/images/shape/banner-five-shape1.png"
-          rightShapeSrc="/images/shape/leaf/10a.png"
+          leftShapeSrc="/images/shape/banner-five-shape1.webp"
+          rightShapeSrc="/images/shape/leaf/10a.webp"
           largeTopPadding
           imageTitle=""
           subTitle="Frequently Asked Questions"
@@ -194,8 +194,8 @@ export default function AboutPage() {
         />
       </div>
       <ReserveCta
-        leftShapeSrc="/images/shape/banner-six-shape2.png"
-        rightShapeSrc="/images/shape/step-shape-left.png"
+        leftShapeSrc="/images/shape/banner-six-shape2.webp"
+        rightShapeSrc="/images/shape/step-shape-left.webp"
         standardSpacing
         title="Visit Spa Bali Moon in Seminyak"
         text="Book a massage, facial or body treatment at our Seminyak spa, or have it at your villa or hotel for an extra IDR 75.000 per therapist in the Seminyak area."

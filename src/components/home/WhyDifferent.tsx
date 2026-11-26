@@ -17,7 +17,7 @@ export default function WhyDifferent() {
       <section id="services" className="service-section section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130 v2-why">
         {/* Only the top-right leaf: live's bottom-left spa tray would sit on the heading column. */}
         <div className="shape2">
-          <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/service-shape-right.png" alt="" />
+          <img loading="lazy" decoding="async" className="animation__arryUpDown" src="/images/shape/service-shape-right.webp" alt="" />
         </div>
         <div className="container">
           <div className="v2-why__grid">

@@ -56,7 +56,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/hairbraiding/hairbraiding-2.webp",
         "primaryAlt": "Therapist braiding purple extensions into a girl's hair",
@@ -80,7 +80,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/hairbraiding/hairbraiding-4.webp",
               "/images/services/hairbraiding/hairbraiding-5.webp",
@@ -165,7 +165,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/hairbraiding/hairbraiding-7.webp",
         "imageAlt": "Therapist finishing pink and blue braids",
         "subTitle": "",
@@ -190,8 +190,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -327,8 +327,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with Hair Braiding",
             "text": "Book one of these with hair braiding and enjoy both in one visit.",

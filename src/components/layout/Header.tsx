@@ -280,7 +280,15 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
           <LanguageSwitcher look="square" id="lang-menu-mnav" />
           <Link prefetch={false} href="/" onClick={closeSidebar} className="logo offcanvas-logo mnav__logo">
             {/* eslint-disable-next-line @next/next/no-img-element -- the live site's plain <img> */}
-            <img src="/images/logo/SMBtitle.svg" alt={business.name} width="444" height="80" className="jsx-header" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/images/logo/SMBtitle.svg"
+              alt={business.name}
+              width="444"
+              height="80"
+              className="jsx-header"
+            />
           </Link>
           <button
             ref={closeButtonRef}

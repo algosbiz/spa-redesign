@@ -64,7 +64,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/couplemassage/couplemassage-2-warm.webp",
         "primaryAlt": "Two therapists giving a couple massage side by side",
@@ -88,7 +88,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/couplemassage/couplemassage-4-warm.webp",
               "/images/services/couplemassage/couplemassage-5-warm.webp",
@@ -325,7 +325,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
         "imageAlt": "Two therapists massaging a couple's shoulders",
         "subTitle": "",
@@ -351,7 +351,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Which Couples Massage Suits You Both?",
         "text": "Balinese is the gentlest of the four and the easiest to share. Traditional and deep tissue are firmer, and warm candle uses warm oil and smooth strokes. You each choose your own pressure.",
         "caption": "The four couples massages compared",
@@ -425,8 +425,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -484,8 +484,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -514,7 +514,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Couples Massage Prices at Your Villa or Hotel",
         "text": "Totals for two guests and two therapists in Seminyak, Petitenget and Kerobokan, with the home service fee already added. In Canggu, North Kuta and Kuta, add IDR 150.000 to any total. The four packages come to IDR 755.000 to IDR 1.025.000 in the Seminyak area. Totals include tax, with no extra charges.",
         "caption": "Couples massage totals at a villa or hotel, for two guests, fee included",
@@ -636,8 +636,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Couples Massage",
             "text": "Book one of these with a couples massage and enjoy both in one visit.",

@@ -53,7 +53,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/manicurepedicure/manicurepedicure-2.webp",
         "primaryAlt": "Nail therapist giving a manicure at a nail table",
@@ -77,7 +77,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/manicurepedicure/manicurepedicure-4.webp",
               "/images/services/manicurepedicure/manicurepedicure-5.webp",
@@ -261,7 +261,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/manicurepedicure/manicurepedicure-8.webp",
         "imageAlt": "Nail therapist filing a guest's nails",
         "subTitle": "",
@@ -286,8 +286,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -405,8 +405,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Manicure & Pedicure",
             "text": "Book one of these with a manicure and pedicure and enjoy both in one visit.",

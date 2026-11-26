@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
+import { CARD_SIZES, cardImage } from "@/lib/blog/cardImage";
 import SoftHeader from "@/components/sections/SoftHeader";
 import type { PostSummary } from "@/lib/blog/types";
 
@@ -38,11 +39,11 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                     <div className="inner-box">
                       <div className="image-box">
                         <div className="image">
-                          <Link href={href}>
+                          <Link prefetch={false} href={href}>
                             <img
                               loading="lazy"
                               decoding="async"
-                              src={post.cover_image || FALLBACK_IMAGE}
+                              {...cardImage(post.cover_image || FALLBACK_IMAGE, CARD_SIZES)}
                               alt={post.title}
                             />
                           </Link>
@@ -54,7 +55,7 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                           {post.category ? <span className="dot">{post.category}</span> : null}
                         </div>
                         <h2 className="title look-h4">
-                          <Link href={href}>{post.title}</Link>
+                          <Link prefetch={false} href={href}>{post.title}</Link>
                         </h2>
                         {/* What the reader will learn: the article's excerpt
                             from /admin/ (copy rewrite, 15 Oct). */}
@@ -64,7 +65,7 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                             The div keeps it on a line of its own, at the
                             bottom of the card (custom.css). */}
                         <div className="read-more">
-                          <Link className="readMore-btn" href={href}>
+                          <Link prefetch={false} className="readMore-btn" href={href}>
                             Read the guide<span className="sr-only">: {post.title}</span>
                           </Link>
                         </div>

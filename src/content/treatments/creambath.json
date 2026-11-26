@@ -57,7 +57,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/creambath/creambath-2.webp",
         "primaryAlt": "Therapist working cream into a guest's scalp during a creambath",
@@ -81,7 +81,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/creambath/creambath-4.webp",
               "/images/services/creambath/creambath-5.webp",
@@ -248,7 +248,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/creambath/creambath-8.webp",
         "imageAlt": "Hands massaging cream along the parting of a guest's hair",
         "subTitle": "",
@@ -274,8 +274,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -333,7 +333,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Cream Bath Prices at the Spa and Your Villa",
         "text": "The total per person, with the home service fee already added for a villa or hotel. Totals include tax, with no extra charges.",
         "caption": "Cream bath prices at the spa and at a villa or hotel",
@@ -457,8 +457,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Cream Bath",
             "text": "Book one of these with a cream bath and enjoy both in one visit.",

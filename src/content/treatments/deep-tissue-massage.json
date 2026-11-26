@@ -49,7 +49,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/deeptissuemassage/deeptissuemassage-2.webp",
         "primaryAlt": "Therapist leaning in with her forearm during a deep tissue massage",
@@ -73,7 +73,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/deeptissuemassage/deeptissuemassage-4.webp",
               "/images/services/deeptissuemassage/deeptissuemassage-5.webp",
@@ -158,7 +158,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/deeptissuemassage/deeptissuemassage-6.webp",
         "imageAlt": "Therapist applying firm pressure to a guest's lower back",
         "subTitle": "",
@@ -184,7 +184,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Deep Tissue, Sports, Traditional or Balinese?",
         "text": "Choose deep tissue for tightness that keeps coming back, and sports massage for muscles worked hard by a sport or activity. Traditional is a firm full-body massage at a lower price, and Balinese is the gentler choice for relaxing.",
         "caption": "Deep tissue, sports, traditional and Balinese massage compared",
@@ -257,8 +257,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -315,8 +315,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -327,7 +327,7 @@
         },
         "subTitle": "",
         "showBadge": false,
-        "image": "/images/services/massagehotelvilla/massagehotelvilla-8.webp",
+        "image": "/images/services/massagehotelvilla/massagehotelvilla-8-1200.webp",
         "imageAlt": "Guest in a straw hat resting at the edge of a pool beside a tray of fruit",
         "title": "After a Deep Tissue Massage",
         "text": "Drink water, rest and skip hard exercise for the rest of the day. The areas your therapist worked on can feel a little tender afterwards; if pain is strong or doesn't settle, see a doctor. A few things that help:",
@@ -347,7 +347,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "subTitle": "",
         "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
         "imageAlt": "Therapist giving a massage beside a villa pool",
@@ -439,8 +439,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Deep Tissue Massage",
             "text": "Book one of these with a deep tissue massage and enjoy both in one visit.",

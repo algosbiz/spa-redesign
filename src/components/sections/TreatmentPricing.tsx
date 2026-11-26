@@ -72,7 +72,7 @@ export default function TreatmentPricing({
   title = <>Our Flexible Price</>,
   text = "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci. Nunc id massa ante. Suspendisse sit amet neque euismod, convallis quam eget,",
   packages = DEFAULT_PACKAGES,
-  leftShapeSrc = "/images/shape/leaf/4a.png",
+  leftShapeSrc = "/images/shape/leaf/4a.webp",
   images = [],
   imageAlts = [],
   topContent,
@@ -94,7 +94,7 @@ export default function TreatmentPricing({
             loading="lazy"
             decoding="async"
             className="animation__arryLeftRight"
-            src="/images/shape/pricing-three-shape-right.png"
+            src="/images/shape/pricing-three-shape-right.webp"
             alt=""
           />
         </div>

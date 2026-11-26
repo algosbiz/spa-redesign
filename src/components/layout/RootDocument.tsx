@@ -4,13 +4,16 @@ import MobileActionBar from "@/components/layout/MobileActionBar";
 import Preloader from "@/components/layout/Preloader";
 import SiteChrome from "@/components/layout/SiteChrome";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import Hydrated from "@/components/ui/Hydrated";
 import HydrateLater from "@/components/ui/HydrateLater";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { I18nProvider } from "@/i18n/client";
 import { defaultLocale, localeSettings, servedLocales, type Locale } from "@/i18n/config";
-import { getI18n, getUiMessages } from "@/i18n/server";
+import { getI18n } from "@/i18n/server";
 import "@/app/globals.css";
 import "@/styles/live.css";
+import "@/styles/icons.css";
+import "@/styles/light-images.css";
 import "@/styles/custom.css";
 import "@/styles/gold.css";
 import "@/styles/rollover.css";
@@ -35,9 +38,12 @@ import "@/styles/i18n.css";
  */
 export default async function RootDocument({
   locale = defaultLocale,
+  admin = false,
   children,
 }: {
   locale?: Locale;
+  /** The blog admin: its scripts and styles load at once (tools/speed/). */
+  admin?: boolean;
   children: React.ReactNode;
 }) {
   const { render } = await getI18n();
@@ -45,10 +51,17 @@ export default async function RootDocument({
     // `gold-b`: the owner's gold #B88C35 on every page (1 Oct). Remove the
     // class to go back to the live gold #A78627, which live.css still
     // defines, on every page (src/styles/gold.css).
-    <html lang={localeSettings[locale].htmlLang} className={`gold-b ${fraunces.variable} ${jakarta.variable}`}>
+    // `data-site`: the page's scripts wait for the reader, its styles are in the
+    // page (tools/speed/README.md).
+    <html
+      lang={localeSettings[locale].htmlLang}
+      data-site={admin ? undefined : ""}
+      className={`gold-b ${fraunces.variable} ${jakarta.variable}`}
+    >
       <body>
-        <I18nProvider locale={locale} messages={await getUiMessages(locale)} languages={servedLocales}>
+        <I18nProvider locale={locale} languages={servedLocales}>
           {children}
+          <Hydrated />
           {await render(
             <SiteChrome>
               <FloatingWhatsApp />

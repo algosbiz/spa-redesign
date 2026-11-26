@@ -5,7 +5,7 @@ import { useId } from "react";
  * petals filled with a gold-to-white gradient, a gold radial glow at the heart.
  * Class names are the live CSS-module names (renamed, see src/styles/live.css).
  */
-const PETAL = "M18 6C34 -12 52 -28 56 -54C60 -80 44 -103 16 -105C-12 -107 -32 -90 -31 -64C-30 -40 -16 -14 -12 6Z";
+const PETAL = "M18 6C34-12 52-28 56-54c4-26-12-49-40-51-28-2-48 15-47 41 1 24 15 50 19 70z";
 const STROKE = "rgba(150, 118, 44, 0.28)";
 
 /** React ids contain characters that are awkward inside url(#…). */

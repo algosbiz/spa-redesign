@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { uploadedImage } from "@/lib/uploadedImage";
+import { isUploaded } from "@/lib/uploads";
+
+/** The photo is 1120px wide at most, the full width below that. */
+const PHOTO_SIZES = "(max-width: 1199px) 100vw, 1120px";
 
 /**
  * The light page header of the guides, their list and the legal pages
@@ -9,7 +14,8 @@ import type { ReactNode } from "react";
  * in Literata at a calm size, then a line under it (the article's byline and
  * reading time, no dates; the list's one-line intro) and, for an article,
  * its cover photo as a wide rounded picture. Phones get a photo's `-sm` file
- * when it is one from /public.
+ * when it is one from /public, and the image optimiser's size of one uploaded
+ * in /admin/ (a 1428px upload was the phone's LCP image, 121 KB).
  * Styles: src/styles/outcall.css, section 24.
  */
 export default function SoftHeader({
@@ -64,7 +70,7 @@ export default function SoftHeader({
           <div className="soft-header__photo">
             <picture>
               {small && <source media="(max-width: 767px)" srcSet={small} />}
-              <img src={image} alt="" fetchPriority="high" decoding="async" />
+              <img {...(isUploaded(image) ? uploadedImage(image, PHOTO_SIZES, 1080) : { src: image })} alt="" fetchPriority="high" decoding="async" />
             </picture>
           </div>
         )}

@@ -41,7 +41,7 @@ const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
       <ellipse cx="12" cy="18.5" rx="8.5" ry="2.8" />
       <ellipse cx="12" cy="13.2" rx="6.3" ry="2.4" />
       <ellipse cx="12" cy="8.4" rx="4.2" ry="2" />
-      <path d="M9 4.2c.8-.7.8-1.4 0-2.1M12 4.2c.8-.7.8-1.4 0-2.1M15 4.2c.8-.7.8-1.4 0-2.1" />
+      <path d="M9 4.2c.8-.7.8-1.4 0-2.1m3 2.1c.8-.7.8-1.4 0-2.1m3 2.1c.8-.7.8-1.4 0-2.1" />
     </>
   ),
   home: (
@@ -56,7 +56,7 @@ const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
     <>
       <path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3.5 21h17" />
       <path d="M10 21v-3.5h4V21" />
-      <path d="M9 7.5h1M14 7.5h1M9 11h1M14 11h1M9 14.5h1M14 14.5h1" />
+      <path d="M9 7.5h1m4 0h1M9 11h1m4 0h1M9 14.5h1m4 0h1" />
     </>
   ),
   calendar: (
@@ -68,7 +68,7 @@ const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
   ),
   book: (
     <>
-      <path d="M3 5.5c2.6-1.5 6-1.5 9 .6 3-2.1 6.4-2.1 9-.6V19c-2.6-1.5-6-1.5-9 .6-3-2.1-6.4-2.1-9-.6z" />
+      <path d="M3 5.5C5.6 4 9 4 12 6.1 15 4 18.4 4 21 5.5V19c-2.6-1.5-6-1.5-9 .6-3-2.1-6.4-2.1-9-.6z" />
       <path d="M12 6.1v13.5" />
     </>
   ),

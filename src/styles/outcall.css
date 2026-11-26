@@ -694,8 +694,8 @@
 .banner-two-area.section__decoration-bottom:has(+ .bg-sub.section__decoration-top)::after,
 :has(+ .bg-sub.section__decoration-top) > .banner-two-area.section__decoration-bottom:last-child::after {
   background: var(--theme-color-gray);
-  -webkit-mask: url(/images/shape/section-shape-bottom.png) no-repeat bottom;
-  mask: url(/images/shape/section-shape-bottom.png) no-repeat bottom;
+  -webkit-mask: var(--torn-bottom) no-repeat bottom;
+  mask: var(--torn-bottom) no-repeat bottom;
 }
 .banner-two-area.section__decoration-bottom + .bg-sub.section__decoration-top::before,
 :has(> .banner-two-area.section__decoration-bottom:last-child) + .bg-sub.section__decoration-top::before {

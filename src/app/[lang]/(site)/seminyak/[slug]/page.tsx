@@ -70,13 +70,13 @@ const NAMES: Record<string, { heading: string; inline: string; service?: string 
  */
 const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = {
   QuickFacts: {
-    leftShapeSrc: "/images/shape/feature-six-shape.png",
-    rightShapeSrc: "/images/shape/service-shape-right.png",
+    leftShapeSrc: "/images/shape/feature-six-shape.webp",
+    rightShapeSrc: "/images/shape/service-shape-right.webp",
   },
-  FaqSection: { leftShapeSrc: "/images/shape/banner-five-shape1.png", rightShapeSrc: "/images/shape/leaf/10a.png" },
+  FaqSection: { leftShapeSrc: "/images/shape/banner-five-shape1.webp", rightShapeSrc: "/images/shape/leaf/10a.webp" },
   ReserveCta: {
-    leftShapeSrc: "/images/shape/banner-six-shape2.png",
-    rightShapeSrc: "/images/shape/step-shape-left.png",
+    leftShapeSrc: "/images/shape/banner-six-shape2.webp",
+    rightShapeSrc: "/images/shape/step-shape-left.webp",
   },
 };
 

@@ -20,7 +20,7 @@
               "type": "PageBanner",
               "props": {
                 "image": "/images/banners/balinese-massage.webp",
-                "shapeImage": "/images/shape/banner-two-shape.png",
+                "shapeImage": "/images/shape/banner-two-shape.webp",
                 "subTitle": "",
                 "titleSpan": "Balinese Massage",
                 "title": "in Seminyak, Bali"
@@ -63,7 +63,7 @@
             "primaryAlt": "Therapist giving a Balinese massage on a guest's upper back",
             "secondaryImage": "/images/services/balinesemassage/balinesemassage-3.webp",
             "secondaryAlt": "Therapist's hands pressing along a guest's oiled back",
-            "leftShapeSrc": "/images/shape/about-two-left.png",
+            "leftShapeSrc": "/images/shape/about-two-left.webp",
             "rightShapeSrc": "/images/shape/about-two-right.png",
             "subTitle": "",
             "title": "What Is Balinese Massage?",
@@ -101,7 +101,7 @@
             {
               "type": "TreatmentPricing",
               "props": {
-                "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+                "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
                 "images": [
                   "/images/services/balinesemassage/balinesemassage-4.webp",
                   "/images/services/balinesemassage/balinesemassage-5.webp",
@@ -258,7 +258,7 @@
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
                 "imageAlt": "Therapist massaging a guest's shoulders and upper back",
-                "rightShapeSrc": "/images/shape/about-right-shape.png",
+                "rightShapeSrc": "/images/shape/about-right-shape.webp",
                 "subTitle": "",
                 "title": "Relaxing and Muscle-Focused in One",
                 "text": "Balinese massage combines relaxation with muscle-focused work in one treatment, so it suits travellers, office workers and active guests alike. Why guests choose it:",
@@ -292,8 +292,8 @@
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-9.webp",
                 "imageAlt": "Massage oil being poured into a therapist's palm",
-                "leftShapeSrc": "/images/shape/step-shape-left.png",
-                "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+                "leftShapeSrc": "/images/shape/step-shape-left.webp",
+                "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
                 "rightDecoration": {
                   "$jsx": {
                     "type": "FloralDecoration",
@@ -334,7 +334,7 @@
               "props": {
                 "image": "/images/services/balinesemassage/balinesemassage-10.webp",
                 "imageAlt": "Therapist massaging the backs of a guest's legs",
-                "leftShapeSrc": "/images/shape/leaf/4a.png",
+                "leftShapeSrc": "/images/shape/leaf/4a.webp",
                 "rightShapeSrc": "/images/shape/banner-three-shape2.png",
                 "subTitle": "",
                 "title": "What to Expect from a Balinese Massage",
@@ -375,7 +375,7 @@
                   "props": {
                     "loading": "lazy",
                     "decoding": "async",
-                    "src": "/images/shape/step-shape-left.png",
+                    "src": "/images/shape/step-shape-left.webp",
                     "alt": "",
                     "className": "jsx-balinese-massage animation__arryUpDown"
                   }
@@ -463,8 +463,8 @@
                 "subTitle": "Good Together",
                 "title": "Treatments to Pair with a Balinese Massage",
                 "text": "Book one of these with a Balinese massage and enjoy both in one visit.",
-                "leftShapeSrc": "/images/shape/service-shape-left.png",
-                "rightShapeSrc": "/images/shape/service-shape-right.png",
+                "leftShapeSrc": "/images/shape/service-shape-left.webp",
+                "rightShapeSrc": "/images/shape/service-shape-right.webp",
                 "embedded": true,
                 "related": [
                   "/seminyak/facial/",
@@ -495,7 +495,7 @@
                   "props": {
                     "loading": "lazy",
                     "decoding": "async",
-                    "src": "/images/shape/step-shape-left.png",
+                    "src": "/images/shape/step-shape-left.webp",
                     "alt": "",
                     "className": "jsx-balinese-massage animation__arryUpDown"
                   }

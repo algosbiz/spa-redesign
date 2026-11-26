@@ -91,7 +91,7 @@
   .about-section > .shape1 {
     display: none;
   }
-  .about-section > .shape2:not(:has(img[src$="about-right-shape.png"], img[src$="banner-three-shape2.png"], img[data-deco-orig$="about-right-shape.png"], img[data-deco-orig$="banner-three-shape2.png"])) {
+  .about-section > .shape2:not(:has(img[src$="about-right-shape.webp"], img[src$="banner-three-shape2.png"], img[data-deco-orig$="about-right-shape.webp"], img[data-deco-orig$="banner-three-shape2.png"])) {
     display: none;
   }
 }
@@ -519,7 +519,7 @@
       .about-section-two > .shape2,
       .pricing-section-three > .shape2,
       .testimonial-section-two > .shape2,
-      .about-section > .shape1:has(img[src$="about-left-shape.png"], img[data-deco-orig$="about-left-shape.png"]),
+      .about-section > .shape1:has(img[src$="about-left-shape.webp"], img[data-deco-orig$="about-left-shape.webp"]),
       .faq-section > .shape1,
       .visit-us > .shape1,
       .service-section-two > .shape1,
@@ -599,40 +599,40 @@
 }
 
 /* The drawn size of each image (see above). */
-[src$="/leaf/10a.png"] { --r: 0.907; }
-[src$="/leaf/11a.png"] { --r: 1.025; }
-[src$="/leaf/12a.png"] { --r: 1.026; }
-[src$="/leaf/13a.png"] { --r: 0.986; }
-[src$="/leaf/1a-v2.png"] { --r: 1.034; }
-[src$="/leaf/2a.png"] { --r: 0.951; }
-[src$="/leaf/3a.png"] { --r: 0.976; }
-[src$="/leaf/4a.png"] { --r: 0.913; }
-[src$="/leaf/5a.png"] { --r: 0.984; }
-[src$="/leaf/6a.png"] { --r: 0.876; }
-[src$="/leaf/7a.png"] { --r: 0.993; }
-[src$="/leaf/8a.png"] { --r: 0.951; }
-[src$="/leaf/9a.png"] { --r: 1.054; }
-[src$="/about-left-shape.png"] { --r: 0.955; }
-[src$="/about-right-shape.png"] { --r: 0.806; }
-[src$="/about-two-left.png"] { --r: 1.379; }
-[src$="/banner-five-shape1.png"] { --r: 1.017; }
+[src$="/leaf/10a.webp"] { --r: 0.907; }
+[src$="/leaf/11a.webp"] { --r: 1.025; }
+[src$="/leaf/12a.webp"] { --r: 1.026; }
+[src$="/leaf/13a.webp"] { --r: 0.986; }
+[src$="/leaf/1a-v2.webp"] { --r: 1.034; }
+[src$="/leaf/2a.webp"] { --r: 0.951; }
+[src$="/leaf/3a.webp"] { --r: 0.976; }
+[src$="/leaf/4a.webp"] { --r: 0.913; }
+[src$="/leaf/5a.webp"] { --r: 0.984; }
+[src$="/leaf/6a.webp"] { --r: 0.876; }
+[src$="/leaf/7a.webp"] { --r: 0.993; }
+[src$="/leaf/8a.webp"] { --r: 0.951; }
+[src$="/leaf/9a.webp"] { --r: 1.054; }
+[src$="/about-left-shape.webp"] { --r: 0.955; }
+[src$="/about-right-shape.webp"] { --r: 0.806; }
+[src$="/about-two-left.webp"] { --r: 1.379; }
+[src$="/banner-five-shape1.webp"] { --r: 1.017; }
 [src$="/banner-six-shape.png"] { --r: 0.801; }
-[src$="/banner-six-shape2.png"] { --r: 1.626; }
+[src$="/banner-six-shape2.webp"] { --r: 1.626; }
 [src$="/banner-three-shape.png"] { --r: 1.379; }
 [src$="/banner-three-shape2.png"] { --r: 1.042; }
-[src$="/banner-two-shape.png"] { --r: 1.972; }
-[src$="/feature-six-shape.png"] { --r: 1.311; }
+[src$="/banner-two-shape.webp"] { --r: 1.972; }
+[src$="/feature-six-shape.webp"] { --r: 1.311; }
 [src$="/footer-shape-left.png"] { --r: 0.844; }
-[src$="/mirror-left-shape.png"] { --r: 0.955; }
-[src$="/package-four-shape-left.png"] { --r: 0.821; }
-[src$="/package-shape-right.png"] { --r: 1.791; }
-[src$="/pricing-three-shape-right.png"] { --r: 1.794; }
-[src$="/service-four-shape-right.png"] { --r: 1.432; }
-[src$="/service-shape-left.png"] { --r: 0.822; }
-[src$="/service-shape-right.png"] { --r: 1.505; }
-[src$="/step-shape-left.png"] { --r: 1.018; }
-[src$="/testimonial-two-shape-left.png"] { --r: 1.151; }
-[src$="/testimonial-two-shape-right.png"] { --r: 1.791; }
+[src$="/mirror-left-shape.webp"] { --r: 0.955; }
+[src$="/package-four-shape-left.webp"] { --r: 0.821; }
+[src$="/package-shape-right.webp"] { --r: 1.791; }
+[src$="/pricing-three-shape-right.webp"] { --r: 1.794; }
+[src$="/service-four-shape-right.webp"] { --r: 1.432; }
+[src$="/service-shape-left.webp"] { --r: 0.822; }
+[src$="/service-shape-right.webp"] { --r: 1.505; }
+[src$="/step-shape-left.webp"] { --r: 1.018; }
+[src$="/testimonial-two-shape-left.webp"] { --r: 1.151; }
+[src$="/testimonial-two-shape-right.webp"] { --r: 1.791; }
 [src$="/video-shape.png"] { --r: 0.972; }
 
 /* The leaf of "Visit us" is cut flat on its left side: turned over, its flat

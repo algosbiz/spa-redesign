@@ -68,7 +68,7 @@ export default function Steps() {
           loading="lazy"
           decoding="async"
           className="sway_Y__animationY"
-          src="/images/shape/package-four-shape-left.png"
+          src="/images/shape/package-four-shape-left.webp"
           alt=""
           aria-hidden="true"
         />

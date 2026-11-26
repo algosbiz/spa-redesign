@@ -81,8 +81,8 @@ export default async function VisitUs({
   variant = "split",
   photo = "/images/services/dayspaseminyak/dayspa-2.webp",
   look = "rows",
-  leftShapeSrc = "/images/shape/testimonial-two-shape-left.png",
-  rightShapeSrc = "/images/shape/leaf/2a.png",
+  leftShapeSrc = "/images/shape/testimonial-two-shape-left.webp",
+  rightShapeSrc = "/images/shape/leaf/2a.webp",
   note,
 }: {
   /** A sentence after the lead (the homepage: the spa's showers and Wi-Fi). */

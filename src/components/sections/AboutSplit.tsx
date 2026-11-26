@@ -29,7 +29,7 @@ export type AboutSplitProps = {
 const Tick = () => (
   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
-      d="M11.5378 22.1558C11.4715 22.1558 11.4059 22.1421 11.3451 22.1155C11.2844 22.0889 11.2298 22.0501 11.1848 22.0014L1.66618 11.705C1.60273 11.6363 1.56066 11.5507 1.54513 11.4585C1.5296 11.3663 1.54128 11.2716 1.57874 11.186C1.61621 11.1003 1.67782 11.0275 1.75605 10.9763C1.83428 10.9251 1.92573 10.8979 2.01921 10.8979H6.60094C6.66973 10.8979 6.73772 10.9126 6.80032 10.9412C6.86292 10.9697 6.91868 11.0113 6.96383 11.0632L10.145 14.723C10.4888 13.9881 11.1543 12.7645 12.3222 11.2734C14.0487 9.06907 17.2602 5.8272 22.7546 2.90066C22.8608 2.8441 22.9843 2.82943 23.1008 2.85952C23.2173 2.88962 23.3183 2.9623 23.3838 3.06321C23.4493 3.16413 23.4746 3.28594 23.4547 3.40459C23.4348 3.52325 23.3711 3.63013 23.2762 3.70412C23.2553 3.72051 21.1368 5.38878 18.6987 8.4445C16.4549 11.2565 13.4721 15.8546 12.0044 21.7907C11.9786 21.8949 11.9186 21.9876 11.834 22.0538C11.7494 22.12 11.6451 22.156 11.5377 22.156L11.5378 22.1558Z"
+      d="M11.54 22.16c-.07 0-.13-.02-.19-.04-.07-.03-.12-.07-.17-.12L1.67 11.7c-.07-.06-.11-.15-.12-.24-.02-.09-.01-.19.03-.27.04-.09.1-.16.18-.21.07-.05.17-.08.26-.08H6.6c.07 0 .14.01.2.04.06.03.12.07.16.12l3.18 3.66c.35-.73 1.01-1.96 2.18-3.45 1.73-2.2 4.94-5.44 10.43-8.37.11-.06.23-.07.35-.04.12.03.22.1.28.2.07.1.09.23.07.34-.02.12-.08.23-.17.3-.02.02-2.14 1.69-4.58 4.74-2.25 2.82-5.23 7.41-6.7 13.35-.02.1-.08.2-.17.26-.08.07-.18.11-.29.11l0 0z"
       fill="#A78627"
     />
   </svg>
@@ -46,7 +46,7 @@ export default function AboutSplit({
   ],
   buttonText,
   buttonLink = "/seminyak",
-  image = "/images/about/about-image.png",
+  image = "/images/about/about-image.webp",
   imageAlt = "",
   treatmentLayout = false,
   leftShapeSrc,
@@ -56,8 +56,8 @@ export default function AboutSplit({
   badgeBottomText = "Experience",
   showBadge = true,
 }: AboutSplitProps) {
-  const leftShape = leftShapeSrc || leftLeafShape(image, "/images/shape/about-left-shape.png"),
-    rightShape = rightShapeSrc || rightLeafShape(image, "/images/shape/about-right-shape.png"),
+  const leftShape = leftShapeSrc || leftLeafShape(image, "/images/shape/about-left-shape.webp"),
+    rightShape = rightShapeSrc || rightLeafShape(image, "/images/shape/about-right-shape.webp"),
     leftIsLeaf = isLeafShape(leftShape),
     rightIsLeaf = isLeafShape(rightShape),
     isTreatment = treatmentLayout || ("string" == typeof image && image.startsWith("/images/services/"));

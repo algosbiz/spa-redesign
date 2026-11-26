@@ -460,13 +460,13 @@
   .section-decoration-top::before {
     top: 0;
     height: 76px;
-    background-image: url("/images/shape/section-shape-top.png");
+    background-image: var(--torn-top);
   }
 
   .section-decoration-bottom::after {
     bottom: 0;
     height: 74px;
-    background-image: url("/images/shape/section-shape-bottom.png");
+    background-image: var(--torn-bottom);
   }
 
   /**

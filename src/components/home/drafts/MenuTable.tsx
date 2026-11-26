@@ -42,7 +42,7 @@ export default function MenuTable() {
   return (
     <section className="jsx-catalog package-section treatment-catalog section__decoration-top section__decoration-bottom bg-sub pt-170 pb-170 v2-menu v2-menu--table">
       <div className="jsx-catalog shape1">
-        <img loading="lazy" decoding="async" src="/images/shape/banner-five-shape1.png" alt="" className="jsx-catalog sway_Y__animationY" />
+        <img loading="lazy" decoding="async" src="/images/shape/banner-five-shape1.webp" alt="" className="jsx-catalog sway_Y__animationY" />
       </div>
       <div className="jsx-catalog container">
         <MenuIntro category={category} onCategory={setCategory} />

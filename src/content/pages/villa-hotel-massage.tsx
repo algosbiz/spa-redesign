@@ -100,7 +100,7 @@ export default function VillaHotelMassagePage() {
       {/* The intro and the figures are two sections on the same background: decorations only at
           the top of the first (owner, 28 Oct); the leaves differ from section to section. */}
       <AboutIntro
-        leftShapeSrc="/images/shape/leaf/8a.png"
+        leftShapeSrc="/images/shape/leaf/8a.webp"
         rightShapeSrc={null}
         removeBottomPadding
         subTitle="How It Works"
@@ -125,8 +125,8 @@ export default function VillaHotelMassagePage() {
       />
       <TreatmentTestimonials />
       <AboutSplit
-        leftShapeSrc="/images/shape/leaf/13a.png"
-        rightShapeSrc="/images/shape/leaf/1a-v2.png"
+        leftShapeSrc="/images/shape/leaf/13a.webp"
+        rightShapeSrc="/images/shape/leaf/1a-v2.webp"
         subTitle="No Travel Needed"
         title={<>The Spa Comes to Your Room</>}
         badgeTopText="Arrives in"
@@ -148,8 +148,8 @@ export default function VillaHotelMassagePage() {
         imageAlt="Therapist massaging a guest in a tropical villa garden"
       />
       <AboutSplitAlt
-        leftShapeSrc="/images/shape/leaf/2a.png"
-        rightShapeSrc="/images/shape/leaf/3a.png"
+        leftShapeSrc="/images/shape/leaf/2a.webp"
+        rightShapeSrc="/images/shape/leaf/3a.webp"
         subTitle="Treatments for Your Stay "
         badgeTopText="Popular in-room"
         badgeBottomText="Massage, scrub & facial"
@@ -174,7 +174,7 @@ export default function VillaHotelMassagePage() {
       />
       {/* The price chart, fee included (owner, 25 Nov: couples need one too; AI answers quote totals). */}
       <CompareTable
-        leftShapeSrc="/images/shape/feature-six-shape.png"
+        leftShapeSrc="/images/shape/feature-six-shape.webp"
         title="What a Massage Costs in Your Room"
         text="Totals in Seminyak, Petitenget and Kerobokan, with the home service fee already added. Couple prices are for two guests and two therapists; the others are per person. In Canggu, North Kuta and Kuta, add IDR 75.000 per therapist. Totals include tax, with no extra charges."
         caption="Massage totals at a villa or hotel in the Seminyak area, fee included"
@@ -193,8 +193,8 @@ export default function VillaHotelMassagePage() {
         ]}
       />
       <AboutSplit
-        leftShapeSrc="/images/shape/leaf/6a.png"
-        rightShapeSrc="/images/shape/leaf/11a.png"
+        leftShapeSrc="/images/shape/leaf/6a.webp"
+        rightShapeSrc="/images/shape/leaf/11a.webp"
         badgeTopText="Booking"
         badgeBottomText="Open daily 9am–11pm"
         // No small heading: without one the section showed the default "About".
@@ -218,8 +218,8 @@ export default function VillaHotelMassagePage() {
       />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
-          leftShapeSrc="/images/shape/banner-five-shape1.png"
-          rightShapeSrc="/images/shape/leaf/10a.png"
+          leftShapeSrc="/images/shape/banner-five-shape1.webp"
+          rightShapeSrc="/images/shape/leaf/10a.webp"
           largeTopPadding
           imageTitle="Relax in Your Room"
           subTitle="Frequently Asked Questions"
@@ -230,8 +230,8 @@ export default function VillaHotelMassagePage() {
         />
       </div>
       <ReserveCta
-        leftShapeSrc="/images/shape/banner-six-shape2.png"
-        rightShapeSrc="/images/shape/step-shape-left.png"
+        leftShapeSrc="/images/shape/banner-six-shape2.webp"
+        rightShapeSrc="/images/shape/step-shape-left.webp"
         standardSpacing
         title="Book an In-Villa Massage in Bali"
         text="Our therapists bring massage and selected spa treatments to your hotel or villa around Seminyak, with fresh linen, oils and everything the treatment needs."

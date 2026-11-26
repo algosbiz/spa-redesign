@@ -35,35 +35,8 @@
 
 /* Fonts: Fraunces and Plus Jakarta Sans, loaded by next/font (src/app/fonts.ts)
    since 25 Oct, in place of the live site's Literata and Mulish. */
-/* Font Awesome — the live site's own subsets (46 glyphs each, 3–6 KB). */
-@font-face {
-  font-family: "Font Awesome 6 Brands";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/fa-brands-400.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Font Awesome 6 Pro";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/webfonts/fa-light-300.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Font Awesome 6 Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/webfonts/fa-regular-400.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Font Awesome 6 Pro";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/webfonts/fa-solid-900.woff2) format("woff2");
-}
+/* Font Awesome: no font files since 25 Nov (speed): its icons are drawn in
+   icons.css, as masks. */
 
 /* Reset what the rebuild's body passes down but the live body does not set. */
 :where(.lh) {
@@ -4514,15 +4487,15 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
 .video-section .video-column .inner-box .list ul:hover .icon:where(.lh,.lh *) {
   transform: rotateY(1turn);
 }
-.pricing-section-three .shape1 img[src$="package-four-shape-left.png"]:where(.lh,.lh *) {
+.pricing-section-three .shape1 img[src$="package-four-shape-left.webp"]:where(.lh,.lh *) {
   width: 230px;
   height: auto;
 }
-.about-section>.shape2 img[src$="about-right-shape.png"]:where(.lh,.lh *) {
+.about-section>.shape2 img[src$="about-right-shape.webp"]:where(.lh,.lh *) {
   width: 185px;
   height: auto;
 }
-.about-section>.shape1 img[src$="step-shape-left.png"]:where(.lh,.lh *) {
+.about-section>.shape1 img[src$="step-shape-left.webp"]:where(.lh,.lh *) {
   width: 230px;
   height: auto;
 }
@@ -4534,27 +4507,27 @@ svg.icon[viewBox="0 0 25 26"]>*:where(.lh,.lh *) {
   width: 180px;
   height: auto;
 }
-.testimonial-section-two .shape1 img[src$="testimonial-two-shape-left.png"]:where(.lh,.lh *) {
+.testimonial-section-two .shape1 img[src$="testimonial-two-shape-left.webp"]:where(.lh,.lh *) {
   width: 270px;
   height: auto;
 }
-.service-section-two>.shape1:has(img[src$="service-shape-left.png"]):where(.lh,.lh *) {
+.service-section-two>.shape1:has(img[src$="service-shape-left.webp"]):where(.lh,.lh *) {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: -1;
 }
-.service-section-two>.shape1 img[src$="service-shape-left.png"]:where(.lh,.lh *) {
+.service-section-two>.shape1 img[src$="service-shape-left.webp"]:where(.lh,.lh *) {
   width: 170px;
   height: auto;
 }
-.service-section-two>.shape2:has(img[src$="service-shape-right.png"]):where(.lh,.lh *) {
+.service-section-two>.shape2:has(img[src$="service-shape-right.webp"]):where(.lh,.lh *) {
   position: absolute;
   top: 40px;
   right: 0;
   z-index: -1;
 }
-.service-section-two>.shape2 img[src$="service-shape-right.png"]:where(.lh,.lh *) {
+.service-section-two>.shape2 img[src$="service-shape-right.webp"]:where(.lh,.lh *) {
   width: 230px;
   height: auto;
 }

@@ -8,7 +8,15 @@ import { useSitePath } from "@/i18n/useSitePath";
 /** A language's flag (public/images/flags/), beside its name, so the image itself says nothing. */
 const Flag = ({ locale }: { locale: Locale }) => (
   // eslint-disable-next-line @next/next/no-img-element -- a 21px SVG: nothing for the optimiser to do
-  <img src={`/images/flags/${localeSettings[locale].flag}.svg`} alt="" width="21" height="14" className="lang-menu__flag" />
+  <img
+    loading="lazy"
+    decoding="async"
+    src={`/images/flags/${localeSettings[locale].flag}.svg`}
+    alt=""
+    width="21"
+    height="14"
+    className="lang-menu__flag"
+  />
 );
 
 /**

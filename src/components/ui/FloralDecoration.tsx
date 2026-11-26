@@ -62,9 +62,9 @@ export default function FloralDecoration({
       style={{ animationPlayState: visible ? "running" : "paused" }}
     >
       {!compact && (
-        <img className="floral-decoration__petals" src="/images/shape/banner-six-shape2.png" alt="" width="170" height="100" loading="lazy" />
+        <img className="floral-decoration__petals" src="/images/shape/banner-six-shape2.webp" alt="" width="170" height="100" loading="lazy" />
       )}
-      <img className="floral-decoration__blossoms" src="/images/shape/service-four-shape-right.png" alt="" width="230" height="150" loading="lazy" />
+      <img className="floral-decoration__blossoms" src="/images/shape/service-four-shape-right.webp" alt="" width="230" height="150" loading="lazy" />
     </div>
   );
 }

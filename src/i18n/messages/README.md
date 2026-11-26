@@ -2,7 +2,7 @@
 
 One folder per language: `ja` (Japanese, /jp/), `ko` (Korean, /kr/), `zh` (Chinese, /cn/), `hi` (Hindi, /in/).
 
-- `ui.json`: the texts of Client Components. They are sent to the browser, so the phone menu, the language switcher and the pairing sliders read from here.
+- `ui.json`: the texts of Client Components. The browser fetches the whole file (`src/i18n/client.tsx`), so the phone menu, the language switcher and the pairing sliders read from here.
 - `content.json`: everything else, read on the server only.
 
 Each entry is keyed by the **exact English text**. A page in another language looks each English text up here and shows English when it finds no match.

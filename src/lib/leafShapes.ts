@@ -6,24 +6,24 @@
  * its own mix and neighbouring sections differ.
  */
 const LEAF_PAIRS: [string, string][] = [
-  ["/images/shape/leaf/2a.png", "/images/shape/leaf/3a.png"],
-  ["/images/shape/leaf/4a.png", "/images/shape/leaf/5a.png"],
-  ["/images/shape/leaf/6a.png", "/images/shape/leaf/7a.png"],
-  ["/images/shape/leaf/8a.png", "/images/shape/leaf/9a.png"],
-  ["/images/shape/leaf/10a.png", "/images/shape/leaf/11a.png"],
-  ["/images/shape/leaf/12a.png", "/images/shape/leaf/13a.png"],
-  ["/images/shape/leaf/13a.png", "/images/shape/leaf/1a-v2.png"],
-  ["/images/shape/leaf/1a-v2.png", "/images/shape/leaf/12a.png"],
+  ["/images/shape/leaf/2a.webp", "/images/shape/leaf/3a.webp"],
+  ["/images/shape/leaf/4a.webp", "/images/shape/leaf/5a.webp"],
+  ["/images/shape/leaf/6a.webp", "/images/shape/leaf/7a.webp"],
+  ["/images/shape/leaf/8a.webp", "/images/shape/leaf/9a.webp"],
+  ["/images/shape/leaf/10a.webp", "/images/shape/leaf/11a.webp"],
+  ["/images/shape/leaf/12a.webp", "/images/shape/leaf/13a.webp"],
+  ["/images/shape/leaf/13a.webp", "/images/shape/leaf/1a-v2.webp"],
+  ["/images/shape/leaf/1a-v2.webp", "/images/shape/leaf/12a.webp"],
 ];
 
 /** Default decorations that may be swapped for a leaf, by section kind. */
 const KIND: Record<string, "intro" | "about" | "reverse"> = {
-  "/images/shape/about-two-left.png": "intro",
+  "/images/shape/about-two-left.webp": "intro",
   "/images/shape/about-two-right.png": "intro",
-  "/images/shape/about-left-shape.png": "about",
-  "/images/shape/about-right-shape.png": "about",
+  "/images/shape/about-left-shape.webp": "about",
+  "/images/shape/about-right-shape.webp": "about",
   "/images/shape/banner-six-shape.png": "reverse",
-  "/images/shape/mirror-left-shape.png": "reverse",
+  "/images/shape/mirror-left-shape.webp": "reverse",
 };
 
 const SERVICE_PHOTO = /^\/images\/services\/([^/]+)\/[^/]+-(\d+)\.webp$/i;

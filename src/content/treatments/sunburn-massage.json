@@ -53,7 +53,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/sunburntreatment/sunburntreatment-2.webp",
         "primaryAlt": "Therapist applying a cooling gel to a guest's sunburnt back",
@@ -77,7 +77,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/sunburntreatment/sunburntreatment-4.webp"
             ],
@@ -140,7 +140,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/sunburntreatment/sunburntreatment-5.webp",
         "imageAlt": "Aloe vera being applied to a sunburnt arm",
         "subTitle": "",
@@ -166,7 +166,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Is Your Skin Ready for a Sunburn Treatment?",
         "text": "The treatment is for mild sunburn only. Your therapist looks at your skin before starting.",
         "caption": "When a sunburn treatment is suitable",
@@ -213,8 +213,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -352,8 +352,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Sunburn Treatment",
             "text": "Book one of these with a sunburn treatment and enjoy both in one visit.",

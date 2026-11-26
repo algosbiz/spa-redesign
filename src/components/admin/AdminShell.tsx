@@ -14,7 +14,7 @@ const SECTIONS: { id: AdminSection; label: string; href: string; icon: ReactNode
     href: "/admin/",
     icon: (
       <path
-        d="M6.5 3.5h7.2L18.5 8.3v12.2H6.5zM13.4 3.6v5h5M9.3 13h6.2M9.3 16.3h4.2"
+        d="M6.5 3.5h7.2l4.8 4.8V20.5H6.5zm6.9.1v5h5M9.3 13h6.2M9.3 16.3h4.2"
         stroke="currentColor"
         strokeWidth="1.6"
         strokeLinejoin="round"

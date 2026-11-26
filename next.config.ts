@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { business } from "./src/data/business";
 import { liveRedirects } from "./src/data/redirects";
+import { UPLOADS_ORIGIN } from "./src/lib/uploads";
 
 // Requests on www.spabalimoon.com. Vercel's domain setting used to send www to
 // spabalimoon.com itself (308), before this app saw the request, so an old URL
@@ -14,6 +15,12 @@ const nextConfig: NextConfig = {
   // matches no page gets its 404 from src/app/global-not-found.tsx.
   experimental: {
     globalNotFound: true,
+    // The stylesheets are in the page instead of linked: a phone's first paint
+    // waits for no stylesheet request. On its own this was slower (10 Nov,
+    // reverted the same day): Next writes the whole stylesheet into the page
+    // twice. tools/speed/ now keeps only the rules a page can match, takes the
+    // second copy out, and loads the full files at the first interaction.
+    inlineCss: true,
   },
 
   // Every URL ends with "/" — exactly like the old website (SEO: keep URLs identical).
@@ -41,6 +48,10 @@ const nextConfig: NextConfig = {
      * sandboxes them and blocks any script inside one.
      */
     dangerouslyAllowSVG: true,
+
+    // Photos uploaded in /admin/ (src/lib/uploads.ts): the cards, thumbnails
+    // and the phone's article banner get a resized copy instead of the upload.
+    remotePatterns: [new URL(`${UPLOADS_ORIGIN}/**`)],
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },

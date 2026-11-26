@@ -169,7 +169,7 @@ export default function MenuDurations({
       }`}
     >
       <div className="jsx-catalog shape1">
-        <img loading="lazy" decoding="async" src="/images/shape/banner-five-shape1.png" alt="" className="jsx-catalog sway_Y__animationY" />
+        <img loading="lazy" decoding="async" src="/images/shape/banner-five-shape1.webp" alt="" className="jsx-catalog sway_Y__animationY" />
       </div>
       <div className="jsx-catalog container">
         <MenuIntro category={category} onCategory={setCategory} subTitle={subTitle} title={title} intro={intro} tabs={tabs} />

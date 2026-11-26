@@ -1,0 +1,29 @@
+/*
+ * Lighter copies of the decorative pictures of every page (25 Nov, speed;
+ * made by tools/speed/light-images.py). The same pixels as live.css's own:
+ * the torn paper edges as lossless WebP, and on phones the middle part alone,
+ * which is all a phone shows; the lotus behind the small icons at their size.
+ * Imported right after live.css, whose selectors these are, so every later
+ * rule still wins over them.
+ */
+:root {
+  --torn-top: url(/images/shape/section-shape-top-1920.webp);
+  --torn-bottom: url(/images/shape/section-shape-bottom-1920.webp);
+}
+@media (max-width: 767px) {
+  :root {
+    --torn-top: url(/images/shape/section-shape-top-768.webp);
+    --torn-bottom: url(/images/shape/section-shape-bottom-768.webp);
+  }
+}
+.section__decoration-top:where(.lh, .lh *)::before {
+  background-image: var(--torn-top);
+}
+.section__decoration-bottom:where(.lh, .lh *)::after {
+  background-image: var(--torn-bottom);
+}
+.brand-lotus-icon-svg:where(.lh, .lh *),
+.sub-title > svg[viewBox="0 0 25 25"]:where(.lh, .lh *),
+svg.icon[viewBox="0 0 25 26"]:where(.lh, .lh *) {
+  background-image: url(/images/logo/sbm-84.webp);
+}

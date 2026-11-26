@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useMemo, type ReactNode } from "react";
+import { createContext, use, useContext, useMemo, type ReactNode } from "react";
 import { defaultLocale, localeSettings, type Locale } from "./config";
 import {
   format,
@@ -13,9 +13,43 @@ import {
 } from "./translate";
 
 /**
- * The page's language for Client Components, the translations they need
- * (src/i18n/messages/<lang>/ui.json) and the languages the site serves (for
- * the language switcher), given by RootDocument:
+ * The translations Client Components need (src/i18n/messages/<lang>/ui.json),
+ * one file per language, fetched by the browser once, with the scripts. They
+ * used to come as a prop of I18nProvider, so each translated page carried all
+ * of them in its HTML: 164 KB compressed for /jp/ against 67 KB for English
+ * (25 Nov, speed).
+ */
+const loaders: Record<Exclude<Locale, "en">, () => Promise<{ default: Messages }>> = {
+  ja: () => import("./messages/ja/ui.json"),
+  ko: () => import("./messages/ko/ui.json"),
+  zh: () => import("./messages/zh/ui.json"),
+  hi: () => import("./messages/hi/ui.json"),
+};
+
+const loaded = new Map<Locale, Promise<Messages>>();
+
+function uiMessages(locale: Exclude<Locale, "en">): Promise<Messages> {
+  let messages = loaded.get(locale);
+  if (!messages) {
+    messages = loaders[locale]().then((file) => file.default);
+    loaded.set(locale, messages);
+  }
+  return messages;
+}
+
+const noMessages: Messages = {};
+
+// In the browser: asked for as soon as this file runs, not when React gets to
+// the provider.
+if (typeof document !== "undefined") {
+  const page = (Object.keys(loaders) as Exclude<Locale, "en">[]).find((l) => localeSettings[l].htmlLang === document.documentElement.lang);
+  // A failed download is tried again when the provider asks.
+  if (page) uiMessages(page).catch(() => loaded.delete(page));
+}
+
+/**
+ * The page's language for Client Components, its translations (above) and the
+ * languages the site serves (for the language switcher), given by RootDocument:
  *
  *   const { t, el, localize, locale } = useI18n();
  *   return el(<p>Join Our Newsletter</p>);
@@ -28,7 +62,8 @@ type I18nValue = { locale: Locale; messages: Messages; languages?: readonly Loca
 const I18nContext = createContext<I18nValue>({ locale: defaultLocale, messages: {} });
 const englishOnly: readonly Locale[] = [defaultLocale];
 
-export function I18nProvider({ locale, messages, languages, children }: I18nValue & { children: ReactNode }) {
+export function I18nProvider({ locale, languages, children }: Omit<I18nValue, "messages"> & { children: ReactNode }) {
+  const messages = locale === "en" ? noMessages : use(uiMessages(locale));
   const value = useMemo(() => ({ locale, messages, languages }), [locale, messages, languages]);
   return <I18nContext value={value}>{children}</I18nContext>;
 }

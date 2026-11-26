@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useI18n } from "@/i18n/client";
 import { defaultLocale, localePath } from "@/i18n/config";
+import { CARD_SIZES, THUMB_SIZES, cardImage } from "@/lib/blog/cardImage";
 
 // The database answers null for empty columns, so null is accepted throughout.
 export type GuidePostSummary = {
@@ -183,10 +184,10 @@ export default function GuidePost({
                         <ul className={`${S} sidebar-search-results__list`}>
                           {results.map((r) => (
                             <li key={r.id} className={S}>
-                              <Link href={articleHref(r.slug)} onClick={() => setOpen(false)}>
+                              <Link prefetch={false} href={articleHref(r.slug)} onClick={() => setOpen(false)}>
                                 <div className={`${S} sidebar-search-results__item`}>
                                   {r.cover_image && (
-                                    <img loading="lazy" decoding="async" src={r.cover_image} alt={r.title} className={S} />
+                                    <img loading="lazy" decoding="async" {...cardImage(r.cover_image, THUMB_SIZES)} alt={r.title} className={S} />
                                   )}
                                   <div className={`${S} sidebar-search-results__text`}>
                                     <strong className={S}>{r.title}</strong>
@@ -207,7 +208,7 @@ export default function GuidePost({
                     {recentPosts.map((p) => (
                       <li key={p.id} className={S}>
                         <div className={`${S} sidebar__post-image`}>
-                          <img loading="lazy" decoding="async" src={p.cover_image || "/images/resource/news-1.jpg"} alt={p.title} className={S} />
+                          <img loading="lazy" decoding="async" {...cardImage(p.cover_image || "/images/resource/news-1.jpg", THUMB_SIZES)} alt={p.title} className={S} />
                         </div>
                         <div className={`${S} sidebar__post-content`}>
                           <h3 className={S}>
@@ -215,7 +216,7 @@ export default function GuidePost({
                               <i className={`${S} fas fa-user-circle`} />
                               {p.author || "Admin"}
                             </span>
-                            <Link href={articleHref(p.slug)}>{p.title}</Link>
+                            <Link prefetch={false} href={articleHref(p.slug)}>{p.title}</Link>
                           </h3>
                         </div>
                       </li>
@@ -239,9 +240,9 @@ export default function GuidePost({
               {(prevPost || nextPost) && (
                 <nav aria-label="Other articles" className={`${S} post-nav`}>
                   {prevPost && (
-                    <Link href={articleHref(prevPost.slug)} className="post-nav__link post-nav__link--prev">
+                    <Link prefetch={false} href={articleHref(prevPost.slug)} className="post-nav__link post-nav__link--prev">
                       <span className={`${S} post-nav__thumb`}>
-                        <img loading="lazy" decoding="async" src={prevPost.cover_image || FALLBACK_IMAGE} alt="" className={S} />
+                        <img loading="lazy" decoding="async" {...cardImage(prevPost.cover_image || FALLBACK_IMAGE, THUMB_SIZES)} alt="" className={S} />
                       </span>
                       <span className={`${S} post-nav__text`}>
                         <span className={`${S} post-nav__label`}>← Previous guide</span>
@@ -250,13 +251,13 @@ export default function GuidePost({
                     </Link>
                   )}
                   {nextPost && (
-                    <Link href={articleHref(nextPost.slug)} className="post-nav__link post-nav__link--next">
+                    <Link prefetch={false} href={articleHref(nextPost.slug)} className="post-nav__link post-nav__link--next">
                       <span className={`${S} post-nav__text`}>
                         <span className={`${S} post-nav__label`}>Next guide →</span>
                         <span className={`${S} post-nav__title`}>{nextPost.title}</span>
                       </span>
                       <span className={`${S} post-nav__thumb`}>
-                        <img loading="lazy" decoding="async" src={nextPost.cover_image || FALLBACK_IMAGE} alt="" className={S} />
+                        <img loading="lazy" decoding="async" {...cardImage(nextPost.cover_image || FALLBACK_IMAGE, THUMB_SIZES)} alt="" className={S} />
                       </span>
                     </Link>
                   )}
@@ -268,9 +269,9 @@ export default function GuidePost({
                   <h3 className={`${S} post-more__title`}>More Massage Guides</h3>
                   <div className={`${S} post-more__grid`}>
                     {morePosts.map((p) => (
-                      <Link key={p.id} href={articleHref(p.slug)} className="post-more__card">
+                      <Link prefetch={false} key={p.id} href={articleHref(p.slug)} className="post-more__card">
                         <span className={`${S} post-more__image`}>
-                          <img loading="lazy" decoding="async" src={p.cover_image || FALLBACK_IMAGE} alt={p.title} className={S} />
+                          <img loading="lazy" decoding="async" {...cardImage(p.cover_image || FALLBACK_IMAGE, CARD_SIZES)} alt={p.title} className={S} />
                         </span>
                         <span className={`${S} post-more__body`}>
                           {/* No dates on the guides (owner, 23 Oct). */}

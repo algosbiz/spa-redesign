@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev -p 3009",
     "tunnel": "ngrok http 3009",
+    "postinstall": "node tools/speed/patch-next-renderer.mjs",
+    "prebuild": "node tools/speed/patch-next-renderer.mjs",
     "build": "next build",
+    "postbuild": "node tools/speed/check-build.mjs",
     "start": "next start",
     "lint": "eslint",
     "blog:setup": "node --env-file=.env.local tools/blog/setup-neon.mjs",

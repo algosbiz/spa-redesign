@@ -116,7 +116,7 @@ export const ICON_BOXES: ReactNode[] = [
     <Fragment key={1}>
       <svg className="icon-bg" xmlns="http://www.w3.org/2000/svg" width="167.000000pt" height="147.000000pt" viewBox="0 0 167.000000 147.000000" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,147.000000) scale(0.050000,-0.050000)" fill="#252525" stroke="none">
-          <path d="M1257 2920c-50-9-109-25-130-35-20-11-95-25-165-31-523-45-900-630-953-1477-43-680 253-1056 996-1266 720-204 1195-98 1691 377 805 772 854 1763 105 2149-412 213-1153 349-1544 283" />
+          <path d="M1257 2920c-50-9-109-25-130-35-20-11-95-25-165-31C439 2809 62 2224 9 1377-34 697 262 321 1005 111 1725-93 2200 13 2696 488c805 772 854 1763 105 2149-412 213-1153 349-1544 283" />
         </g>
       </svg>
       <svg className="icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

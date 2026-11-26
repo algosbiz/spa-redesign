@@ -69,7 +69,7 @@ export default function About({ subTitle }: { subTitle?: string } = {}) {
                   <span aria-hidden="true" className="jsx-about about-leaf-gold animation__arryUpDown" />
                 </div>
                 <div className="jsx-about shape-two">
-                  <img loading="lazy" decoding="async" data-depth="0.03" src="/images/about/shape2.png" alt="" className="jsx-about" />
+                  <img loading="lazy" decoding="async" data-depth="0.03" src="/images/about/shape2.webp" alt="" className="jsx-about" />
                 </div>
                 <div className="jsx-about shape-three">
                   <img loading="lazy" decoding="async" src="/images/about/shape3.png" alt="" className="jsx-about animation__arryLeftRight" />

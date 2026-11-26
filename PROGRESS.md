@@ -1821,6 +1821,127 @@ framework (±110 KB) yang tidak bisa dibuang. Dua hal di luar kode:
 - **Preloader**: tanpa preloader sama sekali, LCP lokal −0,2 s (88).
   Pemilik memilih mempertahankannya pada 2 Oktober.
 
+## Kecepatan mobile (25 November, belum di-deploy)
+
+Metode situs Legend Diving dipindahkan ke sini, disesuaikan untuk Next 16 +
+Turbopack. Cara kerja dan alasannya: `tools/speed/README.md`.
+
+- **JS menunggu pengunjung.** Bundle React/Next baru diunduh pada sentuhan,
+  scroll, klik, tombol, atau gerakan mouse pertama. Tombol dan form yang
+  dipakai sebelum itu diulang setelah React siap.
+- **CSS di dalam HTML, hanya yang dipakai halaman itu** (sekitar sepertiga).
+  Berkas lengkapnya menyusul bersama JS. `inlineCss` saja pernah dicoba dan
+  dibatalkan (10 November); sebabnya CSS terkirim dua kali, kini salinan
+  keduanya dikosongkan.
+- **Gambar di bawah layar ditahan** sampai hampir terlihat. `src` dan `alt`
+  tetap ada di HTML, dan crawler tidak terkena.
+- **Terjemahan** (`ui.json`) tidak lagi ikut di setiap halaman. Browser
+  mengambilnya sekali.
+- **Ikon** digambar sebagai mask CSS (`icons.css`), font ikon tidak diunduh
+  lagi. Ikon baru: jalankan `python tools/speed/icons.py`.
+- **Gambar hiasan** lebih ringan: tepi kertas robek 54 KB menjadi 19 KB di HP,
+  lotus 20 KB menjadi 2 KB. Bendera, logo laci, dan hiasan banner kini lazy.
+- **Preloader** tidak tampil untuk pengunjung dengan reduced motion: aturan
+  CSS-nya tidak selesai di sana, dan React kini datang belakangan.
+
+Diukur lokal (`next start` + proxy brotli, HP, tanpa disentuh):
+
+| Halaman | Request | Unduhan | Performance | LCP |
+|---|---|---|---|---|
+| Beranda | 38 → 11 | 537 → 220 KB | 84 → 92 | 4,2 → 2,0 s |
+| Balinese Massage | 35 → 9 | 590 → 237 KB | 79 → 93 | 4,7 → 2,5 s |
+| Outcall | 36 → 9 | 634 → 265 KB | 97 → 87–96 | 1,7 → 1,1 s |
+| `/jp/` | 37 → 10 | 617 → 216 KB | 66 → 80 | 4,6 → 2,0 s |
+| Kontak | 32 → 10 | 470 → 192 KB | belum diukur → 99 | 0,8 s |
+| Deep Tissue | 34 → 8 | 559 → 201 KB | belum diukur → 79–90 | 2,2 s |
+| Couples | 36 → 8 | 590 → 209 KB | belum diukur → 91–92 | 2,2 s |
+
+Kolom "sebelum" untuk request dan unduhan diambil dari situs live. TBT di
+Lighthouse tidak turun (beranda 102 → 313 ms): halaman kini tampil lebih awal,
+sehingga layout yang dulu terjadi sebelum tampil jadi ikut dihitung. Total
+kerja main thread sedikit lebih kecil dari live.
+
+Dicek ulang 26 November setelah 22 commit konten terbaru digabung (#59–#68):
+17 halaman di 390 dan 1440 px dibandingkan dengan build yang sama tanpa
+optimasi. Gaya sama persis, geometri sama kecuali slide testimoni yang
+kebetulan tampil dan satu-dua hiasan pojok yang di live pun berpindah-pindah.
+CLS saat scroll di `/guide/`: 0,92 di live, 0 di sebagian besar percobaan
+(paling tinggi 0,41). Belum dicek di iPhone/Safari dan PageSpeed.
+
+### Audit semua halaman (26 November)
+
+Semua halaman dibuka di HP (412 px) dan desktop (1440 px), tanpa disentuh lalu
+di-scroll sampai bawah. Layar pertama sudah ringan di semua halaman (115–260
+KB). Yang berat adalah unduhan sesudah scroll. Perbaikan:
+
+- **Prefetch:** satu tautan "See all prices" (cap lingkaran di AboutIntro)
+  tidak memakai `prefetch={false}`. Akibatnya browser mengunduh seluruh data
+  `/seminyak/` (91 KB) di sekitar 35 halaman. Kini semua tautan situs tanpa
+  prefetch, termasuk di guide.
+- **Kartu artikel guide** memuat sampul 1920 px (47–141 KB) untuk kartu 390 px
+  dan gambar mini 60 px. Kini ada salinan 240, 768 dan 1200 px
+  (`tools/images/guide-cards.mjs`, `src/lib/blog/cardImage.ts`).
+- **Ikon daftar harga:** PNG 383 px (7–19 KB) yang tampil 30 px. Kini WebP 96
+  px (3–6 KB).
+- **Hiasan PNG** (daun, handuk, nampan, bunga) menjadi WebP, rata-rata
+  separuhnya. Hasilnya sama persis saat dibandingkan berdampingan
+  (`tools/images/png-to-webp.mjs`). File PNG tetap ada untuk halaman lama di
+  cache. Tujuh hiasan kecil tetap PNG karena WebP-nya lebih besar.
+- **Foto vila** di Deep Tissue dan Lymphatic: 1920 px 171 KB menjadi 1200 px
+  64 KB. Di halaman vila sendiri tetap 1920 px.
+
+Hasil (unduhan sampai bawah halaman, sebelum → sesudah):
+- **HP, 54 halaman:** median 855 → 750 KB. Halaman treatment turun 77–240 KB
+  (median 133), artikel guide 38–193 KB, `/guide/` 829 → 487 KB.
+- **Desktop, 24 halaman:** total turun 15%. Contoh: Balinese 1.907 → 1.434 KB,
+  Anti-Cellulite 1.730 → 1.264 KB, About 1.080 → 845 KB.
+- **Tampilan:** 17 halaman di 390 dan 1440 px sama gaya dan posisinya dengan
+  build sebelumnya. Bedanya hanya piksel halus pada foto yang diperkecil.
+
+Tidak dikerjakan:
+- **Gambar dari /admin/** (sampul artikel di `images.spabalimoon.com`) diunggah
+  tanpa diperkecil: 58–129 KB untuk kartu 386 px.
+- **Foto FAQ** di halaman treatment: 895 px untuk tampilan 382 px di HP
+  (sekitar 10–17 KB per halaman).
+- **CSS dalam HTML** sekitar 30 KB per halaman. Pemangkasan yang lebih ketat
+  hanya menghemat sekitar 1 KB.
+
+### Lanjutan (26 November, tanpa build lokal)
+
+Mulai hari ini tidak ada build di komputer lokal; build diuji di Vercel.
+Perubahan di bawah hanya dicek dengan `tsc`, lint, dan perbandingan gambar.
+
+- **Data jalur ikon SVG dipersingkat** (`tools/speed/svg-paths.py`). Data ini
+  30–40% dari HTML terkompresi di banyak halaman (13,5 dari 44 KB di Balinese,
+  diukur pada HTML live), dan tercatat dua kali karena ikut di data React.
+  Kini 2 desimal dan langkah relatif: 63,7 ribu menjadi 36,8 ribu karakter di
+  12 komponen (Funfacts, VideoSection, lotus, AboutIntro, dan lainnya).
+  Elemen, kelas, dan warna tidak berubah. Ke-105 jalur sudah digambar lama dan
+  baru pada 8x: tidak ada piksel yang berbeda lebih dari 25 dari 255. Ikon
+  beranda (`home/icons.tsx`) memang sudah ringkas dari awal.
+- **Foto yang diunggah lewat /admin/** (`images.spabalimoon.com`, misalnya
+  sampul 1428 px sekitar 120 KB) kini lewat pengecil gambar Next untuk kartu,
+  gambar mini, menu HP, dan banner artikel di HP. Di HP, banner artikel
+  sebelumnya memuat file asli sebagai gambar LCP. Ini memakai Image
+  Optimization di Vercel (`remotePatterns` di `next.config.ts`).
+
+Dipertimbangkan, tidak dikerjakan:
+- **Font** (63 KB per halaman) sudah subset Latin, dan sumbu optical size
+  sudah dibuang 10 November. Bobot 300–700 memang dipakai.
+- **Foto FAQ** hanya lebih kecil tampilannya di HP dengan kepadatan layar
+  rendah. Di tablet dan HP tajam, file 895 px dipakai penuh.
+
+Cek di Vercel setelah deploy:
+- Build lulus; `check-build.mjs` juga berjalan di sana.
+- `/guide/` dan artikel: kartu dan gambar mini memakai `-240`/`-768` atau
+  `/_next/image?url=https%3A%2F%2Fimages.spabalimoon.com...`.
+- Ikon Funfacts, lotus, dan ikon video tampil normal.
+
+Di dashboard Cloudflare (di luar kode, belum dilakukan):
+- **Web Analytics:** matikan penyisipan otomatis `beacon.min.js`.
+- **Cache Rule untuk HTML:** Browser TTL "Respect origin". Sekarang browser
+  menyimpan HTML 2 jam, jadi pembaruan bisa terlambat terlihat.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

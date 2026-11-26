@@ -49,7 +49,7 @@
     {
       "type": "AboutIntro",
       "props": {
-        "leftShapeSrc": "/images/shape/about-two-left.png",
+        "leftShapeSrc": "/images/shape/about-two-left.webp",
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/sportsmassage/sportsmassage-2.webp",
         "primaryAlt": "Therapist giving a sports massage on a guest's back",
@@ -92,7 +92,7 @@
         {
           "type": "TreatmentPricing",
           "props": {
-            "leftShapeSrc": "/images/shape/package-four-shape-left.png",
+            "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
               "/images/services/sportsmassage/sportsmassage-4.webp",
               "/images/services/sportsmassage/sportsmassage-5.webp"
@@ -166,7 +166,7 @@
     {
       "type": "AboutSplit",
       "props": {
-        "rightShapeSrc": "/images/shape/about-right-shape.png",
+        "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/sportsmassage/sportsmassage-6.webp",
         "imageAlt": "Firm strokes along a guest's back during a sports massage",
         "subTitle": "",
@@ -192,7 +192,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Sports Massage by Activity",
         "text": "The areas your therapist can spend the most time on, and a session length to start from. They check with you first.",
         "caption": "Sports massage areas and session lengths by activity",
@@ -255,8 +255,8 @@
     {
       "type": "AboutSplitAlt",
       "props": {
-        "leftShapeSrc": "/images/shape/step-shape-left.png",
-        "rightShapeSrc": "/images/shape/banner-six-shape2.png",
+        "leftShapeSrc": "/images/shape/step-shape-left.webp",
+        "rightShapeSrc": "/images/shape/banner-six-shape2.webp",
         "rightDecoration": {
           "$jsx": {
             "type": "FloralDecoration",
@@ -315,7 +315,7 @@
     {
       "type": "CompareTable",
       "props": {
-        "leftShapeSrc": "/images/shape/feature-six-shape.png",
+        "leftShapeSrc": "/images/shape/feature-six-shape.webp",
         "title": "Sports Massage Prices at the Spa and Your Villa",
         "text": "The total per person, with the home service fee already added for a villa or hotel. Totals include tax, with no extra charges.",
         "caption": "Sports massage prices at the spa and at a villa or hotel",
@@ -423,8 +423,8 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "leftShapeSrc": "/images/shape/service-shape-left.png",
-            "rightShapeSrc": "/images/shape/service-shape-right.png",
+            "leftShapeSrc": "/images/shape/service-shape-left.webp",
+            "rightShapeSrc": "/images/shape/service-shape-right.webp",
             "subTitle": "Good Together",
             "title": "Treatments to Pair with a Sports Massage",
             "text": "Book one of these with a sports massage and enjoy both in one visit.",

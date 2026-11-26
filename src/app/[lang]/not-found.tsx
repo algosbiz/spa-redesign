@@ -43,7 +43,7 @@ export default async function NotFound({ locale }: { locale?: Locale } = {}) {
                     </button>
                   </div>
                 </form>
-                <Link href="/" className="btn-one shop-now">
+                <Link prefetch={false} href="/" className="btn-one shop-now">
                   <span className="btn-title">Back to Home</span>
                 </Link>
               </div>
