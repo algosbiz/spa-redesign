@@ -121,6 +121,7 @@ const FAQ = [
 const HERO_CHIPS = [
   "Since 2009 · Seminyak spa",
   "Linen & oils included",
+  "Prices include tax",
   "IDR 75.000 per therapist in Seminyak",
   "Open daily 9am–11pm",
 ];

@@ -92,7 +92,7 @@ export default function VillaHotelMassagePage() {
         // The quick answer under the H1 (copy rewrite, 15 Oct). AEO roadmap
         // R34 (17 Oct): this page is for guests staying at a hotel or villa in
         // Seminyak; home service anywhere in Bali is the outcall page.
-        text="A Spa Bali Moon therapist comes to your hotel room or villa in Seminyak, usually within 30 to 60 minutes of booking, with fresh linen, oils and everything your treatment needs. Treatments cost the same as in the spa, plus IDR 75.000 per therapist in Seminyak, and couples can have two therapists side by side. Open daily 9am–11pm."
+        text="A Spa Bali Moon therapist comes to your hotel room or villa in Seminyak, usually within 30 to 60 minutes of booking, with fresh linen, oils and everything your treatment needs. Treatments cost the same as in the spa, tax included, plus IDR 75.000 per therapist in Seminyak, and couples can have two therapists side by side. Open daily 9am–11pm."
         image="/images/banners/villa-hotel-massage.webp"
         // Phones: the whole photo above the long banner text (owner, 22 Oct).
         mobilePhoto="/images/banners/villa-hotel-massage-wide-sm.webp"
