@@ -51,6 +51,49 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-body-scrub",
+            "label": "What is a body scrub?"
+          },
+          {
+            "href": "#body-scrub-prices",
+            "label": "Prices and packages"
+          },
+          {
+            "href": "#body-scrub-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#when-to-book-a-body-scrub",
+            "label": "When to book"
+          },
+          {
+            "href": "#body-scrub-session",
+            "label": "What happens"
+          },
+          {
+            "href": "#body-scrub-scents",
+            "label": "Scrub scents"
+          },
+          {
+            "href": "#body-scrub-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-body-scrub",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -66,6 +109,13 @@
         "feature1Text": "Available in chocolate, coconut, strawberry, bengkoang, jasmine, green tea, and Spa Sari variants.",
         "feature2Title": "Gentle Exfoliation",
         "feature2Text": "Comfortable exfoliation using fine natural scrub ingredients and controlled pressure."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "body-scrub-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -175,7 +225,7 @@
                   ],
                   "layout": "compact",
                   "subTitle": "",
-                  "title": "Body Scrub Options",
+                  "title": "Body Scrub Prices",
                   "text": "All seven scrubs are the same full-body treatment at the same price; choose the scent you like. An extra body mask can be applied after the scrub, followed by a shower.",
                   "icon": "/images/spa/Scrub.svg"
                 }
@@ -221,6 +271,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "body-scrub-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -243,6 +300,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Choose from",
         "badgeBottomText": "Seven natural scents"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "when-to-book-a-body-scrub",
+        "className": "page-anchor"
       }
     },
     {
@@ -279,13 +343,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "body-scrub-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-10.webp",
         "imageAlt": "Therapist scrubbing a guest's back as she lies face down",
         "subTitle": "",
-        "title": "What Happens During Your Body Scrub",
+        "title": "What Happens During Your Body Scrub Massage",
         "text": "You choose your scrub, then your therapist works it over your whole body with gentle circular movements, giving extra time to rough areas such as elbows, knees and feet. The scrub is then rinsed off, leaving your skin smoother and cleaner.",
         "featuresLeft": [
           "Choose your preferred scrub variant",
@@ -304,13 +375,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "body-scrub-scents",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-9.webp",
         "imageAlt": "Pink body scrub being worked into a guest's arm",
         "subTitle": "",
-        "title": "Choose Your Natural Scrub",
+        "title": "Body Scrub Scents: Coconut, Chocolate, Green Tea and More",
         "text": "Every scrub exfoliates just as gently; they differ in scent and in what they bring to your skin.",
         "featuresLeft": [
           "Coconut for moisture and softness",
@@ -331,6 +409,13 @@
     {
       "type": "div",
       "props": {
+        "id": "body-scrub-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-body-scrub body-scrub-faq"
       },
       "children": [
@@ -343,7 +428,7 @@
             "imageAlt": "Therapist scattering a grainy scrub over a guest's back from a coconut bowl",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Body Scrubs in Seminyak",
+            "title": "Questions About Body Scrubs in Bali",
             "items": [
               {
                 "question": "What happens during a body scrub?",
