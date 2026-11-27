@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageBanner from "@/components/sections/PageBanner";
+import PageContents from "@/components/sections/PageContents";
 import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import AboutSplit from "@/components/sections/AboutSplit";
@@ -178,6 +179,21 @@ export default function OutcallPage() {
           }
           chips={HERO_CHIPS}
         />
+        {/* "On this page" links (owner, 27 Nov), as on the treatment pages. */}
+        <PageContents
+          title="On this page"
+          items={[
+            { href: "#outcall-prices", label: "Home service prices" },
+            { href: "#outcall-how-it-works", label: "How it works" },
+            { href: "#outcall-treatments", label: "Treatments we bring" },
+            { href: "#outcall-areas", label: "Areas we cover" },
+            { href: "#outcall-home-or-spa", label: "Home service or the spa?" },
+            { href: "#outcall-couples-groups", label: "Couples and groups" },
+            { href: "#outcall-price-list", label: "Full price list" },
+            { href: "#outcall-faq", label: "Questions" },
+          ]}
+        />
+        <div id="outcall-prices" className="page-anchor" />
         {/* S02 · Home Service Massage Prices in Seminyak */}
         <HomeServicePrices />
         {/* S03 · Outcall Balinese Massage from Our Seminyak Spa */}
@@ -211,8 +227,10 @@ export default function OutcallPage() {
           ]}
         />
         </div>
+        <div id="outcall-how-it-works" className="page-anchor" />
         {/* S04 · How Our Outcall Massage Works */}
         <HowItWorks />
+        <div id="outcall-treatments" className="page-anchor" />
         {/* S05 · Home Massage & Body Treatments We Bring to You */}
         <div className="outcall-treatment-panel">
           <AboutSplit
@@ -256,10 +274,13 @@ export default function OutcallPage() {
             imageAlt="Therapist pouring massage oil into their hand"
           />
         </div>
+        <div id="outcall-areas" className="page-anchor" />
         {/* S06 · Home Service Areas Around Seminyak */}
         <HomeServiceAreas />
+        <div id="outcall-home-or-spa" className="page-anchor" />
         {/* S07 · Home Service or Our Seminyak Day Spa? */}
         <HomeVsSpa />
+        <div id="outcall-couples-groups" className="page-anchor" />
         {/* S08 · Couples, Families & Villa Group Massage */}
         <GroupMassage />
         {/* S09 · Why Choose Our Home Service Massage */}
@@ -278,6 +299,7 @@ export default function OutcallPage() {
             reviews={homeServiceReviews}
           />
         </div>
+        <div id="outcall-price-list" className="page-anchor" />
         {/* S12 · Outcall Massage Price List */}
         {/* The homepage price list (prices by duration), on the owner's request
             (1 Oct); the tabs and prices are this page's, as on live. */}
@@ -917,6 +939,7 @@ export default function OutcallPage() {
             ], ["Most Popular"])}
           />
         </div>
+        <div id="outcall-faq" className="page-anchor" />
         {/* S13 · FAQs, S14 · closing banner */}
         <div className="outcall-closing-panel pb-100">
           <FaqSection
