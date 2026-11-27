@@ -54,6 +54,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-hair-braiding",
+            "label": "What is hair braiding?"
+          },
+          {
+            "href": "#hair-braiding-prices",
+            "label": "Hair braiding prices"
+          },
+          {
+            "href": "#bali-braids",
+            "label": "Bali braids for the beach"
+          },
+          {
+            "href": "#braid-styles",
+            "label": "Braid styles"
+          },
+          {
+            "href": "#how-hair-braiding-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#hair-braiding-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-hair-braiding",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -69,6 +108,13 @@
         "feature1Text": "Helps reduce tangles and keeps hair organised throughout the day.",
         "feature2Title": "Personalised Designs",
         "feature2Text": "Choose from classic, modern, or customised braid styles to match your look."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "hair-braiding-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -92,7 +138,7 @@
               "Many thin braids with pink extensions"
             ],
             "subTitle": "",
-            "title": "Choose the Style That Fits Your Hair",
+            "title": "Hair Braiding Prices in Bali",
             "text": "Pricing is based on hair length, allowing enough time to create neat, balanced braids while adapting the technique to your preferred style and overall hair volume.",
             "packages": [
               {
@@ -163,13 +209,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "bali-braids",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/hairbraiding/hairbraiding-7.webp",
         "imageAlt": "Therapist finishing pink and blue braids",
         "subTitle": "",
-        "title": "Easy, Stylish Hair for Your Bali Holiday",
+        "title": "Bali Braids for Beach and Pool Days",
         "text": "Braids keep your hair manageable in Bali's warm, humid climate and save styling time on holiday. Guests choose them for:",
         "featuresLeft": [
           "Keeping hair neat in Bali's tropical climate",
@@ -188,6 +241,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "braid-styles",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -203,7 +263,7 @@
         "image": "/images/services/hairbraiding/hairbraiding-8.webp",
         "imageAlt": "Two Dutch braids in brown hair",
         "subTitle": "",
-        "title": "Explore Our Most Popular Hair Braiding Styles",
+        "title": "Popular Braid Styles: Dutch Braids, Box Braids and Cornrows",
         "text": "From simple braids for everyday wear to more detailed styles for holidays and special occasions, each style can be adapted to suit your hair, outfit and plans. Our most popular styles:",
         "featuresLeft": [
           "Classic Double Dutch",
@@ -224,13 +284,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-hair-braiding-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/hairbraiding/hairbraiding-9.webp",
         "imageAlt": "Therapist braiding a blue extension into a girl's hair",
         "subTitle": "",
-        "title": "Every Braid Starts with the Right Plan",
+        "title": "How Hair Braiding Works",
         "text": "Before braiding begins, we discuss your preferred hairstyle, braid size, hair length, and whether you'd like to include extensions. Each section of hair is carefully prepared before braiding to create an even, comfortable finish. Once complete, we'll also share simple aftercare tips to help your hairstyle stay neat for longer. The process covers:",
         "featuresLeft": [
           "Hairstyle consultation",
@@ -251,6 +318,13 @@
     {
       "type": "div",
       "props": {
+        "id": "hair-braiding-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-hair-braiding hair-braiding-faq"
       },
       "children": [
@@ -263,7 +337,7 @@
             "imageAlt": "Hands plaiting a braid in long dark hair",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Hair Braiding in Seminyak",
+            "title": "Questions About Hair Braiding in Bali",
             "items": [
               {
                 "question": "Is hair braiding suitable for all hair types?",
