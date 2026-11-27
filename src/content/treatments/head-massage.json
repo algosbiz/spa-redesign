@@ -46,6 +46,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-head-massage",
+            "label": "What is a head massage?"
+          },
+          {
+            "href": "#head-massage-prices",
+            "label": "Head massage prices"
+          },
+          {
+            "href": "#head-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#head-massage-areas",
+            "label": "Areas we focus on"
+          },
+          {
+            "href": "#head-massage-what-to-expect",
+            "label": "What to expect"
+          },
+          {
+            "href": "#head-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-head-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -61,6 +100,13 @@
         "feature1Text": "Gentle movements help reduce tightness around the scalp and temples.",
         "feature2Title": "Neck Comfort",
         "feature2Text": "Supports relaxation in the upper neck and shoulder muscles."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "head-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -166,13 +212,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "head-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/headmassage/headmassage-7.webp",
         "imageAlt": "Therapist massaging the back of a guest's neck",
         "subTitle": "",
-        "title": "How a Head Massage Helps",
+        "title": "Head Massage Benefits",
         "text": "A head massage is a good choice after a demanding day, a long flight or hours at a screen. Guests book it for:",
         "featuresLeft": [
           "Easing tension around the head and neck",
@@ -192,6 +245,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "head-massage-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -207,7 +267,7 @@
         "image": "/images/services/headmassage/headmassage-8.webp",
         "imageAlt": "Thumbs pressing gently between a guest's eyebrows",
         "subTitle": "",
-        "title": "Areas We Focus On",
+        "title": "Head, Neck and Shoulder Areas We Focus On",
         "text": "A head massage covers more than the scalp. The therapist also works on nearby areas that can become tense during long workdays, travel, or daily activities. Depending on your needs, particular attention may be given to:",
         "featuresLeft": [
           "Scalp",
@@ -223,6 +283,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "head-massage-what-to-expect",
+        "className": "page-anchor"
       }
     },
     {
@@ -253,6 +320,13 @@
     {
       "type": "div",
       "props": {
+        "id": "head-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-head-massage head-massage-faq"
       },
       "children": [
@@ -265,7 +339,7 @@
             "imageAlt": "Fingers working through a guest's hair to massage the scalp",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Head Massage in Seminyak",
+            "title": "Questions About Head Massage in Bali",
             "items": [
               {
                 "question": "Can a head massage help with stress?",
