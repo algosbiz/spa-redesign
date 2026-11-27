@@ -1,4 +1,5 @@
 import PageBanner from "@/components/sections/PageBanner";
+import PageContents from "@/components/sections/PageContents";
 import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
@@ -99,6 +100,19 @@ export default function VillaHotelMassagePage() {
       />
       {/* The intro and the figures are two sections on the same background: decorations only at
           the top of the first (owner, 28 Oct); the leaves differ from section to section. */}
+      {/* "On this page" links (owner, 27 Nov), as on the treatment pages. */}
+      <PageContents
+        title="On this page"
+        items={[
+          { href: "#what-is-an-in-room-massage", label: "What is an in-room massage?" },
+          { href: "#villa-massage-why", label: "The spa comes to your room" },
+          { href: "#villa-massage-what-to-book", label: "What to book" },
+          { href: "#villa-massage-prices", label: "Prices in your room" },
+          { href: "#villa-massage-booking", label: "How to book" },
+          { href: "#villa-massage-faq", label: "Questions" },
+        ]}
+      />
+      <div id="what-is-an-in-room-massage" className="page-anchor" />
       <AboutIntro
         leftShapeSrc="/images/shape/leaf/8a.webp"
         rightShapeSrc={null}
@@ -124,6 +138,7 @@ export default function VillaHotelMassagePage() {
         ]}
       />
       <TreatmentTestimonials />
+      <div id="villa-massage-why" className="page-anchor" />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/13a.webp"
         rightShapeSrc="/images/shape/leaf/1a-v2.webp"
@@ -147,6 +162,7 @@ export default function VillaHotelMassagePage() {
         image="/images/services/massagehotelvilla/massagehotelvilla-4.webp"
         imageAlt="Therapist massaging a guest in a tropical villa garden"
       />
+      <div id="villa-massage-what-to-book" className="page-anchor" />
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/2a.webp"
         rightShapeSrc="/images/shape/leaf/3a.webp"
@@ -173,6 +189,7 @@ export default function VillaHotelMassagePage() {
         imageAlt="Hands on a guest's back beside a swimming pool"
       />
       {/* The price chart, fee included (owner, 25 Nov: couples need one too; AI answers quote totals). */}
+      <div id="villa-massage-prices" className="page-anchor" />
       <CompareTable
         leftShapeSrc="/images/shape/feature-six-shape.webp"
         title="What a Massage Costs in Your Room"
@@ -192,6 +209,7 @@ export default function VillaHotelMassagePage() {
           { label: "Couple warm candle, for two", values: ["IDR 689.000", "IDR 949.000", "IDR 1.149.000"] },
         ]}
       />
+      <div id="villa-massage-booking" className="page-anchor" />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/6a.webp"
         rightShapeSrc="/images/shape/leaf/11a.webp"
@@ -216,6 +234,7 @@ export default function VillaHotelMassagePage() {
         image="/images/services/massagehotelvilla/massagehotelvilla-6.webp"
         imageAlt="Therapist massaging a guest's leg outdoors"
       />
+      <div id="villa-massage-faq" className="page-anchor" />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           leftShapeSrc="/images/shape/banner-five-shape1.webp"

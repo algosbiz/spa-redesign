@@ -1,4 +1,5 @@
 import PageBanner from "@/components/sections/PageBanner";
+import PageContents from "@/components/sections/PageContents";
 import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
@@ -78,6 +79,18 @@ export default function MassageKutaPage() {
       />
       {/* The intro and the figures are two sections on the same background: decorations only at
           the top of the first (owner, 28 Oct); the leaves differ from section to section. */}
+      {/* "On this page" links (owner, 27 Nov), as on the treatment pages. */}
+      <PageContents
+        title="On this page"
+        items={[
+          { href: "#massage-kuta-why", label: "Why a massage in Kuta" },
+          { href: "#massage-kuta-treatments", label: "Treatments in Kuta" },
+          { href: "#massage-kuta-beauty", label: "Facials and beauty" },
+          { href: "#massage-kuta-booking", label: "How to book" },
+          { href: "#massage-kuta-faq", label: "Questions" },
+        ]}
+      />
+      <div id="massage-kuta-why" className="page-anchor" />
       <AboutIntro
         leftShapeSrc="/images/shape/leaf/6a.webp"
         rightShapeSrc={null}
@@ -103,6 +116,7 @@ export default function MassageKutaPage() {
         ]}
       />
       <TreatmentTestimonials />
+      <div id="massage-kuta-treatments" className="page-anchor" />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/8a.webp"
         rightShapeSrc="/images/shape/leaf/9a.webp"
@@ -128,6 +142,7 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-4.webp"
         imageAlt="Thumbs pressing the sole of a foot during an outdoor massage"
       />
+      <div id="massage-kuta-beauty" className="page-anchor" />
       <AboutSplitAlt
         leftShapeSrc="/images/shape/leaf/12a.webp"
         rightShapeSrc="/images/shape/leaf/13a.webp"
@@ -150,6 +165,7 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-5.webp"
         imageAlt="Therapist stretching a guest's arm in a garden setting"
       />
+      <div id="massage-kuta-booking" className="page-anchor" />
       <AboutSplit
         leftShapeSrc="/images/shape/leaf/3a.webp"
         rightShapeSrc="/images/shape/leaf/11a.webp"
@@ -164,6 +180,7 @@ export default function MassageKutaPage() {
         image="/images/services/massagekuta/massagekuta-6.webp"
         imageAlt="Leg massage on a massage bed by a pool"
       />
+      <div id="massage-kuta-faq" className="page-anchor" />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           leftShapeSrc="/images/shape/banner-five-shape1.webp"
