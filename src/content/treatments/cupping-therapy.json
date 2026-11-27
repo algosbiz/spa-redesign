@@ -47,6 +47,37 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-cupping-therapy",
+            "label": "What is cupping therapy?"
+          },
+          {
+            "href": "#cupping-therapy-prices",
+            "label": "Cupping therapy prices"
+          },
+          {
+            "href": "#cupping-what-to-expect",
+            "label": "What to expect"
+          },
+          {
+            "href": "#cupping-therapy-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-cupping-therapy",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +93,13 @@
         "feature1Text": "The suction comes from a small hand pump, never from fire or heat.",
         "feature2Title": "A Full Hour",
         "feature2Text": "Time for your back, shoulders and any area you ask for."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cupping-therapy-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -85,7 +123,7 @@
               "Therapist placing cups along a guest's spine"
             ],
             "subTitle": "",
-            "title": "Session & Pricing",
+            "title": "Cupping Therapy Prices",
             "text": "Dry and wet cupping are 30 minutes each. To add a massage, pair 1 hour of Balinese massage with 30 minutes of dry cupping for IDR 599.000, less than the IDR 658.000 they cost separately.",
             "packages": [
               {
@@ -157,13 +195,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "cupping-what-to-expect",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/treatments/cupping-therapy/cuppingtherapy-7.webp",
         "imageAlt": "Hands lifting a cup from a guest's back",
         "subTitle": "",
-        "title": "What to Expect",
+        "title": "What to Expect from Cupping Therapy",
         "text": "Cupping feels quite different from a massage. What to expect during and after your session:",
         "featuresLeft": [
           "Cups placed on your back and shoulders",
@@ -185,6 +230,13 @@
     {
       "type": "div",
       "props": {
+        "id": "cupping-therapy-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-cupping-therapy cupping-therapy-faq"
       },
       "children": [
@@ -197,7 +249,7 @@
             "imageAlt": "Therapist placing cups on a guest's shoulders",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Cupping Therapy in Seminyak",
+            "title": "Questions About Cupping Therapy in Bali",
             "items": [
               {
                 "question": "What is cupping therapy?",

@@ -50,6 +50,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-hot-stone-massage",
+            "label": "What is hot stone massage?"
+          },
+          {
+            "href": "#hot-stone-massage-prices",
+            "label": "Prices and packages"
+          },
+          {
+            "href": "#hot-stone-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#where-the-stones-go",
+            "label": "Where the stones go"
+          },
+          {
+            "href": "#hot-stone-massage-session",
+            "label": "What happens"
+          },
+          {
+            "href": "#hot-stone-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-hot-stone-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -65,6 +104,13 @@
         "feature1Text": "Naturally retains warmth to help relax muscles throughout the treatment.",
         "feature2Title": "Deep Relaxation",
         "feature2Text": "Combines soothing warmth with massage for lasting comfort."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "hot-stone-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -212,6 +258,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "hot-stone-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -235,6 +288,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Made with",
         "badgeBottomText": "Warm basalt stones"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "where-the-stones-go",
+        "className": "page-anchor"
       }
     },
     {
@@ -272,6 +332,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "hot-stone-massage-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -299,6 +366,13 @@
     {
       "type": "div",
       "props": {
+        "id": "hot-stone-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-hot-stone-massage hot-stone-massage-faq"
       },
       "children": [
@@ -311,7 +385,7 @@
             "imageAlt": "Hands moving warm stones over a guest's back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Hot Stone Massage in Seminyak",
+            "title": "Questions About Hot Stone Massage in Bali",
             "items": [
               {
                 "question": "What is a hot stone massage?",
