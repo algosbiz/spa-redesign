@@ -47,6 +47,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-foot-massage",
+            "label": "What is a foot massage?"
+          },
+          {
+            "href": "#foot-massage-prices",
+            "label": "Foot massage prices"
+          },
+          {
+            "href": "#when-a-foot-massage-helps",
+            "label": "When it helps"
+          },
+          {
+            "href": "#foot-massage-areas",
+            "label": "Areas we focus on"
+          },
+          {
+            "href": "#how-foot-massage-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#foot-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-foot-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +101,13 @@
         "feature1Text": "Helps reduce fatigue caused by walking, standing, and everyday activities.",
         "feature2Title": "Reflexology-Inspired",
         "feature2Text": "Combines relaxing massage with pressure point techniques for added comfort."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "foot-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -85,7 +131,7 @@
               "Foot massage on the arch, the guest's legs under a towel"
             ],
             "subTitle": "",
-            "title": "Choose the Right Duration",
+            "title": "Foot Massage Prices",
             "text": "One hour covers tired feet; 1.5 or 2 hours leave more time for the ankles, calves and lower legs. The pressure is adjusted to your comfort in every session.",
             "packages": [
               {
@@ -156,6 +202,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "when-a-foot-massage-helps",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -182,6 +235,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "foot-massage-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -197,7 +257,7 @@
         "image": "/images/services/footmassage/footmassage-8.webp",
         "imageAlt": "Oil being poured into a therapist's hand for a foot massage",
         "subTitle": "",
-        "title": "Areas We Focus On",
+        "title": "Feet and Lower Legs: Areas We Focus On",
         "text": "The massage covers the parts of the feet and lower legs that tire most during the day:",
         "featuresLeft": [
           "Soles that absorb daily impact",
@@ -216,13 +276,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-foot-massage-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footmassage/footmassage-9.webp",
         "imageAlt": "Therapist working on both of a guest's feet",
         "subTitle": "",
-        "title": "How Our Foot Massage Is Performed",
+        "title": "How Our Foot Massage Works",
         "text": "Our foot massage uses a combination of gentle techniques to work through tension in the feet and lower legs. Warm natural oils help create smooth, comfortable movements, while focused pressure is applied to areas that may feel particularly tired after walking or standing. The treatment can be tailored to your comfort, with techniques such as:",
         "featuresLeft": [
           "Warm oil for smooth massage movements",
@@ -243,6 +310,13 @@
     {
       "type": "div",
       "props": {
+        "id": "foot-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-foot-massage foot-massage-faq"
       },
       "children": [
@@ -255,7 +329,7 @@
             "imageAlt": "Foot massage by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Foot Massage in Seminyak",
+            "title": "Questions About Foot Massage in Bali",
             "items": [
               {
                 "question": "Is a foot massage the same as reflexology?",

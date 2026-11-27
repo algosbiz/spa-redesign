@@ -47,6 +47,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-cellulite-massage",
+            "label": "What is cellulite massage?"
+          },
+          {
+            "href": "#cellulite-massage-prices",
+            "label": "Cellulite massage prices"
+          },
+          {
+            "href": "#what-causes-cellulite",
+            "label": "What causes cellulite"
+          },
+          {
+            "href": "#what-cellulite-massage-can-do",
+            "label": "What it can do"
+          },
+          {
+            "href": "#how-cellulite-massage-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#cellulite-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-cellulite-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +101,13 @@
         "feature1Text": "Commonly focuses on the thighs, hips, buttocks and abdomen.",
         "feature2Title": "Firm Pressure",
         "feature2Text": "Firm, controlled movements that stay within your comfort."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cellulite-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -85,7 +131,7 @@
               "Therapist's hand sweeping up an oiled leg"
             ],
             "subTitle": "",
-            "title": "Treatment Duration & Pricing",
+            "title": "Cellulite Massage Prices",
             "text": "Choose the length by how many areas you want treated: 1 hour suits one or two areas, and 2 hours covers all the main ones.",
             "packages": [
               {
@@ -156,6 +202,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "what-causes-cellulite",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -178,6 +231,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Focus areas",
         "badgeBottomText": "Thighs, hips & buttocks"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-cellulite-massage-can-do",
+        "className": "page-anchor"
       }
     },
     {
@@ -215,13 +275,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-cellulite-massage-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/cellulitemassage/cellulitemassage-8.webp",
         "imageAlt": "Therapist kneading a guest's calf and thigh",
         "subTitle": "",
-        "title": "How the Treatment Works",
+        "title": "How Cellulite Massage Works",
         "text": "Your therapist works on the areas you choose, at an intensity that stays comfortable. Each session includes:",
         "featuresLeft": [
           "Consultation regarding treatment areas",
@@ -241,6 +308,13 @@
     {
       "type": "div",
       "props": {
+        "id": "cellulite-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-anti-cellulite-massage cellulite-massage-faq"
       },
       "children": [
@@ -253,7 +327,7 @@
             "imageAlt": "Hands massaging a guest's upper back by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Cellulite Massage in Seminyak",
+            "title": "Questions About Cellulite Massage in Bali",
             "items": [
               {
                 "question": "Which areas does a cellulite massage treat?",

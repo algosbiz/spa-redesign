@@ -47,6 +47,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-coconut-oil-massage",
+            "label": "What is a coconut oil massage?"
+          },
+          {
+            "href": "#coconut-oil-massage-prices",
+            "label": "Coconut oil massage prices"
+          },
+          {
+            "href": "#coconut-oil-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#who-coconut-oil-massage-suits",
+            "label": "Who it suits"
+          },
+          {
+            "href": "#why-virgin-coconut-oil",
+            "label": "Why virgin coconut oil"
+          },
+          {
+            "href": "#coconut-oil-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-coconut-oil-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +101,13 @@
         "feature1Text": "Retains the natural qualities of fresh coconut through minimal processing.",
         "feature2Title": "Light on the Skin",
         "feature2Text": "Lightweight, nourishing, and suitable for most skin types."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "coconut-oil-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -85,7 +131,7 @@
               "Long strokes with coconut oil along a guest's leg"
             ],
             "subTitle": "",
-            "title": "Session Duration & Pricing",
+            "title": "Coconut Oil Massage Prices",
             "text": "Choose 1, 1.5 or 2 hours. Every session uses pure cold-pressed coconut oil, and longer sessions give more time for tired muscles.",
             "packages": [
               {
@@ -156,13 +202,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "coconut-oil-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/coconutoilmassage/coconutoilmassage-7.webp",
         "imageAlt": "Therapist massaging coconut oil into a guest's legs",
         "subTitle": "",
-        "title": "What Guests Like About Coconut Oil",
+        "title": "Coconut Oil Massage Benefits",
         "text": "Virgin coconut oil has long been used in tropical traditions for its moisture and smooth texture. What guests like about it:",
         "featuresLeft": [
           "Helps soften dry skin",
@@ -182,6 +235,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "who-coconut-oil-massage-suits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -197,7 +257,7 @@
         "image": "/images/services/coconutoilmassage/coconutoilmassage-8.webp",
         "imageAlt": "Bowl of coconut oil and a frangipani beside a guest's oiled arm",
         "subTitle": "",
-        "title": "Who It Suits",
+        "title": "Who Coconut Oil Massage Suits",
         "text": "A good fit for:",
         "featuresLeft": [
           "Guests with dry-feeling skin",
@@ -212,6 +272,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "why-virgin-coconut-oil",
+        "className": "page-anchor"
       }
     },
     {
@@ -242,6 +309,13 @@
     {
       "type": "div",
       "props": {
+        "id": "coconut-oil-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-coconut-oil-massage coconut-oil-massage-faq"
       },
       "children": [
@@ -254,7 +328,7 @@
             "imageAlt": "Both hands gliding over a guest's oiled back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Coconut Oil Massage in Seminyak",
+            "title": "Questions About Coconut Oil Massage in Bali",
             "items": [
               {
                 "question": "How is virgin cold-pressed coconut oil different from regular massage oil?",

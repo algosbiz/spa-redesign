@@ -47,6 +47,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-warm-candle-massage",
+            "label": "What is a warm candle massage?"
+          },
+          {
+            "href": "#warm-candle-massage-prices",
+            "label": "Warm candle massage prices"
+          },
+          {
+            "href": "#how-warm-candle-massage-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#warm-candle-couples-four-hands",
+            "label": "For couples and four hands"
+          },
+          {
+            "href": "#whats-in-our-candles",
+            "label": "What is in our candles"
+          },
+          {
+            "href": "#warm-candle-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-warm-candle-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +101,13 @@
         "feature1Text": "Shea butter with coconut or soy wax, and natural aromas such as frangipani.",
         "feature2Title": "Lukewarm, Never Hot",
         "feature2Text": "The candle melts at a low heat, so the wax feels comfortably warm on the skin."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "warm-candle-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -85,7 +131,7 @@
               "Long strokes over an oiled leg"
             ],
             "subTitle": "",
-            "title": "Session Duration & Pricing",
+            "title": "Warm Candle Massage Prices",
             "text": "Choose 1, 1.5 or 2 hours. At IDR 269.000 for an hour, it costs less than a regular massage at most Seminyak hotel spas.",
             "packages": [
               {
@@ -156,6 +202,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-warm-candle-massage-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -182,6 +235,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "warm-candle-couples-four-hands",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -197,7 +257,7 @@
         "image": "/images/services/warmcandlemassage/warmcandlemassage-13.webp",
         "imageAlt": "Therapist massaging a guest's shoulders with candle oil",
         "subTitle": "",
-        "title": "For Two, or With Four Hands",
+        "title": "Couple and Four Hand Warm Candle Massage",
         "text": "The warm candle massage also comes for couples, side by side in a private room, and as a four hand massage with two therapists at once:",
         "featuresLeft": [
           "Couple warm candle massage, priced for two",
@@ -213,6 +273,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "whats-in-our-candles",
+        "className": "page-anchor"
       }
     },
     {
@@ -243,6 +310,13 @@
     {
       "type": "div",
       "props": {
+        "id": "warm-candle-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-warm-candle-massage warm-candle-massage-faq"
       },
       "children": [
@@ -255,7 +329,7 @@
             "imageAlt": "Long strokes down a guest's oiled back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Warm Candle Massage in Seminyak",
+            "title": "Questions About Warm Candle Massage in Bali",
             "items": [
               {
                 "question": "What is a warm candle massage?",
