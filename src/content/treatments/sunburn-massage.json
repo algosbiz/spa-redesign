@@ -51,6 +51,49 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-the-sunburn-treatment",
+            "label": "What is the sunburn treatment?"
+          },
+          {
+            "href": "#sunburn-treatment-price",
+            "label": "Sunburn treatment price"
+          },
+          {
+            "href": "#aloe-vera-massage",
+            "label": "Aloe vera massage"
+          },
+          {
+            "href": "#is-your-skin-ready",
+            "label": "Is your skin ready?"
+          },
+          {
+            "href": "#sunburn-areas",
+            "label": "Areas we treat"
+          },
+          {
+            "href": "#sunburn-what-to-expect",
+            "label": "What to expect"
+          },
+          {
+            "href": "#sunburn-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-the-sunburn-treatment",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -71,6 +114,13 @@
     {
       "type": "div",
       "props": {
+        "id": "sunburn-treatment-price",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-sunburn-massage sunburn-treatment-pricing"
       },
       "children": [
@@ -85,7 +135,7 @@
               "Cooling gel on red, sunburnt skin"
             ],
             "subTitle": "",
-            "title": "A Dedicated Session for Sun-Exposed Skin",
+            "title": "Sunburn Treatment Price",
             "text": "The sunburn treatment is a one-hour session that gives your skin time to cool and rehydrate after beach days, outdoor activities or long hours in the sun.",
             "packages": [
               {
@@ -138,14 +188,21 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "aloe-vera-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/sunburntreatment/sunburntreatment-5.webp",
         "imageAlt": "Aloe vera being applied to a sunburnt arm",
         "subTitle": "",
-        "title": "How a Sunburn Treatment Helps",
-        "text": "The sunburn treatment is for skin that feels hot, tight or uncomfortable after time in the sun. Guests choose it for reasons such as:",
+        "title": "Aloe Vera Massage for Sunburn: How It Helps",
+        "text": "The aloe vera in our sunburn treatment cools skin that feels hot, tight or uncomfortable after time in the sun. Guests choose it for reasons such as:",
         "featuresLeft": [
           "Helps cool overheated skin",
           "Supports hydration after sun exposure",
@@ -161,6 +218,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Made with",
         "badgeBottomText": "Cooling aloe vera"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "is-your-skin-ready",
+        "className": "page-anchor"
       }
     },
     {
@@ -211,6 +275,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "sunburn-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -226,7 +297,7 @@
         "image": "/images/services/sunburntreatment/sunburntreatment-7.webp",
         "imageAlt": "Therapist soothing a sunburnt arm with aloe vera",
         "subTitle": "",
-        "title": "Areas We Treat",
+        "title": "Sunburnt Areas We Treat",
         "text": "The treatment can cover one area or several, depending on where you caught the sun. Common areas of care are:",
         "featuresLeft": [
           "Shoulders",
@@ -242,6 +313,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "sunburn-what-to-expect",
+        "className": "page-anchor"
       }
     },
     {
@@ -272,6 +350,13 @@
     {
       "type": "div",
       "props": {
+        "id": "sunburn-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-sunburn-massage sunburn-treatment-faq"
       },
       "children": [
@@ -284,7 +369,7 @@
             "imageAlt": "Close-up of aloe vera gel on sunburnt shoulders",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About the Sunburn Treatment in Seminyak",
+            "title": "Questions About Sunburn Treatment in Bali",
             "items": [
               {
                 "question": "What should I do for sunburn in Bali?",

@@ -47,6 +47,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-an-ear-candle-treatment",
+            "label": "What is an ear candle treatment?"
+          },
+          {
+            "href": "#ear-candle-price",
+            "label": "Ear candle price"
+          },
+          {
+            "href": "#why-ear-candling",
+            "label": "Why guests book it"
+          },
+          {
+            "href": "#ear-candle-covers",
+            "label": "What it covers"
+          },
+          {
+            "href": "#how-ear-candling-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#ear-candle-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-an-ear-candle-treatment",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -67,6 +106,13 @@
     {
       "type": "div",
       "props": {
+        "id": "ear-candle-price",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-ear-wax-removal ear-candle-pricing"
       },
       "children": [
@@ -81,7 +127,7 @@
               "Guest lying on her side during an ear candle treatment"
             ],
             "subTitle": "",
-            "title": "Ear Candle Session & Price",
+            "title": "Ear Candle Spa Treatment Price",
             "text": "Ear candle comes as one 30-minute session. It suits first-timers and is easy to add to a massage or another treatment.",
             "packages": [
               {
@@ -134,13 +180,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "why-ear-candling",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/earcandle/earcandle-5.webp",
         "imageAlt": "Therapist steadying an ear candle as the guest rests",
         "subTitle": "",
-        "title": "When Guests Choose an Ear Candle",
+        "title": "Why Guests Book Ear Candling",
         "text": "Guests usually book an ear candle to unwind after travelling, or to add a short, quiet treatment to a massage. Common reasons:",
         "featuresLeft": [
           "Relaxing after flights or long journeys",
@@ -157,6 +210,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Session",
         "badgeBottomText": "30 relaxing minutes"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "ear-candle-covers",
+        "className": "page-anchor"
       }
     },
     {
@@ -193,6 +253,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-ear-candling-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -219,6 +286,13 @@
     {
       "type": "div",
       "props": {
+        "id": "ear-candle-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-ear-wax-removal ear-candle-faq"
       },
       "children": [
@@ -231,7 +305,7 @@
             "imageAlt": "Ear candle burning gently while a guest relaxes",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Ear Candle Treatments in Seminyak",
+            "title": "Questions About Ear Candling in Bali",
             "items": [
               {
                 "question": "What is an ear candle treatment?",
