@@ -46,6 +46,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-foot-reflexology",
+            "label": "What is foot reflexology?"
+          },
+          {
+            "href": "#foot-reflexology-prices",
+            "label": "Foot reflexology prices"
+          },
+          {
+            "href": "#foot-reflexology-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#foot-reflexology-points",
+            "label": "Reflexology points"
+          },
+          {
+            "href": "#foot-reflexology-session",
+            "label": "What happens"
+          },
+          {
+            "href": "#foot-reflexology-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-foot-reflexology",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -61,6 +100,13 @@
         "feature1Text": "Uses targeted pressure on specific areas of the feet rather than general massage strokes.",
         "feature2Title": "Whole-Body Relaxation",
         "feature2Text": "Encourages a calming effect that many guests experience beyond the feet themselves."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "foot-reflexology-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -84,7 +130,7 @@
               "Reflexology stick on the heel of a foot"
             ],
             "subTitle": "",
-            "title": "Choose the Session That Fits You",
+            "title": "Foot Reflexology Prices",
             "text": "Every session follows the same pressure-point sequence; longer sessions work more reflex areas at a slower pace.",
             "packages": [
               {
@@ -155,13 +201,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "foot-reflexology-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/footreflexology/footreflexology-7.webp",
         "imageAlt": "Therapist holding a guest's foot during reflexology",
         "subTitle": "",
-        "title": "A Simple Way to Refresh Tired Feet",
+        "title": "Foot Reflexology Benefits for Tired Feet",
         "text": "After a day of walking or travelling, your feet can feel tired and heavy. Guests often book reflexology for:",
         "featuresLeft": [
           "Helping tired feet feel lighter",
@@ -181,6 +234,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "foot-reflexology-points",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -196,7 +256,7 @@
         "image": "/images/services/footreflexology/footreflexology-8.webp",
         "imageAlt": "Wooden stick and thumb working the arch of the foot",
         "subTitle": "",
-        "title": "Reflex Points on the Feet",
+        "title": "Foot Reflexology Points: Toes, Arch and Heel",
         "text": "Rather than applying the same pressure everywhere, your therapist works through different zones of the feet, following traditional reflexology. A session can include:",
         "featuresLeft": [
           "Toes and forefoot reflex points",
@@ -215,13 +275,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "foot-reflexology-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footreflexology/footreflexology-9.webp",
         "imageAlt": "Therapist working the sole of a guest's foot",
         "subTitle": "",
-        "title": "What a Reflexology Session Is Like",
+        "title": "What Happens in a Foot Reflexology Session",
         "text": "A foot reflexology session follows a gentle, structured approach that combines warm-up movements with focused pressure on selected reflex points. The therapist adjusts the technique throughout the treatment to keep the pressure comfortable while maintaining a steady rhythm. The session typically involves:",
         "featuresLeft": [
           "Gentle warm-up techniques",
@@ -241,6 +308,13 @@
     {
       "type": "div",
       "props": {
+        "id": "foot-reflexology-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-foot-reflexology foot-reflexology-faq"
       },
       "children": [
@@ -253,7 +327,7 @@
             "imageAlt": "Reflexology on the arch of the foot by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Foot Reflexology in Seminyak",
+            "title": "Questions About Foot Reflexology in Bali",
             "items": [
               {
                 "question": "Is foot reflexology the same as a foot massage?",

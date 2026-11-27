@@ -51,6 +51,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-professional-waxing",
+            "label": "What is professional waxing?"
+          },
+          {
+            "href": "#waxing-prices",
+            "label": "Waxing prices"
+          },
+          {
+            "href": "#waxing-for-your-holiday",
+            "label": "Smooth skin for your holiday"
+          },
+          {
+            "href": "#areas-we-wax",
+            "label": "Areas we wax"
+          },
+          {
+            "href": "#how-waxing-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#waxing-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-professional-waxing",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -66,6 +105,13 @@
         "feature1Text": "Removes hair from the root for smoother skin that lasts longer than shaving.",
         "feature2Title": "Gentle Finish",
         "feature2Text": "Techniques adjusted according to the area and skin sensitivity."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "waxing-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -93,7 +139,7 @@
               "Leg waxing with a wooden spatula"
             ],
             "subTitle": "",
-            "title": "Our Waxing Options",
+            "title": "Waxing Prices in Bali",
             "text": "Prices are per area, from IDR 99.000 for an eyebrow or upper lip wax to IDR 599.000 for full legs. An appointment takes around an hour, depending on the areas you choose.",
             "packages": [
               {
@@ -181,13 +227,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "waxing-for-your-holiday",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/waxing/waxing-11.webp",
         "imageAlt": "Wax strip pressed onto a guest's leg",
         "subTitle": "",
-        "title": "Smooth Skin for Your Bali Holiday",
+        "title": "Waxing for Smooth Skin on Your Bali Holiday",
         "text": "Waxing keeps skin smooth for weeks, which suits a beach holiday. Guests choose it for these reasons:",
         "featuresLeft": [
           "Removes unwanted hair from the root",
@@ -207,6 +260,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "areas-we-wax",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -222,7 +282,7 @@
         "image": "/images/services/waxing/waxing-12.webp",
         "imageAlt": "Warm honey-coloured wax dripping from a spatula",
         "subTitle": "",
-        "title": "Areas We Wax",
+        "title": "Brazilian, Bikini, Legs and More: Areas We Wax",
         "text": "We wax small and large areas and choose the wax for each one:",
         "featuresLeft": [
           "Arms and underarms",
@@ -238,6 +298,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "how-waxing-works",
+        "className": "page-anchor"
       }
     },
     {
@@ -268,6 +335,13 @@
     {
       "type": "div",
       "props": {
+        "id": "waxing-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-waxing-salon waxing-faq"
       },
       "children": [
@@ -280,7 +354,7 @@
             "imageAlt": "Wax being spread along a leg before a strip is applied",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Waxing in Seminyak",
+            "title": "Questions About Waxing in Bali",
             "items": [
               {
                 "question": "How long do waxing results last?",
