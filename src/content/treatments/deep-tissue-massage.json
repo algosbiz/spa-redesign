@@ -47,6 +47,57 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-deep-tissue-massage",
+            "label": "What is deep tissue massage?"
+          },
+          {
+            "href": "#deep-tissue-massage-prices",
+            "label": "Deep tissue massage prices"
+          },
+          {
+            "href": "#when-deep-tissue-helps",
+            "label": "When it helps"
+          },
+          {
+            "href": "#deep-tissue-or-sports-massage",
+            "label": "Deep tissue or sports massage?"
+          },
+          {
+            "href": "#deep-tissue-focus-areas",
+            "label": "Areas we focus on"
+          },
+          {
+            "href": "#how-deep-tissue-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#deep-tissue-aftercare",
+            "label": "Aftercare"
+          },
+          {
+            "href": "#deep-tissue-villa",
+            "label": "At your villa in Bali"
+          },
+          {
+            "href": "#deep-tissue-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-deep-tissue-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -62,6 +113,13 @@
         "feature1Text": "Targets areas where long-term tension and stiffness commonly develop.",
         "feature2Title": "Controlled Pressure",
         "feature2Text": "Uses steady techniques adjusted to your body's response and comfort level."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "deep-tissue-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -156,6 +214,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "when-deep-tissue-helps",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -179,6 +244,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Pressure",
         "badgeBottomText": "Slow, firm & focused"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "deep-tissue-or-sports-massage",
+        "className": "page-anchor"
       }
     },
     {
@@ -255,6 +327,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "deep-tissue-focus-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -289,6 +368,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-deep-tissue-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -310,6 +396,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "deep-tissue-aftercare",
+        "className": "page-anchor"
       }
     },
     {
@@ -345,14 +438,21 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "deep-tissue-villa",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "subTitle": "",
         "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
         "imageAlt": "Therapist giving a massage beside a villa pool",
-        "title": "At Our Seminyak Spa or in Your Villa",
-        "text": "You can have the same massage at our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa, hotel or home. For home service, a therapist brings fresh linen, oils and everything the massage needs, and usually arrives within 30 to 60 minutes when you stay nearby. The treatment price stays the same, plus a fee per therapist:",
+        "title": "Deep Tissue Massage at Our Spa or Your Bali Villa",
+        "text": "You can have the same deep tissue massage at our Seminyak spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa, hotel or home in Bali. For home service, a therapist brings fresh linen, oils and everything the massage needs, and usually arrives within 30 to 60 minutes when you stay nearby. The treatment price stays the same, plus a fee per therapist:",
         "featuresLeft": [
           "Seminyak, Petitenget and Kerobokan: IDR 75.000",
           "Canggu, North Kuta and Kuta: IDR 150.000"
@@ -371,6 +471,13 @@
     {
       "type": "div",
       "props": {
+        "id": "deep-tissue-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-deep-tissue-massage deep-tissue-massage-faq"
       },
       "children": [
@@ -383,7 +490,7 @@
             "imageAlt": "Thumbs working deep into the muscles of the upper back",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Deep Tissue Massage in Seminyak",
+            "title": "Questions About Deep Tissue Massage in Bali",
             "items": [
               {
                 "question": "Does a deep tissue massage hurt?",
