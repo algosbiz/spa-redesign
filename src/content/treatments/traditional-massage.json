@@ -46,6 +46,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-traditional-massage",
+            "label": "What is traditional massage?"
+          },
+          {
+            "href": "#traditional-massage-prices",
+            "label": "Traditional massage prices"
+          },
+          {
+            "href": "#traditional-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#traditional-massage-focus-areas",
+            "label": "Areas it works on"
+          },
+          {
+            "href": "#traditional-massage-session",
+            "label": "What happens"
+          },
+          {
+            "href": "#traditional-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-traditional-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -61,6 +100,13 @@
         "feature1Text": "Uses stronger massage movements to address areas with built-up tension.",
         "feature2Title": "Full-Body Relief",
         "feature2Text": "Targets common tension areas while supporting overall relaxation."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "traditional-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -86,7 +132,7 @@
               "Palms pressing down either side of the spine"
             ],
             "subTitle": "",
-            "title": "Our Session Options",
+            "title": "Traditional Massage Prices",
             "text": "Choose 30 minutes for one tense area, 1 hour for mild stiffness, or 1.5 to 2 hours to work through several tense areas and the full body.",
             "packages": [
               {
@@ -166,13 +212,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "traditional-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/traditionalmassage/traditionalmassage-7.webp",
         "imageAlt": "Therapist giving a firm traditional massage on a guest's back",
         "subTitle": "",
-        "title": "Firm, Hands-On Pressure for Tight Muscles",
+        "title": "Traditional Massage Benefits: Firm Pressure for Tight Muscles",
         "text": "Traditional massage suits guests who like firm pressure. Guests often choose it for these reasons:",
         "featuresLeft": [
           "Helps ease stiff and tired muscles",
@@ -191,6 +244,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "traditional-massage-focus-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -206,7 +266,7 @@
         "image": "/images/services/traditionalmassage/traditionalmassage-8.webp",
         "imageAlt": "Hands kneading the muscles of the upper back",
         "subTitle": "",
-        "title": "Areas We Focus On",
+        "title": "Where a Traditional Massage Focuses",
         "text": "Tell your therapist where you feel it most and they will spend extra time there. Common areas of focus are:",
         "featuresLeft": [
           "Back from prolonged sitting or activity",
@@ -225,13 +285,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "traditional-massage-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-9.webp",
         "imageAlt": "Therapist working along a guest's back with firm pressure",
         "subTitle": "",
-        "title": "Inside a Traditional Massage Session",
+        "title": "What Happens in a Traditional Massage",
         "text": "Our therapists move gradually from one area to another, checking your comfort and adapting the treatment as the session progresses. The approach may involve:",
         "featuresLeft": [
           "Warm oil preparation",
@@ -252,6 +319,13 @@
     {
       "type": "div",
       "props": {
+        "id": "traditional-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-traditional-massage traditional-massage-faq"
       },
       "children": [
@@ -264,7 +338,7 @@
             "imageAlt": "Hands pressing into a guest's shoulder by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Traditional Massage in Seminyak",
+            "title": "Questions About Traditional Massage in Bali",
             "items": [
               {
                 "question": "What is traditional massage?",
