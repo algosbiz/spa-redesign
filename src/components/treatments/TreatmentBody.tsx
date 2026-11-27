@@ -8,6 +8,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import FeaturedPackage from "@/components/pricelist/FeaturedPackage";
 import Funfacts from "@/components/sections/Funfacts";
 import HomeServiceLine from "@/components/sections/HomeServiceLine";
+import PageContents from "@/components/sections/PageContents";
 import PageBanner from "@/components/sections/PageBanner";
 import QuickFacts from "@/components/sections/QuickFacts";
 import ReserveCta from "@/components/sections/ReserveCta";
@@ -38,6 +39,8 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   // A link inside a paragraph (lib/treatments/fields.ts: textarea fields).
   Link,
   PageBanner,
+  // "On this page" links (cream bath page, 27 Nov).
+  PageContents,
   QuickFacts,
   ReserveCta,
   ServiceSlider,

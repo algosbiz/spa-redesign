@@ -55,6 +55,49 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-cream-bath",
+            "label": "What is a cream bath?"
+          },
+          {
+            "href": "#cream-bath-packages",
+            "label": "Prices and packages"
+          },
+          {
+            "href": "#cream-bath-formulas",
+            "label": "Choose a formula"
+          },
+          {
+            "href": "#cream-bath-benefits",
+            "label": "Benefits for your hair"
+          },
+          {
+            "href": "#cream-bath-session",
+            "label": "What happens in a session"
+          },
+          {
+            "href": "#cream-bath-prices",
+            "label": "Spa and villa prices"
+          },
+          {
+            "href": "#cream-bath-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-cream-bath",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -70,6 +113,13 @@
         "feature1Text": "Nourishing ingredients help improve hair softness, hydration, and manageability.",
         "feature2Title": "Scalp Relaxation",
         "feature2Text": "Gentle massage movements support scalp comfort while enhancing relaxation."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-packages",
+        "className": "page-anchor"
       }
     },
     {
@@ -246,6 +296,13 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-formulas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
@@ -269,6 +326,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Choose from",
         "badgeBottomText": "Six cream formulas"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-benefits",
+        "className": "page-anchor"
       }
     },
     {
@@ -306,6 +370,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -328,6 +399,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -368,6 +446,13 @@
             ]
           }
         ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "cream-bath-faq",
+        "className": "page-anchor"
       }
     },
     {
