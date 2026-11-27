@@ -46,6 +46,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-shiatsu-massage",
+            "label": "What is shiatsu massage?"
+          },
+          {
+            "href": "#shiatsu-massage-prices",
+            "label": "Shiatsu massage prices"
+          },
+          {
+            "href": "#shiatsu-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#shiatsu-pressure-points",
+            "label": "Pressure points"
+          },
+          {
+            "href": "#how-shiatsu-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#shiatsu-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-shiatsu-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -61,6 +100,13 @@
         "feature1Text": "Applies focused pressure to specific areas using fingers, thumbs, and palms.",
         "feature2Title": "Gentle Body Stretching",
         "feature2Text": "Supports flexibility while helping muscles release built-up tension."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "shiatsu-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -155,13 +201,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "shiatsu-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/shiatsumassage/shiatsumassage-7.webp",
         "imageAlt": "Therapist kneeling to give shiatsu pressure on a guest's back",
         "subTitle": "",
-        "title": "Pressure Instead of Oil Strokes",
+        "title": "Shiatsu Massage Benefits: Pressure Without Oil",
         "text": "Guests often choose shiatsu when they want focused pressure without oil, for reasons such as:",
         "featuresLeft": [
           "Easing feelings of muscle tension",
@@ -181,6 +234,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "shiatsu-pressure-points",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -196,7 +256,7 @@
         "image": "/images/services/shiatsumassage/shiatsumassage-8.webp",
         "imageAlt": "Thumbs pressing points on a guest's shoulder blade",
         "subTitle": "",
-        "title": "Areas We Focus On",
+        "title": "Shiatsu Pressure Points and Focus Areas",
         "text": "Your therapist can focus on where you feel tension or tiredness, giving particular attention to areas such as:",
         "featuresLeft": [
           "Neck and shoulders",
@@ -212,6 +272,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "how-shiatsu-works",
+        "className": "page-anchor"
       }
     },
     {
@@ -242,6 +309,13 @@
     {
       "type": "div",
       "props": {
+        "id": "shiatsu-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-shiatsu-massage shiatsu-massage-faq"
       },
       "children": [
@@ -254,7 +328,7 @@
             "imageAlt": "Hands pressing the top of a guest's shoulder",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Shiatsu Massage in Seminyak",
+            "title": "Questions About Shiatsu Massage in Bali",
             "items": [
               {
                 "question": "Does a shiatsu massage use oil?",
