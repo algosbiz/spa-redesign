@@ -50,6 +50,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-thai-massage",
+            "label": "What is Thai massage?"
+          },
+          {
+            "href": "#thai-massage-packages",
+            "label": "Thai massage prices"
+          },
+          {
+            "href": "#thai-massage-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#thai-massage-focus-areas",
+            "label": "Areas it works on"
+          },
+          {
+            "href": "#how-thai-massage-works",
+            "label": "How it works"
+          },
+          {
+            "href": "#thai-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-thai-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -65,6 +104,13 @@
         "feature1Text": "Uses guided movements inspired by traditional Thai techniques to help improve flexibility.",
         "feature2Title": "Pressure Point Focus",
         "feature2Text": "Applies steady pressure to areas where stiffness and tension commonly build up."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "thai-massage-packages",
+        "className": "page-anchor"
       }
     },
     {
@@ -167,7 +213,7 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Thai Massage Duration Options",
+                  "title": "Thai Massage Prices",
                   "text": "Choose 30 minutes for a few tight spots, 1 hour for a full-body session, or 1.5 hours for more time on stretching and mobility.",
                   "icon": "/images/spa/thai.svg"
                 }
@@ -213,13 +259,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "thai-massage-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/thaimassage/thaimassage-8.webp",
         "imageAlt": "Seated Thai massage twist",
         "subTitle": "",
-        "title": "Stretching and Pressure, No Oil",
+        "title": "Thai Massage Benefits: Stretching Without Oil",
         "text": "Thai massage is a more active treatment than a relaxation massage. Guests often choose it for reasons such as:",
         "featuresLeft": [
           "Helps ease stiffness from daily activities",
@@ -236,6 +289,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Technique",
         "badgeBottomText": "Stretching, no oil"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "thai-massage-focus-areas",
+        "className": "page-anchor"
       }
     },
     {
@@ -272,6 +332,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "how-thai-massage-works",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -299,6 +366,13 @@
     {
       "type": "div",
       "props": {
+        "id": "thai-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-thai-massage thai-massage-faq"
       },
       "children": [
@@ -311,7 +385,7 @@
             "imageAlt": "Thai massage leg stretch by candlelight",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Thai Massage in Seminyak",
+            "title": "Questions About Thai Massage in Bali",
             "items": [
               {
                 "question": "What is traditional Thai massage?",
