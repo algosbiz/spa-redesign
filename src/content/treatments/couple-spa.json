@@ -90,16 +90,16 @@
           "props": {
             "leftShapeSrc": "/images/shape/package-four-shape-left.webp",
             "images": [
-              "/images/services/couplemassage/couplemassage-4-warm.webp",
-              "/images/services/couplemassage/couplemassage-5-warm.webp",
-              "/images/services/couplemassage/couplemassage-6-warm.webp",
-              "/images/services/couplemassage/couplemassage-7-warm.webp"
+              "/images/services/couplemassage/couplemassage-4-v2.webp",
+              "/images/services/couplemassage/couplemassage-5-v2.webp",
+              "/images/services/couplemassage/couplemassage-6-v2.webp",
+              "/images/services/couplemassage/couplemassage-7-v2.webp"
             ],
             "imageAlts": [
-              "Couple lying side by side while two therapists massage their backs",
-              "Two therapists massaging a couple's backs at the same time",
-              "Two guests receiving back massages on neighbouring beds",
-              "Therapists giving a side-by-side couple massage"
+              "Two therapists massaging a couple's backs side by side",
+              "Therapists applying facial masks to a couple on neighbouring beds",
+              "Two therapists massaging a couple's backs on twin beds",
+              "Therapists brushing green facial masks onto a couple"
             ],
             "subTitle": "",
             "title": "Couple Spa Packages in Seminyak",
@@ -576,8 +576,8 @@
           "props": {
             "removeTopPadding": true,
             "paperDecoration": true,
-            "image": "/images/services/couplemassage/couplemassage-11.webp",
-            "imageAlt": "Therapist's hands stroking an oiled back during a couple massage",
+            "image": "/images/services/couplemassage/couplemassage-11-v2.webp",
+            "imageAlt": "Therapist brushing a facial mask onto a guest, with a second guest on the next bed",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "About Couples Massage in Seminyak",
