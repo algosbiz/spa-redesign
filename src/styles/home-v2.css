@@ -340,7 +340,8 @@
     position: absolute;
     inset: 0;
     display: block;
-    background: url(/images/home/homepage-banner-v2-1200.webp) center / 100% 100% no-repeat;
+    /* A 240px copy: it is blurred, and the phone photo above is a different file (27 Nov). */
+    background: url(/images/home/homepage-banner-v2-glass.webp) center / 100% 100% no-repeat;
     filter: blur(22px) saturate(1.1) brightness(1.08);
     transform: scale(1.12);
   }

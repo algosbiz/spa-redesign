@@ -17,12 +17,13 @@ const FEATURES = [
 
 /**
  * How wide the hero photo is drawn, for picking its file. Below 1200px it
- * covers a full-width box clamp(280px, 64vw, 440px) tall, so a 1920x850
- * photo is drawn at least 2.26 times that height wide; phones up to about
- * 1.9x pixel density then get the 1200px file, sharper ones the original.
- * Wider screens always get the original.
+ * covers a full-width box clamp(280px, 64vw, 440px) tall, so the 1920x1050
+ * photo is drawn at least 1.83 times that height wide (about 512px on a
+ * phone). Phones then get the 900px file (27 Nov: the photo was most of the
+ * 1.8 s it took the homepage to show on a phone), sharper screens the 1200px
+ * file or the original. Wider screens always get the original.
  */
-const PHOTO_SIZES = "(max-width: 1199px) max(100vw, calc(clamp(280px, 64vw, 440px) * 2.26)), 1920px";
+const PHOTO_SIZES = "(max-width: 1199px) max(100vw, calc(clamp(280px, 64vw, 440px) * 1.83)), 1920px";
 
 /**
  * Homepage v2 hero — text left (kicker, title, copy, two buttons, three
@@ -44,7 +45,7 @@ export default function Hero() {
             homepage-1.webp, 1920x1050, WebP q80). */}
         <img
           src="/images/home/homepage-banner-v2.webp"
-          srcSet="/images/home/homepage-banner-v2-1200.webp 1200w, /images/home/homepage-banner-v2.webp 1920w"
+          srcSet="/images/home/homepage-banner-v2-900.webp 900w, /images/home/homepage-banner-v2-1200.webp 1200w, /images/home/homepage-banner-v2.webp 1920w"
           sizes={PHOTO_SIZES}
           alt="A couple enjoying side-by-side back massages at Spa Bali Moon"
           fetchPriority="high"
