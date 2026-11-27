@@ -65,23 +65,23 @@
           },
           {
             "href": "#cream-bath-packages",
-            "label": "Prices and packages"
+            "label": "Cream bath prices"
           },
           {
             "href": "#cream-bath-formulas",
-            "label": "Choose a formula"
+            "label": "Hair spa creams"
           },
           {
             "href": "#cream-bath-benefits",
-            "label": "Benefits for your hair"
+            "label": "Benefits for dry hair"
           },
           {
             "href": "#cream-bath-session",
-            "label": "What happens in a session"
+            "label": "What happens in a hair spa"
           },
           {
             "href": "#cream-bath-prices",
-            "label": "Spa and villa prices"
+            "label": "Cream bath at your villa"
           },
           {
             "href": "#cream-bath-faq",
@@ -108,7 +108,7 @@
         "secondaryAlt": "Hair cream being smoothed through long dark hair",
         "subTitle": "",
         "title": "What Is a Cream Bath?",
-        "text": "A cream bath is a popular Indonesian hair and scalp treatment that combines nourishing hair cream with a gentle scalp massage. Unlike a regular hair mask, it cares for the scalp as well as the hair, leaving it softer and better conditioned. It's a relaxing way to care for your hair after sun, swimming or frequent styling.",
+        "text": "A cream bath, also called a hair spa, is a popular Indonesian hair and scalp treatment that combines nourishing hair cream with a gentle scalp massage. Unlike a regular hair mask, it cares for the scalp as well as the hair, leaving it softer and better conditioned. It's a relaxing way to care for your hair after sun, swimming or frequent styling.",
         "feature1Title": "Hair Conditioning",
         "feature1Text": "Nourishing ingredients help improve hair softness, hydration, and manageability.",
         "feature2Title": "Scalp Relaxation",
@@ -309,7 +309,7 @@
         "image": "/images/services/creambath/creambath-8.webp",
         "imageAlt": "Hands massaging cream along the parting of a guest's hair",
         "subTitle": "",
-        "title": "Choose Your Cream Bath Formula",
+        "title": "Choose Your Hair Spa Cream",
         "text": "Each cream uses different ingredients. Depending on your hair, you may prefer:",
         "featuresLeft": [
           "Ginseng to support healthier-looking hair",
@@ -383,7 +383,7 @@
         "image": "/images/services/creambath/creambath-10.webp",
         "imageAlt": "Therapist rinsing the cream out of a guest's hair",
         "subTitle": "",
-        "title": "Inside a Cream Bath Session",
+        "title": "What Happens in a Hair Spa Session",
         "text": "Your therapist checks your hair and scalp and helps you choose a cream, then applies it from roots to ends. A slow scalp massage works it in and eases tension, and a rinse and finish leave your hair soft and easy to manage.",
         "featuresLeft": [
           "Hair and scalp assessment",
