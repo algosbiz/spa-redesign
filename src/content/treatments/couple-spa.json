@@ -62,6 +62,49 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-couples-massage",
+            "label": "What is a couples massage?"
+          },
+          {
+            "href": "#couple-spa-packages",
+            "label": "Couple spa packages and prices"
+          },
+          {
+            "href": "#couples-spa-honeymoon",
+            "label": "Honeymoon and anniversary"
+          },
+          {
+            "href": "#which-couples-massage",
+            "label": "Which couples massage?"
+          },
+          {
+            "href": "#couples-massage-session",
+            "label": "How it runs"
+          },
+          {
+            "href": "#couples-massage-villa",
+            "label": "Couples massage at your villa"
+          },
+          {
+            "href": "#couples-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-couples-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -77,6 +120,13 @@
         "feature1Text": "Enjoy your massage together in a private room or through our villa and hotel home service.",
         "feature2Title": "Personalised for Each Guest",
         "feature2Text": "Each person can request their preferred pressure and focus areas for a comfortable experience."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "couple-spa-packages",
+        "className": "page-anchor"
       }
     },
     {
@@ -102,7 +152,7 @@
               "Therapists brushing green facial masks onto a couple"
             ],
             "subTitle": "",
-            "title": "Couple Spa Packages in Seminyak",
+            "title": "Couple Spa Packages in Seminyak, Bali",
             "text": "Our four couples packages pair a 1-hour Balinese or warm candle massage with an ear candle or a Bali Moon Facial. Prices are for two guests together.",
             "packages": [
               {
@@ -323,29 +373,43 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "couples-spa-honeymoon",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/couplemassage/couplemassage-8-warm.webp",
         "imageAlt": "Two therapists massaging a couple's shoulders",
         "subTitle": "",
-        "title": "For a Honeymoon, an Anniversary or a Day Off",
-        "text": "A couples massage gives you 1 to 2 hours together in a private room. Guests book one for a honeymoon, a birthday or the afternoon before a dinner out, and it works just as well after a day of beaches and walking.",
+        "title": "Couples Spa for a Honeymoon or Anniversary",
+        "text": "A couples spa visit gives you 1 to 2 hours together in a calm, private couples room, with a shower afterwards. Guests book one for a honeymoon, an anniversary, a birthday or the afternoon before a dinner out, and it works just as well after a day of beaches and walking.",
         "featuresLeft": [
-          "Popular for honeymoon trips",
-          "A favourite anniversary activity",
-          "Perfect after sightseeing and beach days"
+          "Honeymoons",
+          "Anniversaries and birthdays",
+          "After a day of sightseeing or the beach"
         ],
         "featuresRight": [
-          "Encourages quality time together",
-          "Suitable before romantic dinners or celebrations",
-          "Creates a relaxing shared experience"
+          "Before a dinner out",
+          "Time together, side by side",
+          "At our spa or your villa"
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "badgeTopText": "Popular for",
         "badgeBottomText": "Honeymoons & anniversaries"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "which-couples-massage",
+        "className": "page-anchor"
       }
     },
     {
@@ -457,6 +521,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "couples-massage-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -479,6 +550,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "couples-massage-villa",
+        "className": "page-anchor"
       }
     },
     {
@@ -568,6 +646,13 @@
     {
       "type": "div",
       "props": {
+        "id": "couples-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-couple-spa couple-massage-faq"
       },
       "children": [
@@ -603,8 +688,8 @@
                 "answer": "It depends on the package: in some, each guest can have a different massage. Our couples massages come in Balinese, traditional, deep tissue and warm candle styles; tell us on WhatsApp at +62 878-6317-5144 what you'd each like and we'll suggest a combination."
               },
               {
-                "question": "Is a couples massage good for a honeymoon?",
-                "answer": "Yes. Many honeymooners book one, in a private room at our spa or side by side at their villa or hotel. Tell us the date and the occasion when you book on WhatsApp."
+                "question": "What is included in a couple spa visit?",
+                "answer": "A calm, private couples room with two massage beds side by side, a shower you can use after your treatment, and the massage or package you chose. All prices include tax."
               },
               {
                 "question": "Can we have a couples massage at our villa or hotel?",
