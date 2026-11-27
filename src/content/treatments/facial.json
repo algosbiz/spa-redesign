@@ -55,6 +55,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-the-bali-moon-facial",
+            "label": "What is the Bali Moon Facial?"
+          },
+          {
+            "href": "#facial-prices",
+            "label": "Prices and packages"
+          },
+          {
+            "href": "#facial-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#tea-tree-or-gold",
+            "label": "Tea Tree or Gold mask"
+          },
+          {
+            "href": "#facial-steps",
+            "label": "The six steps"
+          },
+          {
+            "href": "#facial-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-the-bali-moon-facial",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -70,6 +109,13 @@
         "feature1Text": "Helps balance excess oil, calm blemishes, and support clearer-looking skin.",
         "feature2Title": "Gold Mask",
         "feature2Text": "Focuses on hydration, elasticity, and restoring a healthy-looking glow."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "facial-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -163,7 +209,7 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Bali Moon Facial Options",
+                  "title": "Facial Prices in Seminyak",
                   "text": "Both versions take 1 hour and follow the same six steps; only the mask differs. Tea Tree suits oily or blemish-prone skin, Gold suits dull or dry skin.",
                   "icon": "/images/spa/Balinese.svg"
                 }
@@ -215,13 +261,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "facial-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/balimoonfacial/balimoonfacial-8.webp",
         "imageAlt": "Therapist applying a gold mask during a facial",
         "subTitle": "",
-        "title": "What a Facial Helps With",
+        "title": "Facial Benefits",
         "text": "Guests book a facial to clear surface impurities, add moisture and freshen up dull skin. Common reasons:",
         "featuresLeft": [
           "Supports hydration and moisture balance",
@@ -238,6 +291,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Choose your mask",
         "badgeBottomText": "Tea tree or gold"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "tea-tree-or-gold",
+        "className": "page-anchor"
       }
     },
     {
@@ -275,13 +335,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "facial-steps",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/balimoonfacial/balimoonfacial-10.webp",
         "imageAlt": "Gold facial mask lifted from a wooden bowl with a brush",
         "subTitle": "",
-        "title": "What to Expect During Your Facial",
+        "title": "What Happens in a Bali Moon Facial: Six Steps",
         "text": "Your facial follows six steps that cleanse, exfoliate, nourish and refresh your skin:",
         "featuresLeft": [
           "Milk cleanser to remove surface buildup",
@@ -302,6 +369,13 @@
     {
       "type": "div",
       "props": {
+        "id": "facial-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-facial bali-moon-facial-faq"
       },
       "children": [
@@ -314,7 +388,7 @@
             "imageAlt": "Guest relaxing in a clay face mask as the therapist massages her temples",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Facials in Seminyak",
+            "title": "Questions About Facials in Seminyak, Bali",
             "items": [
               {
                 "question": "What is a Bali Moon Facial?",
