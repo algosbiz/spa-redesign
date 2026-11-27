@@ -54,6 +54,57 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-lymphatic-drainage",
+            "label": "What is lymphatic drainage?"
+          },
+          {
+            "href": "#lymphatic-massage-prices",
+            "label": "Lymphatic massage prices"
+          },
+          {
+            "href": "#lymphatic-vs-other-massages",
+            "label": "Lymphatic or another massage?"
+          },
+          {
+            "href": "#lymphatic-massage-session",
+            "label": "How a session runs"
+          },
+          {
+            "href": "#lymphatic-massage-aftercare",
+            "label": "Aftercare"
+          },
+          {
+            "href": "#when-to-book",
+            "label": "When to book"
+          },
+          {
+            "href": "#before-you-book",
+            "label": "Before you book"
+          },
+          {
+            "href": "#lymphatic-massage-villa",
+            "label": "At your villa in Bali"
+          },
+          {
+            "href": "#lymphatic-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-lymphatic-drainage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -88,6 +139,13 @@
         "feature1Text": "Slow, light strokes toward the lymph nodes.",
         "feature2Title": "Full Body",
         "feature2Text": "From the neck and collarbone down to the ankles."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -214,6 +272,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-vs-other-massages",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "CompareTable",
       "props": {
         "leftShapeSrc": "/images/shape/feature-six-shape.webp",
@@ -330,6 +395,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-massage-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -364,6 +436,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-massage-aftercare",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -386,6 +465,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "showBadge": false,
         "treatmentLayout": true
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "when-to-book",
+        "className": "page-anchor"
       }
     },
     {
@@ -501,6 +587,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "before-you-book",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -535,13 +628,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-massage-villa",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "subTitle": "",
         "image": "/images/services/massagehotelvilla/massagehotelvilla-2.webp",
         "imageAlt": "Therapist giving a massage beside a villa pool",
-        "title": "At Our Seminyak Spa or in Your Villa",
+        "title": "Lymphatic Massage at Our Spa or Your Bali Villa",
         "text": "You can have the same massage at our spa on Jl. Pangkung Sari No. 30, open daily from 9am to 11pm, or at your villa, hotel or home. For home service, a therapist brings fresh linen, oils and everything the massage needs, and usually arrives within 30 to 60 minutes when you stay nearby. The treatment price stays the same, plus a fee per therapist:",
         "featuresLeft": [
           "Seminyak, Petitenget and Kerobokan: IDR 75.000",
@@ -634,6 +734,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "showBadge": false,
         "treatmentLayout": true
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "lymphatic-massage-faq",
+        "className": "page-anchor"
       }
     },
     {
