@@ -47,6 +47,53 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-sports-massage",
+            "label": "What is sports massage?"
+          },
+          {
+            "href": "#sports-massage-prices",
+            "label": "Sports massage prices"
+          },
+          {
+            "href": "#sports-massage-who-for",
+            "label": "Surfers, runners and gym-goers"
+          },
+          {
+            "href": "#sports-massage-by-activity",
+            "label": "By activity"
+          },
+          {
+            "href": "#sports-massage-focus-areas",
+            "label": "Where your therapist focuses"
+          },
+          {
+            "href": "#sports-massage-session",
+            "label": "What happens in a session"
+          },
+          {
+            "href": "#sports-massage-villa",
+            "label": "At your villa in Bali"
+          },
+          {
+            "href": "#sports-massage-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-sports-massage",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -81,6 +128,13 @@
         "feature1Text": "Helps release tension from physically demanding activities.",
         "feature2Title": "Active Mobility",
         "feature2Text": "Supports comfortable movement through targeted bodywork."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -164,13 +218,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-who-for",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/sportsmassage/sportsmassage-6.webp",
         "imageAlt": "Firm strokes along a guest's back during a sports massage",
         "subTitle": "",
-        "title": "Who Sports Massage Suits",
+        "title": "Sports Massage for Surfers, Runners and Gym-Goers",
         "text": "A sports massage suits anyone with a physically active routine, especially:",
         "featuresLeft": [
           "Runners and marathon participants",
@@ -187,6 +248,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Ideal for",
         "badgeBottomText": "Runners, surfers & gym-goers"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-by-activity",
+        "className": "page-anchor"
       }
     },
     {
@@ -253,6 +321,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-focus-areas",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -288,6 +363,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-session",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
@@ -313,10 +395,17 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "sports-massage-villa",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "CompareTable",
       "props": {
         "leftShapeSrc": "/images/shape/feature-six-shape.webp",
-        "title": "Sports Massage Prices at the Spa and Your Villa",
+        "title": "Sports Massage Prices at the Spa or Your Bali Villa",
         "text": "The total per person, with the home service fee already added for a villa or hotel. Totals include tax, with no extra charges.",
         "caption": "Sports massage prices at the spa and at a villa or hotel",
         "columns": [
@@ -355,6 +444,13 @@
     {
       "type": "div",
       "props": {
+        "id": "sports-massage-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-sport-massage sports-massage-faq"
       },
       "children": [
@@ -367,7 +463,7 @@
             "imageAlt": "Thumbs working a knot near the shoulder blade",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Sports Massage in Seminyak",
+            "title": "Questions About Sports Massage in Bali",
             "items": [
               {
                 "question": "Is a sports massage only for professional athletes?",
