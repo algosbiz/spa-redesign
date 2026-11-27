@@ -1937,6 +1937,34 @@ Cek di Vercel setelah deploy:
   `/_next/image?url=https%3A%2F%2Fimages.spabalimoon.com...`.
 - Ikon Funfacts, lotus, dan ikon video tampil normal.
 
+### Setelah deploy (27 November)
+
+Lighthouse 13.5 (versi PageSpeed) ke situs produksi, HP, dua putaran:
+beranda 95–96, Balinese 92–94, Deep Tissue 93–95, Outcall 92–94, `/guide/`
+86–93, `/jp/` 74–90. PageSpeed pemilik untuk beranda: 96, FCP 2,2 s.
+API PageSpeed tanpa kunci sedang kehabisan kuota harian.
+
+- **CLS `/guide/` 0,13–0,19 diperbaiki.** Tautan di sekeliling foto kartu
+  memakai `inline-block` dari tema, jadi lebarnya 0 sampai foto datang, lalu
+  kartu memanjang 221 px. Kini tautan itu selebar kartu (`outcall.css`, bagian
+  26). Tinggi akhir ke-18 kartu di 412 dan 1440 px tetap sama persis;
+  `display: block` sempat dicoba tetapi membuat kartu 8 px lebih pendek.
+- **Foto di dalam artikel** tidak punya ukuran, jadi teks di bawahnya
+  terdorong sampai 370 px saat foto datang. Sanitizer kini memberi `width`,
+  `height`, dan `loading="lazy"` untuk foto dari `/images/guide/`
+  (`src/lib/blog/image-sizes.json`, dibuat oleh `guide-cards.mjs`).
+
+FCP 2,2 s di lab tidak ditahan oleh file lain. Memblokir beacon Cloudflare
+memberi 2,2 s (dari 2,3), font 2,0–2,3 s, logo preloader tidak berubah. Sisanya
+adalah unduhan HTML dan kerja CPU:
+- **HTML beranda** 731 KB mentah. Cloudflare mengompresnya dengan level rendah
+  (zstd 97 KB, br 105 KB); brotli maksimum bisa 71 KB. Pada level rendah, CSS
+  dalam HTML 38 KB, data React 36 KB (17 KB di atas markup yang sama), markup
+  40 KB (SVG 18 KB). Level kompresi tidak bisa diatur dari kode maupun Vercel.
+- **Tata letak pertama:** `text-wrap: balance` pada judul memakan sekitar 80 ms
+  dengan CPU 4x, tetapi mengubahnya berarti mengubah pemenggalan judul.
+- **CSS `:hover`/`:focus`** hanya sekitar 1 KB; tidak layak dipangkas.
+
 Di dashboard Cloudflare (di luar kode, belum dilakukan):
 - **Web Analytics:** matikan penyisipan otomatis `beacon.min.js`.
 - **Cache Rule untuk HTML:** Browser TTL "Respect origin". Sekarang browser

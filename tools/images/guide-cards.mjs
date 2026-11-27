@@ -13,8 +13,13 @@
  *   node tools/images/guide-cards.mjs          make the missing copies
  *   node tools/images/guide-cards.mjs --check  only list missing copies (exit 1 if any)
  *
- * Run it after adding or replacing a cover in public/images/guide/. A cover
- * uploaded in /admin/ is not in that folder and is shown as it is.
+ * It also writes the size of every picture in that folder
+ * (src/lib/blog/image-sizes.json): the photos inside an article have no
+ * width and height in their HTML, so the sanitizer gives them one
+ * (src/lib/blog/sanitize.ts) and the text no longer moves as they arrive.
+ *
+ * Run it after adding or replacing a picture in public/images/guide/. A
+ * picture uploaded in /admin/ is not in that folder and is shown as it is.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -23,6 +28,7 @@ import sharp from "sharp";
 const root = path.resolve(import.meta.dirname, "../..");
 const dir = path.join(root, "public/images/guide");
 const list = path.join(root, "src/lib/blog/card-copies.json");
+const sizesFile = path.join(root, "src/lib/blog/image-sizes.json");
 const check = process.argv.includes("--check");
 const WIDTHS = [240, 768, 1200];
 
@@ -59,11 +65,20 @@ for (const name of covers) {
   srcSets[`/images/guide/${name}`] = set.join(", ");
 }
 
-const json = JSON.stringify(srcSets, null, 2) + "\n";
-if (!fs.existsSync(list) || fs.readFileSync(list, "utf8") !== json) {
+// Width and height of every picture in the folder but the copies.
+const sizes = {};
+for (const name of fs.readdirSync(dir).filter((n) => /\.(webp|png|jpe?g)$/i.test(n) && !/-(240|768|1200)\.webp$/.test(n)).sort()) {
+  const { width, height } = await sharp(path.join(dir, name)).metadata();
+  sizes[`/images/guide/${name}`] = [width, height];
+}
+
+for (const [file, data] of [[list, srcSets], [sizesFile, sizes]]) {
+  const json = JSON.stringify(data, null, 2) + "\n";
+  // Git may have written the file with Windows line ends.
+  if (fs.existsSync(file) && fs.readFileSync(file, "utf8").replace(/\r\n/g, "\n") === json) continue;
   missing++;
-  if (check) console.log("out of date", path.relative(root, list));
-  else fs.writeFileSync(list, json);
+  if (check) console.log("out of date", path.relative(root, file));
+  else fs.writeFileSync(file, json);
 }
 if (check && missing) process.exit(1);
 console.log(check ? "all copies present" : `done (${Object.keys(srcSets).length} covers)`);

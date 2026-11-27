@@ -1998,6 +1998,14 @@
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
+/* The link around the photo is as wide as the card. The theme's inline-block
+   made it as wide as the photo, 0 until the photo arrived, so each card grew
+   by its photo's height while the page opened (CLS 0.13 on phones, 27 Nov).
+   Still inline-block: the line it sits on keeps the cards' heights as they
+   were (display: block made every card 8px shorter). */
+.p-guide .blog-block .image-box .image a {
+  width: 100%;
+}
 .p-guide .blog-block .content-box {
   display: flex;
   flex: 1;

@@ -1,7 +1,33 @@
 import sanitizeHtmlLib from "sanitize-html";
 import { business } from "@/data/business";
+import imageSizes from "./image-sizes.json";
 
 const SITE_HOST = new URL(business.url).host.replace(/^www\./, "");
+
+/** Width and height of the pictures in /images/guide/ (tools/images/guide-cards.mjs). */
+const SIZES: Record<string, number[]> = imageSizes;
+
+/**
+ * A photo in the text, given its width and height when the editor left them
+ * out and its file is one of the site's own: with them the browser keeps
+ * its place while it loads, so the text under it no longer jumps (up to
+ * 370px on a desktop, audit 27 Nov). Such a photo also waits until the reader
+ * nears it (loading="lazy"); one of unknown size is left as it is, since a
+ * held picture without a size would take no room at all.
+ */
+function sizeImage(tagName: string, attribs: sanitizeHtmlLib.Attributes) {
+  const src = (attribs.src || "").replace(/^https?:\/\/(www\.)?spabalimoon\.com(?=\/)/i, "");
+  const known = SIZES[src];
+  const out: sanitizeHtmlLib.Attributes = { ...attribs };
+  if (!(attribs.width && attribs.height)) {
+    if (!known) return { tagName, attribs };
+    out.width = String(known[0]);
+    out.height = String(known[1]);
+  }
+  out.loading = "lazy";
+  out.decoding = "async";
+  return { tagName, attribs: out };
+}
 
 /**
  * Does this href send the reader to another site? Only absolute http(s) URLs
@@ -48,7 +74,7 @@ export function sanitizeHtml(html: string | null | undefined): string {
     allowedAttributes: {
       "*": ["class", "style"],
       a: ["href", "title", "target", "rel"],
-      img: ["src", "alt", "title", "width", "height"],
+      img: ["src", "alt", "title", "width", "height", "loading", "decoding"],
       th: ["colspan", "rowspan"],
       td: ["colspan", "rowspan"],
     },
@@ -59,6 +85,7 @@ export function sanitizeHtml(html: string | null | undefined): string {
       // article's own table style (custom.css) sets the width instead.
       table: dropStyle,
       col: dropStyle,
+      img: sizeImage,
       a: (tagName, attribs) => {
         if (leavesTheSite(attribs.href)) return { tagName: "span", attribs: {} };
         // An internal link is a plain, followed link that opens in the same
