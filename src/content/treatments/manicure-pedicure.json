@@ -51,6 +51,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-a-manicure-and-pedicure",
+            "label": "What is a manicure and pedicure?"
+          },
+          {
+            "href": "#manicure-pedicure-prices",
+            "label": "Prices and packages"
+          },
+          {
+            "href": "#manicure-pedicure-benefits",
+            "label": "Benefits"
+          },
+          {
+            "href": "#manicure-pedicure-includes",
+            "label": "What is included"
+          },
+          {
+            "href": "#manicure-pedicure-what-to-expect",
+            "label": "What to expect"
+          },
+          {
+            "href": "#manicure-pedicure-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-a-manicure-and-pedicure",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -66,6 +105,13 @@
         "feature1Text": "Professional care helps maintain clean, tidy, and well-shaped nails.",
         "feature2Title": "Soft Skin",
         "feature2Text": "Hydration and conditioning leave hands and feet feeling smoother."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "manicure-pedicure-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -213,7 +259,7 @@
                     }
                   ],
                   "subTitle": "",
-                  "title": "Manicure & Pedicure Treatment Options",
+                  "title": "Manicure and Pedicure Prices",
                   "text": "Book a manicure or a pedicure (about 30 minutes each) or both (about an hour), and add nail colour, gel or nail removal for hands, feet or both. Each option can be booked on its own.",
                   "icon": "/images/spa/Manicure.svg"
                 }
@@ -259,13 +305,20 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "manicure-pedicure-benefits",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/manicurepedicure/manicurepedicure-8.webp",
         "imageAlt": "Nail therapist filing a guest's nails",
         "subTitle": "",
-        "title": "Why Regular Nail Care Matters",
+        "title": "Benefits of a Manicure and Pedicure",
         "text": "Regular nail care keeps nails tidy and the skin around them soft. It helps with:",
         "featuresLeft": [
           "Maintaining healthy-looking nails",
@@ -281,6 +334,13 @@
         "treatmentLayout": true,
         "badgeTopText": "Care for",
         "badgeBottomText": "Nails, cuticles & skin"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "manicure-pedicure-includes",
+        "className": "page-anchor"
       }
     },
     {
@@ -318,13 +378,20 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "manicure-pedicure-what-to-expect",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/manicurepedicure/manicurepedicure-10.webp",
         "imageAlt": "Foot file smoothing the sole during a pedicure",
         "subTitle": "",
-        "title": "What to Expect at Your Appointment",
+        "title": "What to Expect at Your Manicure and Pedicure",
         "text": "Your appointment starts with a look at your nails and ends with the finish you chose. It usually covers:",
         "featuresLeft": [
           "Consultation and nail assessment",
@@ -345,6 +412,13 @@
     {
       "type": "div",
       "props": {
+        "id": "manicure-pedicure-faq",
+        "className": "page-anchor"
+      }
+    },
+    {
+      "type": "div",
+      "props": {
         "className": "jsx-manicure-pedicure manicure-pedicure-faq"
       },
       "children": [
@@ -357,7 +431,7 @@
             "imageAlt": "Manicure table with tools and lotion",
             "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
-            "title": "About Manicure & Pedicure in Seminyak",
+            "title": "Questions About Manicure & Pedicure in Bali",
             "items": [
               {
                 "question": "What is included in a manicure and pedicure?",

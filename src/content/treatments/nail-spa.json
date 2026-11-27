@@ -51,6 +51,45 @@
       }
     },
     {
+      "type": "PageContents",
+      "props": {
+        "title": "On this page",
+        "items": [
+          {
+            "href": "#what-is-gel-nail-art",
+            "label": "What is gel nail art?"
+          },
+          {
+            "href": "#gel-nail-prices",
+            "label": "Gel nail prices"
+          },
+          {
+            "href": "#why-gel-nails",
+            "label": "Gel and Shellac nails"
+          },
+          {
+            "href": "#nail-art-styles",
+            "label": "Nail art styles"
+          },
+          {
+            "href": "#how-gel-nail-art-is-applied",
+            "label": "How it is applied"
+          },
+          {
+            "href": "#nail-art-faq",
+            "label": "Questions"
+          }
+        ]
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "what-is-gel-nail-art",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
         "leftShapeSrc": "/images/shape/about-two-left.webp",
@@ -66,6 +105,13 @@
         "feature1Text": "Designed to stay glossy and beautiful through everyday activities.",
         "feature2Title": "Personalised Designs",
         "feature2Text": "Colours, patterns, and finishes selected to suit your own style."
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "gel-nail-prices",
+        "className": "page-anchor"
       }
     },
     {
@@ -89,7 +135,7 @@
               "Floral nail art being painted on a fingernail"
             ],
             "subTitle": "",
-            "title": "Choose the Finish You Prefer",
+            "title": "Gel Nail and Nail Art Prices",
             "text": "Choose fresh colour, decorative nail art or a long-lasting gel finish, to suit your style and the occasion.",
             "packages": [
               {
@@ -160,14 +206,21 @@
       "props": {}
     },
     {
+      "type": "div",
+      "props": {
+        "id": "why-gel-nails",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplit",
       "props": {
         "rightShapeSrc": "/images/shape/about-right-shape.webp",
         "image": "/images/services/nailart/nailart-7.webp",
         "imageAlt": "Hands with glossy red nail polish",
         "subTitle": "",
-        "title": "Colour That Stays Neat for Longer",
-        "text": "Gel nail art adds colour and personality to your nails and keeps them neat for longer, from simple everyday designs to more creative looks for holidays or special events. People often choose gel nails for reasons such as:",
+        "title": "Gel and Shellac Nails That Stay Neat for Longer",
+        "text": "Gel polish adds colour and keeps your nails neat for longer, from simple everyday designs to more creative looks for holidays or special events, and Shellac is available as an option. People often choose gel nails for reasons such as:",
         "featuresLeft": [
           "Long-lasting shine",
           "Less need for frequent polish touch-ups",
@@ -186,6 +239,13 @@
       }
     },
     {
+      "type": "div",
+      "props": {
+        "id": "nail-art-styles",
+        "className": "page-anchor"
+      }
+    },
+    {
       "type": "AboutSplitAlt",
       "props": {
         "leftShapeSrc": "/images/shape/step-shape-left.webp",
@@ -201,7 +261,7 @@
         "image": "/images/services/nailart/nailart-8.webp",
         "imageAlt": "Nail therapist showing a guest a chart of polish colours",
         "subTitle": "",
-        "title": "Find a Nail Art Style That Suits You",
+        "title": "Nail Art Styles: French Tips, Chrome and Minimalist Designs",
         "text": "Your nail design can be simple, elegant, playful, or more detailed depending on the look you have in mind. We can work from your inspiration and adapt the design to suit your natural nails, preferred colours, and occasion. Some popular styles are:",
         "featuresLeft": [
           "Minimalist nail designs",
@@ -216,6 +276,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "how-gel-nail-art-is-applied",
+        "className": "page-anchor"
       }
     },
     {
@@ -241,6 +308,13 @@
         "buttonLink": "https://wa.me/6287863175144",
         "treatmentLayout": true,
         "showBadge": false
+      }
+    },
+    {
+      "type": "div",
+      "props": {
+        "id": "nail-art-faq",
+        "className": "page-anchor"
       }
     },
     {
