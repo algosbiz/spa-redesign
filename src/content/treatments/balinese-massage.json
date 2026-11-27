@@ -57,6 +57,45 @@
           }
         },
         {
+          "type": "PageContents",
+          "props": {
+            "title": "On this page",
+            "items": [
+              {
+                "href": "#what-is-balinese-massage",
+                "label": "What is Balinese massage?"
+              },
+              {
+                "href": "#balinese-massage-prices",
+                "label": "Prices and packages"
+              },
+              {
+                "href": "#balinese-massage-benefits",
+                "label": "Benefits"
+              },
+              {
+                "href": "#who-balinese-massage-suits",
+                "label": "Who it suits"
+              },
+              {
+                "href": "#balinese-massage-what-to-expect",
+                "label": "What to expect"
+              },
+              {
+                "href": "#balinese-massage-faq",
+                "label": "Questions"
+              }
+            ]
+          }
+        },
+        {
+          "type": "div",
+          "props": {
+            "id": "what-is-balinese-massage",
+            "className": "page-anchor"
+          }
+        },
+        {
           "type": "AboutIntro",
           "props": {
             "primaryImage": "/images/services/balinesemassage/balinesemassage-2.webp",
@@ -90,6 +129,13 @@
             "feature1Text": "Combines acupressure, stretching, skin rolling, and rhythmic massage movements.",
             "feature2Title": "Adjustable Pressure",
             "feature2Text": "Suitable for both gentle relaxation and firmer muscle relief sessions."
+          }
+        },
+        {
+          "type": "div",
+          "props": {
+            "id": "balinese-massage-prices",
+            "className": "page-anchor"
           }
         },
         {
@@ -164,7 +210,7 @@
                     "type": "SessionOptions",
                     "props": {
                       "subTitle": "",
-                      "title": "Balinese Massage Sessions",
+                      "title": "Balinese Massage Prices in Seminyak",
                       "text": "Pick a session that fits your schedule and how much time you want to spend relaxing. Longer sessions give our therapists more time to work across the body and focus on areas that need extra attention.",
                       "icon": "/images/spa/Balinese.svg",
                       "sessions": [
@@ -250,6 +296,13 @@
         {
           "type": "div",
           "props": {
+            "id": "balinese-massage-benefits",
+            "className": "page-anchor"
+          }
+        },
+        {
+          "type": "div",
+          "props": {
             "className": "jsx-balinese-massage balinese-massage-benefits"
           },
           "children": [
@@ -260,7 +313,7 @@
                 "imageAlt": "Therapist massaging a guest's shoulders and upper back",
                 "rightShapeSrc": "/images/shape/about-right-shape.webp",
                 "subTitle": "",
-                "title": "Relaxing and Muscle-Focused in One",
+                "title": "Balinese Massage Benefits",
                 "text": "Balinese massage combines relaxation with muscle-focused work in one treatment, so it suits travellers, office workers and active guests alike. Why guests choose it:",
                 "featuresLeft": [
                   "Eases muscle tension",
@@ -284,6 +337,13 @@
         {
           "type": "div",
           "props": {
+            "id": "who-balinese-massage-suits",
+            "className": "page-anchor"
+          }
+        },
+        {
+          "type": "div",
+          "props": {
             "className": "jsx-balinese-massage balinese-massage-suitable"
           },
           "children": [
@@ -303,7 +363,7 @@
                   }
                 },
                 "subTitle": "",
-                "title": "Who It Suits",
+                "title": "Who Balinese Massage Suits",
                 "text": "Our therapists often recommend Balinese massage for:",
                 "featuresLeft": [
                   "First-time massage guests",
@@ -322,6 +382,13 @@
               }
             }
           ]
+        },
+        {
+          "type": "div",
+          "props": {
+            "id": "balinese-massage-what-to-expect",
+            "className": "page-anchor"
+          }
         },
         {
           "type": "div",
@@ -360,6 +427,13 @@
         {
           "type": "div",
           "props": {
+            "id": "balinese-massage-faq",
+            "className": "page-anchor"
+          }
+        },
+        {
+          "type": "div",
+          "props": {
             "className": "jsx-balinese-massage balinese-massage-faq"
           },
           "children": [
@@ -391,7 +465,7 @@
                 "imageAlt": "Thumbs pressing either side of the spine",
                 "imageTitle": "",
                 "subTitle": "Frequently Asked Questions",
-                "title": "About Balinese Massage in Seminyak",
+                "title": "Questions About Balinese Massage in Seminyak, Bali",
                 "items": [
                   {
                     "question": "What is a Balinese massage?",

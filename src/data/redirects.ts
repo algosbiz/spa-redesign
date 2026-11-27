@@ -161,6 +161,8 @@ export const liveRedirects: OldUrlRedirect[] = [
   { from: "/guide/understanding-of-facial-massage/", to: "/guide/facial-massage-for-relaxation/" },
   { from: "/guide/understanding-slimming-massage/", to: "/guide/what-is-a-slimming-massage/" },
   { from: "/guide/what-is-a-balinese-massage/", to: "/guide/what-is-balinese-massage/" },
+  // Still shown by Google for "traditional balinese massage" and answering 404 (27 Nov 2026).
+  { from: "/guide/what-is-a-balinese-massage-a-complete-guide-for-first-timer/", to: "/guide/what-is-balinese-massage/" },
 ];
 
 /**
